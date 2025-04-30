@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -23,4 +23,22 @@ public class PlayerController : MonoBehaviour
     {
         movementInput = inputContext.ReadValue<Vector2>();
     }
+
+    public void OnJump(InputAction.CallbackContext inputContext)
+    {
+        Debug.Log("Jumped");
+    }
+    public void OnAttack(InputAction.CallbackContext inputContext)
+    {
+        Debug.Log("Attack");
+    }
+    public void OnSpecial(InputAction.CallbackContext inputContext)
+    {
+        Debug.Log("Special");
+    }
+    public void OnBlock(InputAction.CallbackContext inputContext)
+    {
+        Debug.Log("Block");
+    }
+
 }
