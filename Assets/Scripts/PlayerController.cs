@@ -16,14 +16,16 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //very temporary just to check different controllers do different things
         rb.linearVelocity = movementInput * speed;
     }
 
+
+    //Player Input component has events on the inspector, each one of these is wired to an event
     public void OnMove(InputAction.CallbackContext inputContext)
     {
         movementInput = inputContext.ReadValue<Vector2>();
     }
-
     public void OnJump(InputAction.CallbackContext inputContext)
     {
         Debug.Log("Jumped");
