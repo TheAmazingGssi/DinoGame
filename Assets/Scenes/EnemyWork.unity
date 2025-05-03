@@ -516,7 +516,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!4 &893266604
 Transform:
   m_ObjectHideFlags: 0
@@ -526,7 +526,7 @@ Transform:
   m_GameObject: {fileID: 893266599}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.59, y: -1.18, z: -1}
+  m_LocalPosition: {x: -4.3, y: -0.82, z: -1}
   m_LocalScale: {x: 9.9728, y: 10.3288, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -670,10 +670,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   detectionRange: 7
+  attackRange: 1.5
   rb: {fileID: 909798700}
   spriteRenderer: {fileID: 2098684309}
-  groundCheckCollider: {fileID: 1498350874}
+  animator: {fileID: 0}
   player: {fileID: 893266604}
+  groundCheckCollider: {fileID: 1498350874}
 --- !u!4 &909798702
 Transform:
   m_ObjectHideFlags: 0
@@ -683,7 +685,7 @@ Transform:
   m_GameObject: {fileID: 909798699}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.38859013, y: -0.11350795, z: 0.19599622}
+  m_LocalPosition: {x: -1.64, y: -0.74, z: 0.19599622}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1243,7 +1245,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!61 &2098684310
 BoxCollider2D:
   m_ObjectHideFlags: 0

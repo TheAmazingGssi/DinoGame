@@ -1,69 +1,79 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class SimpleEnemy : MonoBehaviour
+public class EnemyController : MonoBehaviour
 {
-    [Header("Movement")]
+    [Header("Movement Settings")]
     [SerializeField] private float moveSpeed = 2.0f;
-    [Tooltip("Range the enemy can sense the player")]
     [SerializeField] private float detectionRange = 7.0f;
+    [SerializeField] private float attackRange = 1.5f;
 
-    [Header("Referenses")]
+    [Header("References")]
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private SpriteRenderer spriteRenderer;
-    [SerializeField] private Collider2D groundCheckCollider;
+    [SerializeField] private Animator animator;
     [SerializeField] private Transform player;
 
-    private Vector2 moveDirection = Vector2.zero;
-    private bool facingRight = true;
     private bool isOverGround = true;
 
-    private void Awake()
+    private Vector3 moveDirection = Vector3.zero;
+    private bool isFacingLeft = false;
+
+    [SerializeField] private Collider2D groundCheckCollider;
+
+    private void Start()
     {
         rb.gravityScale = 0;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
-
     private void Update()
     {
         StayInBounds();
     }
-
     private void FixedUpdate()
     {
         Movement();
     }
     private void Movement()
     {
-        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-        if (distanceToPlayer <= detectionRange && isOverGround)
+        if (distanceToPlayer <= detectionRange && distanceToPlayer > attackRange && isOverGround)
         {
-            moveDirection = ((Vector2)player.position - (Vector2)transform.position).normalized;
+            moveDirection = (player.position - transform.position).normalized;
+            moveDirection.y = 0;
+
+        }
+        else if (distanceToPlayer <= attackRange)
+        {
+            moveDirection = Vector3.zero;
         }
         else
         {
-            moveDirection = Vector2.zero;
+            moveDirection = Vector3.zero;
         }
 
-        if (moveDirection.x > 0 && !facingRight)
+        if (moveDirection.x > 0 && isFacingLeft)
         {
-            FlipSprite();
+            FlipSprite(false);
         }
-        else if (moveDirection.x < 0 && facingRight)
+        else if (moveDirection.x < 0 && !isFacingLeft)
         {
-            FlipSprite();
+            FlipSprite(true);
+        }
+
+        if (distanceToPlayer <= attackRange)
+        {
+            FlipSprite(transform.position.x - player.position.x > 0);
         }
     }
 
-
-    private void StayInBounds() //stay in walkable area
+    private void StayInBounds()
     {
         if (isOverGround)
         {
-            rb.linearVelocity = moveDirection * moveSpeed;
+            Vector2 movement = new Vector2(moveDirection.x, moveDirection.z) * moveSpeed;
+            rb.linearVelocity = movement;
         }
         else
         {
@@ -71,10 +81,10 @@ public class SimpleEnemy : MonoBehaviour
         }
     }
 
-    private void FlipSprite()
+    private void FlipSprite(bool facingLeft)
     {
-        facingRight = !facingRight;
-        spriteRenderer.flipX = !spriteRenderer.flipX;
+        isFacingLeft = facingLeft;
+        spriteRenderer.flipX = facingLeft;
     }
 
     private void OnTriggerStay2D(Collider2D other)
