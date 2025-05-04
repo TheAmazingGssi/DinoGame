@@ -3,6 +3,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     private static readonly int Speed = Animator.StringToHash("Speed");
+    private const string Ground = "Ground";
 
 
     [SerializeField] EnemyManager manager;
@@ -95,7 +96,7 @@ public class EnemyController : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("Ground"))
+        if (other.CompareTag(Ground))
         {
             isOverGround = true;
         }
@@ -103,7 +104,7 @@ public class EnemyController : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Ground"))
+        if (other.CompareTag(Ground))
         {
             isOverGround = false;
         }

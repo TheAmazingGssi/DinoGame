@@ -5,7 +5,7 @@ public class EnemyCombatManager : CombatManager
 {
     private static readonly int Hurt = Animator.StringToHash("Hurt");
 
-
+    [SerializeField] private EnemyManager manager;
     [SerializeField] private TextMesh damageNumberPrefab;
 
     public void Initialize(float maxHealth)
@@ -22,6 +22,7 @@ public class EnemyCombatManager : CombatManager
         if (damageNumberPrefab)
         {
             SpawnDamageText(damageArgs);
+            manager.Animator.SetTrigger(Hurt);
         }
     }
     private void SpawnDamageText(DamageArgs damageArgs)

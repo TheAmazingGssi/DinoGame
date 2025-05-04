@@ -36,6 +36,7 @@ public class EnemyManager : MonoBehaviour
     private void HandleDeath(CombatManager combatManager)
     {
         OnDeath?.Invoke(this);
+        animator.SetBool(IsDead, true);
         gameObject.SetActive(false);
     }
 
