@@ -47,17 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 219f9f5e6823deb45bc8a13df2a54fef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
-  rigidBody: {fileID: 8409156872501479857}
-  animator: {fileID: 0}
-  groundCheckCollider: {fileID: 0}
-  jumpDuration: 0.6
-  leftMeleeCollider: {fileID: 0}
-  rightMeleeCollider: {fileID: 0}
-  enableDuration: 0.2
-  disableDelay: 0.5
-  attackCooldown: 1
-  attackDamage: 10
+  speed: 10
+  rb: {fileID: 8409156872501479857}
 --- !u!114 &8449932776641702479
 MonoBehaviour:
   m_ObjectHideFlags: 0
