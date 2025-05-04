@@ -1,13 +1,34 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class CharSelectMultiplayerManager : MonoBehaviour
 {
     [SerializeField] Color[] characterList;
+    [SerializeField] Image[] imageList;
+    [SerializeField] GameObject[] displayers;
     List<CharacterSelect> playerList = new List<CharacterSelect>();
+
+    private void UpdateColors()
+    {
+        for (int i = 0; i < playerList.Count; i++)
+        {
+            imageList[i].color = playerList[i].Color;
+        }
+    }
     
     public Color GetNextColor(Color currentColor)
+    {
+        return ChangeColor(currentColor, 1);
+    }
+    public Color GetPreviousColor(Color currentColor)
+    {
+        return ChangeColor(currentColor, -1);
+    }
+
+    private Color ChangeColor(Color currentColor, int change)
     {
         //Find the index of the current color
         int index = 0;
@@ -18,9 +39,11 @@ public class CharSelectMultiplayerManager : MonoBehaviour
         for (int i = 0; i < characterList.Length; i++) //looping the array once in case all colors are taken (the person trying to swap color has a color)
         {
             //go to next index
-            index++;
-            if (index == characterList.Length)
+            index += change;
+            if (index >= characterList.Length)
                 index = 0;
+            else if (index < 0)
+                index = characterList.Length - 1;
 
             //check if the color is taken by anyone else
             bool colorIsTaken = false;
@@ -37,6 +60,11 @@ public class CharSelectMultiplayerManager : MonoBehaviour
     }
     public void PlayerJoined(PlayerInput playerInput)
     {
-        playerList.Add(playerInput.GetComponent<CharacterSelect>());
+        CharacterSelect newPlayer = playerInput.GetComponent<CharacterSelect>();
+        playerList.Add(newPlayer);
+        newPlayer.UpdateColors.AddListener(UpdateColors);
+        newPlayer.Manager = this;
+        displayers[playerList.Count-1].SetActive(true);
+        Debug.Log("Added a player");
     }
 }
