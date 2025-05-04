@@ -1,8 +1,6 @@
-
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
-using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 public class CharacterSelect : MonoBehaviour
 {
@@ -36,6 +34,7 @@ public class CharacterSelect : MonoBehaviour
         counter = inputCooldown;
 
         //now we can do stuff
+        
         if (input.y < 0)
             ChangeColor(Manager.GetNextColor(Color));
         else
