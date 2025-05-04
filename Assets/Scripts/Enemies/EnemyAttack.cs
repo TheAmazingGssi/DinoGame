@@ -29,9 +29,7 @@ public abstract class EnemyAttack : MonoBehaviour
 
     protected virtual void HandleAttack()
     {
-        float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
-
-        if (distanceToPlayer <= enemyData.AttackRange && canAttack)
+        if (canAttack)
         {
             canAttack = false;
             StartAttack();
@@ -49,6 +47,8 @@ public abstract class EnemyAttack : MonoBehaviour
     protected virtual void StartAttack()
     {
         animator.SetTrigger(Attack);
+        ApplyDamage();
+        animator.ResetTrigger(Attack);
     }
 
     protected abstract void ApplyDamage();
