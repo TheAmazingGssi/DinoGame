@@ -16,6 +16,16 @@ public class TestEnemyAttack : EnemyAttack
         }
     }
 
+    protected override void HandleAttack()
+    {
+        float distanceToPlayer = Vector2.Distance(transform.position, manager.PlayerTransform.position);
+
+        if (distanceToPlayer <= manager.EnemyData.AttackRange)
+        {
+            base.HandleAttack();
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision == CompareTag(Player))
