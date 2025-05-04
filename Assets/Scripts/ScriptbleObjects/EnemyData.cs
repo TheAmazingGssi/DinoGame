@@ -9,12 +9,17 @@ public class EnemyData : ScriptableObject
 
     [SerializeField] private float cooldown;
 
-    [SerializeField] private float range;
+    [SerializeField] private float attackRange;
 
-    public float Range => range;
+    [SerializeField] private float detectionRange;
+
+    [SerializeField] private float speed;
+
+
+    public float Speed => speed;
+    public float DetectionRange => detectionRange;
+    public float AttackRange => attackRange;
     public float Cooldown => cooldown;
-
     public float MaxHealth => maxHealth;
-
     public float BaseDamage => baseDamage;
 }

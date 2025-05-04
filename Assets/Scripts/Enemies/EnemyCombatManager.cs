@@ -3,13 +3,13 @@ using UnityEngine;
 
 public class EnemyCombatManager : CombatManager
 {
-   // [SerializeField] private CombatData combatData;
+    [SerializeField] private EnemyManager manager;
     [SerializeField] private TextMesh damageNumberPrefab;
 
-    public void Initialize()
+    public void Initialize(float maxHealth)
     {
-  //    currentMaxHealth = combatData.MaxHealth;
-  //    currentHealth = combatData.MaxHealth;
+        currentMaxHealth = maxHealth;
+        currentHealth = maxHealth;
         UpdateHealthBar();
     }
 

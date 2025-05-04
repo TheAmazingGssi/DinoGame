@@ -2,16 +2,13 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    [Header("Movement Settings")]
-    [SerializeField] private float moveSpeed = 2.0f;
-    [SerializeField] private float detectionRange = 7.0f;
-    [SerializeField] private float attackRange = 1.5f;
 
-    [Header("References")]
-    [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private SpriteRenderer spriteRenderer;
-    [SerializeField] private Animator animator;
-    [SerializeField] private Transform player;
+    [SerializeField] EnemyManager manager;
+    private Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
+    private Animator animator;
+    private Transform player;
+    private EnemyData enemyData;
 
     private bool isOverGround = true;
 
@@ -20,6 +17,14 @@ public class EnemyController : MonoBehaviour
 
     [SerializeField] private Collider2D groundCheckCollider;
 
+    private void Awake()
+    {
+        rb = manager.RB;
+        spriteRenderer = manager.SpriteRenderer;
+        animator = manager.Animator;
+        player = manager.PlayerTransform;
+        enemyData = manager.EnemyData;
+    }
     private void Start()
     {
         rb.gravityScale = 0;
@@ -38,13 +43,11 @@ public class EnemyController : MonoBehaviour
     {
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-        if (distanceToPlayer <= detectionRange && distanceToPlayer > attackRange && isOverGround)
+        if (distanceToPlayer <= enemyData.DetectionRange && distanceToPlayer > enemyData.AttackRange && isOverGround)
         {
             moveDirection = (player.position - transform.position).normalized;
-            moveDirection.y = 0;
-
         }
-        else if (distanceToPlayer <= attackRange)
+        else if (distanceToPlayer <= enemyData.AttackRange)
         {
             moveDirection = Vector3.zero;
         }
@@ -62,7 +65,7 @@ public class EnemyController : MonoBehaviour
             FlipSprite(true);
         }
 
-        if (distanceToPlayer <= attackRange)
+        if (distanceToPlayer <= enemyData.AttackRange)
         {
             FlipSprite(transform.position.x - player.position.x > 0);
         }
@@ -72,7 +75,7 @@ public class EnemyController : MonoBehaviour
     {
         if (isOverGround)
         {
-            Vector2 movement = new Vector2(moveDirection.x, moveDirection.z) * moveSpeed;
+            Vector2 movement = new Vector2(moveDirection.x, moveDirection.y) * enemyData.Speed;
             rb.linearVelocity = movement;
         }
         else

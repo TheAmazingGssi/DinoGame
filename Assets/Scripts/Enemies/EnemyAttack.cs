@@ -5,15 +5,23 @@ public abstract class EnemyAttack : MonoBehaviour
 {
     private static readonly int Attack = Animator.StringToHash("Attack");
 
-    [SerializeField] private Transform playerTransform;
-    [SerializeField] private Animator animator;
-    [SerializeField] private EnemyController movement;
+    [SerializeField] private EnemyManager manager;
 
-    [SerializeField] private float attackRange = 20;
-    [SerializeField] private float attackCooldown;
+    private Transform playerTransform;
+    private Animator animator;
+    private EnemyController movement;
+    private EnemyData enemyData;
 
     private bool canAttack = true;
 
+
+    private void Awake()
+    {
+        playerTransform = manager.PlayerTransform;
+        movement = manager.EnemyController;
+        enemyData = manager.EnemyData;
+        animator = manager.Animator;
+    }
     private void FixedUpdate()
     {
         HandleAttack();
@@ -23,7 +31,7 @@ public abstract class EnemyAttack : MonoBehaviour
     {
         float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
 
-        if (distanceToPlayer <= attackRange && canAttack)
+        if (distanceToPlayer <= enemyData.AttackRange && canAttack)
         {
             canAttack = false;
             StartAttack();
@@ -33,7 +41,7 @@ public abstract class EnemyAttack : MonoBehaviour
 
     IEnumerator Cooldown()
     {
-        yield return new WaitForSeconds(attackCooldown);
+        yield return new WaitForSeconds(enemyData.Cooldown);
         canAttack = true;
     }
 
