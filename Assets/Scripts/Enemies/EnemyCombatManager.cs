@@ -3,7 +3,9 @@ using UnityEngine;
 
 public class EnemyCombatManager : CombatManager
 {
-    [SerializeField] private EnemyManager manager;
+    private static readonly int Hurt = Animator.StringToHash("Hurt");
+
+
     [SerializeField] private TextMesh damageNumberPrefab;
 
     public void Initialize(float maxHealth)

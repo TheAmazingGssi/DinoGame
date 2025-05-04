@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    private static readonly int Speed = Animator.StringToHash("Speed");
+
 
     [SerializeField] EnemyManager manager;
     private Rigidbody2D rb;
@@ -69,6 +71,7 @@ public class EnemyController : MonoBehaviour
         {
             FlipSprite(transform.position.x - player.position.x > 0);
         }
+            animator.SetFloat(Speed, moveDirection.magnitude);
     }
 
     private void StayInBounds()
