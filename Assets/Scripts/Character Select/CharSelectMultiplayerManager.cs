@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -8,7 +9,10 @@ public class CharSelectMultiplayerManager : MonoBehaviour
 {
     [SerializeField] Color[] characterList;
     [SerializeField] Image[] imageList;
+    [SerializeField] TextMeshProUGUI[] textArray;
     [SerializeField] GameObject[] displayers;
+    const string notReadyMessege = "Press X to ready";
+    const string readyMessege = "Ready!";
     List<CharacterSelect> playerList = new List<CharacterSelect>();
 
     private void UpdateColors()
@@ -16,6 +20,24 @@ public class CharSelectMultiplayerManager : MonoBehaviour
         for (int i = 0; i < playerList.Count; i++)
         {
             imageList[i].color = playerList[i].Color;
+        }
+    }
+    private void UpdateReady()
+    {
+        bool allReady = true;
+        for(int i = 0; i<playerList.Count; i++)
+        {
+            if (playerList[i].ready)
+                textArray[i].text = readyMessege;
+            else
+            {
+                textArray[i].text = notReadyMessege;
+                allReady = false;
+            }
+        }
+        if (allReady)
+        {
+            GoToNextScene();
         }
     }
     
@@ -63,8 +85,14 @@ public class CharSelectMultiplayerManager : MonoBehaviour
         CharacterSelect newPlayer = playerInput.GetComponent<CharacterSelect>();
         playerList.Add(newPlayer);
         newPlayer.UpdateColors.AddListener(UpdateColors);
+        newPlayer.UpdateReady.AddListener(UpdateReady);
         newPlayer.Manager = this;
         displayers[playerList.Count-1].SetActive(true);
         Debug.Log("Added a player");
+    }
+
+    private void GoToNextScene()
+    {
+        Debug.Log("Game Starts");
     }
 }

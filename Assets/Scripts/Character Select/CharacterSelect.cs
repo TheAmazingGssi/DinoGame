@@ -11,6 +11,8 @@ public class CharacterSelect : MonoBehaviour
     public Color Color = Color.white;
     public CharSelectMultiplayerManager Manager;
     public UnityEvent UpdateColors;
+    public UnityEvent UpdateReady;
+    public bool ready = false;
 
     public void Update()
     {
@@ -23,9 +25,11 @@ public class CharacterSelect : MonoBehaviour
         Vector2 input = inputContext.ReadValue<Vector2>();
 
         //make sure it isnt a wrong input
-        if (input.magnitude < deadzone)
+        if (input.magnitude < deadzone) //no drift joystick
             return;
-        if (Mathf.Abs(input.x) > Mathf.Abs(input.y))
+        if (Mathf.Abs(input.x) > Mathf.Abs(input.y)) //make sure its up and down not left and right
+            return;
+        if (ready) //make sure we can even read up down input now
             return;
 
         //not to swap through all the option in a single frame
@@ -39,6 +43,11 @@ public class CharacterSelect : MonoBehaviour
             ChangeColor(Manager.GetNextColor(Color));
         else
             ChangeColor(Manager.GetPreviousColor(Color));
+    }
+    public void OnXPressed()
+    {
+        ready = !ready;
+        UpdateReady.Invoke();
     }
     private void ChangeColor(Color color)
     {
