@@ -9,9 +9,9 @@ public class PlayerCombatManager : CombatManager
         UpdateHealthBar();
     }
 
-    public override void TakeDamage(DamageArgs damageArgs)
+    public override void TakeDamage(DamageArgs damageArgs) //gets called from the enemy
     {
         base.TakeDamage(damageArgs);
-        Debug.Log("Player took Damage" + damageArgs);
+        Debug.Log("Player took Damage");
     }
 }
