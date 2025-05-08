@@ -5,7 +5,7 @@ public abstract class EnemyAttack : MonoBehaviour
 {
     private static readonly int Attack = Animator.StringToHash("Attack");
 
-    [SerializeField] private EnemyManager manager;
+    [SerializeField] protected EnemyManager manager;
 
     private Transform playerTransform;
     private Animator animator;

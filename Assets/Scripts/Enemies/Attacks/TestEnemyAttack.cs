@@ -4,10 +4,8 @@ public class TestEnemyAttack : EnemyAttack
 {
     private const string Player = "Player";
 
-    [SerializeField] private EnemyManager manager;
-
     private bool isPlayerInRange = false;
-    private CombatManager combatManager;
+    private PlayerCombatManager combatManager;
     protected override void ApplyDamage()
     {
         if(combatManager && isPlayerInRange)
@@ -28,11 +26,17 @@ public class TestEnemyAttack : EnemyAttack
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision == CompareTag(Player))
+        Debug.Log(collision.tag);
+        if (collision.tag == "Player")
         {
-            combatManager = collision.gameObject.GetComponent<CombatManager>();
+            Debug.Log("Player Found");
+
+            combatManager = collision.gameObject.GetComponent<PlayerCombatManager>();
+            Debug.Log(combatManager);
+
             if (combatManager)
             {
+                Debug.Log("combat manager found");
                 isPlayerInRange = true;
             }
         }
@@ -40,7 +44,7 @@ public class TestEnemyAttack : EnemyAttack
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision == CompareTag(Player))
+        if (collision == CompareTag("Player"))
         {
             combatManager = null;
             isPlayerInRange = false;
