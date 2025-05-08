@@ -1,10 +1,11 @@
+
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 
 public abstract class EnemyAttack : MonoBehaviour
 {
     private static readonly int Attack = Animator.StringToHash("Attack");
-
     [SerializeField] protected EnemyManager manager;
 
     private Transform playerTransform;
@@ -12,8 +13,8 @@ public abstract class EnemyAttack : MonoBehaviour
     private EnemyController movement;
     private EnemyData enemyData;
 
-    private bool canAttack = true;
-
+    private bool isInCooldown = false;
+    protected abstract bool IsPlayerInRange { get; }
 
     private void Awake()
     {
@@ -22,41 +23,45 @@ public abstract class EnemyAttack : MonoBehaviour
         enemyData = manager.EnemyData;
         animator = manager.Animator;
     }
-    private void FixedUpdate()
-    {
-        HandleAttack();
-    }
 
-    protected virtual void HandleAttack()
+    public void TryAttack()
     {
-        if (canAttack)
+        if (!isInCooldown)
         {
-            canAttack = false;
             StartAttack();
-            StartCoroutine(Cooldown());
+            isInCooldown = true;
+            StartCoroutine(CooldownRoutine());
         }
     }
 
-    IEnumerator Cooldown()
+    private IEnumerator CooldownRoutine()
     {
         yield return new WaitForSeconds(enemyData.Cooldown);
-        canAttack = true;
-    }
+        isInCooldown = false;
 
+        if (IsPlayerInRange)
+        {
+            TryAttack();
+        }
+    }
 
     protected virtual void StartAttack()
     {
+        Debug.Log("Start attack");
         animator.SetTrigger(Attack);
-        ApplyDamage();
-        animator.ResetTrigger(Attack);
     }
 
     protected abstract void ApplyDamage();
 
-    public virtual void OnAttackEnd() //animation event
+    public virtual void OnAttackExecute()
     {
-        Debug.Log("Attackendevent");
+        Debug.Log("Attack execute event");
         ApplyDamage();
+    }
+
+    public virtual void OnAttackEnd()
+    {
+        Debug.Log("Attack end event");
         animator.ResetTrigger(Attack);
     }
 }
