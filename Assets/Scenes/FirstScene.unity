@@ -383,6 +383,7 @@ GameObject:
   - component: {fileID: 893266600}
   - component: {fileID: 893266605}
   - component: {fileID: 893266606}
+  - component: {fileID: 893266607}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Player
@@ -454,8 +455,12 @@ MonoBehaviour:
   moveSpeed: 0
   rigidBody: {fileID: 893266601}
   animator: {fileID: 893266600}
-  groundCheckCollider: {fileID: 0}
+  groundCheckCollider: {fileID: 893266607}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   jumpDuration: 5
+  groundCheckRadius: 0.2
   leftMeleeCollider: {fileID: 1682694730}
   rightMeleeCollider: {fileID: 1581861573}
   enableDuration: 0.2
@@ -611,6 +616,52 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!61 &893266607
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893266599}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.17, y: 0.18}
+    newSize: {x: 0.15, y: 0.18}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.17, y: 0.18}
+  m_EdgeRadius: 0
 --- !u!1 &965743942
 GameObject:
   m_ObjectHideFlags: 0
