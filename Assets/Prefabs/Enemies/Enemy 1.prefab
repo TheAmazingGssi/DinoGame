@@ -131,12 +131,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   combatManager: {fileID: 3082602570648211020}
-  playerTransform: {fileID: 0}
   enemyController: {fileID: 8038912827772719235}
   rb: {fileID: 7042898619641567151}
   spriteRenderer: {fileID: 2515911822479905939}
-  enemyData: {fileID: 11400000, guid: efcb3114fbb81e14eaf446cc3bfaa133, type: 2}
   animator: {fileID: 8492816430768677864}
+  enemyData: {fileID: 11400000, guid: efcb3114fbb81e14eaf446cc3bfaa133, type: 2}
+  playerTransform: {fileID: 11400000, guid: 937d220d66f373144b4d13a200bd8566, type: 2}
 --- !u!114 &3082602570648211020
 MonoBehaviour:
   m_ObjectHideFlags: 0

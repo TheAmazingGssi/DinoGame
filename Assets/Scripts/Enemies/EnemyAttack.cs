@@ -18,7 +18,7 @@ public abstract class EnemyAttack : MonoBehaviour
 
     private void Awake()
     {
-        playerTransform = manager.PlayerTransform;
+        playerTransform = manager.PlayerTransform.PlayerTransform;
         movement = manager.EnemyController;
         enemyData = manager.EnemyData;
         animator = manager.Animator;

@@ -9,12 +9,12 @@ public class EnemyManager : MonoBehaviour
 
 
     [SerializeField] private EnemyCombatManager combatManager;
-    [SerializeField] private Transform playerTransform;
     [SerializeField] private EnemyController enemyController;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private SpriteRenderer spriteRenderer;
-    [SerializeField] private EnemyData enemyData;
     [SerializeField] private Animator animator;
+    [SerializeField] private EnemyData enemyData;
+    [SerializeField] private PlayerTransformData playerTransform;
 
     public Animator Animator => animator;
     public EnemyData EnemyData => enemyData;
@@ -22,7 +22,7 @@ public class EnemyManager : MonoBehaviour
     public Rigidbody2D RB => rb; 
     public EnemyController EnemyController => enemyController;
     public EnemyCombatManager CombatManager => combatManager;
-    public Transform PlayerTransform => playerTransform;
+    public PlayerTransformData PlayerTransform => playerTransform;
 
 
     public event UnityAction<EnemyManager> OnDeath;
