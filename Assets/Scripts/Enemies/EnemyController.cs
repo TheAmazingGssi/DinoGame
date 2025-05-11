@@ -10,7 +10,7 @@ public class EnemyController : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
-    private Transform player;
+    private PlayerTransformData playerTransform;
     private EnemyData enemyData;
 
     private bool isOverGround = true;
@@ -25,7 +25,7 @@ public class EnemyController : MonoBehaviour
         rb = manager.RB;
         spriteRenderer = manager.SpriteRenderer;
         animator = manager.Animator;
-        player = manager.PlayerTransform;
+        playerTransform = manager.PlayerTransform;
         enemyData = manager.EnemyData;
     }
     private void Start()
@@ -44,13 +44,13 @@ public class EnemyController : MonoBehaviour
     }
     private void Movement()
     {
-        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+        float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.PlayerTransform.position);
 
-        if (distanceToPlayer <= enemyData.DetectionRange && distanceToPlayer > enemyData.AttackRange && isOverGround)
+        if (distanceToPlayer <= enemyData.DetectionRange && distanceToPlayer > enemyData.StopRange && isOverGround)
         {
-            moveDirection = (player.position - transform.position).normalized;
+            moveDirection = (playerTransform.PlayerTransform.position - transform.position).normalized;
         }
-        else if (distanceToPlayer <= enemyData.AttackRange)
+        else if (distanceToPlayer <= enemyData.StopRange)
         {
             moveDirection = Vector3.zero;
         }
@@ -68,9 +68,9 @@ public class EnemyController : MonoBehaviour
             FlipSprite(true);
         }
 
-        if (distanceToPlayer <= enemyData.AttackRange)
+        if (distanceToPlayer <= enemyData.StopRange)
         {
-            FlipSprite(transform.position.x - player.position.x > 0);
+            FlipSprite(transform.position.x - playerTransform.PlayerTransform.position.x > 0);
         }
             animator.SetFloat(Speed, moveDirection.magnitude);
     }

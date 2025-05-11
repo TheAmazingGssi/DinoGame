@@ -5,6 +5,8 @@ public struct DamageArgs
 {
     public float Damage;
 }
+
+//parent class tp player and enemies combat manager, handles death, health changes and damage taking
 public class CombatManager : MonoBehaviour
 {
    // [SerializeField] protected UI_ProgressBar healthBar;
@@ -54,7 +56,7 @@ public class CombatManager : MonoBehaviour
         OnDeath?.Invoke(this);
     }
 
-    protected void UpdateHealthBar()
+    protected void UpdateHealthBar() //no health bar yet
     {
         //if (healthBar)
         //{

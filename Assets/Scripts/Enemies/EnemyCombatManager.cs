@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 public class EnemyCombatManager : CombatManager
 {
     private static readonly int Hurt = Animator.StringToHash("Hurt");

@@ -9,7 +9,8 @@ public class EnemyData : ScriptableObject
 
     [SerializeField] private float cooldown;
 
-    [SerializeField] private float attackRange;
+    [Tooltip("Distance from the player where the enemy should stop moving")]
+    [SerializeField] private float stopRange;
 
     [SerializeField] private float detectionRange;
 
@@ -18,7 +19,7 @@ public class EnemyData : ScriptableObject
 
     public float Speed => speed;
     public float DetectionRange => detectionRange;
-    public float AttackRange => attackRange;
+    public float StopRange => stopRange;
     public float Cooldown => cooldown;
     public float MaxHealth => maxHealth;
     public float BaseDamage => baseDamage;

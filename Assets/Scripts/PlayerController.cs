@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
 {
     // Constants
     private const int JUMP_FORCE = 5;
+
+    [SerializeField] private PlayerTransformData playerTransform;
     
     //Input Variables
     Vector2 movementInput = Vector2.zero;
@@ -42,9 +44,12 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded = true;
     private bool isJumping = false;
     private bool isAttacking = false;
-    
-    
-    
+
+
+    private void Awake()
+    {
+        playerTransform.PlayerTransform = transform;
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

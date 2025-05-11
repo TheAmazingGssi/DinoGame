@@ -3,47 +3,37 @@ using UnityEngine;
 public class TestEnemyAttack : EnemyAttack
 {
     private const string Player = "Player";
+    private PlayerCombatManager combatManager;
 
-    [SerializeField] private EnemyManager manager;
-
-    private bool isPlayerInRange = false;
-    private CombatManager combatManager;
+    protected override bool IsPlayerInRange => combatManager != null;
     protected override void ApplyDamage()
     {
-        if(combatManager && isPlayerInRange)
+        if (combatManager)
         {
             combatManager.TakeDamage(new DamageArgs { Damage = manager.EnemyData.BaseDamage });
         }
     }
 
-    protected override void HandleAttack()
-    {
-        float distanceToPlayer = Vector2.Distance(transform.position, manager.PlayerTransform.position);
-
-        if (distanceToPlayer <= manager.EnemyData.AttackRange)
-        {
-            base.HandleAttack();
-        }
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision == CompareTag(Player))
+        if (collision.CompareTag(Player))
         {
-            combatManager = collision.gameObject.GetComponent<CombatManager>();
+            Debug.Log("Player Found");
+            combatManager = collision.gameObject.GetComponent<PlayerCombatManager>();
             if (combatManager)
             {
-                isPlayerInRange = true;
+                Debug.Log("Combat manager found");
+                TryAttack();
             }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision == CompareTag(Player))
+        if (collision.CompareTag(Player))
         {
+            Debug.Log("Player left attack range");
             combatManager = null;
-            isPlayerInRange = false;
         }
     }
 }
