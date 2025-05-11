@@ -46,11 +46,11 @@ public class EnemyController : MonoBehaviour
     {
         float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.PlayerTransform.position);
 
-        if (distanceToPlayer <= enemyData.DetectionRange && distanceToPlayer > enemyData.AttackRange && isOverGround)
+        if (distanceToPlayer <= enemyData.DetectionRange && distanceToPlayer > enemyData.StopRange && isOverGround)
         {
             moveDirection = (playerTransform.PlayerTransform.position - transform.position).normalized;
         }
-        else if (distanceToPlayer <= enemyData.AttackRange)
+        else if (distanceToPlayer <= enemyData.StopRange)
         {
             moveDirection = Vector3.zero;
         }
@@ -68,7 +68,7 @@ public class EnemyController : MonoBehaviour
             FlipSprite(true);
         }
 
-        if (distanceToPlayer <= enemyData.AttackRange)
+        if (distanceToPlayer <= enemyData.StopRange)
         {
             FlipSprite(transform.position.x - playerTransform.PlayerTransform.position.x > 0);
         }
