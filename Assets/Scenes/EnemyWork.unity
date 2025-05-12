@@ -278,7 +278,7 @@ Transform:
   m_GameObject: {fileID: 120553698}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.47, y: 0.83, z: 0}
+  m_LocalPosition: {x: -2.59, y: 0.83, z: 0}
   m_LocalScale: {x: 1.7976934, y: 1.6579765, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -465,7 +465,7 @@ GameObject:
   m_Component:
   - component: {fileID: 893266604}
   - component: {fileID: 893266603}
-  - component: {fileID: 893266602}
+  - component: {fileID: 893266608}
   - component: {fileID: 893266601}
   - component: {fileID: 893266600}
   - component: {fileID: 893266605}
@@ -526,31 +526,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &893266602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 893266599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 219f9f5e6823deb45bc8a13df2a54fef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTransform: {fileID: 11400000, guid: 937d220d66f373144b4d13a200bd8566, type: 2}
-  moveSpeed: 0
-  rigidBody: {fileID: 893266601}
-  animator: {fileID: 893266600}
-  groundCheckCollider: {fileID: 1498350874}
-  jumpDuration: 5
-  leftMeleeCollider: {fileID: 1682694730}
-  rightMeleeCollider: {fileID: 1581861573}
-  enableDuration: 0.2
-  disableDelay: 0.5
-  attackCooldown: 1
-  attackDamage: 10
+  m_Constraints: 4
 --- !u!212 &893266603
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -615,7 +591,7 @@ Transform:
   m_GameObject: {fileID: 893266599}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.03, y: 0.05, z: -1}
+  m_LocalPosition: {x: -4.59, y: 1.29, z: -1}
   m_LocalScale: {x: 9.9728, y: 10.3288, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -682,8 +658,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
-  m_NotificationBehavior: 0
+  m_Actions: {fileID: -944628639613478452, guid: b8b82ccd23310ee4a8c7cfb12f3f0908, type: 3}
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -694,7 +670,79 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ActionEvents: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 893266608}
+        m_TargetAssemblyTypeName: PlayerController2, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a2937203-03f8-4cd8-bdf5-60f5d0b50d95
+    m_ActionName: 'Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b9a226e4-dda4-4830-9840-9681cdbb7510
+    m_ActionName: 'UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9ad567c1-2385-4ec2-9e32-39aa80a276bc
+    m_ActionName: 'UI/Submit[/Keyboard/enter]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 927973e4-c604-43c8-9a4a-fd7b7688ba3e
+    m_ActionName: 'UI/Cancel[/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5f4d5cd7-9261-4f49-8237-4160ef7fd237
+    m_ActionName: UI/Point
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 31df581f-2c62-4e19-82f0-d53477ad0698
+    m_ActionName: UI/Click
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c5e1752b-6ab6-41de-8143-7bc6e44a7c6e
+    m_ActionName: UI/ScrollWheel
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9d8bdc85-fc82-4cf4-beb2-b9cac36ef2c1
+    m_ActionName: UI/MiddleClick
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a57adde4-680c-430b-8f25-ba154a44908e
+    m_ActionName: UI/RightClick
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1f391408-956f-444d-afcb-8c080b0908d7
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: aa2bf985-0772-49ef-865f-fc6652ff8cb3
+    m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7c4d9055-8d92-4bd0-b712-0a99fced7777
+    m_ActionName: Player/Attack
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6311f31b-b116-43d4-854b-e61dda682699
+    m_ActionName: Player/Block
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bbec5ab0-f6ef-4451-8ea5-a96276550763
+    m_ActionName: Player/Revive
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2c39d46c-cf40-4e3d-aee6-96b6de2daefd
+    m_ActionName: Player/Emote
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -712,6 +760,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 261fc597e3e8a6d469eaa5f911c62b37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &893266608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893266599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4db9d0164c5110498657dd5a5881024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 10
+  acceleration: 10
+  rotationSpeed: 720
 --- !u!1 &965743942
 GameObject:
   m_ObjectHideFlags: 0
@@ -953,7 +1016,7 @@ GameObject:
   - component: {fileID: 1498350875}
   - component: {fileID: 1498350874}
   m_Layer: 0
-  m_Name: Ground
+  m_Name: Sky
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -989,11 +1052,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.11949158, y: -0.16728866}
+  m_Offset: {x: 0.39400625, y: -0.16728878}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1003,7 +1066,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 23.034264, y: 5.636277}
+  m_Size: {x: 24.06126, y: 5.636277}
   m_EdgeRadius: 0
 --- !u!4 &1498350875
 Transform:
@@ -1014,7 +1077,7 @@ Transform:
   m_GameObject: {fileID: 1498350873}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3589334, y: -1.99, z: 0.20981973}
+  m_LocalPosition: {x: 2.79, y: 5.06, z: 0.20981973}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
