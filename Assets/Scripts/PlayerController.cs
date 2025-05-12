@@ -50,6 +50,7 @@ public class PlayerController : MonoBehaviour
     {
         playerTransform.PlayerTransform = transform;
     }
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

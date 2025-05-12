@@ -9,24 +9,24 @@ public class PlayerController : MonoBehaviour
 {
     // Constants
     private const int JUMP_FORCE = 5;
-    
+
     //Input Variables
     Vector2 movementInput = Vector2.zero;
     HID.Button jumpButton;
     HID.Button attackButton;
     HID.Button specialButton;
     HID.Button blockButton;
-    
+
     //Movement variables
     [SerializeField] private float moveSpeed;
     [SerializeField] private Rigidbody2D rigidBody;
     [SerializeField] private Animator animator;
     [SerializeField] private Collider2D groundCheckCollider;
     private bool facingRight = true;
-    
+
     //Jump variables
     [SerializeField] private float jumpDuration = 0.6f; // Jump air time legth
-    
+
     //Attack variables
     [SerializeField] private GameObject leftMeleeCollider; // Melee attack collider
     [SerializeField] private GameObject rightMeleeCollider; // Melee attack collider
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float disableDelay = 0.5f; // Delay before disabling collider
     [SerializeField] private float attackCooldown = 1f; // Cooldown between attacks
     [SerializeField] private int attackDamage = 10; // Damage dealt to enemies
-    
+
     private float lastAttackTime; // Track the last attack time for cooldown
     private bool canAttack = true; // Check if player can attack (cooldown)
 
@@ -42,9 +42,9 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded = true;
     private bool isJumping = false;
     private bool isAttacking = false;
-    
-    
-    
+
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
         {
             canAttack = true;
         }
-        
+
         //very temporary just to check different controllers do different things
         rigidBody.linearVelocity = movementInput * moveSpeed;
     }
@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour
         movementInput = inputContext.ReadValue<Vector2>();
         animator.SetBool("isMoving", movementInput != Vector2.zero); // Set animator parameter based on movement input
     }
-    
+
     public void OnJump(InputAction.CallbackContext inputContext)
     {
         if (isGrounded)
@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isJumping", isJumping);
         }
     }
-    
+
     public void OnAttack(InputAction.CallbackContext inputContext)
     {
         if (canAttack)
@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Block");
     }
 
-    
+
     // Coroutine to enable the melee collider
     private IEnumerator EnableMeleeCollider()
     {
@@ -114,7 +114,7 @@ public class PlayerController : MonoBehaviour
             {
                 leftMeleeCollider.SetActive(true);  // Enable the collider
             }
-            
+
             yield return new WaitForSeconds(enableDuration); // Wait for the specified duration
             StartCoroutine(DisableMeleeCollider()); // Start the disable coroutine
         }
@@ -124,12 +124,12 @@ public class PlayerController : MonoBehaviour
     private IEnumerator DisableMeleeCollider()
     {
         yield return new WaitForSeconds(disableDelay); // Wait for the specified delay
-        
+
         if (leftMeleeCollider != null && rightMeleeCollider != null)
         {
             if (facingRight)
             {
-                rightMeleeCollider.SetActive(false); 
+                rightMeleeCollider.SetActive(false);
             }
             else
             {
@@ -141,30 +141,31 @@ public class PlayerController : MonoBehaviour
     private IEnumerator Land()
     {
         yield return new WaitForSeconds(jumpDuration); // Wait for the specified delay
-        
+
         //if ()
     }
 }
-*/
 
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.HID;
 
-public class PlayerController : MonoBehaviour
+public class CharacterController : MonoBehaviour
 {
     // Constants
     private const int JUMP_FORCE = 5;
-    
+
     // Input Variables
     Vector2 movementInput = Vector2.zero;
     HID.Button jumpButton;
     HID.Button attackButton;
     HID.Button specialButton;
     HID.Button blockButton;
-    
+
     // Movement variables
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private Rigidbody2D rigidBody;
@@ -172,11 +173,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Collider2D groundCheckCollider;
     [SerializeField] private LayerMask groundLayer; // Layer for ground detection
     private bool facingRight = true;
-    
+
     // Jump variables
     [SerializeField] private float jumpDuration = 0.6f; // Jump air time length
     [SerializeField] private float groundCheckRadius = 0.2f; // Radius for ground check
-    
+
     // Attack variables
     [SerializeField] private GameObject leftMeleeCollider; // Melee attack collider
     [SerializeField] private GameObject rightMeleeCollider; // Melee attack collider
@@ -184,13 +185,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float disableDelay = 0.5f; // Delay before disabling collider
     [SerializeField] private float attackCooldown = 1f; // Cooldown between attacks
     [SerializeField] private int attackDamage = 10; // Damage dealt to enemies
-    
+
     private float lastAttackTime; // Track the last attack time for cooldown
     private bool canAttack = true; // Check if player can attack (cooldown)
     private bool isGrounded = true;
     private bool isJumping = false;
     private bool isAttacking = false;
-    
+
+
+
     void Start()
     {
         // Ensure components are assigned
@@ -234,13 +237,13 @@ public class PlayerController : MonoBehaviour
     }
 
     // Player Input component events
-    public void OnMove(InputAction.CallbackContext inputContext)
+    public void Move(InputAction.CallbackContext inputContext)
     {
         movementInput = inputContext.ReadValue<Vector2>();
         animator.SetBool("isMoving", movementInput != Vector2.zero); // Set animator parameter
     }
-    
-    public void OnJump(InputAction.CallbackContext inputContext)
+
+    public void Jump(InputAction.CallbackContext inputContext)
     {
         if (inputContext.performed && isGrounded)
         {
@@ -251,8 +254,8 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(Land());
         }
     }
-    
-    public void OnAttack(InputAction.CallbackContext inputContext)
+
+    public void Attack(InputAction.CallbackContext inputContext)
     {
         if (inputContext.performed && canAttack)
         {
@@ -263,8 +266,8 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(EnableMeleeCollider());
         }
     }
-    
-    public void OnSpecial(InputAction.CallbackContext inputContext)
+
+    public void Special(InputAction.CallbackContext inputContext)
     {
         if (inputContext.performed)
         {
@@ -273,8 +276,8 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger("special");
         }
     }
-    
-    public void OnBlock(InputAction.CallbackContext inputContext)
+
+    public void Block(InputAction.CallbackContext inputContext)
     {
         if (inputContext.performed)
         {
@@ -301,7 +304,7 @@ public class PlayerController : MonoBehaviour
             {
                 leftMeleeCollider.SetActive(true);
             }
-            
+
             yield return new WaitForSeconds(enableDuration);
             isAttacking = false;
             StartCoroutine(DisableMeleeCollider());
@@ -312,7 +315,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator DisableMeleeCollider()
     {
         yield return new WaitForSeconds(disableDelay);
-        
+
         if (leftMeleeCollider != null && rightMeleeCollider != null)
         {
             if (facingRight)
@@ -330,7 +333,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator Land()
     {
         yield return new WaitForSeconds(jumpDuration);
-        
+
         // Check if player is grounded after jump duration
         if (isGrounded)
         {
@@ -346,5 +349,71 @@ public class PlayerController : MonoBehaviour
         Vector3 scale = transform.localScale;
         scale.x *= -1;
         transform.localScale = scale;
+    }
+}
+
+*/
+
+using System;
+using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+
+public class CharacterController : MonoBehaviour
+{
+    public Rigidbody2D rb;
+    public float moveSpeed = 5f;
+    
+    //public InputAction playerControls;
+    public InputSystem_Actions playerControls;
+
+    private InputAction move;
+    private InputAction jump;
+
+    Vector2 moveDirection = Vector2.zero;
+    
+    float horizontalMovement;
+
+    private void Awake()
+    {
+        playerControls = new InputSystem_Actions();
+    }
+
+    private void OnEnable()
+    {
+        move = playerControls.Player.Move;
+        jump = playerControls.Player.Jump;
+        move.Enable();
+        jump.Enable();
+    }
+    
+    private void OnDisable()
+    {
+        move.Disable();
+        jump.Disable();
+    }
+
+    private void Update()
+    {
+        moveDirection = move.ReadValue<Vector2>();
+    }
+
+    private void FixedUpdate()
+    {
+        rb.velocity = new Vector2(moveDirection.x * moveSpeed, rb.velocity.y);
+    }
+
+    public void Move(InputAction.CallbackContext context)
+    {
+        horizontalMovement = context.ReadValue<Vector2>().x;
+    }
+    
+    public void Jump(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            rb.AddForce(Vector2.up * 5f, ForceMode2D.Impulse);
+        }
     }
 }
