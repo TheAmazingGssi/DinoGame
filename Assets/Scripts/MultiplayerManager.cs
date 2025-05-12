@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 public class MultiplayerManager : MonoBehaviour
 {
-    List<PlayerController> players = new List<PlayerController>();
+    List<PlayerInput> players = new List<PlayerInput>();
     [SerializeField] private GameObject[] emptyPlayersArr;
     Dictionary<int, GameObject> emptyPlayers = new Dictionary<int, GameObject>();
 
@@ -17,12 +17,14 @@ public class MultiplayerManager : MonoBehaviour
     }
     public void SpawnPlayer(PlayerInput playerInput)
     {
-        players.Add(playerInput.GetComponent<PlayerController>());
+        players.Add(playerInput);
         SpawnPlayer(players.Count - 1);
     }
     private void SpawnPlayer(int id)
     {
-        players[id].GetComponentInChildren<SpriteRenderer>().color = emptyPlayers[id].GetComponentInChildren<SpriteRenderer>().color;
+        //Debug.Log($"Spawning player with {players[id].devices[0]} controller");
+        Color character = MultiPlayerInformation.Instance.GetCharacter(players[id].devices[0]);
+        players[id].GetComponentInChildren<SpriteRenderer>().color = character;
         players[id].transform.position = emptyPlayers[id].transform.position;
         Destroy(emptyPlayers[id]);
     }

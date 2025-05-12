@@ -1,25 +1,23 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class CharSelectMultiplayerManager : MonoBehaviour
 {
     [SerializeField] Color[] characterList;
-    [SerializeField] Image[] imageList;
-    [SerializeField] TextMeshProUGUI[] textArray;
-    [SerializeField] GameObject[] displayers;
+    [SerializeField] CharacterSelectorRefrenceHolder[] displayers;
     const string notReadyMessege = "Press X to ready";
     const string readyMessege = "Ready!";
     List<CharacterSelect> playerList = new List<CharacterSelect>();
+    [SerializeField] SceneLoader loader;
 
     private void UpdateColors()
     {
         for (int i = 0; i < playerList.Count; i++)
         {
-            imageList[i].color = playerList[i].Color;
+            displayers[i].Image.color = playerList[i].Color;
         }
     }
     private void UpdateReady()
@@ -28,10 +26,10 @@ public class CharSelectMultiplayerManager : MonoBehaviour
         for(int i = 0; i<playerList.Count; i++)
         {
             if (playerList[i].ready)
-                textArray[i].text = readyMessege;
+                displayers[i].Text.text = readyMessege;
             else
             {
-                textArray[i].text = notReadyMessege;
+                displayers[i].Text.text = notReadyMessege;
                 allReady = false;
             }
         }
@@ -82,17 +80,25 @@ public class CharSelectMultiplayerManager : MonoBehaviour
     }
     public void PlayerJoined(PlayerInput playerInput)
     {
-        CharacterSelect newPlayer = playerInput.GetComponent<CharacterSelect>();
-        playerList.Add(newPlayer);
-        newPlayer.UpdateColors.AddListener(UpdateColors);
-        newPlayer.UpdateReady.AddListener(UpdateReady);
-        newPlayer.Manager = this;
-        displayers[playerList.Count-1].SetActive(true);
-        Debug.Log("Added a player");
+        PlayerEntity player = playerInput.GetComponent<PlayerEntity>();
+
+        CharacterSelect characterSelector = player.SpawnCharacterSelector().GetComponent<CharacterSelect>();
+
+        playerList.Add(characterSelector);
+        characterSelector.UpdateColors.AddListener(UpdateColors);
+        characterSelector.UpdateReady.AddListener(UpdateReady);
+        characterSelector.Manager = this;
+        displayers[playerList.Count-1].gameObject.SetActive(true);
+        
     }
 
     private void GoToNextScene()
     {
-        Debug.Log("Game Starts");
+        for (int i = 0; i < playerList.Count; i++)
+        {
+            MultiPlayerInformation.Instance.AddPlayerInfo(i, playerList[i].Color, playerList[i].PlayerInput.devices[0]);
+            //Debug.Log($"Saving player with {playerList[i].PlayerInput.devices[0]} controller");
+        }
+        loader.LoadTargetScene();
     }
 }
