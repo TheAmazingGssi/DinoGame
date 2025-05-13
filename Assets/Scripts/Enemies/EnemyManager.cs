@@ -24,6 +24,8 @@ public class EnemyManager : MonoBehaviour
     public EnemyCombatManager CombatManager => combatManager;
     public PlayerTransformData PlayerTransform => playerTransform;
 
+    [SerializeField] private bool isDead = false;
+
 
     public event UnityAction<EnemyManager> OnDeath;
 
@@ -37,7 +39,22 @@ public class EnemyManager : MonoBehaviour
     {
         OnDeath?.Invoke(this);
         animator.SetBool(IsDead, true);
+        StartCoroutine(DeSpawn());
+    }
+
+    private void Update()
+    {
+        if(isDead)
+        {
+            HandleDeath(combatManager);
+        }
+    }
+
+    private IEnumerator DeSpawn()
+    {
+        yield return new WaitForSeconds(0.5f);
         gameObject.SetActive(false);
+
     }
 
     private void OnValidate()
