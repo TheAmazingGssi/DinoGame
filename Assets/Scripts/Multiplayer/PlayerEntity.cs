@@ -15,8 +15,7 @@ public class PlayerEntity : MonoBehaviour
     CharacterSelect selector;
     PlayerController controller;
 
-    public int PlayerIndex {  get; private set; }
-    public Color PlayerColor {  get; private set; }
+    public Color PlayerColor;
 
     private UnityEvent<InputAction.CallbackContext> Move = new UnityEvent<InputAction.CallbackContext>();
     private UnityEvent Attack = new UnityEvent();
@@ -58,7 +57,9 @@ public class PlayerEntity : MonoBehaviour
     public CharacterSelect SpawnCharacterSelector()
     {
         selector = Instantiate(CharacterSelectorObject).GetComponent<CharacterSelect>();
+        //Set script refrences
         selector.PlayerInput = playerInput;
+        //Set Events
         Move.AddListener(selector.OnNavigate);
         Emote.AddListener(selector.OnXPressed);
         selector.FinalizeSelection.AddListener(SetCharacterInformation);
@@ -68,13 +69,17 @@ public class PlayerEntity : MonoBehaviour
     public PlayerController SpawnPlayerController(Transform transform)
     {
         controller = Instantiate(PlayerGameObject, transform.position, transform.rotation).GetComponent<PlayerController>();
+        
+        //Set Events
         Move.AddListener(controller.OnMove);
         Attack.AddListener(controller.OnAttack);
         Emote.AddListener(controller.OnJump);
         Block.AddListener(controller.OnBlock);
         Special.AddListener(controller.OnSpecial);
 
+        //Set Player
         controller.GetComponentInChildren<SpriteRenderer>().color = PlayerColor;
+
         return controller;
     }
 }

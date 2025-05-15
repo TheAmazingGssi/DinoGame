@@ -89,7 +89,10 @@ public class CharSelectMultiplayerManager : MonoBehaviour
         characterSelector.UpdateReady.AddListener(UpdateReady);
         characterSelector.Manager = this;
         displayers[playerList.Count-1].gameObject.SetActive(true);
-        
+
+        characterSelector.Color = characterList[characterList.Length - 1];
+        characterSelector.Color = GetNextColor(characterSelector.Color);
+        UpdateColors();
     }
 
     private void GoToNextScene()
