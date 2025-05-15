@@ -82,7 +82,7 @@ public class CharSelectMultiplayerManager : MonoBehaviour
     {
         PlayerEntity player = playerInput.GetComponent<PlayerEntity>();
 
-        CharacterSelect characterSelector = player.SpawnCharacterSelector().GetComponent<CharacterSelect>();
+        CharacterSelect characterSelector = player.SpawnCharacterSelector();
 
         playerList.Add(characterSelector);
         characterSelector.UpdateColors.AddListener(UpdateColors);
@@ -96,8 +96,7 @@ public class CharSelectMultiplayerManager : MonoBehaviour
     {
         for (int i = 0; i < playerList.Count; i++)
         {
-            MultiPlayerInformation.Instance.AddPlayerInfo(i, playerList[i].Color, playerList[i].PlayerInput.devices[0]);
-            //Debug.Log($"Saving player with {playerList[i].PlayerInput.devices[0]} controller");
+            playerList[i].FinalizeSelection.Invoke();
         }
         loader.LoadTargetScene();
     }

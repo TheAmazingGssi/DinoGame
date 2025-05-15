@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f916adaeccc01e24fbf5508edc84e880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CharacterSelector: {fileID: 7950956293875615544, guid: ea85bf40655f29644870c8fcbeb48482, type: 3}
+  CharacterSelectorObject: {fileID: 7950956293875615544, guid: ea85bf40655f29644870c8fcbeb48482, type: 3}
+  PlayerGameObject: {fileID: 5127523413631998349, guid: 7d906a81d9f7ecd46988cc9fe1d71acd, type: 3}
   playerInput: {fileID: 2913691901651809283}
 --- !u!114 &2913691901651809283
 MonoBehaviour:

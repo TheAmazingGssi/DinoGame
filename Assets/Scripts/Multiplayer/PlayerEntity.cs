@@ -1,11 +1,22 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class PlayerEntity : MonoBehaviour
 {
-    [SerializeField] GameObject CharacterSelector;
+    static public List<PlayerEntity> PlayerList = new List<PlayerEntity>();
+
+    [Header("Prefab Refrences")]
+    [SerializeField] GameObject CharacterSelectorObject;
+    [SerializeField] GameObject PlayerGameObject;
     [SerializeField] PlayerInput playerInput;
+
+    CharacterSelect selector;
+    PlayerController controller;
+
+    public int PlayerIndex {  get; private set; }
+    public Color PlayerColor {  get; private set; }
 
     private UnityEvent<InputAction.CallbackContext> Move = new UnityEvent<InputAction.CallbackContext>();
     private UnityEvent Attack = new UnityEvent();
@@ -17,6 +28,7 @@ public class PlayerEntity : MonoBehaviour
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
+        PlayerList.Add(this);
     }
 
     public void InvokeMove(InputAction.CallbackContext inputContext)
@@ -31,18 +43,38 @@ public class PlayerEntity : MonoBehaviour
 
     public void DeviceDisconnected()
     {
+        PlayerList.Remove(this);
         Destroy(gameObject);
+    }
+
+    private void SetCharacterInformation()
+    {
+        if(selector)
+        {
+            PlayerColor = selector.Color;
+        }
     }
 
     public CharacterSelect SpawnCharacterSelector()
     {
-        CharacterSelect selector = Instantiate(CharacterSelector).GetComponent<CharacterSelect>();
+        selector = Instantiate(CharacterSelectorObject).GetComponent<CharacterSelect>();
         selector.PlayerInput = playerInput;
         Move.AddListener(selector.OnNavigate);
         Emote.AddListener(selector.OnXPressed);
-        
-        
-
+        selector.FinalizeSelection.AddListener(SetCharacterInformation);
         return selector;
+    }
+
+    public PlayerController SpawnPlayerController(Transform transform)
+    {
+        controller = Instantiate(PlayerGameObject, transform.position, transform.rotation).GetComponent<PlayerController>();
+        Move.AddListener(controller.OnMove);
+        Attack.AddListener(controller.OnAttack);
+        Emote.AddListener(controller.OnJump);
+        Block.AddListener(controller.OnBlock);
+        Special.AddListener(controller.OnSpecial);
+
+        controller.GetComponentInChildren<SpriteRenderer>().color = PlayerColor;
+        return controller;
     }
 }

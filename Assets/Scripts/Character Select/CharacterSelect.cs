@@ -13,6 +13,7 @@ public class CharacterSelect : MonoBehaviour
     public UnityEvent UpdateColors;
     public UnityEvent UpdateReady;
     public bool ready = false;
+    public UnityEvent FinalizeSelection;
     
 
     public void Update()

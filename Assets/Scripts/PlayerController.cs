@@ -26,19 +26,19 @@ public class PlayerController : MonoBehaviour
     {
         movementInput = inputContext.ReadValue<Vector2>();
     }
-    public void OnJump(InputAction.CallbackContext inputContext)
+    public void OnJump()
     {
         Debug.Log("Jumped");
     }
-    public void OnAttack(InputAction.CallbackContext inputContext)
+    public void OnAttack()
     {
         Debug.Log("Attack");
     }
-    public void OnSpecial(InputAction.CallbackContext inputContext)
+    public void OnSpecial()
     {
         Debug.Log("Special");
     }
-    public void OnBlock(InputAction.CallbackContext inputContext)
+    public void OnBlock()
     {
         Debug.Log("Block");
     }

@@ -369,7 +369,7 @@ GameObject:
   - component: {fileID: 7325114965812466176}
   - component: {fileID: 5703406151345768921}
   m_Layer: 5
-  m_Name: Character Selector
+  m_Name: UICharacter Selector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
