@@ -24,6 +24,14 @@ public class PlayerEntity : MonoBehaviour
     private UnityEvent Block = new UnityEvent();
     private UnityEvent Revive = new UnityEvent();
 
+    public Transform GetCharactersTransform { get
+        {
+            if (controller)
+                return controller.transform;
+            else
+                return null;
+        } }
+
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
