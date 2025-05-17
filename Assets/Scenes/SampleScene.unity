@@ -5278,6 +5278,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   furthestRightPoint: 26
   furthestLeftPoint: 0
+  DebugItemRight: {fileID: 0}
+  DebugItemLeft: {fileID: 0}
+  mainCamera: {fileID: 519420031}
 --- !u!1 &611231419
 GameObject:
   m_ObjectHideFlags: 0
