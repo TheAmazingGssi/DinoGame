@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 public class CharacterSelect : MonoBehaviour
 {
-    [SerializeField] PlayerInput playerInput;
+    public PlayerInput PlayerInput;
     [SerializeField] float deadzone;
     [SerializeField] float inputCooldown;
     float counter = 0;
@@ -13,6 +13,8 @@ public class CharacterSelect : MonoBehaviour
     public UnityEvent UpdateColors;
     public UnityEvent UpdateReady;
     public bool ready = false;
+    public UnityEvent FinalizeSelection;
+    
 
     public void Update()
     {

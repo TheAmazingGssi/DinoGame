@@ -367,8 +367,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7325114965812466176}
+  - component: {fileID: 5703406151345768921}
   m_Layer: 5
-  m_Name: Character Selector
+  m_Name: UICharacter Selector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -396,3 +397,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5703406151345768921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7300958270028751416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1af1c513a1ee49438d8858a96469e87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 8428065815730064051}
+  text: {fileID: 3792490536067423799}
+  ParentObject: {fileID: 7300958270028751416}
