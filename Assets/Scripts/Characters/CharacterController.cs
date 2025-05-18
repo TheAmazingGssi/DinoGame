@@ -357,63 +357,43 @@ public class CharacterController : MonoBehaviour
 using System;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 
 public class CharacterController : MonoBehaviour
 {
-    public Rigidbody2D rb;
-    public float moveSpeed = 5f;
+    [SerializeField] Rigidbody2D rb;
+    private bool isAttacking = false;
     
-    //public InputAction playerControls;
-    public InputSystem_Actions playerControls;
+    private UnityEvent attack;
+    private UnityEvent block;
+    private UnityEvent special;
+    private UnityEvent emote;
+    private UnityEvent revive;
 
-    private InputAction move;
-    private InputAction jump;
+    Vector2 _movementInput = Vector2.zero;
+    [SerializeField] private float moveSpeed = 5;
 
-    Vector2 moveDirection = Vector2.zero;
-    
-    float horizontalMovement;
-
-    private void Awake()
+    void Update()
     {
-        playerControls = new InputSystem_Actions();
+        //very temporary just to check different controllers do different things
+        rb.linearVelocity = _movementInput * moveSpeed;
     }
 
-    private void OnEnable()
-    {
-        move = playerControls.Player.Move;
-        jump = playerControls.Player.Jump;
-        move.Enable();
-        jump.Enable();
-    }
-    
-    private void OnDisable()
-    {
-        move.Disable();
-        jump.Disable();
-    }
 
-    private void Update()
+    //Player Input component has events on the inspector, each one of these is wired to an event
+    public void Move(InputAction.CallbackContext inputContext)
     {
-        moveDirection = move.ReadValue<Vector2>();
-    }
-
-    private void FixedUpdate()
-    {
-        rb.velocity = new Vector2(moveDirection.x * moveSpeed, rb.velocity.y);
-    }
-
-    public void Move(InputAction.CallbackContext context)
-    {
-        horizontalMovement = context.ReadValue<Vector2>().x;
+        _movementInput = inputContext.ReadValue<Vector2>();
+        Debug.Log("Move Input: " + _movementInput);
     }
     
-    public void Jump(InputAction.CallbackContext context)
+    /*public void Jump(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
             rb.AddForce(Vector2.up * 5f, ForceMode2D.Impulse);
         }
-    }
+    }*/
 }

@@ -30,7 +30,6 @@ public class CombatManager : MonoBehaviour
     private void Start()
     {
         UpdateHealthBar();
-
     }
 
     public virtual void TakeDamage(DamageArgs damageArgs)
