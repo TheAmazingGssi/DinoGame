@@ -49,6 +49,8 @@ public class MainPlayerController : MonoBehaviour
         
         rb.gravityScale = 0f;
         rb.freezeRotation = true; // Prevent physics rotation
+
+        playerTransform.PlayerTransform = transform;
     }
 
     private void FixedUpdate()
