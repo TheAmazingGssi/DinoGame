@@ -62,6 +62,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Confirmation"",
+                    ""type"": ""Button"",
+                    ""id"": ""9ad4b064-b6cb-45a1-adc0-99b49b6ef4a9"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -348,6 +357,17 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": "";Gamepad"",
                     ""action"": ""OnBlock"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f05705ba-9fdc-474b-86af-ad00bd6a2b0a"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Confirmation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -939,6 +959,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Player_OnAttack = m_Player.FindAction("OnAttack", throwIfNotFound: true);
         m_Player_OnSpecial = m_Player.FindAction("OnSpecial", throwIfNotFound: true);
         m_Player_OnBlock = m_Player.FindAction("OnBlock", throwIfNotFound: true);
+        m_Player_Confirmation = m_Player.FindAction("Confirmation", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1022,6 +1043,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_OnAttack;
     private readonly InputAction m_Player_OnSpecial;
     private readonly InputAction m_Player_OnBlock;
+    private readonly InputAction m_Player_Confirmation;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -1030,6 +1052,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         public InputAction @OnAttack => m_Wrapper.m_Player_OnAttack;
         public InputAction @OnSpecial => m_Wrapper.m_Player_OnSpecial;
         public InputAction @OnBlock => m_Wrapper.m_Player_OnBlock;
+        public InputAction @Confirmation => m_Wrapper.m_Player_Confirmation;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1051,6 +1074,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @OnBlock.started += instance.OnOnBlock;
             @OnBlock.performed += instance.OnOnBlock;
             @OnBlock.canceled += instance.OnOnBlock;
+            @Confirmation.started += instance.OnConfirmation;
+            @Confirmation.performed += instance.OnConfirmation;
+            @Confirmation.canceled += instance.OnConfirmation;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -1067,6 +1093,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @OnBlock.started -= instance.OnOnBlock;
             @OnBlock.performed -= instance.OnOnBlock;
             @OnBlock.canceled -= instance.OnOnBlock;
+            @Confirmation.started -= instance.OnConfirmation;
+            @Confirmation.performed -= instance.OnConfirmation;
+            @Confirmation.canceled -= instance.OnConfirmation;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -1253,6 +1282,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         void OnOnAttack(InputAction.CallbackContext context);
         void OnOnSpecial(InputAction.CallbackContext context);
         void OnOnBlock(InputAction.CallbackContext context);
+        void OnConfirmation(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

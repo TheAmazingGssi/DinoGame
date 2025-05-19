@@ -40,6 +40,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Confirmation",
+                    "type": "Button",
+                    "id": "9ad4b064-b6cb-45a1-adc0-99b49b6ef4a9",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -326,6 +335,17 @@
                     "processors": "",
                     "groups": ";Gamepad",
                     "action": "OnBlock",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f05705ba-9fdc-474b-86af-ad00bd6a2b0a",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Confirmation",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
