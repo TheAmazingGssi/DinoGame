@@ -46,7 +46,7 @@ public class CharacterSelect : MonoBehaviour
         else
             ChangeColor(Manager.GetPreviousColor(Color));
     }
-    public void OnXPressed()
+    public void OnXPressed(InputAction.CallbackContext inputContext)
     {
         ready = !ready;
         UpdateReady.Invoke();

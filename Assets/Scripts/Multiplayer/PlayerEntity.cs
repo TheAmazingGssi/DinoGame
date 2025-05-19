@@ -18,11 +18,11 @@ public class PlayerEntity : MonoBehaviour
     public Color PlayerColor;
 
     private UnityEvent<InputAction.CallbackContext> Move = new UnityEvent<InputAction.CallbackContext>();
-    private UnityEvent Attack = new UnityEvent();
-    private UnityEvent Special = new UnityEvent();
-    private UnityEvent Emote = new UnityEvent();
-    private UnityEvent Block = new UnityEvent();
-    private UnityEvent Revive = new UnityEvent();
+    private UnityEvent<InputAction.CallbackContext> Attack = new UnityEvent<InputAction.CallbackContext>();
+    private UnityEvent<InputAction.CallbackContext> Special = new UnityEvent<InputAction.CallbackContext>();
+    private UnityEvent<InputAction.CallbackContext> Emote = new UnityEvent<InputAction.CallbackContext>();
+    private UnityEvent<InputAction.CallbackContext> Block = new UnityEvent<InputAction.CallbackContext>();
+    private UnityEvent<InputAction.CallbackContext> Revive = new UnityEvent<InputAction.CallbackContext>();
 
     public Transform GetCharactersTransform { get
         {
@@ -42,11 +42,11 @@ public class PlayerEntity : MonoBehaviour
     {
         Move.Invoke(inputContext);
     }
-    public void InvokeAttack() => Attack.Invoke();
-    public void InvokeSpecial() => Special.Invoke();
-    public void InvokeEmote() => Emote.Invoke();
-    public void InvokeBlock() => Block.Invoke();
-    public void InvokeRevive() => Revive.Invoke();
+    public void InvokeAttack(InputAction.CallbackContext inputContext) => Attack.Invoke(inputContext);
+    public void InvokeSpecial(InputAction.CallbackContext inputContext) => Special.Invoke(inputContext);
+    public void InvokeEmote(InputAction.CallbackContext inputContext) => Emote.Invoke(inputContext);
+    public void InvokeBlock(InputAction.CallbackContext inputContext) => Block.Invoke(inputContext);
+    public void InvokeRevive(InputAction.CallbackContext inputContext) => Revive.Invoke(inputContext);
 
     public void DeviceDisconnected()
     {
