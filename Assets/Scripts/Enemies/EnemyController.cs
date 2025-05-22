@@ -1,9 +1,12 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+
     private static readonly int Speed = Animator.StringToHash("Speed");
     private const string Ground = "Ground";
+
 
     [SerializeField] private bool isDead = false;
 
@@ -13,13 +16,13 @@ public class EnemyController : MonoBehaviour
     private Animator animator;
     private PlayerTransformData playerTransform;
     private EnemyData enemyData;
+    private Transform currentTarget;
 
     private bool isOverGround = true;
 
     private Vector3 moveDirection = Vector3.zero;
     private bool isFacingLeft = false;
 
-    [SerializeField] private Collider2D groundCheckCollider;
 
     private void Awake()
     {
@@ -43,21 +46,33 @@ public class EnemyController : MonoBehaviour
     {
         Movement();
     }
+
     private void Movement()
     {
-        float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.PlayerTransform.position);
 
-        if (distanceToPlayer <= enemyData.DetectionRange && distanceToPlayer > enemyData.StopRange && isOverGround)
+        if (manager.CurrentTarget != null)
         {
-            moveDirection = (playerTransform.PlayerTransform.position - transform.position).normalized;
-        }
-        else if (distanceToPlayer <= enemyData.StopRange)
-        {
-            moveDirection = Vector3.zero;
-        }
-        else
-        {
-            moveDirection = Vector3.zero;
+            float distanceToPlayer = Vector3.Distance(transform.position, manager.CurrentTarget.position);
+
+            moveDirection = (manager.CurrentTarget.position - transform.position).normalized;
+
+            if (distanceToPlayer <= enemyData.DetectionRange && distanceToPlayer > enemyData.StopRange && isOverGround)
+            {
+                moveDirection = (playerTransform.PlayerTransform.position - transform.position).normalized;
+            }
+            else if (distanceToPlayer <= enemyData.StopRange)
+            {
+                moveDirection = Vector3.zero;
+            }
+            else
+            {
+                moveDirection = Vector3.zero;
+            }
+
+            if (distanceToPlayer <= enemyData.StopRange)
+            {
+                FlipSprite(transform.position.x - playerTransform.PlayerTransform.position.x > 0);
+            }
         }
 
         if (moveDirection.x > 0 && isFacingLeft)
@@ -68,12 +83,7 @@ public class EnemyController : MonoBehaviour
         {
             FlipSprite(true);
         }
-
-        if (distanceToPlayer <= enemyData.StopRange)
-        {
-            FlipSprite(transform.position.x - playerTransform.PlayerTransform.position.x > 0);
-        }
-            animator.SetFloat(Speed, moveDirection.magnitude);
+        animator.SetFloat(Speed, moveDirection.magnitude);
     }
 
     private void StayInBounds()
