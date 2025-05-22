@@ -388,7 +388,17 @@ public class CharacterController : MonoBehaviour
         _movementInput = inputContext.ReadValue<Vector2>();
         Debug.Log("Move Input: " + _movementInput);
     }
-    
+
+    //Added by Eden
+    public void Attack(InputAction.CallbackContext inputContext)
+    { }
+    public void Special(InputAction.CallbackContext inputContext)
+    { }
+    public void Block(InputAction.CallbackContext inputContext)
+    { }
+    public void Revive(InputAction.CallbackContext inputContext)
+    { }
+
     /*public void Jump(InputAction.CallbackContext context)
     {
         if (context.performed)

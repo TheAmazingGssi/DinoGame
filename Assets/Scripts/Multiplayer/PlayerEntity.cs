@@ -13,16 +13,18 @@ public class PlayerEntity : MonoBehaviour
     [SerializeField] PlayerInput playerInput;
 
     CharacterSelect selector;
-    PlayerController controller;
+    CharacterController controller;
 
     public Color PlayerColor;
 
     private UnityEvent<InputAction.CallbackContext> Move = new UnityEvent<InputAction.CallbackContext>();
     private UnityEvent<InputAction.CallbackContext> Attack = new UnityEvent<InputAction.CallbackContext>();
     private UnityEvent<InputAction.CallbackContext> Special = new UnityEvent<InputAction.CallbackContext>();
-    private UnityEvent<InputAction.CallbackContext> Emote = new UnityEvent<InputAction.CallbackContext>();
     private UnityEvent<InputAction.CallbackContext> Block = new UnityEvent<InputAction.CallbackContext>();
     private UnityEvent<InputAction.CallbackContext> Revive = new UnityEvent<InputAction.CallbackContext>();
+    private UnityEvent<InputAction.CallbackContext> Confirmation = new UnityEvent<InputAction.CallbackContext>();
+    private UnityEvent<InputAction.CallbackContext> Cancel = new UnityEvent<InputAction.CallbackContext>();
+    private UnityEvent<InputAction.CallbackContext> Pause = new UnityEvent<InputAction.CallbackContext>();
 
     public Transform GetCharactersTransform { get
         {
@@ -44,9 +46,11 @@ public class PlayerEntity : MonoBehaviour
     }
     public void InvokeAttack(InputAction.CallbackContext inputContext) => Attack.Invoke(inputContext);
     public void InvokeSpecial(InputAction.CallbackContext inputContext) => Special.Invoke(inputContext);
-    public void InvokeEmote(InputAction.CallbackContext inputContext) => Emote.Invoke(inputContext);
     public void InvokeBlock(InputAction.CallbackContext inputContext) => Block.Invoke(inputContext);
     public void InvokeRevive(InputAction.CallbackContext inputContext) => Revive.Invoke(inputContext);
+    public void InvokeConfirmation(InputAction.CallbackContext inputContext) => Confirmation.Invoke(inputContext);
+    public void InvokeCancel(InputAction.CallbackContext inputContext) => Cancel.Invoke(inputContext);
+    public void InvokePause(InputAction.CallbackContext inputContext) => Pause.Invoke(inputContext);
 
     public void DeviceDisconnected()
     {
@@ -69,24 +73,24 @@ public class PlayerEntity : MonoBehaviour
         selector.PlayerInput = playerInput;
         //Set Events
         Move.AddListener(selector.OnNavigate);
-        Emote.AddListener(selector.OnXPressed);
+        Confirmation.AddListener(selector.OnXPressed);
         selector.FinalizeSelection.AddListener(SetCharacterInformation);
         return selector;
     }
 
-    public PlayerController SpawnPlayerController(Transform transform)
+    public CharacterController SpawnPlayerController(Transform transform)
     {
-        controller = Instantiate(PlayerGameObject, transform.position, transform.rotation).GetComponent<PlayerController>();
+        controller = Instantiate(PlayerGameObject, transform.position, transform.rotation).GetComponent<CharacterController>();
         
         //Set Events
-        Move.AddListener(controller.OnMove);
-        Attack.AddListener(controller.OnAttack);
-        Emote.AddListener(controller.OnJump);
-        Block.AddListener(controller.OnBlock);
-        Special.AddListener(controller.OnSpecial);
+        Move.AddListener(controller.Move);
+        Attack.AddListener(controller.Attack);
+        Block.AddListener(controller.Block);
+        Special.AddListener(controller.Special);
+        Revive.AddListener(controller.Revive);
 
         //Set Player
-        controller.GetComponentInChildren<SpriteRenderer>().color = PlayerColor;
+        controller.GetComponent<SpriteRenderer>().color = PlayerColor;
 
         return controller;
     }

@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.HID;
 
 
-public class PlayerController : MonoBehaviour
+/*public class PlayerController : MonoBehaviour
 {
     // Constants
     private const int JUMP_FORCE = 5;
@@ -151,3 +151,4 @@ public class PlayerController : MonoBehaviour
         //if ()
     }
 }
+*/
