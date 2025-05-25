@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1213181387269979303}
   - component: {fileID: 6127428226427346043}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HurtBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63,7 +63,7 @@ GameObject:
   m_Component:
   - component: {fileID: 19377565061402572}
   - component: {fileID: 6786402195102184795}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RightAttackCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,12 +116,13 @@ GameObject:
   m_Component:
   - component: {fileID: 2242870450885965078}
   - component: {fileID: 9146728367405427678}
+  - component: {fileID: 64390248520630446}
   - component: {fileID: 124808331077030432}
   - component: {fileID: 977289204723741613}
   - component: {fileID: 5243410617948706567}
   - component: {fileID: 1404957336893529112}
   - component: {fileID: 5972571384300371615}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -187,8 +188,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -326893323
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 8603369663158992956, guid: d0966c75f48209341844830aabfcfc05, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -201,6 +202,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &64390248520630446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4241924471051646355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfccd6e77ac7f7f40b608de53357a57b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 9146728367405427678}
 --- !u!114 &124808331077030432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,7 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 977289204723741613}
-  moveSpeed: 50
+  moveSpeed: 10
 --- !u!50 &977289204723741613
 Rigidbody2D:
   serializedVersion: 5
@@ -366,7 +380,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4647714315012601629}
   - component: {fileID: 7431985674244028088}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LeftAttackCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
