@@ -14,7 +14,6 @@ public class EnemyCombatManager : CombatManager
         UpdateHealthBar();
     }
 
-
     public override void TakeDamage(DamageArgs damageArgs)
     {
         base.TakeDamage(damageArgs);
@@ -24,6 +23,7 @@ public class EnemyCombatManager : CombatManager
             manager.Animator.SetTrigger(Hurt);
         }
     }
+    
     private void SpawnDamageText(DamageArgs damageArgs)
     {
         TextMesh damagePrefabClone = Instantiate(damageNumberPrefab, transform.position, Quaternion.identity, transform);
