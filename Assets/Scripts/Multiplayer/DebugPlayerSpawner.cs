@@ -29,6 +29,6 @@ public class DebugPlayerSpawner : MonoBehaviour
         PlayerEntity entity = playerInput.GetComponent<PlayerEntity>();
         Debug.Log(PlayerEntity.PlayerList.Count);
         entity.PlayerColor = playerColors[PlayerEntity.PlayerList.Count - 1];
-        entity.SpawnPlayerController(multiplayerManager.EmptyPlayers[PlayerEntity.PlayerList.Count - 1].transform);
+        entity.SpawnPlayerController(multiplayerManager.playerSpawns[PlayerEntity.PlayerList.Count - 1].transform);
     }
 }

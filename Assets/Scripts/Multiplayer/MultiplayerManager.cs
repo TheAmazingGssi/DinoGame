@@ -4,17 +4,17 @@ using UnityEngine.InputSystem;
 
 public class MultiplayerManager : MonoBehaviour
 {
-    [SerializeField] public GameObject[] EmptyPlayers;
+    [SerializeField] public Transform[] playerSpawns;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        for (int i = 0; i < EmptyPlayers.Length; i++)
+        for (int i = 0; i < playerSpawns.Length; i++)
         {
             if (PlayerEntity.PlayerList.Count > i)
             {
-                PlayerEntity.PlayerList[i].SpawnPlayerController(EmptyPlayers[i].transform);
+                PlayerEntity.PlayerList[i].SpawnPlayerController(playerSpawns[i]);
             }
             //emptyPlayers[i].SetActive(false);
         }
