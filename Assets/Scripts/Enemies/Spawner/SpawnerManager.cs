@@ -6,6 +6,11 @@ public class SpawnerManager : MonoBehaviour
 
     [SerializeField] private EnemySpawner[] enemySpawners;
 
+    [SerializeField] private Collider2D groundCheck;
+
+    public Collider2D GroundCheck => groundCheck;
+
+
     private void Awake()
     {
         if (data.Length != enemySpawners.Length) Debug.LogError("enemy spawners and data not equal!");
@@ -15,7 +20,6 @@ public class SpawnerManager : MonoBehaviour
             enemySpawners[i].EnemyPrefab = data[i].EnemyPrefab;
             enemySpawners[i].MinSpawnTime = data[i].MinSpawnTime;
             enemySpawners[i].MaxSpawnTime = data[i].MaxSpawnTime;
-            enemySpawners[i].EnemiesInWave = data[i].EnemiesInWave;
         }
     }
 }

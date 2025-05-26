@@ -6,9 +6,6 @@ public class EnemySpawnerData : ScriptableObject
     [SerializeField] private GameObject enemyPrefab;
     public GameObject EnemyPrefab => enemyPrefab;
 
-    [SerializeField] private float enemiesInWave;
-    public float EnemiesInWave => enemiesInWave;
-
     [SerializeField] private float minSpawnTime;
     public float MinSpawnTime => minSpawnTime;
 

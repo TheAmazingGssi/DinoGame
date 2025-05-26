@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68565c1d04af997478f070eb2f4d010b, type: 3}
+  m_Name: CharacterStats
+  m_EditorClassIdentifier: 
+  characters:
+  - characterName: Triceratops (Terry)
+    health: 100
+    movementSpeed: 4
+    stamina: 50
+    damageMin: 15
+    damageMax: 20
+    attackSequenceCount: 2
+    attacksPerSecond: 1.5
+    specialAttackName: Forward Bash
+    specialAttackDamage: 20
+    specialAttackDescription: Bash forward a strong attack that knocks enemies back
+      you bash into.
+    specialAttackCost: 15
+  - characterName: Spinosaurus (Spencer)
+    health: 100
+    movementSpeed: 4
+    stamina: 50
+    damageMin: 10
+    damageMax: 10
+    attackSequenceCount: 3
+    attacksPerSecond: 1
+    specialAttackName: Chomp
+    specialAttackDamage: 20
+    specialAttackDescription: Bite an enemy from afar and grab it.
+    specialAttackCost: 15
+  - characterName: Parasaurolophus (Paris)
+    health: 100
+    movementSpeed: 4
+    stamina: 50
+    damageMin: 15
+    damageMax: 20
+    attackSequenceCount: 3
+    attacksPerSecond: 1
+    specialAttackName: Roar Attack
+    specialAttackDamage: 20
+    specialAttackDescription: Roar in front of you for 20 damage, knocking back enemies
+      hit.
+    specialAttackCost: 15
+  - characterName: Therizinosaurus (Andrew)
+    health: 100
+    movementSpeed: 4
+    stamina: 50
+    damageMin: 5
+    damageMax: 7
+    attackSequenceCount: 2
+    attacksPerSecond: 3
+    specialAttackName: Claw Attack
+    specialAttackDamage: 20
+    specialAttackDescription: Slash enemies in front of you 4 times for 5 damage,
+      knocking back enemies you hit.
+    specialAttackCost: 15

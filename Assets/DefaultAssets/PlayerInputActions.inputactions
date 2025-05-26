@@ -411,6 +411,17 @@
                 },
                 {
                     "name": "",
+                    "id": "a04fec91-4769-404e-bf5f-bf75631e6ee5",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Revive",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "13446837-fbb8-4343-b041-4a320ae5ca90",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",

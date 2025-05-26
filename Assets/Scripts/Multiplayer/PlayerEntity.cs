@@ -13,7 +13,7 @@ public class PlayerEntity : MonoBehaviour
     [SerializeField] PlayerInput playerInput;
 
     CharacterSelect selector;
-    CharacterController controller;
+    MainPlayerController controller;
 
     public Color PlayerColor;
 
@@ -78,15 +78,15 @@ public class PlayerEntity : MonoBehaviour
         return selector;
     }
 
-    public CharacterController SpawnPlayerController(Transform transform)
+    public MainPlayerController SpawnPlayerController(Transform transform)
     {
-        controller = Instantiate(PlayerGameObject, transform.position, transform.rotation).GetComponent<CharacterController>();
+        controller = Instantiate(PlayerGameObject, transform.position, transform.rotation).GetComponent<MainPlayerController>();
         
         //Set Events
         Move.AddListener(controller.Move);
         Attack.AddListener(controller.Attack);
         Block.AddListener(controller.Block);
-        Special.AddListener(controller.Special);
+        Special.AddListener(controller.SpecialStarted);
         Revive.AddListener(controller.Revive);
 
         //Set Player
