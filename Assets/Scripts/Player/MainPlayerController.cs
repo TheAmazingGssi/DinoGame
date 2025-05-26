@@ -117,7 +117,7 @@ public class MainPlayerController : MonoBehaviour
             spriteRenderer = GetComponent<SpriteRenderer>();
 
         playerTransform.PlayerTransform = transform;
-
+        /*
         inputActions = new PlayerInputActions();
         inputActions.Player.Move.performed += Move;
         inputActions.Player.Move.canceled += Move;
@@ -127,7 +127,7 @@ public class MainPlayerController : MonoBehaviour
         inputActions.Player.Special.canceled += SpecialCanceled;
         inputActions.Player.Block.performed += Block;
         inputActions.Player.Revive.performed += Revive;
-
+        */
         if (characterStats != null)
         {
             stats = characterStats.characters[(int)characterType];
@@ -239,7 +239,7 @@ public class MainPlayerController : MonoBehaviour
         }
     }
 
-    private void SpecialStarted(InputAction.CallbackContext context)
+    public void SpecialStarted(InputAction.CallbackContext context)
     {
         if (!isFallen)
         {
