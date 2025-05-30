@@ -1,10 +1,20 @@
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    [SerializeField] float furthestRightPoint;
+    [Header("Settings")]
+    [Tooltip("In game this will be changed by a script that reveals more of the stage as the player beats enemy waves")]
+    [SerializeField] float furthestRightPoint; 
+    [Tooltip("In game this will be changed by a script that blocks the way back as the player beats enemy waves")]
     [SerializeField] float furthestLeftPoint;
+    [Tooltip("Empty space between the players and the edge of the camera if the camera is zooming")]
+    [SerializeField] float zoomPadding;
+    [SerializeField] float minZoom;
+    [SerializeField] float maxZoom;
+
+    [Header("ComponentRefrences")]
     [SerializeField] Transform ColliderRight;
     [SerializeField] Transform ColliderLeft;
     [SerializeField] Transform ColliderTop;
@@ -27,6 +37,7 @@ public class CameraMovement : MonoBehaviour
         if (PlayerEntity.PlayerList.Count == 0)
             return;
 
+        ZoomToAverage(); 
         UpdateHeightWidth();
         MoveToAverage();
         MoveColliders();
@@ -55,5 +66,26 @@ public class CameraMovement : MonoBehaviour
     {
         cameraHalfWidth = mainCamera.orthographicSize * mainCamera.aspect;
         cameraHalfHeight = mainCamera.orthographicSize;
+    }
+    private void ZoomToAverage()
+    {
+        float minX = furthestRightPoint;
+        float maxX = furthestLeftPoint;
+        foreach (PlayerEntity player in PlayerEntity.PlayerList)
+        {
+            if (player.GetCharactersTransform.position.x > maxX)
+                maxX = player.GetCharactersTransform.position.x;
+            if (player.GetCharactersTransform.position.x < minX)
+                minX = player.GetCharactersTransform.position.x;
+        }
+
+        float newZoom = (maxX - minX + (zoomPadding * 2)) * Screen.height/ Screen.width * 0.5f;
+        //Mathf.Clamp(newZoom, minZoom, maxZoom);
+        if (newZoom < minZoom)
+            newZoom = minZoom;
+        else if (newZoom > maxZoom)
+            newZoom = maxZoom;
+
+        mainCamera.orthographicSize = newZoom;
     }
 }
