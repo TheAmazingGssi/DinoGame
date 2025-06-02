@@ -1,32 +1,26 @@
-
-using UnityEngine;
 using System.Collections;
-using UnityEngine.Events;
+using UnityEngine;
 
 public abstract class EnemyAttack : MonoBehaviour
 {
-    private static readonly int Attack = Animator.StringToHash("Attack");
+    protected static readonly int Attack = Animator.StringToHash("Attack");
     [SerializeField] protected EnemyManager manager;
+    protected Animator animator;
+    protected EnemyData enemyData;
+    protected bool isInCooldown = false;
 
-    private Transform playerTransform;
-    private Animator animator;
-    private EnemyController movement;
-    private EnemyData enemyData;
-
-    private bool isInCooldown = false;
     protected abstract bool IsPlayerInRange { get; }
+    protected abstract float AttackRange { get; }
 
     private void Awake()
     {
-        playerTransform = manager.PlayerTransform.PlayerTransform;
-        movement = manager.EnemyController;
-        enemyData = manager.EnemyData;
         animator = manager.Animator;
+        enemyData = manager.EnemyData;
     }
 
     public void TryAttack()
     {
-        if (!isInCooldown)
+        if (!isInCooldown && HasValidTarget())
         {
             StartAttack();
             isInCooldown = true;
@@ -34,12 +28,17 @@ public abstract class EnemyAttack : MonoBehaviour
         }
     }
 
+    private bool HasValidTarget()
+    {
+        return manager.CurrentTarget != null && IsPlayerInRange;
+    }
+
     private IEnumerator CooldownRoutine()
     {
         yield return new WaitForSeconds(enemyData.Cooldown);
         isInCooldown = false;
 
-        if (IsPlayerInRange)
+        if (HasValidTarget())
         {
             TryAttack();
         }
@@ -47,7 +46,7 @@ public abstract class EnemyAttack : MonoBehaviour
 
     protected virtual void StartAttack()
     {
-        Debug.Log("Start attack");
+        Debug.Log($"Attacking {manager.CurrentTarget.name}");
         animator.SetTrigger(Attack);
     }
 
@@ -55,13 +54,18 @@ public abstract class EnemyAttack : MonoBehaviour
 
     public virtual void OnAttackExecute()
     {
-        Debug.Log("Attack execute event");
         ApplyDamage();
     }
 
     public virtual void OnAttackEnd()
     {
-        Debug.Log("Attack end event");
         animator.ResetTrigger(Attack);
+    }
+    protected bool IsTargetInRange(float range)
+    {
+        if (manager.CurrentTarget == null) return false;
+
+        float distance = Vector2.Distance(transform.position, manager.CurrentTarget.position);
+        return distance <= range;
     }
 }

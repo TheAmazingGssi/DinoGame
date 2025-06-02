@@ -1440,6 +1440,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 993516120}
   m_CullTransparentMesh: 1
+--- !u!212 &1061344427 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2515911822479905939, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+  m_PrefabInstance: {fileID: 1904834443187277471}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1252735130 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3037892570329261710, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}
@@ -2288,6 +2293,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 17.843033, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2063878381 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4925192298236327486, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+  m_PrefabInstance: {fileID: 1904834443187277471}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a882ffcd62e5f2449990a878b8414e7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2118796182
 GameObject:
   m_ObjectHideFlags: 0
@@ -2539,6 +2555,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7022572441651464058, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: attack
+      value: 
+      objectReference: {fileID: 2063878381}
     - target: {fileID: 8038912827772719235, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: groundCheckCollider
       value: 
@@ -2550,6 +2570,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1856966355605016673, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1904834443187277473}
+    - targetCorrespondingSourceObject: {fileID: 1856966355605016673, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1904834443187277479}
   m_SourcePrefab: {fileID: 100100000, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
 --- !u!1 &1904834443187277472 stripped
 GameObject:
@@ -2592,6 +2615,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &1904834443187277479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904834443187277472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfccd6e77ac7f7f40b608de53357a57b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 1061344427}
 --- !u!1001 &8894709397002215993
 PrefabInstance:
   m_ObjectHideFlags: 0
