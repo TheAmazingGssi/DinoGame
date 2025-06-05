@@ -287,6 +287,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   furthestRightPoint: 26
   furthestLeftPoint: 0
+  zoomPadding: 1.5
+  minZoom: 4
+  maxZoom: 5
   ColliderRight: {fileID: 6996621723843196869}
   ColliderLeft: {fileID: 5952950527792163558}
   ColliderTop: {fileID: 1698356479609702940}
