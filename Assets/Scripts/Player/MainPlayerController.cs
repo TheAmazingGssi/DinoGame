@@ -255,6 +255,7 @@ public class MainPlayerController : MonoBehaviour
             canSpecial = false;
             lastSpecialTime = Time.time;
             characterScript.ConsumeSpecialStamina();
+            
             StartCoroutine(characterScript.PerformSpecial((dmg) =>
             {
                 GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
@@ -307,11 +308,12 @@ public class MainPlayerController : MonoBehaviour
         }
     }
 
-    private MainPlayerController FindNearestFallenPlayer()
+    private MainPlayerController FindNearestFallenPlayer()//------------------------------------
     {
         MainPlayerController[] players = FindObjectsOfType<MainPlayerController>();
         MainPlayerController nearest = null;
         float minDistance = reviveRange;
+        
         foreach (var player in players)
         {
             if (player != this && player.IsFallen())
