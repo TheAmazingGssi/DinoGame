@@ -12,7 +12,7 @@ public class EnemyManager : MonoBehaviour
     [Header("Components")]
     [SerializeField] private EnemyCombatManager combatManager;
     [SerializeField] private EnemyController enemyController;
-    [SerializeField] private EnemyAttack attack;
+    [SerializeField] private EnemyAttack[] attacks;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Animator animator;
@@ -29,6 +29,7 @@ public class EnemyManager : MonoBehaviour
     private Transform currentTarget;
     private PlayerCombatManager playerCombatManager;
     private PlayerCombatManager lastPlayerToDamage;
+    private HashSet<PlayerCombatManager> playersWhoDealtDamage = new HashSet<PlayerCombatManager>();
 
     public PlayerCombatManager PlayerCombatManager => playerCombatManager;
     public Transform CurrentTarget => currentTarget;
@@ -39,7 +40,7 @@ public class EnemyManager : MonoBehaviour
     public EnemyController EnemyController => enemyController;
     public EnemyCombatManager CombatManager => combatManager;
     public PlayerTransformData PlayerTransform => playerTransform;
-    public EnemyAttack Attack => attack;
+    public EnemyAttack[] Attacks => attacks;
 
     public event UnityAction<EnemyManager> OnDeath;
 
@@ -59,6 +60,7 @@ public class EnemyManager : MonoBehaviour
     private void UpdatePlayerTracking()
     {
         playersInRange.RemoveAll(player => player == null);
+        playersWhoDealtDamage.RemoveWhere(player => player == null);
     }
 
     private void UpdateTargeting()
@@ -77,7 +79,16 @@ public class EnemyManager : MonoBehaviour
 
     private void HandleAttackLogic()
     {
-
+        if (attacks != null && attacks.Length > 0)
+        {
+            foreach (EnemyAttack attack in attacks)
+            {
+                if (attack != null)
+                {
+                    attack.TryAttack();
+                }
+            }
+        }
     }
 
     #region Player Detection
@@ -102,6 +113,7 @@ public class EnemyManager : MonoBehaviour
             if (player != null)
             {
                 playersInRange.Remove(player);
+                playersWhoDealtDamage.Remove(player);
                 Debug.Log($"Player {player.name} left detection");
 
                 if (currentTarget == player.transform)
@@ -117,9 +129,12 @@ public class EnemyManager : MonoBehaviour
     public void OnPlayerDealtDamage(PlayerCombatManager player)
     {
         lastPlayerToDamage = player;
+        playersWhoDealtDamage.Add(player);
+        Debug.Log($"Player {player.name} dealt damage");
 
         if (playersInRange.Contains(player))
         {
+            Debug.Log("Player that dealt damage is in range");
             SetTarget(player);
         }
     }
@@ -134,12 +149,20 @@ public class EnemyManager : MonoBehaviour
         {
             targetPlayer = lastPlayerToDamage;
         }
+        else if (playersWhoDealtDamage.Count > 0)
+        {
+            targetPlayer = playersWhoDealtDamage.FirstOrDefault(p => playersInRange.Contains(p));
+        }
         else
         {
             targetPlayer = playersInRange.OrderBy(p => p.CurrentHealth).First();
+            Debug.Log("Targeting player with lowest health");
         }
 
-        SetTarget(targetPlayer);
+        if (targetPlayer != null)
+        {
+            SetTarget(targetPlayer);
+        }
     }
 
     private void SetTarget(PlayerCombatManager player)
@@ -153,7 +176,6 @@ public class EnemyManager : MonoBehaviour
     {
         currentTarget = null;
         playerCombatManager = null;
-        lastPlayerToDamage = null;
     }
     #endregion
 
@@ -177,6 +199,11 @@ public class EnemyManager : MonoBehaviour
         if (!combatManager)
         {
             combatManager = GetComponentInChildren<EnemyCombatManager>();
+        }
+
+        if (attacks == null || attacks.Length == 0)
+        {
+            attacks = GetComponentsInChildren<EnemyAttack>();
         }
     }
 }
