@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 public class DebugPlayerSpawner : MonoBehaviour
 {
-    [SerializeField] MultiplayerManager multiplayerManager;
+    [SerializeField] PlayerSpawner multiplayerManager;
     [SerializeField] Color[] playerColors;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
