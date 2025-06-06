@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class MultiplayerManager : MonoBehaviour
+public class PlayerSpawner : MonoBehaviour
 {
     [SerializeField] public Transform[] playerSpawns;
 
