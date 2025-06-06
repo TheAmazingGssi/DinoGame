@@ -1,0 +1,453 @@
+fileFormatVersion: 2
+guid: 85734ccc389336c49b7d82977e532b20
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7309718844932426122
+    second: all meteors Compressed_0
+  - first:
+      213: -8597437105847359482
+    second: all meteors Compressed_1
+  - first:
+      213: -7882421179130351453
+    second: all meteors Compressed_2
+  - first:
+      213: 1776307662796428765
+    second: all meteors Compressed_3
+  - first:
+      213: -557122822666961925
+    second: all meteors Compressed_4
+  - first:
+      213: -8966684611284202805
+    second: all meteors Compressed_5
+  - first:
+      213: -5802557818956863056
+    second: all meteors Compressed_6
+  - first:
+      213: 1362992929627369803
+    second: all meteors Compressed_7
+  - first:
+      213: 1710640328851490429
+    second: all meteors Compressed_8
+  - first:
+      213: 1537186527627580723
+    second: all meteors Compressed_9
+  - first:
+      213: 2347656177477929334
+    second: all meteors Compressed_10
+  - first:
+      213: -4064389416796043549
+    second: all meteors Compressed_11
+  - first:
+      213: -6088546556528700683
+    second: all meteors Compressed_12
+  - first:
+      213: 297871648778521830
+    second: all meteors Compressed_13
+  - first:
+      213: -8765901907388866235
+    second: all meteors Compressed_14
+  - first:
+      213: 2023432302386380627
+    second: all meteors Compressed_15
+  - first:
+      213: 3433946223576903472
+    second: all meteors Compressed_16
+  - first:
+      213: 529846167295536321
+    second: all meteors Compressed_17
+  - first:
+      213: -1499708345023901652
+    second: all meteors Compressed_18
+  - first:
+      213: -2595007988413185579
+    second: all meteors Compressed_19
+  - first:
+      213: 5065901437502830604
+    second: all meteors Compressed_20
+  - first:
+      213: 2904037135851949500
+    second: all meteors Compressed_21
+  - first:
+      213: -2942821503730421062
+    second: all meteors Compressed_22
+  - first:
+      213: 5186934513974558260
+    second: all meteors Compressed_23
+  - first:
+      213: -3024582005525583817
+    second: all meteors Compressed_24
+  - first:
+      213: 4871588771326389893
+    second: all meteors Compressed_25
+  - first:
+      213: -7611305595956142297
+    second: all meteors Compressed_26
+  - first:
+      213: -7398038440424379480
+    second: all meteors Compressed_27
+  - first:
+      213: -4346621972145736663
+    second: all meteors Compressed_28
+  - first:
+      213: -2153168786855906087
+    second: all meteors Compressed_29
+  - first:
+      213: 2958219883644597989
+    second: all meteors Compressed_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: all meteors Compressed_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 299
+        width: 197
+        height: 200
+      alignment: 9
+      pivot: {x: 0.87487334, y: 0.12263413}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 676f2d76079ae8a90800000000000000
+      internalID: -7309718844932426122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all meteors Compressed_2
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 239
+        width: 271
+        height: 253
+      alignment: 9
+      pivot: {x: 0.7934716, y: 0.24659446}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a07bef43b30c9290800000000000000
+      internalID: -7882421179130351453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all meteors Compressed_4
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 388
+        width: 141
+        height: 109
+      alignment: 9
+      pivot: {x: 0.879869, y: 0.18729645}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfb3caa9eb3b448f0800000000000000
+      internalID: -557122822666961925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all meteors Compressed_5
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 420
+        width: 96
+        height: 74
+      alignment: 9
+      pivot: {x: 0.8804086, y: 0.20389701}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bca81738adfef8380800000000000000
+      internalID: -8966684611284202805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all meteors Compressed_7
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 156
+        width: 187
+        height: 172
+      alignment: 9
+      pivot: {x: 0.54321796, y: 0.278242}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b41fec919d25ae210800000000000000
+      internalID: 1362992929627369803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all meteors Compressed_10
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 144
+        width: 164
+        height: 217
+      alignment: 9
+      pivot: {x: 0.61451095, y: 0.29804987}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 679c251eadc849020800000000000000
+      internalID: 2347656177477929334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all meteors Compressed_12
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 75
+        width: 205
+        height: 176
+      alignment: 9
+      pivot: {x: 0.800863, y: 0.27406004}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f2dda35a23218ba0800000000000000
+      internalID: -6088546556528700683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all meteors Compressed_20
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 35
+        width: 235
+        height: 174
+      alignment: 9
+      pivot: {x: 0.59324044, y: 0.36940747}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c083f716482bd4640800000000000000
+      internalID: 5065901437502830604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all meteors Compressed_26
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 35
+        width: 81
+        height: 64
+      alignment: 9
+      pivot: {x: 0.7304363, y: 0.33515608}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72f571c03e53f5690800000000000000
+      internalID: -7611305595956142297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: all meteors Compressed_30
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 27
+        width: 98
+        height: 78
+      alignment: 9
+      pivot: {x: 0.8395205, y: 0.19827329}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e632249f45bd0920800000000000000
+      internalID: 2958219883644597989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: afd91c3a940b8404481c97f1a21fe9af
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      all meteors Compressed_0: -7309718844932426122
+      all meteors Compressed_10: 2347656177477929334
+      all meteors Compressed_12: -6088546556528700683
+      all meteors Compressed_2: -7882421179130351453
+      all meteors Compressed_20: 5065901437502830604
+      all meteors Compressed_26: -7611305595956142297
+      all meteors Compressed_30: 2958219883644597989
+      all meteors Compressed_4: -557122822666961925
+      all meteors Compressed_5: -8966684611284202805
+      all meteors Compressed_7: 1362992929627369803
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
