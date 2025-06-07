@@ -13,9 +13,8 @@ GameObject:
   - component: {fileID: 3082602570648211020}
   - component: {fileID: 8038912827772719235}
   - component: {fileID: 7042898619641567151}
-  - component: {fileID: 1735879531130907237}
   m_Layer: 0
-  m_Name: TestEnemy
+  m_Name: EnemyBase
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7775578561474358076}
-  - {fileID: 645890678585215769}
+  - {fileID: 6724842336940981961}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7022572441651464058
@@ -53,12 +52,11 @@ MonoBehaviour:
   combatManager: {fileID: 3082602570648211020}
   enemyController: {fileID: 8038912827772719235}
   attacks:
-  - {fileID: 1735879531130907237}
+  - {fileID: 0}
   rb: {fileID: 7042898619641567151}
   spriteRenderer: {fileID: 2515911822479905939}
   animator: {fileID: 8492816430768677864}
   enemyData: {fileID: 11400000, guid: efcb3114fbb81e14eaf446cc3bfaa133, type: 2}
-  playerTransform: {fileID: 11400000, guid: 937d220d66f373144b4d13a200bd8566, type: 2}
   detectionRange: 10
   playerLayer:
     serializedVersion: 2
@@ -118,52 +116,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1735879531130907237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1856966355605016673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55f90f674f841c947961c40a2a267cba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  manager: {fileID: 7022572441651464058}
-  attackRange: 2
---- !u!1 &2561743913857721349
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 645890678585215769}
-  m_Layer: 0
-  m_Name: Colliders
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &645890678585215769
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2561743913857721349}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6724842336940981961}
-  m_Father: {fileID: 1081683106100673034}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2750972596752826828
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,12 +141,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2750972596752826828}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.90808, y: 0.90808, z: 0.90808}
+  m_LocalScale: {x: 0.90808004, y: 0.90808004, z: 0.90808004}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 645890678585215769}
+  m_Father: {fileID: 1081683106100673034}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &785869723828654056
 BoxCollider2D:
