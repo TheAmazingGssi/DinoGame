@@ -1,6 +1,6 @@
-using UnityEngine;
+/*using UnityEngine;
 
-/*public class PlayerCombatManager : CombatManager
+public class PlayerCombatManager : CombatManager
 {
     public void Initialize(float maxHealth)
     {
@@ -18,41 +18,34 @@ using UnityEngine;
 
 }*/
 
-public class PlayerCombatManager : CombatManager
+using UnityEngine;
+
+public class PlayerCombatTest : CombatManager
 {
     private static readonly int Hurt = Animator.StringToHash("Hurt");
     private static readonly int Fallen = Animator.StringToHash("Fallen");
+    [SerializeField] private PlayerTransformData playerTransform;
 
-    [SerializeField] private MainPlayerController playerController;
-    [SerializeField] private Animator animator;
+
     [SerializeField] private TextMesh damageNumberPrefab;
 
-    public void Initialize(float maxHealth, MainPlayerController controller, Animator playerAnimator)
+    public void Initialize(float maxHealth)
     {
+        playerTransform.PlayerTransform = transform;
         currentMaxHealth = maxHealth;
         currentHealth = maxHealth;
-        playerController = controller;
-        animator = playerAnimator;
         UpdateHealthBar();
     }
 
     public override void TakeDamage(DamageArgs damageArgs)
     {
-        if (currentHealth <= 0 || !MainPlayerController.CanBeDamaged) return;
+       // if (currentHealth <= 0) return;
         base.TakeDamage(damageArgs);
         Debug.Log("Player took: " + damageArgs);
         if (damageNumberPrefab)
         {
             TextMesh damagePrefabClone = Instantiate(damageNumberPrefab, transform.position, Quaternion.identity, transform);
             damagePrefabClone.text = damageArgs.Damage.ToString();
-        }
-        if (animator != null)
-        {
-            animator.SetTrigger(Hurt);
-        }
-        if (currentHealth <= 0)
-        {
-            animator?.SetTrigger(Fallen);
         }
     }
 
@@ -65,7 +58,5 @@ public class PlayerCombatManager : CombatManager
     {
         currentHealth = healthFraction * currentMaxHealth;
         UpdateHealthBar();
-        animator?.ResetTrigger(Fallen);
-        Debug.Log($"{playerController.name} revived with {currentHealth} health");
     }
 }

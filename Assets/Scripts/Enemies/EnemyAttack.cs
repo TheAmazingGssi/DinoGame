@@ -48,15 +48,15 @@ public abstract class EnemyAttack : MonoBehaviour
 
     protected virtual void StartAttack()
     {
-        Debug.Log($"Attacking {manager.CurrentTarget.name}");
         animator.SetTrigger(Attack);
+        ApplyDamage();
+
     }
 
     protected abstract void ApplyDamage();
 
     public virtual void OnAttackExecute()
     {
-        ApplyDamage();
     }
 
     public virtual void OnAttackEnd()

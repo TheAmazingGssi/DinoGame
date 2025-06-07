@@ -19,7 +19,6 @@ public class EnemyManager : MonoBehaviour
 
     [Header("Data")]
     [SerializeField] private EnemyData enemyData;
-    [SerializeField] private PlayerTransformData playerTransform;
 
     [Header("Detection")]
     [SerializeField] private float detectionRange = 10f;
@@ -39,7 +38,6 @@ public class EnemyManager : MonoBehaviour
     public Rigidbody2D RB => rb;
     public EnemyController EnemyController => enemyController;
     public EnemyCombatManager CombatManager => combatManager;
-    public PlayerTransformData PlayerTransform => playerTransform;
     public EnemyAttack[] Attacks => attacks;
 
     public event UnityAction<EnemyManager> OnDeath;
@@ -73,6 +71,12 @@ public class EnemyManager : MonoBehaviour
 
         if (currentTarget == null)
         {
+            SelectTarget();
+        }
+        else if (!playersInRange.Contains(playerCombatManager))
+        {
+            Debug.Log($"Current target {playerCombatManager.name} left range, selecting new target");
+            ClearTarget();
             SelectTarget();
         }
     }
@@ -134,7 +138,7 @@ public class EnemyManager : MonoBehaviour
 
         if (playersInRange.Contains(player))
         {
-            Debug.Log("Player that dealt damage is in range");
+            Debug.Log($"Player {player.name} that dealt damage is in range - switching target");
             SetTarget(player);
         }
     }
@@ -148,15 +152,12 @@ public class EnemyManager : MonoBehaviour
         if (lastPlayerToDamage != null && playersInRange.Contains(lastPlayerToDamage))
         {
             targetPlayer = lastPlayerToDamage;
-        }
-        else if (playersWhoDealtDamage.Count > 0)
-        {
-            targetPlayer = playersWhoDealtDamage.FirstOrDefault(p => playersInRange.Contains(p));
+            Debug.Log($"Targeting last player to deal damage: {targetPlayer.name}");
         }
         else
         {
-            targetPlayer = playersInRange.OrderBy(p => p.CurrentHealth).First();
-            Debug.Log("Targeting player with lowest health");
+            targetPlayer = playersInRange.OrderByDescending(p => p.CurrentHealth).First();
+            Debug.Log($"Targeting player with highest health: {targetPlayer.name}");
         }
 
         if (targetPlayer != null)
@@ -174,6 +175,10 @@ public class EnemyManager : MonoBehaviour
 
     private void ClearTarget()
     {
+        if (currentTarget != null)
+        {
+            Debug.Log($"Clearing target: {currentTarget.name}");
+        }
         currentTarget = null;
         playerCombatManager = null;
     }

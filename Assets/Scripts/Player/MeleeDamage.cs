@@ -19,12 +19,12 @@ public class MeleeDamage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        CombatManager combatManager = other.GetComponent<CombatManager>();
+        EnemyCombatManager combatManager = other.GetComponent<EnemyCombatManager>();
         if (combatManager != null)
         {
             DamageArgs damageArgs = new DamageArgs { Damage = damage };
             combatManager.TakeDamage(damageArgs);
-            Debug.Log($"Dealt {damage} damage to {other.name}{(isSpecial ? " (Special)" : "")}");
+            Debug.Log($"Player dealt {damage} damage to {other.name}{(isSpecial ? " (Special)" : "")}");
 
             // Subscribe to OnDeath for score if enemy
             if (other.CompareTag("Enemy") && playerController != null)
