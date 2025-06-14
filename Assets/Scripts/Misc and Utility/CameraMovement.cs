@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using UnityEditor.Rendering;
 using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
@@ -26,6 +24,8 @@ public class CameraMovement : MonoBehaviour
     
     float cameraHalfWidth;
     float cameraHalfHeight;
+
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
