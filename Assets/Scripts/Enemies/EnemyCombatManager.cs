@@ -7,11 +7,22 @@ public class EnemyCombatManager : CombatManager
     [SerializeField] private EnemyManager manager;
     [SerializeField] private TextMesh damageNumberPrefab;
 
+    [SerializeField] private bool isDead = false;
+
     public void Initialize(float maxHealth)
     {
         currentMaxHealth = maxHealth;
         currentHealth = maxHealth;
         UpdateHealthBar();
+    }
+
+    private void Update()
+    {
+        if(isDead)
+        {
+            HandleDeath();
+           // isDead = false;
+        }
     }
 
     public override void TakeDamage(DamageArgs damageArgs)

@@ -24,8 +24,11 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private float detectionRange = 10f;
     [SerializeField] private LayerMask playerLayer;
 
-    [Header("Prefabs")]
+    [Header("Drops")]
     [SerializeField] private GameObject healthItem;
+    [SerializeField] private float healthItemDropChance = 0.25f;
+    [Tooltip("Put -1 for number of players")]
+    [SerializeField] private float healthDropAmount;
 
     private List<PlayerCombatManager> playersInRange = new List<PlayerCombatManager>();
     private Transform currentTarget;
@@ -49,6 +52,13 @@ public class EnemyManager : MonoBehaviour
 
     public event UnityAction<EnemyManager> OnDeath;
 
+    private void Start()
+    {
+        if(healthDropAmount < 0)
+        {
+            healthDropAmount = PlayerEntity.PlayerList.Count;
+        }
+    }
     private void OnEnable()
     {
         combatManager.OnDeath += HandleDeath;
@@ -214,7 +224,17 @@ public class EnemyManager : MonoBehaviour
         OnDeath?.Invoke(this);
         animator.SetBool(IsDead, true);
         StartCoroutine(DeSpawn());
-        Instantiate(healthItem, transform.position, Quaternion.identity);
+
+        if (Random.value < healthItemDropChance)
+        {
+            for (int i = 0; i < healthDropAmount; i++)
+            {
+                Vector2 randomOffset = Random.insideUnitCircle * 1.5f;
+                Vector3 spawnPosition = transform.position + (Vector3)randomOffset;
+                Instantiate(healthItem, spawnPosition, Quaternion.identity);
+            }
+        }
+
     }
 
     private IEnumerator DeSpawn()
