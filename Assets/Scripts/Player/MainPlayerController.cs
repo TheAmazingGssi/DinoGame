@@ -117,7 +117,7 @@ public class MainPlayerController : MonoBehaviour
             spriteRenderer = GetComponent<SpriteRenderer>();
 
         playerTransform.PlayerTransform = transform;
-        /*
+
         inputActions = new PlayerInputActions();
         inputActions.Player.Move.performed += Move;
         inputActions.Player.Move.canceled += Move;
@@ -127,7 +127,7 @@ public class MainPlayerController : MonoBehaviour
         inputActions.Player.Special.canceled += SpecialCanceled;
         inputActions.Player.Block.performed += Block;
         inputActions.Player.Revive.performed += Revive;
-        */
+
         if (characterStats != null)
         {
             stats = characterStats.characters[(int)characterType];
@@ -140,8 +140,7 @@ public class MainPlayerController : MonoBehaviour
         }
 
         combatManager = GetComponent<PlayerCombatManager>();
-        //--------TEST------------
-        //combatManager.Initialize(stats.health, this, animator);
+        combatManager.Initialize(stats.health, this, animator);
         combatManager.OnDeath += (cm) => EnterFallenState();
 
         switch (characterType)
@@ -219,7 +218,7 @@ public class MainPlayerController : MonoBehaviour
             }
         }
 
-        Debug.Log("Target Velocity: " + targetVelocity + ", Current Velocity: " + currentVelocity + ", RB Velocity: " + rb.linearVelocity);
+       // Debug.Log("Target Velocity: " + targetVelocity + ", Current Velocity: " + currentVelocity + ", RB Velocity: " + rb.linearVelocity);
     }
 
     public void Attack(InputAction.CallbackContext context)

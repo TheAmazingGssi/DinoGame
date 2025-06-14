@@ -1,13 +1,11 @@
 using UnityEngine;
 
-public class EnemyMeleeAttack : EnemyAttack
+public class MeleeAttack : EnemyAttack
 {
     protected override bool IsPlayerInRange => IsTargetInRange(AttackRange);
 
     protected override void ApplyDamage()
     {
-        Debug.Log($"tryint to damage player");
-
         if (manager.PlayerCombatManager != null)
         {
             Debug.Log($"combat manager found");

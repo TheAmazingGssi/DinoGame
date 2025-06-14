@@ -24,6 +24,9 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private float detectionRange = 10f;
     [SerializeField] private LayerMask playerLayer;
 
+    [Header("Prefabs")]
+    [SerializeField] private GameObject healthItem;
+
     private List<PlayerCombatManager> playersInRange = new List<PlayerCombatManager>();
     private Transform currentTarget;
     private PlayerCombatManager playerCombatManager;
@@ -52,7 +55,7 @@ public class EnemyManager : MonoBehaviour
     {
         UpdatePlayerTracking();
         UpdateTargeting();
-        HandleAttackLogic();
+        HandleAttack();
     }
 
     private void UpdatePlayerTracking()
@@ -81,7 +84,7 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
-    private void HandleAttackLogic()
+    private void HandleAttack()
     {
         if (attacks != null && attacks.Length > 0)
         {
@@ -190,6 +193,7 @@ public class EnemyManager : MonoBehaviour
         OnDeath?.Invoke(this);
         animator.SetBool(IsDead, true);
         StartCoroutine(DeSpawn());
+        Instantiate(healthItem, transform.position, Quaternion.identity);
     }
 
     private IEnumerator DeSpawn()

@@ -57,6 +57,13 @@ public class CombatManager : MonoBehaviour
         UpdateHealthBar();
     }
 
+    public void RestoreHealthByPercent(float percent)
+    {
+        float healthToRestore = percent * currentMaxHealth;
+        currentHealth = Mathf.Clamp(currentHealth + healthToRestore, 0, currentMaxHealth);
+        UpdateHealthBar();
+    }
+
     protected virtual void HandleDeath()
     {
         OnDeath?.Invoke(this);

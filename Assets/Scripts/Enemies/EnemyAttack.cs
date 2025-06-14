@@ -4,6 +4,8 @@ using UnityEngine;
 
 public abstract class EnemyAttack : MonoBehaviour
 {
+    protected const string PLAYER = "Player";
+
     protected static readonly int Attack = Animator.StringToHash("Attack");
     [SerializeField] protected EnemyManager manager;
     [SerializeField] protected float attackRange = 2f;
@@ -78,7 +80,7 @@ public abstract class EnemyAttack : MonoBehaviour
 
         foreach (Collider2D collider in colliders)
         {
-            if (collider.CompareTag("Player"))
+            if (collider.CompareTag(PLAYER))
             {
                 PlayerCombatManager player = collider.GetComponent<PlayerCombatManager>();
                 if (player != null)
