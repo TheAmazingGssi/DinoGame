@@ -3,6 +3,7 @@ using UnityEngine;
 public class EnemyCombatManager : CombatManager
 {
     private static readonly int Hurt = Animator.StringToHash("Hurt");
+
     [SerializeField] private EnemyManager manager;
     [SerializeField] private TextMesh damageNumberPrefab;
 

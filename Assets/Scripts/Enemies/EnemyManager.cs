@@ -33,6 +33,9 @@ public class EnemyManager : MonoBehaviour
     private PlayerCombatManager lastPlayerToDamage;
     private HashSet<PlayerCombatManager> playersWhoDealtDamage = new HashSet<PlayerCombatManager>();
 
+    private bool isAttacking = false;
+    private EnemyAttack currentAttack;
+
     public PlayerCombatManager PlayerCombatManager => playerCombatManager;
     public Transform CurrentTarget => currentTarget;
     public Animator Animator => animator;
@@ -42,12 +45,14 @@ public class EnemyManager : MonoBehaviour
     public EnemyController EnemyController => enemyController;
     public EnemyCombatManager CombatManager => combatManager;
     public EnemyAttack[] Attacks => attacks;
+    public bool IsAttacking => isAttacking;
 
     public event UnityAction<EnemyManager> OnDeath;
 
     private void OnEnable()
     {
         combatManager.OnDeath += HandleDeath;
+        combatManager.OnTakeDamage += HandleTakeDamage;
         combatManager.Initialize(enemyData.MaxHealth);
     }
 
@@ -86,6 +91,8 @@ public class EnemyManager : MonoBehaviour
 
     private void HandleAttack()
     {
+        if (isAttacking) return;
+
         if (attacks != null && attacks.Length > 0)
         {
             foreach (EnemyAttack attack in attacks)
@@ -95,6 +102,20 @@ public class EnemyManager : MonoBehaviour
                     attack.TryAttack();
                 }
             }
+        }
+    }
+
+    public void SetAttackState(bool attacking, EnemyAttack attack = null)
+    {
+        isAttacking = attacking;
+        currentAttack = attacking ? attack : null;
+    }
+
+    private void HandleTakeDamage(DamageArgs damageArgs)
+    {
+        if (isAttacking && currentAttack != null)
+        {
+            currentAttack.InterruptAttack();
         }
     }
 
