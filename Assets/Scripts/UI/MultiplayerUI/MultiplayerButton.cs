@@ -4,12 +4,14 @@ using UnityEngine.UI;
 
 public class MultiplayerButton : MonoBehaviour
 {
-    [SerializeField] Button button;
+    
     [SerializeField] Image terryIndicator;
     [SerializeField] Image spencerIndicator;
     [SerializeField] Image parisIndicator;
     [SerializeField] Image andrewIndicator;
-    Dictionary<CharacterType, Image> characterIndicators = new Dictionary<CharacterType, Image>();
+
+    public Button button;
+    public Dictionary<CharacterType, Image> characterIndicators = new Dictionary<CharacterType, Image>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,11 +22,5 @@ public class MultiplayerButton : MonoBehaviour
 
         foreach(Image img in characterIndicators.Values)
             img.enabled = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

@@ -16,7 +16,6 @@ public class PlayerSpawner : MonoBehaviour
             {
                 PlayerEntity.PlayerList[i].SpawnPlayerController(playerSpawns[i]);
             }
-            //emptyPlayers[i].SetActive(false);
         }
     }
 }
