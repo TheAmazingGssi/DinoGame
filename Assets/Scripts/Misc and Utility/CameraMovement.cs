@@ -1,20 +1,21 @@
-using System.Collections.Generic;
-using UnityEditor.Rendering;
 using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    [Header("Settings")]
-    [Tooltip("In game this will be changed by a script that reveals more of the stage as the player beats enemy waves")]
-    [SerializeField] float furthestRightPoint; 
-    [Tooltip("In game this will be changed by a script that blocks the way back as the player beats enemy waves")]
-    [SerializeField] float furthestLeftPoint;
+    [Header("Zoom Settings")]
     [Tooltip("Empty space between the players and the edge of the camera if the camera is zooming")]
     [SerializeField] float zoomPadding;
     [SerializeField] float minZoom;
     [SerializeField] float maxZoom;
 
-    [Header("ComponentRefrences")]
+    [Header("Settings")]
+    [Tooltip("In game this will be changed by a script that reveals more of the stage as the player beats enemy waves. You set the starting values")]
+    [SerializeField] float furthestRightPoint; 
+    [Tooltip("In game this will be changed by a script that blocks the way back as the player beats enemy waves. You set the starting values")]
+    [SerializeField] float furthestLeftPoint;
+    [SerializeField] float bottomOfStage;
+    
+    [Header("Component Refrences")]
     [SerializeField] Transform ColliderRight;
     [SerializeField] Transform ColliderLeft;
     [SerializeField] Transform ColliderTop;
@@ -23,6 +24,8 @@ public class CameraMovement : MonoBehaviour
     
     float cameraHalfWidth;
     float cameraHalfHeight;
+
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -53,7 +56,9 @@ public class CameraMovement : MonoBehaviour
         //clamp to not go over where the camera cant go yet
         cameraX = Mathf.Clamp(cameraX, furthestLeftPoint, furthestRightPoint);
 
-        transform.position = new Vector3(cameraX, transform.position.y, transform.position.z);
+        float cameraY = bottomOfStage + cameraHalfHeight;
+
+        transform.position = new Vector3(cameraX, cameraY, transform.position.z);
     }
     private void MoveColliders()
     {

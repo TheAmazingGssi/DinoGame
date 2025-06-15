@@ -40,10 +40,7 @@ public class PlayerEntity : MonoBehaviour
         PlayerList.Add(this);
     }
 
-    public void InvokeMove(InputAction.CallbackContext inputContext)
-    {
-        Move.Invoke(inputContext);
-    }
+    public void InvokeMove(InputAction.CallbackContext inputContext) => Move.Invoke(inputContext);
     public void InvokeAttack(InputAction.CallbackContext inputContext) => Attack.Invoke(inputContext);
     public void InvokeSpecial(InputAction.CallbackContext inputContext) => Special.Invoke(inputContext);
     public void InvokeBlock(InputAction.CallbackContext inputContext) => Block.Invoke(inputContext);
