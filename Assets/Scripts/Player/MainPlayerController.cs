@@ -140,7 +140,8 @@ public class MainPlayerController : MonoBehaviour
         }
 
         combatManager = GetComponent<PlayerCombatManager>();
-        combatManager.Initialize(stats.health, this, animator);
+        //--------TEST------------
+        //combatManager.Initialize(stats.health, this, animator);
         combatManager.OnDeath += (cm) => EnterFallenState();
 
         switch (characterType)
