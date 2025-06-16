@@ -157,10 +157,10 @@ TextureImporter:
       name: Terry_Idle_Sheet_0
       rect:
         serializedVersion: 2
-        x: 359
-        y: 2408
-        width: 2133
-        height: 1243
+        x: 0
+        y: 2048
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,10 +179,10 @@ TextureImporter:
       name: Terry_Idle_Sheet_1
       rect:
         serializedVersion: 2
-        x: 3437
-        y: 2408
-        width: 2126
-        height: 1220
+        x: 3071
+        y: 2048
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -201,10 +201,10 @@ TextureImporter:
       name: Terry_Idle_Sheet_2
       rect:
         serializedVersion: 2
-        x: 6518
-        y: 2408
-        width: 2116
-        height: 1198
+        x: 6142
+        y: 2048
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,10 +223,10 @@ TextureImporter:
       name: Terry_Idle_Sheet_3
       rect:
         serializedVersion: 2
-        x: 380
-        y: 360
-        width: 2112
-        height: 1190
+        x: 0
+        y: 0
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,10 +245,10 @@ TextureImporter:
       name: Terry_Idle_Sheet_4
       rect:
         serializedVersion: 2
-        x: 3440
-        y: 360
-        width: 2123
-        height: 1213
+        x: 3071
+        y: 0
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,10 +267,10 @@ TextureImporter:
       name: Terry_Idle_Sheet_5
       rect:
         serializedVersion: 2
-        x: 6503
-        y: 360
-        width: 2131
-        height: 1236
+        x: 6142
+        y: 0
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,7 +289,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 60ffb4635a904954f9146b8b29fc4175
     internalID: 0
     vertices: []
     indices: 

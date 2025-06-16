@@ -232,10 +232,10 @@ TextureImporter:
       name: Terry_Revive_Front_Sheet_0
       rect:
         serializedVersion: 2
-        x: 1563
-        y: 6545
-        width: 929
-        height: 1202
+        x: 0
+        y: 6144
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -254,10 +254,10 @@ TextureImporter:
       name: Terry_Revive_Front_Sheet_1
       rect:
         serializedVersion: 2
-        x: 4631
-        y: 6729
-        width: 1120
-        height: 1161
+        x: 3071
+        y: 6144
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,10 +276,10 @@ TextureImporter:
       name: Terry_Revive_Front_Sheet_2
       rect:
         serializedVersion: 2
-        x: 5776
-        y: 7483
-        width: 9
-        height: 10
+        x: 6142
+        y: 6144
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -298,10 +298,10 @@ TextureImporter:
       name: Terry_Revive_Front_Sheet_3
       rect:
         serializedVersion: 2
-        x: 7731
-        y: 6733
-        width: 1058
-        height: 1109
+        x: 9213
+        y: 6144
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,10 +320,10 @@ TextureImporter:
       name: Terry_Revive_Front_Sheet_4
       rect:
         serializedVersion: 2
-        x: 10842
-        y: 6685
-        width: 1000
-        height: 1102
+        x: 0
+        y: 4096
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -342,10 +342,10 @@ TextureImporter:
       name: Terry_Revive_Front_Sheet_5
       rect:
         serializedVersion: 2
-        x: 8826
-        y: 7257
-        width: 11
-        height: 7
+        x: 3071
+        y: 4096
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -364,10 +364,10 @@ TextureImporter:
       name: Terry_Revive_Front_Sheet_6
       rect:
         serializedVersion: 2
-        x: 11882
-        y: 7153
-        width: 11
-        height: 6
+        x: 6142
+        y: 4096
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -386,10 +386,10 @@ TextureImporter:
       name: Terry_Revive_Front_Sheet_7
       rect:
         serializedVersion: 2
-        x: 1605
-        y: 4667
-        width: 1033
-        height: 1105
+        x: 9213
+        y: 4096
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -408,10 +408,10 @@ TextureImporter:
       name: Terry_Revive_Front_Sheet_8
       rect:
         serializedVersion: 2
-        x: 4656
-        y: 4696
-        width: 1058
-        height: 1108
+        x: 0
+        y: 2048
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -430,10 +430,10 @@ TextureImporter:
       name: Terry_Revive_Front_Sheet_9
       rect:
         serializedVersion: 2
-        x: 5752
-        y: 5215
-        width: 10
-        height: 7
+        x: 3071
+        y: 2048
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -452,10 +452,10 @@ TextureImporter:
       name: Terry_Revive_Front_Sheet_10
       rect:
         serializedVersion: 2
-        x: 7733
-        y: 4686
-        width: 1051
-        height: 1107
+        x: 6142
+        y: 2048
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -474,10 +474,10 @@ TextureImporter:
       name: Terry_Revive_Front_Sheet_11
       rect:
         serializedVersion: 2
-        x: 10826
-        y: 4657
-        width: 1022
-        height: 1104
+        x: 9213
+        y: 2048
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -496,10 +496,10 @@ TextureImporter:
       name: Terry_Revive_Front_Sheet_12
       rect:
         serializedVersion: 2
-        x: 8821
-        y: 5196
-        width: 11
-        height: 7
+        x: 0
+        y: 0
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -518,10 +518,10 @@ TextureImporter:
       name: Terry_Revive_Front_Sheet_13
       rect:
         serializedVersion: 2
-        x: 2676
-        y: 5160
-        width: 11
-        height: 6
+        x: 3071
+        y: 0
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -540,10 +540,10 @@ TextureImporter:
       name: Terry_Revive_Front_Sheet_14
       rect:
         serializedVersion: 2
-        x: 11887
-        y: 5142
-        width: 11
-        height: 6
+        x: 6142
+        y: 0
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -562,10 +562,10 @@ TextureImporter:
       name: Terry_Revive_Front_Sheet_15
       rect:
         serializedVersion: 2
-        x: 1643
-        y: 2579
-        width: 983
-        height: 1101
+        x: 9213
+        y: 0
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -580,341 +580,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Terry_Revive_Front_Sheet_16
-      rect:
-        serializedVersion: 2
-        x: 4684
-        y: 2609
-        width: 1022
-        height: 1104
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 51b5863b3791cabe0800000000000000
-      internalID: -1464767794080359659
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Revive_Front_Sheet_17
-      rect:
-        serializedVersion: 2
-        x: 7733
-        y: 2638
-        width: 1051
-        height: 1107
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f85a1f585c9b860c0800000000000000
-      internalID: -4582208362842577521
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Revive_Front_Sheet_18
-      rect:
-        serializedVersion: 2
-        x: 10798
-        y: 2648
-        width: 1058
-        height: 1108
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 998f0d1d8968eb3c0800000000000000
-      internalID: -4341884999825295207
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Revive_Front_Sheet_19
-      rect:
-        serializedVersion: 2
-        x: 11894
-        y: 3167
-        width: 10
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 85fb14b1511453c20800000000000000
-      internalID: 3185523870341906264
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Revive_Front_Sheet_20
-      rect:
-        serializedVersion: 2
-        x: 8821
-        y: 3148
-        width: 11
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3d61fcc04311e93d0800000000000000
-      internalID: -3198099770135603501
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Revive_Front_Sheet_21
-      rect:
-        serializedVersion: 2
-        x: 5745
-        y: 3094
-        width: 11
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8196d70d6987290e0800000000000000
-      internalID: -2264615073475630824
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Revive_Front_Sheet_22
-      rect:
-        serializedVersion: 2
-        x: 2666
-        y: 3039
-        width: 11
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1bf265e1062facac0800000000000000
-      internalID: -3833985638112809039
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Revive_Front_Sheet_23
-      rect:
-        serializedVersion: 2
-        x: 1605
-        y: 571
-        width: 1033
-        height: 1105
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 36b288562570754a0800000000000000
-      internalID: -6604802278043407517
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Revive_Front_Sheet_24
-      rect:
-        serializedVersion: 2
-        x: 4700
-        y: 541
-        width: 1000
-        height: 1102
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 800bb8970db1921e0800000000000000
-      internalID: -2222214358924283896
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Revive_Front_Sheet_25
-      rect:
-        serializedVersion: 2
-        x: 7731
-        y: 589
-        width: 1058
-        height: 1109
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 777bda4015f02ac00800000000000000
-      internalID: 910306915327522679
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Revive_Front_Sheet_26
-      rect:
-        serializedVersion: 2
-        x: 10773
-        y: 585
-        width: 1120
-        height: 1161
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ada0c258528277b90800000000000000
-      internalID: -7244277333988996390
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Revive_Front_Sheet_27
-      rect:
-        serializedVersion: 2
-        x: 11918
-        y: 1339
-        width: 9
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 97166c09f73578f50800000000000000
-      internalID: 6883562362813964665
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Revive_Front_Sheet_28
-      rect:
-        serializedVersion: 2
-        x: 8826
-        y: 1113
-        width: 11
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9e2882526501a9460800000000000000
-      internalID: 7249124512382878441
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Revive_Front_Sheet_29
-      rect:
-        serializedVersion: 2
-        x: 2676
-        y: 1064
-        width: 11
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9151f6478decb6dc0800000000000000
-      internalID: -3644592044364589799
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Revive_Front_Sheet_30
-      rect:
-        serializedVersion: 2
-        x: 5740
-        y: 1009
-        width: 11
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 395c4aa8edbdcf010800000000000000
-      internalID: 1224094947593209235
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 86ca5d0678dadc04bab5e9a8ef012809
     internalID: 0
     vertices: []
     indices: 
@@ -932,23 +602,8 @@ TextureImporter:
       Terry_Revive_Front_Sheet_13: 7123828363638200749
       Terry_Revive_Front_Sheet_14: 2044957499622954311
       Terry_Revive_Front_Sheet_15: 766520453504594462
-      Terry_Revive_Front_Sheet_16: -1464767794080359659
-      Terry_Revive_Front_Sheet_17: -4582208362842577521
-      Terry_Revive_Front_Sheet_18: -4341884999825295207
-      Terry_Revive_Front_Sheet_19: 3185523870341906264
       Terry_Revive_Front_Sheet_2: -2887032065818392020
-      Terry_Revive_Front_Sheet_20: -3198099770135603501
-      Terry_Revive_Front_Sheet_21: -2264615073475630824
-      Terry_Revive_Front_Sheet_22: -3833985638112809039
-      Terry_Revive_Front_Sheet_23: -6604802278043407517
-      Terry_Revive_Front_Sheet_24: -2222214358924283896
-      Terry_Revive_Front_Sheet_25: 910306915327522679
-      Terry_Revive_Front_Sheet_26: -7244277333988996390
-      Terry_Revive_Front_Sheet_27: 6883562362813964665
-      Terry_Revive_Front_Sheet_28: 7249124512382878441
-      Terry_Revive_Front_Sheet_29: -3644592044364589799
       Terry_Revive_Front_Sheet_3: 1574711597119563652
-      Terry_Revive_Front_Sheet_30: 1224094947593209235
       Terry_Revive_Front_Sheet_4: 5530773579245037042
       Terry_Revive_Front_Sheet_5: 5980833091354957546
       Terry_Revive_Front_Sheet_6: -6283901269709924527

@@ -184,10 +184,10 @@ TextureImporter:
       name: Terry_Walk_Sheet_0
       rect:
         serializedVersion: 2
-        x: 359
-        y: 6528
-        width: 2133
-        height: 1219
+        x: 0
+        y: 6144
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,10 +206,10 @@ TextureImporter:
       name: Terry_Walk_Sheet_1
       rect:
         serializedVersion: 2
-        x: 3430
-        y: 6548
-        width: 2117
-        height: 1214
+        x: 3071
+        y: 6144
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,10 +228,10 @@ TextureImporter:
       name: Terry_Walk_Sheet_2
       rect:
         serializedVersion: 2
-        x: 6501
-        y: 6544
-        width: 2120
-        height: 1217
+        x: 6142
+        y: 6144
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,10 +250,10 @@ TextureImporter:
       name: Terry_Walk_Sheet_3
       rect:
         serializedVersion: 2
-        x: 9573
-        y: 6536
-        width: 2138
-        height: 1214
+        x: 9213
+        y: 6144
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -272,10 +272,10 @@ TextureImporter:
       name: Terry_Walk_Sheet_4
       rect:
         serializedVersion: 2
-        x: 362
-        y: 4481
-        width: 2168
-        height: 1207
+        x: 0
+        y: 4096
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,10 +294,10 @@ TextureImporter:
       name: Terry_Walk_Sheet_5
       rect:
         serializedVersion: 2
-        x: 3431
-        y: 4478
-        width: 2181
-        height: 1223
+        x: 3071
+        y: 4096
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -316,10 +316,10 @@ TextureImporter:
       name: Terry_Walk_Sheet_6
       rect:
         serializedVersion: 2
-        x: 6501
-        y: 4486
-        width: 2169
-        height: 1232
+        x: 6142
+        y: 4096
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -338,10 +338,10 @@ TextureImporter:
       name: Terry_Walk_Sheet_7
       rect:
         serializedVersion: 2
-        x: 9572
-        y: 4486
-        width: 2148
-        height: 1246
+        x: 9213
+        y: 4096
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -360,10 +360,10 @@ TextureImporter:
       name: Terry_Walk_Sheet_8
       rect:
         serializedVersion: 2
-        x: 359
-        y: 2438
-        width: 2131
-        height: 1252
+        x: 0
+        y: 2048
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -382,10 +382,10 @@ TextureImporter:
       name: Terry_Walk_Sheet_9
       rect:
         serializedVersion: 2
-        x: 3431
-        y: 2434
-        width: 2135
-        height: 1242
+        x: 3071
+        y: 2048
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -404,10 +404,10 @@ TextureImporter:
       name: Terry_Walk_Sheet_10
       rect:
         serializedVersion: 2
-        x: 6503
-        y: 2429
-        width: 2158
-        height: 1230
+        x: 6142
+        y: 2048
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -426,10 +426,10 @@ TextureImporter:
       name: Terry_Walk_Sheet_11
       rect:
         serializedVersion: 2
-        x: 9574
-        y: 2427
-        width: 2185
-        height: 1221
+        x: 9213
+        y: 2048
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -448,10 +448,10 @@ TextureImporter:
       name: Terry_Walk_Sheet_12
       rect:
         serializedVersion: 2
-        x: 359
-        y: 383
-        width: 2199
-        height: 1220
+        x: 0
+        y: 0
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -470,10 +470,10 @@ TextureImporter:
       name: Terry_Walk_Sheet_13
       rect:
         serializedVersion: 2
-        x: 2556
-        y: 1485
-        width: 6
-        height: 12
+        x: 3071
+        y: 0
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -488,33 +488,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Terry_Walk_Sheet_14
-      rect:
-        serializedVersion: 2
-        x: 3430
-        y: 383
-        width: 2150
-        height: 1221
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 87119691e0afac130800000000000000
-      internalID: 3587954991616823672
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 76bc6c325ed09f648ad507bb27136af0
     internalID: 0
     vertices: []
     indices: 
@@ -530,7 +508,6 @@ TextureImporter:
       Terry_Walk_Sheet_11: 2051143720175873183
       Terry_Walk_Sheet_12: -5201565817620655687
       Terry_Walk_Sheet_13: 401091558339004325
-      Terry_Walk_Sheet_14: 3587954991616823672
       Terry_Walk_Sheet_2: -826634033399820944
       Terry_Walk_Sheet_3: 5281633651957426291
       Terry_Walk_Sheet_4: 8785722903048679475
