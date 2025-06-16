@@ -111,7 +111,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 4000
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -673,7 +673,28 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Terry_Attack_Sheet_0: 2197890575667865605
+      Terry_Attack_Sheet_1: 8170002150209953818
+      Terry_Attack_Sheet_10: -7977451499177543324
+      Terry_Attack_Sheet_11: 7739873180278550226
+      Terry_Attack_Sheet_12: 4577941044248809791
+      Terry_Attack_Sheet_13: 4462591249397221305
+      Terry_Attack_Sheet_14: -134385227930438327
+      Terry_Attack_Sheet_15: 3658962691142828770
+      Terry_Attack_Sheet_16: -1260007450633805300
+      Terry_Attack_Sheet_17: 3561285225541117850
+      Terry_Attack_Sheet_18: 9201910091414791596
+      Terry_Attack_Sheet_19: -7791958160775231954
+      Terry_Attack_Sheet_2: -30266225740671580
+      Terry_Attack_Sheet_20: 8920129010759114097
+      Terry_Attack_Sheet_3: -8832859874842515827
+      Terry_Attack_Sheet_4: -7511276070727427966
+      Terry_Attack_Sheet_5: 2650897594785648622
+      Terry_Attack_Sheet_6: 2254276938069546552
+      Terry_Attack_Sheet_7: 2834503861557084087
+      Terry_Attack_Sheet_8: -7774057690861706211
+      Terry_Attack_Sheet_9: 8006043039557439626
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

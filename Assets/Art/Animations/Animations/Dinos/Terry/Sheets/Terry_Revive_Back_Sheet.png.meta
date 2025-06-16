@@ -96,7 +96,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 4000
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -548,7 +548,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Terry_Revive_Back_Sheet_0: -7554627054291243887
+      Terry_Revive_Back_Sheet_1: -1084669611877261556
+      Terry_Revive_Back_Sheet_10: -4454242095842576447
+      Terry_Revive_Back_Sheet_11: -5076037970519240400
+      Terry_Revive_Back_Sheet_12: -7909847173104150538
+      Terry_Revive_Back_Sheet_13: -6073927655288549905
+      Terry_Revive_Back_Sheet_14: 4925966572746458105
+      Terry_Revive_Back_Sheet_15: -8217800900393703990
+      Terry_Revive_Back_Sheet_2: -5102938863774830465
+      Terry_Revive_Back_Sheet_3: -7387050709515544414
+      Terry_Revive_Back_Sheet_4: 5559127383606278777
+      Terry_Revive_Back_Sheet_5: 7013980057923857082
+      Terry_Revive_Back_Sheet_6: -4144851009706174494
+      Terry_Revive_Back_Sheet_7: -8105873811670977675
+      Terry_Revive_Back_Sheet_8: -6817184286913348341
+      Terry_Revive_Back_Sheet_9: -7482229031189552244
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

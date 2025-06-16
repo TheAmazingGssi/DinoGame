@@ -141,7 +141,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 4000
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -923,7 +923,38 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Terry_Revive_Front_Sheet_0: -4658877145819463236
+      Terry_Revive_Front_Sheet_1: -6542909894592071473
+      Terry_Revive_Front_Sheet_10: -5388999599734360356
+      Terry_Revive_Front_Sheet_11: 5926718034170557203
+      Terry_Revive_Front_Sheet_12: 529052482675343879
+      Terry_Revive_Front_Sheet_13: 7123828363638200749
+      Terry_Revive_Front_Sheet_14: 2044957499622954311
+      Terry_Revive_Front_Sheet_15: 766520453504594462
+      Terry_Revive_Front_Sheet_16: -1464767794080359659
+      Terry_Revive_Front_Sheet_17: -4582208362842577521
+      Terry_Revive_Front_Sheet_18: -4341884999825295207
+      Terry_Revive_Front_Sheet_19: 3185523870341906264
+      Terry_Revive_Front_Sheet_2: -2887032065818392020
+      Terry_Revive_Front_Sheet_20: -3198099770135603501
+      Terry_Revive_Front_Sheet_21: -2264615073475630824
+      Terry_Revive_Front_Sheet_22: -3833985638112809039
+      Terry_Revive_Front_Sheet_23: -6604802278043407517
+      Terry_Revive_Front_Sheet_24: -2222214358924283896
+      Terry_Revive_Front_Sheet_25: 910306915327522679
+      Terry_Revive_Front_Sheet_26: -7244277333988996390
+      Terry_Revive_Front_Sheet_27: 6883562362813964665
+      Terry_Revive_Front_Sheet_28: 7249124512382878441
+      Terry_Revive_Front_Sheet_29: -3644592044364589799
+      Terry_Revive_Front_Sheet_3: 1574711597119563652
+      Terry_Revive_Front_Sheet_30: 1224094947593209235
+      Terry_Revive_Front_Sheet_4: 5530773579245037042
+      Terry_Revive_Front_Sheet_5: 5980833091354957546
+      Terry_Revive_Front_Sheet_6: -6283901269709924527
+      Terry_Revive_Front_Sheet_7: -7741447721178397601
+      Terry_Revive_Front_Sheet_8: -6556670442722710440
+      Terry_Revive_Front_Sheet_9: -266495402077678844
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

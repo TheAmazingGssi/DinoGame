@@ -215,7 +215,7 @@ MonoBehaviour:
     m_ActionId: 949467a1-f0aa-4c61-8afa-46d8ec632286
     m_ActionName: 'Player/Pause[/DualShock4GamepadHID/start,/DualShock4GamepadHID1/start]'
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}

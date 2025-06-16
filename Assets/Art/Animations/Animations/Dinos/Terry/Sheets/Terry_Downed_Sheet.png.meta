@@ -138,7 +138,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 4000
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -898,7 +898,37 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Terry_Downed_Sheet_0: -6003083278576443187
+      Terry_Downed_Sheet_1: 439901421714611983
+      Terry_Downed_Sheet_10: -6771491454458085878
+      Terry_Downed_Sheet_11: -225204281042910265
+      Terry_Downed_Sheet_12: 4515245016328794890
+      Terry_Downed_Sheet_13: 920780745593780313
+      Terry_Downed_Sheet_14: -8934058664351172931
+      Terry_Downed_Sheet_15: -4034786411682105204
+      Terry_Downed_Sheet_16: 8876788619618426757
+      Terry_Downed_Sheet_17: 4104002922818199683
+      Terry_Downed_Sheet_18: -4886496666524680180
+      Terry_Downed_Sheet_19: -3124473374377343616
+      Terry_Downed_Sheet_2: 2268420339833844554
+      Terry_Downed_Sheet_20: 2379450464188121241
+      Terry_Downed_Sheet_21: -5541182894086426865
+      Terry_Downed_Sheet_22: -620977479361728682
+      Terry_Downed_Sheet_23: -3720893556586361672
+      Terry_Downed_Sheet_24: -4721169202339476789
+      Terry_Downed_Sheet_25: 6443825070023967310
+      Terry_Downed_Sheet_26: -683057515698457824
+      Terry_Downed_Sheet_27: 5019995281927311372
+      Terry_Downed_Sheet_28: -6512060167050090254
+      Terry_Downed_Sheet_29: 8890592879911394988
+      Terry_Downed_Sheet_3: 3101953641760177579
+      Terry_Downed_Sheet_4: 4307788264222586048
+      Terry_Downed_Sheet_5: 8635324738756911116
+      Terry_Downed_Sheet_6: 6756331296016958515
+      Terry_Downed_Sheet_7: 6315137482466508698
+      Terry_Downed_Sheet_8: 2827701421778096140
+      Terry_Downed_Sheet_9: 2921382812827103879
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

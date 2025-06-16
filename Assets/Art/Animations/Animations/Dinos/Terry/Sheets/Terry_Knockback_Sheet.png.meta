@@ -105,7 +105,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 4000
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -623,7 +623,26 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Terry_Knockback_Sheet_0: 863350406294451932
+      Terry_Knockback_Sheet_1: 4396028647479413563
+      Terry_Knockback_Sheet_10: -8793362342396191978
+      Terry_Knockback_Sheet_11: -1325416694044417091
+      Terry_Knockback_Sheet_12: -8058303448794080927
+      Terry_Knockback_Sheet_13: 5901948358692545508
+      Terry_Knockback_Sheet_14: 6529688982606527616
+      Terry_Knockback_Sheet_15: -451606024523405868
+      Terry_Knockback_Sheet_16: 6031528679852489976
+      Terry_Knockback_Sheet_17: -3566896304119138715
+      Terry_Knockback_Sheet_18: 3343691401986756512
+      Terry_Knockback_Sheet_2: -4851100677891574597
+      Terry_Knockback_Sheet_3: 4894456557315966797
+      Terry_Knockback_Sheet_4: -6096678840898320485
+      Terry_Knockback_Sheet_5: -8997528846603677141
+      Terry_Knockback_Sheet_6: -1290394137713243500
+      Terry_Knockback_Sheet_7: -4116707702293889217
+      Terry_Knockback_Sheet_8: -3551925464842201802
+      Terry_Knockback_Sheet_9: -2672705349191712884
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -93,7 +93,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 4000
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -523,7 +523,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Terry_Walk_Sheet_0: 6518229214183618197
+      Terry_Walk_Sheet_1: 3852306557060853802
+      Terry_Walk_Sheet_10: 7220748859201057198
+      Terry_Walk_Sheet_11: 2051143720175873183
+      Terry_Walk_Sheet_12: -5201565817620655687
+      Terry_Walk_Sheet_13: 401091558339004325
+      Terry_Walk_Sheet_14: 3587954991616823672
+      Terry_Walk_Sheet_2: -826634033399820944
+      Terry_Walk_Sheet_3: 5281633651957426291
+      Terry_Walk_Sheet_4: 8785722903048679475
+      Terry_Walk_Sheet_5: -410329155666549068
+      Terry_Walk_Sheet_6: 5638412412913657802
+      Terry_Walk_Sheet_7: -3851870870138327672
+      Terry_Walk_Sheet_8: -1378091264411926865
+      Terry_Walk_Sheet_9: -6538473146673711561
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

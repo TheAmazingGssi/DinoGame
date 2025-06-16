@@ -170,6 +170,7 @@ GameObject:
   - component: {fileID: 1404957336893529112}
   - component: {fileID: 5972571384300371615}
   - component: {fileID: 7274035603431733415}
+  - component: {fileID: 360251525065678738}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -216,7 +217,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -237,7 +238,7 @@ SpriteRenderer:
   m_SortingLayerID: -326893323
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8603369663158992956, guid: d0966c75f48209341844830aabfcfc05, type: 3}
+  m_Sprite: {fileID: -3682282989818849035, guid: dc1f75ec126c2c04cad62699fa23f2fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -263,7 +264,6 @@ MonoBehaviour:
   characterStats: {fileID: 11400000, guid: efe75148ee45c4d40b82c083fdaf37fd, type: 2}
   characterType: 0
   facingRight: 1
-  animator: {fileID: 5243410617948706567}
   spriteRenderer: {fileID: 9146728367405427678}
   playerTransform: {fileID: 11400000, guid: 937d220d66f373144b4d13a200bd8566, type: 2}
   rb: {fileID: 977289204723741613}
@@ -326,7 +326,7 @@ Animator:
   m_GameObject: {fileID: 4241924471051646355}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c40cc0523eb960e45a37447dbba24416, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8f146cb5636ebc146ad48ed1db133326, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -376,7 +376,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.17, y: 0.18}
+    oldSize: {x: 0.5315, y: 0.30516124}
     newSize: {x: 0.15, y: 0.18}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -422,7 +422,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.17, y: 0.18}
+    oldSize: {x: 0.5315, y: 0.30516124}
     newSize: {x: 0.15, y: 0.18}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -445,6 +445,36 @@ MonoBehaviour:
   playerController: {fileID: 4154660936162027529}
   animator: {fileID: 5243410617948706567}
   damageNumberPrefab: {fileID: 0}
+--- !u!114 &360251525065678738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4241924471051646355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7af2d117629d8ee4ba59c1b19aa8fb5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 5243410617948706567}
+  animationData: {fileID: 11400000, guid: ddf3d8d22bba4984486206bd1e302a5d, type: 2}
+  characterType: 0
+  onAttackStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onSpecialStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onKnockback:
+    m_PersistentCalls:
+      m_Calls: []
+  onReviveBack:
+    m_PersistentCalls:
+      m_Calls: []
+  onReviveFront:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4772631282887250927
 GameObject:
   m_ObjectHideFlags: 0

@@ -141,7 +141,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 4000
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -923,7 +923,38 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Terry_Revive_Sheet_0: -7736697765956910287
+      Terry_Revive_Sheet_1: 7738682169116614265
+      Terry_Revive_Sheet_10: -917283954035024474
+      Terry_Revive_Sheet_11: -5425489732661951851
+      Terry_Revive_Sheet_12: 3460414649028658347
+      Terry_Revive_Sheet_13: -5810919984018932800
+      Terry_Revive_Sheet_14: 3190646812684374012
+      Terry_Revive_Sheet_15: -528862631893259825
+      Terry_Revive_Sheet_16: 4009667579549724840
+      Terry_Revive_Sheet_17: 836804700934767727
+      Terry_Revive_Sheet_18: -8758400070955939893
+      Terry_Revive_Sheet_19: 8021022972981383555
+      Terry_Revive_Sheet_2: -5698473793729289995
+      Terry_Revive_Sheet_20: 373191862040591842
+      Terry_Revive_Sheet_21: -5170855880782691030
+      Terry_Revive_Sheet_22: -3082539731054621898
+      Terry_Revive_Sheet_23: 9017180749722099187
+      Terry_Revive_Sheet_24: 5714645519348934627
+      Terry_Revive_Sheet_25: -3439139084226770499
+      Terry_Revive_Sheet_26: 1440084341503320107
+      Terry_Revive_Sheet_27: 3859058162085447717
+      Terry_Revive_Sheet_28: -7811573605951079162
+      Terry_Revive_Sheet_29: -1444345845730599636
+      Terry_Revive_Sheet_3: -2226845555751315502
+      Terry_Revive_Sheet_30: 3821491308645824541
+      Terry_Revive_Sheet_4: 5758416145752915708
+      Terry_Revive_Sheet_5: 2541682909731660049
+      Terry_Revive_Sheet_6: -6408666945420098004
+      Terry_Revive_Sheet_7: 3281062854108736170
+      Terry_Revive_Sheet_8: 8838670478181801159
+      Terry_Revive_Sheet_9: -4041954263147866499
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
