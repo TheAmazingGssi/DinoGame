@@ -6,7 +6,6 @@ public class EnemyController : MonoBehaviour
     private static readonly int Speed = Animator.StringToHash("Speed");
     private const string Ground = "Ground";
 
-    [SerializeField] private bool isDead = false;
     [SerializeField] EnemyManager manager;
 
     private Rigidbody2D rb;
