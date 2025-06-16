@@ -1,3 +1,4 @@
+
 using System.Collections;
 using UnityEngine;
 
@@ -5,7 +6,8 @@ public class Therizinosaurus : CharacterBase
 {
     public override IEnumerator PerformAttack(float damage, int attackCount, System.Action<float> onAttack)
     {
-        for (int i = 0; i < attackCount; i++)
+        float attackInterval = 1f / stats.attacksPerSecond; // 3 attacks/s = 0.3333s
+        for (int i = 0; i < attackCount; i++) // 2 attacks
         {
             if (rightMeleeColliderGO != null && leftMeleeColliderGO != null)
             {
@@ -15,25 +17,24 @@ public class Therizinosaurus : CharacterBase
                 yield return new WaitForSeconds(enableDuration);
                 activeCollider.SetActive(false);
                 yield return new WaitForSeconds(disableDelay);
+                yield return new WaitForSeconds(attackInterval - enableDuration - disableDelay);
             }
-            yield return new WaitForSeconds(1f / stats.attacksPerSecond - enableDuration - disableDelay);
         }
     }
 
     public override IEnumerator PerformSpecial(System.Action<float> onSpecial)
     {
-        float clawDamage = 5f; // 4 * 5 = 20 as per GDD
-        for (int i = 0; i < 4; i++)
+        if (rightMeleeColliderGO != null && leftMeleeColliderGO != null)
         {
-            if (rightMeleeColliderGO != null && leftMeleeColliderGO != null)
+            GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
+            activeCollider.SetActive(true);
+            // 4x5 damage
+            for (int i = 0; i < 4; i++)
             {
-                GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
-                activeCollider.SetActive(true);
-                onSpecial?.Invoke(clawDamage); // Apply 5 damage per slash with knockback
-                yield return new WaitForSeconds(enableDuration / 2f); // Faster slashes
-                activeCollider.SetActive(false);
-                yield return new WaitForSeconds(disableDelay / 2f);
+                onSpecial?.Invoke(stats.specialAttackDamage / 4f); // 5 damage per hit
+                yield return new WaitForSeconds(enableDuration / 4f);
             }
+            activeCollider.SetActive(false);
         }
     }
 }

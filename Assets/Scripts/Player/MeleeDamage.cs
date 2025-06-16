@@ -32,6 +32,8 @@ public class MeleeDamage : MonoBehaviour
                 combatManager.OnDeath += (cm) => playerController.AddScore(10);
             }
 
+            //old Knockback
+            /*
             // Apply knockback or grab
             Rigidbody2D enemyRb = other.GetComponent<Rigidbody2D>();
             if (enemyRb != null)
@@ -48,6 +50,28 @@ public class MeleeDamage : MonoBehaviour
                     float knockbackForce = isSpecial ? 10f : 5f;
                     enemyRb.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
                     Debug.Log($"Applied knockback to {other.name}");
+                }
+            }*/
+            
+            //New Knockback
+            // Replace the knockback section in OnTriggerEnter2D with this:
+            KnockbackManager knockbackManager = other.GetComponent<KnockbackManager>();
+            if (knockbackManager != null)
+            {
+                if (isSpinosaurusChomp)
+                {
+                    // Use grab knockback for Spinosaurus chomp
+                    KnockbackData grabData = new KnockbackData(
+                        (playerTransform.position - other.transform.position).normalized,
+                        5f, 0.5f, playerTransform, KnockbackType.Grab
+                    );
+                    knockbackManager.ApplyKnockback(grabData);
+                }
+                else
+                {
+                    // Normal knockback
+                    float knockbackForce = KnockbackHelper.GetKnockbackForceFromDamage(damage, isSpecial);
+                    KnockbackHelper.ApplyKnockback(other.transform, playerTransform, knockbackForce);
                 }
             }
         }

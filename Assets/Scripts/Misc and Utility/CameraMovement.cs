@@ -45,6 +45,7 @@ public class CameraMovement : MonoBehaviour
         MoveToAverage();
         MoveColliders();
     }
+    
     private void MoveToAverage()
     {
         //calculate the average
@@ -60,6 +61,7 @@ public class CameraMovement : MonoBehaviour
 
         transform.position = new Vector3(cameraX, cameraY, transform.position.z);
     }
+    
     private void MoveColliders()
     {
         ColliderRight.position = new Vector2(transform.position.x + cameraHalfWidth, transform.position.y);
@@ -67,11 +69,13 @@ public class CameraMovement : MonoBehaviour
         ColliderTop.position = new Vector2(transform.position.x, transform.position.y + cameraHalfHeight);
         ColliderBot.position = new Vector2(transform.position.x, transform.position.y - cameraHalfHeight);
     }
+    
     private void UpdateHeightWidth()
     {
         cameraHalfWidth = mainCamera.orthographicSize * mainCamera.aspect;
         cameraHalfHeight = mainCamera.orthographicSize;
     }
+    
     private void ZoomToAverage()
     {
         float minX = furthestRightPoint;

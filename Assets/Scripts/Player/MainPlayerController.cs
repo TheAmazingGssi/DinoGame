@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+
 public enum CharacterType
 {
     Triceratops,
@@ -18,7 +19,6 @@ public class MainPlayerController : MonoBehaviour
     [SerializeField] private CharacterStats characterStats;
     [SerializeField] private CharacterType characterType;
     [SerializeField] private bool facingRight = true;
-    //[SerializeField] private GameOverUI gameOverUI;
     [SerializeField] private Animator animator;
     [SerializeField] private SpriteRenderer spriteRenderer;
     
@@ -51,6 +51,7 @@ public class MainPlayerController : MonoBehaviour
     private bool canBlock = true;
     private bool isBlocking = false;
     private bool isFallen = false;
+    private bool isPerformingSpecialMovement = false;
     private Vector2 moveInput;
     private Vector2 currentVelocity;
     private PlayerInputActions inputActions;
@@ -96,11 +97,11 @@ public class MainPlayerController : MonoBehaviour
 
         if (activePlayers == 1)
         {
-           // gameOverUI.ShowGameOverPopup();
+            // gameOverUI.ShowGameOverPopup();
         }
         else if (activePlayers > 1 && activePlayers == fallenPlayers)
         {
-           // gameOverUI.ShowGameOverPopup();
+            // gameOverUI.ShowGameOverPopup();
         }
     }
 
@@ -116,8 +117,8 @@ public class MainPlayerController : MonoBehaviour
             spriteRenderer = GetComponent<SpriteRenderer>();
 
         playerTransform.PlayerTransform = transform;
-        /*
         inputActions = new PlayerInputActions();
+        /*
         inputActions.Player.Move.performed += Move;
         inputActions.Player.Move.canceled += Move;
         inputActions.Player.Attack.performed += Attack;
@@ -139,7 +140,6 @@ public class MainPlayerController : MonoBehaviour
         }
 
         combatManager = GetComponent<PlayerCombatManager>();
-        //--------TEST------------
         //combatManager.Initialize(stats.health, this, animator);
         combatManager.OnDeath += (cm) => EnterFallenState();
 
@@ -201,6 +201,12 @@ public class MainPlayerController : MonoBehaviour
 
     private void HandleMovement()
     {
+        KnockbackManager knockbackManager = GetComponent<KnockbackManager>();
+        if ((knockbackManager != null && knockbackManager.IsKnockedBack) || isPerformingSpecialMovement)
+        {
+            return; // Don't apply movement input during knockback or special attacks
+        }
+        
         float effectiveMoveSpeed = isBlocking ? stats.movementSpeed * blockMoveSpeedMultiplier : stats.movementSpeed;
         Vector2 targetVelocity = moveInput.normalized * effectiveMoveSpeed;
         currentVelocity = Vector2.Lerp(currentVelocity, targetVelocity, stats.attacksPerSecond * Time.fixedDeltaTime);
@@ -256,23 +262,38 @@ public class MainPlayerController : MonoBehaviour
             lastSpecialTime = Time.time;
             characterScript.ConsumeSpecialStamina();
             
-            StartCoroutine(characterScript.PerformSpecial((dmg) =>
+            // Set special movement flag for Triceratops
+            if (characterType == CharacterType.Triceratops)
             {
-                GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
-                if (characterType == CharacterType.Parasaurolophus)
-                {
-                    rightMeleeColliderGO.GetComponent<MeleeDamage>()?.ApplyDamage(dmg, true, transform, this);
-                    leftMeleeColliderGO.GetComponent<MeleeDamage>()?.ApplyDamage(dmg, true, transform, this);
-                }
-                else
-                {
-                    MeleeDamage meleeDamage = activeCollider.GetComponent<MeleeDamage>();
-                    if (meleeDamage != null)
-                        meleeDamage.ApplyDamage(dmg, true, transform, this, characterType == CharacterType.Spinosaurus);
-                }
-            }));
+                isPerformingSpecialMovement = true;
+            }
+            
+            StartCoroutine(PerformSpecialAttackCoroutine());
+            
             Debug.Log($"Special Attack Performed: {stats.specialAttackName}, Stamina: {stats.currentStamina}");
         }
+    }
+
+    private IEnumerator PerformSpecialAttackCoroutine()
+    {
+        yield return StartCoroutine(characterScript.PerformSpecial((dmg) =>
+        {
+            GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
+            if (characterType == CharacterType.Parasaurolophus)
+            {
+                rightMeleeColliderGO.GetComponent<MeleeDamage>()?.ApplyDamage(dmg, true, transform, this);
+                leftMeleeColliderGO.GetComponent<MeleeDamage>()?.ApplyDamage(dmg, true, transform, this);
+            }
+            else
+            {
+                MeleeDamage meleeDamage = activeCollider.GetComponent<MeleeDamage>();
+                if (meleeDamage != null)
+                    meleeDamage.ApplyDamage(dmg, true, transform, this, characterType == CharacterType.Spinosaurus);
+            }
+        }));
+        
+        // Reset special movement flag
+        isPerformingSpecialMovement = false;
     }
 
     private void SpecialCanceled(InputAction.CallbackContext context)
@@ -308,7 +329,7 @@ public class MainPlayerController : MonoBehaviour
         }
     }
 
-    private MainPlayerController FindNearestFallenPlayer()//------------------------------------
+    private MainPlayerController FindNearestFallenPlayer()
     {
         MainPlayerController[] players = FindObjectsOfType<MainPlayerController>();
         MainPlayerController nearest = null;
