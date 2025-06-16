@@ -8,6 +8,7 @@ public class CharacterSelect : MonoBehaviour
     [SerializeField] float deadzone;
     [SerializeField] float inputCooldown;
     float counter = 0;
+    
     public Color Color = Color.white;
     public CharSelectMultiplayerManager Manager;
     public UnityEvent UpdateColors;

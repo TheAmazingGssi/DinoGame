@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CharacterSelectorObject: {fileID: 7950956293875615544, guid: ea85bf40655f29644870c8fcbeb48482, type: 3}
   PlayerGameObject: {fileID: 4241924471051646355, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+  MultiplayerUIControllerObject: {fileID: 4948319296853371124, guid: edb789bbeaff1d54f951e6066d643c89, type: 3}
   playerInput: {fileID: 2913691901651809283}
   PlayerColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &2913691901651809283

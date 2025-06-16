@@ -2,19 +2,18 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+public enum CharacterType
+{
+    Triceratops,
+    Spinosaurus,
+    Parasaurolophus,
+    Therizinosaurus
+}
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(PlayerCombatManager))]
 public class MainPlayerController : MonoBehaviour
 {
-    public enum CharacterType
-    {
-        Triceratops,
-        Spinosaurus,
-        Parasaurolophus,
-        Therizinosaurus
-    }
-
     [Header("Character Settings")]
     [SerializeField] private CharacterStats characterStats;
     [SerializeField] private CharacterType characterType;

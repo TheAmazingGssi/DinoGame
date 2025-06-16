@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -10,12 +11,15 @@ public class PlayerEntity : MonoBehaviour
     [Header("Prefab Refrences")]
     [SerializeField] GameObject CharacterSelectorObject;
     [SerializeField] GameObject PlayerGameObject;
+    [SerializeField] GameObject MultiplayerUIControllerObject;
     [SerializeField] PlayerInput playerInput;
 
     CharacterSelect selector;
     MainPlayerController controller;
+    MultiplayerUIController uiController;
 
     public Color PlayerColor;
+    public CharacterType CharacterType;
 
     private UnityEvent<InputAction.CallbackContext> Move = new UnityEvent<InputAction.CallbackContext>();
     private UnityEvent<InputAction.CallbackContext> Attack = new UnityEvent<InputAction.CallbackContext>();
@@ -40,10 +44,7 @@ public class PlayerEntity : MonoBehaviour
         PlayerList.Add(this);
     }
 
-    public void InvokeMove(InputAction.CallbackContext inputContext)
-    {
-        Move.Invoke(inputContext);
-    }
+    public void InvokeMove(InputAction.CallbackContext inputContext) => Move.Invoke(inputContext);
     public void InvokeAttack(InputAction.CallbackContext inputContext) => Attack.Invoke(inputContext);
     public void InvokeSpecial(InputAction.CallbackContext inputContext) => Special.Invoke(inputContext);
     public void InvokeBlock(InputAction.CallbackContext inputContext) => Block.Invoke(inputContext);
@@ -60,12 +61,21 @@ public class PlayerEntity : MonoBehaviour
 
     private void SetCharacterInformation()
     {
-        if(selector)
+        if (selector)
         {
             PlayerColor = selector.Color;
+            if (PlayerColor.Compare(Color.green))
+                CharacterType = CharacterType.Triceratops;
+            else if (PlayerColor.Compare(Color.blue))
+                CharacterType = CharacterType.Spinosaurus;
+            else if (PlayerColor.Compare(Color.red))
+                CharacterType = CharacterType.Therizinosaurus;
+            else if (PlayerColor.Compare(Color.white))
+                CharacterType = CharacterType.Parasaurolophus;
         }
     }
 
+    //Spawners
     public CharacterSelect SpawnCharacterSelector()
     {
         selector = Instantiate(CharacterSelectorObject).GetComponent<CharacterSelect>();
@@ -77,7 +87,6 @@ public class PlayerEntity : MonoBehaviour
         selector.FinalizeSelection.AddListener(SetCharacterInformation);
         return selector;
     }
-
     public MainPlayerController SpawnPlayerController(Transform transform)
     {
         controller = Instantiate(PlayerGameObject, transform.position, transform.rotation).GetComponent<MainPlayerController>();
@@ -93,5 +102,17 @@ public class PlayerEntity : MonoBehaviour
         controller.GetComponent<SpriteRenderer>().color = PlayerColor;
 
         return controller;
+    }
+    public MultiplayerUIController SpawnUIController(MultiplayerButton defaultButton)
+    {
+        if (!uiController)
+        {
+            uiController = Instantiate(MultiplayerUIControllerObject).GetComponent<MultiplayerUIController>();
+            Move.AddListener(uiController.OnNavigate);
+            Confirmation.AddListener(uiController.OnConrfimPressed);
+        }
+        uiController.SetUp(CharacterType, defaultButton);
+
+        return uiController;
     }
 }
