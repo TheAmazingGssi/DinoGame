@@ -5,7 +5,8 @@ public class Parasaurolophus : CharacterBase
 {
     public override IEnumerator PerformAttack(float damage, int attackCount, System.Action<float> onAttack)
     {
-        for (int i = 0; i < attackCount; i++)
+        float attackInterval = 1f / stats.attacksPerSecond; // 1 attack/s = 1s
+        for (int i = 0; i < attackCount; i++) // 3 attacks
         {
             if (rightMeleeColliderGO != null && leftMeleeColliderGO != null)
             {
@@ -15,8 +16,8 @@ public class Parasaurolophus : CharacterBase
                 yield return new WaitForSeconds(enableDuration);
                 activeCollider.SetActive(false);
                 yield return new WaitForSeconds(disableDelay);
+                yield return new WaitForSeconds(attackInterval - enableDuration - disableDelay);
             }
-            yield return new WaitForSeconds(1f / stats.attacksPerSecond - enableDuration - disableDelay);
         }
     }
 
@@ -24,10 +25,10 @@ public class Parasaurolophus : CharacterBase
     {
         if (rightMeleeColliderGO != null && leftMeleeColliderGO != null)
         {
-            // Use both colliders for area-of-effect roar
+            // AOE: Activate both colliders
             rightMeleeColliderGO.SetActive(true);
             leftMeleeColliderGO.SetActive(true);
-            onSpecial?.Invoke(stats.specialAttackDamage); // Apply damage with radial knockback
+            onSpecial?.Invoke(stats.specialAttackDamage); // 20 damage
             yield return new WaitForSeconds(enableDuration);
             rightMeleeColliderGO.SetActive(false);
             leftMeleeColliderGO.SetActive(false);

@@ -1,0 +1,936 @@
+fileFormatVersion: 2
+guid: 8337cdcc50772984390d7ca2829ef88b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6003083278576443187
+    second: Terry_Downed_Sheet_0
+  - first:
+      213: 439901421714611983
+    second: Terry_Downed_Sheet_1
+  - first:
+      213: 2268420339833844554
+    second: Terry_Downed_Sheet_2
+  - first:
+      213: 3101953641760177579
+    second: Terry_Downed_Sheet_3
+  - first:
+      213: 4307788264222586048
+    second: Terry_Downed_Sheet_4
+  - first:
+      213: 8635324738756911116
+    second: Terry_Downed_Sheet_5
+  - first:
+      213: 6756331296016958515
+    second: Terry_Downed_Sheet_6
+  - first:
+      213: 6315137482466508698
+    second: Terry_Downed_Sheet_7
+  - first:
+      213: 2827701421778096140
+    second: Terry_Downed_Sheet_8
+  - first:
+      213: 2921382812827103879
+    second: Terry_Downed_Sheet_9
+  - first:
+      213: -6771491454458085878
+    second: Terry_Downed_Sheet_10
+  - first:
+      213: -225204281042910265
+    second: Terry_Downed_Sheet_11
+  - first:
+      213: 4515245016328794890
+    second: Terry_Downed_Sheet_12
+  - first:
+      213: 920780745593780313
+    second: Terry_Downed_Sheet_13
+  - first:
+      213: -8934058664351172931
+    second: Terry_Downed_Sheet_14
+  - first:
+      213: -4034786411682105204
+    second: Terry_Downed_Sheet_15
+  - first:
+      213: 8876788619618426757
+    second: Terry_Downed_Sheet_16
+  - first:
+      213: 4104002922818199683
+    second: Terry_Downed_Sheet_17
+  - first:
+      213: -4886496666524680180
+    second: Terry_Downed_Sheet_18
+  - first:
+      213: -3124473374377343616
+    second: Terry_Downed_Sheet_19
+  - first:
+      213: 2379450464188121241
+    second: Terry_Downed_Sheet_20
+  - first:
+      213: -5541182894086426865
+    second: Terry_Downed_Sheet_21
+  - first:
+      213: -620977479361728682
+    second: Terry_Downed_Sheet_22
+  - first:
+      213: -3720893556586361672
+    second: Terry_Downed_Sheet_23
+  - first:
+      213: -4721169202339476789
+    second: Terry_Downed_Sheet_24
+  - first:
+      213: 6443825070023967310
+    second: Terry_Downed_Sheet_25
+  - first:
+      213: -683057515698457824
+    second: Terry_Downed_Sheet_26
+  - first:
+      213: 5019995281927311372
+    second: Terry_Downed_Sheet_27
+  - first:
+      213: -6512060167050090254
+    second: Terry_Downed_Sheet_28
+  - first:
+      213: 8890592879911394988
+    second: Terry_Downed_Sheet_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 4000
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Terry_Downed_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 6528
+        width: 2133
+        height: 1219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc02d575093c0bca0800000000000000
+      internalID: -6003083278576443187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Downed_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 3429
+        y: 6521
+        width: 2148
+        height: 1185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0f1d792308da1600800000000000000
+      internalID: 439901421714611983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Downed_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 6500
+        y: 6515
+        width: 2161
+        height: 1150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a43311dc74c0b7f10800000000000000
+      internalID: 2268420339833844554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Downed_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 9571
+        y: 6509
+        width: 2173
+        height: 1114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bad38def66a5c0b20800000000000000
+      internalID: 3101953641760177579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Downed_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 4455
+        width: 2179
+        height: 1078
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c475984a9658cb30800000000000000
+      internalID: 4307788264222586048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Downed_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 2537
+        y: 5410
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c00afb51916d6d770800000000000000
+      internalID: 8635324738756911116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Downed_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 3435
+        y: 4448
+        width: 2174
+        height: 1067
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33402f3648f43cd50800000000000000
+      internalID: 6756331296016958515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Downed_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 6513
+        y: 4442
+        width: 2167
+        height: 1055
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9fbb2ec410e3a750800000000000000
+      internalID: 6315137482466508698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Downed_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 9592
+        y: 4436
+        width: 2159
+        height: 1043
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0053f716730e3720800000000000000
+      internalID: 2827701421778096140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Downed_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 5608
+        y: 5392
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 782bd7ba036da8820800000000000000
+      internalID: 2921382812827103879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Downed_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 8679
+        y: 5374
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0ebe692664d602a0800000000000000
+      internalID: -6771491454458085878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Downed_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 11750
+        y: 5356
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c34a8a46e9efdcf0800000000000000
+      internalID: -225204281042910265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Downed_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 2383
+        width: 2149
+        height: 1031
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0371286b6f59ae30800000000000000
+      internalID: 4515245016328794890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Downed_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 2537
+        y: 3290
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 958f229a53547cc00800000000000000
+      internalID: 920780745593780313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Downed_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 3471
+        y: 2362
+        width: 2138
+        height: 1034
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db6f8dcbaf8d30480800000000000000
+      internalID: -8934058664351172931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Downed_Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 6555
+        y: 2359
+        width: 2125
+        height: 1019
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c887d13c22f8108c0800000000000000
+      internalID: -4034786411682105204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Downed_Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 9640
+        y: 2378
+        width: 2111
+        height: 982
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58f1692e730b03b70800000000000000
+      internalID: 8876788619618426757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Downed_Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 5608
+        y: 3272
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3806eb31ae854f830800000000000000
+      internalID: 4104002922818199683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Downed_Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 8679
+        y: 3254
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c008aabeb2daf2cb0800000000000000
+      internalID: -4886496666524680180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Downed_Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 11750
+        y: 3236
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 085821a2504a3a4d0800000000000000
+      internalID: -3124473374377343616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Downed_Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 368
+        width: 2096
+        height: 926
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 990429e1791850120800000000000000
+      internalID: 2379450464188121241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Downed_Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 2537
+        y: 1170
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0fe18a2483c913b0800000000000000
+      internalID: -5541182894086426865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Downed_Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 3518
+        y: 360
+        width: 2146
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65f6029c548d167f0800000000000000
+      internalID: -620977479361728682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Downed_Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 5676
+        y: 950
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bc41a0460bbc5cc0800000000000000
+      internalID: -3720893556586361672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Downed_Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 6564
+        y: 274
+        width: 2204
+        height: 869
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bca8a02df990b7eb0800000000000000
+      internalID: -4721169202339476789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Downed_Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 9635
+        y: 223
+        width: 2211
+        height: 883
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e420985a2c01d6950800000000000000
+      internalID: 6443825070023967310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Downed_Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 8791
+        y: 756
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 023f1a7feca4586f0800000000000000
+      internalID: -683057515698457824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Downed_Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 11876
+        y: 635
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c001a61ac1b9aa540800000000000000
+      internalID: 5019995281927311372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Downed_Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 5285
+        y: 342
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f8220bc7c380a5a0800000000000000
+      internalID: -6512060167050090254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Downed_Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 8270
+        y: 256
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cae5cb1be1bb16b70800000000000000
+      internalID: 8890592879911394988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Terry_Downed_Sheet_0: -6003083278576443187
+      Terry_Downed_Sheet_1: 439901421714611983
+      Terry_Downed_Sheet_10: -6771491454458085878
+      Terry_Downed_Sheet_11: -225204281042910265
+      Terry_Downed_Sheet_12: 4515245016328794890
+      Terry_Downed_Sheet_13: 920780745593780313
+      Terry_Downed_Sheet_14: -8934058664351172931
+      Terry_Downed_Sheet_15: -4034786411682105204
+      Terry_Downed_Sheet_16: 8876788619618426757
+      Terry_Downed_Sheet_17: 4104002922818199683
+      Terry_Downed_Sheet_18: -4886496666524680180
+      Terry_Downed_Sheet_19: -3124473374377343616
+      Terry_Downed_Sheet_2: 2268420339833844554
+      Terry_Downed_Sheet_20: 2379450464188121241
+      Terry_Downed_Sheet_21: -5541182894086426865
+      Terry_Downed_Sheet_22: -620977479361728682
+      Terry_Downed_Sheet_23: -3720893556586361672
+      Terry_Downed_Sheet_24: -4721169202339476789
+      Terry_Downed_Sheet_25: 6443825070023967310
+      Terry_Downed_Sheet_26: -683057515698457824
+      Terry_Downed_Sheet_27: 5019995281927311372
+      Terry_Downed_Sheet_28: -6512060167050090254
+      Terry_Downed_Sheet_29: 8890592879911394988
+      Terry_Downed_Sheet_3: 3101953641760177579
+      Terry_Downed_Sheet_4: 4307788264222586048
+      Terry_Downed_Sheet_5: 8635324738756911116
+      Terry_Downed_Sheet_6: 6756331296016958515
+      Terry_Downed_Sheet_7: 6315137482466508698
+      Terry_Downed_Sheet_8: 2827701421778096140
+      Terry_Downed_Sheet_9: 2921382812827103879
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

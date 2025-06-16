@@ -1,6 +1,6 @@
-/*using UnityEngine;
+using UnityEngine;
 
-public class PlayerCombatManager : CombatManager
+/*public class PlayerCombatManager : CombatManager
 {
     public void Initialize(float maxHealth)
     {
@@ -17,8 +17,6 @@ public class PlayerCombatManager : CombatManager
 
 
 }*/
-
-using UnityEngine;
 
 public class PlayerCombatManager : CombatManager
 {
@@ -42,6 +40,7 @@ public class PlayerCombatManager : CombatManager
     {
         if (currentHealth <= 0 || !MainPlayerController.CanBeDamaged) return;
         base.TakeDamage(damageArgs);
+        Debug.Log("Player took: " + damageArgs);
         if (damageNumberPrefab)
         {
             TextMesh damagePrefabClone = Instantiate(damageNumberPrefab, transform.position, Quaternion.identity, transform);

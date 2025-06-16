@@ -1,23 +1,24 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
 public abstract class CharacterBase : MonoBehaviour
 {
-    protected CharacterStats.CharacterData stats;
+    [SerializeField] protected CharacterStats.CharacterData stats;
     protected GameObject rightMeleeColliderGO;
     protected GameObject leftMeleeColliderGO;
     protected bool facingRight;
     protected float enableDuration;
     protected float disableDelay;
 
-    public void Initialize(CharacterStats.CharacterData characterStats, GameObject rightCollider, GameObject leftCollider, bool isFacingRight, float enableDur, float disableDel)
+    public void Initialize(CharacterStats.CharacterData characterStats, GameObject rightCollider, GameObject leftCollider, bool isFacingRight, float enable, float disable)
     {
         stats = characterStats;
         rightMeleeColliderGO = rightCollider;
         leftMeleeColliderGO = leftCollider;
         facingRight = isFacingRight;
-        enableDuration = enableDur;
-        disableDelay = disableDel;
+        enableDuration = enable;
+        disableDelay = disable;
     }
 
     public bool CanPerformSpecial()
@@ -27,9 +28,10 @@ public abstract class CharacterBase : MonoBehaviour
 
     public void ConsumeSpecialStamina()
     {
-        stats.currentStamina = Mathf.Max(0, stats.currentStamina - stats.specialAttackCost);
+        stats.currentStamina -= stats.specialAttackCost;
     }
 
-    public abstract IEnumerator PerformAttack(float damage, int attackCount, System.Action<float> onAttack);
-    public abstract IEnumerator PerformSpecial(System.Action<float> onSpecial);
+    public abstract IEnumerator PerformAttack(float damage, int attackCount, Action<float> onAttack);
+
+    public abstract IEnumerator PerformSpecial(Action<float> onSpecial);
 }

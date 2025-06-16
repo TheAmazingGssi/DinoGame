@@ -1,0 +1,702 @@
+fileFormatVersion: 2
+guid: 1c57e071c44239c4cbd126c98b367a70
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8145908946848866359
+    second: Terry_Special_Sheet_0
+  - first:
+      213: 6436085959309540966
+    second: Terry_Special_Sheet_1
+  - first:
+      213: 5508989655995233153
+    second: Terry_Special_Sheet_2
+  - first:
+      213: -989881520834683812
+    second: Terry_Special_Sheet_3
+  - first:
+      213: 6702376780555683795
+    second: Terry_Special_Sheet_4
+  - first:
+      213: -3689977282214674791
+    second: Terry_Special_Sheet_5
+  - first:
+      213: -2993298382025020223
+    second: Terry_Special_Sheet_6
+  - first:
+      213: 6765582206382280239
+    second: Terry_Special_Sheet_7
+  - first:
+      213: 8707431877765537496
+    second: Terry_Special_Sheet_8
+  - first:
+      213: 3044375800604082049
+    second: Terry_Special_Sheet_9
+  - first:
+      213: 7250283440970486903
+    second: Terry_Special_Sheet_10
+  - first:
+      213: -1857181274758339891
+    second: Terry_Special_Sheet_11
+  - first:
+      213: 3210250910881055551
+    second: Terry_Special_Sheet_12
+  - first:
+      213: 8189806418204143477
+    second: Terry_Special_Sheet_13
+  - first:
+      213: -167018650992647034
+    second: Terry_Special_Sheet_14
+  - first:
+      213: 6351410192441097552
+    second: Terry_Special_Sheet_15
+  - first:
+      213: -2117156161728164569
+    second: Terry_Special_Sheet_16
+  - first:
+      213: -7318525639447390373
+    second: Terry_Special_Sheet_17
+  - first:
+      213: 2394838963779244883
+    second: Terry_Special_Sheet_18
+  - first:
+      213: -2231706876318020729
+    second: Terry_Special_Sheet_19
+  - first:
+      213: -5989959861132363660
+    second: Terry_Special_Sheet_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 4000
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Terry_Special_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 4530
+        width: 2159
+        height: 1245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7306a9d37051c0170800000000000000
+      internalID: 8145908946848866359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Special_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 3430
+        y: 4491
+        width: 2111
+        height: 1348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66e36848412915950800000000000000
+      internalID: 6436085959309540966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Special_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 6503
+        y: 4460
+        width: 2164
+        height: 1346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 183b5ec77ecd37c40800000000000000
+      internalID: 5508989655995233153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Special_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 9578
+        y: 4478
+        width: 2244
+        height: 1264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5cdcec500c3342f0800000000000000
+      internalID: -989881520834683812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Special_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 11826
+        y: 5558
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d709d3db20a30d50800000000000000
+      internalID: 6702376780555683795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Special_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 2447
+        width: 2288
+        height: 1200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99e355056319accc0800000000000000
+      internalID: -3689977282214674791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Special_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 2665
+        y: 3371
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cca5a01bfaa576d0800000000000000
+      internalID: -2993298382025020223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Special_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 3444
+        y: 2469
+        width: 2300
+        height: 1180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2e8e1ecb2d24ed50800000000000000
+      internalID: 6765582206382280239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Special_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 6535
+        y: 2459
+        width: 2293
+        height: 1195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8de902ca82307d870800000000000000
+      internalID: 8707431877765537496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Special_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 9620
+        y: 2440
+        width: 2285
+        height: 1196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18f3dcd29abcf3a20800000000000000
+      internalID: 3044375800604082049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Special_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 5762
+        y: 3321
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77451fb306e2e9460800000000000000
+      internalID: 7250283440970486903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Special_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 8849
+        y: 3282
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc2a58a6877f936e0800000000000000
+      internalID: -1857181274758339891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Special_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 11931
+        y: 3215
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3380fed13a1d8c20800000000000000
+      internalID: 3210250910881055551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Special_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 379
+        width: 2291
+        height: 1162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57fa540cb8908a170800000000000000
+      internalID: 8189806418204143477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Special_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 6497
+        y: 443
+        width: 2333
+        height: 1096
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 684e7bcfb61aeadf0800000000000000
+      internalID: -167018650992647034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Special_Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 9564
+        y: 454
+        width: 2270
+        height: 1238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05d3f373bedb42850800000000000000
+      internalID: 6351410192441097552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Special_Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 11840
+        y: 1489
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72dc92620b95e92e0800000000000000
+      internalID: -2117156161728164569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Special_Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 3436
+        y: 386
+        width: 2304
+        height: 1075
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b575625c4bf5f6a90800000000000000
+      internalID: -7318525639447390373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Special_Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 8858
+        y: 1082
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3539352695d2c3120800000000000000
+      internalID: 2394838963779244883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Special_Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 2718
+        y: 1055
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78b844a8b626701e0800000000000000
+      internalID: -2231706876318020729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Special_Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 5774
+        y: 919
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4787b521e336fdca0800000000000000
+      internalID: -5989959861132363660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Terry_Special_Sheet_0: 8145908946848866359
+      Terry_Special_Sheet_1: 6436085959309540966
+      Terry_Special_Sheet_10: 7250283440970486903
+      Terry_Special_Sheet_11: -1857181274758339891
+      Terry_Special_Sheet_12: 3210250910881055551
+      Terry_Special_Sheet_13: 8189806418204143477
+      Terry_Special_Sheet_14: -167018650992647034
+      Terry_Special_Sheet_15: 6351410192441097552
+      Terry_Special_Sheet_16: -2117156161728164569
+      Terry_Special_Sheet_17: -7318525639447390373
+      Terry_Special_Sheet_18: 2394838963779244883
+      Terry_Special_Sheet_19: -2231706876318020729
+      Terry_Special_Sheet_2: 5508989655995233153
+      Terry_Special_Sheet_20: -5989959861132363660
+      Terry_Special_Sheet_3: -989881520834683812
+      Terry_Special_Sheet_4: 6702376780555683795
+      Terry_Special_Sheet_5: -3689977282214674791
+      Terry_Special_Sheet_6: -2993298382025020223
+      Terry_Special_Sheet_7: 6765582206382280239
+      Terry_Special_Sheet_8: 8707431877765537496
+      Terry_Special_Sheet_9: 3044375800604082049
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

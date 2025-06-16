@@ -4,6 +4,13 @@ using UnityEngine.Events;
 public struct DamageArgs
 {
     public float Damage;
+    public GameObject Source;
+
+    public DamageArgs(float damage, GameObject source = null)
+    {
+        Damage = damage;
+        Source = source;
+    }
 }
 
 //parent class tp player and enemies combat manager, handles death, health changes and damage taking

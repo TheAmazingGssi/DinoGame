@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: 146691aae39c55849b57321ab5c63a31
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7554627054291243887
+    second: Terry_Revive_Back_Sheet_0
+  - first:
+      213: -1084669611877261556
+    second: Terry_Revive_Back_Sheet_1
+  - first:
+      213: -5102938863774830465
+    second: Terry_Revive_Back_Sheet_2
+  - first:
+      213: -7387050709515544414
+    second: Terry_Revive_Back_Sheet_3
+  - first:
+      213: 5559127383606278777
+    second: Terry_Revive_Back_Sheet_4
+  - first:
+      213: 7013980057923857082
+    second: Terry_Revive_Back_Sheet_5
+  - first:
+      213: -4144851009706174494
+    second: Terry_Revive_Back_Sheet_6
+  - first:
+      213: -8105873811670977675
+    second: Terry_Revive_Back_Sheet_7
+  - first:
+      213: -6817184286913348341
+    second: Terry_Revive_Back_Sheet_8
+  - first:
+      213: -7482229031189552244
+    second: Terry_Revive_Back_Sheet_9
+  - first:
+      213: -4454242095842576447
+    second: Terry_Revive_Back_Sheet_10
+  - first:
+      213: -5076037970519240400
+    second: Terry_Revive_Back_Sheet_11
+  - first:
+      213: -7909847173104150538
+    second: Terry_Revive_Back_Sheet_12
+  - first:
+      213: -6073927655288549905
+    second: Terry_Revive_Back_Sheet_13
+  - first:
+      213: 4925966572746458105
+    second: Terry_Revive_Back_Sheet_14
+  - first:
+      213: -8217800900393703990
+    second: Terry_Revive_Back_Sheet_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 4000
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Terry_Revive_Back_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 6528
+        width: 1791
+        height: 823
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19c2a6268b2982790800000000000000
+      internalID: -7554627054291243887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Revive_Back_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 3585
+        y: 6528
+        width: 1550
+        height: 952
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0f156d1cba72f0f0800000000000000
+      internalID: -1084669611877261556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Revive_Back_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 6725
+        y: 6528
+        width: 1436
+        height: 986
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f707a22d328be29b0800000000000000
+      internalID: -5102938863774830465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Revive_Back_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 9780
+        y: 6528
+        width: 1448
+        height: 971
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a85789948ceb7990800000000000000
+      internalID: -7387050709515544414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Revive_Back_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 4480
+        width: 1428
+        height: 982
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97abff0e6ecf52d40800000000000000
+      internalID: 5559127383606278777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Revive_Back_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 3684
+        y: 4480
+        width: 1403
+        height: 993
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abaa93673b9a65160800000000000000
+      internalID: 7013980057923857082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Revive_Back_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 6747
+        y: 4480
+        width: 1412
+        height: 989
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e75b8f87f78a76c0800000000000000
+      internalID: -4144851009706174494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Revive_Back_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 9794
+        y: 4480
+        width: 1435
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 573b53d07b6228f80800000000000000
+      internalID: -8105873811670977675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Revive_Back_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 2432
+        width: 1455
+        height: 969
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0db722920f7461a0800000000000000
+      internalID: -6817184286913348341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Revive_Back_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 3652
+        y: 2432
+        width: 1435
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c83e4d3b658c92890800000000000000
+      internalID: -7482229031189552244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Revive_Back_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 6747
+        y: 2432
+        width: 1412
+        height: 989
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c736b5d96a5f22c0800000000000000
+      internalID: -4454242095842576447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Revive_Back_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 9826
+        y: 2432
+        width: 1403
+        height: 993
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0315ecc1c5a4e89b0800000000000000
+      internalID: -5076037970519240400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Revive_Back_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 384
+        width: 1428
+        height: 982
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f7df7b77e39a3290800000000000000
+      internalID: -7909847173104150538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Revive_Back_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 3638
+        y: 384
+        width: 1448
+        height: 971
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fedca138af215bba0800000000000000
+      internalID: -6073927655288549905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Revive_Back_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 6725
+        y: 384
+        width: 1436
+        height: 986
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f34000cf7c8c5440800000000000000
+      internalID: 4925966572746458105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Revive_Back_Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 9727
+        y: 384
+        width: 1550
+        height: 952
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac5e521fe9184fd80800000000000000
+      internalID: -8217800900393703990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Terry_Revive_Back_Sheet_0: -7554627054291243887
+      Terry_Revive_Back_Sheet_1: -1084669611877261556
+      Terry_Revive_Back_Sheet_10: -4454242095842576447
+      Terry_Revive_Back_Sheet_11: -5076037970519240400
+      Terry_Revive_Back_Sheet_12: -7909847173104150538
+      Terry_Revive_Back_Sheet_13: -6073927655288549905
+      Terry_Revive_Back_Sheet_14: 4925966572746458105
+      Terry_Revive_Back_Sheet_15: -8217800900393703990
+      Terry_Revive_Back_Sheet_2: -5102938863774830465
+      Terry_Revive_Back_Sheet_3: -7387050709515544414
+      Terry_Revive_Back_Sheet_4: 5559127383606278777
+      Terry_Revive_Back_Sheet_5: 7013980057923857082
+      Terry_Revive_Back_Sheet_6: -4144851009706174494
+      Terry_Revive_Back_Sheet_7: -8105873811670977675
+      Terry_Revive_Back_Sheet_8: -6817184286913348341
+      Terry_Revive_Back_Sheet_9: -7482229031189552244
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

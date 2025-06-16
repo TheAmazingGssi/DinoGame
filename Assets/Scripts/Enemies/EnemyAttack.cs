@@ -1,32 +1,29 @@
-
-using UnityEngine;
 using System.Collections;
-using UnityEngine.Events;
+using System.Collections.Generic;
+using UnityEngine;
 
 public abstract class EnemyAttack : MonoBehaviour
 {
-    private static readonly int Attack = Animator.StringToHash("Attack");
+    protected static readonly int Attack = Animator.StringToHash("Attack");
     [SerializeField] protected EnemyManager manager;
+    [SerializeField] protected float attackRange = 2f;
 
-    private Transform playerTransform;
-    private Animator animator;
-    private EnemyController movement;
-    private EnemyData enemyData;
+    protected Animator animator;
+    protected EnemyData enemyData;
+    protected bool isInCooldown = false;
 
-    private bool isInCooldown = false;
     protected abstract bool IsPlayerInRange { get; }
+    protected virtual float AttackRange => attackRange;
 
     private void Awake()
     {
-        playerTransform = manager.PlayerTransform.PlayerTransform;
-        movement = manager.EnemyController;
-        enemyData = manager.EnemyData;
         animator = manager.Animator;
+        enemyData = manager.EnemyData;
     }
 
     public void TryAttack()
     {
-        if (!isInCooldown)
+        if (!isInCooldown && HasValidTarget())
         {
             StartAttack();
             isInCooldown = true;
@@ -34,12 +31,16 @@ public abstract class EnemyAttack : MonoBehaviour
         }
     }
 
+    private bool HasValidTarget()
+    {
+        return manager.CurrentTarget != null && IsPlayerInRange;
+    }
+
     private IEnumerator CooldownRoutine()
     {
         yield return new WaitForSeconds(enemyData.Cooldown);
         isInCooldown = false;
-
-        if (IsPlayerInRange)
+        if (HasValidTarget())
         {
             TryAttack();
         }
@@ -47,21 +48,46 @@ public abstract class EnemyAttack : MonoBehaviour
 
     protected virtual void StartAttack()
     {
-        Debug.Log("Start attack");
         animator.SetTrigger(Attack);
+        ApplyDamage();
+
     }
 
     protected abstract void ApplyDamage();
 
     public virtual void OnAttackExecute()
     {
-        Debug.Log("Attack execute event");
-        ApplyDamage();
     }
 
     public virtual void OnAttackEnd()
     {
-        Debug.Log("Attack end event");
         animator.ResetTrigger(Attack);
+    }
+
+    protected bool IsTargetInRange(float range)
+    {
+        if (manager.CurrentTarget == null) return false;
+        float distance = Vector2.Distance(transform.position, manager.CurrentTarget.position);
+        return distance <= range;
+    }
+
+    protected List<PlayerCombatManager> GetPlayersInRange(float range)
+    {
+        List<PlayerCombatManager> playersInRange = new List<PlayerCombatManager>();
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, range);
+
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.CompareTag("Player"))
+            {
+                PlayerCombatManager player = collider.GetComponent<PlayerCombatManager>();
+                if (player != null)
+                {
+                    playersInRange.Add(player);
+                }
+            }
+        }
+
+        return playersInRange;
     }
 }
