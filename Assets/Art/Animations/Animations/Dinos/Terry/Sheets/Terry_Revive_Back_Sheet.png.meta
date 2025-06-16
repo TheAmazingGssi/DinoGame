@@ -187,10 +187,10 @@ TextureImporter:
       name: Terry_Revive_Back_Sheet_0
       rect:
         serializedVersion: 2
-        x: 359
-        y: 6528
-        width: 1791
-        height: 823
+        x: 0
+        y: 6144
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,10 +209,10 @@ TextureImporter:
       name: Terry_Revive_Back_Sheet_1
       rect:
         serializedVersion: 2
-        x: 3585
-        y: 6528
-        width: 1550
-        height: 952
+        x: 3071
+        y: 6144
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,10 +231,10 @@ TextureImporter:
       name: Terry_Revive_Back_Sheet_2
       rect:
         serializedVersion: 2
-        x: 6725
-        y: 6528
-        width: 1436
-        height: 986
+        x: 6142
+        y: 6144
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,10 +253,10 @@ TextureImporter:
       name: Terry_Revive_Back_Sheet_3
       rect:
         serializedVersion: 2
-        x: 9780
-        y: 6528
-        width: 1448
-        height: 971
+        x: 9213
+        y: 6144
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -275,10 +275,10 @@ TextureImporter:
       name: Terry_Revive_Back_Sheet_4
       rect:
         serializedVersion: 2
-        x: 589
-        y: 4480
-        width: 1428
-        height: 982
+        x: 0
+        y: 4096
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,10 +297,10 @@ TextureImporter:
       name: Terry_Revive_Back_Sheet_5
       rect:
         serializedVersion: 2
-        x: 3684
-        y: 4480
-        width: 1403
-        height: 993
+        x: 3071
+        y: 4096
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -319,10 +319,10 @@ TextureImporter:
       name: Terry_Revive_Back_Sheet_6
       rect:
         serializedVersion: 2
-        x: 6747
-        y: 4480
-        width: 1412
-        height: 989
+        x: 6142
+        y: 4096
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,10 +341,10 @@ TextureImporter:
       name: Terry_Revive_Back_Sheet_7
       rect:
         serializedVersion: 2
-        x: 9794
-        y: 4480
-        width: 1435
-        height: 978
+        x: 9213
+        y: 4096
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -363,10 +363,10 @@ TextureImporter:
       name: Terry_Revive_Back_Sheet_8
       rect:
         serializedVersion: 2
-        x: 560
-        y: 2432
-        width: 1455
-        height: 969
+        x: 0
+        y: 2048
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -385,10 +385,10 @@ TextureImporter:
       name: Terry_Revive_Back_Sheet_9
       rect:
         serializedVersion: 2
-        x: 3652
-        y: 2432
-        width: 1435
-        height: 978
+        x: 3071
+        y: 2048
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -407,10 +407,10 @@ TextureImporter:
       name: Terry_Revive_Back_Sheet_10
       rect:
         serializedVersion: 2
-        x: 6747
-        y: 2432
-        width: 1412
-        height: 989
+        x: 6142
+        y: 2048
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -429,10 +429,10 @@ TextureImporter:
       name: Terry_Revive_Back_Sheet_11
       rect:
         serializedVersion: 2
-        x: 9826
-        y: 2432
-        width: 1403
-        height: 993
+        x: 9213
+        y: 2048
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -451,10 +451,10 @@ TextureImporter:
       name: Terry_Revive_Back_Sheet_12
       rect:
         serializedVersion: 2
-        x: 589
-        y: 384
-        width: 1428
-        height: 982
+        x: 0
+        y: 0
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -473,10 +473,10 @@ TextureImporter:
       name: Terry_Revive_Back_Sheet_13
       rect:
         serializedVersion: 2
-        x: 3638
-        y: 384
-        width: 1448
-        height: 971
+        x: 3071
+        y: 0
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -495,10 +495,10 @@ TextureImporter:
       name: Terry_Revive_Back_Sheet_14
       rect:
         serializedVersion: 2
-        x: 6725
-        y: 384
-        width: 1436
-        height: 986
+        x: 6142
+        y: 0
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -517,10 +517,10 @@ TextureImporter:
       name: Terry_Revive_Back_Sheet_15
       rect:
         serializedVersion: 2
-        x: 9727
-        y: 384
-        width: 1550
-        height: 952
+        x: 9213
+        y: 0
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -539,7 +539,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a2ff196361510534fa22171285cd34be
     internalID: 0
     vertices: []
     indices: 

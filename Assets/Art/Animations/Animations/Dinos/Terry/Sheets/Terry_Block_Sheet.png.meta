@@ -199,10 +199,10 @@ TextureImporter:
       name: Terry_Block_Sheet_0
       rect:
         serializedVersion: 2
-        x: 359
-        y: 4480
-        width: 2133
-        height: 1219
+        x: 0
+        y: 4096
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,10 +221,10 @@ TextureImporter:
       name: Terry_Block_Sheet_1
       rect:
         serializedVersion: 2
-        x: 3424
-        y: 4480
-        width: 2242
-        height: 1174
+        x: 3071
+        y: 4096
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -243,10 +243,10 @@ TextureImporter:
       name: Terry_Block_Sheet_2
       rect:
         serializedVersion: 2
-        x: 5672
-        y: 5466
-        width: 6
-        height: 10
+        x: 6142
+        y: 4096
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,10 +265,10 @@ TextureImporter:
       name: Terry_Block_Sheet_3
       rect:
         serializedVersion: 2
-        x: 6493
-        y: 4480
-        width: 2302
-        height: 1093
+        x: 9213
+        y: 4096
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -287,10 +287,10 @@ TextureImporter:
       name: Terry_Block_Sheet_4
       rect:
         serializedVersion: 2
-        x: 9565
-        y: 4480
-        width: 2306
-        height: 990
+        x: 0
+        y: 2048
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -309,10 +309,10 @@ TextureImporter:
       name: Terry_Block_Sheet_5
       rect:
         serializedVersion: 2
-        x: 8813
-        y: 5239
-        width: 8
-        height: 10
+        x: 3071
+        y: 2048
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -331,10 +331,10 @@ TextureImporter:
       name: Terry_Block_Sheet_6
       rect:
         serializedVersion: 2
-        x: 11901
-        y: 4999
-        width: 9
-        height: 8
+        x: 6142
+        y: 2048
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -353,10 +353,10 @@ TextureImporter:
       name: Terry_Block_Sheet_7
       rect:
         serializedVersion: 2
-        x: 354
-        y: 2432
-        width: 2257
-        height: 887
+        x: 9213
+        y: 2048
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -375,10 +375,10 @@ TextureImporter:
       name: Terry_Block_Sheet_8
       rect:
         serializedVersion: 2
-        x: 3425
-        y: 2432
-        width: 2257
-        height: 887
+        x: 0
+        y: 0
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -397,10 +397,10 @@ TextureImporter:
       name: Terry_Block_Sheet_9
       rect:
         serializedVersion: 2
-        x: 6494
-        y: 2432
-        width: 2299
-        height: 964
+        x: 3071
+        y: 0
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -419,10 +419,10 @@ TextureImporter:
       name: Terry_Block_Sheet_10
       rect:
         serializedVersion: 2
-        x: 9564
-        y: 2432
-        width: 2311
-        height: 1041
+        x: 6142
+        y: 0
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -437,209 +437,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Terry_Block_Sheet_11
-      rect:
-        serializedVersion: 2
-        x: 11899
-        y: 3072
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0ca219736586fdae0800000000000000
-      internalID: -1522383429519201600
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Block_Sheet_12
-      rect:
-        serializedVersion: 2
-        x: 8825
-        y: 2890
-        width: 10
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8517b434e52ccd4d0800000000000000
-      internalID: -3108395932680752808
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Block_Sheet_13
-      rect:
-        serializedVersion: 2
-        x: 2649
-        y: 2710
-        width: 11
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 66fbaed7c107e6b50800000000000000
-      internalID: 6588326572563545958
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Block_Sheet_14
-      rect:
-        serializedVersion: 2
-        x: 5720
-        y: 2710
-        width: 11
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 050e2f5c36baa5690800000000000000
-      internalID: -7612583775105261488
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Block_Sheet_15
-      rect:
-        serializedVersion: 2
-        x: 351
-        y: 384
-        width: 2292
-        height: 1117
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 69936f6aeaf9edef0800000000000000
-      internalID: -81452170771809898
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Block_Sheet_16
-      rect:
-        serializedVersion: 2
-        x: 3424
-        y: 384
-        width: 2242
-        height: 1174
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d015f366e70ff5bc0800000000000000
-      internalID: -3792047935550697203
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Block_Sheet_17
-      rect:
-        serializedVersion: 2
-        x: 5672
-        y: 1370
-        width: 6
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d7629c93bf70c7190800000000000000
-      internalID: -7963481265510209923
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Block_Sheet_18
-      rect:
-        serializedVersion: 2
-        x: 6499
-        y: 384
-        width: 2165
-        height: 1211
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cbca4153c95c8e810800000000000000
-      internalID: 1794901726203260092
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Block_Sheet_19
-      rect:
-        serializedVersion: 2
-        x: 2658
-        y: 1201
-        width: 8
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ecce7b2bcffc95ae0800000000000000
-      internalID: -1559987111670059826
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c315f8cbe5754dd42a321ce2d95b9849
     internalID: 0
     vertices: []
     indices: 
@@ -652,15 +454,6 @@ TextureImporter:
       Terry_Block_Sheet_0: -8513479350401239319
       Terry_Block_Sheet_1: 6603393933896847668
       Terry_Block_Sheet_10: -755897846593097586
-      Terry_Block_Sheet_11: -1522383429519201600
-      Terry_Block_Sheet_12: -3108395932680752808
-      Terry_Block_Sheet_13: 6588326572563545958
-      Terry_Block_Sheet_14: -7612583775105261488
-      Terry_Block_Sheet_15: -81452170771809898
-      Terry_Block_Sheet_16: -3792047935550697203
-      Terry_Block_Sheet_17: -7963481265510209923
-      Terry_Block_Sheet_18: 1794901726203260092
-      Terry_Block_Sheet_19: -1559987111670059826
       Terry_Block_Sheet_2: -5764518527050315473
       Terry_Block_Sheet_3: -833275337424231539
       Terry_Block_Sheet_4: 534811015773779010

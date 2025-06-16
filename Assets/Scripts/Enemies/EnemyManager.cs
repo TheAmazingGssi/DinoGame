@@ -24,11 +24,20 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private float detectionRange = 10f;
     [SerializeField] private LayerMask playerLayer;
 
+    [Header("Drops")]
+    [SerializeField] private GameObject healthItem;
+    [SerializeField] private float healthItemDropChance = 0.25f;
+    [Tooltip("Put -1 for number of players")]
+    [SerializeField] private float healthDropAmount;
+
     private List<PlayerCombatManager> playersInRange = new List<PlayerCombatManager>();
     private Transform currentTarget;
     private PlayerCombatManager playerCombatManager;
     private PlayerCombatManager lastPlayerToDamage;
     private HashSet<PlayerCombatManager> playersWhoDealtDamage = new HashSet<PlayerCombatManager>();
+
+    private bool isAttacking = false;
+    private EnemyAttack currentAttack;
 
     public PlayerCombatManager PlayerCombatManager => playerCombatManager;
     public Transform CurrentTarget => currentTarget;
@@ -39,12 +48,21 @@ public class EnemyManager : MonoBehaviour
     public EnemyController EnemyController => enemyController;
     public EnemyCombatManager CombatManager => combatManager;
     public EnemyAttack[] Attacks => attacks;
+    public bool IsAttacking => isAttacking;
 
     public event UnityAction<EnemyManager> OnDeath;
 
+    private void Start()
+    {
+        if(healthDropAmount < 0)
+        {
+            healthDropAmount = PlayerEntity.PlayerList.Count;
+        }
+    }
     private void OnEnable()
     {
         combatManager.OnDeath += HandleDeath;
+        combatManager.OnTakeDamage += HandleTakeDamage;
         combatManager.Initialize(enemyData.MaxHealth);
     }
 
@@ -52,7 +70,7 @@ public class EnemyManager : MonoBehaviour
     {
         UpdatePlayerTracking();
         UpdateTargeting();
-        HandleAttackLogic();
+        HandleAttack();
     }
 
     private void UpdatePlayerTracking()
@@ -81,8 +99,10 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
-    private void HandleAttackLogic()
+    private void HandleAttack()
     {
+        if (isAttacking) return;
+
         if (attacks != null && attacks.Length > 0)
         {
             foreach (EnemyAttack attack in attacks)
@@ -92,6 +112,20 @@ public class EnemyManager : MonoBehaviour
                     attack.TryAttack();
                 }
             }
+        }
+    }
+
+    public void SetAttackState(bool attacking, EnemyAttack attack = null)
+    {
+        isAttacking = attacking;
+        currentAttack = attacking ? attack : null;
+    }
+
+    private void HandleTakeDamage(DamageArgs damageArgs)
+    {
+        if (isAttacking && currentAttack != null)
+        {
+            currentAttack.InterruptAttack();
         }
     }
 
@@ -190,6 +224,17 @@ public class EnemyManager : MonoBehaviour
         OnDeath?.Invoke(this);
         animator.SetBool(IsDead, true);
         StartCoroutine(DeSpawn());
+
+        if (Random.value < healthItemDropChance)
+        {
+            for (int i = 0; i < healthDropAmount; i++)
+            {
+                Vector2 randomOffset = Random.insideUnitCircle * 1.5f;
+                Vector3 spawnPosition = transform.position + (Vector3)randomOffset;
+                Instantiate(healthItem, spawnPosition, Quaternion.identity);
+            }
+        }
+
     }
 
     private IEnumerator DeSpawn()

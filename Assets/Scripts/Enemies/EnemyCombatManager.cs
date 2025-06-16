@@ -3,14 +3,26 @@ using UnityEngine;
 public class EnemyCombatManager : CombatManager
 {
     private static readonly int Hurt = Animator.StringToHash("Hurt");
+
     [SerializeField] private EnemyManager manager;
     [SerializeField] private TextMesh damageNumberPrefab;
+
+    [SerializeField] private bool isDead = false;
 
     public void Initialize(float maxHealth)
     {
         currentMaxHealth = maxHealth;
         currentHealth = maxHealth;
         UpdateHealthBar();
+    }
+
+    private void Update()
+    {
+        if(isDead)
+        {
+            HandleDeath();
+           // isDead = false;
+        }
     }
 
     public override void TakeDamage(DamageArgs damageArgs)

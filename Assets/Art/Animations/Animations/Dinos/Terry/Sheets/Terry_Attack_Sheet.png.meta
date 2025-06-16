@@ -202,10 +202,10 @@ TextureImporter:
       name: Terry_Attack_Sheet_0
       rect:
         serializedVersion: 2
-        x: 359
-        y: 6528
-        width: 2133
-        height: 1219
+        x: 0
+        y: 6144
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,10 +224,10 @@ TextureImporter:
       name: Terry_Attack_Sheet_1
       rect:
         serializedVersion: 2
-        x: 3425
-        y: 6528
-        width: 2236
-        height: 1193
+        x: 3071
+        y: 6144
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -246,10 +246,10 @@ TextureImporter:
       name: Terry_Attack_Sheet_2
       rect:
         serializedVersion: 2
-        x: 5665
-        y: 7548
-        width: 6
-        height: 11
+        x: 6142
+        y: 6144
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,10 +268,10 @@ TextureImporter:
       name: Terry_Attack_Sheet_3
       rect:
         serializedVersion: 2
-        x: 6494
-        y: 6528
-        width: 2300
-        height: 1138
+        x: 9213
+        y: 6144
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -290,10 +290,10 @@ TextureImporter:
       name: Terry_Attack_Sheet_4
       rect:
         serializedVersion: 2
-        x: 9565
-        y: 6528
-        width: 2322
-        height: 1058
+        x: 0
+        y: 4096
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -312,10 +312,10 @@ TextureImporter:
       name: Terry_Attack_Sheet_5
       rect:
         serializedVersion: 2
-        x: 8810
-        y: 7359
-        width: 8
-        height: 11
+        x: 3071
+        y: 4096
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -334,10 +334,10 @@ TextureImporter:
       name: Terry_Attack_Sheet_6
       rect:
         serializedVersion: 2
-        x: 11914
-        y: 7157
-        width: 9
-        height: 9
+        x: 6142
+        y: 4096
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -356,10 +356,10 @@ TextureImporter:
       name: Terry_Attack_Sheet_7
       rect:
         serializedVersion: 2
-        x: 354
-        y: 4480
-        width: 2301
-        height: 977
+        x: 9213
+        y: 4096
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -378,10 +378,10 @@ TextureImporter:
       name: Terry_Attack_Sheet_8
       rect:
         serializedVersion: 2
-        x: 3424
-        y: 4480
-        width: 2316
-        height: 1043
+        x: 0
+        y: 2048
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -400,10 +400,10 @@ TextureImporter:
       name: Terry_Attack_Sheet_9
       rect:
         serializedVersion: 2
-        x: 6494
-        y: 4480
-        width: 2292
-        height: 1107
+        x: 3071
+        y: 2048
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -422,10 +422,10 @@ TextureImporter:
       name: Terry_Attack_Sheet_10
       rect:
         serializedVersion: 2
-        x: 9565
-        y: 4480
-        width: 2229
-        height: 1147
+        x: 6142
+        y: 2048
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -444,10 +444,10 @@ TextureImporter:
       name: Terry_Attack_Sheet_11
       rect:
         serializedVersion: 2
-        x: 11799
-        y: 5446
-        width: 6
-        height: 11
+        x: 9213
+        y: 2048
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -466,10 +466,10 @@ TextureImporter:
       name: Terry_Attack_Sheet_12
       rect:
         serializedVersion: 2
-        x: 8802
-        y: 5275
-        width: 8
-        height: 11
+        x: 0
+        y: 0
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -488,10 +488,10 @@ TextureImporter:
       name: Terry_Attack_Sheet_13
       rect:
         serializedVersion: 2
-        x: 5767
-        y: 5091
-        width: 9
-        height: 9
+        x: 3071
+        y: 0
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -506,165 +506,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Terry_Attack_Sheet_14
-      rect:
-        serializedVersion: 2
-        x: 2690
-        y: 4902
-        width: 10
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9457522e851922ef0800000000000000
-      internalID: -134385227930438327
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Attack_Sheet_15
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 2432
-        width: 2133
-        height: 1159
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2e2c9fb7e2f37c230800000000000000
-      internalID: 3658962691142828770
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Attack_Sheet_16
-      rect:
-        serializedVersion: 2
-        x: 3423
-        y: 2432
-        width: 2041
-        height: 1245
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c0260a246ed838ee0800000000000000
-      internalID: -1260007450633805300
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Attack_Sheet_17
-      rect:
-        serializedVersion: 2
-        x: 6495
-        y: 2432
-        width: 2042
-        height: 1267
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a97a93c4b0a3c6130800000000000000
-      internalID: 3561285225541117850
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Attack_Sheet_18
-      rect:
-        serializedVersion: 2
-        x: 9567
-        y: 2432
-        width: 2047
-        height: 1250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ca56cdd6970c3bf70800000000000000
-      internalID: 9201910091414791596
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Attack_Sheet_19
-      rect:
-        serializedVersion: 2
-        x: 356
-        y: 384
-        width: 2081
-        height: 1229
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e26494a16576dd390800000000000000
-      internalID: -7791958160775231954
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Attack_Sheet_20
-      rect:
-        serializedVersion: 2
-        x: 3429
-        y: 384
-        width: 2121
-        height: 1214
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 17d14fc031aaacb70800000000000000
-      internalID: 8920129010759114097
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e082cffb0e35a50498f3fbafa7d6dcce
     internalID: 0
     vertices: []
     indices: 
@@ -680,14 +526,7 @@ TextureImporter:
       Terry_Attack_Sheet_11: 7739873180278550226
       Terry_Attack_Sheet_12: 4577941044248809791
       Terry_Attack_Sheet_13: 4462591249397221305
-      Terry_Attack_Sheet_14: -134385227930438327
-      Terry_Attack_Sheet_15: 3658962691142828770
-      Terry_Attack_Sheet_16: -1260007450633805300
-      Terry_Attack_Sheet_17: 3561285225541117850
-      Terry_Attack_Sheet_18: 9201910091414791596
-      Terry_Attack_Sheet_19: -7791958160775231954
       Terry_Attack_Sheet_2: -30266225740671580
-      Terry_Attack_Sheet_20: 8920129010759114097
       Terry_Attack_Sheet_3: -8832859874842515827
       Terry_Attack_Sheet_4: -7511276070727427966
       Terry_Attack_Sheet_5: 2650897594785648622

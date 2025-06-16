@@ -196,10 +196,10 @@ TextureImporter:
       name: Terry_Knockback_Sheet_0
       rect:
         serializedVersion: 2
-        x: 359
-        y: 6528
-        width: 2133
-        height: 1219
+        x: 0
+        y: 6144
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,10 +218,10 @@ TextureImporter:
       name: Terry_Knockback_Sheet_1
       rect:
         serializedVersion: 2
-        x: 3398
-        y: 6528
-        width: 2131
-        height: 1222
+        x: 3071
+        y: 6144
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,10 +240,10 @@ TextureImporter:
       name: Terry_Knockback_Sheet_2
       rect:
         serializedVersion: 2
-        x: 6438
-        y: 6528
-        width: 2127
-        height: 1220
+        x: 6142
+        y: 6144
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,10 +262,10 @@ TextureImporter:
       name: Terry_Knockback_Sheet_3
       rect:
         serializedVersion: 2
-        x: 9492
-        y: 6528
-        width: 2119
-        height: 1220
+        x: 9213
+        y: 6144
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,10 +284,10 @@ TextureImporter:
       name: Terry_Knockback_Sheet_4
       rect:
         serializedVersion: 2
-        x: 287
-        y: 4480
-        width: 2109
-        height: 1228
+        x: 0
+        y: 4096
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -306,10 +306,10 @@ TextureImporter:
       name: Terry_Knockback_Sheet_5
       rect:
         serializedVersion: 2
-        x: 3348
-        y: 4480
-        width: 2175
-        height: 1177
+        x: 3071
+        y: 4096
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,10 +328,10 @@ TextureImporter:
       name: Terry_Knockback_Sheet_6
       rect:
         serializedVersion: 2
-        x: 6414
-        y: 4480
-        width: 2219
-        height: 1120
+        x: 6142
+        y: 4096
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -350,10 +350,10 @@ TextureImporter:
       name: Terry_Knockback_Sheet_7
       rect:
         serializedVersion: 2
-        x: 8636
-        y: 5430
-        width: 6
-        height: 11
+        x: 9213
+        y: 4096
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -372,10 +372,10 @@ TextureImporter:
       name: Terry_Knockback_Sheet_8
       rect:
         serializedVersion: 2
-        x: 9490
-        y: 4480
-        width: 2233
-        height: 1086
+        x: 0
+        y: 2048
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -394,10 +394,10 @@ TextureImporter:
       name: Terry_Knockback_Sheet_9
       rect:
         serializedVersion: 2
-        x: 11730
-        y: 5354
-        width: 7
-        height: 11
+        x: 3071
+        y: 2048
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -416,10 +416,10 @@ TextureImporter:
       name: Terry_Knockback_Sheet_10
       rect:
         serializedVersion: 2
-        x: 286
-        y: 2432
-        width: 2226
-        height: 1110
+        x: 6142
+        y: 2048
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -438,10 +438,10 @@ TextureImporter:
       name: Terry_Knockback_Sheet_11
       rect:
         serializedVersion: 2
-        x: 3368
-        y: 2432
-        width: 2216
-        height: 1132
+        x: 9213
+        y: 2048
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -460,10 +460,10 @@ TextureImporter:
       name: Terry_Knockback_Sheet_12
       rect:
         serializedVersion: 2
-        x: 6451
-        y: 2432
-        width: 2202
-        height: 1154
+        x: 0
+        y: 0
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -482,10 +482,10 @@ TextureImporter:
       name: Terry_Knockback_Sheet_13
       rect:
         serializedVersion: 2
-        x: 8652
-        y: 3458
-        width: 6
-        height: 12
+        x: 3071
+        y: 0
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -500,121 +500,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Terry_Knockback_Sheet_14
-      rect:
-        serializedVersion: 2
-        x: 9536
-        y: 2432
-        width: 2186
-        height: 1175
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 08c3b0ea88d1e9a50800000000000000
-      internalID: 6529688982606527616
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Knockback_Sheet_15
-      rect:
-        serializedVersion: 2
-        x: 5586
-        y: 3408
-        width: 6
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4d52bd1a6b29bb9f0800000000000000
-      internalID: -451606024523405868
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Knockback_Sheet_16
-      rect:
-        serializedVersion: 2
-        x: 2517
-        y: 3358
-        width: 6
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8fc303fb06b44b350800000000000000
-      internalID: 6031528679852489976
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Knockback_Sheet_17
-      rect:
-        serializedVersion: 2
-        x: 337
-        y: 384
-        width: 2165
-        height: 1194
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 566335aa5b6df7ec0800000000000000
-      internalID: -3566896304119138715
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Knockback_Sheet_18
-      rect:
-        serializedVersion: 2
-        x: 3424
-        y: 384
-        width: 2142
-        height: 1213
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0afc2fd4d9d276e20800000000000000
-      internalID: 3343691401986756512
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 664e3fe6518cb294e9ea9be6a6f4b137
     internalID: 0
     vertices: []
     indices: 
@@ -630,11 +520,6 @@ TextureImporter:
       Terry_Knockback_Sheet_11: -1325416694044417091
       Terry_Knockback_Sheet_12: -8058303448794080927
       Terry_Knockback_Sheet_13: 5901948358692545508
-      Terry_Knockback_Sheet_14: 6529688982606527616
-      Terry_Knockback_Sheet_15: -451606024523405868
-      Terry_Knockback_Sheet_16: 6031528679852489976
-      Terry_Knockback_Sheet_17: -3566896304119138715
-      Terry_Knockback_Sheet_18: 3343691401986756512
       Terry_Knockback_Sheet_2: -4851100677891574597
       Terry_Knockback_Sheet_3: 4894456557315966797
       Terry_Knockback_Sheet_4: -6096678840898320485

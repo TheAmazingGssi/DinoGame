@@ -4,13 +4,16 @@ using UnityEngine;
 
 public abstract class EnemyAttack : MonoBehaviour
 {
+    protected const string PLAYER = "Player";
     protected static readonly int Attack = Animator.StringToHash("Attack");
+
     [SerializeField] protected EnemyManager manager;
     [SerializeField] protected float attackRange = 2f;
 
     protected Animator animator;
     protected EnemyData enemyData;
     protected bool isInCooldown = false;
+    private bool isCurrentlyAttacking = false;
 
     protected abstract bool IsPlayerInRange { get; }
     protected virtual float AttackRange => attackRange;
@@ -23,10 +26,12 @@ public abstract class EnemyAttack : MonoBehaviour
 
     public void TryAttack()
     {
-        if (!isInCooldown && HasValidTarget())
+        if (!isInCooldown && !manager.IsAttacking && HasValidTarget())
         {
             StartAttack();
             isInCooldown = true;
+            isCurrentlyAttacking = true;
+            manager.SetAttackState(true, this);
             StartCoroutine(CooldownRoutine());
         }
     }
@@ -50,7 +55,6 @@ public abstract class EnemyAttack : MonoBehaviour
     {
         animator.SetTrigger(Attack);
         ApplyDamage();
-
     }
 
     protected abstract void ApplyDamage();
@@ -62,6 +66,22 @@ public abstract class EnemyAttack : MonoBehaviour
     public virtual void OnAttackEnd()
     {
         animator.ResetTrigger(Attack);
+        isCurrentlyAttacking = false;
+        manager.SetAttackState(false);
+    }
+
+    public void InterruptAttack()
+    {
+        if (isCurrentlyAttacking)
+        {
+            animator.ResetTrigger(Attack);
+            animator.Play("Idle", 0, 0f);
+
+            isCurrentlyAttacking = false;
+            manager.SetAttackState(false);
+
+            Debug.Log($"Attack interrupted on {gameObject.name}");
+        }
     }
 
     protected bool IsTargetInRange(float range)
@@ -78,7 +98,7 @@ public abstract class EnemyAttack : MonoBehaviour
 
         foreach (Collider2D collider in colliders)
         {
-            if (collider.CompareTag("Player"))
+            if (collider.CompareTag(PLAYER))
             {
                 PlayerCombatManager player = collider.GetComponent<PlayerCombatManager>();
                 if (player != null)
@@ -87,7 +107,6 @@ public abstract class EnemyAttack : MonoBehaviour
                 }
             }
         }
-
         return playersInRange;
     }
 }

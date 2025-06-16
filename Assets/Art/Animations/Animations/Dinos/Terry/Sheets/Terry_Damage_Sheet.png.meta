@@ -169,10 +169,10 @@ TextureImporter:
       name: Terry_Damage_Sheet_0
       rect:
         serializedVersion: 2
-        x: 359
-        y: 4480
-        width: 2133
-        height: 1219
+        x: 0
+        y: 4096
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,10 +191,10 @@ TextureImporter:
       name: Terry_Damage_Sheet_1
       rect:
         serializedVersion: 2
-        x: 3409
-        y: 4480
-        width: 2148
-        height: 1219
+        x: 3071
+        y: 4096
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,10 +213,10 @@ TextureImporter:
       name: Terry_Damage_Sheet_2
       rect:
         serializedVersion: 2
-        x: 6469
-        y: 4480
-        width: 2167
-        height: 1212
+        x: 6142
+        y: 4096
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,10 +235,10 @@ TextureImporter:
       name: Terry_Damage_Sheet_3
       rect:
         serializedVersion: 2
-        x: 324
-        y: 2432
-        width: 2191
-        height: 1205
+        x: 0
+        y: 2048
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,10 +257,10 @@ TextureImporter:
       name: Terry_Damage_Sheet_4
       rect:
         serializedVersion: 2
-        x: 3399
-        y: 2432
-        width: 2244
-        height: 1204
+        x: 3071
+        y: 2048
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,10 +279,10 @@ TextureImporter:
       name: Terry_Damage_Sheet_5
       rect:
         serializedVersion: 2
-        x: 6478
-        y: 2432
-        width: 2214
-        height: 1216
+        x: 6142
+        y: 2048
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -301,10 +301,10 @@ TextureImporter:
       name: Terry_Damage_Sheet_6
       rect:
         serializedVersion: 2
-        x: 8694
-        y: 3490
-        width: 6
-        height: 12
+        x: 0
+        y: 0
+        width: 3071
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -319,77 +319,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Terry_Damage_Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 2519
-        y: 3463
-        width: 6
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1a149a7e8b14feee0800000000000000
-      internalID: -1229691910832438879
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Damage_Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 5652
-        y: 3405
-        width: 7
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5007e05feca236bf0800000000000000
-      internalID: -332374879132291067
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terry_Damage_Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 348
-        y: 384
-        width: 2170
-        height: 1220
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ba6edd72fbcdad290800000000000000
-      internalID: -7864731085683431765
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f728751f05992804caf8664edfa8158f
     internalID: 0
     vertices: []
     indices: 
@@ -406,9 +340,6 @@ TextureImporter:
       Terry_Damage_Sheet_4: 6757749863346831720
       Terry_Damage_Sheet_5: 1068014481443745779
       Terry_Damage_Sheet_6: 2220407725335927171
-      Terry_Damage_Sheet_7: -1229691910832438879
-      Terry_Damage_Sheet_8: -332374879132291067
-      Terry_Damage_Sheet_9: -7864731085683431765
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
