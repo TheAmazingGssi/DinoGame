@@ -1314,6 +1314,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 519420031}
     - target: {fileID: 1518447201403033970, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
+      propertyPath: 'sprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1362992929627369803, guid: 85734ccc389336c49b7d82977e532b20, type: 3}
+    - target: {fileID: 1518447201403033970, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
+      propertyPath: 'sprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2347656177477929334, guid: 85734ccc389336c49b7d82977e532b20, type: 3}
+    - target: {fileID: 1518447201403033970, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
+      propertyPath: 'sprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5065901437502830604, guid: 85734ccc389336c49b7d82977e532b20, type: 3}
+    - target: {fileID: 1518447201403033970, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
+      propertyPath: 'sprites.Array.data[3]'
+      value: 
+      objectReference: {fileID: -7882421179130351453, guid: 85734ccc389336c49b7d82977e532b20, type: 3}
+    - target: {fileID: 1518447201403033970, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
+      propertyPath: 'sprites.Array.data[4]'
+      value: 
+      objectReference: {fileID: -6088546556528700683, guid: 85734ccc389336c49b7d82977e532b20, type: 3}
+    - target: {fileID: 1518447201403033970, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
       propertyPath: randomVelocityMultiplier
       value: 1.5
       objectReference: {fileID: 0}
