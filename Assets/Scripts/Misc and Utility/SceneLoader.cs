@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public enum Scenes { CharacterSelect = 0, GameScene = 1, UITestingScene = 2 };
+public enum Scenes { MainMenu = 0, CharacterSelect = 1, Level1 = 3, CharacterSelectToUITesting = 4, EdenTestingScene = 5, UITestingScene = 6 };
 public class SceneLoader : MonoBehaviour
 {
     [SerializeField] Scenes targetScene;
