@@ -420,17 +420,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &355717259 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6735280933718164197, guid: 6e8a57f49aa5768479bfef512420f72f, type: 3}
-  m_PrefabInstance: {fileID: 14379873}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &379278962
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,11 +507,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1314322784}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &432323388 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6735280933718164197, guid: 6e8a57f49aa5768479bfef512420f72f, type: 3}
+  m_PrefabInstance: {fileID: 738232280}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!20 &519420031 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 1940305889951364521, guid: f18f60295d050934aa2ee3a62285a6c7, type: 3}
   m_PrefabInstance: {fileID: 575096511099344571}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &527095942 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6735280933718164197, guid: 6e8a57f49aa5768479bfef512420f72f, type: 3}
+  m_PrefabInstance: {fileID: 1405943950}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &545296744
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,6 +916,10 @@ PrefabInstance:
     - target: {fileID: 3634802240405202647, guid: 6e8a57f49aa5768479bfef512420f72f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: VotingSystem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3634802240405202647, guid: 6e8a57f49aa5768479bfef512420f72f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3634802240405202647, guid: 6e8a57f49aa5768479bfef512420f72f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -1298,15 +1313,15 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4979491846307602850, guid: 6e8a57f49aa5768479bfef512420f72f, type: 3}
   m_PrefabInstance: {fileID: 868979876}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1117143699 stripped
+--- !u!114 &868979879 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6735280933718164197, guid: 6e8a57f49aa5768479bfef512420f72f, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3634802240405202647, guid: 6e8a57f49aa5768479bfef512420f72f, type: 3}
   m_PrefabInstance: {fileID: 868979876}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1163229760
@@ -1835,7 +1850,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3634802240405202647, guid: 6e8a57f49aa5768479bfef512420f72f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3634802240405202647, guid: 6e8a57f49aa5768479bfef512420f72f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -1962,17 +1977,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4979491846307602850, guid: 6e8a57f49aa5768479bfef512420f72f, type: 3}
   m_PrefabInstance: {fileID: 1405943950}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1405943953 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3634802240405202647, guid: 6e8a57f49aa5768479bfef512420f72f, type: 3}
-  m_PrefabInstance: {fileID: 1405943950}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1742834470
 GameObject:
   m_ObjectHideFlags: 0
@@ -2416,17 +2420,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 2045582885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b09aaabc209a0f343bbdb605580e6902, type: 3}
+  m_Script: {fileID: 11500000, guid: e35ec91373c59bc40b8f068df0193f43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   votingPanel: {fileID: 1268119900}
   descriptionText: {fileID: 1953759080}
   timerText: {fileID: 765675160}
-  choice1Button: {fileID: 1405943953}
+  choice1Button: {fileID: 868979879}
   choice2Button: {fileID: 1923245854}
-  choice1Text: {fileID: 1117143699}
-  choice2Text: {fileID: 355717259}
-  voteDuration: 90
+  choice1Text: {fileID: 527095942}
+  choice2Text: {fileID: 432323388}
+  voteDuration: 50
 --- !u!1001 &575096511099344571
 PrefabInstance:
   m_ObjectHideFlags: 0
