@@ -1,9 +1,10 @@
+using NUnit.Framework;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
-using System.Linq;
-using System.Collections.Generic;
 
 public class VotingSystem : MonoBehaviour
 {
@@ -11,12 +12,9 @@ public class VotingSystem : MonoBehaviour
     [SerializeField] private GameObject votingPanel;
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private TextMeshProUGUI timerText;
-    [SerializeField] private MultiplayerButton choice1Button;
-    [SerializeField] private MultiplayerButton choice2Button;
-    [SerializeField] private MultiplayerButton choice3Button;
-    [SerializeField] private MultiplayerButton choice4Button;
-    [SerializeField] private TextMeshProUGUI choice1Text;
-    [SerializeField] private TextMeshProUGUI choice2Text;
+
+    [SerializeField] private MultiplayerButton[] buttons;
+    [SerializeField] private TextMeshProUGUI[] choiceTexts;
 
     [Header("Settings")]
     [SerializeField] private float voteDuration = 5f;
@@ -26,8 +24,8 @@ public class VotingSystem : MonoBehaviour
     private Vote currentVote;
 
     private float timer;
-    private int[] votes = new int[2];
-    private int voted = 0;
+    private int[] choices = new int[2];
+    private int voted;
 
     private bool isVoting = false;
 
@@ -44,12 +42,16 @@ public class VotingSystem : MonoBehaviour
         Debug.Log("starting vote");
         currentVote = vote;
 
-        votes[0] = 0;
-        votes[1] = 0;
+        choices = new int[vote.Choices.Length];
+        for (int i = 0; i < choices.Length; i++)
+        {
+            choices[i] = 0;
+        }
+
+        SetupChoiceButtons(vote.Choices);
 
         descriptionText.text = vote.VoteDescription;
-        choice1Text.text = vote.Choices[0];
-        choice2Text.text = vote.Choices[1];
+        voted = 0;
 
         timer = voteDuration;
         UpdateTimerDisplay();
@@ -73,11 +75,42 @@ public class VotingSystem : MonoBehaviour
         }
     }
 
+    private void SetupChoiceButtons(string[] choices)
+    {
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            if (buttons[i] != null)
+            {
+                buttons[i].gameObject.SetActive(false);
+                buttons[i].button.interactable = false;
+            }
+            if (choiceTexts[i] != null)
+            {
+                choiceTexts[i].text = "";
+            }
+        }
+
+        for (int i = 0; i < choices.Length && i < buttons.Length; i++)
+        {
+            if (buttons[i] != null && choiceTexts[i] != null)
+            {
+                buttons[i].gameObject.SetActive(true);
+                buttons[i].button.interactable = true;
+                choiceTexts[i].text = choices[i];
+
+                int choiceIndex = i;
+                buttons[i].button.onClick.RemoveAllListeners();
+                buttons[i].button.onClick.AddListener(() => CastVote(choiceIndex));
+            }
+        }
+
+    }
+
     public void CastVote(int choiceIndex)
     {
         if (!isVoting)
             return;
-        votes[choiceIndex]++;
+        choices[choiceIndex]++;
         voted++;
         Debug.Log("player voted: " + voted);
         Debug.Log(choiceIndex + "vote casted");
@@ -87,12 +120,12 @@ public class VotingSystem : MonoBehaviour
     {
         isVoting = false;
 
-        int maxVotes = votes.Max();
+        int maxVotes = choices.Max();
         List<int> topChoices = new List<int>();
 
-        for(int i = 0; i < votes.Length; i++)
+        for(int i = 0; i < choices.Length; i++)
         {
-            if (votes[i] > maxVotes) topChoices.Add(i);
+            if (choices[i] > maxVotes) topChoices.Add(i);
         }
 
         int winningChoice = topChoices.Count == 1 ? topChoices[0] : topChoices[UnityEngine.Random.Range(0, topChoices.Count)];
