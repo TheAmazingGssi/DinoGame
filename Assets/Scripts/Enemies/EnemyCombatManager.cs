@@ -21,7 +21,7 @@ public class EnemyCombatManager : CombatManager
         if(isDead)
         {
             HandleDeath();
-           // isDead = false;
+            isDead = false;
         }
     }
 
