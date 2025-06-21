@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 public class VotingSystem : MonoBehaviour
 {
-    [Header("UI References")]
+    [Header("References")]
     [SerializeField] private GameObject votingPanel;
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private TextMeshProUGUI timerText;
@@ -13,6 +14,9 @@ public class VotingSystem : MonoBehaviour
     [SerializeField] private MultiplayerButton[] buttons;
     [SerializeField] private TextMeshProUGUI[] buttonsTexts;
     [SerializeField] private TextMeshProUGUI[] choicesTexts;
+
+    [SerializeField] private UIControllerSpawner uiSpawner;
+
 
     [Header("Settings")]
     [SerializeField] private float voteDuration = 20f;
@@ -22,28 +26,34 @@ public class VotingSystem : MonoBehaviour
     private Vote currentVote;
 
     private float timer;
-    private int[] choices = new int[2];
+    private int[] choices;
     private int voted;
 
     private bool isVoting = false;
+    private bool isVotingDebug = false;
 
     private void Start()
     {
-        votingPanel.SetActive(false);
-
-        Vote vote = new Vote(
+        Vote vote4 = new Vote(
             "Gain local alliances for future help\r\nVS.\r\ngaining supply that will help now",
-            new string[3] { "Raid their base\r\ngain max health boost.\n<color=red>BUT</color>\nOn the next level, face more enemies\r\n",
+            new string[4] { "Raid their base\r\ngain max health boost.\n<color=red>BUT</color>\nOn the next level, face more enemies\r\n",
                 "Team up with Rival Herd:\r\nbecome stronger in the final level\n<color=red>BUT</color>\n[Terry] takes more damage in the final level",
-                "Test"},
-            new string[3] { "Raid their base",
-                "Team up with rival herd", "third option" });
-        currentVote = vote;
+                "Test", "test2"},
+            new string[4] { "Raid their base",
+                "Team up with rival herd", "third option", "fourth option" });
+                Vote vote2 = new Vote(
+            "Gain local alliances for future help\r\nVS.\r\ngaining supply that will help now",
+            new string[2] { "Raid their base\r\ngain max health boost.\n<color=red>BUT</color>\nOn the next level, face more enemies\r\n",
+                "Team up with Rival Herd:\r\nbecome stronger in the final level\n<color=red>BUT</color>\n[Terry] takes more damage in the final level"},
+            new string[2] { "Raid their base",
+                "Team up with rival herd"});
+        currentVote = vote2;
     }
 
     public void StartVote(Vote vote)
     {
         Debug.Log("starting vote");
+
         currentVote = vote;
 
         choices = new int[vote.Choices.Length];
@@ -62,12 +72,14 @@ public class VotingSystem : MonoBehaviour
         UpdateTimerDisplay();
 
         votingPanel.SetActive(true);
+
         isVoting = true;
+        isVotingDebug = true;
     }
 
     private void Update()
     {
-        if (PlayerEntity.PlayerList.Count > 1 && !isVoting) StartVote(currentVote);
+        if (Input.GetKeyDown(KeyCode.V) && !isVoting && !isVotingDebug) StartVote(currentVote);
 
         if(isVoting)
         {
@@ -87,41 +99,27 @@ public class VotingSystem : MonoBehaviour
     {
         for (int i = 0; i < choicesTexts.Length; i++)
         {
-            if (choicesTexts[i] != null) choicesTexts[i].text = "";
-        }
-        for (int i = 0; i < text.Length; i++)
-        {
-            if (choicesTexts[i] != null) choicesTexts[i].text = text[i];
+            if (i < text.Length)
+                choicesTexts[i].text = text[i];
+            else
+                choicesTexts[i].text = "";
         }
     }
     private void SetupButtons(string[] text)
     {
         for (int i = 0; i < buttons.Length; i++)
         {
-            if (buttons[i] != null)
-            {
-                buttons[i].gameObject.SetActive(false);
-                buttons[i].button.interactable = false;
-            }
-            if (buttonsTexts[i] != null) ; buttonsTexts[i].text = "";
-        }
+            bool hasText = i < text.Length;
 
-        for (int i = 0; i < text.Length && i < buttons.Length; i++)
-        {
-            if (buttons[i] != null && buttonsTexts[i] != null)
-            {
-                buttons[i].gameObject.SetActive(true);
-                buttons[i].button.interactable = true;
-                buttonsTexts[i].text = text[i];
-            }
+            buttons[i].gameObject.SetActive(hasText);
+            buttons[i].button.interactable = hasText;
+            buttonsTexts[i].text = hasText ? text[i] : "";
         }
-
     }
 
     public void CastVote(int choiceIndex)
     {
-        if (!isVoting)
-            return;
+        if (!isVoting) return;
         choices[choiceIndex]++;
         voted++;
         Debug.Log("player voted: " + voted);
@@ -137,10 +135,10 @@ public class VotingSystem : MonoBehaviour
 
         for(int i = 0; i < choices.Length; i++)
         {
-            if (choices[i] > maxVotes) topChoices.Add(i);
+            if (choices[i] >= maxVotes) topChoices.Add(i);
         }
 
-        int winningChoice = topChoices.Count == 1 ? topChoices[0] : topChoices[UnityEngine.Random.Range(0, topChoices.Count)];
+        int winningChoice = topChoices.Count == 1 ? topChoices[0] : topChoices[UnityEngine.Random.Range(0, topChoices.Count)]; //random until we add xp
 
         votingPanel.SetActive(false);
 
@@ -151,10 +149,7 @@ public class VotingSystem : MonoBehaviour
 
     private void UpdateTimerDisplay()
     {
-        if (timerText != null)
-        {
-            int seconds = Mathf.CeilToInt(timer);
-            timerText.text = $"{seconds}";
-        }
+        int seconds = Mathf.CeilToInt(timer);
+        timerText.text = $"{seconds}";
     }
 }
