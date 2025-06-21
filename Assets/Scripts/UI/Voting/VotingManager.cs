@@ -5,6 +5,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static System.Net.Mime.MediaTypeNames;
 
 public class VotingSystem : MonoBehaviour
 {
@@ -14,10 +15,11 @@ public class VotingSystem : MonoBehaviour
     [SerializeField] private TextMeshProUGUI timerText;
 
     [SerializeField] private MultiplayerButton[] buttons;
-    [SerializeField] private TextMeshProUGUI[] choiceTexts;
+    [SerializeField] private TextMeshProUGUI[] buttonsTexts;
+    [SerializeField] private TextMeshProUGUI[] choicesTexts;
 
     [Header("Settings")]
-    [SerializeField] private float voteDuration = 5f;
+    [SerializeField] private float voteDuration = 20f;
 
     public static event Action<int> OnVoteComplete;
 
@@ -33,7 +35,13 @@ public class VotingSystem : MonoBehaviour
     {
         votingPanel.SetActive(false);
 
-        Vote vote = new Vote("description", new string[2] { "Raid their base", "Team up with rival herd" });
+        Vote vote = new Vote(
+            "Gain local alliances for future help\r\nVS.\r\ngaining supply that will help now",
+            new string[3] { "Raid their base\r\ngain max health boost.\n<color=red>BUT</color>\nOn the next level, face more enemies\r\n",
+                "Team up with Rival Herd:\r\nbecome stronger in the final level\n<color=red>BUT</color>\n[Terry] takes more damage in the final level",
+                "Test"},
+            new string[3] { "Raid their base",
+                "Team up with rival herd", "third option" });
         currentVote = vote;
     }
 
@@ -48,7 +56,8 @@ public class VotingSystem : MonoBehaviour
             choices[i] = 0;
         }
 
-        SetupChoiceButtons(vote.Choices);
+        SetUpChoicesText(vote.Choices);
+        SetupButtons(vote.ButtonTexts);
 
         descriptionText.text = vote.VoteDescription;
         voted = 0;
@@ -64,9 +73,12 @@ public class VotingSystem : MonoBehaviour
     {
         if (PlayerEntity.PlayerList.Count > 1 && !isVoting) StartVote(currentVote);
 
+        if(isVoting)
+        {
+            timer -= Time.deltaTime;
+            UpdateTimerDisplay();
+        }
 
-        timer -= Time.deltaTime;
-        UpdateTimerDisplay();
 
         if (isVoting && (timer <= 0 || voted >= PlayerEntity.PlayerList.Count))
         {
@@ -75,7 +87,18 @@ public class VotingSystem : MonoBehaviour
         }
     }
 
-    private void SetupChoiceButtons(string[] choices)
+    private void SetUpChoicesText(string[] text)
+    {
+        for (int i = 0; i < choicesTexts.Length; i++)
+        {
+            if (choicesTexts[i] != null) choicesTexts[i].text = "";
+        }
+        for (int i = 0; i < text.Length; i++)
+        {
+            if (choicesTexts[i] != null) choicesTexts[i].text = text[i];
+        }
+    }
+    private void SetupButtons(string[] text)
     {
         for (int i = 0; i < buttons.Length; i++)
         {
@@ -84,23 +107,16 @@ public class VotingSystem : MonoBehaviour
                 buttons[i].gameObject.SetActive(false);
                 buttons[i].button.interactable = false;
             }
-            if (choiceTexts[i] != null)
-            {
-                choiceTexts[i].text = "";
-            }
+            if (buttonsTexts[i] != null) ; buttonsTexts[i].text = "";
         }
 
-        for (int i = 0; i < choices.Length && i < buttons.Length; i++)
+        for (int i = 0; i < text.Length && i < buttons.Length; i++)
         {
-            if (buttons[i] != null && choiceTexts[i] != null)
+            if (buttons[i] != null && buttonsTexts[i] != null)
             {
                 buttons[i].gameObject.SetActive(true);
                 buttons[i].button.interactable = true;
-                choiceTexts[i].text = choices[i];
-
-                int choiceIndex = i;
-                buttons[i].button.onClick.RemoveAllListeners();
-                buttons[i].button.onClick.AddListener(() => CastVote(choiceIndex));
+                buttonsTexts[i].text = text[i];
             }
         }
 
