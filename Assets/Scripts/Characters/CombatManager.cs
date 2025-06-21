@@ -4,6 +4,13 @@ using UnityEngine.Events;
 public struct DamageArgs
 {
     public float Damage;
+    public GameObject Source;
+
+    public DamageArgs(float damage, GameObject source = null)
+    {
+        Damage = damage;
+        Source = source;
+    }
 }
 
 //parent class tp player and enemies combat manager, handles death, health changes and damage taking
@@ -47,6 +54,14 @@ public class CombatManager : MonoBehaviour
     public void RestoreHealth(float Health)
     {
         currentHealth = Mathf.Clamp(currentHealth + Health, 0, currentMaxHealth);
+        UpdateHealthBar();
+    }
+
+    public void RestoreHealthByPercent(float percent)
+    {
+        Debug.Log($"Restoring: {percent}% health to {gameObject.name}");
+        float healthToRestore = percent * currentMaxHealth;
+        currentHealth = Mathf.Clamp(currentHealth + healthToRestore, 0, currentMaxHealth);
         UpdateHealthBar();
     }
 

@@ -1,0 +1,541 @@
+fileFormatVersion: 2
+guid: e3b0855c0b173d142884dca1dcd9cf9d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2197890575667865605
+    second: Terry_Attack_Sheet_0
+  - first:
+      213: 8170002150209953818
+    second: Terry_Attack_Sheet_1
+  - first:
+      213: -30266225740671580
+    second: Terry_Attack_Sheet_2
+  - first:
+      213: -8832859874842515827
+    second: Terry_Attack_Sheet_3
+  - first:
+      213: -7511276070727427966
+    second: Terry_Attack_Sheet_4
+  - first:
+      213: 2650897594785648622
+    second: Terry_Attack_Sheet_5
+  - first:
+      213: 2254276938069546552
+    second: Terry_Attack_Sheet_6
+  - first:
+      213: 2834503861557084087
+    second: Terry_Attack_Sheet_7
+  - first:
+      213: -7774057690861706211
+    second: Terry_Attack_Sheet_8
+  - first:
+      213: 8006043039557439626
+    second: Terry_Attack_Sheet_9
+  - first:
+      213: -7977451499177543324
+    second: Terry_Attack_Sheet_10
+  - first:
+      213: 7739873180278550226
+    second: Terry_Attack_Sheet_11
+  - first:
+      213: 4577941044248809791
+    second: Terry_Attack_Sheet_12
+  - first:
+      213: 4462591249397221305
+    second: Terry_Attack_Sheet_13
+  - first:
+      213: -134385227930438327
+    second: Terry_Attack_Sheet_14
+  - first:
+      213: 3658962691142828770
+    second: Terry_Attack_Sheet_15
+  - first:
+      213: -1260007450633805300
+    second: Terry_Attack_Sheet_16
+  - first:
+      213: 3561285225541117850
+    second: Terry_Attack_Sheet_17
+  - first:
+      213: 9201910091414791596
+    second: Terry_Attack_Sheet_18
+  - first:
+      213: -7791958160775231954
+    second: Terry_Attack_Sheet_19
+  - first:
+      213: 8920129010759114097
+    second: Terry_Attack_Sheet_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 4000
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Terry_Attack_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6144
+        width: 3071
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 508acd965d9708e10800000000000000
+      internalID: 2197890575667865605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Attack_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 3071
+        y: 6144
+        width: 3071
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1021794bada16170800000000000000
+      internalID: 8170002150209953818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Attack_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 6142
+        y: 6144
+        width: 3071
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a5190e2709749ff0800000000000000
+      internalID: -30266225740671580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Attack_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 9213
+        y: 6144
+        width: 3071
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d86e5390eb06b6580800000000000000
+      internalID: -8832859874842515827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Attack_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4096
+        width: 3071
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 288566ac53692c790800000000000000
+      internalID: -7511276070727427966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Attack_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 3071
+        y: 4096
+        width: 3071
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eefc2214151e9c420800000000000000
+      internalID: 2650897594785648622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Attack_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 6142
+        y: 4096
+        width: 3071
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8369df67eecc84f10800000000000000
+      internalID: 2254276938069546552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Attack_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 9213
+        y: 4096
+        width: 3071
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bf35968e3e265720800000000000000
+      internalID: 2834503861557084087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Attack_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 3071
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d146bc808bffc1490800000000000000
+      internalID: -7774057690861706211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Attack_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 3071
+        y: 2048
+        width: 3071
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a805f450abd2b1f60800000000000000
+      internalID: 8006043039557439626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Attack_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 6142
+        y: 2048
+        width: 3071
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4697d9ab0266a4190800000000000000
+      internalID: -7977451499177543324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Attack_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 9213
+        y: 2048
+        width: 3071
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2de631d56ad896b60800000000000000
+      internalID: 7739873180278550226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Attack_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 3071
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f319121ff1d188f30800000000000000
+      internalID: 4577941044248809791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Terry_Attack_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 3071
+        y: 0
+        width: 3071
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b78616f81f4eed30800000000000000
+      internalID: 4462591249397221305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e082cffb0e35a50498f3fbafa7d6dcce
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Terry_Attack_Sheet_0: 2197890575667865605
+      Terry_Attack_Sheet_1: 8170002150209953818
+      Terry_Attack_Sheet_10: -7977451499177543324
+      Terry_Attack_Sheet_11: 7739873180278550226
+      Terry_Attack_Sheet_12: 4577941044248809791
+      Terry_Attack_Sheet_13: 4462591249397221305
+      Terry_Attack_Sheet_2: -30266225740671580
+      Terry_Attack_Sheet_3: -8832859874842515827
+      Terry_Attack_Sheet_4: -7511276070727427966
+      Terry_Attack_Sheet_5: 2650897594785648622
+      Terry_Attack_Sheet_6: 2254276938069546552
+      Terry_Attack_Sheet_7: 2834503861557084087
+      Terry_Attack_Sheet_8: -7774057690861706211
+      Terry_Attack_Sheet_9: 8006043039557439626
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

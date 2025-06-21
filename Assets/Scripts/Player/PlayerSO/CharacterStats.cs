@@ -1,93 +1,108 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "CharacterStats", menuName = "ScriptableObjects/CharacterStats", order = 1)]
+[CreateAssetMenu(fileName = "CharacterStats", menuName = "ScriptableObjects/Character Stats", order = 1)]
 public class CharacterStats : ScriptableObject
 {
-    [Serializable]
+    [System.Serializable]
     public struct CharacterData
     {
         public string characterName;
-        public float health;
+        public float maxHealth;
         public float movementSpeed;
         public float stamina;
-        [HideInInspector] public float currentStamina; // Runtime
+        public float currentStamina;
         public float damageMin;
         public float damageMax;
-        public int attackSequenceCount;
         public float attacksPerSecond;
-        public string specialAttackName;
+        public int attackSequenceCount;
         public float specialAttackDamage;
-        [TextArea] public string specialAttackDescription;
         public float specialAttackCost;
+        public string specialAttackName;
     }
 
-    public List<CharacterData> characters = new List<CharacterData>
+    public CharacterData[] characters = new CharacterData[4];
+
+    private void OnEnable()
     {
-        new CharacterData
+        // Initialize only if characters array is empty or unconfigured
+        if (characters[0].characterName == "")
         {
-            characterName = "Triceratops (Terry)",
-            health = 100f,
-            movementSpeed = 4f,
-            stamina = 50f,
-            currentStamina = 50f,
-            damageMin = 15f,
-            damageMax = 20f,
-            attackSequenceCount = 2,
-            attacksPerSecond = 1.5f,
-            specialAttackName = "Forward Bash",
-            specialAttackDamage = 20f,
-            specialAttackDescription = "Bash forward a strong attack that knocks enemies back you bash into.",
-            specialAttackCost = 15f
-        },
-        new CharacterData
-        {
-            characterName = "Spinosaurus (Spencer)",
-            health = 100f,
-            movementSpeed = 4f,
-            stamina = 50f,
-            currentStamina = 50f,
-            damageMin = 10f,
-            damageMax = 10f,
-            attackSequenceCount = 3,
-            attacksPerSecond = 1f,
-            specialAttackName = "Chomp",
-            specialAttackDamage = 20f,
-            specialAttackDescription = "Bite an enemy from afar and grab it.",
-            specialAttackCost = 15f
-        },
-        new CharacterData
-        {
-            characterName = "Parasaurolophus (Paris)",
-            health = 100f,
-            movementSpeed = 4f,
-            stamina = 50f,
-            currentStamina = 50f,
-            damageMin = 15f,
-            damageMax = 20f,
-            attackSequenceCount = 3,
-            attacksPerSecond = 1f,
-            specialAttackName = "Roar Attack",
-            specialAttackDamage = 20f,
-            specialAttackDescription = "Roar in front of you for 20 damage, knocking back enemies hit.",
-            specialAttackCost = 15f
-        },
-        new CharacterData
-        {
-            characterName = "Therizinosaurus (Andrew)",
-            health = 100f,
-            movementSpeed = 4f,
-            stamina = 50f,
-            currentStamina = 50f,
-            damageMin = 5f,
-            damageMax = 7f,
-            attackSequenceCount = 2,
-            attacksPerSecond = 3f,
-            specialAttackName = "Claw Attack",
-            specialAttackDamage = 20f,
-            specialAttackDescription = "Slash enemies in front of you 4 times for 5 damage, knocking back enemies you hit.",
-            specialAttackCost = 15f
+            // Triceratops (Terry)
+            characters[0] = new CharacterData
+            {
+                characterName = "Terry",
+                maxHealth = 100f,
+                movementSpeed = 4f,
+                stamina = 50f,
+                currentStamina = 50f,
+                damageMin = 15f,
+                damageMax = 20f,
+                attacksPerSecond = 1.5f,
+                attackSequenceCount = 2,
+                specialAttackDamage = 20f,
+                specialAttackCost = 15f,
+                specialAttackName = "Forward Bash"
+            };
         }
-    };
+
+        if (characters[1].characterName == "")
+        {
+            // Spinosaurus (Spencer)
+            characters[1] = new CharacterData
+            {
+                characterName = "Spencer",
+                maxHealth = 100f,
+                movementSpeed = 4f,
+                stamina = 50f,
+                currentStamina = 50f,
+                damageMin = 10f,
+                damageMax = 10f,
+                attacksPerSecond = 1f,
+                attackSequenceCount = 3,
+                specialAttackDamage = 30f,
+                specialAttackCost = 15f,
+                specialAttackName = "Chomp"
+            };
+        }
+
+        if (characters[2].characterName == "")
+        {
+            // Parasaurolophus (Paris)
+            characters[2] = new CharacterData
+            {
+                characterName = "Paris",
+                maxHealth = 100f,
+                movementSpeed = 4f,
+                stamina = 50f,
+                currentStamina = 50f,
+                damageMin = 15f,
+                damageMax = 20f,
+                attacksPerSecond = 1f,
+                attackSequenceCount = 3,
+                specialAttackDamage = 20f,
+                specialAttackCost = 30f,
+                specialAttackName = "Roar"
+            };
+        }
+
+        if (characters[3].characterName == "")
+        {
+            // Therizinosaurus (Andrew)
+            characters[3] = new CharacterData
+            {
+                characterName = "Andrew",
+                maxHealth = 100f,
+                movementSpeed = 4f,
+                stamina = 50f,
+                currentStamina = 50f,
+                damageMin = 5f,
+                damageMax = 7f,
+                attacksPerSecond = 3f,
+                attackSequenceCount = 2,
+                specialAttackDamage = 20f, // Total for 4x5
+                specialAttackCost = 15f,
+                specialAttackName = "Claw Attack"
+            };
+        }
+    }
 }
