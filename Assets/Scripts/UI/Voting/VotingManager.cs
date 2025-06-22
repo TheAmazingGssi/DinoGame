@@ -53,7 +53,7 @@ public class VotingSystem : MonoBehaviour
     public void StartVote(Vote vote)
     {
         Debug.Log("starting vote");
-
+        votingPanel.SetActive(true);
         currentVote = vote;
 
         choices = new int[vote.Choices.Length];
@@ -71,8 +71,8 @@ public class VotingSystem : MonoBehaviour
         timer = voteDuration;
         UpdateTimerDisplay();
 
-        votingPanel.SetActive(true);
-
+        
+        uiSpawner.SpawnControllers();
         isVoting = true;
         isVotingDebug = true;
     }

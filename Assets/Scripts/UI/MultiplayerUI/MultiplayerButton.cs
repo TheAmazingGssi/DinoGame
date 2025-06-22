@@ -13,7 +13,7 @@ public class MultiplayerButton : MonoBehaviour
     public Button button;
     public Dictionary<CharacterType, Image> characterIndicators = new Dictionary<CharacterType, Image>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         characterIndicators.Add(CharacterType.Triceratops, terryIndicator);
         characterIndicators.Add(CharacterType.Spinosaurus, spencerIndicator);
