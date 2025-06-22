@@ -246,44 +246,11 @@
                 },
                 {
                     "name": "",
-                    "id": "05f6913d-c316-48b2-a6bb-e225f14c7960",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "Attack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "8255d333-5683-4943-a58a-ccb207ff1dce",
-                    "path": "<XRController>/{PrimaryAction}",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "XR",
-                    "action": "Attack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b3c1c7f0-bd20-4ee7-a0f1-899b24bca6d7",
-                    "path": "<Keyboard>/enter",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Attack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "c3159b7d-9f2e-4095-976c-18d8cbbc5204",
                     "path": "<HID::HID-USB>/button4",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Gamepad",
+                    "groups": ";Joystick",
                     "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -313,21 +280,10 @@
                 {
                     "name": "",
                     "id": "f655f3b1-7908-45fa-be45-c310d98cc7a1",
-                    "path": "<Joystick>/trigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Gamepad",
-                    "action": "Special",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "eabb4bb9-3d8f-46a3-9100-3c1a6c297f6c",
                     "path": "<HID::HID-USB>/trigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Joystick",
                     "action": "Special",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -349,7 +305,7 @@
                     "path": "<Gamepad>/leftShoulder",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Gamepad",
                     "action": "Block",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -371,7 +327,7 @@
                     "path": "<HID::HID-USB>/button6",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Joystick",
                     "action": "Block",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -382,7 +338,7 @@
                     "path": "<HID::HID-USB>/button5",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Joystick",
                     "action": "Block",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -404,7 +360,7 @@
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Gamepad",
                     "action": "Confirmation",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -415,7 +371,7 @@
                     "path": "<HID::HID-USB>/button3",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Joystick",
                     "action": "Confirmation",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -426,7 +382,7 @@
                     "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Gamepad",
                     "action": "Revive",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -437,7 +393,7 @@
                     "path": "<HID::HID-USB>/button2",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Joystick",
                     "action": "Revive",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -448,7 +404,7 @@
                     "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Gamepad",
                     "action": "Cancel",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -459,7 +415,7 @@
                     "path": "<HID::HID-USB>/button2",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Joystick",
                     "action": "Cancel",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -481,7 +437,7 @@
                     "path": "<HID::HID-USB>/button10",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Joystick",
                     "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
