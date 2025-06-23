@@ -43,7 +43,7 @@ public class CharSelectMultiplayerManager : MonoBehaviour
         confirmTrigger = false;
     }
 
-    private void UpdateColors()
+    private void UpdateCharacters()
     {
         for (int i = 0; i < playerList.Count; i++)
         {
@@ -60,10 +60,14 @@ public class CharSelectMultiplayerManager : MonoBehaviour
             else
             {
                 displayers[i].Text.text = notReadyMessege;
+                while (CharacterTaken(playerList[i].SelectedCharacter))
+                    playerList[i].SelectedCharacter = GetNextCharacter(playerList[i].SelectedCharacter);
                 allReady = false;
             }
         }
-        if (allReady)
+        UpdateCharacters();
+        
+        if (allReady && !confirmReadyPanel.activeSelf)
         {
             confirmReadyPanel.SetActive(true);
             allReadyTime = Time.time + allReadyBuffer;
@@ -71,6 +75,15 @@ public class CharSelectMultiplayerManager : MonoBehaviour
 
     }
     
+    private bool CharacterTaken(CharacterType character)
+    {
+        for (int i = 0;i < playerList.Count;i++)
+            if (playerList[i].SelectedCharacter == character && playerList[i].ready)
+                return true;
+
+        return false;
+    }
+
     public CharacterType GetNextCharacter(CharacterType currentCharacter)
     {
         return ChangeCharacter(currentCharacter, 1);
@@ -82,7 +95,7 @@ public class CharSelectMultiplayerManager : MonoBehaviour
 
     private CharacterType ChangeCharacter(CharacterType currentCharacter, int change)
     {
-        //Find the index of the current color
+        //Find the index of the current character
         int index = 0;
         for (int i = 0; i < characterList.Length; i++)
             if (characterList[i]  == currentCharacter)
@@ -100,7 +113,7 @@ public class CharSelectMultiplayerManager : MonoBehaviour
             //check if the color is taken by anyone else
             bool colorIsTaken = false;
             foreach (CharacterSelect player in playerList)
-                if (player.SelectedCharacter == characterList[index])
+                if (player.SelectedCharacter == characterList[index] && player.ready)
                     colorIsTaken = true;
 
             //return the color if its not taken
@@ -119,19 +132,22 @@ public class CharSelectMultiplayerManager : MonoBehaviour
         CharacterSelect characterSelector = player.SpawnCharacterSelector();
 
         playerList.Add(characterSelector);
-        characterSelector.UpdateColors.AddListener(UpdateColors);
+        characterSelector.UpdateColors.AddListener(UpdateCharacters);
         characterSelector.UpdateReady.AddListener(UpdateReady);
         characterSelector.Manager = this;
         displayers[playerList.Count-1].gameObject.SetActive(true);
 
         player.Cancel.AddListener(OnCancel);
-        if(player1)
+
+        if (player1)
+        {
             player.Confirmation.AddListener(OnConfirm);
+        }
 
 
         characterSelector.SelectedCharacter = characterList[characterList.Length - 1];
         characterSelector.SelectedCharacter = GetNextCharacter(characterSelector.SelectedCharacter);
-        UpdateColors();
+        UpdateCharacters();
     }
 
     private void OnConfirm(InputAction.CallbackContext inputContext)
