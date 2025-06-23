@@ -5,6 +5,7 @@ public class RevivePrompt : MonoBehaviour
 {
     [SerializeField] private float pressWindow = 0.5f;
     [SerializeField] private float revivePromptDuration = 4f;
+
     private MainPlayerController reviver;
     private MainPlayerController target;
     private int pressesRequired = 4;
@@ -12,30 +13,44 @@ public class RevivePrompt : MonoBehaviour
     private bool isActive = false;
     private float promptStartTime;
 
+    private AnimationController reviverAnim;
+
     private void Awake()
     {
-        if (reviver != null && reviver.GetComponent<AnimationController>() == null)
-            Debug.LogError("Reviver missing AnimationController!");
+        // Do nothing in Awake; safety check moved to StartRevive
     }
 
     public void StartRevive(MainPlayerController reviverPlayer, MainPlayerController targetPlayer)
     {
         reviver = reviverPlayer;
         target = targetPlayer;
-        isActive = true;
         promptStartTime = Time.time;
-        reviver.GetComponent<AnimationController>().TriggerReviveBack();
+        currentPresses = 0;
+        isActive = true;
+
+        reviverAnim = reviver.GetComponent<AnimationController>();
+        if (reviverAnim == null)
+        {
+            Debug.LogError("Reviver missing AnimationController!");
+            isActive = false;
+            return;
+        }
+
+        reviverAnim.TriggerRevive();
         StartCoroutine(ReviveCoroutine());
     }
 
     private void Update()
     {
-        if (isActive && Input.GetButtonDown("Revive"))
+        if (!isActive) return;
+
+        if (Input.GetButtonDown("Revive") && (Time.time - promptStartTime <= revivePromptDuration))
         {
-            if (Time.time - promptStartTime <= revivePromptDuration)
+            currentPresses++;
+
+            if (currentPresses >= pressesRequired)
             {
-                currentPresses++;
-                if (currentPresses >= pressesRequired) CompleteRevive();
+                CompleteRevive();
             }
         }
     }
@@ -43,15 +58,32 @@ public class RevivePrompt : MonoBehaviour
     private IEnumerator ReviveCoroutine()
     {
         yield return new WaitForSeconds(revivePromptDuration);
-        if (isActive && currentPresses < pressesRequired) FailRevive();
+
+        if (isActive && currentPresses < pressesRequired)
+        {
+            FailRevive();
+        }
     }
 
     private void CompleteRevive()
     {
         isActive = false;
-        target.GetComponent<PlayerCombatManager>().Revive(0.5f);
-        target.Revive();
-        reviver.AddScore(10);
+
+        // Call revive logic on target
+        if (target != null)
+        {
+            var combatManager = target.GetComponent<PlayerCombatManager>();
+            if (combatManager != null)
+                combatManager.Revive(0.5f);
+
+            target.Revived(); // Assuming this resets animations/states
+        }
+
+        if (reviver != null)
+        {
+            reviver.AddScore(10);
+        }
+
         Destroy(this);
     }
 
