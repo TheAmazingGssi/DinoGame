@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      starting menu options screen and bar_0: -4248283235608981585
+      starting menu options screen and bar_1: -3953339037435981731
+      starting menu options screen and bar_2: 3262420623433236937
+      starting menu options screen and bar_3: 6566372674834461188
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

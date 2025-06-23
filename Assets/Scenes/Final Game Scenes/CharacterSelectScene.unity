@@ -371,7 +371,7 @@ MonoBehaviour:
   - {fileID: 1392588542}
   loader: {fileID: 145182111}
   confirmReadyPanel: {fileID: 1559852712}
-  allReadyBuffer: 0.1
+  allReadyBuffer: 0.5
 --- !u!114 &145182111
 MonoBehaviour:
   m_ObjectHideFlags: 0

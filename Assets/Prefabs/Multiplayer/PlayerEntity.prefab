@@ -46,7 +46,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CharacterSelectorObject: {fileID: 7950956293875615544, guid: ea85bf40655f29644870c8fcbeb48482, type: 3}
-  PlayerGameObject: {fileID: 4241924471051646355, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+  TerryPlayerPrefab: {fileID: 8185470777453247465, guid: 027bc8aa8a5e57c47988a4ee538f569d, type: 3}
+  SpencerPlayerPrefab: {fileID: 5389464896397545568, guid: 99d1c9c7945b6ea4f84a69b1e21dc973, type: 3}
+  ParisPlayerPrefab: {fileID: 3452708923060546682, guid: 564439bdb4634ed49976fae0f7a84f8a, type: 3}
+  AndrewPlayerPrefab: {fileID: 5748327399846698724, guid: e45becf6d5bcd6b4f96a9a8a78395463, type: 3}
   MultiplayerUIControllerObject: {fileID: 4948319296853371124, guid: edb789bbeaff1d54f951e6066d643c89, type: 3}
   playerInput: {fileID: 2913691901651809283}
   CharacterType: 0

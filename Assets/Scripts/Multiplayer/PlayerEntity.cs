@@ -10,7 +10,10 @@ public class PlayerEntity : MonoBehaviour
 
     [Header("Prefab Refrences")]
     [SerializeField] GameObject CharacterSelectorObject;
-    [SerializeField] GameObject PlayerGameObject;
+    [SerializeField] GameObject TerryPlayerPrefab;
+    [SerializeField] GameObject SpencerPlayerPrefab;
+    [SerializeField] GameObject ParisPlayerPrefab;
+    [SerializeField] GameObject AndrewPlayerPrefab;
     [SerializeField] GameObject MultiplayerUIControllerObject;
     [SerializeField] PlayerInput playerInput;
 
@@ -44,14 +47,14 @@ public class PlayerEntity : MonoBehaviour
         PlayerList.Add(this);
     }
 
-    public void InvokeMove(InputAction.CallbackContext inputContext) => Move.Invoke(inputContext);
-    public void InvokeAttack(InputAction.CallbackContext inputContext) => Attack.Invoke(inputContext);
-    public void InvokeSpecial(InputAction.CallbackContext inputContext) => Special.Invoke(inputContext);
-    public void InvokeBlock(InputAction.CallbackContext inputContext) => Block.Invoke(inputContext);
-    public void InvokeRevive(InputAction.CallbackContext inputContext) => Revive.Invoke(inputContext);
-    public void InvokeConfirmation(InputAction.CallbackContext inputContext) => Confirmation.Invoke(inputContext);
-    public void InvokeCancel(InputAction.CallbackContext inputContext) => Cancel.Invoke(inputContext);
-    public void InvokePause(InputAction.CallbackContext inputContext) => Pause.Invoke(inputContext);
+    [HideInInspector] public void InvokeMove(InputAction.CallbackContext inputContext) => Move.Invoke(inputContext);
+    [HideInInspector] public void InvokeAttack(InputAction.CallbackContext inputContext) => Attack.Invoke(inputContext);
+    [HideInInspector] public void InvokeSpecial(InputAction.CallbackContext inputContext) => Special.Invoke(inputContext);
+    [HideInInspector] public void InvokeBlock(InputAction.CallbackContext inputContext) => Block.Invoke(inputContext);
+    [HideInInspector] public void InvokeRevive(InputAction.CallbackContext inputContext) => Revive.Invoke(inputContext);
+    [HideInInspector] public void InvokeConfirmation(InputAction.CallbackContext inputContext) => Confirmation.Invoke(inputContext);
+    [HideInInspector] public void InvokeCancel(InputAction.CallbackContext inputContext) => Cancel.Invoke(inputContext);
+    [HideInInspector] public void InvokePause(InputAction.CallbackContext inputContext) => Pause.Invoke(inputContext);
 
     public void DeviceDisconnected()
     {
@@ -77,7 +80,7 @@ public class PlayerEntity : MonoBehaviour
     }
     public MainPlayerController SpawnPlayerController(Transform transform)
     {
-        controller = Instantiate(PlayerGameObject, transform.position, transform.rotation).GetComponent<MainPlayerController>();
+        controller = Instantiate(PickPlayerPrefab(CharacterType), transform.position, transform.rotation).GetComponent<MainPlayerController>();
         
         //Set Events
         Move.AddListener(controller.Move);
@@ -87,6 +90,14 @@ public class PlayerEntity : MonoBehaviour
         Revive.AddListener(controller.Revive);
 
         return controller;
+    }
+    private GameObject PickPlayerPrefab(CharacterType character)
+    {
+        if (character == CharacterType.Triceratops) return TerryPlayerPrefab;
+        else if (character == CharacterType.Spinosaurus) return SpencerPlayerPrefab;
+        else if (character == CharacterType.Parasaurolophus) return ParisPlayerPrefab;
+        else if (character == CharacterType.Therizinosaurus) return AndrewPlayerPrefab;
+        else return null;
     }
     public MultiplayerUIController SpawnUIController(MultiplayerButton defaultButton)
     {
