@@ -4,12 +4,9 @@ using UnityEngine.InputSystem;
 
 public class CharacterSelect : MonoBehaviour
 {
-    public PlayerInput PlayerInput;
-    [SerializeField] float deadzone;
-    [SerializeField] float inputCooldown;
-    float counter = 0;
+    [SerializeField] UISettings settings;
     
-    public Color Color = Color.white;
+    public CharacterType SelectedCharacter = CharacterType.Triceratops;
     public CharSelectMultiplayerManager Manager;
     public UnityEvent UpdateColors;
     public UnityEvent UpdateReady;
@@ -17,44 +14,40 @@ public class CharacterSelect : MonoBehaviour
     public UnityEvent FinalizeSelection;
     
 
-    public void Update()
-    {
-        counter -= Time.deltaTime;
-    }
-
     public void OnNavigate(InputAction.CallbackContext inputContext)
     {
         //read the input
         Vector2 input = inputContext.ReadValue<Vector2>();
+        //Vector2 rawInput = input;
+        input = settings.CheckSettings(input);
+        //Debug.Log($"Raw Input: {rawInput} sanitized: {input}");
 
-        //make sure it isnt a wrong input
-        if (input.magnitude < deadzone) //no drift joystick
-            return;
-        if (Mathf.Abs(input.x) > Mathf.Abs(input.y)) //make sure its up and down not left and right
-            return;
         if (ready) //make sure we can even read up down input now
             return;
-
-        //not to swap through all the option in a single frame
-        if (counter > 0)
+        if (Mathf.Abs(input.x) >= Mathf.Abs(input.y)) //make sure its up and down not left and right. Also deals with cases where the input is (0, 0)
             return;
-        counter = inputCooldown;
 
         //now we can do stuff
         
         if (input.y < 0)
-            ChangeColor(Manager.GetNextColor(Color));
+            ChangeColor(Manager.GetNextCharacter(SelectedCharacter));
         else
-            ChangeColor(Manager.GetPreviousColor(Color));
+            ChangeColor(Manager.GetPreviousCharacter(SelectedCharacter));
     }
     public void OnXPressed(InputAction.CallbackContext inputContext)
     {
-        ready = !ready;
+        ready = true;
         UpdateReady.Invoke();
     }
-    private void ChangeColor(Color color)
+    public void OnCancel(InputAction.CallbackContext inputContext)
     {
-        Color = color;
+        ready = false;
+        UpdateReady.Invoke();
+    }
+
+    private void ChangeColor(CharacterType characterType)
+    {
+        SelectedCharacter = characterType;
         UpdateColors.Invoke();
     }
 }

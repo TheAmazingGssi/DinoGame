@@ -12,4 +12,8 @@ public class MainMenuManager : MonoBehaviour
     {
         sceneLoader.LoadScene(Scenes.CharacterSelect);
     }
+    public void MoveToMainMenu()
+    {
+        sceneLoader.LoadScene(Scenes.MainMenu);
+    }
 }

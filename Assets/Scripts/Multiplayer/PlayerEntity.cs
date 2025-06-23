@@ -18,17 +18,17 @@ public class PlayerEntity : MonoBehaviour
     MainPlayerController controller;
     MultiplayerUIController uiController;
 
-    public Color PlayerColor;
+    //public Color PlayerColor;
     public CharacterType CharacterType;
 
-    private UnityEvent<InputAction.CallbackContext> Move = new UnityEvent<InputAction.CallbackContext>();
-    private UnityEvent<InputAction.CallbackContext> Attack = new UnityEvent<InputAction.CallbackContext>();
-    private UnityEvent<InputAction.CallbackContext> Special = new UnityEvent<InputAction.CallbackContext>();
-    private UnityEvent<InputAction.CallbackContext> Block = new UnityEvent<InputAction.CallbackContext>();
-    private UnityEvent<InputAction.CallbackContext> Revive = new UnityEvent<InputAction.CallbackContext>();
-    private UnityEvent<InputAction.CallbackContext> Confirmation = new UnityEvent<InputAction.CallbackContext>();
-    private UnityEvent<InputAction.CallbackContext> Cancel = new UnityEvent<InputAction.CallbackContext>();
-    private UnityEvent<InputAction.CallbackContext> Pause = new UnityEvent<InputAction.CallbackContext>();
+    public UnityEvent<InputAction.CallbackContext> Move = new UnityEvent<InputAction.CallbackContext>();
+    public UnityEvent<InputAction.CallbackContext> Attack = new UnityEvent<InputAction.CallbackContext>();
+    public UnityEvent<InputAction.CallbackContext> Special = new UnityEvent<InputAction.CallbackContext>();
+    public UnityEvent<InputAction.CallbackContext> Block = new UnityEvent<InputAction.CallbackContext>();
+    public UnityEvent<InputAction.CallbackContext> Revive = new UnityEvent<InputAction.CallbackContext>();
+    public UnityEvent<InputAction.CallbackContext> Confirmation = new UnityEvent<InputAction.CallbackContext>();
+    public UnityEvent<InputAction.CallbackContext> Cancel = new UnityEvent<InputAction.CallbackContext>();
+    public UnityEvent<InputAction.CallbackContext> Pause = new UnityEvent<InputAction.CallbackContext>();
 
     public Transform GetCharactersTransform { get
         {
@@ -38,7 +38,7 @@ public class PlayerEntity : MonoBehaviour
                 return null;
         } }
 
-    private void Start()
+    private void Awake()
     {
         DontDestroyOnLoad(gameObject);
         PlayerList.Add(this);
@@ -61,29 +61,17 @@ public class PlayerEntity : MonoBehaviour
 
     private void SetCharacterInformation()
     {
-        if (selector)
-        {
-            PlayerColor = selector.Color;
-            if (PlayerColor.Compare(Color.green))
-                CharacterType = CharacterType.Triceratops;
-            else if (PlayerColor.Compare(Color.blue))
-                CharacterType = CharacterType.Spinosaurus;
-            else if (PlayerColor.Compare(Color.red))
-                CharacterType = CharacterType.Therizinosaurus;
-            else if (PlayerColor.Compare(Color.white))
-                CharacterType = CharacterType.Parasaurolophus;
-        }
+        CharacterType = selector.SelectedCharacter;
     }
 
     //Spawners
     public CharacterSelect SpawnCharacterSelector()
     {
         selector = Instantiate(CharacterSelectorObject).GetComponent<CharacterSelect>();
-        //Set script refrences
-        selector.PlayerInput = playerInput;
         //Set Events
         Move.AddListener(selector.OnNavigate);
         Confirmation.AddListener(selector.OnXPressed);
+        Cancel.AddListener(selector.OnCancel);
         selector.FinalizeSelection.AddListener(SetCharacterInformation);
         return selector;
     }
@@ -97,9 +85,6 @@ public class PlayerEntity : MonoBehaviour
         Block.AddListener(controller.Block);
         Special.AddListener(controller.SpecialStarted);
         Revive.AddListener(controller.Revive);
-
-        //Set Player
-        controller.GetComponent<SpriteRenderer>().color = PlayerColor;
 
         return controller;
     }
