@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5424292840108789370
+--- !u!1001 &8076482522464609779
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8,10 +8,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 360251525065678738, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 252944523820865917}
     - target: {fileID: 2242870450885965078, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -54,19 +50,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4241924471051646355, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_Name
-      value: Terry
+      value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5243410617948706567, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 04de92597f0e3cf40acf9e3389413082, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
---- !u!95 &252944523820865917 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5243410617948706567, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
-  m_PrefabInstance: {fileID: 5424292840108789370}
-  m_PrefabAsset: {fileID: 0}
