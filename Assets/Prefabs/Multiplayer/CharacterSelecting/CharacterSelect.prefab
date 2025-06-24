@@ -44,9 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07740d9f3c20e584c8262fe4ea7114a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInput: {fileID: 0}
-  deadzone: 0.5
-  inputCooldown: 0.2
+  settings: {fileID: 11400000, guid: 90ce66f6453997d428dbacd08f9b428f, type: 2}
   Color: {r: 1, g: 1, b: 1, a: 1}
   Manager: {fileID: 0}
   UpdateColors:
@@ -56,3 +54,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   ready: 0
+  FinalizeSelection:
+    m_PersistentCalls:
+      m_Calls: []

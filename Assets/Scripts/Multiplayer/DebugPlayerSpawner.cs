@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 public class DebugPlayerSpawner : MonoBehaviour
 {
     [SerializeField] PlayerSpawner multiplayerManager;
-    [SerializeField] Color[] playerColors;
+    [SerializeField] CharacterType[] playerCharacters;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,7 +28,7 @@ public class DebugPlayerSpawner : MonoBehaviour
 
         PlayerEntity entity = playerInput.GetComponent<PlayerEntity>();
         Debug.Log(PlayerEntity.PlayerList.Count);
-        entity.PlayerColor = playerColors[PlayerEntity.PlayerList.Count - 1];
+        entity.CharacterType = playerCharacters[PlayerEntity.PlayerList.Count - 1];
         entity.SpawnPlayerController(multiplayerManager.playerSpawns[PlayerEntity.PlayerList.Count - 1].transform);
     }
 }

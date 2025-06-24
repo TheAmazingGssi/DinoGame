@@ -395,6 +395,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1742834471}
     m_Modifications:
+    - target: {fileID: 972846066524486411, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 997144781045121965, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
       propertyPath: m_Name
       value: Meteor (2)
@@ -495,6 +499,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 2958219883644597989, guid: 85734ccc389336c49b7d82977e532b20, type: 3}
+    - target: {fileID: 6967464387840599467, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8404672718650450622, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -1038,6 +1046,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1742834471}
     m_Modifications:
+    - target: {fileID: 972846066524486411, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 997144781045121965, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
       propertyPath: m_Name
       value: Meteor (1)
@@ -1336,6 +1348,26 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 1518447201403033970, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
+      propertyPath: 'sprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1362992929627369803, guid: 85734ccc389336c49b7d82977e532b20, type: 3}
+    - target: {fileID: 1518447201403033970, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
+      propertyPath: 'sprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2347656177477929334, guid: 85734ccc389336c49b7d82977e532b20, type: 3}
+    - target: {fileID: 1518447201403033970, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
+      propertyPath: 'sprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5065901437502830604, guid: 85734ccc389336c49b7d82977e532b20, type: 3}
+    - target: {fileID: 1518447201403033970, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
+      propertyPath: 'sprites.Array.data[3]'
+      value: 
+      objectReference: {fileID: -7882421179130351453, guid: 85734ccc389336c49b7d82977e532b20, type: 3}
+    - target: {fileID: 1518447201403033970, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
+      propertyPath: 'sprites.Array.data[4]'
+      value: 
+      objectReference: {fileID: -6088546556528700683, guid: 85734ccc389336c49b7d82977e532b20, type: 3}
     - target: {fileID: 1518447201403033970, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
       propertyPath: randomVelocityMultiplier
       value: 1.5
