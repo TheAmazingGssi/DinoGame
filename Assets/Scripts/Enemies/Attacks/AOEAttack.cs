@@ -8,23 +8,11 @@ public class EnemyAOEAttack : EnemyAttack
     protected override float AttackRange => aoeRange;
     protected override bool IsPlayerInRange => GetPlayersInRange(AttackRange).Count > 0;
 
-    protected override void StartAttack()
-    {
-        List<PlayerCombatManager> playersInRange = GetPlayersInRange(AttackRange);
-        Debug.Log($"AOE Attack targeting {playersInRange.Count} players");
-        animator.SetTrigger(Attack);
-        ApplyDamage();
-    }
-
     protected override void ApplyDamage()
     {
         List<PlayerCombatManager> playersInRange = GetPlayersInRange(AttackRange);
 
-        DamageArgs damageArgs = new DamageArgs
-        {
-            Damage = enemyData.BaseDamage,
-            Source = gameObject
-        };
+        DamageArgs damageArgs = new DamageArgs{Damage = enemyData.BaseDamage, Source = gameObject};
 
         foreach (PlayerCombatManager player in playersInRange)
         {
