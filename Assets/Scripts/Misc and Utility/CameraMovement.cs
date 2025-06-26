@@ -40,10 +40,10 @@ public class CameraMovement : MonoBehaviour
         if (PlayerEntity.PlayerList.Count == 0)
             return;
 
-        ZoomToAverage(); 
-        UpdateHeightWidth();
-        MoveToAverage();
-        MoveColliders();
+        //ZoomToAverage();
+        //UpdateHeightWidth();
+        //MoveToAverage();
+        //MoveColliders();
     }
     
     private void MoveToAverage()
