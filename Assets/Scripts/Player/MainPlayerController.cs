@@ -20,7 +20,7 @@ public class MainPlayerController : MonoBehaviour
     [SerializeField] private CharacterType characterType;
     [SerializeField] private bool facingRight = true;
     [SerializeField] private SpriteRenderer spriteRenderer;
-    
+
     [Header("Required Components")]
     [SerializeField] private PlayerTransformData playerTransform;
     [SerializeField] private Rigidbody2D rb;
@@ -37,7 +37,6 @@ public class MainPlayerController : MonoBehaviour
 
     [Header("Revive Variables")]
     [SerializeField] private float reviveRange = 2f;
-    [SerializeField] private float revivePromptDuration = 4f;
 
     [Header("Stamina Settings")]
     [SerializeField] private float staminaRegenRate = 10f;
@@ -55,10 +54,11 @@ public class MainPlayerController : MonoBehaviour
     private Vector2 currentVelocity;
     private CharacterStats.CharacterData stats;
     private CharacterBase characterScript;
+    private AnimationController animController;
     private PlayerCombatManager combatManager;
-    private int score;
     private static int activePlayers = 0;
     private static int fallenPlayers = 0;
+    private int score;
 
     public static bool CanBeDamaged = true;
 
@@ -71,14 +71,14 @@ public class MainPlayerController : MonoBehaviour
         Debug.Log($"Score updated: {score}");
     }
 
-    public void Revive()
+    public void Revived()
     {
         isFallen = false;
         canAttack = true;
         canSpecial = true;
         canBlock = true;
         fallenPlayers--;
-        GetComponent<AnimationController>().SetRevived(true);
+        animController.SetRevived(true);
         StartCoroutine(ResetRevive());
         Debug.Log($"{stats.characterName} revived");
     }
@@ -90,7 +90,7 @@ public class MainPlayerController : MonoBehaviour
         canSpecial = false;
         canBlock = false;
         rb.linearVelocity = Vector2.zero;
-        GetComponent<AnimationController>().TriggerDowned();
+        animController.SetDowned(true);
         AddScore(-15);
         fallenPlayers++;
         Debug.Log($"{stats.characterName} has fallen, score: {score}");
@@ -99,19 +99,23 @@ public class MainPlayerController : MonoBehaviour
     private IEnumerator ResetRevive()
     {
         yield return new WaitForSeconds(0.1f);
-        GetComponent<AnimationController>().SetRevived(false);
+        animController.SetRevived(false);
+        animController.SetDowned(false); // Optional: reset downed after revive
     }
 
     private void Awake()
     {
         if (rb == null) rb = GetComponent<Rigidbody2D>();
-        
         rb.gravityScale = 0f;
         rb.freezeRotation = true;
 
         if (spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
+        if (playerTransform != null)
+            playerTransform.PlayerTransform = transform;
 
-        playerTransform.PlayerTransform = transform;
+        animController = GetComponent<AnimationController>();
+        combatManager = GetComponent<PlayerCombatManager>();
+        combatManager.OnDeath += (_) => EnterFallenState();
 
         if (characterStats != null)
         {
@@ -121,9 +125,6 @@ public class MainPlayerController : MonoBehaviour
         }
         else Debug.LogError("CharacterStats not assigned in Inspector!");
 
-        combatManager = GetComponent<PlayerCombatManager>();
-        combatManager.OnDeath += (cm) => EnterFallenState();
-
         switch (characterType)
         {
             case CharacterType.Triceratops: characterScript = gameObject.AddComponent<Triceratops>(); break;
@@ -131,9 +132,10 @@ public class MainPlayerController : MonoBehaviour
             case CharacterType.Parasaurolophus: characterScript = gameObject.AddComponent<Parasaurolophus>(); break;
             case CharacterType.Therizinosaurus: characterScript = gameObject.AddComponent<Therizinosaurus>(); break;
         }
-        characterScript.Initialize(stats, rightMeleeColliderGO, leftMeleeColliderGO, facingRight, enableDuration, disableDelay);
 
-        SetupAnimationController();
+        characterScript.Initialize(stats, rightMeleeColliderGO, leftMeleeColliderGO, facingRight, enableDuration, disableDelay);
+        animController.characterType = characterType;
+
         activePlayers++;
     }
 
@@ -145,6 +147,7 @@ public class MainPlayerController : MonoBehaviour
         if (!isFallen)
         {
             stats.currentStamina = Mathf.Min(stats.stamina, stats.currentStamina + staminaRegenRate * Time.deltaTime);
+            animController.SetMoveSpeed(moveInput.magnitude);
         }
     }
 
@@ -155,14 +158,18 @@ public class MainPlayerController : MonoBehaviour
 
     private void HandleMovement()
     {
-        KnockbackManager knockbackManager = GetComponent<KnockbackManager>();
+        var knockbackManager = GetComponent<KnockbackManager>();
         if ((knockbackManager != null && knockbackManager.IsKnockedBack) || isPerformingSpecialMovement) return;
-        
-        float effectiveMoveSpeed = isBlocking ? stats.movementSpeed * blockMoveSpeedMultiplier : stats.movementSpeed;
-        Vector2 targetVelocity = moveInput.normalized * effectiveMoveSpeed;
-        currentVelocity = Vector2.Lerp(currentVelocity, targetVelocity, stats.attacksPerSecond * Time.fixedDeltaTime);
+
+        float effectiveSpeed = isBlocking
+            ? stats.movementSpeed * blockMoveSpeedMultiplier
+            : stats.movementSpeed;
+
+        Vector2 desiredVelocity = moveInput.normalized * effectiveSpeed;
+        currentVelocity = desiredVelocity; // ✅ Instantly apply new velocity
         rb.linearVelocity = currentVelocity;
 
+        // Update facing direction
         if (Mathf.Abs(moveInput.x) > 0.01f)
         {
             bool shouldFaceRight = moveInput.x > 0;
@@ -172,15 +179,19 @@ public class MainPlayerController : MonoBehaviour
                 spriteRenderer.flipX = !facingRight;
             }
         }
+
+        // ✅ Adjust animation speed slightly while moving
+        if (animController != null)
+        {
+            float isMoving = moveInput.magnitude;
+            animController.SetMoveSpeed(isMoving);
+            animController.SetAnimationSpeed(isMoving > 0.05f ? 1.15f : 1f);
+        }
     }
 
-    private void SetupAnimationController()
-    {
-        AnimationController animController = GetComponent<AnimationController>();
-        animController.characterType = characterType;
-    }
 
-    // Event handlers for PlayerEntity events
+
+    // Input System methods
     public void Move(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
@@ -192,21 +203,28 @@ public class MainPlayerController : MonoBehaviour
         {
             canAttack = false;
             lastAttackTime = Time.time;
+
             float damage = characterType == CharacterType.Spinosaurus ? stats.damageMin : Random.Range(stats.damageMin, stats.damageMax);
-            GetComponent<AnimationController>().TriggerAttack();
+            animController.TriggerAttack();
+
             StartCoroutine(characterScript.PerformAttack(damage, stats.attackSequenceCount, (dmg) =>
             {
                 GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
-                MeleeDamage meleeDamage = activeCollider.GetComponent<MeleeDamage>();
-                if (meleeDamage != null) meleeDamage.ApplyDamage(dmg, false, transform, this);
+                var meleeDamage = activeCollider.GetComponent<MeleeDamage>();
+                meleeDamage?.ApplyDamage(dmg, false, transform, this);
             }));
+
             StartCoroutine(ResetAttackCooldown());
         }
     }
 
     public void SpecialStarted(InputAction.CallbackContext context)
     {
-        if (!isFallen) GetComponent<AnimationController>().TriggerSpecial();
+        if (!isFallen)
+        {
+            animController.TriggerSpecial();
+            StartCoroutine(PerformSpecialAttackCoroutine());
+        }
     }
 
     public void Block(InputAction.CallbackContext context)
@@ -215,7 +233,7 @@ public class MainPlayerController : MonoBehaviour
         {
             canBlock = false;
             lastBlockTime = Time.time;
-            GetComponent<AnimationController>().SetBlocking(true);
+            animController.SetBlocking(true);
             StartCoroutine(BlockDamageWindow());
         }
     }
@@ -227,13 +245,14 @@ public class MainPlayerController : MonoBehaviour
             MainPlayerController target = FindNearestFallenPlayer();
             if (target != null)
             {
-                GetComponent<AnimationController>().TriggerReviveFront();
-                RevivePrompt prompt = gameObject.AddComponent<RevivePrompt>();
+                animController.TriggerRevive();
+                var prompt = gameObject.AddComponent<RevivePrompt>();
                 prompt.StartRevive(this, target);
             }
         }
     }
 
+    // Coroutines
     private IEnumerator ResetAttackCooldown()
     {
         yield return new WaitForSeconds(1f / stats.attacksPerSecond * stats.attackSequenceCount);
@@ -242,7 +261,7 @@ public class MainPlayerController : MonoBehaviour
 
     private IEnumerator PerformSpecialAttackCoroutine()
     {
-        yield return StartCoroutine(characterScript.PerformSpecial((dmg) =>
+        yield return characterScript.PerformSpecial((dmg) =>
         {
             if (characterType == CharacterType.Parasaurolophus)
             {
@@ -252,11 +271,11 @@ public class MainPlayerController : MonoBehaviour
             else
             {
                 GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
-                MeleeDamage meleeDamage = activeCollider.GetComponent<MeleeDamage>();
-                if (meleeDamage != null) meleeDamage.ApplyDamage(dmg, true, transform, this, characterType == CharacterType.Spinosaurus);
+                var melee = activeCollider.GetComponent<MeleeDamage>();
+                melee?.ApplyDamage(dmg, true, transform, this, characterType == CharacterType.Spinosaurus);
             }
-        }));
-        
+        });
+
         isPerformingSpecialMovement = false;
         yield return new WaitForSeconds(stats.specialAttackCost / 15f);
         canSpecial = true;
@@ -266,13 +285,17 @@ public class MainPlayerController : MonoBehaviour
     {
         isBlocking = true;
         CanBeDamaged = false;
+
         yield return new WaitForSeconds(blockDuration);
+
         CanBeDamaged = true;
         isBlocking = false;
-        GetComponent<AnimationController>().SetBlocking(false);
-        
-        float elapsedTime = Time.time - lastBlockTime;
-        if (elapsedTime < stats.stamina / 25f) yield return new WaitForSeconds(stats.stamina / 25f - elapsedTime);
+        animController.SetBlocking(false);
+
+        float elapsed = Time.time - lastBlockTime;
+        if (elapsed < stats.stamina / 25f)
+            yield return new WaitForSeconds(stats.stamina / 25f - elapsed);
+
         canBlock = true;
     }
 
@@ -281,15 +304,20 @@ public class MainPlayerController : MonoBehaviour
         MainPlayerController[] players = FindObjectsOfType<MainPlayerController>();
         MainPlayerController nearest = null;
         float minDistance = reviveRange;
-        
+
         foreach (var player in players)
         {
             if (player != this && player.IsFallen())
             {
-                float distance = Vector2.Distance(transform.position, player.transform.position);
-                if (distance <= minDistance) { nearest = player; minDistance = distance; }
+                float dist = Vector2.Distance(transform.position, player.transform.position);
+                if (dist <= minDistance)
+                {
+                    nearest = player;
+                    minDistance = dist;
+                }
             }
         }
+
         return nearest;
     }
 }

@@ -10,8 +10,7 @@ public class AnimationController : MonoBehaviour
     public UnityEvent onAttackStart = new UnityEvent();
     public UnityEvent onSpecialStart = new UnityEvent();
     public UnityEvent onKnockback = new UnityEvent();
-    public UnityEvent onReviveBack = new UnityEvent();
-    public UnityEvent onReviveFront = new UnityEvent();
+    public UnityEvent onRevive = new UnityEvent();
 
     private void Awake()
     {
@@ -24,67 +23,91 @@ public class AnimationController : MonoBehaviour
         return animationData.dinosaurSettings[(int)characterType];
     }
 
-    public void SetMoving(bool isMoving)
+    // Movement / Locomotion
+    public void SetMoveSpeed(float speed)
     {
-        var settings = GetSettings();
-        if (settings.useIsMoving) animator.SetBool("IsMoving", isMoving);
+        animator.SetFloat("MoveSpeed", Mathf.Abs(speed));
     }
 
-    public void SetDowned(bool isDowned)
-    {
-        var settings = GetSettings();
-        if (settings.useIsDowned) animator.SetBool("IsDowned", isDowned);
-    }
-
+    // Blocking (combat)
     public void SetBlocking(bool isBlocking)
     {
-        var settings = GetSettings();
-        if (settings.useIsBlocking) animator.SetBool("IsBlocking", isBlocking);
+        if (GetSettings().useIsBlocking)
+            animator.SetBool("IsBlocking", isBlocking);
     }
 
+    // Downed (status)
+    public void SetDowned(bool isDowned)
+    {
+        if (GetSettings().useIsDowned)
+            animator.SetBool("IsDowned", isDowned);
+    }
+
+    // Revived (status)
     public void SetRevived(bool isRevived)
     {
-        var settings = GetSettings();
-        if (settings.useIsRevived) animator.SetBool("IsRevived", isRevived);
+        if (GetSettings().useIsRevived)
+            animator.SetBool("IsRevived", isRevived);
     }
 
+    // Attack trigger
     public void TriggerAttack()
     {
         var settings = GetSettings();
-        animator.SetTrigger("Attack");
-        onAttackStart?.Invoke();
-        // Adjust animation speed if needed
         animator.speed = settings.attackSpeedMultiplier;
+        animator.SetTrigger("AttackTrigger");
+        onAttackStart?.Invoke();
     }
 
+    // Special trigger
     public void TriggerSpecial()
     {
         var settings = GetSettings();
-        animator.SetTrigger("Special");
-        onSpecialStart?.Invoke();
         animator.speed = settings.specialSpeedMultiplier;
+        animator.SetTrigger("SpecialTrigger");
+        onSpecialStart?.Invoke();
     }
 
+    // Reset animator speed (use with animation events)
+    public void ResetSpeed()
+    {
+        animator.speed = 1f;
+    }
+
+    // Knockback (reaction)
     public void TriggerKnockback()
     {
-        animator.SetTrigger("Knockback");
+        animator.SetTrigger("KnockbackTrigger");
         onKnockback?.Invoke();
     }
 
-    public void TriggerReviveBack()
+    // Damage (reaction)
+    public void TriggerDamage()
     {
-        animator.SetTrigger("ReviveBack");
-        onReviveBack?.Invoke();
+        animator.SetBool("IsDamaged", true);
     }
 
-    public void TriggerReviveFront()
+    public void ClearDamage()
     {
-        animator.SetTrigger("ReviveFront");
-        onReviveFront?.Invoke();
+        animator.SetBool("IsDamaged", false);
     }
 
-    public void TriggerDowned()
+    // Revive (combined front/back)
+    public void TriggerRevive()
     {
-        animator.SetTrigger("Downed");
+        animator.SetTrigger("ReviveTrigger");
+        onRevive?.Invoke();
     }
+
+    // Emote
+    public void TriggerEmote()
+    {
+        animator.SetTrigger("EmoteTrigger");
+    }
+    
+    public void SetAnimationSpeed(float speed)
+    {
+        animator.speed = speed;
+    }
+    
 }

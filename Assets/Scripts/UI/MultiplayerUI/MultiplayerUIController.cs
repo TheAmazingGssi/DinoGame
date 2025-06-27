@@ -5,21 +5,14 @@ using UnityEngine.UI;
 
 public class MultiplayerUIController : MonoBehaviour
 {
-    [SerializeField] float deadzone = 0.5f;
-    [SerializeField] float inputCooldown = 0.2f;
+    [SerializeField] UISettings settings;
 
-    float counter;
     bool ready;
 
     public static int charcounter = 0; //voting debug
 
     private CharacterType characterType;
     public MultiplayerButton CurrentlySelected;
-
-    private void Update()
-    {
-        counter -= Time.deltaTime;
-    }
 
     public void SetUp(CharacterType charType, MultiplayerButton defaultSelection)
     {
@@ -67,16 +60,11 @@ public class MultiplayerUIController : MonoBehaviour
         //read the input
         Vector2 input = inputContext.ReadValue<Vector2>();
 
-        //make sure it isnt a wrong input
-        if (input.magnitude < deadzone || input.magnitude == 0) //no drift joystick
-            return;
         //make sure we can even read input now
-        if (ready) 
+        if (ready)
             return;
-        //not to swap through all the option in a single frame
-        if (counter > 0)
-            return;
-        counter = inputCooldown;
+
+        input = settings.CheckSettings(input);
 
         //now we can do stuff
         if (Mathf.Abs(input.y) > Mathf.Abs(input.x))
