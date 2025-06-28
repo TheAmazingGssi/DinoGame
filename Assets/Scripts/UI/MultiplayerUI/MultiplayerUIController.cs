@@ -64,7 +64,10 @@ public class MultiplayerUIController : MonoBehaviour
         if (ready)
             return;
 
+        //Buffer through the settings for deadzone etc
         input = settings.CheckSettings(input);
+        if (input == Vector2.zero)
+            return;
 
         //now we can do stuff
         if (Mathf.Abs(input.y) > Mathf.Abs(input.x))
