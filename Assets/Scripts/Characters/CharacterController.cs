@@ -352,7 +352,7 @@ public class CharacterController : MonoBehaviour
     }
 }
 
-*/
+
 
 using System;
 using Unity.VisualScripting;
@@ -406,4 +406,5 @@ public class CharacterController : MonoBehaviour
             rb.AddForce(Vector2.up * 5f, ForceMode2D.Impulse);
         }
     }*/
-}
+//}
+
