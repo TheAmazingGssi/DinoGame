@@ -8,7 +8,7 @@ public abstract class EnemyAttack : MonoBehaviour
     protected static readonly int Attack = Animator.StringToHash("Attack");
 
     [SerializeField] protected EnemyManager manager;
-    [SerializeField] private float attackCooldown;
+    [SerializeField] private float attackCooldown = 2;
 
     private bool isOnCooldown = false;
     private bool isAttacking = false;
@@ -20,13 +20,15 @@ public abstract class EnemyAttack : MonoBehaviour
     {
         if (!isOnCooldown)
         {
-            //Debug.Log($"{gameObject.name} starting attack");
+            Debug.Log($"{gameObject.name} starting attack");
             StartAttack();
         }
     }
 
     private void StartAttack()
     {
+        Debug.Log($"attack started");
+
         isAttacking = true;
         isOnCooldown = true;
         manager.AttackManager.ChangeAttackStatue(true);
@@ -50,7 +52,7 @@ public abstract class EnemyAttack : MonoBehaviour
 
     public virtual void OnAttackEnd()
     {
-        manager.Animator.ResetTrigger(Attack);
+        //manager.Animator.ResetTrigger(Attack);
         isAttacking = false;
         manager.AttackManager.ChangeAttackStatue(false);
         //Debug.Log($"{gameObject.name} attack ended");

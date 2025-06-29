@@ -21,7 +21,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1081683106100673034
 Transform:
   m_ObjectHideFlags: 0
@@ -32,8 +32,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.64, y: -0.74, z: 0.19599622}
-  m_LocalScale: {x: 10.582322, y: 10.582322, z: 10.582322}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7775578561474358076}
   - {fileID: 6724842336940981961}
@@ -58,9 +58,6 @@ MonoBehaviour:
   spriteRenderer: {fileID: 2515911822479905939}
   animator: {fileID: 8492816430768677864}
   enemyData: {fileID: 11400000, guid: efcb3114fbb81e14eaf446cc3bfaa133, type: 2}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 8
   healthItem: {fileID: 1366378949261486432, guid: 2399d6645efe0d645a8ffe00ac2a711e, type: 3}
   healthItemDropChance: 1
   healthDropAmount: 1
@@ -169,7 +166,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 25
 --- !u!1 &2750972596752826828
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,7 +176,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6724842336940981961}
-  - component: {fileID: 785869723828654056}
+  - component: {fileID: 8181060215119223495}
   m_Layer: 0
   m_Name: HurtBox
   m_TagString: Enemy
@@ -197,12 +194,12 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.90808004, y: 0.90808004, z: 0.90808004}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1081683106100673034}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &785869723828654056
+--- !u!61 &8181060215119223495
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -239,14 +236,14 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.17, y: 0.19}
-    newSize: {x: 0.17, y: 0.19}
-    adaptiveTilingThreshold: 0.5
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.17, y: 0.19}
+  m_Size: {x: 12, y: 9.5}
   m_EdgeRadius: 0
 --- !u!1 &6658617843642816480
 GameObject:
@@ -325,7 +322,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3527056022417232336, guid: 7b9a5565892efaa4494c35efe17db6cb, type: 3}
+  m_Sprite: {fileID: -692740337, guid: 1d18f52dfd0376c4d9fc91eacaa09db1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

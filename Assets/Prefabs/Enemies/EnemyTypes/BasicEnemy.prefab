@@ -102,7 +102,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 6676866525376652572}
-  attackManager: {fileID: 8180721457222337229}
   attackCooldown: 1
 --- !u!114 &6676866525376652572 stripped
 MonoBehaviour:

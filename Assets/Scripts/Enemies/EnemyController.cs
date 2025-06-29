@@ -49,7 +49,7 @@ public class EnemyController : MonoBehaviour
         {
             float distanceToTarget = Vector3.Distance(transform.position, currentTarget.position);
 
-            if (distanceToTarget <= enemyData.DetectionRange && distanceToTarget > enemyData.StopRange && isOverGround)
+            if (distanceToTarget > enemyData.StopRange && isOverGround)
             {
                 moveDirection = (currentTarget.position - transform.position).normalized;
             }
@@ -64,7 +64,7 @@ public class EnemyController : MonoBehaviour
 
             if (distanceToTarget <= enemyData.StopRange)
             {
-                FlipSprite(transform.position.x - currentTarget.position.x > 0);
+                //FlipSprite(transform.position.x - currentTarget.position.x > 0);
             }
         }
         else
@@ -74,11 +74,11 @@ public class EnemyController : MonoBehaviour
 
         if (moveDirection.x > 0 && isFacingLeft)
         {
-            FlipSprite(false);
+            FlipSprite(true);
         }
         else if (moveDirection.x < 0 && !isFacingLeft)
         {
-            FlipSprite(true);
+            FlipSprite(false);
         }
 
         animator.SetFloat(Speed, moveDirection.magnitude);
@@ -103,7 +103,7 @@ public class EnemyController : MonoBehaviour
         spriteRenderer.flipX = facingLeft;
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+/*    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag(Ground))
         {
@@ -117,5 +117,5 @@ public class EnemyController : MonoBehaviour
         {
             isOverGround = false;
         }
-    }
+    }*/
 }
