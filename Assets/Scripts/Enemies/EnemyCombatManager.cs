@@ -45,7 +45,7 @@ public class EnemyCombatManager : CombatManager
             }
         }
 
-        damageArgs.Source.AddScore(manager.EnemyData.Score);
+        damageArgs.Source.AddScore(manager.EnemyData.Score); //NULL REFRENCE
     }
 
     private void SpawnDamageText(DamageArgs damageArgs)

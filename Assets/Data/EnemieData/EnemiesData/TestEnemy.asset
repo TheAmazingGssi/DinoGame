@@ -17,3 +17,4 @@ MonoBehaviour:
   stopRange: 3
   attackRange: 8
   speed: 2
+  score: 10

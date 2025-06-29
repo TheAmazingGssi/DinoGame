@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MeleeDamage : MonoBehaviour
 {
-    MainPlayerController playerController;
+    [SerializeField] MainPlayerController playerController;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Enemy"))
@@ -17,7 +17,6 @@ public class MeleeDamage : MonoBehaviour
 
     public void ApplyDamage(float damage, bool isSpecial, Transform source, MainPlayerController controller = null, bool isGrab = false)
     {
-        playerController = controller;
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, GetComponent<CircleCollider2D>().radius, LayerMask.GetMask("Enemy"));
         foreach (var hit in hits)
         {
