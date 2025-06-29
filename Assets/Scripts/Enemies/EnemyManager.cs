@@ -19,9 +19,6 @@ public class EnemyManager : MonoBehaviour
     [Header("Data")]
     [SerializeField] private EnemyData enemyData;
 
-    [Header("Detection")]
-    [SerializeField] private LayerMask playerLayer;
-
     [Header("Drops")]
     [SerializeField] private GameObject healthItem;
     [SerializeField] private float healthItemDropChance = 0.25f;

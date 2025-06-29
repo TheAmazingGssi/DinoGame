@@ -33,15 +33,12 @@ public class EnemyProjectile : MonoBehaviour
 
         if(timer <= 0 ) Destroy(gameObject);
     }
-
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(other.CompareTag(PLAYER))
+        if (collision.CompareTag(PLAYER))
         {
-            Debug.Log("projectile found player");
-
-            combatManager = other.GetComponent<PlayerCombatManager>();
-            combatManager.TakeDamage(new DamageArgs { Damage = damage});
+            combatManager = collision.GetComponent<PlayerCombatManager>();
+            combatManager.TakeDamage(new DamageArgs { Damage = damage });
             Destroy(gameObject);
         }
     }

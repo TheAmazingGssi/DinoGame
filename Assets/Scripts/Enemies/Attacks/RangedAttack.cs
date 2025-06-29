@@ -19,7 +19,7 @@ public class RangedAttack : EnemyAttack
     protected override void ApplyDamage()
     {
         Debug.Log("Launching projectile");
-        Instantiate(projectile);
+        Instantiate(projectile, transform.position, Quaternion.identity, transform);
         base.ApplyDamage();
     }
 }

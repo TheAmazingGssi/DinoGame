@@ -20,7 +20,7 @@ public abstract class EnemyAttack : MonoBehaviour
     {
         if (!isOnCooldown)
         {
-            Debug.Log($"{gameObject.name} starting attack");
+            //Debug.Log($"{gameObject.name} starting attack");
             StartAttack();
         }
     }
@@ -40,7 +40,7 @@ public abstract class EnemyAttack : MonoBehaviour
     {
         yield return new WaitForSeconds(attackCooldown);
         isOnCooldown = false;
-        Debug.Log($"{gameObject.name} cooldown finished");
+        //Debug.Log($"{gameObject.name} cooldown finished");
     }
 
     protected virtual void ApplyDamage()
@@ -53,7 +53,7 @@ public abstract class EnemyAttack : MonoBehaviour
         manager.Animator.ResetTrigger(Attack);
         isAttacking = false;
         manager.AttackManager.ChangeAttackStatue(false);
-        Debug.Log($"{gameObject.name} attack ended");
+        //Debug.Log($"{gameObject.name} attack ended");
     }
 
     public void InterruptAttack()
