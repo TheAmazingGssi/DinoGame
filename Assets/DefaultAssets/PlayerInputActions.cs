@@ -389,6 +389,17 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""bd47f4fc-2d75-4e9f-b741-54626fb7bbf3"",
+                    ""path"": ""<HID::shanwan Twin USB Joystick>/button4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Confirmation"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""28d789bc-f2f6-44da-8460-0c342b09d976"",
                     ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",

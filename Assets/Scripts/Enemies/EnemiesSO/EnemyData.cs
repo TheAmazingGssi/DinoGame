@@ -14,11 +14,14 @@ public class EnemyData : ScriptableObject
 
     [SerializeField] private float detectionRange;
 
+    [SerializeField] private float attackRange;
+
     [SerializeField] private float speed;
 
 
     public float Speed => speed;
     public float DetectionRange => detectionRange;
+    public float AttackRange => attackRange;
     public float StopRange => stopRange;
     public float Cooldown => cooldown;
     public float MaxHealth => maxHealth;

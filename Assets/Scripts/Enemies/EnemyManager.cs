@@ -36,9 +36,7 @@ public class EnemyManager : MonoBehaviour
     private PlayerCombatManager lastPlayerToDamage;
     private HashSet<PlayerCombatManager> playersWhoDealtDamage = new HashSet<PlayerCombatManager>();
 
-    private bool isAttacking = false;
-    private EnemyAttack currentAttack;
-
+    // Properties
     public PlayerCombatManager PlayerCombatManager => playerCombatManager;
     public Transform CurrentTarget => currentTarget;
     public Animator Animator => animator;
@@ -48,17 +46,17 @@ public class EnemyManager : MonoBehaviour
     public EnemyController EnemyController => enemyController;
     public EnemyCombatManager CombatManager => combatManager;
     public EnemyAttack[] Attacks => attacks;
-    public bool IsAttacking => isAttacking;
 
     public event UnityAction<EnemyManager> OnDeath;
 
     private void Start()
     {
-        if(healthDropAmount < 0)
+        if (healthDropAmount < 0)
         {
             healthDropAmount = PlayerEntity.PlayerList.Count;
         }
     }
+
     private void OnEnable()
     {
         combatManager.OnDeath += HandleDeath;
@@ -101,8 +99,6 @@ public class EnemyManager : MonoBehaviour
 
     private void HandleAttack()
     {
-        if (isAttacking) return;
-
         if (attacks != null && attacks.Length > 0)
         {
             foreach (EnemyAttack attack in attacks)
@@ -115,17 +111,17 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
-    public void SetAttackState(bool attacking, EnemyAttack attack = null)
-    {
-        isAttacking = attacking;
-        currentAttack = attacking ? attack : null;
-    }
-
     private void HandleTakeDamage(DamageArgs damageArgs)
     {
-        if (isAttacking && currentAttack != null)
+        if (attacks != null)
         {
-            currentAttack.InterruptAttack();
+            foreach (EnemyAttack attack in attacks)
+            {
+                if (attack != null)
+                {
+                    attack.InterruptAttack();
+                }
+            }
         }
     }
 
@@ -234,7 +230,6 @@ public class EnemyManager : MonoBehaviour
                 Instantiate(healthItem, spawnPosition, Quaternion.identity);
             }
         }
-
     }
 
     private IEnumerator DeSpawn()

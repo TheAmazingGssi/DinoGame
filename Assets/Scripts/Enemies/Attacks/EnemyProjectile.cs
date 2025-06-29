@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class EnemyProjectile : MonoBehaviour
 {
-    [SerializeField] private EnemyManager manager;
-    [SerializeField] private float speed;
+    public EnemyManager manager;
+    public float speed;
 
     private const string PLAYER = "Player";
 
@@ -15,6 +15,8 @@ public class EnemyProjectile : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log("projectile lunched");
+
         Vector3 targetPosition = manager.CurrentTarget.transform.position;
         Vector3 startPosition = transform.position;
 
@@ -36,6 +38,8 @@ public class EnemyProjectile : MonoBehaviour
     {
         if(other.CompareTag(PLAYER))
         {
+            Debug.Log("projectile found player");
+
             combatManager = other.GetComponent<PlayerCombatManager>();
             combatManager.TakeDamage(new DamageArgs { Damage = damage});
             Destroy(gameObject);

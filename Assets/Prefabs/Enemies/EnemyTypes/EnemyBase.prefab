@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8038912827772719235}
   - component: {fileID: 7042898619641567151}
   - component: {fileID: 7184945894762929075}
+  - component: {fileID: 1381679210894508697}
   m_Layer: 0
   m_Name: EnemyBase
   m_TagString: Enemy
@@ -53,7 +54,7 @@ MonoBehaviour:
   combatManager: {fileID: 3082602570648211020}
   enemyController: {fileID: 8038912827772719235}
   attacks:
-  - {fileID: 0}
+  - {fileID: 1381679210894508697}
   rb: {fileID: 7042898619641567151}
   spriteRenderer: {fileID: 2515911822479905939}
   animator: {fileID: 8492816430768677864}
@@ -61,7 +62,10 @@ MonoBehaviour:
   detectionRange: 10
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
+  healthItem: {fileID: 1366378949261486432, guid: 2399d6645efe0d645a8ffe00ac2a711e, type: 3}
+  healthItemDropChance: 1
+  healthDropAmount: 1
 --- !u!114 &3082602570648211020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,6 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 7022572441651464058}
   damageNumberPrefab: {fileID: 0}
+  isDead: 0
 --- !u!114 &8038912827772719235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,7 +93,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7609fabca46533940b3ec93ce2bd76fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDead: 0
   manager: {fileID: 7022572441651464058}
 --- !u!50 &7042898619641567151
 Rigidbody2D:
@@ -153,6 +157,22 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &1381679210894508697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856966355605016673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c6b37074c842b747b01f83217fdabff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 7022572441651464058}
+  projectile: {fileID: 4382386036968754117, guid: d371f4786fc4fa74caa80cbf6c0f1f7e, type: 3}
+  projectileScript: {fileID: 7339243099675818791, guid: d371f4786fc4fa74caa80cbf6c0f1f7e, type: 3}
+  projectileSpeed: 5
 --- !u!1 &2750972596752826828
 GameObject:
   m_ObjectHideFlags: 0
