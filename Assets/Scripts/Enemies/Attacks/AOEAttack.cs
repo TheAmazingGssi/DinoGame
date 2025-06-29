@@ -12,7 +12,7 @@ public class EnemyAOEAttack : EnemyAttack
     {
         List<PlayerCombatManager> playersInRange = GetPlayersInRange();
 
-        DamageArgs damageArgs = new DamageArgs{Damage = enemyData.BaseDamage, Source = gameObject};
+        DamageArgs damageArgs = new DamageArgs{Damage = manager.EnemyData.BaseDamage, Source = gameObject};
 
         foreach (PlayerCombatManager player in playersInRange)
         {
@@ -21,7 +21,7 @@ public class EnemyAOEAttack : EnemyAttack
 
         base.ApplyDamage();
 
-        Debug.Log($"AOE attack dealt {enemyData.BaseDamage} damage to {playersInRange.Count} players");
+        Debug.Log($"AOE attack dealt {manager.EnemyData.BaseDamage} damage to {playersInRange.Count} players");
     }
 
     private void OnDrawGizmosSelected()

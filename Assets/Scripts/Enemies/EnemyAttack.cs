@@ -10,22 +10,11 @@ public abstract class EnemyAttack : MonoBehaviour
     [SerializeField] protected EnemyManager manager;
     [SerializeField] private float attackCooldown;
 
-    protected EnemyAttackManager attackManager;
-    protected Animator animator;
-    protected EnemyData enemyData;
-
     private bool isOnCooldown = false;
     private bool isAttacking = false;
 
     protected abstract bool IsPlayerInRange { get; }
     protected virtual float AttackRange => manager.EnemyData.AttackRange;
-
-    private void Start()
-    {
-        animator = manager.Animator;
-        enemyData = manager.EnemyData;
-        attackManager = manager.AttackManager;
-    }
 
     public void TryAttack()
     {
@@ -40,8 +29,8 @@ public abstract class EnemyAttack : MonoBehaviour
     {
         isAttacking = true;
         isOnCooldown = true;
-        attackManager.ChangeAttackStatue(true);
-        animator.SetTrigger(Attack);
+        manager.AttackManager.ChangeAttackStatue(true);
+        manager.Animator.SetTrigger(Attack);
         ApplyDamage();
 
         StartCoroutine(CooldownCoroutine());
@@ -61,9 +50,9 @@ public abstract class EnemyAttack : MonoBehaviour
 
     public virtual void OnAttackEnd()
     {
-        animator.ResetTrigger(Attack);
+        manager.Animator.ResetTrigger(Attack);
         isAttacking = false;
-        attackManager.ChangeAttackStatue(false);
+        manager.AttackManager.ChangeAttackStatue(false);
         Debug.Log($"{gameObject.name} attack ended");
     }
 
@@ -71,8 +60,8 @@ public abstract class EnemyAttack : MonoBehaviour
     {
         if (isAttacking)
         {
-            animator.ResetTrigger(Attack);
-            animator.Play("Idle", 0, 0f);
+            manager.Animator.ResetTrigger(Attack);
+            manager.Animator.Play("Idle", 0, 0f);
             isAttacking = false;
             Debug.Log($"Attack interrupted on {gameObject.name}");
         }
@@ -80,15 +69,15 @@ public abstract class EnemyAttack : MonoBehaviour
 
     protected bool IsTargetInRange(float range)
     {
-        if (attackManager.CurrentTarget == null) return false;
-        float distance = Vector2.Distance(transform.position, attackManager.CurrentTarget.position);
+        if (manager.AttackManager.CurrentTarget == null) return false;
+        float distance = Vector2.Distance(transform.position, manager.AttackManager.CurrentTarget.position);
         return distance <= range;
     }
 
     protected List<PlayerCombatManager> GetPlayersInRange()
     {
         List<PlayerCombatManager> playersInRange = new List<PlayerCombatManager>();
-        foreach (PlayerCombatManager playerCombatManager in attackManager.PlayersInRange)
+        foreach (PlayerCombatManager playerCombatManager in manager.AttackManager.PlayersInRange)
         {
             float distance = Vector2.Distance(transform.position, playerCombatManager.transform.position);
             if (distance <= AttackRange) playersInRange.Add(playerCombatManager);

@@ -51,9 +51,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86d5dfbe3e05d3343b76d6b9c31b91c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackManager: {fileID: 5501723112346460331}
   combatManager: {fileID: 3082602570648211020}
   enemyController: {fileID: 8038912827772719235}
-  attacks: []
   rb: {fileID: 7042898619641567151}
   spriteRenderer: {fileID: 2515911822479905939}
   animator: {fileID: 8492816430768677864}
@@ -77,7 +77,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 7022572441651464058}
-  attackManager: {fileID: 5501723112346460331}
   damageNumberPrefab: {fileID: 0}
   isDead: 0
 --- !u!114 &5501723112346460331
@@ -93,7 +92,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attacks: []
-  enemyData: {fileID: 0}
+  manager: {fileID: 7022572441651464058}
+  combatManager: {fileID: 3082602570648211020}
 --- !u!114 &8038912827772719235
 MonoBehaviour:
   m_ObjectHideFlags: 0

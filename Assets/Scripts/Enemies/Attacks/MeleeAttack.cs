@@ -6,13 +6,13 @@ public class MeleeAttack : EnemyAttack
 
     protected override void ApplyDamage()
     {
-        if (attackManager.PlayerCombatManager != null)
+        if (manager.AttackManager.PlayerCombatManager != null)
         {
             Debug.Log($"combat manager found");
 
-            DamageArgs damageArgs = new DamageArgs{Damage = enemyData.BaseDamage,Source = gameObject};
+            DamageArgs damageArgs = new DamageArgs{Damage = manager.EnemyData.BaseDamage,Source = gameObject};
 
-            attackManager.PlayerCombatManager.TakeDamage(damageArgs);
+            manager.AttackManager.PlayerCombatManager.TakeDamage(damageArgs);
         }
 
         base.ApplyDamage();
