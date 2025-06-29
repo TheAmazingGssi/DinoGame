@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: c000d2a63a023964688b3627cffa0228
+guid: dca3f473fc4fb8644bde78b2c6acf0df
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3837696527360094200
-    second: parallax far background mountains_0
+      213: 352307357959340178
+    second: updated close mountains_0
+  - first:
+      213: -446774679074444620
+    second: updated close mountains_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,53 +112,27 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: parallax far background mountains_0
+      name: updated close mountains_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 556
-        width: 5760
-        height: 502
+        y: 508
+        width: 5461
+        height: 516
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8ff6c0d98ac324530800000000000000
-      internalID: 3837696527360094200
+      spriteID: 2904ceaeca5a3e400800000000000000
+      internalID: 352307357959340178
       vertices: []
       indices: 
       edges: []
@@ -164,7 +141,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +151,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      parallax far background mountains_0: 3837696527360094200
+      updated close mountains_0: 352307357959340178
+      updated close mountains_1: -446774679074444620
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

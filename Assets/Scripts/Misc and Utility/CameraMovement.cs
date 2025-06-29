@@ -40,19 +40,26 @@ public class CameraMovement : MonoBehaviour
         if (PlayerEntity.PlayerList.Count == 0)
             return;
 
-        //ZoomToAverage();
-        //UpdateHeightWidth();
-        //MoveToAverage();
-        //MoveColliders();
+        ZoomToAverage();
+        UpdateHeightWidth();
+        MoveToAverage();
+        MoveColliders();
     }
     
     private void MoveToAverage()
     {
         //calculate the average
         float cameraX = 0;
+        int counter = 0;
         foreach (PlayerEntity player in PlayerEntity.PlayerList)
-            cameraX += player.GetCharactersTransform.position.x; //this line throws an exception in the frame a new character is generated. for now it only happens while debugging, and every following frame it works as intended so its fine
-        cameraX /= PlayerEntity.PlayerList.Count;
+        {
+            if (!player.GetCharactersTransform)
+                break;
+            cameraX += player.GetCharactersTransform.position.x;
+            counter++; //making sure we dont jitter if we skipped one transform
+        }
+        if(counter != 0)
+            cameraX /= counter;
 
         //clamp to not go over where the camera cant go yet
         cameraX = Mathf.Clamp(cameraX, furthestLeftPoint, furthestRightPoint);
@@ -82,6 +89,8 @@ public class CameraMovement : MonoBehaviour
         float maxX = furthestLeftPoint;
         foreach (PlayerEntity player in PlayerEntity.PlayerList)
         {
+            if (!player.GetCharactersTransform)
+                break;
             if (player.GetCharactersTransform.position.x > maxX)
                 maxX = player.GetCharactersTransform.position.x;
             if (player.GetCharactersTransform.position.x < minX)

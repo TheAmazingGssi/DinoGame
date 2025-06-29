@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: aada81f45029b8d41aeb6bf11626d1d7
+guid: 64eba1d32a5fd534fa5af7a1ecaac50d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8909201846494402481
-    second: parallax ground_0
-  - first:
-      213: -1605556836252340409
-    second: parallax ground_1
+      213: 2216731526640076581
+    second: updated far mountains_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -54,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 95
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -112,43 +109,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: parallax ground_0
+      name: updated far mountains_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 5760
-        height: 850
+        y: 527
+        width: 5461
+        height: 477
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1b79d8c50e7d3ab70800000000000000
-      internalID: 8909201846494402481
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: parallax ground_1
-      rect:
-        serializedVersion: 2
-        x: 1136
-        y: 641
-        width: 144
-        height: 272
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 74faa74609ae7b9e0800000000000000
-      internalID: -1605556836252340409
+      spriteID: 5278ac7249963ce10800000000000000
+      internalID: 2216731526640076581
       vertices: []
       indices: 
       edges: []
@@ -199,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      parallax ground_0: 8909201846494402481
-      parallax ground_1: -1605556836252340409
+      updated far mountains_0: 2216731526640076581
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

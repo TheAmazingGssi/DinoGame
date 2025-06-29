@@ -1,0 +1,369 @@
+fileFormatVersion: 2
+guid: aadb211b69a776e4787a48334d9d1a15
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5115247008420721799
+    second: updated ground assets_0
+  - first:
+      213: -2119585704247949514
+    second: updated ground assets_1
+  - first:
+      213: 5575927856125669317
+    second: updated ground assets_2
+  - first:
+      213: 4854937772552480993
+    second: updated ground assets_3
+  - first:
+      213: -6041398528682611068
+    second: updated ground assets_4
+  - first:
+      213: -7475981128968051319
+    second: updated ground assets_5
+  - first:
+      213: 5053241215601397205
+    second: updated ground assets_6
+  - first:
+      213: 6152751928815086046
+    second: updated ground assets_7
+  - first:
+      213: -5069080426103297291
+    second: updated ground assets_8
+  - first:
+      213: 209848709131344367
+    second: updated ground assets_9
+  - first:
+      213: 7213021359229955016
+    second: updated ground assets_10
+  - first:
+      213: -26965759713562880
+    second: updated ground assets_11
+  - first:
+      213: 3907980928657420947
+    second: updated ground assets_12
+  - first:
+      213: -8448798921933336593
+    second: updated ground assets_13
+  - first:
+      213: 6283337489634455244
+    second: updated ground assets_14
+  - first:
+      213: -7136170709047607006
+    second: updated ground assets_15
+  - first:
+      213: -2177588686192424287
+    second: updated ground assets_16
+  - first:
+      213: 4893962333996573203
+    second: updated ground assets_17
+  - first:
+      213: 5096394777231424549
+    second: updated ground assets_18
+  - first:
+      213: 245864922770680416
+    second: updated ground assets_19
+  - first:
+      213: -489766716707150300
+    second: updated ground assets_20
+  - first:
+      213: 3032740119948151129
+    second: updated ground assets_21
+  - first:
+      213: -1634497826709899233
+    second: updated ground assets_22
+  - first:
+      213: -424707439037349310
+    second: updated ground assets_23
+  - first:
+      213: -1593454132694813530
+    second: updated ground assets_24
+  - first:
+      213: -4843353945896172799
+    second: updated ground assets_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: updated ground assets_0
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 536
+        width: 439
+        height: 302
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97b04b492fdf209b0800000000000000
+      internalID: -5115247008420721799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: updated ground assets_1
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 574
+        width: 219
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6370e433808b592e0800000000000000
+      internalID: -2119585704247949514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: updated ground assets_9
+      rect:
+        serializedVersion: 2
+        x: 1453
+        y: 393
+        width: 1735
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe919540a4889e200800000000000000
+      internalID: 209848709131344367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: updated ground assets_10
+      rect:
+        serializedVersion: 2
+        x: 3521
+        y: 738
+        width: 232
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cbe432c5bcc91460800000000000000
+      internalID: 7213021359229955016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: updated ground assets_11
+      rect:
+        serializedVersion: 2
+        x: 4187
+        y: 738
+        width: 232
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00fac2fc8c230aff0800000000000000
+      internalID: -26965759713562880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: updated ground assets_14
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 590
+        width: 198
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cce6e810826e23750800000000000000
+      internalID: 6283337489634455244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: updated ground assets_24
+      rect:
+        serializedVersion: 2
+        x: 3483
+        y: 157
+        width: 1871
+        height: 473
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a4f8d6a8e9e2e9e0800000000000000
+      internalID: -1593454132694813530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 31cd385fb09dbee4bb06500b8019a211
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      updated ground assets_0: -5115247008420721799
+      updated ground assets_1: -2119585704247949514
+      updated ground assets_10: 7213021359229955016
+      updated ground assets_11: -26965759713562880
+      updated ground assets_14: 6283337489634455244
+      updated ground assets_24: -1593454132694813530
+      updated ground assets_9: 209848709131344367
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
