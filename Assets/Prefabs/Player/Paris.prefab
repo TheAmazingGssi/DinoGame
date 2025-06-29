@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9110106451632680406}
   - component: {fileID: 549283475722300862}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SpecialCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,6 +148,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 22100000, guid: b4b30ded66787684299bffc47c02cea0, type: 2}
+    - target: {fileID: 6304750159750022103, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: 'mySounds.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 513ad14fbed08a54ebb10aec8ce08876, type: 2}
     - target: {fileID: 9146728367405427678, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_Sprite
       value: 

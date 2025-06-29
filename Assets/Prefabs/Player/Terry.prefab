@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 22100000, guid: a48f7fc5cf3506b41a64ce20db91c3ad, type: 2}
+    - target: {fileID: 6304750159750022103, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: 'mySounds.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 682cdb9ba0bb60f48bbfa1f4ed972b22, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

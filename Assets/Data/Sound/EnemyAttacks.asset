@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a34b07caa3e9b57409b94345db82bfad, type: 3}
   m_Name: EnemyAttacks
   m_EditorClassIdentifier: 
-  Clips: []
+  Clips:
+  - {fileID: 8300000, guid: 6ebccef4fd5d85f44b689b5f047494d0, type: 3}

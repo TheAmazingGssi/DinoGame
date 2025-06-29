@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Andrew Special
   m_EditorClassIdentifier: 
   Clips:
-  - {fileID: 8300000, guid: 0f3269e4052f7ee48bb632f7fed51141, type: 3}
+  - {fileID: 8300000, guid: a526fe3f6cd45044d83c573104baef0f, type: 3}
