@@ -17,7 +17,7 @@ public class EnemyProjectile : MonoBehaviour
     {
         Debug.Log("projectile lunched");
 
-        Vector3 targetPosition = manager.CurrentTarget.transform.position;
+        Vector3 targetPosition = manager.AttackManager.CurrentTarget.transform.position;
         Vector3 startPosition = transform.position;
 
         direction = (targetPosition - startPosition).normalized;

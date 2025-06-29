@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1081683106100673034, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 17.451965
       objectReference: {fileID: 0}
     - target: {fileID: 1081683106100673034, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.7940481
       objectReference: {fileID: 0}
     - target: {fileID: 1081683106100673034, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -52,6 +52,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: BasicEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 5501723112346460331, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: enemyData
+      value: 
+      objectReference: {fileID: 11400000, guid: efcb3114fbb81e14eaf446cc3bfaa133, type: 2}
+    - target: {fileID: 5501723112346460331, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: attacks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5501723112346460331, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: 'attacks.Array.data[0]'
+      value: 
+      objectReference: {fileID: -2744939329610303208}
+    - target: {fileID: 7022572441651464058, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: attackManager
+      value: 
+      objectReference: {fileID: 8180721457222337229}
+    - target: {fileID: 7022572441651464058, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: attacks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7022572441651464058, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: 'attacks.Array.data[0]'
       value: 
@@ -82,7 +102,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 6676866525376652572}
-  attackRange: 2
+  attackManager: {fileID: 8180721457222337229}
+  attackCooldown: 1
 --- !u!114 &6676866525376652572 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7022572441651464058, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
@@ -92,5 +113,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86d5dfbe3e05d3343b76d6b9c31b91c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8180721457222337229 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5501723112346460331, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+  m_PrefabInstance: {fileID: 4457946629043970662}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2600982548165210631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cf52ffbe50f3845b718018d95387c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

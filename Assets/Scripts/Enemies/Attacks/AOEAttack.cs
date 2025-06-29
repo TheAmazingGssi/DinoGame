@@ -6,11 +6,11 @@ public class EnemyAOEAttack : EnemyAttack
     [SerializeField] private float aoeRange = 5f;
 
     protected override float AttackRange => aoeRange;
-    protected override bool IsPlayerInRange => GetPlayersInRange(AttackRange).Count > 0;
+    protected override bool IsPlayerInRange => GetPlayersInRange().Count > 0;
 
     protected override void ApplyDamage()
     {
-        List<PlayerCombatManager> playersInRange = GetPlayersInRange(AttackRange);
+        List<PlayerCombatManager> playersInRange = GetPlayersInRange();
 
         DamageArgs damageArgs = new DamageArgs{Damage = enemyData.BaseDamage, Source = gameObject};
 
@@ -18,6 +18,8 @@ public class EnemyAOEAttack : EnemyAttack
         {
             player.TakeDamage(damageArgs);
         }
+
+        base.ApplyDamage();
 
         Debug.Log($"AOE attack dealt {enemyData.BaseDamage} damage to {playersInRange.Count} players");
     }

@@ -43,7 +43,7 @@ public class EnemyController : MonoBehaviour
 
     private void Movement()
     {
-        currentTarget = manager.CurrentTarget;
+        currentTarget = manager.AttackManager.CurrentTarget;
 
         if (currentTarget != null)
         {

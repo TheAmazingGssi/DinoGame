@@ -6,41 +6,41 @@ public abstract class EnemyAttack : MonoBehaviour
 {
     protected const string PLAYER = "Player";
     protected static readonly int Attack = Animator.StringToHash("Attack");
+
     [SerializeField] protected EnemyManager manager;
+    [SerializeField] private float attackCooldown;
+
+    protected EnemyAttackManager attackManager;
     protected Animator animator;
     protected EnemyData enemyData;
 
     private bool isOnCooldown = false;
-    private bool isCurrentlyAttacking = false;
+    private bool isAttacking = false;
 
     protected abstract bool IsPlayerInRange { get; }
     protected virtual float AttackRange => manager.EnemyData.AttackRange;
 
-    private void Awake()
+    private void Start()
     {
         animator = manager.Animator;
         enemyData = manager.EnemyData;
+        attackManager = manager.AttackManager;
     }
 
     public void TryAttack()
     {
-        if (!isOnCooldown && !isCurrentlyAttacking && HasValidTarget())
+        if (!isOnCooldown)
         {
             Debug.Log($"{gameObject.name} starting attack");
             StartAttack();
         }
     }
 
-    private bool HasValidTarget()
-    {
-        return manager.CurrentTarget != null && IsPlayerInRange;
-    }
-
     private void StartAttack()
     {
-        isCurrentlyAttacking = true;
+        isAttacking = true;
         isOnCooldown = true;
-
+        attackManager.ChangeAttackStatue(true);
         animator.SetTrigger(Attack);
         ApplyDamage();
 
@@ -49,52 +49,49 @@ public abstract class EnemyAttack : MonoBehaviour
 
     private IEnumerator CooldownCoroutine()
     {
-        yield return new WaitForSeconds(enemyData.Cooldown);
+        yield return new WaitForSeconds(attackCooldown);
         isOnCooldown = false;
         Debug.Log($"{gameObject.name} cooldown finished");
     }
 
-    protected abstract void ApplyDamage();
+    protected virtual void ApplyDamage()
+    {
+        OnAttackEnd();
+    }
 
     public virtual void OnAttackEnd()
     {
         animator.ResetTrigger(Attack);
-        isCurrentlyAttacking = false;
+        isAttacking = false;
+        attackManager.ChangeAttackStatue(false);
         Debug.Log($"{gameObject.name} attack ended");
     }
 
     public void InterruptAttack()
     {
-        if (isCurrentlyAttacking)
+        if (isAttacking)
         {
             animator.ResetTrigger(Attack);
             animator.Play("Idle", 0, 0f);
-            isCurrentlyAttacking = false;
+            isAttacking = false;
             Debug.Log($"Attack interrupted on {gameObject.name}");
         }
     }
 
     protected bool IsTargetInRange(float range)
     {
-        if (manager.CurrentTarget == null) return false;
-        float distance = Vector2.Distance(transform.position, manager.CurrentTarget.position);
+        if (attackManager.CurrentTarget == null) return false;
+        float distance = Vector2.Distance(transform.position, attackManager.CurrentTarget.position);
         return distance <= range;
     }
 
-    protected List<PlayerCombatManager> GetPlayersInRange(float range)
+    protected List<PlayerCombatManager> GetPlayersInRange()
     {
         List<PlayerCombatManager> playersInRange = new List<PlayerCombatManager>();
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, range);
-        foreach (Collider2D collider in colliders)
+        foreach (PlayerCombatManager playerCombatManager in attackManager.PlayersInRange)
         {
-            if (collider.CompareTag(PLAYER))
-            {
-                PlayerCombatManager player = collider.GetComponent<PlayerCombatManager>();
-                if (player != null)
-                {
-                    playersInRange.Add(player);
-                }
-            }
+            float distance = Vector2.Distance(transform.position, playerCombatManager.transform.position);
+            if (distance <= AttackRange) playersInRange.Add(playerCombatManager);
         }
         return playersInRange;
     }

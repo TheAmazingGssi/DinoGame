@@ -20,5 +20,6 @@ public class RangedAttack : EnemyAttack
     {
         Debug.Log("Launching projectile");
         Instantiate(projectile);
+        base.ApplyDamage();
     }
 }

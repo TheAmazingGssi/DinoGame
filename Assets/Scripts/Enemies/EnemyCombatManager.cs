@@ -40,7 +40,8 @@ public class EnemyCombatManager : CombatManager
             PlayerCombatManager playerSource = damageArgs.Source.GetComponent<PlayerCombatManager>();
             if (playerSource != null)
             {
-                manager.OnPlayerDealtDamage(playerSource);
+                //manager.OnPlayerDealtDamage(playerSource);
+                manager.AttackManager.OnPlayerDealtDamage(playerSource);
             }
         }
     }

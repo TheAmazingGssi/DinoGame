@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 1081683106100673034}
   - component: {fileID: 7022572441651464058}
   - component: {fileID: 3082602570648211020}
+  - component: {fileID: 5501723112346460331}
   - component: {fileID: 8038912827772719235}
   - component: {fileID: 7042898619641567151}
   - component: {fileID: 7184945894762929075}
-  - component: {fileID: 1381679210894508697}
   m_Layer: 0
   m_Name: EnemyBase
   m_TagString: Enemy
@@ -53,13 +53,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   combatManager: {fileID: 3082602570648211020}
   enemyController: {fileID: 8038912827772719235}
-  attacks:
-  - {fileID: 1381679210894508697}
+  attacks: []
   rb: {fileID: 7042898619641567151}
   spriteRenderer: {fileID: 2515911822479905939}
   animator: {fileID: 8492816430768677864}
   enemyData: {fileID: 11400000, guid: efcb3114fbb81e14eaf446cc3bfaa133, type: 2}
-  detectionRange: 10
   playerLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -79,8 +77,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 7022572441651464058}
+  attackManager: {fileID: 5501723112346460331}
   damageNumberPrefab: {fileID: 0}
   isDead: 0
+--- !u!114 &5501723112346460331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856966355605016673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cf52ffbe50f3845b718018d95387c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attacks: []
+  enemyData: {fileID: 0}
 --- !u!114 &8038912827772719235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,22 +170,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!114 &1381679210894508697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1856966355605016673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c6b37074c842b747b01f83217fdabff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  manager: {fileID: 7022572441651464058}
-  projectile: {fileID: 4382386036968754117, guid: d371f4786fc4fa74caa80cbf6c0f1f7e, type: 3}
-  projectileScript: {fileID: 7339243099675818791, guid: d371f4786fc4fa74caa80cbf6c0f1f7e, type: 3}
-  projectileSpeed: 5
 --- !u!1 &2750972596752826828
 GameObject:
   m_ObjectHideFlags: 0

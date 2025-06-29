@@ -15,7 +15,7 @@ MonoBehaviour:
   maxHealth: 90
   baseDamage: 2
   cooldown: 1
-  stopRange: 4
+  stopRange: 2
   detectionRange: 60
   attackRange: 8
   speed: 2
