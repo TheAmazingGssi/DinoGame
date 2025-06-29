@@ -4,9 +4,9 @@ using UnityEngine.Events;
 public struct DamageArgs
 {
     public float Damage;
-    public CombatManager Source;
+    public MainPlayerController Source; //only for players
 
-    public DamageArgs(float damage, CombatManager source = null)
+    public DamageArgs(float damage, MainPlayerController source = null)
     {
         Damage = damage;
         Source = source;
