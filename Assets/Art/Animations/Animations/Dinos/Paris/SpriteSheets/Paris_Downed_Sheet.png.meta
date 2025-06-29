@@ -1,0 +1,650 @@
+fileFormatVersion: 2
+guid: e5818830985ada744950108d5390ef3f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1702181455135032186
+    second: Paris_Downed_Sheet_0
+  - first:
+      213: 4805823643880909381
+    second: Paris_Downed_Sheet_1
+  - first:
+      213: -2711482413659268876
+    second: Paris_Downed_Sheet_2
+  - first:
+      213: 1563530285349411951
+    second: Paris_Downed_Sheet_3
+  - first:
+      213: 3776040633387528275
+    second: Paris_Downed_Sheet_4
+  - first:
+      213: 3577539233503183983
+    second: Paris_Downed_Sheet_5
+  - first:
+      213: 5124743063523654353
+    second: Paris_Downed_Sheet_6
+  - first:
+      213: -606526979155040162
+    second: Paris_Downed_Sheet_7
+  - first:
+      213: -1699849362573068409
+    second: Paris_Downed_Sheet_8
+  - first:
+      213: -1538897551264382338
+    second: Paris_Downed_Sheet_9
+  - first:
+      213: 1616856521004555648
+    second: Paris_Downed_Sheet_10
+  - first:
+      213: -7541976765212732112
+    second: Paris_Downed_Sheet_11
+  - first:
+      213: -3996235109976192706
+    second: Paris_Downed_Sheet_12
+  - first:
+      213: -188997098450903359
+    second: Paris_Downed_Sheet_13
+  - first:
+      213: 2358828301762771762
+    second: Paris_Downed_Sheet_14
+  - first:
+      213: 1434421193540205501
+    second: Paris_Downed_Sheet_15
+  - first:
+      213: -5257186451923985788
+    second: Paris_Downed_Sheet_16
+  - first:
+      213: 5611118479651081739
+    second: Paris_Downed_Sheet_17
+  - first:
+      213: -4397010691889632619
+    second: Paris_Downed_Sheet_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 3500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Paris_Downed_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2198
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68c3b6f2cf2a068e0800000000000000
+      internalID: -1702181455135032186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Downed_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 2198
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54ae1ba4427b1b240800000000000000
+      internalID: 4805823643880909381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Downed_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 2198
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f8de1f5c11ee5ad0800000000000000
+      internalID: -2711482413659268876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Downed_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 3294
+        y: 2198
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6c11d5b286c2b510800000000000000
+      internalID: 1563530285349411951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Downed_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 4392
+        y: 2198
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 350318223f0376430800000000000000
+      internalID: 3776040633387528275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Downed_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1466
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f640bfe6af8f5a130800000000000000
+      internalID: 3577539233503183983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Downed_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 1466
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1da797a0aaebe1740800000000000000
+      internalID: 5124743063523654353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Downed_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 1466
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e58e5cc0dee2597f0800000000000000
+      internalID: -606526979155040162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Downed_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 3294
+        y: 1466
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 787782cc20ce868e0800000000000000
+      internalID: -1699849362573068409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Downed_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 4392
+        y: 1466
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e720b2f94dcb4aae0800000000000000
+      internalID: -1538897551264382338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Downed_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 734
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08d104b707a307610800000000000000
+      internalID: 1616856521004555648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Downed_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 734
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 035de355714855790800000000000000
+      internalID: -7541976765212732112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Downed_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 734
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e39cce627558a88c0800000000000000
+      internalID: -3996235109976192706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Downed_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 3294
+        y: 734
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ce114be32c806df0800000000000000
+      internalID: -188997098450903359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Downed_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 4392
+        y: 734
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23b35b4c7dd3cb020800000000000000
+      internalID: 2358828301762771762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Downed_Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbb7143c97618e310800000000000000
+      internalID: 1434421193540205501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Downed_Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 2
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48a131796c8ba07b0800000000000000
+      internalID: -5257186451923985788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Downed_Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 2
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0e8b3c3782bedd40800000000000000
+      internalID: 5611118479651081739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Downed_Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 3294
+        y: 2
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59ae254721eaaf2c0800000000000000
+      internalID: -4397010691889632619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 17dfaf823f9f4984a808d847e67e45fa
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Paris_Downed_Sheet_0: -1702181455135032186
+      Paris_Downed_Sheet_1: 4805823643880909381
+      Paris_Downed_Sheet_10: 1616856521004555648
+      Paris_Downed_Sheet_11: -7541976765212732112
+      Paris_Downed_Sheet_12: -3996235109976192706
+      Paris_Downed_Sheet_13: -188997098450903359
+      Paris_Downed_Sheet_14: 2358828301762771762
+      Paris_Downed_Sheet_15: 1434421193540205501
+      Paris_Downed_Sheet_16: -5257186451923985788
+      Paris_Downed_Sheet_17: 5611118479651081739
+      Paris_Downed_Sheet_18: -4397010691889632619
+      Paris_Downed_Sheet_2: -2711482413659268876
+      Paris_Downed_Sheet_3: 1563530285349411951
+      Paris_Downed_Sheet_4: 3776040633387528275
+      Paris_Downed_Sheet_5: 3577539233503183983
+      Paris_Downed_Sheet_6: 5124743063523654353
+      Paris_Downed_Sheet_7: -606526979155040162
+      Paris_Downed_Sheet_8: -1699849362573068409
+      Paris_Downed_Sheet_9: -1538897551264382338
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

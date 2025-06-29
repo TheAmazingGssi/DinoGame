@@ -6,8 +6,143 @@
   <component name="ChangeListManager">
     <list default="true" id="ad023baf-c7c7-445b-a367-968c8e24e03b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DinoGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DinoGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animators/Dinos/NewTerryAnimController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animators/Dinos/NewTerryAnimController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/CharacterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/CharacterController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/New.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/New/AttackAnimTerry.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/New/AttackAnimTerry.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/New/BlockAnimTerry.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/New/BlockAnimTerry.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/New/DamageAnimTerry.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/New/DamageAnimTerry.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/New/DownedAnimTerry.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/New/DownedAnimTerry.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/New/EmoteAnimTerry.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/New/EmoteAnimTerry.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/New/IdleAnimTerry.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/New/IdleAnimTerry.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/New/KnockbackAnimTerry.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/New/KnockbackAnimTerry.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/New/ReviveBackAnimTerry.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/New/ReviveBackAnimTerry.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/New/ReviveFrontAnimTerry.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/New/ReviveFrontAnimTerry.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/New/ReviveFullBodyAnimTerry.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/New/ReviveFullBodyAnimTerry.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/New/SpecialAnimTerry.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/New/SpecialAnimTerry.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/New/WalkAnimTerry.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/New/WalkAnimTerry.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/Old.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/Old/Attack.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/Old/Attack.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/Old/Block.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/Old/Block.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/Old/Damage.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/Old/Damage.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/Old/Downed.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/Old/Downed.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/Old/Idle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/Old/Idle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/Old/Knockback.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/Old/Knockback.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/Old/Revive.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/Old/Revive.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/Old/ReviveBack.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/Old/ReviveBack.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/Old/ReviveFront.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/Old/ReviveFront.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/Old/Special.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/Old/Special.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/Old/Walk.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/Old/Walk.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/NewSpriteSheets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/NewSpriteSheets/Terry_Attack_Sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/NewSpriteSheets/Terry_Attack_Sheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/NewSpriteSheets/Terry_Block_Sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/NewSpriteSheets/Terry_Block_Sheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/NewSpriteSheets/Terry_Damage_Sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/NewSpriteSheets/Terry_Damage_Sheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/NewSpriteSheets/Terry_Downed_Sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/NewSpriteSheets/Terry_Downed_Sheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/NewSpriteSheets/Terry_Emote_Sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/NewSpriteSheets/Terry_Emote_Sheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/NewSpriteSheets/Terry_Idle_Sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/NewSpriteSheets/Terry_Idle_Sheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/NewSpriteSheets/Terry_Knockback_Sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/NewSpriteSheets/Terry_Knockback_Sheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/NewSpriteSheets/Terry_Revive_Back_Sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/NewSpriteSheets/Terry_Revive_Back_Sheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/NewSpriteSheets/Terry_Revive_Front_Sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/NewSpriteSheets/Terry_Revive_Front_Sheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/NewSpriteSheets/Terry_Revive_Sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/NewSpriteSheets/Terry_Revive_Sheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/NewSpriteSheets/Terry_Special_Sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/NewSpriteSheets/Terry_Special_Sheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/NewSpriteSheets/Terry_Walk_Sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/NewSpriteSheets/Terry_Walk_Sheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/OldSpriteSheets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/OldSpriteSheets/Terry_Attack_Sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/OldSpriteSheets/Terry_Attack_Sheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/OldSpriteSheets/Terry_Block_Sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/OldSpriteSheets/Terry_Block_Sheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/OldSpriteSheets/Terry_Damage_Sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/OldSpriteSheets/Terry_Damage_Sheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/OldSpriteSheets/Terry_Downed_Sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/OldSpriteSheets/Terry_Downed_Sheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/OldSpriteSheets/Terry_Idle_Sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/OldSpriteSheets/Terry_Idle_Sheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/OldSpriteSheets/Terry_Knockback_Sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/OldSpriteSheets/Terry_Knockback_Sheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/OldSpriteSheets/Terry_Revive_Back_Sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/OldSpriteSheets/Terry_Revive_Back_Sheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/OldSpriteSheets/Terry_Revive_Front_Sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/OldSpriteSheets/Terry_Revive_Front_Sheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/OldSpriteSheets/Terry_Revive_Sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/OldSpriteSheets/Terry_Revive_Sheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/OldSpriteSheets/Terry_Special_Sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/OldSpriteSheets/Terry_Special_Sheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/OldSpriteSheets/Terry_Walk_Sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/SpriteSheets/OldSpriteSheets/Terry_Walk_Sheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animators/Dinos/AndyAnimController.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animators/Dinos/AndyAnimController.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animators/Dinos/NewTerryAnimController.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animators/Dinos/NewTerryAnimController.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animators/Dinos/ParisAnimController.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animators/Dinos/ParisAnimController.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animators/Dinos/SpencerAnimController.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animators/Dinos/SpencerAnimController.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animators/Dinos/TerryAnimController.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animators/Dinos/TerryAnimController.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/PlayerData/CharacterStats.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/PlayerData/CharacterStats.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/PlayerData/CharacterStats.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/PlayerData/CharacterStats.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/PlayerData/PlayerTransformData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/PlayerData/PlayerTransformData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/PlayerData/PlayerTransformData.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/PlayerData/PlayerTransformData.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Andy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Andy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Paris.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Paris.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Spencer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Spencer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Terry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Terry.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Final Game Scenes/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Final Game Scenes/Level 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Attacks/AOEAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Attacks/AOEAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Attacks/EnemyProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Attacks/EnemyProjectile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Attacks/MeleeAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Attacks/MeleeAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Items/HealthItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Items/HealthItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/AnimationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/AnimationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CharacterBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharacterBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Parasaurolophus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Parasaurolophus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Spinosaurus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Spinosaurus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Therizinosaurus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Therizinosaurus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Triceratops.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Triceratops.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/DELInputHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/DELInputHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/KnockbackHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/KnockbackHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/KnockbackManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/KnockbackManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/MainPlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/MainPlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/MeleeDamage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/MeleeDamage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCombatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCombatManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSO/CharacterStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSO/CharacterStats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSO/PlayerTransformData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSO/PlayerTransformData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/RevivePrompt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/RevivePrompt.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,9 +165,9 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyMeleeDamage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/KnockbackHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/MainPlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerHurtBox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/RevivePrompt.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/WitchPlayerController.cs" root0="SKIP_HIGHLIGHTING" />
@@ -124,7 +259,7 @@
       <workItem from="1749152837889" duration="2956000" />
       <workItem from="1750027012680" duration="10111000" />
       <workItem from="1750633039484" duration="4241000" />
-      <workItem from="1751105958965" duration="659000" />
+      <workItem from="1751105949731" duration="10472000" />
     </task>
     <servers />
   </component>

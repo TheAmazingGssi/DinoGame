@@ -13,54 +13,43 @@ MonoBehaviour:
   m_Name: CharacterStats
   m_EditorClassIdentifier: 
   characters:
-  - characterName: Triceratops (Terry)
-    health: 100
-    movementSpeed: 4
-    stamina: 50
-    damageMin: 15
-    damageMax: 20
-    attackSequenceCount: 2
-    attacksPerSecond: 1.5
-    specialAttackName: Forward Bash
-    specialAttackDamage: 20
-    specialAttackDescription: Bash forward a strong attack that knocks enemies back
-      you bash into.
-    specialAttackCost: 15
-  - characterName: Spinosaurus (Spencer)
-    health: 100
-    movementSpeed: 4
-    stamina: 50
+  - characterName: Triceratops
+    maxHealth: 100
+    movementSpeed: 5
     damageMin: 10
-    damageMax: 10
-    attackSequenceCount: 3
+    damageMax: 15
     attacksPerSecond: 1
-    specialAttackName: Chomp
-    specialAttackDamage: 20
-    specialAttackDescription: Bite an enemy from afar and grab it.
-    specialAttackCost: 15
-  - characterName: Parasaurolophus (Paris)
-    health: 100
-    movementSpeed: 4
+    attackSequenceCount: 2
+    specialAttackDamage: 25
+    specialAttackCost: 20
     stamina: 50
+  - characterName: Spinosaurus
+    maxHealth: 80
+    movementSpeed: 6
+    damageMin: 12
+    damageMax: 12
+    attacksPerSecond: 1.2
+    attackSequenceCount: 1
+    specialAttackDamage: 20
+    specialAttackCost: 15
+    stamina: 40
+  - characterName: Parasaurolophus
+    maxHealth: 60
+    movementSpeed: 7
+    damageMin: 8
+    damageMax: 12
+    attacksPerSecond: 1.5
+    attackSequenceCount: 1
+    specialAttackDamage: 15
+    specialAttackCost: 10
+    stamina: 30
+  - characterName: Therizinosaurus
+    maxHealth: 70
+    movementSpeed: 6
     damageMin: 15
     damageMax: 20
+    attacksPerSecond: 1.8
     attackSequenceCount: 3
-    attacksPerSecond: 1
-    specialAttackName: Roar Attack
-    specialAttackDamage: 20
-    specialAttackDescription: Roar in front of you for 20 damage, knocking back enemies
-      hit.
-    specialAttackCost: 15
-  - characterName: Therizinosaurus (Andrew)
-    health: 100
-    movementSpeed: 4
-    stamina: 50
-    damageMin: 5
-    damageMax: 7
-    attackSequenceCount: 2
-    attacksPerSecond: 3
-    specialAttackName: Claw Attack
-    specialAttackDamage: 20
-    specialAttackDescription: Slash enemies in front of you 4 times for 5 damage,
-      knocking back enemies you hit.
-    specialAttackCost: 15
+    specialAttackDamage: 30
+    specialAttackCost: 25
+    stamina: 35

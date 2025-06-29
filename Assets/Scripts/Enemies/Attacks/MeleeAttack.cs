@@ -10,7 +10,7 @@ public class MeleeAttack : EnemyAttack
         {
             Debug.Log($"combat manager found");
 
-            DamageArgs damageArgs = new DamageArgs
+            PDamageArgs damageArgs = new PDamageArgs
             {
                 Damage = enemyData.BaseDamage,
                 Source = gameObject
