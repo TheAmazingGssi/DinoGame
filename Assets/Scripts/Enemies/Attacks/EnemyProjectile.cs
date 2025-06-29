@@ -38,7 +38,7 @@ public class EnemyProjectile : MonoBehaviour
         if (collision.CompareTag(PLAYER))
         {
             combatManager = collision.GetComponent<PlayerCombatManager>();
-            combatManager.TakeDamage(new DamageArgs { Damage = damage });
+            combatManager.TakeDamage(new PDamageArgs { Damage = damage });
             Destroy(gameObject);
         }
     }

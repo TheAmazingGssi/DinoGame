@@ -14,7 +14,10 @@ public class EnemyData : ScriptableObject
 
     [SerializeField] private float speed;
 
+    [SerializeField] private int score;
 
+
+    public int Score => score;
     public float Speed => speed;
     public float AttackRange => attackRange;
     public float StopRange => stopRange;

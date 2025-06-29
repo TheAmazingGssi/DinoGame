@@ -97,7 +97,7 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    private void FlipSprite(bool facingLeft)
+    private void FlipSprite(bool facingLeft) 
     {
         isFacingLeft = facingLeft;
         spriteRenderer.flipX = facingLeft;

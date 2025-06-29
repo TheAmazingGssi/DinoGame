@@ -44,6 +44,8 @@ public class EnemyCombatManager : CombatManager
                 manager.AttackManager.OnPlayerDealtDamage(playerSource);
             }
         }
+
+        damageArgs.Source.AddScore(manager.EnemyData.Score);
     }
 
     private void SpawnDamageText(DamageArgs damageArgs)
