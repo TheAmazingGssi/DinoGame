@@ -38,12 +38,6 @@ AnimatorTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: IsBlocking
     m_EventTreshold: 0
-  - m_ConditionMode: 1
-    m_ConditionEvent: AttackTrigger
-    m_EventTreshold: 0
-  - m_ConditionMode: 1
-    m_ConditionEvent: SpecialTrigger
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: -7600880298890240648}
   m_DstState: {fileID: 0}
   m_Solo: 0
@@ -74,9 +68,9 @@ AnimatorStateMachine:
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 370, y: 40, z: 0}
-  m_EntryPosition: {x: 50, y: 120, z: 0}
+  m_EntryPosition: {x: 50, y: 110, z: 0}
   m_ExitPosition: {x: 360, y: 190, z: 0}
-  m_ParentStateMachinePosition: {x: 40, y: -50, z: 0}
+  m_ParentStateMachinePosition: {x: 30, y: 40, z: 0}
   m_DefaultState: {fileID: -4158027062986921887}
 --- !u!1101 &-7344393974089750489
 AnimatorStateTransition:
@@ -277,9 +271,6 @@ AnimatorTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: IsDamaged
     m_EventTreshold: 0
-  - m_ConditionMode: 1
-    m_ConditionEvent: KnockbackTrigger
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: -2779593546298215199}
   m_DstState: {fileID: 0}
   m_Solo: 0
@@ -359,7 +350,7 @@ AnimatorStateMachine:
   m_AnyStatePosition: {x: 280, y: 90, z: 0}
   m_EntryPosition: {x: 500, y: 80, z: 0}
   m_ExitPosition: {x: 310, y: 260, z: 0}
-  m_ParentStateMachinePosition: {x: 20, y: 20, z: 0}
+  m_ParentStateMachinePosition: {x: 480, y: 10, z: 0}
   m_DefaultState: {fileID: -4708015408023472806}
 --- !u!1107 &-2018999223078962075
 AnimatorStateMachine:
@@ -396,14 +387,14 @@ AnimatorStateMachine:
   - first: {fileID: -7600880298890240648}
     second:
     - {fileID: 6086230504606691569}
-  - first: {fileID: -2779593546298215199}
-    second:
-    - {fileID: 3923091999741669045}
   - first: {fileID: 2358853892161602856}
     second:
     - {fileID: -8499883462404550624}
     - {fileID: -847334050668446492}
     - {fileID: -3464358158937040087}
+  - first: {fileID: -2779593546298215199}
+    second:
+    - {fileID: 3923091999741669045}
   - first: {fileID: 2734200027088309976}
     second:
     - {fileID: -7338052773695333610}
@@ -492,12 +483,6 @@ AnimatorTransition:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: IsDowned
-    m_EventTreshold: 0
-  - m_ConditionMode: 1
-    m_ConditionEvent: ReviveTrigger
-    m_EventTreshold: 0
-  - m_ConditionMode: 1
-    m_ConditionEvent: EmoteTrigger
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 2734200027088309976}
   m_DstState: {fileID: 0}
@@ -783,9 +768,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 1
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.1
   m_TransitionOffset: 0
-  m_ExitTime: 0.72727275
+  m_ExitTime: 0.9
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
