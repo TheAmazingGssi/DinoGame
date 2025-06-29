@@ -27,7 +27,6 @@ public class DebugPlayerSpawner : MonoBehaviour
         yield return 1;
 
         PlayerEntity entity = playerInput.GetComponent<PlayerEntity>();
-        Debug.Log(PlayerEntity.PlayerList.Count);
         entity.CharacterType = playerCharacters[PlayerEntity.PlayerList.Count - 1];
         entity.SpawnPlayerController(multiplayerManager.playerSpawns[PlayerEntity.PlayerList.Count - 1].transform);
     }

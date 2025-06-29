@@ -8,6 +8,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 360251525065678738, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: characterType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632369837632200801, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2242870450885965078, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2242870450885965078, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2242870450885965078, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -48,9 +64,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4154660936162027529, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: characterType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4154660936162027529, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: characterStats
+      value: 
+      objectReference: {fileID: 11400000, guid: efe75148ee45c4d40b82c083fdaf37fd, type: 2}
+    - target: {fileID: 4154660936162027529, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 11400000, guid: 8219937a61ea28e4790c6da34fb6c448, type: 2}
     - target: {fileID: 4241924471051646355, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Spencer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772631282887250927, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5243410617948706567, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 410afa4156d413143ab7393bd58438cc, type: 2}
+    - target: {fileID: 9146728367405427678, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b60e41db14ea34949b9e1184d506266f, type: 3}
+    - target: {fileID: 9146728367405427678, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_DrawMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9146728367405427678, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

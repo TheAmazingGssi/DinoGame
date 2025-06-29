@@ -1,0 +1,520 @@
+fileFormatVersion: 2
+guid: 0c873559628e2f44abd5cb955712e63d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5365802682627337822
+    second: Andrew_Revive_Sheet_0
+  - first:
+      213: -4504332347290181604
+    second: Andrew_Revive_Sheet_1
+  - first:
+      213: 9034300006517155993
+    second: Andrew_Revive_Sheet_2
+  - first:
+      213: 5400169439385660300
+    second: Andrew_Revive_Sheet_3
+  - first:
+      213: 6807346507025976228
+    second: Andrew_Revive_Sheet_4
+  - first:
+      213: -9113369366765399657
+    second: Andrew_Revive_Sheet_5
+  - first:
+      213: -5634311335840434481
+    second: Andrew_Revive_Sheet_6
+  - first:
+      213: -6233421451487609545
+    second: Andrew_Revive_Sheet_7
+  - first:
+      213: 2755242375167015134
+    second: Andrew_Revive_Sheet_8
+  - first:
+      213: 8849133225023696649
+    second: Andrew_Revive_Sheet_9
+  - first:
+      213: 2095658347629268417
+    second: Andrew_Revive_Sheet_10
+  - first:
+      213: 4155124884782510036
+    second: Andrew_Revive_Sheet_11
+  - first:
+      213: -720844083046052898
+    second: Andrew_Revive_Sheet_12
+  - first:
+      213: 1143569590349389575
+    second: Andrew_Revive_Sheet_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 2500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Andrew_Revive_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2011
+        width: 971
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5e27d05c19277a40800000000000000
+      internalID: 5365802682627337822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew_Revive_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 2011
+        width: 971
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c10a77958956d71c0800000000000000
+      internalID: -4504332347290181604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew_Revive_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1942
+        y: 2011
+        width: 971
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 998a3ca7df7406d70800000000000000
+      internalID: 9034300006517155993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew_Revive_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 2913
+        y: 2011
+        width: 971
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8ba0896e7141fa40800000000000000
+      internalID: 5400169439385660300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew_Revive_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1341
+        width: 971
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ab874ec49d887e50800000000000000
+      internalID: 6807346507025976228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew_Revive_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 1341
+        width: 971
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 791950b78dec68180800000000000000
+      internalID: -9113369366765399657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew_Revive_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1942
+        y: 1341
+        width: 971
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc6364121b7eec1b0800000000000000
+      internalID: -5634311335840434481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew_Revive_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 2913
+        y: 1341
+        width: 971
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73df7c847307e79a0800000000000000
+      internalID: -6233421451487609545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew_Revive_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 671
+        width: 971
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed8fee1a7569c3620800000000000000
+      internalID: 2755242375167015134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew_Revive_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 671
+        width: 971
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90fe4af88cf6eca70800000000000000
+      internalID: 8849133225023696649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew_Revive_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1942
+        y: 671
+        width: 971
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cd4605f926451d10800000000000000
+      internalID: 2095658347629268417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew_Revive_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 2913
+        y: 671
+        width: 971
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dfe8d26118f9a930800000000000000
+      internalID: 4155124884782510036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew_Revive_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 971
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edb099b202c0ff5f0800000000000000
+      internalID: -720844083046052898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew_Revive_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 1
+        width: 971
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70fd6b8cb76cedf00800000000000000
+      internalID: 1143569590349389575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 7e354920572f8b14c9a4847e5c83e682
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Andrew_Revive_Sheet_0: 5365802682627337822
+      Andrew_Revive_Sheet_1: -4504332347290181604
+      Andrew_Revive_Sheet_10: 2095658347629268417
+      Andrew_Revive_Sheet_11: 4155124884782510036
+      Andrew_Revive_Sheet_12: -720844083046052898
+      Andrew_Revive_Sheet_13: 1143569590349389575
+      Andrew_Revive_Sheet_2: 9034300006517155993
+      Andrew_Revive_Sheet_3: 5400169439385660300
+      Andrew_Revive_Sheet_4: 6807346507025976228
+      Andrew_Revive_Sheet_5: -9113369366765399657
+      Andrew_Revive_Sheet_6: -5634311335840434481
+      Andrew_Revive_Sheet_7: -6233421451487609545
+      Andrew_Revive_Sheet_8: 2755242375167015134
+      Andrew_Revive_Sheet_9: 8849133225023696649
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,71 +1,51 @@
+using System;
 using UnityEngine;
 
-/*public class PlayerCombatManager : CombatManager
+public class PDamageArgs
 {
-    public void Initialize(float maxHealth)
-    {
-        currentMaxHealth = maxHealth;
-        currentHealth = maxHealth;
-        UpdateHealthBar();
-    }
+    public float Damage { get; set; }
+    public GameObject Source { get; set; }
+}
 
-    public override void TakeDamage(DamageArgs damageArgs) //gets called from the enemy
-    {
-        base.TakeDamage(damageArgs);
-        Debug.Log("Player took Damage");
-    }
-
-
-}*/
-
-public class PlayerCombatManager : CombatManager
+public class PlayerCombatManager : MonoBehaviour
 {
-    private static readonly int Hurt = Animator.StringToHash("Hurt");
-    private static readonly int Fallen = Animator.StringToHash("Fallen");
+    public float maxHealth;
+    public float currentHealth;
+    private MainPlayerController controller;
+    private Animator animator;
+    private AnimationController animController;
+    public event Action<PDamageArgs> OnDeath;
 
-    [SerializeField] private MainPlayerController playerController;
-    [SerializeField] private Animator animator;
-    [SerializeField] private TextMesh damageNumberPrefab;
+    public float CurrentHealth => currentHealth;
+    public float MaxHealth => maxHealth;
 
-    public void Initialize(float maxHealth, MainPlayerController controller, Animator playerAnimator)
+    public void Initialize(float maxHealth, MainPlayerController controller, Animator animator)
     {
-        currentMaxHealth = maxHealth;
-        currentHealth = maxHealth;
-        playerController = controller;
-        animator = playerAnimator;
-        UpdateHealthBar();
+        this.maxHealth = maxHealth;
+        this.currentHealth = maxHealth; // Initialize runtime health
+        this.controller = controller;
+        this.animator = animator;
+        this.animController = GetComponent<AnimationController>();
     }
 
-    public override void TakeDamage(DamageArgs damageArgs)
+    public void TakeDamage(PDamageArgs args)
     {
-        if (currentHealth <= 0 || !MainPlayerController.CanBeDamaged) return;
-        base.TakeDamage(damageArgs);
-        Debug.Log("Player took: " + damageArgs);
-        if (damageNumberPrefab)
-        {
-            TextMesh damagePrefabClone = Instantiate(damageNumberPrefab, transform.position, Quaternion.identity, transform);
-            damagePrefabClone.text = damageArgs.Damage.ToString();
-        }
-        if (animator != null)
-        {
-            animator.SetTrigger(Hurt);
-        }
+        if (!MainPlayerController.CanBeDamaged) return;
+
+        currentHealth -= args.Damage;
+        Debug.Log($"{gameObject.name} took {args.Damage} damage, health: {currentHealth}");
+        animController.TriggerDamaged();
+
         if (currentHealth <= 0)
         {
-            animator?.SetTrigger(Fallen);
+            OnDeath?.Invoke(args);
         }
     }
 
-    protected override void HandleDeath()
+    public void RestoreHealthByPercent(float percent)
     {
-        base.HandleDeath(); // Invokes OnDeath event
-    }
-
-    public void Revive(float healthFraction)
-    {
-        currentHealth = healthFraction * currentMaxHealth;
-        UpdateHealthBar();
-        animator?.ResetTrigger(Fallen);
-        Debug.Log($"{playerController.name} revived with {currentHealth} health");
+        float healthToAdd = maxHealth * (percent / 100f);
+        currentHealth = Mathf.Min(currentHealth + healthToAdd, maxHealth);
+        Debug.Log($"{gameObject.name} restored {healthToAdd} health, now at {currentHealth}/{maxHealth}");
     }
 }

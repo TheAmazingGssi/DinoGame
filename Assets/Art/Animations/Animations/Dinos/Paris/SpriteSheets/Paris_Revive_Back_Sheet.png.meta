@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: b6aa2b97345b22b41b1ed5e1b9743404
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3387468968624758090
+    second: Paris_Revive_Back_Sheet_0
+  - first:
+      213: 3248781843736486393
+    second: Paris_Revive_Back_Sheet_1
+  - first:
+      213: -4713347372894295237
+    second: Paris_Revive_Back_Sheet_2
+  - first:
+      213: 8409489754357540569
+    second: Paris_Revive_Back_Sheet_3
+  - first:
+      213: 3829851468023693633
+    second: Paris_Revive_Back_Sheet_4
+  - first:
+      213: -3756199997615234002
+    second: Paris_Revive_Back_Sheet_5
+  - first:
+      213: 4215648800393853147
+    second: Paris_Revive_Back_Sheet_6
+  - first:
+      213: 2673030512789984626
+    second: Paris_Revive_Back_Sheet_7
+  - first:
+      213: -2515244907928674164
+    second: Paris_Revive_Back_Sheet_8
+  - first:
+      213: 3370566224126614736
+    second: Paris_Revive_Back_Sheet_9
+  - first:
+      213: 1648447399101539974
+    second: Paris_Revive_Back_Sheet_10
+  - first:
+      213: 399804635578861583
+    second: Paris_Revive_Back_Sheet_11
+  - first:
+      213: 2554136010634626319
+    second: Paris_Revive_Back_Sheet_12
+  - first:
+      213: 3671600328268740547
+    second: Paris_Revive_Back_Sheet_13
+  - first:
+      213: 4375762963779536365
+    second: Paris_Revive_Back_Sheet_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 3500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Paris_Revive_Back_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2198
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4d99825415b20f20800000000000000
+      internalID: 3387468968624758090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Revive_Back_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 2198
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f1e6a4cfddf51d20800000000000000
+      internalID: 3248781843736486393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Revive_Back_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 2198
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3b6d976983d69eb0800000000000000
+      internalID: -4713347372894295237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Revive_Back_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 3294
+        y: 2198
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d6a4ce406284b470800000000000000
+      internalID: 8409489754357540569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Revive_Back_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1466
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1418f066e9d562530800000000000000
+      internalID: 3829851468023693633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Revive_Back_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 1466
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2422dcd00c4fdbc0800000000000000
+      internalID: -3756199997615234002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Revive_Back_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 1466
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd8f64d9f3ef08a30800000000000000
+      internalID: 4215648800393853147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Revive_Back_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 3294
+        y: 1466
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27590acc613881520800000000000000
+      internalID: 2673030512789984626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Revive_Back_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 734
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c802dc3251e081dd0800000000000000
+      internalID: -2515244907928674164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Revive_Back_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 734
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dc1ff07f18a6ce20800000000000000
+      internalID: 3370566224126614736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Revive_Back_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 734
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6862d56fc2670e610800000000000000
+      internalID: 1648447399101539974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Revive_Back_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 3294
+        y: 734
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f088b33a2346c8500800000000000000
+      internalID: 399804635578861583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Revive_Back_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0509e55b2d127320800000000000000
+      internalID: 2554136010634626319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Revive_Back_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 2
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c77aabab0524f230800000000000000
+      internalID: 3671600328268740547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Revive_Back_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 2
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de5c3655b35d9bc30800000000000000
+      internalID: 4375762963779536365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 148fa91be4cc179458948ba1717e379a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Paris_Revive_Back_Sheet_0: 3387468968624758090
+      Paris_Revive_Back_Sheet_1: 3248781843736486393
+      Paris_Revive_Back_Sheet_10: 1648447399101539974
+      Paris_Revive_Back_Sheet_11: 399804635578861583
+      Paris_Revive_Back_Sheet_12: 2554136010634626319
+      Paris_Revive_Back_Sheet_13: 3671600328268740547
+      Paris_Revive_Back_Sheet_14: 4375762963779536365
+      Paris_Revive_Back_Sheet_2: -4713347372894295237
+      Paris_Revive_Back_Sheet_3: 8409489754357540569
+      Paris_Revive_Back_Sheet_4: 3829851468023693633
+      Paris_Revive_Back_Sheet_5: -3756199997615234002
+      Paris_Revive_Back_Sheet_6: 4215648800393853147
+      Paris_Revive_Back_Sheet_7: 2673030512789984626
+      Paris_Revive_Back_Sheet_8: -2515244907928674164
+      Paris_Revive_Back_Sheet_9: 3370566224126614736
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
