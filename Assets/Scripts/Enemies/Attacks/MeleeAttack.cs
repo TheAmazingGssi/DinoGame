@@ -7,7 +7,7 @@ public class MeleeAttack : EnemyAttack
     protected override void ApplyDamage()
     {
         Debug.Log("Damage");
-        DamageArgs damageArgs = new DamageArgs { Damage = manager.EnemyData.BaseDamage, Source = manager.CombatManager };
+        DamageArgs damageArgs = new DamageArgs { Damage = manager.EnemyData.BaseDamage};
 
         manager.AttackManager.PlayerCombatManager.TakeDamage(damageArgs);
 
