@@ -12,7 +12,7 @@ public class EnemyAOEAttack : EnemyAttack
     {
         List<PlayerCombatManager> playersInRange = GetPlayersInRange(AttackRange);
 
-        DamageArgs damageArgs = new DamageArgs{Damage = enemyData.BaseDamage, Source = gameObject};
+        PDamageArgs damageArgs = new PDamageArgs{Damage = enemyData.BaseDamage, Source = gameObject};
 
         foreach (PlayerCombatManager player in playersInRange)
         {

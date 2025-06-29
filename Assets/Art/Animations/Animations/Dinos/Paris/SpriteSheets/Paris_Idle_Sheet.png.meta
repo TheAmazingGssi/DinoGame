@@ -1,0 +1,520 @@
+fileFormatVersion: 2
+guid: 7958e2c33b940c14db7f98a4030b0444
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7040689190065539860
+    second: Paris_Idle_Sheet_0
+  - first:
+      213: -1669498524145731368
+    second: Paris_Idle_Sheet_1
+  - first:
+      213: -5675327406726610344
+    second: Paris_Idle_Sheet_2
+  - first:
+      213: 6368200359238688743
+    second: Paris_Idle_Sheet_3
+  - first:
+      213: -3809886731786612028
+    second: Paris_Idle_Sheet_4
+  - first:
+      213: -6909868713766112944
+    second: Paris_Idle_Sheet_5
+  - first:
+      213: 4877321944754211865
+    second: Paris_Idle_Sheet_6
+  - first:
+      213: 1182525181518267492
+    second: Paris_Idle_Sheet_7
+  - first:
+      213: 2254465887004301844
+    second: Paris_Idle_Sheet_8
+  - first:
+      213: -5818264794315939874
+    second: Paris_Idle_Sheet_9
+  - first:
+      213: -6040732954894362065
+    second: Paris_Idle_Sheet_10
+  - first:
+      213: 4097659707780375922
+    second: Paris_Idle_Sheet_11
+  - first:
+      213: 232463772288115257
+    second: Paris_Idle_Sheet_12
+  - first:
+      213: -8737487508659148511
+    second: Paris_Idle_Sheet_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 3500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Paris_Idle_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2198
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce4f53c1c727a4e90800000000000000
+      internalID: -7040689190065539860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Idle_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 2198
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d8314b00ffb4d8e0800000000000000
+      internalID: -1669498524145731368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Idle_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 2198
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8528502facf2d31b0800000000000000
+      internalID: -5675327406726610344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Idle_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 3294
+        y: 2198
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7efdfee8c74606850800000000000000
+      internalID: 6368200359238688743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Idle_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1466
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c2926df330902bc0800000000000000
+      internalID: -3809886731786612028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Idle_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 1466
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 051b26fc3073b10a0800000000000000
+      internalID: -6909868713766112944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Idle_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 1466
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91cca44b77abfa340800000000000000
+      internalID: 4877321944754211865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Idle_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 3294
+        y: 1466
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 464c956236c296010800000000000000
+      internalID: 1182525181518267492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Idle_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 734
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41a902197c8794f10800000000000000
+      internalID: 2254465887004301844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Idle_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 734
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edf13adfefe514fa0800000000000000
+      internalID: -5818264794315939874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Idle_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 734
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2a9688f1610b2ca0800000000000000
+      internalID: -6040732954894362065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Idle_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 3294
+        y: 734
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2752eac3bcfcdd830800000000000000
+      internalID: 4097659707780375922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Idle_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 932616ab190e93300800000000000000
+      internalID: 232463772288115257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris_Idle_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 2
+        width: 1098
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12965f077653eb680800000000000000
+      internalID: -8737487508659148511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 34e20a77be3f6704f9c00ac78f7d5807
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Paris_Idle_Sheet_0: -7040689190065539860
+      Paris_Idle_Sheet_1: -1669498524145731368
+      Paris_Idle_Sheet_10: -6040732954894362065
+      Paris_Idle_Sheet_11: 4097659707780375922
+      Paris_Idle_Sheet_12: 232463772288115257
+      Paris_Idle_Sheet_13: -8737487508659148511
+      Paris_Idle_Sheet_2: -5675327406726610344
+      Paris_Idle_Sheet_3: 6368200359238688743
+      Paris_Idle_Sheet_4: -3809886731786612028
+      Paris_Idle_Sheet_5: -6909868713766112944
+      Paris_Idle_Sheet_6: 4877321944754211865
+      Paris_Idle_Sheet_7: 1182525181518267492
+      Paris_Idle_Sheet_8: 2254465887004301844
+      Paris_Idle_Sheet_9: -5818264794315939874
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -15,7 +15,7 @@ public class HealthItem : MonoBehaviour
             Debug.Log("collision in hp is player");
 
             combatManager = collision.GetComponent<PlayerCombatManager>();
-            if (combatManager.CurrentHealth == combatManager.CurrentMaxHealth)
+            if (combatManager.currentHealth == combatManager.maxHealth)
             {
                 Debug.Log("collision in hp and combat manager found");
 

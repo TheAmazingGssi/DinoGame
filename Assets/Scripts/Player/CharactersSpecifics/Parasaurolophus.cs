@@ -3,14 +3,20 @@ using UnityEngine;
 
 public class Parasaurolophus : CharacterBase
 {
+    [SerializeField] private float specialAttackRange = 3f; // GDD: 3 units
+    [SerializeField] private float specialActivationTime = 0.2f; // Brief activation
+
+    public MeleeDamage SpecialMeleeDamage => specialMeleeDamage;
+
     public override IEnumerator PerformAttack(float damage, int attackCount, System.Action<float> onAttack)
     {
-        float attackInterval = 1f / stats.attacksPerSecond; // 1 attack/s = 1s
-        for (int i = 0; i < attackCount; i++) // 3 attacks
+        float attackInterval = 1f / stats.attacksPerSecond;
+        for (int i = 0; i < attackCount; i++)
         {
             if (rightMeleeColliderGO != null && leftMeleeColliderGO != null)
             {
                 GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
+                MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
                 activeCollider.SetActive(true);
                 onAttack?.Invoke(damage);
                 yield return new WaitForSeconds(enableDuration);
@@ -23,15 +29,12 @@ public class Parasaurolophus : CharacterBase
 
     public override IEnumerator PerformSpecial(System.Action<float> onSpecial)
     {
-        if (rightMeleeColliderGO != null && leftMeleeColliderGO != null)
+        if (specialColliderGO != null)
         {
-            // AOE: Activate both colliders
-            rightMeleeColliderGO.SetActive(true);
-            leftMeleeColliderGO.SetActive(true);
-            onSpecial?.Invoke(stats.specialAttackDamage); // 20 damage
-            yield return new WaitForSeconds(enableDuration);
-            rightMeleeColliderGO.SetActive(false);
-            leftMeleeColliderGO.SetActive(false);
+            specialColliderGO.SetActive(true);
+            onSpecial?.Invoke(stats.specialAttackDamage);
+            yield return new WaitForSeconds(specialActivationTime);
+            specialColliderGO.SetActive(false);
         }
     }
 }

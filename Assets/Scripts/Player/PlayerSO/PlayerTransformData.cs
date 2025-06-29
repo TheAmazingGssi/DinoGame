@@ -1,7 +1,7 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "PlayerTransformData", menuName = "Scriptable Objects/PlayerTransformData")]
+[CreateAssetMenu(fileName = "PlayerTransformData", menuName = "AstroSaurs/PlayerTransformData")]
 public class PlayerTransformData : ScriptableObject
 {
-    public Transform PlayerTransform {  get; set; }
+    public Transform PlayerTransform;
 }
