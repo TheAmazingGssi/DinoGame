@@ -8,6 +8,18 @@ public class EnemyController : MonoBehaviour
 
     [SerializeField] EnemyManager manager;
 
+    [SerializeField] private float patrolRange = 3f;
+    [SerializeField] private float patrolSpeed = 1f;
+    [SerializeField] private float waitTimeAtEdge = 2f;
+    [SerializeField] private float stuckTimeThreshold = 2f;
+
+    private Vector3 patrolStartPos;
+    private int patrolDirection = 1;
+    private float waitTimer = 0f;
+    private float stuckTimer = 0f;
+    private Vector3 lastPosition;
+    private bool isWaiting = false;
+
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
@@ -29,6 +41,9 @@ public class EnemyController : MonoBehaviour
     {
         rb.gravityScale = 0;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+        patrolStartPos = transform.position;
+        lastPosition = transform.position;
     }
 
     private void Update()
@@ -69,7 +84,7 @@ public class EnemyController : MonoBehaviour
         }
         else
         {
-            moveDirection = Vector3.zero;
+            Patrol();        
         }
 
         if (moveDirection.x > 0 && isFacingLeft)
@@ -84,6 +99,59 @@ public class EnemyController : MonoBehaviour
         animator.SetFloat(Speed, moveDirection.magnitude);
     }
 
+    private void Patrol()
+    {
+        float distanceFromStart = transform.position.x - patrolStartPos.x;
+
+        if (Vector3.Distance(transform.position, lastPosition) < 0.01f)
+        {
+            stuckTimer += Time.deltaTime;
+            if (stuckTimer >= stuckTimeThreshold)
+            {
+                patrolDirection *= -1;
+                stuckTimer = 0f;
+                isWaiting = true;
+                waitTimer = waitTimeAtEdge;
+            }
+        }
+        else
+        {
+            stuckTimer = 0f;
+        }
+
+        lastPosition = transform.position;
+
+        if (isWaiting)
+        {
+            moveDirection = Vector3.zero;
+            waitTimer -= Time.deltaTime;
+            if (waitTimer <= 0f)
+            {
+                isWaiting = false;
+            }
+            return;
+        }
+
+        if (Mathf.Abs(distanceFromStart) >= patrolRange)
+        {
+            patrolDirection *= -1;
+            isWaiting = true;
+            waitTimer = waitTimeAtEdge;
+            moveDirection = Vector3.zero;
+            return;
+        }
+
+        moveDirection = new Vector3(patrolDirection, 0f, 0f);
+
+        if (patrolDirection > 0 && isFacingLeft)
+        {
+            FlipSprite(true);
+        }
+        else if (patrolDirection < 0 && !isFacingLeft)
+        {
+            FlipSprite(false);
+        }
+    }
     private void StayInBounds()
     {
         if (isOverGround)

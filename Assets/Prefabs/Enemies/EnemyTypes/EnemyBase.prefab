@@ -21,7 +21,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1081683106100673034
 Transform:
   m_ObjectHideFlags: 0
@@ -104,6 +104,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 7022572441651464058}
+  patrolRange: 3
+  patrolSpeed: 1
+  waitTimeAtEdge: 2
+  stuckTimeThreshold: 2
 --- !u!50 &7042898619641567151
 Rigidbody2D:
   serializedVersion: 5

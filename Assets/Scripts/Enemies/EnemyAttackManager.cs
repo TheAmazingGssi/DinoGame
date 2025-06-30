@@ -82,7 +82,8 @@ public class EnemyAttackManager : MonoBehaviour
     {
         if (playersInRange.Count == 0) return;
 
-        PlayerCombatManager targetPlayer = null;
+        //PlayerCombatManager targetPlayer = null;
+        PlayerCombatManager targetPlayer;
 
         if (lastPlayerToDamage && playersInRange.Contains(lastPlayerToDamage))
         {
