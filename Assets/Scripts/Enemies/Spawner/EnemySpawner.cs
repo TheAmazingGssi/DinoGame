@@ -15,10 +15,6 @@ public class EnemySpawner : MonoBehaviour
 
     private bool wasTriggered = false;
 
-    private void Start()
-    {
-        EnemiesInWave = PlayerEntity.PlayerList.Count * 2;
-    }
     private IEnumerator SpawnWave()
     {
         for (int i = 0; i < EnemiesInWave; i++)
@@ -30,10 +26,12 @@ public class EnemySpawner : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(collision.tag);
         if(collision.CompareTag(Player))
         {
             if(!wasTriggered)
             {
+                EnemiesInWave = PlayerEntity.PlayerList.Count * 2;
                 StartCoroutine(SpawnWave());
                 wasTriggered = true;
             }

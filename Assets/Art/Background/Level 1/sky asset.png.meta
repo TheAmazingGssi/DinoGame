@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a2366a9df83eea546bc6902ee0d1775e
+guid: bd4e24ef9aa5c084daa14c6de4b19fed
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2790162786774331717
-    second: parallax sky_0
+      213: 2061677243619453686
+    second: sky asset_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,43 +109,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: parallax sky_0
+      name: sky asset_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 5760
-        height: 1080
+        width: 5461
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 541b23b8546a8b620800000000000000
-      internalID: 2790162786774331717
+      spriteID: 6faa173a78c8c9c10800000000000000
+      internalID: 2061677243619453686
       vertices: []
       indices: 
       edges: []
@@ -164,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      parallax sky_0: 2790162786774331717
+      sky asset_0: 2061677243619453686
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

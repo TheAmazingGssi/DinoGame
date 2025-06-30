@@ -1,11 +1,6 @@
 using System;
 using UnityEngine;
 
-public class PDamageArgs
-{
-    public float Damage { get; set; }
-    public GameObject Source { get; set; }
-}
 
 public class PlayerCombatManager : MonoBehaviour
 {
@@ -14,7 +9,7 @@ public class PlayerCombatManager : MonoBehaviour
     private MainPlayerController controller;
     private Animator animator;
     private AnimationController animController;
-    public event Action<PDamageArgs> OnDeath;
+    public event Action<DamageArgs> OnDeath;
 
     public float CurrentHealth => currentHealth;
     public float MaxHealth => maxHealth;
@@ -28,7 +23,7 @@ public class PlayerCombatManager : MonoBehaviour
         this.animController = GetComponent<AnimationController>();
     }
 
-    public void TakeDamage(PDamageArgs args)
+    public void TakeDamage(DamageArgs args)
     {
         if (!MainPlayerController.CanBeDamaged) return;
 
