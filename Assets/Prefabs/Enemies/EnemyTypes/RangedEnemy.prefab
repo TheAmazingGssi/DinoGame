@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1081683106100673034, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.003201
+      value: 26.123539
       objectReference: {fileID: 0}
     - target: {fileID: 1081683106100673034, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3797457
+      value: -0.34715354
       objectReference: {fileID: 0}
     - target: {fileID: 1081683106100673034, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -66,13 +66,15 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 66374662c63531548ae4f34a2abdda4c, type: 2}
     - target: {fileID: 7184945894762929075, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_Radius
-      value: 1.09
+      value: 39.71
       objectReference: {fileID: 0}
     - target: {fileID: 7184945894762929075, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5543341010220057178, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+    - {fileID: 6034100410105183527, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -99,9 +101,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 8926162269741413802}
   attackCooldown: 3
-  projectile: {fileID: 4382386036968754117, guid: d371f4786fc4fa74caa80cbf6c0f1f7e, type: 3}
-  projectileScript: {fileID: 7339243099675818791, guid: d371f4786fc4fa74caa80cbf6c0f1f7e, type: 3}
+  projectilePrefab: {fileID: 4382386036968754117, guid: d371f4786fc4fa74caa80cbf6c0f1f7e, type: 3}
   projectileSpeed: 4
+  damageDelay: 0.1
 --- !u!114 &8926162269741413802 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7022572441651464058, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}

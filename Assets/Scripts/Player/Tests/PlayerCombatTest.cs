@@ -16,7 +16,7 @@ public class PlayerCombatManager : CombatManager
     }
 
 
-}*/
+}
 
 using UnityEngine;
 
@@ -60,3 +60,4 @@ public class PlayerCombatTest : CombatManager
         UpdateHealthBar();
     }
 }
+*/

@@ -19,7 +19,8 @@ public class AnimationController : MonoBehaviour
 
     public void SetAnimationSpeed(float speed)
     {
-        animator.SetFloat("AnimationSpeed", speed);
+        // Disabled due to console errors - Maayan
+        // animator.SetFloat("AnimationSpeed", speed);
     }
 
     public void TriggerAttack()
@@ -35,7 +36,7 @@ public class AnimationController : MonoBehaviour
     public void SetBlocking(bool isBlocking)
     {
         animator.SetBool("IsBlocking", isBlocking);
-        SetBlockAnimationLoop(!isBlocking); // Ensure Block holds last frame
+        // SetBlockAnimationLoop(!isBlocking); // Disabled as Block holds last frame naturally
     }
 
     public void SetDowned(bool isDowned)
@@ -43,9 +44,9 @@ public class AnimationController : MonoBehaviour
         animator.SetBool("IsDowned", isDowned);
     }
 
-    public void SetRevived(bool isRevived)
+    public void SetRevived()
     {
-        animator.SetBool("IsRevived", isRevived);
+        animator.SetTrigger("Revive");
     }
 
     public void TriggerDamaged()
@@ -61,14 +62,5 @@ public class AnimationController : MonoBehaviour
     public void TriggerEmote()
     {
         animator.SetTrigger("Emote");
-    }
-
-    private void SetBlockAnimationLoop(bool loop)
-    {
-        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-        if (stateInfo.IsName("Block"))
-        {
-            animator.SetBool("IsBlocking", loop);
-        }
     }
 }

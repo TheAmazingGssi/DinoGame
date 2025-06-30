@@ -19,14 +19,13 @@ public class EnemySpawner : MonoBehaviour
     {
         for (int i = 0; i < EnemiesInWave; i++)
         {
-            Instantiate(EnemyPrefab, spawnPoints[Random.Range(0, spawnPoints.Length)].position, Quaternion.identity);
+            Instantiate(EnemyPrefab, spawnPoints[Random.Range(0, spawnPoints.Length)]);
             yield return new WaitForSeconds(Random.Range(MinSpawnTime, MaxSpawnTime));
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Debug.Log(collision.tag);
         if(collision.CompareTag(Player))
         {
             if(!wasTriggered)

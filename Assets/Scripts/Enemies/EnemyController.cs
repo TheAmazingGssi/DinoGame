@@ -4,7 +4,6 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     private static readonly int Speed = Animator.StringToHash("Speed");
-    private const string Ground = "Ground";
 
     [SerializeField] EnemyManager manager;
 
@@ -25,7 +24,6 @@ public class EnemyController : MonoBehaviour
     private Animator animator;
     private EnemyData enemyData;
     private Transform currentTarget;
-    private bool isOverGround = true;
     private Vector3 moveDirection = Vector3.zero;
     private bool isFacingLeft = false;
 
@@ -44,11 +42,7 @@ public class EnemyController : MonoBehaviour
 
         patrolStartPos = transform.position;
         lastPosition = transform.position;
-    }
-
-    private void Update()
-    {
-        StayInBounds();
+        FlipSprite(patrolDirection < 0);
     }
 
     private void FixedUpdate()
@@ -58,43 +52,47 @@ public class EnemyController : MonoBehaviour
 
     private void Movement()
     {
+        if (manager.AttackManager.IsAttacking)
+        {
+            rb.linearVelocity = Vector2.zero;
+            moveDirection = Vector3.zero;
+            animator.SetFloat(Speed, 0f);
+            return;
+        }
+
         currentTarget = manager.AttackManager.CurrentTarget;
 
         if (currentTarget != null)
         {
             float distanceToTarget = Vector3.Distance(transform.position, currentTarget.position);
 
-            if (distanceToTarget > enemyData.StopRange && isOverGround)
+            if (distanceToTarget > enemyData.StopRange)
             {
                 moveDirection = (currentTarget.position - transform.position).normalized;
-            }
-            else if (distanceToTarget <= enemyData.StopRange)
-            {
-                moveDirection = Vector3.zero;
             }
             else
             {
                 moveDirection = Vector3.zero;
-            }
-
-            if (distanceToTarget <= enemyData.StopRange)
-            {
-                //FlipSprite(transform.position.x - currentTarget.position.x > 0);
+                bool shouldFaceLeft = transform.position.x > currentTarget.position.x;
+                FlipSprite(shouldFaceLeft);
             }
         }
         else
         {
-            Patrol();        
+            Patrol();
         }
 
         if (moveDirection.x > 0 && isFacingLeft)
         {
-            FlipSprite(true);
+            FlipSprite(false);
         }
         else if (moveDirection.x < 0 && !isFacingLeft)
         {
-            FlipSprite(false);
+            FlipSprite(true);
         }
+
+        Vector2 movement = new Vector2(moveDirection.x, moveDirection.y) * enemyData.Speed;
+        rb.linearVelocity = movement;
 
         animator.SetFloat(Speed, moveDirection.magnitude);
     }
@@ -105,7 +103,7 @@ public class EnemyController : MonoBehaviour
 
         if (Vector3.Distance(transform.position, lastPosition) < 0.01f)
         {
-            stuckTimer += Time.deltaTime;
+            stuckTimer += Time.fixedDeltaTime;
             if (stuckTimer >= stuckTimeThreshold)
             {
                 patrolDirection *= -1;
@@ -124,17 +122,23 @@ public class EnemyController : MonoBehaviour
         if (isWaiting)
         {
             moveDirection = Vector3.zero;
-            waitTimer -= Time.deltaTime;
+            waitTimer -= Time.fixedDeltaTime;
             if (waitTimer <= 0f)
             {
                 isWaiting = false;
+                FlipSprite(patrolDirection < 0);
             }
-            return;
+            else
+            {
+                return;
+            }
         }
 
-        if (Mathf.Abs(distanceFromStart) >= patrolRange)
+        if (Mathf.Abs(distanceFromStart) > patrolRange)
         {
-            patrolDirection *= -1;
+
+            patrolStartPos = transform.position;
+            patrolDirection = Random.value < 0.5f ? -1 : 1;
             isWaiting = true;
             waitTimer = waitTimeAtEdge;
             moveDirection = Vector3.zero;
@@ -142,48 +146,11 @@ public class EnemyController : MonoBehaviour
         }
 
         moveDirection = new Vector3(patrolDirection, 0f, 0f);
-
-        if (patrolDirection > 0 && isFacingLeft)
-        {
-            FlipSprite(true);
-        }
-        else if (patrolDirection < 0 && !isFacingLeft)
-        {
-            FlipSprite(false);
-        }
-    }
-    private void StayInBounds()
-    {
-        if (isOverGround)
-        {
-            Vector2 movement = new Vector2(moveDirection.x, moveDirection.y) * enemyData.Speed;
-            rb.linearVelocity = movement;
-        }
-        else
-        {
-            rb.linearVelocity = Vector2.zero;
-        }
     }
 
-    private void FlipSprite(bool facingLeft) 
+    private void FlipSprite(bool facingLeft)
     {
         isFacingLeft = facingLeft;
-        spriteRenderer.flipX = facingLeft;
+        spriteRenderer.flipX = !facingLeft;
     }
-
-/*    private void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.CompareTag(Ground))
-        {
-            isOverGround = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag(Ground))
-        {
-            isOverGround = false;
-        }
-    }*/
 }

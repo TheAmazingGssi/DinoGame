@@ -1,11 +1,13 @@
 using System;
 using UnityEngine;
 
-
 public class PlayerCombatManager : MonoBehaviour
 {
-    public float maxHealth;
-    public float currentHealth;
+    private float maxHealth;
+    private float currentHealth;
+    private float maxStamina;
+    private float currentStamina;
+    private float staminaRegenRate = 10f; // Moved from MainPlayerController
     private MainPlayerController controller;
     private Animator animator;
     private AnimationController animController;
@@ -13,11 +15,15 @@ public class PlayerCombatManager : MonoBehaviour
 
     public float CurrentHealth => currentHealth;
     public float MaxHealth => maxHealth;
+    public float CurrentStamina => currentStamina;
+    public float MaxStamina => maxStamina;
 
-    public void Initialize(float maxHealth, MainPlayerController controller, Animator animator)
+    public void Initialize(float maxHealth, float maxStamina, MainPlayerController controller, Animator animator)
     {
         this.maxHealth = maxHealth;
-        this.currentHealth = maxHealth; // Initialize runtime health
+        this.currentHealth = maxHealth;
+        this.maxStamina = maxStamina;
+        this.currentStamina = maxStamina;
         this.controller = controller;
         this.animator = animator;
         this.animController = GetComponent<AnimationController>();
@@ -33,6 +39,7 @@ public class PlayerCombatManager : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            currentHealth = 0;
             OnDeath?.Invoke(args);
         }
     }
@@ -41,6 +48,24 @@ public class PlayerCombatManager : MonoBehaviour
     {
         float healthToAdd = maxHealth * (percent / 100f);
         currentHealth = Mathf.Min(currentHealth + healthToAdd, maxHealth);
-        Debug.Log($"{gameObject.name} restored {healthToAdd} health, now at {currentHealth}/{maxHealth}");
+        currentStamina = maxStamina; // Reset stamina on revive
+        Debug.Log($"{gameObject.name} restored {healthToAdd} health, now at {currentHealth}/{maxHealth}, stamina: {currentStamina}/{maxStamina}");
+    }
+
+    public bool DeductStamina(float amount)
+    {
+        if (currentStamina >= amount)
+        {
+            currentStamina -= amount;
+            Debug.Log($"{gameObject.name} used {amount} stamina, now at {currentStamina}/{maxStamina}");
+            return true;
+        }
+        Debug.Log($"{gameObject.name} insufficient stamina: {currentStamina}/{amount}");
+        return false;
+    }
+
+    public void RegenerateStamina(float deltaTime)
+    {
+        currentStamina = Mathf.Min(maxStamina, currentStamina + staminaRegenRate * deltaTime);
     }
 }

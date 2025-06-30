@@ -1,15 +1,18 @@
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Events;
 
 public struct DamageArgs
 {
     public float Damage;
-    public MainPlayerController Source; //only for players
+    public MainPlayerController SourceMPC; //only for players
+    public GameObject SourceGO; //only for players
 
-    public DamageArgs(float damage, MainPlayerController source = null)
+    public DamageArgs(float damage, MainPlayerController source = null, [CanBeNull] GameObject sourceGO = null)
     {
         Damage = damage;
-        Source = source;
+        SourceMPC = source;
+        SourceGO = sourceGO;
     }
 }
 

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyCombatManager : CombatManager
@@ -8,7 +9,7 @@ public class EnemyCombatManager : CombatManager
     [SerializeField] private TextMesh damageNumberPrefab;
 
     [SerializeField] private bool isDead = false;
-
+    [SerializeField] private bool isHurt = false;
     public void Initialize(float maxHealth)
     {
         currentMaxHealth = maxHealth;
@@ -23,29 +24,42 @@ public class EnemyCombatManager : CombatManager
             HandleDeath();
             isDead = false;
         }
+        if(isHurt)
+        {
+            manager.Animator.SetTrigger(Hurt);
+        }
     }
 
     public override void TakeDamage(DamageArgs damageArgs)
     {
         base.TakeDamage(damageArgs);
+        Debug.Log($"Player dealt" + damageArgs.Damage);
+
+        manager.Animator.SetTrigger(Hurt);
 
         if (damageNumberPrefab)
         {
             SpawnDamageText(damageArgs);
-            manager.Animator.SetTrigger(Hurt);
         }
 
-        if (damageArgs.Source != null)
+        if (damageArgs.SourceMPC != null)
         {
-            PlayerCombatManager playerSource = damageArgs.Source.GetComponent<PlayerCombatManager>();
+            PlayerCombatManager playerSource = damageArgs.SourceMPC.GetComponent<PlayerCombatManager>();
             if (playerSource != null)
             {
-                //manager.OnPlayerDealtDamage(playerSource);
                 manager.AttackManager.OnPlayerDealtDamage(playerSource);
             }
         }
 
-        damageArgs.Source.AddScore(manager.EnemyData.Score); //NULL REFRENCE
+        damageArgs.SourceMPC.AddScore(manager.EnemyData.Score);
+
+        StartCoroutine(AnimationDelay());
+    }
+
+    private IEnumerator AnimationDelay()
+    {
+        yield return new WaitForSeconds(0.13f);
+        manager.Animator.ResetTrigger(Hurt);
     }
 
     private void SpawnDamageText(DamageArgs damageArgs)
@@ -56,6 +70,7 @@ public class EnemyCombatManager : CombatManager
 
     protected override void HandleDeath()
     {
+        Debug.Log("Ded combat");
         base.HandleDeath();
     }
 }

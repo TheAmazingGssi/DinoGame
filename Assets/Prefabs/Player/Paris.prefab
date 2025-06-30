@@ -147,7 +147,7 @@ PrefabInstance:
     - target: {fileID: 5243410617948706567, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 22100000, guid: b4b30ded66787684299bffc47c02cea0, type: 2}
+      objectReference: {fileID: 22100000, guid: b9fe4ba294b160f4884e3d9bececbcbf, type: 2}
     - target: {fileID: 6304750159750022103, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: 'mySounds.Array.data[1]'
       value: 

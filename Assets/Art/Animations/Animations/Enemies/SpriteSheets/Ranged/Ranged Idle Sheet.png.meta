@@ -1,0 +1,927 @@
+fileFormatVersion: 2
+guid: 99bd6a6783c641e458ba6cea10d24aa3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4274009979611514055
+    second: Ranged Idle Sheet_0
+  - first:
+      213: 6056235476715146627
+    second: Ranged Idle Sheet_1
+  - first:
+      213: 6906112320133645191
+    second: Ranged Idle Sheet_2
+  - first:
+      213: 3275366917798402439
+    second: Ranged Idle Sheet_3
+  - first:
+      213: 493567704453092373
+    second: Ranged Idle Sheet_4
+  - first:
+      213: 337584999955787655
+    second: Ranged Idle Sheet_5
+  - first:
+      213: 482517823443089952
+    second: Ranged Idle Sheet_6
+  - first:
+      213: -1215926313844403924
+    second: Ranged Idle Sheet_7
+  - first:
+      213: -3567233464906905106
+    second: Ranged Idle Sheet_8
+  - first:
+      213: -6802666331425903861
+    second: Ranged Idle Sheet_9
+  - first:
+      213: -6038769102820301268
+    second: Ranged Idle Sheet_10
+  - first:
+      213: -912095078870813519
+    second: Ranged Idle Sheet_11
+  - first:
+      213: 6569976587308688321
+    second: Ranged Idle Sheet_12
+  - first:
+      213: -3142545452997266700
+    second: Ranged Idle Sheet_13
+  - first:
+      213: 5079835145289962822
+    second: Ranged Idle Sheet_14
+  - first:
+      213: 3189571824822729480
+    second: Ranged Idle Sheet_15
+  - first:
+      213: -7996386362498811977
+    second: Ranged Idle Sheet_16
+  - first:
+      213: -1837802992606735129
+    second: Ranged Idle Sheet_17
+  - first:
+      213: -6975898435014195414
+    second: Ranged Idle Sheet_18
+  - first:
+      213: 5645395386885069289
+    second: Ranged Idle Sheet_19
+  - first:
+      213: 5015621322160235497
+    second: Ranged Idle Sheet_20
+  - first:
+      213: -2614662690745286142
+    second: Ranged Idle Sheet_21
+  - first:
+      213: -6967872500104235383
+    second: Ranged Idle Sheet_22
+  - first:
+      213: 5576880173908095067
+    second: Ranged Idle Sheet_23
+  - first:
+      213: 3803981434032020575
+    second: Ranged Idle Sheet_24
+  - first:
+      213: -5817896912244180489
+    second: Ranged Idle Sheet_25
+  - first:
+      213: -8013391376960422998
+    second: Ranged Idle Sheet_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ranged Idle Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 688
+        width: 640
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2f2a9d6220bc44488afed8cea5dd5d7
+      internalID: -543869905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged Idle Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 688
+        width: 640
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 206010fa6f5afff49a27fede8c192e36
+      internalID: -1395467495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged Idle Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 688
+        width: 640
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25af2c4731aaf5240830731a0e68c8da
+      internalID: -1487535679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged Idle Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 688
+        width: 640
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12b1e3e9ab3a0a64699c655c82717cc1
+      internalID: -1386681295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged Idle Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 688
+        width: 640
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab4d35f45c9caff4f88231969ee0e10a
+      internalID: 162909085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged Idle Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 688
+        width: 640
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a005340d61ca7d54a9f1b861cfd21674
+      internalID: -914909062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged Idle Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 516
+        width: 640
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7895c21b76d28d4f85b7f67d0482bff
+      internalID: 1733493692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged Idle Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 516
+        width: 640
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f986035ab8a77d4a9f5a22f575e98cf
+      internalID: -1252444201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged Idle Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 516
+        width: 640
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 788eaad192841db40ae1bfd18fcfdd2d
+      internalID: 2023892890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged Idle Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 516
+        width: 640
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c542be64b3873a740a2fbc0ba17bc1dc
+      internalID: -2117928299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged Idle Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 516
+        width: 640
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bafe2f95a5767d4f884cd90a44495ce
+      internalID: -946405414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged Idle Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 516
+        width: 640
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2800c66df5aab4241a17600203ec28b4
+      internalID: -1162073968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged Idle Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 344
+        width: 640
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c577dc450aa9d634e87c25c921a38d6f
+      internalID: 732838904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged Idle Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 344
+        width: 640
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bed9c2cc8a87f56409a2a9800c72bb5c
+      internalID: -20886577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged Idle Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 344
+        width: 640
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98f5efd332596f14ba36d1684ca040a1
+      internalID: 1799126325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged Idle Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 344
+        width: 640
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e2b13b6b3807b4bb60705f6600d557
+      internalID: -743219692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged Idle Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 344
+        width: 640
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3e146b1e28b0e4e89582a6b0d074e6
+      internalID: -245159450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged Idle Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 344
+        width: 640
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baf188c4447e2f046a05737a9de929d9
+      internalID: 1743522796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged Idle Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 172
+        width: 640
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: debb8e2158e7c1f4a9510a33a07c2998
+      internalID: -1842031804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged Idle Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 172
+        width: 640
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 272567a6387f44b4887f9adbff330922
+      internalID: -1781973530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged Idle Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 172
+        width: 640
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37802947c473004f991ce55e706ff26
+      internalID: -1297208603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged Idle Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 172
+        width: 640
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f46d4b02fb0f1754d8411a83977ca983
+      internalID: -360955276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged Idle Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 172
+        width: 640
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8422fc6e3a3dcf942b63a721cec8f3c0
+      internalID: -1298556171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged Idle Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 172
+        width: 640
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f0a11c475c70224fbd026eabbc5d698
+      internalID: 793058726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged Idle Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 640
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eadf77b131784847b62b9cb5e48d87b
+      internalID: -862140879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged Idle Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 640
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dfa9dccc5f4124439c927c1eac237ef
+      internalID: 1821663285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged Idle Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 640
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ac395ed11c68042b35da326b5569f7
+      internalID: -1542212229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged Idle Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 640
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8944456851a9f1c4dbb96c2f0d7bee93
+      internalID: 1914056628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged Idle Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 640
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d809d69516570d498fdb6cc6bd96a13
+      internalID: -1630364139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged Idle Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 0
+        width: 640
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57a7d7a9fe1c7ff4abf3cdd7fa32db88
+      internalID: -712545245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a3f99d79b86037540acdfbd6e71b13ed
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Ranged Idle Sheet_0: -543869905
+      Ranged Idle Sheet_1: -1395467495
+      Ranged Idle Sheet_10: -946405414
+      Ranged Idle Sheet_11: -1162073968
+      Ranged Idle Sheet_12: 732838904
+      Ranged Idle Sheet_13: -20886577
+      Ranged Idle Sheet_14: 1799126325
+      Ranged Idle Sheet_15: -743219692
+      Ranged Idle Sheet_16: -245159450
+      Ranged Idle Sheet_17: 1743522796
+      Ranged Idle Sheet_18: -1842031804
+      Ranged Idle Sheet_19: -1781973530
+      Ranged Idle Sheet_2: -1487535679
+      Ranged Idle Sheet_20: -1297208603
+      Ranged Idle Sheet_21: -360955276
+      Ranged Idle Sheet_22: -1298556171
+      Ranged Idle Sheet_23: 793058726
+      Ranged Idle Sheet_24: -862140879
+      Ranged Idle Sheet_25: 1821663285
+      Ranged Idle Sheet_26: -1542212229
+      Ranged Idle Sheet_27: 1914056628
+      Ranged Idle Sheet_28: -1630364139
+      Ranged Idle Sheet_29: -712545245
+      Ranged Idle Sheet_3: -1386681295
+      Ranged Idle Sheet_4: 162909085
+      Ranged Idle Sheet_5: -914909062
+      Ranged Idle Sheet_6: 1733493692
+      Ranged Idle Sheet_7: -1252444201
+      Ranged Idle Sheet_8: 2023892890
+      Ranged Idle Sheet_9: -2117928299
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

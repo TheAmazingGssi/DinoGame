@@ -98,6 +98,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Emote"",
+                    ""type"": ""Button"",
+                    ""id"": ""c1afd33c-2dc7-4713-8bc0-017863984fa6"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -463,6 +472,17 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f743152e-54c3-4afe-a7af-f03dd4ec8471"",
+                    ""path"": ""<Gamepad>/rightStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Emote"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -540,6 +560,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Player_Confirmation = m_Player.FindAction("Confirmation", throwIfNotFound: true);
         m_Player_Cancel = m_Player.FindAction("Cancel", throwIfNotFound: true);
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
+        m_Player_Emote = m_Player.FindAction("Emote", throwIfNotFound: true);
     }
 
     ~@PlayerInputActions()
@@ -614,6 +635,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Confirmation;
     private readonly InputAction m_Player_Cancel;
     private readonly InputAction m_Player_Pause;
+    private readonly InputAction m_Player_Emote;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -626,6 +648,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         public InputAction @Confirmation => m_Wrapper.m_Player_Confirmation;
         public InputAction @Cancel => m_Wrapper.m_Player_Cancel;
         public InputAction @Pause => m_Wrapper.m_Player_Pause;
+        public InputAction @Emote => m_Wrapper.m_Player_Emote;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -659,6 +682,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Pause.started += instance.OnPause;
             @Pause.performed += instance.OnPause;
             @Pause.canceled += instance.OnPause;
+            @Emote.started += instance.OnEmote;
+            @Emote.performed += instance.OnEmote;
+            @Emote.canceled += instance.OnEmote;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -687,6 +713,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Pause.started -= instance.OnPause;
             @Pause.performed -= instance.OnPause;
             @Pause.canceled -= instance.OnPause;
+            @Emote.started -= instance.OnEmote;
+            @Emote.performed -= instance.OnEmote;
+            @Emote.canceled -= instance.OnEmote;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -759,5 +788,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         void OnConfirmation(InputAction.CallbackContext context);
         void OnCancel(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
+        void OnEmote(InputAction.CallbackContext context);
     }
 }

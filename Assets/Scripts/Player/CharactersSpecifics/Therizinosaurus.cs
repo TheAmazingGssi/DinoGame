@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Therizinosaurus : CharacterBase
 {
@@ -7,26 +8,21 @@ public class Therizinosaurus : CharacterBase
     [SerializeField] private int specialHitCount = 4; // GDD: 4 hits
     [SerializeField] private float specialHitInterval = 0.15f; // Time between hits
 
-    public override IEnumerator PerformAttack(float damage, int attackCount, System.Action<float> onAttack)
+    public override IEnumerator PerformAttack(float damage, UnityAction<float> onAttack)
     {
-        float attackInterval = 1f / stats.attacksPerSecond;
-        for (int i = 0; i < attackCount; i++)
+        if (rightMeleeColliderGO != null && leftMeleeColliderGO != null)
         {
-            if (rightMeleeColliderGO != null && leftMeleeColliderGO != null)
-            {
-                GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
-                MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
-                activeCollider.SetActive(true);
-                onAttack?.Invoke(damage);
-                yield return new WaitForSeconds(enableDuration);
-                activeCollider.SetActive(false);
-                yield return new WaitForSeconds(disableDelay);
-                yield return new WaitForSeconds(attackInterval - enableDuration - disableDelay);
-            }
+            GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
+            MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
+            activeCollider.SetActive(true);
+            onAttack?.Invoke(damage);
+            yield return new WaitForSeconds(enableDuration);
+            activeCollider.SetActive(false);
+            yield return new WaitForSeconds(disableDelay);
         }
     }
 
-    public override IEnumerator PerformSpecial(System.Action<float> onSpecial)
+    public override IEnumerator PerformSpecial(UnityAction<float> onSpecial)
     {
         if (rightMeleeColliderGO == null || leftMeleeColliderGO == null) yield break;
 
