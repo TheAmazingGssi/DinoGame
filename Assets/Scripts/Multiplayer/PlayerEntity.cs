@@ -35,7 +35,6 @@ public class PlayerEntity : MonoBehaviour
     public UnityEvent<InputAction.CallbackContext> Pause = new UnityEvent<InputAction.CallbackContext>();
     public UnityEvent<InputAction.CallbackContext> Emote = new UnityEvent<InputAction.CallbackContext>();
 
-
     public Transform GetCharactersTransform { get
         {
             if (controller)
@@ -60,7 +59,6 @@ public class PlayerEntity : MonoBehaviour
     [HideInInspector] public void InvokePause(InputAction.CallbackContext inputContext) => Pause.Invoke(inputContext);
     [HideInInspector] public void InvokeEmote(InputAction.CallbackContext inputContext) => Emote.Invoke(inputContext);
 
-    
     public void DeviceDisconnected()
     {
         PlayerList.Remove(this);
@@ -98,7 +96,6 @@ public class PlayerEntity : MonoBehaviour
 
         return controller;
     }
-    
     private GameObject PickPlayerPrefab(CharacterType character)
     {
         if (character == CharacterType.Triceratops) return TerryPlayerPrefab;
@@ -107,7 +104,6 @@ public class PlayerEntity : MonoBehaviour
         else if (character == CharacterType.Therizinosaurus) return AndrewPlayerPrefab;
         else return null;
     }
-    
     public MultiplayerUIController SpawnUIController(MultiplayerButton defaultButton)
     {
         if (!uiController)
