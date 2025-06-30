@@ -33,6 +33,7 @@ public class PlayerEntity : MonoBehaviour
     public UnityEvent<InputAction.CallbackContext> Confirmation = new UnityEvent<InputAction.CallbackContext>();
     public UnityEvent<InputAction.CallbackContext> Cancel = new UnityEvent<InputAction.CallbackContext>();
     public UnityEvent<InputAction.CallbackContext> Pause = new UnityEvent<InputAction.CallbackContext>();
+    public UnityEvent<InputAction.CallbackContext> Emote = new UnityEvent<InputAction.CallbackContext>();
 
     public Transform GetCharactersTransform { get
         {
@@ -56,6 +57,7 @@ public class PlayerEntity : MonoBehaviour
     [HideInInspector] public void InvokeConfirmation(InputAction.CallbackContext inputContext) => Confirmation.Invoke(inputContext);
     [HideInInspector] public void InvokeCancel(InputAction.CallbackContext inputContext) => Cancel.Invoke(inputContext);
     [HideInInspector] public void InvokePause(InputAction.CallbackContext inputContext) => Pause.Invoke(inputContext);
+    [HideInInspector] public void InvokeEmote(InputAction.CallbackContext inputContext) => Emote.Invoke(inputContext);
 
     public void DeviceDisconnected()
     {
@@ -90,6 +92,7 @@ public class PlayerEntity : MonoBehaviour
         Block.AddListener(controller.Block);
         Special.AddListener(controller.SpecialStarted);
         Revive.AddListener(controller.Revive);
+        Emote.AddListener(controller.Emote);
 
         return controller;
     }
