@@ -19,7 +19,8 @@ public class AnimationController : MonoBehaviour
 
     public void SetAnimationSpeed(float speed)
     {
-        animator.SetFloat("AnimationSpeed", speed);
+        //Has an error that fills the console so i commented it out - Maayan
+        //animator.SetFloat("AnimationSpeed", speed);
     }
 
     public void TriggerAttack()

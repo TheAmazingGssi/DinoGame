@@ -15,6 +15,6 @@ MonoBehaviour:
   maxHealth: 90
   baseDamage: 2
   stopRange: 3
-  attackRange: 8
+  attackRange: 1
   speed: 2
   score: 10
