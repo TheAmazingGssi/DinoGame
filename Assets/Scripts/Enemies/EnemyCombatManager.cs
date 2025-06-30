@@ -28,6 +28,7 @@ public class EnemyCombatManager : CombatManager
     public override void TakeDamage(DamageArgs damageArgs)
     {
         base.TakeDamage(damageArgs);
+        Debug.Log($"Player dealt" + damageArgs.Damage);
 
         if (damageNumberPrefab)
         {
@@ -40,12 +41,11 @@ public class EnemyCombatManager : CombatManager
             PlayerCombatManager playerSource = damageArgs.Source.GetComponent<PlayerCombatManager>();
             if (playerSource != null)
             {
-                //manager.OnPlayerDealtDamage(playerSource);
                 manager.AttackManager.OnPlayerDealtDamage(playerSource);
             }
         }
 
-        damageArgs.Source.AddScore(manager.EnemyData.Score); //NULL REFRENCE
+        damageArgs.Source.AddScore(manager.EnemyData.Score);
     }
 
     private void SpawnDamageText(DamageArgs damageArgs)
@@ -56,6 +56,7 @@ public class EnemyCombatManager : CombatManager
 
     protected override void HandleDeath()
     {
+        Debug.Log("Ded combat");
         base.HandleDeath();
     }
 }

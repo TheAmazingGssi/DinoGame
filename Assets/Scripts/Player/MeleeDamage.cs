@@ -30,10 +30,6 @@ public class MeleeDamage : MonoBehaviour
                     {
                         KnockbackHelper.ApplyKnockback(hit.transform, source, KnockbackHelper.GetKnockbackForceFromDamage(damage, true), isGrab ? KnockbackType.Grab : KnockbackType.Normal);
                     }
-                    if (controller != null)
-                    {
-                        controller.AddScore((int)damage);
-                    }
                 }
             }
         }

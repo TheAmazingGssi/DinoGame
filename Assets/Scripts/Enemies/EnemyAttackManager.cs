@@ -187,7 +187,6 @@ public class EnemyAttackManager : MonoBehaviour
         if (player == null) return;
 
         lastPlayerToDamage = player;
-        Debug.Log($"Player {player.name} dealt damage");
 
         if (playersInRange.Contains(player))
         {

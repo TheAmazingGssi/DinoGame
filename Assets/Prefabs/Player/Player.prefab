@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5416b045e64cbe941acdd51e1df901e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
+  playerController: {fileID: 4154660936162027529}
 --- !u!1 &4178684809809405063
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,8 +418,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 261fc597e3e8a6d469eaa5f911c62b37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
 --- !u!114 &360251525065678738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -731,7 +729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5416b045e64cbe941acdd51e1df901e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
+  playerController: {fileID: 4154660936162027529}
 --- !u!1 &5104893549257115912
 GameObject:
   m_ObjectHideFlags: 0

@@ -56,6 +56,7 @@ public class EnemyManager : MonoBehaviour
     #region Death Handling
     private void HandleDeath(CombatManager combatManager)
     {
+        Debug.Log("Ded");
         OnDeath?.Invoke(this);
         animator.SetBool(IsDead, true);
         StartCoroutine(DeSpawn());
