@@ -12,6 +12,7 @@ public class Meteor : MonoBehaviour
     [Header("Refrences")]
     [SerializeField] Camera cam;
     [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] float myHight;
     
 
     float topOfCamera;
@@ -26,7 +27,7 @@ public class Meteor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bottomOfCamera = cam.transform.position.y - cam.orthographicSize;
+        bottomOfCamera = cam.transform.position.y - cam.orthographicSize - myHight;
         transform.Translate(speedVariant * minVelocity * Time.deltaTime);
         if(transform.position.y < bottomOfCamera)
             SpawnAgain();
