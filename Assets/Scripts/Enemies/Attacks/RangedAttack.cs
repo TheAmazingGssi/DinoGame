@@ -1,25 +1,35 @@
+using System.Collections;
 using UnityEngine;
 
 public class RangedAttack : EnemyAttack
 {
-    [SerializeField] private GameObject projectile;
-    [SerializeField] private EnemyProjectile projectileScript;
-    [SerializeField] private float projectileSpeed;
+    [SerializeField] private GameObject projectilePrefab;
+    [SerializeField] private float projectileSpeed = 5f;
+    [SerializeField] private float damageDelay = 0.1f;
 
     protected override bool IsPlayerInRange => IsTargetInRange(AttackRange);
 
-    private void Start()
-    {
-
-        projectileScript.speed = projectileSpeed;
-        projectileScript.manager = manager;
-
-    }
-
     protected override void ApplyDamage()
     {
-        Debug.Log("Launching projectile");
-        Instantiate(projectile, transform.position, Quaternion.identity, transform);
+        StartCoroutine(FireProjectileAfterDelay());
         base.ApplyDamage();
+    }
+
+    private IEnumerator FireProjectileAfterDelay()
+    {
+        yield return new WaitForSeconds(damageDelay);
+
+        if (projectilePrefab == null) yield break;
+
+        GameObject projInstance = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+        EnemyProjectile projScript = projInstance.GetComponent<EnemyProjectile>();
+
+        if (projScript != null)
+        {
+            projScript.speed = projectileSpeed;
+            projScript.manager = manager;
+        }
+
+        Debug.Log("Ranged attack launched a projectile.");
     }
 }

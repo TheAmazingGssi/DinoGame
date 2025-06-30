@@ -1,0 +1,1424 @@
+fileFormatVersion: 2
+guid: 6b79af8fc46bf1243b1b8f73be4210ff
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6064992303004532276
+    second: Ranged attack sheet_0
+  - first:
+      213: -4126906023574777957
+    second: Ranged attack sheet_1
+  - first:
+      213: 7024234123226773694
+    second: Ranged attack sheet_2
+  - first:
+      213: -8129995185708342238
+    second: Ranged attack sheet_3
+  - first:
+      213: -7857090700250462616
+    second: Ranged attack sheet_4
+  - first:
+      213: -3039158093715571936
+    second: Ranged attack sheet_5
+  - first:
+      213: 397536191925027012
+    second: Ranged attack sheet_6
+  - first:
+      213: -8073057309540058977
+    second: Ranged attack sheet_7
+  - first:
+      213: 8887973180466867854
+    second: Ranged attack sheet_8
+  - first:
+      213: 5752868915134057302
+    second: Ranged attack sheet_9
+  - first:
+      213: -7824212050051218546
+    second: Ranged attack sheet_10
+  - first:
+      213: 4435991417669858680
+    second: Ranged attack sheet_11
+  - first:
+      213: -5811117621542111963
+    second: Ranged attack sheet_12
+  - first:
+      213: 1660760972108725659
+    second: Ranged attack sheet_13
+  - first:
+      213: 7612444135381983122
+    second: Ranged attack sheet_14
+  - first:
+      213: 4402684296210142796
+    second: Ranged attack sheet_15
+  - first:
+      213: 6929973236461599041
+    second: Ranged attack sheet_16
+  - first:
+      213: -8136961959415339855
+    second: Ranged attack sheet_17
+  - first:
+      213: 6673023563518920082
+    second: Ranged attack sheet_18
+  - first:
+      213: -2523324567675305187
+    second: Ranged attack sheet_19
+  - first:
+      213: 5660442096721936373
+    second: Ranged attack sheet_20
+  - first:
+      213: -3287012727539411123
+    second: Ranged attack sheet_21
+  - first:
+      213: 3591329921443631831
+    second: Ranged attack sheet_22
+  - first:
+      213: 6221666080739536653
+    second: Ranged attack sheet_23
+  - first:
+      213: -2094429604891803103
+    second: Ranged attack sheet_24
+  - first:
+      213: -5673761347541076739
+    second: Ranged attack sheet_25
+  - first:
+      213: -1933073033166683273
+    second: Ranged attack sheet_26
+  - first:
+      213: 3739620496356620051
+    second: Ranged attack sheet_27
+  - first:
+      213: 4355134792880456488
+    second: Ranged attack sheet_28
+  - first:
+      213: 6025608699172892967
+    second: Ranged attack sheet_29
+  - first:
+      213: 8566258024805255920
+    second: Ranged attack sheet_30
+  - first:
+      213: -8359658688828079919
+    second: Ranged attack sheet_31
+  - first:
+      213: -1579091164959220506
+    second: Ranged attack sheet_32
+  - first:
+      213: 1513997067241448836
+    second: Ranged attack sheet_33
+  - first:
+      213: 8295439348920968398
+    second: Ranged attack sheet_34
+  - first:
+      213: -7895960873286970629
+    second: Ranged attack sheet_35
+  - first:
+      213: -7783552191481012274
+    second: Ranged attack sheet_36
+  - first:
+      213: -3402234337423750113
+    second: Ranged attack sheet_37
+  - first:
+      213: -584499299503861482
+    second: Ranged attack sheet_38
+  - first:
+      213: 2203169830991936091
+    second: Ranged attack sheet_39
+  - first:
+      213: 7479940796352147682
+    second: Ranged attack sheet_40
+  - first:
+      213: -6613268006381949255
+    second: Ranged attack sheet_41
+  - first:
+      213: 5750119042127928462
+    second: Ranged attack sheet_42
+  - first:
+      213: 7212541294090741656
+    second: Ranged attack sheet_43
+  - first:
+      213: -2565505404707328852
+    second: Ranged attack sheet_44
+  - first:
+      213: 2422183589238021280
+    second: Ranged attack sheet_45
+  - first:
+      213: 4059030915292096964
+    second: Ranged attack sheet_46
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ranged attack sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1680
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 442315a0e4fac654aa39398163448702
+      internalID: -232299954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_1
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1680
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a977b7d12e032eb478b61bddd1a9e374
+      internalID: 290724118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1680
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65fdd3d5f12b22e4b823abffe5752973
+      internalID: 1303119824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1680
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3988d87775a6271458f133fc419d9389
+      internalID: 175220981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1680
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12e454e0b54f3f941b1f963d57f4ffd9
+      internalID: -349581322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_5
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 1680
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a063016464862d3479b7ac68ce4c3ceb
+      internalID: 1850297451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_6
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1680
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcb55c3db8b9688408e9835e782a3db1
+      internalID: 821662179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1400
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e9dd0cb5f55cc84e93376e7a54baa68
+      internalID: 950558295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_8
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1400
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a20122c86ec71fc4e83f5f63364579d7
+      internalID: 1888475217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1400
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac439cf4efb4dbf4ba76df030c063439
+      internalID: -858666309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1400
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cd6fdd09b8dff84abacf66937db88f1
+      internalID: -1301641315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_11
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1400
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c83a4e582c0eb944969a0c64675f33a
+      internalID: -565783857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_12
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 1400
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d481fff159fd894a9e55c23a43de767
+      internalID: 356128366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_13
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1400
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e073c533beb72b54b86f474549392d9e
+      internalID: 676186782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1120
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9296e3c5d19b5b94ead003d8a09aaddd
+      internalID: -131259516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_15
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1120
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f8d7fd7fc7d2446b4d9f7726f6870d
+      internalID: -1551381671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1120
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 845cb8d28d7f03f4691d5722ba893040
+      internalID: 92514117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_17
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1120
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b5a2435d3c1885469be2f535e6a63ed
+      internalID: -1022833599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_18
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1120
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e058466e897373b4ea05dc3155860ed5
+      internalID: -1872397107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_19
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 1120
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f5fd96b6475c1d4db1c91c167947897
+      internalID: 472557897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_20
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1120
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ce8b51381ac5048920ad8c5ae78081
+      internalID: -1887709010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 840
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c01f0fed6078f444b51e8baa43e063f
+      internalID: 2106457608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_22
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 840
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 428d328906c890749a613f563fd2f986
+      internalID: -2078199974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_23
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 840
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83b720339aa5d954b96f73b0de535d7e
+      internalID: -50478973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_24
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 840
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d3682969e6de604cb74041370f1778b
+      internalID: -1291228136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_25
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 840
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c62356aa20ce8dd4daf271bad1999c66
+      internalID: 33253586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_26
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 840
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cff683ba45600c341aa63a8b71dc523c
+      internalID: 644102098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_27
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 840
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 208f8b402f1959746a402d818c1184e9
+      internalID: 1154949726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 560
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 857dd3be337e6974ab0815c302a2bd67
+      internalID: 173226449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_29
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 560
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcdae3fd83972e1448beb2562adb0741
+      internalID: 358163687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_30
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 560
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 991ba116b05119b488f95660e904eaa5
+      internalID: 1543071736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_31
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 560
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 432502ee522cf13409d6ef9fec98e210
+      internalID: -1309223497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_32
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 560
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7d9f09461da7384482a5e1b81317d45
+      internalID: -492483652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_33
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 560
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1edfbc2c75ca776449b7e333a912e21b
+      internalID: 45370164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_34
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 560
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2be4b5069bd4cd344969247066e2b069
+      internalID: -897557311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 280
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 562d2d2c8b91ded448fa645380c0ed34
+      internalID: -1571795259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_36
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 280
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aed57b0cc55d49c4585f570b5049ccf9
+      internalID: 966379330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_37
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 280
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52702b121db25264e9f8510266b70a47
+      internalID: -2102264336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_38
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 280
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1871e408f645de540b490515a7c02c1c
+      internalID: 2043301048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_39
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 280
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0353e70f2166a0246a2a07ecb052042d
+      internalID: 321469863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_40
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 280
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3b24513d35ba4f44a580f6f3d01f632
+      internalID: -1512166442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_41
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 280
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f4827a90176c8d43bc9d2a69cc1d161
+      internalID: -361147121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfac9df8d832e034c97207abda9f74e1
+      internalID: 1091306453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_43
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2340088078cbc24abc8b3b9d2defe23
+      internalID: -1835267004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_44
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a787cd2cec1cfb43a99a00abd75d210
+      internalID: -1813840363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_45
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39d8a05cad25e2c4292af490bf2937de
+      internalID: 299086052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_46
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42d8d49c2f099fd40879eef856285f70
+      internalID: -1417018893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_47
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 0
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79e2ef0af2ebb8746b538f3dacbe8a59
+      internalID: 2098439504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ranged attack sheet_48
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 640
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3095d71b35877144b8153d6142c2e39
+      internalID: 1593948712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5740a8c7270b4174f89f3b8ee99a3391
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Ranged attack sheet_0: -232299954
+      Ranged attack sheet_1: 290724118
+      Ranged attack sheet_10: -1301641315
+      Ranged attack sheet_11: -565783857
+      Ranged attack sheet_12: 356128366
+      Ranged attack sheet_13: 676186782
+      Ranged attack sheet_14: -131259516
+      Ranged attack sheet_15: -1551381671
+      Ranged attack sheet_16: 92514117
+      Ranged attack sheet_17: -1022833599
+      Ranged attack sheet_18: -1872397107
+      Ranged attack sheet_19: 472557897
+      Ranged attack sheet_2: 1303119824
+      Ranged attack sheet_20: -1887709010
+      Ranged attack sheet_21: 2106457608
+      Ranged attack sheet_22: -2078199974
+      Ranged attack sheet_23: -50478973
+      Ranged attack sheet_24: -1291228136
+      Ranged attack sheet_25: 33253586
+      Ranged attack sheet_26: 644102098
+      Ranged attack sheet_27: 1154949726
+      Ranged attack sheet_28: 173226449
+      Ranged attack sheet_29: 358163687
+      Ranged attack sheet_3: 175220981
+      Ranged attack sheet_30: 1543071736
+      Ranged attack sheet_31: -1309223497
+      Ranged attack sheet_32: -492483652
+      Ranged attack sheet_33: 45370164
+      Ranged attack sheet_34: -897557311
+      Ranged attack sheet_35: -1571795259
+      Ranged attack sheet_36: 966379330
+      Ranged attack sheet_37: -2102264336
+      Ranged attack sheet_38: 2043301048
+      Ranged attack sheet_39: 321469863
+      Ranged attack sheet_4: -349581322
+      Ranged attack sheet_40: -1512166442
+      Ranged attack sheet_41: -361147121
+      Ranged attack sheet_42: 1091306453
+      Ranged attack sheet_43: -1835267004
+      Ranged attack sheet_44: -1813840363
+      Ranged attack sheet_45: 299086052
+      Ranged attack sheet_46: -1417018893
+      Ranged attack sheet_47: 2098439504
+      Ranged attack sheet_48: 1593948712
+      Ranged attack sheet_5: 1850297451
+      Ranged attack sheet_6: 821662179
+      Ranged attack sheet_7: 950558295
+      Ranged attack sheet_8: 1888475217
+      Ranged attack sheet_9: -858666309
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

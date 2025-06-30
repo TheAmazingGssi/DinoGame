@@ -74,7 +74,7 @@ public class EnemyManager : MonoBehaviour
 
     private IEnumerator DeSpawn()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(2f);
         gameObject.SetActive(false);
     }
     #endregion

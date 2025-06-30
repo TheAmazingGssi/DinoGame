@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b9cf02102344c347abc6b9f2a85c834, type: 3}
-  m_Name: Spawner2
+  m_Name: RangedEnemiesSpawner
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 1856966355605016673, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
-  enemiesInWave: 2
-  minSpawnTime: 3
-  maxSpawnTime: 5
+  enemyPrefab: {fileID: 238809703546315441, guid: 973c3bdbcf4759c46bc99a2d8c1d566f, type: 3}
+  minSpawnTime: 1
+  maxSpawnTime: 3

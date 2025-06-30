@@ -27,15 +27,33 @@ public abstract class EnemyAttack : MonoBehaviour
 
     private void StartAttack()
     {
-        Debug.Log($"attack started");
-
         isAttacking = true;
         isOnCooldown = true;
         manager.AttackManager.ChangeAttackStatue(true);
+
         manager.Animator.SetTrigger(Attack);
         ApplyDamage();
 
+        float animLength = GetAttackAnimationLength();
+        StartCoroutine(AttackDurationCoroutine(animLength));
         StartCoroutine(CooldownCoroutine());
+    }
+    private float GetAttackAnimationLength()
+    {
+        AnimationClip[] clips = manager.Animator.runtimeAnimatorController.animationClips;
+        foreach (var clip in clips)
+        {
+            if (clip.name == "Attack")
+            {
+                return clip.length;
+            }
+        }
+        return 0.5f;
+    }
+    private IEnumerator AttackDurationCoroutine(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        OnAttackEnd();
     }
 
     private IEnumerator CooldownCoroutine()
@@ -47,12 +65,11 @@ public abstract class EnemyAttack : MonoBehaviour
 
     protected virtual void ApplyDamage()
     {
-        OnAttackEnd();
     }
 
     public virtual void OnAttackEnd()
     {
-        //manager.Animator.ResetTrigger(Attack);
+        manager.Animator.ResetTrigger(Attack);
         isAttacking = false;
         manager.AttackManager.ChangeAttackStatue(false);
         //Debug.Log($"{gameObject.name} attack ended");

@@ -28,6 +28,7 @@ public class EnemyAttackManager : MonoBehaviour
     public bool IsFacingRight => isFacingRight;
     public GameObject LeftAttackCollider => leftAttackCollider;
     public GameObject RightAttackCollider => rightAttackCollider;
+    public bool IsAttacking => isAttacking;
 
     private void Start()
     {
@@ -256,10 +257,6 @@ public class EnemyAttackManager : MonoBehaviour
                     {
                         playersToRemove.Add(playerCombat);
                         Debug.Log($"Player {playerCombat.name} marked to leave enemy range");
-                    }
-                    else
-                    {
-                        Debug.Log($"Player {playerCombat.name} triggered exit but still in detection range - ignoring");
                     }
                 }
                 else
