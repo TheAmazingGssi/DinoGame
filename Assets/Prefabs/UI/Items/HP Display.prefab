@@ -360,6 +360,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5429800572477832409}
   - component: {fileID: 4792979914062867725}
+  - component: {fileID: 4832085600748431832}
   m_Layer: 5
   m_Name: HP Display
   m_TagString: Untagged
@@ -396,6 +397,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5774795792786752328}
   m_CullTransparentMesh: 1
+--- !u!114 &4832085600748431832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5774795792786752328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6921d8db31433874b82663881fbd75a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SplashArtImage: {fileID: 6583580238216973357}
+  HpBar: {fileID: 3526512669599372147}
+  EnergyBar: {fileID: 6039946818822591392}
+  ScoreText: {fileID: 3988826378466590889}
 --- !u!1 &6404715520834023568
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,7 +604,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19.4
+  m_fontSize: 22.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

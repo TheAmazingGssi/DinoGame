@@ -20,6 +20,7 @@ public class PlayerEntity : MonoBehaviour
     CharacterSelect selector;
     MainPlayerController controller;
     MultiplayerUIController uiController;
+    public PlayerCombatManager CombatManager;
 
     //public Color PlayerColor;
     public CharacterType CharacterType;
@@ -85,6 +86,7 @@ public class PlayerEntity : MonoBehaviour
     public MainPlayerController SpawnPlayerController(Transform transform)
     {
         controller = Instantiate(PickPlayerPrefab(CharacterType), transform.position, transform.rotation).GetComponent<MainPlayerController>();
+        CombatManager = controller.GetComponent<PlayerCombatManager>();
         
         //Set Events
         Move.AddListener(controller.Move);
