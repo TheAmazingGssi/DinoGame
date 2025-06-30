@@ -14,7 +14,13 @@ public class HealthItem : MonoBehaviour
         {
             Debug.Log("collision in hp is player");
 
-            combatManager = collision.GetComponent<PlayerCombatManager>();
+            combatManager = collision.GetComponentInParent<PlayerCombatManager>();
+            
+            if (combatManager == null)
+            {
+                Debug.LogError("PlayerCombatManager not found on player!");
+                return;
+            }
             
             if (combatManager.CurrentHealth != combatManager.MaxHealth)
             {

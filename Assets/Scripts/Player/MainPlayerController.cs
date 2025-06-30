@@ -38,12 +38,18 @@ public class MainPlayerController : MonoBehaviour
     [Header("Revive Variables")]
     [SerializeField] private float reviveRange = 2f;
 
+    [Header("Emote Variables")]
+    [SerializeField] private float emoteCooldown = 1f; // Cooldown for emote
+    [SerializeField] private AudioClip emoteSound; // Optional sound effect
+
     private float lastAttackTime;
     private float lastSpecialTime;
     private float lastBlockTime;
+    private float lastEmoteTime;
     private bool canAttack = true;
     private bool canSpecial = true;
     private bool canBlock = true;
+    private bool canEmote = true;
     private bool isBlocking = false;
     private bool isFallen = false;
     private bool isPerformingSpecialMovement = false;
@@ -57,6 +63,7 @@ public class MainPlayerController : MonoBehaviour
     private MeleeDamage rightMeleeDamage;
     private MeleeDamage leftMeleeDamage;
     private Animator animator;
+    private AudioSource audioSource; // For emote sound
     private static int activePlayers = 0;
     private static int fallenPlayers = 0;
     private int score;
@@ -78,6 +85,7 @@ public class MainPlayerController : MonoBehaviour
         canAttack = true;
         canSpecial = true;
         canBlock = true;
+        canEmote = true;
         fallenPlayers--;
         combatManager.RestoreHealthByPercent(100f); // Resets health and stamina
         animController.SetRevived();
@@ -91,6 +99,7 @@ public class MainPlayerController : MonoBehaviour
         canAttack = false;
         canSpecial = false;
         canBlock = false;
+        canEmote = false;
         rb.linearVelocity = Vector2.zero;
         animController.SetDowned(true);
         AddScore(-15);
@@ -118,7 +127,7 @@ public class MainPlayerController : MonoBehaviour
         combatManager = GetComponent<PlayerCombatManager>();
         knockbackManager = GetComponent<KnockbackManager>();
         animator = GetComponent<Animator>();
-        
+        audioSource = GetComponent<AudioSource>(); // For emote sound
         rightMeleeDamage = rightMeleeColliderGO != null ? rightMeleeColliderGO.GetComponent<MeleeDamage>() : null;
         leftMeleeDamage = leftMeleeColliderGO != null ? leftMeleeColliderGO.GetComponent<MeleeDamage>() : null;
 
@@ -263,9 +272,20 @@ public class MainPlayerController : MonoBehaviour
 
     public void Emote(InputAction.CallbackContext context)
     {
-        if (!isFallen && !isBlocking)
+        if (context.performed)
         {
-            animController.TriggerEmote();
+            Debug.Log($"Emote input received for {stats.characterName}, isFallen: {isFallen}, isBlocking: {isBlocking}, canEmote: {canEmote}");
+            
+            if (!isFallen && !isBlocking && canEmote)
+            {
+                canEmote = false;
+                lastEmoteTime = Time.time;
+                animController.TriggerEmote();
+                
+                Debug.Log($"{stats.characterName} triggered emote animation");
+                StartCoroutine(ResetEmoteCooldown());
+            }
+            else Debug.LogWarning($"Emote blocked: isFallen={isFallen}, isBlocking={isBlocking}, canEmote={canEmote}");
         }
     }
 
@@ -313,6 +333,13 @@ public class MainPlayerController : MonoBehaviour
             yield return new WaitForSeconds(stats.stamina / 25f - elapsed);
 
         canBlock = true;
+    }
+
+    private IEnumerator ResetEmoteCooldown()
+    {
+        yield return new WaitForSeconds(emoteCooldown);
+        canEmote = true;
+        Debug.Log($"{stats.characterName} emote cooldown reset, canEmote: {canEmote}");
     }
 
     private MainPlayerController FindNearestFallenPlayer()
