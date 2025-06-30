@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Spinosaurus : CharacterBase
 {
@@ -8,26 +9,21 @@ public class Spinosaurus : CharacterBase
     [SerializeField] private float meleeRange = 1f; // Distance to drag enemy
     [SerializeField] private float dragSpeed = 5f; // Speed of dragging enemy
 
-    public override IEnumerator PerformAttack(float damage, int attackCount, System.Action<float> onAttack)
+    public override IEnumerator PerformAttack(float damage, UnityAction<float> onAttack)
     {
-        float attackInterval = 1f / stats.attacksPerSecond;
-        for (int i = 0; i < attackCount; i++)
+        if (rightMeleeColliderGO != null && leftMeleeColliderGO != null)
         {
-            if (rightMeleeColliderGO != null && leftMeleeColliderGO != null)
-            {
-                GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
-                MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
-                activeCollider.SetActive(true);
-                onAttack?.Invoke(damage);
-                yield return new WaitForSeconds(enableDuration);
-                activeCollider.SetActive(false);
-                yield return new WaitForSeconds(disableDelay);
-                yield return new WaitForSeconds(attackInterval - enableDuration - disableDelay);
-            }
+            GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
+            MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
+            activeCollider.SetActive(true);
+            onAttack?.Invoke(damage);
+            yield return new WaitForSeconds(enableDuration);
+            activeCollider.SetActive(false);
+            yield return new WaitForSeconds(disableDelay);
         }
     }
 
-    public override IEnumerator PerformSpecial(System.Action<float> onSpecial)
+    public override IEnumerator PerformSpecial(UnityAction<float> onSpecial)
     {
         if (rightMeleeColliderGO == null || leftMeleeColliderGO == null) yield break;
 
@@ -40,14 +36,12 @@ public class Spinosaurus : CharacterBase
         Vector3 direction = facingRight ? Vector3.right : Vector3.left;
         Collider2D hitEnemy = null;
 
-        // Move collider forward
         while (moved < specialAttackRange && hitEnemy == null)
         {
             float step = chompSpeed * Time.deltaTime;
             activeCollider.transform.localPosition += direction * step;
             moved += step;
 
-            // Check for enemy hit
             Collider2D[] hits = Physics2D.OverlapCircleAll(activeCollider.transform.position, 1f, LayerMask.GetMask("Enemy"));
             hitEnemy = System.Array.Find(hits, h => h.CompareTag("Enemy"));
             if (hitEnemy != null) break;
@@ -57,7 +51,6 @@ public class Spinosaurus : CharacterBase
 
         if (hitEnemy != null)
         {
-            // Drag enemy to melee range
             Transform enemyTransform = hitEnemy.transform;
             Vector3 targetPos = transform.position + direction * meleeRange;
             while (Vector3.Distance(enemyTransform.position, targetPos) > 0.1f)
@@ -69,7 +62,6 @@ public class Spinosaurus : CharacterBase
             KnockbackHelper.ApplyKnockback(enemyTransform, transform, KnockbackHelper.GetKnockbackForceFromDamage(stats.specialAttackDamage, true), KnockbackType.Grab);
         }
 
-        // Retract collider
         while (Vector3.Distance(activeCollider.transform.localPosition, originalPos) > 0.1f)
         {
             activeCollider.transform.localPosition = Vector3.MoveTowards(activeCollider.transform.localPosition, originalPos, chompSpeed * Time.deltaTime);

@@ -1,6 +1,6 @@
-using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public abstract class CharacterBase : MonoBehaviour
 {
@@ -16,8 +16,8 @@ public abstract class CharacterBase : MonoBehaviour
     protected MeleeDamage leftMeleeDamage;
     protected MeleeDamage specialMeleeDamage; // For Parasaurolophus
 
-    public abstract IEnumerator PerformAttack(float damage, int attackCount, Action<float> onAttack);
-    public abstract IEnumerator PerformSpecial(Action<float> onSpecial);
+    public abstract IEnumerator PerformAttack(float damage, UnityAction<float> onAttack);
+    public abstract IEnumerator PerformSpecial(UnityAction<float> onSpecial);
 
     public virtual void Initialize(CharacterStats.CharacterData characterStats, GameObject rightCollider, GameObject leftCollider, bool isFacingRight, float enable, float disable)
     {
@@ -26,7 +26,6 @@ public abstract class CharacterBase : MonoBehaviour
         enableDuration = enable;
         disableDelay = disable;
 
-        // Assign colliders by finding children
         rightMeleeColliderGO = rightCollider ?? transform.Find("RightMeleeCollider")?.gameObject;
         leftMeleeColliderGO = leftCollider ?? transform.Find("LeftMeleeCollider")?.gameObject;
         specialColliderGO = transform.Find("SpecialCollider")?.gameObject; // Only for Parasaurolophus
@@ -34,7 +33,6 @@ public abstract class CharacterBase : MonoBehaviour
         if (rightMeleeColliderGO == null || leftMeleeColliderGO == null)
             Debug.LogError($"Failed to find melee colliders on {gameObject.name}!");
 
-        // Cache MeleeDamage components
         rightMeleeDamage = rightMeleeColliderGO != null ? rightMeleeColliderGO.GetComponent<MeleeDamage>() : null;
         leftMeleeDamage = leftMeleeColliderGO != null ? leftMeleeColliderGO.GetComponent<MeleeDamage>() : null;
         specialMeleeDamage = specialColliderGO != null ? specialColliderGO.GetComponent<MeleeDamage>() : null;

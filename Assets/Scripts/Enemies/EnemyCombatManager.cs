@@ -42,16 +42,16 @@ public class EnemyCombatManager : CombatManager
             SpawnDamageText(damageArgs);
         }
 
-        if (damageArgs.Source != null)
+        if (damageArgs.SourceMPC != null)
         {
-            PlayerCombatManager playerSource = damageArgs.Source.GetComponent<PlayerCombatManager>();
+            PlayerCombatManager playerSource = damageArgs.SourceMPC.GetComponent<PlayerCombatManager>();
             if (playerSource != null)
             {
                 manager.AttackManager.OnPlayerDealtDamage(playerSource);
             }
         }
 
-        damageArgs.Source.AddScore(manager.EnemyData.Score);
+        damageArgs.SourceMPC.AddScore(manager.EnemyData.Score);
 
         StartCoroutine(AnimationDelay());
     }

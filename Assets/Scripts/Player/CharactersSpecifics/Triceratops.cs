@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Triceratops : CharacterBase
 {
@@ -9,26 +10,21 @@ public class Triceratops : CharacterBase
     [SerializeField] private float glideDistance = 0.5f;
     [SerializeField] private float glideDuration = 0.2f;
 
-    public override IEnumerator PerformAttack(float damage, int attackCount, System.Action<float> onAttack)
+    public override IEnumerator PerformAttack(float damage, UnityAction<float> onAttack)
     {
-        float attackInterval = 1f / stats.attacksPerSecond;
-        for (int i = 0; i < attackCount; i++)
+        if (rightMeleeColliderGO != null && leftMeleeColliderGO != null)
         {
-            if (rightMeleeColliderGO != null && leftMeleeColliderGO != null)
-            {
-                GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
-                MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
-                activeCollider.SetActive(true);
-                onAttack?.Invoke(damage);
-                yield return new WaitForSeconds(enableDuration);
-                activeCollider.SetActive(false);
-                yield return new WaitForSeconds(disableDelay);
-                yield return new WaitForSeconds(attackInterval - enableDuration - disableDelay);
-            }
+            GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
+            MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
+            activeCollider.SetActive(true);
+            onAttack?.Invoke(damage);
+            yield return new WaitForSeconds(enableDuration);
+            activeCollider.SetActive(false);
+            yield return new WaitForSeconds(disableDelay);
         }
     }
 
-    public override IEnumerator PerformSpecial(System.Action<float> onSpecial)
+    public override IEnumerator PerformSpecial(UnityAction<float> onSpecial)
     {
         if (rightMeleeColliderGO == null || leftMeleeColliderGO == null) yield break;
 
@@ -47,6 +43,7 @@ public class Triceratops : CharacterBase
         {
             transform.position = Vector3.Lerp(startPos, targetPos, elapsed / (chargeDistance / chargeSpeed));
             elapsed += Time.deltaTime;
+            
             if (elapsed >= chargeDamageDelay)
             {
                 activeMeleeDamage?.ApplyDamage(stats.specialAttackDamage, true, transform, null);

@@ -38,9 +38,6 @@ public class MainPlayerController : MonoBehaviour
     [Header("Revive Variables")]
     [SerializeField] private float reviveRange = 2f;
 
-    [Header("Stamina Settings")]
-    [SerializeField] private float staminaRegenRate = 10f;
-
     private float lastAttackTime;
     private float lastSpecialTime;
     private float lastBlockTime;
@@ -53,7 +50,6 @@ public class MainPlayerController : MonoBehaviour
     private Vector2 moveInput;
     private Vector2 currentVelocity;
     private CharacterStats.CharacterData stats;
-    private float currentStamina; // Runtime stamina
     private CharacterBase characterScript;
     private AnimationController animController;
     private PlayerCombatManager combatManager;
@@ -83,8 +79,8 @@ public class MainPlayerController : MonoBehaviour
         canSpecial = true;
         canBlock = true;
         fallenPlayers--;
-        currentStamina = stats.stamina; // Reset stamina
-        animController.SetRevived(true);
+        combatManager.RestoreHealthByPercent(100f); // Resets health and stamina
+        animController.SetRevived();
         StartCoroutine(ResetRevive());
         Debug.Log($"{stats.characterName} revived");
     }
@@ -105,7 +101,6 @@ public class MainPlayerController : MonoBehaviour
     private IEnumerator ResetRevive()
     {
         yield return new WaitForSeconds(0.1f);
-        animController.SetRevived(false);
         animController.SetDowned(false);
     }
 
@@ -123,14 +118,14 @@ public class MainPlayerController : MonoBehaviour
         combatManager = GetComponent<PlayerCombatManager>();
         knockbackManager = GetComponent<KnockbackManager>();
         animator = GetComponent<Animator>();
+        
         rightMeleeDamage = rightMeleeColliderGO != null ? rightMeleeColliderGO.GetComponent<MeleeDamage>() : null;
         leftMeleeDamage = leftMeleeColliderGO != null ? leftMeleeColliderGO.GetComponent<MeleeDamage>() : null;
 
         if (characterStats != null)
         {
             stats = characterStats.characters[(int)characterType];
-            currentStamina = stats.stamina; // Initialize runtime stamina
-            combatManager.Initialize(stats.maxHealth, this, animator);
+            combatManager.Initialize(stats.maxHealth, stats.stamina, this, animator);
             combatManager.OnDeath += (_) => EnterFallenState();
             Debug.Log($"Loaded stats for {stats.characterName}");
         }
@@ -165,7 +160,7 @@ public class MainPlayerController : MonoBehaviour
     {
         if (!isFallen)
         {
-            currentStamina = Mathf.Min(stats.stamina, currentStamina + staminaRegenRate * Time.deltaTime);
+            combatManager.RegenerateStamina(Time.deltaTime);
             animController.SetMoveSpeed(moveInput.magnitude);
             spriteRenderer.sortingOrder = Mathf.RoundToInt(-transform.position.y * 100); // Castle Crashers depth
         }
@@ -202,7 +197,7 @@ public class MainPlayerController : MonoBehaviour
         {
             float isMoving = moveInput.magnitude;
             animController.SetMoveSpeed(isMoving);
-            animController.SetAnimationSpeed(isMoving > 0.05f ? 1.15f : 1f);
+            // animController.SetAnimationSpeed(isMoving > 0.05f ? 1.15f : 1f);
         }
     }
 
@@ -221,7 +216,7 @@ public class MainPlayerController : MonoBehaviour
             float damage = characterType == CharacterType.Spinosaurus ? stats.damageMin : Random.Range(stats.damageMin, stats.damageMax);
             animController.TriggerAttack();
 
-            StartCoroutine(characterScript.PerformAttack(damage, stats.attackSequenceCount, (dmg) =>
+            StartCoroutine(characterScript.PerformAttack(damage, (dmg) =>
             {
                 MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
                 activeMeleeDamage?.ApplyDamage(dmg, false, transform, this);
@@ -233,10 +228,9 @@ public class MainPlayerController : MonoBehaviour
 
     public void SpecialStarted(InputAction.CallbackContext context)
     {
-        if (!isFallen && canSpecial && currentStamina >= stats.specialAttackCost)
+        if (!isFallen && canSpecial && combatManager.DeductStamina(stats.specialAttackCost))
         {
             canSpecial = false;
-            currentStamina -= stats.specialAttackCost;
             animController.TriggerSpecial();
             StartCoroutine(PerformSpecialAttackCoroutine());
         }
@@ -260,7 +254,7 @@ public class MainPlayerController : MonoBehaviour
             MainPlayerController target = FindNearestFallenPlayer();
             if (target != null)
             {
-                animController.SetRevived(true);
+                animController.SetRevived();
                 RevivePrompt prompt = gameObject.AddComponent<RevivePrompt>();
                 prompt.StartRevive(this, target);
             }
@@ -277,7 +271,7 @@ public class MainPlayerController : MonoBehaviour
 
     private IEnumerator ResetAttackCooldown()
     {
-        yield return new WaitForSeconds(1f / stats.attacksPerSecond * stats.attackSequenceCount);
+        yield return new WaitForSeconds(1f / stats.attacksPerSecond);
         canAttack = true;
     }
 

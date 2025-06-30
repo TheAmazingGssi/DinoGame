@@ -15,41 +15,37 @@ MonoBehaviour:
   characters:
   - characterName: Triceratops
     maxHealth: 100
-    movementSpeed: 5
-    damageMin: 10
-    damageMax: 15
-    attacksPerSecond: 1
-    attackSequenceCount: 2
-    specialAttackDamage: 25
-    specialAttackCost: 20
-    stamina: 50
-  - characterName: Spinosaurus
-    maxHealth: 80
-    movementSpeed: 6
-    damageMin: 12
-    damageMax: 12
-    attacksPerSecond: 1.2
-    attackSequenceCount: 1
-    specialAttackDamage: 20
-    specialAttackCost: 15
-    stamina: 40
-  - characterName: Parasaurolophus
-    maxHealth: 60
-    movementSpeed: 7
-    damageMin: 8
-    damageMax: 12
-    attacksPerSecond: 1.5
-    attackSequenceCount: 1
-    specialAttackDamage: 15
-    specialAttackCost: 10
-    stamina: 30
-  - characterName: Therizinosaurus
-    maxHealth: 70
-    movementSpeed: 6
+    movementSpeed: 4
     damageMin: 15
     damageMax: 20
-    attacksPerSecond: 1.8
-    attackSequenceCount: 3
-    specialAttackDamage: 30
-    specialAttackCost: 25
-    stamina: 35
+    attacksPerSecond: 1.5
+    specialAttackDamage: 20
+    specialAttackCost: 50
+    stamina: 100
+  - characterName: Spinosaurus
+    maxHealth: 100
+    movementSpeed: 4
+    damageMin: 17
+    damageMax: 17
+    attacksPerSecond: 1
+    specialAttackDamage: 20
+    specialAttackCost: 50
+    stamina: 100
+  - characterName: Parasaurolophus
+    maxHealth: 100
+    movementSpeed: 4
+    damageMin: 15
+    damageMax: 20
+    attacksPerSecond: 1
+    specialAttackDamage: 20
+    specialAttackCost: 50
+    stamina: 100
+  - characterName: Therizinosaurus
+    maxHealth: 100
+    movementSpeed: 4
+    damageMin: 5
+    damageMax: 7
+    attacksPerSecond: 3
+    specialAttackDamage: 20
+    specialAttackCost: 50
+    stamina: 100
