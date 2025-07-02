@@ -20,7 +20,9 @@ public class PlayerManager : MonoBehaviour
         playerInput.actions.FindActionMap("Player").FindAction("Revive").performed += ctx => playerEntity.InvokeRevive(ctx);
         playerInput.actions.FindActionMap("Player").FindAction("Choose").performed += ctx => playerEntity.InvokeConfirmation(ctx);
         playerInput.actions.FindActionMap("Player").FindAction("Pause").performed += ctx => playerEntity.InvokePause(ctx);
+        playerInput.actions.FindActionMap("Player").FindAction("Emote").performed += ctx => playerEntity.InvokeEmote(ctx);
 
+        
         // Optional: Handle device disconnection
         playerInput.onDeviceLost += ctx => playerEntity.DeviceDisconnected();
     }
