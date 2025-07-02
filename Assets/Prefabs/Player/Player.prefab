@@ -464,12 +464,14 @@ MonoBehaviour:
   rb: {fileID: 977289204723741613}
   rightMeleeColliderGO: {fileID: 1632369837632200801}
   leftMeleeColliderGO: {fileID: 4772631282887250927}
+  soundPlayer: {fileID: 6304750159750022103}
   enableDuration: 0.2
   disableDelay: 0.5
   blockDuration: 0.5
   blockMoveSpeedMultiplier: 0.5
   reviveRange: 2
-  staminaRegenRate: 10
+  emoteCooldown: 1
+  emoteSound: {fileID: 0}
 --- !u!114 &64390248520630446
 MonoBehaviour:
   m_ObjectHideFlags: 0

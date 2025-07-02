@@ -26,6 +26,7 @@ public class MainPlayerController : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private GameObject rightMeleeColliderGO;
     [SerializeField] private GameObject leftMeleeColliderGO;
+    [SerializeField] private SoundPlayer soundPlayer;
 
     [Header("Attack Variables")]
     [SerializeField] private float enableDuration = 0.2f;
@@ -160,6 +161,8 @@ public class MainPlayerController : MonoBehaviour
         animController.characterType = characterType;
 
         activePlayers++;
+
+        combatManager.OnDeath += PlayDeathSound;
     }
 
     private void OnEnable() { }
@@ -230,8 +233,10 @@ public class MainPlayerController : MonoBehaviour
                 MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
                 activeMeleeDamage?.ApplyDamage(dmg, false, transform, this);
             }));
+            soundPlayer.PlaySound(0);
 
             StartCoroutine(ResetAttackCooldown());
+            
         }
     }
 
@@ -242,6 +247,7 @@ public class MainPlayerController : MonoBehaviour
             canSpecial = false;
             animController.TriggerSpecial();
             StartCoroutine(PerformSpecialAttackCoroutine());
+            soundPlayer.PlaySound(1);
         }
     }
 
@@ -362,5 +368,10 @@ public class MainPlayerController : MonoBehaviour
         }
 
         return nearest;
+    }
+
+    private void PlayDeathSound(DamageArgs dmgArg)
+    {
+        soundPlayer.PlaySound(2);
     }
 }
