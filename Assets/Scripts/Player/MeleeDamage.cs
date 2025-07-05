@@ -11,7 +11,7 @@ public class MeleeDamage : MonoBehaviour
             EnemyCombatManager enemyCombat = other.GetComponent<EnemyCombatManager>();
             if (enemyCombat != null)
             {
-                enemyCombat.TakeDamage(new DamageArgs { Damage = 2, SourceGO = playerController.gameObject });
+                enemyCombat.TakeDamage(new DamageArgs { Damage = 2, SourceGO = playerController.gameObject, SourceMPC = playerController });
             }
         }
     }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public abstract class EnemyAttack : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public abstract class EnemyAttack : MonoBehaviour
 
     [SerializeField] protected EnemyManager manager;
     [SerializeField] private float attackCooldown = 2;
+    [SerializeField] private VoiceClips soundEffect;
 
     private bool isOnCooldown = false;
     private bool isAttacking = false;
@@ -33,6 +35,11 @@ public abstract class EnemyAttack : MonoBehaviour
 
         manager.Animator.SetTrigger(Attack);
         ApplyDamage();
+
+        if (soundEffect)
+            manager.SoundPlayer.PlaySound(soundEffect);
+        else
+            manager.SoundPlayer.PlaySound(0);
 
         float animLength = GetAttackAnimationLength();
         StartCoroutine(AttackDurationCoroutine(animLength));
