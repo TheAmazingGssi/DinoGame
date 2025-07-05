@@ -15,6 +15,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Animator animator;
+    [SerializeField] private SoundPlayer soundPlayer;
 
     [Header("Data")]
     [SerializeField] private EnemyData enemyData;
@@ -36,6 +37,7 @@ public class EnemyManager : MonoBehaviour
     public Rigidbody2D RB => rb;
     public EnemyController EnemyController => enemyController;
     public EnemyCombatManager CombatManager => combatManager;
+    public SoundPlayer SoundPlayer => soundPlayer;
 
     public event UnityAction<EnemyManager> OnDeath;
 
@@ -59,6 +61,7 @@ public class EnemyManager : MonoBehaviour
         Debug.Log("Ded");
         OnDeath?.Invoke(this);
         animator.SetBool(IsDead, true);
+        GameManager.Instance.IncrementDeathCount();
         StartCoroutine(DeSpawn());
 
         if (Random.value < healthItemDropChance)

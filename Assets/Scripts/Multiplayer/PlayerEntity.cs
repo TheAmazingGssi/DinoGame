@@ -18,7 +18,7 @@ public class PlayerEntity : MonoBehaviour
     [SerializeField] PlayerInput playerInput;
 
     CharacterSelect selector;
-    MainPlayerController controller;
+    public MainPlayerController MainPlayerController;
     MultiplayerUIController uiController;
     public PlayerCombatManager CombatManager;
 
@@ -37,8 +37,8 @@ public class PlayerEntity : MonoBehaviour
 
     public Transform GetCharactersTransform { get
         {
-            if (controller)
-                return controller.transform;
+            if (MainPlayerController)
+                return MainPlayerController.transform;
             else
                 return null;
         } }
@@ -83,18 +83,18 @@ public class PlayerEntity : MonoBehaviour
     }
     public MainPlayerController SpawnPlayerController(Transform transform)
     {
-        controller = Instantiate(PickPlayerPrefab(CharacterType), transform.position, transform.rotation).GetComponent<MainPlayerController>();
-        CombatManager = controller.GetComponent<PlayerCombatManager>();
+        MainPlayerController = Instantiate(PickPlayerPrefab(CharacterType), transform.position, transform.rotation).GetComponent<MainPlayerController>();
+        CombatManager = MainPlayerController.GetComponent<PlayerCombatManager>();
         
         //Set Events
-        Move.AddListener(controller.Move);
-        Attack.AddListener(controller.Attack);
-        Block.AddListener(controller.Block);
-        Special.AddListener(controller.SpecialStarted);
-        Revive.AddListener(controller.Revive);
-        Emote.AddListener(controller.Emote);
+        Move.AddListener(MainPlayerController.Move);
+        Attack.AddListener(MainPlayerController.Attack);
+        Block.AddListener(MainPlayerController.Block);
+        Special.AddListener(MainPlayerController.SpecialStarted);
+        Revive.AddListener(MainPlayerController.Revive);
+        Emote.AddListener(MainPlayerController.Emote);
 
-        return controller;
+        return MainPlayerController;
     }
     private GameObject PickPlayerPrefab(CharacterType character)
     {

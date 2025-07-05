@@ -36,6 +36,7 @@ public class EnemyCombatManager : CombatManager
         Debug.Log($"Player dealt" + damageArgs.Damage);
 
         manager.Animator.SetTrigger(Hurt);
+        manager.SoundPlayer.PlaySound(1);
 
         if (damageNumberPrefab)
         {
