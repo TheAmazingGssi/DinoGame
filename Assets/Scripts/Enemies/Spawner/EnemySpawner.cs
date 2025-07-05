@@ -9,7 +9,7 @@ public class EnemySpawner : MonoBehaviour
 
     [HideInInspector] public float MinSpawnTime;
     [HideInInspector] public float MaxSpawnTime;
-    private float EnemiesInWave;
+    private int EnemiesInWave;
 
     [SerializeField] Transform[] spawnPoints;
 
@@ -19,7 +19,7 @@ public class EnemySpawner : MonoBehaviour
     {
         for (int i = 0; i < EnemiesInWave; i++)
         {
-            Instantiate(EnemyPrefab, spawnPoints[Random.Range(0, spawnPoints.Length)]);
+            Instantiate(EnemyPrefab, spawnPoints[Random.Range(0, spawnPoints.Length)].position, Quaternion.identity);
             yield return new WaitForSeconds(Random.Range(MinSpawnTime, MaxSpawnTime));
         }
     }
@@ -31,6 +31,7 @@ public class EnemySpawner : MonoBehaviour
             if(!wasTriggered)
             {
                 EnemiesInWave = PlayerEntity.PlayerList.Count * 2;
+                GameManager.Instance.SetWaveSize(EnemiesInWave);
                 StartCoroutine(SpawnWave());
                 wasTriggered = true;
             }

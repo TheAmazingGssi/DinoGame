@@ -77,7 +77,7 @@ public class MainPlayerController : MonoBehaviour
     public void AddScore(int points)
     {
         score += points;
-        Debug.Log($"Score updated: {score}");
+        //Debug.Log($"Score updated: {score}");
     }
 
     public void Revived()

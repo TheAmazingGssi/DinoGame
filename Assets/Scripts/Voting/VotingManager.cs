@@ -34,6 +34,7 @@ public class VotingSystem : MonoBehaviour
 
     private void Start()
     {
+        /*
         Vote vote4 = new Vote(
             "Gain local alliances for future help\r\nVS.\r\ngaining supply that will help now",
             new string[4] { "Raid their base\r\ngain max health boost.\n<color=red>BUT</color>\nOn the next level, face more enemies\r\n",
@@ -48,6 +49,7 @@ public class VotingSystem : MonoBehaviour
             new string[2] { "Raid their base",
                 "Team up with rival herd"});
         currentVote = vote2;
+        */
     }
 
     public void StartVote(Vote vote)

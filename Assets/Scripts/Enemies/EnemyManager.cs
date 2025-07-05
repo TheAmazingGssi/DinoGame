@@ -61,6 +61,7 @@ public class EnemyManager : MonoBehaviour
         Debug.Log("Ded");
         OnDeath?.Invoke(this);
         animator.SetBool(IsDead, true);
+        GameManager.Instance.IncrementDeathCount();
         StartCoroutine(DeSpawn());
 
         if (Random.value < healthItemDropChance)
