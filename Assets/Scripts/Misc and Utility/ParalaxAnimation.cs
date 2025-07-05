@@ -23,7 +23,7 @@ public class ParalaxAnimation : MonoBehaviour
         foreach (ParalaxLayer layer in layers)
         {
             float layerX = (focalPoint * layer.Multiplier) - layer.CameraOffset;
-            layerX = layerX % layer.sprite.sprite.
+            //layerX = layerX % layer.sprite.sprite;
             layer.LayerObject.transform.position = new Vector2(layerX, layer.LayerObject.transform.position.y); //x changes, y stays the same
         }
     }
