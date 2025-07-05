@@ -985,8 +985,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 972846066524486411, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 972846066524486411, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
       propertyPath: m_SortingOrder
       value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 972846066524486411, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997144781045121965, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
       propertyPath: m_Name
@@ -995,7 +1003,7 @@ PrefabInstance:
     - target: {fileID: 1518447201403033970, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
       propertyPath: cam
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 48396603}
     - target: {fileID: 1518447201403033970, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
       propertyPath: myHight
       value: 2.5
@@ -1081,8 +1089,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6967464387840599467, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6967464387840599467, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
       propertyPath: m_SortingOrder
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6967464387840599467, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1217,8 +1233,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 972846066524486411, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 972846066524486411, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
       propertyPath: m_SortingOrder
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 972846066524486411, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997144781045121965, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
       propertyPath: m_Name
@@ -1227,7 +1251,7 @@ PrefabInstance:
     - target: {fileID: 1518447201403033970, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
       propertyPath: cam
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 48396603}
     - target: {fileID: 1518447201403033970, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
       propertyPath: myHight
       value: 2.5
@@ -1337,7 +1361,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2958219883644597989, guid: 85734ccc389336c49b7d82977e532b20, type: 3}
     - target: {fileID: 6967464387840599467, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6967464387840599467, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
       propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6967464387840599467, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
+      propertyPath: m_SortingLayerID
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8404672718650450622, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
@@ -1422,7 +1454,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 48396603}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1432,7 +1464,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1466523249
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &1897021400
@@ -1469,8 +1501,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 972846066524486411, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 972846066524486411, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
       propertyPath: m_SortingOrder
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 972846066524486411, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 997144781045121965, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
       propertyPath: m_Name
@@ -1479,7 +1519,7 @@ PrefabInstance:
     - target: {fileID: 1518447201403033970, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
       propertyPath: cam
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 48396603}
     - target: {fileID: 1518447201403033970, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
       propertyPath: myHight
       value: 2.5
@@ -1588,6 +1628,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 2958219883644597989, guid: 85734ccc389336c49b7d82977e532b20, type: 3}
+    - target: {fileID: 6967464387840599467, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6967464387840599467, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8404672718650450622, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -1613,6 +1661,7 @@ GameObject:
   - component: {fileID: 1955025019}
   - component: {fileID: 1955025018}
   - component: {fileID: 1955025017}
+  - component: {fileID: 1955025020}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -1691,6 +1740,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1955025015}
   m_CullTransparentMesh: 1
+--- !u!223 &1955025020
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955025015}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 1274294147
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1001 &2009376304
 PrefabInstance:
   m_ObjectHideFlags: 0
