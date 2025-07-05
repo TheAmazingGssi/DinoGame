@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class TeamUpWithRivalHerd : VoteEffectBase
 {
-    public override TimeOfEffect timeOfEffect => TimeOfEffect.FinaleLevel;
+    //public override TimeOfEffect timeOfEffect => TimeOfEffect.FinaleLevel;
 
     public override EffectedPlayers effectedPlayers => EffectedPlayers.All;
 

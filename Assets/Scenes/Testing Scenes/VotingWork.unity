@@ -3362,7 +3362,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stagesVote: {fileID: 1724298587}
-  vote: {fileID: 11400000, guid: b29f4881f95362c40a88092c8763a161, type: 2}
+  vote: {fileID: 11400000, guid: cb7b0c3bab97dbe459005c86bba1d366, type: 2}
+  LevelNumber: 1
+  FinaleLevel: 3
 --- !u!4 &1657487361
 Transform:
   m_ObjectHideFlags: 0
@@ -3927,7 +3929,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4908158930256047455, guid: f4064a13b99dbc041b8a58f39a8edd38, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -3.9475136
+      value: -3.9475098
       objectReference: {fileID: 0}
     - target: {fileID: 5464300801117793789, guid: f4064a13b99dbc041b8a58f39a8edd38, type: 3}
       propertyPath: m_fontSize

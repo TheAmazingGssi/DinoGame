@@ -1,6 +1,6 @@
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
+[CreateAssetMenu(fileName = "TeamUpVSRaidNestVote", menuName = "Votes/TeamUpVSRaidNest")]
 public class TeamUpWithRivalHerdVSRaidTheirNest : Vote
 {
     public override string VoteDescription => "Gain local alliances for future help\r\nVS.\r\ngaining supply that will help now";
@@ -23,7 +23,22 @@ public class TeamUpWithRivalHerdVSRaidTheirNest : Vote
                         player.MainPlayerController.ApplyDamageBoost(20);
                     }
                 }
-                break;
+                if (GameManager.Instance.LevelNumber == GameManager.Instance.FinaleLevel)
+                {
+                    PlayerEntity highest = GameManager.Instance.GetHighestScorePlayer();
+                    if (highest)
+                    {
+                        //highest.MainPlayerController.IncreaseDamageTakenMultiplier(1.5f);
+
+                        Debug.Log("debuff to: " + highest.name);
+                    }
+                }
+                else
+                {
+                    GameManager.Instance.FinaleLevelEffects.Add(this, i);
+                    Debug.Log("adding to finale level votes");
+                }
+                    break;
         }
         wasActivated = true;
     }

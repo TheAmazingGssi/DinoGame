@@ -11,7 +11,7 @@ public enum EffectedPlayers
 
 public abstract class VoteEffectBase
 {
-    public abstract TimeOfEffect timeOfEffect {  get; }
+   // public abstract TimeOfEffect timeOfEffect {  get; }
     public abstract EffectedPlayers effectedPlayers {  get; }
 
     abstract public void ApplyEffect(List<PlayerEntity> players);
