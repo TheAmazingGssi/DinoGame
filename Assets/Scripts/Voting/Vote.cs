@@ -1,13 +1,18 @@
 using System.Collections.Generic;
 using UnityEngine;
-
-[CreateAssetMenu(fileName = "Vote", menuName = "Scriptable Objects/Vote")]
-public class Vote : ScriptableObject
+public enum TimeOfEffect
 {
-    [field:SerializeField] public string VoteDescription { get; private set; }
+    Immediate,
+    OnlyNextLevel,
+    FinaleLevel
+}
+public abstract class Vote : MonoBehaviour
+{
+    protected bool wasActivated = false;
+    public abstract string VoteDescription { get;}
 
-    [field: SerializeField] public string[] Choices { get; private set; }
-    [field: SerializeField] public string[] ButtonTexts { get; private set; }
+    public abstract string[] Choices { get;}
+    public abstract string[] ButtonTexts { get;}
 
-    [field: SerializeField] public VoteEffectBase[] Effects { get; private set; }
+    public abstract void ApplyEffects(int i);
 }

@@ -6,6 +6,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] VotingManager stagesVote;
     [SerializeField] Vote vote;
 
+    public int LevelNumber = 1; //need to add logic to change it
+
+    public int FinaleLevel = 3;
+
+    public Dictionary<int, Vote> FinaleLevelEffects = new Dictionary<int, Vote>();
+
     public static GameManager Instance;
     private int enemiesOnStage = 0;
 

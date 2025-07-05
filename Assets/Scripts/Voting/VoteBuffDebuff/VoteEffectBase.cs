@@ -9,12 +9,6 @@ public enum EffectedPlayers
     none
 }
 
-public enum TimeOfEffect
-{
-    Immediate,
-    OnlyNextLevel,
-    FinaleLevel
-}
 public abstract class VoteEffectBase
 {
     public abstract TimeOfEffect timeOfEffect {  get; }
