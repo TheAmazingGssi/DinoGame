@@ -4,7 +4,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-public class VotingSystem : MonoBehaviour
+public class VotingManager : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private GameObject votingPanel;
