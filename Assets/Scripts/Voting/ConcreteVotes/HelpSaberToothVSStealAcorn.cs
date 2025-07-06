@@ -5,6 +5,7 @@ using UnityEngine;
 public class HelpSaberToothVSStealAcorn : Vote
 {
     public override int LevelNumber => GameManager.Instance.LevelNumber;
+    public override string VoteTitle => "Help the saber tooth squirrel\r\nVS.\r\nSteal his acorn";
     public override string VoteDescription => "Help the saber tooth squirrel\r\nVS.\r\nSteal his acorn";
 
     public override string[] Choices => new string[2] { "Shelter the acorn\r\ntake 20% less damage.\n<color=red>BUT</color>\nMore ice meteors on the next level.\r\n",

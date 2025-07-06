@@ -8,6 +8,7 @@ public class VotingManager : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private GameObject votingPanel;
+    [SerializeField] private TextMeshProUGUI TitleText;
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private TextMeshProUGUI timerText;
 
@@ -54,7 +55,7 @@ public class VotingManager : MonoBehaviour
 
     public void StartVote(Vote vote)
     {
-        Debug.Log("starting vote");
+     //   Debug.Log("starting vote");
         votingPanel.SetActive(true);
         currentVote = vote;
 
@@ -68,6 +69,7 @@ public class VotingManager : MonoBehaviour
         SetupButtons(vote.ButtonTexts);
 
         descriptionText.text = vote.VoteDescription;
+        TitleText.text = vote.VoteTitle;
         voted = 0;
 
         timer = voteDuration;
@@ -92,7 +94,7 @@ public class VotingManager : MonoBehaviour
 
         if (isVoting && (timer <= 0 || voted >= PlayerEntity.PlayerList.Count))
         {
-            Debug.Log(voted);
+           // Debug.Log(voted);
             CompleteVote();
         }
     }
@@ -124,8 +126,8 @@ public class VotingManager : MonoBehaviour
         if (!isVoting) return;
         choices[choiceIndex]++;
         voted++;
-        Debug.Log("player voted: " + voted);
-        Debug.Log(choiceIndex + "vote casted");
+     //   Debug.Log("player voted: " + voted);
+       // Debug.Log(choiceIndex + "vote casted");
     }
 
     private void CompleteVote()
@@ -152,6 +154,6 @@ public class VotingManager : MonoBehaviour
     private void UpdateTimerDisplay()
     {
         int seconds = Mathf.CeilToInt(timer);
-        timerText.text = $"{seconds}";
+       // timerText.text = $"{seconds}";
     }
 }

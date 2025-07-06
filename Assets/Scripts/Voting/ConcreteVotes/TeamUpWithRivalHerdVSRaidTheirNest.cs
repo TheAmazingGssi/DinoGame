@@ -4,6 +4,7 @@ using UnityEngine;
 public class TeamUpWithRivalHerdVSRaidTheirNest : Vote
 {
     public override int LevelNumber => GameManager.Instance.LevelNumber;
+    public override string VoteTitle => "Gain local alliances for future help\r\nVS.\r\ngaining supply that will help now";
     public override string VoteDescription => "Gain local alliances for future help\r\nVS.\r\ngaining supply that will help now";
 
     public override string[] Choices => new string[2] { "Raid their base\r\ngain max health boost.\n<color=red>BUT</color>\nOn the next level, face more enemies\r\n",
@@ -59,7 +60,6 @@ public class TeamUpWithRivalHerdVSRaidTheirNest : Vote
                 }
                     break;
         }
-        wasActivated = true;
     }
 
 }

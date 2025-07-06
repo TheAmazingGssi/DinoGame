@@ -73,12 +73,14 @@ public class GameManager : MonoBehaviour
 
     public void StartVote()
     {
+        vote.wasActivated = false;
         stagesVote.StartVote(vote);
     }
 
     private void HandleVoteComplete(int winningChoice)
     {
         vote.ApplyEffects(winningChoice);
+        vote.wasActivated = true;
     }
 
     public PlayerEntity GetHighestScorePlayer()
