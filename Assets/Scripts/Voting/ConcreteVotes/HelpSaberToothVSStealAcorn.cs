@@ -10,7 +10,6 @@ public class HelpSaberToothVSStealAcorn : Vote
 
     public override string[] Choices => new string[2] { "Shelter the acorn\r\ntake 20% less damage.\n<color=red>BUT</color>\nMore ice meteors on the next level.\r\n",
         "Steal the acorns\r\nraise max health\n<color=red>BUT</color>\nthe highest score player takes more damage next level."};
-    public override string[] ButtonTexts => new string[2] { "Shelter the acorn", "Steal the acorns" };
 
     public override void ApplyEffects(int i)
     {

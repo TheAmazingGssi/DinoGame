@@ -8,6 +8,5 @@ public abstract class Vote : ScriptableObject
     public abstract string VoteTitle { get; }
     public abstract string VoteDescription { get; }
     public abstract string[] Choices { get; }
-    public abstract string[] ButtonTexts { get; }
     public abstract void ApplyEffects(int i);
 }

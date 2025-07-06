@@ -9,7 +9,7 @@ public class HealthItem : MonoBehaviour
     private PlayerCombatManager combatManager;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("collision in hp");
+      //  Debug.Log("collision in hp");
         if (collision.CompareTag(PLAYER))
         {
             Debug.Log("collision in hp is player");

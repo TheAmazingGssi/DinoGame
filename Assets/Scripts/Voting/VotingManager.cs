@@ -13,7 +13,6 @@ public class VotingManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI timerText;
 
     [SerializeField] private MultiplayerButton[] buttons;
-    [SerializeField] private TextMeshProUGUI[] buttonsTexts;
     [SerializeField] private TextMeshProUGUI[] choicesTexts;
 
     [SerializeField] private UIControllerSpawner uiSpawner;
@@ -66,7 +65,7 @@ public class VotingManager : MonoBehaviour
         }
 
         SetUpChoicesText(vote.Choices);
-        SetupButtons(vote.ButtonTexts);
+        SetupButtons(vote.Choices);
 
         descriptionText.text = vote.VoteDescription;
         TitleText.text = vote.VoteTitle;
@@ -117,7 +116,6 @@ public class VotingManager : MonoBehaviour
 
             buttons[i].gameObject.SetActive(hasText);
             buttons[i].button.interactable = hasText;
-            buttonsTexts[i].text = hasText ? text[i] : "";
         }
     }
 

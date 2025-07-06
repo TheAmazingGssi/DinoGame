@@ -33,7 +33,7 @@ public class EnemyCombatManager : CombatManager
     public override void TakeDamage(DamageArgs damageArgs)
     {
         base.TakeDamage(damageArgs);
-        Debug.Log($"Player dealt" + damageArgs.Damage);
+     //   Debug.Log($"Player dealt" + damageArgs.Damage);
 
         manager.Animator.SetTrigger(Hurt);
         manager.SoundPlayer.PlaySound(1);

@@ -22,7 +22,7 @@ public abstract class EnemyAttack : MonoBehaviour
     {
         if (!isOnCooldown)
         {
-            Debug.Log($"{gameObject.name} starting attack");
+         //   Debug.Log($"{gameObject.name} starting attack");
             StartAttack();
         }
     }
