@@ -9,6 +9,8 @@ public class EnemySpawner : MonoBehaviour
 
     [HideInInspector] public float MinSpawnTime;
     [HideInInspector] public float MaxSpawnTime;
+
+    [HideInInspector] public int EnemiesInWaveMultiplier = 2;
     private int EnemiesInWave;
 
     [SerializeField] Transform[] spawnPoints;
@@ -30,7 +32,7 @@ public class EnemySpawner : MonoBehaviour
         {
             if(!wasTriggered)
             {
-                EnemiesInWave = PlayerEntity.PlayerList.Count * 2;
+                EnemiesInWave = PlayerEntity.PlayerList.Count * EnemiesInWaveMultiplier;
                 GameManager.Instance.SetWaveSize(EnemiesInWave);
                 StartCoroutine(SpawnWave());
                 wasTriggered = true;

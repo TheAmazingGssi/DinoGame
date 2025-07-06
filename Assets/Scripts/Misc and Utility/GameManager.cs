@@ -3,11 +3,13 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] VotingManager stagesVote;
-    [SerializeField] Vote vote;
+    [SerializeField] private VotingManager stagesVote;
+    [SerializeField] private Vote vote;
+    [field: SerializeField] public SpawnerManager SpawnerManager {get; private set;}
     public int LevelNumber = 1;
     public int FinaleLevel = 3;
     public Dictionary<Vote, int> FinaleLevelEffects = new Dictionary<Vote, int>();
+    public Dictionary<Vote, int> NextLevelEffects = new Dictionary<Vote, int>();
     public static GameManager Instance;
     private int enemiesOnStage = 0;
 
@@ -30,6 +32,16 @@ public class GameManager : MonoBehaviour
             }
             FinaleLevelEffects.Clear();
         }
+        if(LevelNumber > vote.LevelNumber) //need to change logic
+        {
+            foreach (var vote in NextLevelEffects)
+            {
+                Vote currentVote = vote.Key;
+                int choiceIndex = vote.Value;
+                currentVote.ApplyEffects(choiceIndex);
+            }
+            NextLevelEffects.Clear();
+        }
     }
 
     private void OnEnable() => VotingManager.OnVoteComplete += HandleVoteComplete;
@@ -47,7 +59,13 @@ public class GameManager : MonoBehaviour
             StartVote();
         }
     }
-
+    public void OnLevelEnd() //need to add a call somewhere
+    {
+        foreach(PlayerEntity player in PlayerEntity.PlayerList)
+        {
+            player.CombatManager.ResetDamageTakenMultiplier();
+        }
+    }
     public void SetWaveSize(int amount)
     {
         enemiesOnStage += amount;

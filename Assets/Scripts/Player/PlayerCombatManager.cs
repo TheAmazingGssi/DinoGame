@@ -6,6 +6,7 @@ public class PlayerCombatManager : CombatManager
     private float maxStamina;
     private float currentStamina;
     private float staminaRegenRate = 10f; // Moved from MainPlayerController
+    private float damageTakenMultiplier = 1f;
     private MainPlayerController controller;
     private Animator animator;
     private AnimationController animController;
@@ -28,12 +29,24 @@ public class PlayerCombatManager : CombatManager
     {
         if (!MainPlayerController.CanBeDamaged) return;
 
+        args.Damage *= damageTakenMultiplier;
         base.TakeDamage(args);
-        Debug.Log($"{gameObject.name} took {args.Damage} damage, health: {currentHealth}");
+
+        Debug.Log($"{gameObject.name} took {args.Damage} damage (after multiplier), health: {currentHealth}");
         animController.TriggerDamaged();
     }
 
+    public void ApplyDamageTakenIncrease(float percentage)
+    {
+        damageTakenMultiplier += percentage / 100f;
+        damageTakenMultiplier = Mathf.Max(0.1f, damageTakenMultiplier);
+        Debug.Log($"{gameObject.name} now takes {damageTakenMultiplier * 100}% damage");
+    }
 
+    public void ResetDamageTakenMultiplier()
+    {
+        damageTakenMultiplier = 1;
+    }
 
     public override void RestoreHealthByPercent(float percent)
     {
@@ -41,7 +54,20 @@ public class PlayerCombatManager : CombatManager
         currentStamina = maxStamina;
         Debug.Log($"{gameObject.name} restored {percent * currentMaxHealth} health, now at {currentHealth}/{currentMaxHealth}, stamina: {currentStamina}/{maxStamina}");
     }
-        
+
+    public void IncreaseMaxHealthByPercentage(float percentage)
+    {
+        float healthBefore = currentHealth;
+        float oldMax = currentMaxHealth;
+        currentMaxHealth *= 1 + (percentage / 100f);
+
+        float healthRatio = healthBefore / oldMax;
+        currentHealth = currentMaxHealth * healthRatio; //Restore current health?
+
+        Debug.Log($"{gameObject.name} max health increased by {percentage}%. New max: {currentMaxHealth}, current: {currentHealth}");
+        UpdateHealthBar();
+    }
+
     public bool DeductStamina(float amount)
     {
         if (currentStamina >= amount)

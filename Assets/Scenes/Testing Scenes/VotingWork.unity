@@ -3363,6 +3363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stagesVote: {fileID: 1724298587}
   vote: {fileID: 11400000, guid: cb7b0c3bab97dbe459005c86bba1d366, type: 2}
+  <SpawnerManager>k__BackingField: {fileID: 0}
   LevelNumber: 1
   FinaleLevel: 3
 --- !u!4 &1657487361
@@ -3945,7 +3946,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8736147686085562498, guid: f4064a13b99dbc041b8a58f39a8edd38, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
