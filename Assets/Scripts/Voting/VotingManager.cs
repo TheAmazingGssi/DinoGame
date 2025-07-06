@@ -126,8 +126,8 @@ public class VotingManager : MonoBehaviour
         if (!isVoting) return;
         choices[choiceIndex]++;
         voted++;
-     //   Debug.Log("player voted: " + voted);
-       // Debug.Log(choiceIndex + "vote casted");
+        Debug.Log("player voted: " + voted);
+        Debug.Log(choiceIndex + "vote casted");
     }
 
     private void CompleteVote()
@@ -154,6 +154,6 @@ public class VotingManager : MonoBehaviour
     private void UpdateTimerDisplay()
     {
         int seconds = Mathf.CeilToInt(timer);
-       // timerText.text = $"{seconds}";
+        timerText.text = $"{seconds}";
     }
 }
