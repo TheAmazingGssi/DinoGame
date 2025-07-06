@@ -54,13 +54,13 @@ public class CombatManager : MonoBehaviour
         UpdateHealthBar();
     }
 
-    public void RestoreHealth(float Health)
+    public virtual void RestoreHealth(float Health)
     {
         currentHealth = Mathf.Clamp(currentHealth + Health, 0, currentMaxHealth);
         UpdateHealthBar();
     }
 
-    public void RestoreHealthByPercent(float percent)
+    public virtual void RestoreHealthByPercent(float percent)
     {
         Debug.Log($"Restoring: {percent}% health to {gameObject.name}");
         float healthToRestore = percent * currentMaxHealth;

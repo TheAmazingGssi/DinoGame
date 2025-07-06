@@ -22,7 +22,7 @@ public class HealthItem : MonoBehaviour
                 return;
             }
             
-            if (combatManager.CurrentHealth != combatManager.MaxHealth)
+            if (combatManager.CurrentHealth != combatManager.CurrentMaxHealth)
             {
                 Debug.Log("collision in hp and combat manager found");
 

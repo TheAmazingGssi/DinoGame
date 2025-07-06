@@ -27,7 +27,7 @@ public class HUDManager : MonoBehaviour
             {
                 hudRefrences[i].gameObject.SetActive(true);
                 hudRefrences[i].SplashArtImage.sprite = splashArts[PlayerEntity.PlayerList[i].CharacterType];
-                hudRefrences[i].HpBar.maxValue = PlayerEntity.PlayerList[i].CombatManager.MaxHealth;
+                hudRefrences[i].HpBar.maxValue = PlayerEntity.PlayerList[i].CombatManager.CurrentMaxHealth;
                 hudRefrences[i].HpBar.value = PlayerEntity.PlayerList[i].CombatManager.CurrentHealth;
                 hudRefrences[i].EnergyBar.maxValue = PlayerEntity.PlayerList[i].CombatManager.MaxStamina;
                 hudRefrences[i].EnergyBar.value = PlayerEntity.PlayerList[i].CombatManager.CurrentStamina;

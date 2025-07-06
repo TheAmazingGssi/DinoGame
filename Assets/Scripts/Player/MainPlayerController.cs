@@ -377,7 +377,7 @@ public class MainPlayerController : MonoBehaviour
         return nearest;
     }
 
-    private void PlayDeathSound(DamageArgs dmgArg)
+    private void PlayDeathSound(CombatManager combatManager)
     {
         soundPlayer.PlaySound(2);
     }
