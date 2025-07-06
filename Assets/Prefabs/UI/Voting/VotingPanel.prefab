@@ -68,10 +68,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 3193549154023202544}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.758487}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -9.999994}
-  m_SizeDelta: {x: 0, y: 23.803917}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -10}
+  m_SizeDelta: {x: 660, y: 85}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &4254264942668317753
 CanvasRenderer:
@@ -101,12 +101,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Gain local alliances for future help
-
-    VS.
-
-    gaining supply that
-    will help now'
+  m_text: Land on the moon\r\nVS.\r\ncrush on the moon (like a badass)\r\nVS.\r\nSearch
+    for a different landing zone
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ae6226469c9d4c946be74b2e839d7c88, type: 2}
   m_sharedMaterial: {fileID: 5535003544734183148, guid: ae6226469c9d4c946be74b2e839d7c88, type: 2}
@@ -133,11 +129,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.65
+  m_fontSize: 16.7
   m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 0
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 2
@@ -500,11 +496,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: " As you pass the vicious western desert, you all feel a chill running
-    down your spine, [most score dino] can't shake the feeling you\u2019re being
-    watched, and soon after you find Erl the sabertooth squirrel, he warns you that
-    a blizzard is on its way! He asks you to shelter his acorns and promises a great
-    reward if you agree. Or.. you can always steal them for extra nutrition"
+  m_text: "After defeating the Alien\u2019s leader, you board their mothership, 10\u2026
+    9\u2026 8\u2026 No time! TAKE OFF! You fly sky high and exit the atmosphere,
+    congrats! You escaped Earth, your next destination: The Moon, but how will you
+    land?\""
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ae6226469c9d4c946be74b2e839d7c88, type: 2}
   m_sharedMaterial: {fileID: 5535003544734183148, guid: ae6226469c9d4c946be74b2e839d7c88, type: 2}
@@ -531,12 +526,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15.6
+  m_fontSize: 16
   m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0
-  m_fontSizeMax: 72
+  m_fontSizeMax: 16
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
