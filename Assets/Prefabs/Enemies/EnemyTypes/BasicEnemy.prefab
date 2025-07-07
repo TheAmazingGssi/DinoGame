@@ -80,6 +80,10 @@ PrefabInstance:
       propertyPath: 'attacks.Array.data[0]'
       value: 
       objectReference: {fileID: -2744939329610303208}
+    - target: {fileID: 7184945894762929075, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_Radius
+      value: 35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -87,6 +91,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1856966355605016673, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       insertIndex: -1
       addedObject: {fileID: -2744939329610303208}
+    - targetCorrespondingSourceObject: {fileID: 1856966355605016673, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4390501980536864316}
   m_SourcePrefab: {fileID: 100100000, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
 --- !u!1 &2600982548165210631 stripped
 GameObject:
@@ -107,6 +114,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 6676866525376652572}
   attackCooldown: 5
+  soundEffect: {fileID: 0}
+  damageDelay: 0.2
+--- !u!70 &4390501980536864316
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2600982548165210631}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 100, y: 60}
+  m_Direction: 1
 --- !u!114 &6676866525376652572 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7022572441651464058, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
