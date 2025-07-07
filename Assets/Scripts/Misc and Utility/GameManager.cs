@@ -3,15 +3,27 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private VotingManager stagesVote;
+    //Singleton
+    public static GameManager Instance;
+
+    [Header("Settings")]
+    [SerializeField] private CameraLocations[] waveLocations;
     [SerializeField] private Vote vote;
-    [field: SerializeField] public SpawnerManager SpawnerManager {get; private set;}
-    public int LevelNumber = 1;
+    [field: SerializeField] public int LevelNumber { get; private set; } = 1;
+    
+    [Header("Refrences")]
+    [SerializeField] private VotingManager stagesVote;
+    [SerializeField] private CameraMovement cameraMovement;
+    [SerializeField] private SceneLoader sceneLoader;
+    [field:SerializeField] public SpawnerManager SpawnerManager {get; private set;}
+    
     public int FinaleLevel = 3;
+
+    //Variables off inspector
     public Dictionary<Vote, int> FinaleLevelEffects = new Dictionary<Vote, int>();
     public Dictionary<Vote, int> NextLevelEffects = new Dictionary<Vote, int>();
-    public static GameManager Instance;
     private int enemiesOnStage = 0;
+    private int currentWave = 0;
 
     void Start()
     {
@@ -42,6 +54,9 @@ public class GameManager : MonoBehaviour
             }
             NextLevelEffects.Clear();
         }
+
+        cameraMovement.FurthestLeftPoint = waveLocations[currentWave].LeftMost;
+        cameraMovement.FurthestRightPoint = waveLocations[currentWave].RightMost;
     }
 
     private void OnEnable() => VotingManager.OnVoteComplete += HandleVoteComplete;
@@ -49,6 +64,11 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if (currentWave >= waveLocations.Length)
+            return;
+        float cameraX = cameraMovement.transform.position.x;
+        if (cameraX < waveLocations[currentWave].LeftMost && cameraX > cameraMovement.FurthestLeftPoint)
+            cameraMovement.FurthestLeftPoint = cameraX;
     }
 
     public void IncrementDeathCount()
@@ -56,7 +76,7 @@ public class GameManager : MonoBehaviour
         enemiesOnStage--;
         if (enemiesOnStage <= 0)
         {
-            StartVote();
+            WaveComplete();
         }
     }
     public void OnLevelEnd() //need to add a call somewhere
@@ -71,8 +91,21 @@ public class GameManager : MonoBehaviour
         enemiesOnStage += amount;
     }
 
+    private void WaveComplete()
+    {
+        currentWave++;
+        if(waveLocations.Length <= currentWave)
+            StartVote();
+        else
+        {
+            cameraMovement.FurthestRightPoint = waveLocations[currentWave].RightMost;
+        }
+    }
+
     public void StartVote()
     {
+        cameraMovement.FurthestRightPoint = cameraMovement.transform.position.x;
+        cameraMovement.FurthestLeftPoint = cameraMovement.transform.position.x;
         vote.wasActivated = false;
         stagesVote.StartVote(vote);
     }
@@ -81,6 +114,8 @@ public class GameManager : MonoBehaviour
     {
         vote.ApplyEffects(winningChoice);
         vote.wasActivated = true;
+        OnLevelEnd();
+        sceneLoader.LoadTargetScene();
     }
 
     public PlayerEntity GetHighestScorePlayer()
@@ -114,4 +149,11 @@ public class GameManager : MonoBehaviour
         }
         return lowestScorePlayer;
     }
+}
+
+[System.Serializable]
+struct CameraLocations
+{
+    public int LeftMost;
+    public int RightMost;
 }

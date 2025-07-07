@@ -10,9 +10,9 @@ public class CameraMovement : MonoBehaviour
 
     [Header("Settings")]
     [Tooltip("In game this will be changed by a script that reveals more of the stage as the player beats enemy waves. You set the starting values")]
-    [SerializeField] float furthestRightPoint; 
+    public float FurthestRightPoint; 
     [Tooltip("In game this will be changed by a script that blocks the way back as the player beats enemy waves. You set the starting values")]
-    [SerializeField] float furthestLeftPoint;
+    public float FurthestLeftPoint;
     [SerializeField] float bottomOfStage;
     
     [Header("Component Refrences")]
@@ -62,7 +62,7 @@ public class CameraMovement : MonoBehaviour
             cameraX /= counter;
 
         //clamp to not go over where the camera cant go yet
-        cameraX = Mathf.Clamp(cameraX, furthestLeftPoint, furthestRightPoint);
+        cameraX = Mathf.Clamp(cameraX, FurthestLeftPoint, FurthestRightPoint);
 
         float cameraY = bottomOfStage + cameraHalfHeight;
 
@@ -85,8 +85,8 @@ public class CameraMovement : MonoBehaviour
     
     private void ZoomToAverage()
     {
-        float minX = furthestRightPoint;
-        float maxX = furthestLeftPoint;
+        float minX = FurthestRightPoint;
+        float maxX = FurthestLeftPoint;
         foreach (PlayerEntity player in PlayerEntity.PlayerList)
         {
             if (!player.GetCharactersTransform)
