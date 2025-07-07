@@ -9,12 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85e1ae9ae5f684a4f9ab2eb4ce5bc120, type: 3}
-  m_Name: TestEnemy
+  m_Script: {fileID: 11500000, guid: da5b24a8936f23d49b58d06349d335a4, type: 3}
+  m_Name: TeamUpVSRaidNestVote
   m_EditorClassIdentifier: 
-  maxHealth: 1
-  baseDamage: 2
-  stopRange: 3
-  attackRange: 1
-  speed: 2
-  score: 10
+  timeOfEffect: 0

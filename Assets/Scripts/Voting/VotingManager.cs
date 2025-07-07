@@ -4,15 +4,15 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-public class VotingSystem : MonoBehaviour
+public class VotingManager : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private GameObject votingPanel;
+    [SerializeField] private TextMeshProUGUI TitleText;
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private TextMeshProUGUI timerText;
 
     [SerializeField] private MultiplayerButton[] buttons;
-    [SerializeField] private TextMeshProUGUI[] buttonsTexts;
     [SerializeField] private TextMeshProUGUI[] choicesTexts;
 
     [SerializeField] private UIControllerSpawner uiSpawner;
@@ -54,7 +54,7 @@ public class VotingSystem : MonoBehaviour
 
     public void StartVote(Vote vote)
     {
-        Debug.Log("starting vote");
+     //   Debug.Log("starting vote");
         votingPanel.SetActive(true);
         currentVote = vote;
 
@@ -65,9 +65,10 @@ public class VotingSystem : MonoBehaviour
         }
 
         SetUpChoicesText(vote.Choices);
-        SetupButtons(vote.ButtonTexts);
+        SetupButtons(vote.Choices);
 
         descriptionText.text = vote.VoteDescription;
+        TitleText.text = vote.VoteTitle;
         voted = 0;
 
         timer = voteDuration;
@@ -92,7 +93,7 @@ public class VotingSystem : MonoBehaviour
 
         if (isVoting && (timer <= 0 || voted >= PlayerEntity.PlayerList.Count))
         {
-            Debug.Log(voted);
+           // Debug.Log(voted);
             CompleteVote();
         }
     }
@@ -115,7 +116,6 @@ public class VotingSystem : MonoBehaviour
 
             buttons[i].gameObject.SetActive(hasText);
             buttons[i].button.interactable = hasText;
-            buttonsTexts[i].text = hasText ? text[i] : "";
         }
     }
 

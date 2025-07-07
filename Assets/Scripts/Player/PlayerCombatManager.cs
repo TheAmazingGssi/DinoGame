@@ -1,27 +1,23 @@
 using System;
 using UnityEngine;
 
-public class PlayerCombatManager : MonoBehaviour
+public class PlayerCombatManager : CombatManager
 {
-    private float maxHealth;
-    private float currentHealth;
     private float maxStamina;
     private float currentStamina;
     private float staminaRegenRate = 10f; // Moved from MainPlayerController
+    private float damageTakenMultiplier = 1f;
     private MainPlayerController controller;
     private Animator animator;
     private AnimationController animController;
-    public event Action<DamageArgs> OnDeath;
 
-    public float CurrentHealth => currentHealth;
-    public float MaxHealth => maxHealth;
     public float CurrentStamina => currentStamina;
     public float MaxStamina => maxStamina;
 
     public void Initialize(float maxHealth, float maxStamina, MainPlayerController controller, Animator animator)
     {
-        this.maxHealth = maxHealth;
-        this.currentHealth = maxHealth;
+        currentMaxHealth = maxHealth;
+        currentHealth = maxHealth;
         this.maxStamina = maxStamina;
         this.currentStamina = maxStamina;
         this.controller = controller;
@@ -29,27 +25,47 @@ public class PlayerCombatManager : MonoBehaviour
         this.animController = GetComponent<AnimationController>();
     }
 
-    public void TakeDamage(DamageArgs args)
+    public override void TakeDamage(DamageArgs args)
     {
         if (!MainPlayerController.CanBeDamaged) return;
 
-        currentHealth -= args.Damage;
-        Debug.Log($"{gameObject.name} took {args.Damage} damage, health: {currentHealth}");
-        animController.TriggerDamaged();
+        args.Damage *= damageTakenMultiplier;
+        base.TakeDamage(args);
 
-        if (currentHealth <= 0)
-        {
-            currentHealth = 0;
-            OnDeath?.Invoke(args);
-        }
+       // Debug.Log($"{gameObject.name} took {args.Damage} damage (after multiplier), health: {currentHealth}");
+        animController.TriggerDamaged();
     }
 
-    public void RestoreHealthByPercent(float percent)
+    public void ApplyDamageTakenIncrease(float percentage)
     {
-        float healthToAdd = maxHealth * (percent / 100f);
-        currentHealth = Mathf.Min(currentHealth + healthToAdd, maxHealth);
-        currentStamina = maxStamina; // Reset stamina on revive
-        Debug.Log($"{gameObject.name} restored {healthToAdd} health, now at {currentHealth}/{maxHealth}, stamina: {currentStamina}/{maxStamina}");
+        damageTakenMultiplier += percentage / 100f;
+        damageTakenMultiplier = Mathf.Max(0.1f, damageTakenMultiplier);
+        Debug.Log($"{gameObject.name} now takes {damageTakenMultiplier * 100}% damage");
+    }
+
+    public void ResetDamageTakenMultiplier()
+    {
+        damageTakenMultiplier = 1;
+    }
+
+    public override void RestoreHealthByPercent(float percent)
+    {
+        base.RestoreHealthByPercent(percent);
+        currentStamina = maxStamina;
+        Debug.Log($"{gameObject.name} restored {percent * currentMaxHealth} health, now at {currentHealth}/{currentMaxHealth}, stamina: {currentStamina}/{maxStamina}");
+    }
+
+    public void IncreaseMaxHealthByPercentage(float percentage)
+    {
+        float healthBefore = currentHealth;
+        float oldMax = currentMaxHealth;
+        currentMaxHealth *= 1 + (percentage / 100f);
+
+        float healthRatio = healthBefore / oldMax;
+        currentHealth = currentMaxHealth * healthRatio; //Restore current health?
+
+        Debug.Log($"{gameObject.name} max health increased by {percentage}%. New max: {currentMaxHealth}, current: {currentHealth}");
+        UpdateHealthBar();
     }
 
     public bool DeductStamina(float amount)

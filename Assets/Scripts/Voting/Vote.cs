@@ -1,11 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Vote", menuName = "Scriptable Objects/Vote")]
-public class Vote : ScriptableObject
+public abstract class Vote : ScriptableObject
 {
-    [field:SerializeField] public string VoteDescription { get; private set; }
-
-    [field: SerializeField] public string[] Choices { get; private set; }
-    [field: SerializeField] public string[] ButtonTexts { get; private set; } //maybe later change to dictionary with vote effects
+    public bool wasActivated = false;
+    public abstract int LevelNumber { get; }
+    public abstract string VoteTitle { get; }
+    public abstract string VoteDescription { get; }
+    public abstract string[] Choices { get; }
+    public abstract void ApplyEffects(int i);
 }

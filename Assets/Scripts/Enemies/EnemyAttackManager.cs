@@ -121,11 +121,11 @@ public class EnemyAttackManager : MonoBehaviour
             if (playersInRange.Contains(player))
             {
                 playersInRange.Remove(player);
-                Debug.Log($"Player {player.name} removed from range");
+              //  Debug.Log($"Player {player.name} removed from range");
 
                 if (player == playerCombatManager)
                 {
-                    Debug.Log($"Current target {player.name} left range, clearing target");
+                //    Debug.Log($"Current target {player.name} left range, clearing target");
                     ClearTarget();
                 }
             }
@@ -147,7 +147,7 @@ public class EnemyAttackManager : MonoBehaviour
         }
         else if (playerCombatManager == null)
         {
-            Debug.Log("Current target is null, selecting new target");
+          //  Debug.Log("Current target is null, selecting new target");
             ClearTarget();
             SelectTarget();
         }
@@ -162,19 +162,19 @@ public class EnemyAttackManager : MonoBehaviour
         if (lastPlayerToDamage != null && playersInRange.Contains(lastPlayerToDamage))
         {
             targetPlayer = lastPlayerToDamage;
-            Debug.Log($"Targeting last player to deal damage: {targetPlayer.name}");
+          //  Debug.Log($"Targeting last player to deal damage: {targetPlayer.name}");
         }
         else
         {
             var validPlayers = playersInRange.Where(p => p != null).ToList();
             if (validPlayers.Count == 0)
             {
-                Debug.LogWarning("No valid players found in range!");
+              //  Debug.LogWarning("No valid players found in range!");
                 return;
             }
 
             targetPlayer = validPlayers.OrderByDescending(p => p.CurrentHealth).First();
-            Debug.Log($"Targeting player with highest health: {targetPlayer.name}");
+           // Debug.Log($"Targeting player with highest health: {targetPlayer.name}");
         }
 
         if (targetPlayer != null)
@@ -191,7 +191,7 @@ public class EnemyAttackManager : MonoBehaviour
 
         if (playersInRange.Contains(player))
         {
-            Debug.Log($"Player {player.name} that dealt damage is in range - switching target");
+         //   Debug.Log($"Player {player.name} that dealt damage is in range - switching target");
             SetTarget(player);
         }
     }
@@ -217,14 +217,14 @@ public class EnemyAttackManager : MonoBehaviour
 
         playerCombatManager = player;
         currentTarget = player.transform;
-        Debug.Log($"Enemy targeting: {player.name}");
+       // Debug.Log($"Enemy targeting: {player.name}");
     }
 
     private void ClearTarget()
     {
         if (currentTarget != null)
         {
-            Debug.Log($"Clearing target: {currentTarget.name}");
+           // Debug.Log($"Clearing target: {currentTarget.name}");
         }
         currentTarget = null;
         playerCombatManager = null;
@@ -238,7 +238,7 @@ public class EnemyAttackManager : MonoBehaviour
             if (playerCombat != null && !playersInRange.Contains(playerCombat))
             {
                 playersInRange.Add(playerCombat);
-                Debug.Log($"Player {playerCombat.name} entered enemy range");
+               // Debug.Log($"Player {playerCombat.name} entered enemy range");
             }
         }
     }
@@ -256,13 +256,13 @@ public class EnemyAttackManager : MonoBehaviour
                     if (!detectionCollider.bounds.Intersects(collision.bounds))
                     {
                         playersToRemove.Add(playerCombat);
-                        Debug.Log($"Player {playerCombat.name} marked to leave enemy range");
+                        //Debug.Log($"Player {playerCombat.name} marked to leave enemy range");
                     }
                 }
                 else
                 {
                     playersToRemove.Add(playerCombat);
-                    Debug.Log($"Player {playerCombat.name} marked to leave enemy range (fallback)");
+                   // Debug.Log($"Player {playerCombat.name} marked to leave enemy range (fallback)");
                 }
             }
         }

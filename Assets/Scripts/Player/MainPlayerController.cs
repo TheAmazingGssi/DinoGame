@@ -217,7 +217,14 @@ public class MainPlayerController : MonoBehaviour
     {
         moveInput = context.ReadValue<Vector2>();
     }
+    public void ApplyDamageBoost(float percentage)
+    {
+        float multiplier = 1 + percentage / 100f;
+        stats.damageMin *= multiplier;
+        stats.damageMax *= multiplier;
 
+        Debug.Log($"New range: {stats.damageMin} - {stats.damageMax}");
+    }
     public void Attack(InputAction.CallbackContext context)
     {
         if (canAttack && !isBlocking && !isFallen)
@@ -370,7 +377,7 @@ public class MainPlayerController : MonoBehaviour
         return nearest;
     }
 
-    private void PlayDeathSound(DamageArgs dmgArg)
+    private void PlayDeathSound(CombatManager combatManager)
     {
         soundPlayer.PlaySound(2);
     }
