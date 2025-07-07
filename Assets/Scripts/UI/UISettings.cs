@@ -1,5 +1,4 @@
 using UnityEngine;
-using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 [CreateAssetMenu(fileName = "UISettings", menuName = "Scriptable Objects/UISettings")]
 public class UISettings : ScriptableObject
