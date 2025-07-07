@@ -1,0 +1,650 @@
+fileFormatVersion: 2
+guid: 3a86176ab6b5ad244a04cc9764987000
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7636944866598226688
+    second: Spencer_Special_Sheet_0
+  - first:
+      213: -5139278420860532812
+    second: Spencer_Special_Sheet_1
+  - first:
+      213: -1654676460897481035
+    second: Spencer_Special_Sheet_2
+  - first:
+      213: 645317053478743067
+    second: Spencer_Special_Sheet_3
+  - first:
+      213: 1719718258732573456
+    second: Spencer_Special_Sheet_4
+  - first:
+      213: -139200358447914188
+    second: Spencer_Special_Sheet_5
+  - first:
+      213: 2675071683473344396
+    second: Spencer_Special_Sheet_6
+  - first:
+      213: -608684902258843200
+    second: Spencer_Special_Sheet_7
+  - first:
+      213: 4051546309469517148
+    second: Spencer_Special_Sheet_8
+  - first:
+      213: 6955056121969430315
+    second: Spencer_Special_Sheet_9
+  - first:
+      213: -4423651646868893051
+    second: Spencer_Special_Sheet_10
+  - first:
+      213: 5397551516370830812
+    second: Spencer_Special_Sheet_11
+  - first:
+      213: 907417748475338837
+    second: Spencer_Special_Sheet_12
+  - first:
+      213: -4097434278655258698
+    second: Spencer_Special_Sheet_13
+  - first:
+      213: -5430211402936797495
+    second: Spencer_Special_Sheet_14
+  - first:
+      213: 8422101577578698843
+    second: Spencer_Special_Sheet_15
+  - first:
+      213: 3538652647245760902
+    second: Spencer_Special_Sheet_16
+  - first:
+      213: -9165458627141201428
+    second: Spencer_Special_Sheet_17
+  - first:
+      213: 615928805517406904
+    second: Spencer_Special_Sheet_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 2500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spencer_Special_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1791
+        width: 853
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0057b292b1f140690800000000000000
+      internalID: -7636944866598226688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Special_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 1791
+        width: 824
+        height: 459
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b707ca518d9da8b0800000000000000
+      internalID: -5139278420860532812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Special_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 2062
+        y: 1791
+        width: 782
+        height: 498
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5be410296886909e0800000000000000
+      internalID: -1654676460897481035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Special_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 3082
+        y: 1791
+        width: 783
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1c2a1ce070a4f800800000000000000
+      internalID: 645317053478743067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Special_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 1210
+        width: 869
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 013228515aaadd710800000000000000
+      internalID: 1719718258732573456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Special_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 1210
+        width: 895
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 433ea12f206711ef0800000000000000
+      internalID: -139200358447914188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Special_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 2072
+        y: 1210
+        width: 899
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c878222e583cf1520800000000000000
+      internalID: 2675071683473344396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Special_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 3096
+        y: 1210
+        width: 901
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c1e7bc6e448d87f0800000000000000
+      internalID: -608684902258843200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Special_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 629
+        width: 909
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c55b9f607ebf93830800000000000000
+      internalID: 4051546309469517148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Special_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 629
+        width: 611
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2fc4e681b2558060800000000000000
+      internalID: 6955056121969430315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Special_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 634
+        width: 281
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 582de42c3480c92c0800000000000000
+      internalID: -4423651646868893051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Special_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 2085
+        y: 629
+        width: 611
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd58726b184f7ea40800000000000000
+      internalID: 5397551516370830812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Special_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 2713
+        y: 700
+        width: 319
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 550e1c072abc79c00800000000000000
+      internalID: 907417748475338837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Special_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 3103
+        y: 629
+        width: 611
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bf8e329b3df227c0800000000000000
+      internalID: -4097434278655258698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Special_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 3732
+        y: 754
+        width: 334
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c63da0ef7304a4b0800000000000000
+      internalID: -5430211402936797495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Special_Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 963
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b58d5d933c051e470800000000000000
+      internalID: 8422101577578698843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Special_Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 48
+        width: 917
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 689449685d1db1130800000000000000
+      internalID: 3538652647245760902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Special_Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 2055
+        y: 48
+        width: 831
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce195b570ffbdc080800000000000000
+      internalID: -9165458627141201428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Special_Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 3067
+        y: 48
+        width: 795
+        height: 470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b2bbcb3cf73c8800800000000000000
+      internalID: 615928805517406904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Spencer_Special_Sheet_0: -7636944866598226688
+      Spencer_Special_Sheet_1: -5139278420860532812
+      Spencer_Special_Sheet_10: -4423651646868893051
+      Spencer_Special_Sheet_11: 5397551516370830812
+      Spencer_Special_Sheet_12: 907417748475338837
+      Spencer_Special_Sheet_13: -4097434278655258698
+      Spencer_Special_Sheet_14: -5430211402936797495
+      Spencer_Special_Sheet_15: 8422101577578698843
+      Spencer_Special_Sheet_16: 3538652647245760902
+      Spencer_Special_Sheet_17: -9165458627141201428
+      Spencer_Special_Sheet_18: 615928805517406904
+      Spencer_Special_Sheet_2: -1654676460897481035
+      Spencer_Special_Sheet_3: 645317053478743067
+      Spencer_Special_Sheet_4: 1719718258732573456
+      Spencer_Special_Sheet_5: -139200358447914188
+      Spencer_Special_Sheet_6: 2675071683473344396
+      Spencer_Special_Sheet_7: -608684902258843200
+      Spencer_Special_Sheet_8: 4051546309469517148
+      Spencer_Special_Sheet_9: 6955056121969430315
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

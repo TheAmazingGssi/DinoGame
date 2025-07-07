@@ -1,0 +1,520 @@
+fileFormatVersion: 2
+guid: 1c81320ebc981fe4abe7211b30df39da
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8478264492948531465
+    second: Spencer_Revive_Sheet_0
+  - first:
+      213: -4150625738945521711
+    second: Spencer_Revive_Sheet_1
+  - first:
+      213: -266553002975904726
+    second: Spencer_Revive_Sheet_2
+  - first:
+      213: 3382710546863100567
+    second: Spencer_Revive_Sheet_3
+  - first:
+      213: 691101434655566136
+    second: Spencer_Revive_Sheet_4
+  - first:
+      213: 4766864975345496160
+    second: Spencer_Revive_Sheet_5
+  - first:
+      213: -786641585634519269
+    second: Spencer_Revive_Sheet_6
+  - first:
+      213: -3429818870357373524
+    second: Spencer_Revive_Sheet_7
+  - first:
+      213: 5447691558308436692
+    second: Spencer_Revive_Sheet_8
+  - first:
+      213: 2316928400749035899
+    second: Spencer_Revive_Sheet_9
+  - first:
+      213: 5538675902020080604
+    second: Spencer_Revive_Sheet_10
+  - first:
+      213: 4127916730401035616
+    second: Spencer_Revive_Sheet_11
+  - first:
+      213: -1673961059563965114
+    second: Spencer_Revive_Sheet_12
+  - first:
+      213: 9193528716021798656
+    second: Spencer_Revive_Sheet_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 2500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spencer_Revive_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1791
+        width: 853
+        height: 394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f6def90d57275a80800000000000000
+      internalID: -8478264492948531465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 1791
+        width: 815
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d71f82a1e30666c0800000000000000
+      internalID: -4150625738945521711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 2071
+        y: 1791
+        width: 738
+        height: 511
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2cbecfb4730d4cf0800000000000000
+      internalID: -266553002975904726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 3094
+        y: 1791
+        width: 731
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7921ebbe15dc1fe20800000000000000
+      internalID: 3382710546863100567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 1210
+        width: 725
+        height: 529
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 839686cd719479900800000000000000
+      internalID: 691101434655566136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 1210
+        width: 732
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06038bb607e472240800000000000000
+      internalID: 4766864975345496160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 2071
+        y: 1210
+        width: 738
+        height: 487
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1754ba45a94515f0800000000000000
+      internalID: -786641585634519269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 3094
+        y: 1210
+        width: 732
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cadca6cc8e5d660d0800000000000000
+      internalID: -3429818870357373524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 629
+        width: 725
+        height: 529
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4da5ed2fb961a9b40800000000000000
+      internalID: 5447691558308436692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 629
+        width: 732
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7109a8da12672020800000000000000
+      internalID: 2316928400749035899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 2071
+        y: 629
+        width: 738
+        height: 487
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd35ce143645ddc40800000000000000
+      internalID: 5538675902020080604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 3089
+        y: 629
+        width: 739
+        height: 499
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06512f9456e494930800000000000000
+      internalID: 4127916730401035616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 48
+        width: 738
+        height: 511
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6457adc0945e4c8e0800000000000000
+      internalID: -1673961059563965114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 48
+        width: 815
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00715d668a9f59f70800000000000000
+      internalID: 9193528716021798656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Spencer_Revive_Sheet_0: -8478264492948531465
+      Spencer_Revive_Sheet_1: -4150625738945521711
+      Spencer_Revive_Sheet_10: 5538675902020080604
+      Spencer_Revive_Sheet_11: 4127916730401035616
+      Spencer_Revive_Sheet_12: -1673961059563965114
+      Spencer_Revive_Sheet_13: 9193528716021798656
+      Spencer_Revive_Sheet_2: -266553002975904726
+      Spencer_Revive_Sheet_3: 3382710546863100567
+      Spencer_Revive_Sheet_4: 691101434655566136
+      Spencer_Revive_Sheet_5: 4766864975345496160
+      Spencer_Revive_Sheet_6: -786641585634519269
+      Spencer_Revive_Sheet_7: -3429818870357373524
+      Spencer_Revive_Sheet_8: 5447691558308436692
+      Spencer_Revive_Sheet_9: 2316928400749035899
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

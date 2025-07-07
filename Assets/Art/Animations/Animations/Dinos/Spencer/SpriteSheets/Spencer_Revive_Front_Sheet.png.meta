@@ -1,0 +1,884 @@
+fileFormatVersion: 2
+guid: 579ddc9434afe0f42b966cca94e00056
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4003751071566557197
+    second: Spencer_Revive_Front_Sheet_0
+  - first:
+      213: -4958232846325849355
+    second: Spencer_Revive_Front_Sheet_1
+  - first:
+      213: -3118323316145966773
+    second: Spencer_Revive_Front_Sheet_2
+  - first:
+      213: -2837840630792746861
+    second: Spencer_Revive_Front_Sheet_3
+  - first:
+      213: 179575486164533123
+    second: Spencer_Revive_Front_Sheet_4
+  - first:
+      213: -1018838863010066657
+    second: Spencer_Revive_Front_Sheet_5
+  - first:
+      213: -8875307132100133090
+    second: Spencer_Revive_Front_Sheet_6
+  - first:
+      213: -229599178944870520
+    second: Spencer_Revive_Front_Sheet_7
+  - first:
+      213: 1789902734477357406
+    second: Spencer_Revive_Front_Sheet_8
+  - first:
+      213: 7874711277430427882
+    second: Spencer_Revive_Front_Sheet_9
+  - first:
+      213: -2930237696259685476
+    second: Spencer_Revive_Front_Sheet_10
+  - first:
+      213: 161083621144605419
+    second: Spencer_Revive_Front_Sheet_11
+  - first:
+      213: -3583863761692701232
+    second: Spencer_Revive_Front_Sheet_12
+  - first:
+      213: -834887864147950872
+    second: Spencer_Revive_Front_Sheet_13
+  - first:
+      213: 7355356592380757093
+    second: Spencer_Revive_Front_Sheet_14
+  - first:
+      213: 6844866061170287812
+    second: Spencer_Revive_Front_Sheet_15
+  - first:
+      213: 2558331806913387743
+    second: Spencer_Revive_Front_Sheet_16
+  - first:
+      213: -6193722953046087437
+    second: Spencer_Revive_Front_Sheet_17
+  - first:
+      213: 1505000249177025949
+    second: Spencer_Revive_Front_Sheet_18
+  - first:
+      213: 3291590354216680549
+    second: Spencer_Revive_Front_Sheet_19
+  - first:
+      213: -3350227569132061651
+    second: Spencer_Revive_Front_Sheet_20
+  - first:
+      213: 8951808192776470206
+    second: Spencer_Revive_Front_Sheet_21
+  - first:
+      213: -308518512258944586
+    second: Spencer_Revive_Front_Sheet_22
+  - first:
+      213: 4879998736975937435
+    second: Spencer_Revive_Front_Sheet_23
+  - first:
+      213: -6916016936326429605
+    second: Spencer_Revive_Front_Sheet_24
+  - first:
+      213: -9154701552588680319
+    second: Spencer_Revive_Front_Sheet_25
+  - first:
+      213: 9124591643253699403
+    second: Spencer_Revive_Front_Sheet_26
+  - first:
+      213: 9072488578391282473
+    second: Spencer_Revive_Front_Sheet_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 2500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spencer_Revive_Front_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 2004
+        width: 337
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0070d5036e209730800000000000000
+      internalID: 4003751071566557197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Front_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1483
+        y: 1825
+        width: 151
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f2e2110f71d03bb0800000000000000
+      internalID: -4958232846325849355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Front_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 1997
+        width: 317
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b413d4e277d79b4d0800000000000000
+      internalID: -3118323316145966773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Front_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 2502
+        y: 1838
+        width: 110
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3988d685bf6fd98d0800000000000000
+      internalID: -2837840630792746861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Front_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2552
+        y: 1989
+        width: 257
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38f743704fafd7200800000000000000
+      internalID: 179575486164533123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Front_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 3514
+        y: 1840
+        width: 109
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1f0ceeb37b5cd1f0800000000000000
+      internalID: -1018838863010066657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Front_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 3565
+        y: 1991
+        width: 260
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1f3eaecf2394d480800000000000000
+      internalID: -8875307132100133090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Front_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 1805
+        width: 183
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 887054263cc40dcf0800000000000000
+      internalID: -229599178944870520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Front_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 1273
+        width: 113
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e51f50fbd0307d810800000000000000
+      internalID: 1789902734477357406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Front_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 1414
+        width: 265
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae0d0005f28984d60800000000000000
+      internalID: 7874711277430427882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Front_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 1251
+        width: 103
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c938bfe1754b557d0800000000000000
+      internalID: -2930237696259685476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Front_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 1397
+        width: 250
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be2357133b84c3200800000000000000
+      internalID: 161083621144605419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Front_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 2498
+        y: 1241
+        width: 96
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dd49e895ee834ec0800000000000000
+      internalID: -3583863761692701232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Front_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 2573
+        y: 1381
+        width: 236
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e24d2639e1e964f0800000000000000
+      internalID: -834887864147950872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Front_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 3512
+        y: 1251
+        width: 102
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 564ce25b9d9731660800000000000000
+      internalID: 7355356592380757093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Front_Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 3576
+        y: 1397
+        width: 250
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c4ae2fba69ddfe50800000000000000
+      internalID: 6844866061170287812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Front_Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 692
+        width: 113
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdcd7a84935018320800000000000000
+      internalID: 2558331806913387743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Front_Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 832
+        width: 265
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f8218a3ac97b0aa0800000000000000
+      internalID: -6193722953046087437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Front_Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 669
+        width: 103
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9d2217b0c5d2e410800000000000000
+      internalID: 1505000249177025949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Front_Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 816
+        width: 250
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56cff21dcf31ead20800000000000000
+      internalID: 3291590354216680549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Front_Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 2498
+        y: 659
+        width: 96
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2cb921b6c99181d0800000000000000
+      internalID: -3350227569132061651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Front_Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 2573
+        y: 800
+        width: 236
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebe7fd36f163b3c70800000000000000
+      internalID: 8951808192776470206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Front_Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 3519
+        y: 667
+        width: 103
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b17c263c0ce7bbf0800000000000000
+      internalID: -308518512258944586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Front_Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 3581
+        y: 818
+        width: 247
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9f3ec5fefc39b340800000000000000
+      internalID: 4879998736975937435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Front_Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 94
+        width: 110
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b548da13d3f5500a0800000000000000
+      internalID: -6916016936326429605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Front_Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 257
+        width: 257
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1831c3d0177f3f080800000000000000
+      internalID: -9154701552588680319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Front_Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 1483
+        y: 82
+        width: 151
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4372a061cf01ae70800000000000000
+      internalID: 9124591643253699403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer_Revive_Front_Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 263
+        width: 317
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9231dcf3b44f7ed70800000000000000
+      internalID: 9072488578391282473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Spencer_Revive_Front_Sheet_0: 4003751071566557197
+      Spencer_Revive_Front_Sheet_1: -4958232846325849355
+      Spencer_Revive_Front_Sheet_10: -2930237696259685476
+      Spencer_Revive_Front_Sheet_11: 161083621144605419
+      Spencer_Revive_Front_Sheet_12: -3583863761692701232
+      Spencer_Revive_Front_Sheet_13: -834887864147950872
+      Spencer_Revive_Front_Sheet_14: 7355356592380757093
+      Spencer_Revive_Front_Sheet_15: 6844866061170287812
+      Spencer_Revive_Front_Sheet_16: 2558331806913387743
+      Spencer_Revive_Front_Sheet_17: -6193722953046087437
+      Spencer_Revive_Front_Sheet_18: 1505000249177025949
+      Spencer_Revive_Front_Sheet_19: 3291590354216680549
+      Spencer_Revive_Front_Sheet_2: -3118323316145966773
+      Spencer_Revive_Front_Sheet_20: -3350227569132061651
+      Spencer_Revive_Front_Sheet_21: 8951808192776470206
+      Spencer_Revive_Front_Sheet_22: -308518512258944586
+      Spencer_Revive_Front_Sheet_23: 4879998736975937435
+      Spencer_Revive_Front_Sheet_24: -6916016936326429605
+      Spencer_Revive_Front_Sheet_25: -9154701552588680319
+      Spencer_Revive_Front_Sheet_26: 9124591643253699403
+      Spencer_Revive_Front_Sheet_27: 9072488578391282473
+      Spencer_Revive_Front_Sheet_3: -2837840630792746861
+      Spencer_Revive_Front_Sheet_4: 179575486164533123
+      Spencer_Revive_Front_Sheet_5: -1018838863010066657
+      Spencer_Revive_Front_Sheet_6: -8875307132100133090
+      Spencer_Revive_Front_Sheet_7: -229599178944870520
+      Spencer_Revive_Front_Sheet_8: 1789902734477357406
+      Spencer_Revive_Front_Sheet_9: 7874711277430427882
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
