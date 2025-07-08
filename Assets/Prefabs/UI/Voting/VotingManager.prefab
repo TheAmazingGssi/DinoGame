@@ -45,14 +45,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   votingPanel: {fileID: 0}
+  TitleText: {fileID: 0}
   descriptionText: {fileID: 0}
   timerText: {fileID: 0}
+  ButtonsParent: {fileID: 0}
+  background: {fileID: 0}
+  hourHandle: {fileID: 0}
+  minuteHandle: {fileID: 0}
   buttons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  buttonsTexts:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -62,4 +62,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  voteDuration: 50
+  uiSpawner: {fileID: 0}
+  readDuration: 20
+  voteDuration: 10
+  amountOfMinuteRotations: 3
