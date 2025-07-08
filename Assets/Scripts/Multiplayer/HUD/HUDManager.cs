@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class HUDManager : MonoBehaviour
 {
+    static public bool HideAll = false;
     [SerializeField] private HUDRefrences[] hudRefrences;
     [SerializeField] private Sprite TerrySplash;
     [SerializeField] private Sprite SpencerSplash;
@@ -21,6 +22,12 @@ public class HUDManager : MonoBehaviour
 
     void Update()
     {
+        if(HideAll)
+        {
+            for (int i = 0; i < hudRefrences.Length; i++)
+                hudRefrences[i].gameObject.SetActive(false);
+            return;
+        }
         for (int i = 0; i < hudRefrences.Length; i++)
         {
             if (i < PlayerEntity.PlayerList.Count)
@@ -31,7 +38,7 @@ public class HUDManager : MonoBehaviour
                 hudRefrences[i].HpBar.value = PlayerEntity.PlayerList[i].CombatManager.CurrentHealth;
                 hudRefrences[i].EnergyBar.maxValue = PlayerEntity.PlayerList[i].CombatManager.MaxStamina;
                 hudRefrences[i].EnergyBar.value = PlayerEntity.PlayerList[i].CombatManager.CurrentStamina;
-                //hudRefrences[i].ScoreText.text = PlayerEntity.PlayerList[i].CombatManager.score;
+                hudRefrences[i].ScoreText.text = PlayerEntity.PlayerList[i].MainPlayerController.GetScore().ToString();
             }
             else
                 hudRefrences[i].gameObject.SetActive(false);

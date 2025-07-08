@@ -4,6 +4,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 public class VotingManager : MonoBehaviour
 {
     [Header("References")]
@@ -11,6 +12,7 @@ public class VotingManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI TitleText;
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] private GameObject background;
 
     [SerializeField] private MultiplayerButton[] buttons;
     [SerializeField] private TextMeshProUGUI[] choicesTexts;
@@ -54,7 +56,8 @@ public class VotingManager : MonoBehaviour
 
     public void StartVote(Vote vote)
     {
-     //   Debug.Log("starting vote");
+        //   Debug.Log("starting vote");
+        background.SetActive(true);
         votingPanel.SetActive(true);
         currentVote = vote;
 
