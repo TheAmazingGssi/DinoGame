@@ -4,6 +4,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 public class VotingManager : MonoBehaviour
 {
     [Header("References")]
@@ -11,6 +12,10 @@ public class VotingManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI TitleText;
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] private GameObject ButtonsParent;
+    [SerializeField] private GameObject background;
+    [SerializeField] private ClockHandle hourHandle;
+    [SerializeField] private ClockHandle minuteHandle;
 
     [SerializeField] private MultiplayerButton[] buttons;
     [SerializeField] private TextMeshProUGUI[] choicesTexts;
@@ -19,7 +24,9 @@ public class VotingManager : MonoBehaviour
 
 
     [Header("Settings")]
+    [SerializeField] private float readDuration = 20f;
     [SerializeField] private float voteDuration = 20f;
+    [SerializeField] private int amountOfMinuteRotations = 3;
 
     public static event Action<int> OnVoteComplete;
 
@@ -30,6 +37,7 @@ public class VotingManager : MonoBehaviour
     private int voted;
 
     private bool isVoting = false;
+    private bool isReading = false;
     private bool isVotingDebug = false;
 
     private void Start()
@@ -54,7 +62,8 @@ public class VotingManager : MonoBehaviour
 
     public void StartVote(Vote vote)
     {
-     //   Debug.Log("starting vote");
+        //   Debug.Log("starting vote");
+        background.SetActive(true);
         votingPanel.SetActive(true);
         currentVote = vote;
 
@@ -71,30 +80,41 @@ public class VotingManager : MonoBehaviour
         TitleText.text = vote.VoteTitle;
         voted = 0;
 
-        timer = voteDuration;
+        timer = readDuration;
+        isReading = true;
         UpdateTimerDisplay();
-
-        
+    }
+    private void StartVotingInteraction()
+    {
+        ButtonsParent.SetActive(true);
+        timer += voteDuration;
         uiSpawner.SpawnControllers();
         isVoting = true;
         isVotingDebug = true;
+
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.V) && !isVoting && !isVotingDebug) StartVote(currentVote);
 
-        if(isVoting)
+        if(isVoting || isReading)
         {
             timer -= Time.deltaTime;
             UpdateTimerDisplay();
         }
 
-
+        
         if (isVoting && (timer <= 0 || voted >= PlayerEntity.PlayerList.Count))
         {
+            Debug.Log("Timer " + timer + "amount " + voted + "entities " + PlayerEntity.PlayerList.Count);
            // Debug.Log(voted);
             CompleteVote();
+        }
+        
+        if (!isVoting && (timer <= 0))
+        {
+            StartVotingInteraction();
         }
     }
 
@@ -117,6 +137,7 @@ public class VotingManager : MonoBehaviour
             buttons[i].gameObject.SetActive(hasText);
             buttons[i].button.interactable = hasText;
         }
+        ButtonsParent.SetActive(false);
     }
 
     public void CastVote(int choiceIndex)
@@ -151,7 +172,9 @@ public class VotingManager : MonoBehaviour
 
     private void UpdateTimerDisplay()
     {
-        int seconds = Mathf.CeilToInt(timer);
-        timerText.text = $"{seconds}";
+        //int seconds = Mathf.CeilToInt(timer);
+        //timerText.text = $"{seconds}";
+        hourHandle.SetHandle(voteDuration, timer);
+        minuteHandle.SetHandle(voteDuration, timer * amountOfMinuteRotations);
     }
 }

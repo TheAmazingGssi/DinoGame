@@ -285,11 +285,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2f044c897faee04bbfb26e1319caa4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoomPadding: 1.5
+  zoomPadding: 4
   minZoom: 4
   maxZoom: 5
-  furthestRightPoint: 26
-  furthestLeftPoint: 0
+  FurthestRightPoint: 0
+  FurthestLeftPoint: 0
   bottomOfStage: -5.11
   ColliderRight: {fileID: 6996621723843196869}
   ColliderLeft: {fileID: 5952950527792163558}

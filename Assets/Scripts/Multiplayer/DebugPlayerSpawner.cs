@@ -12,7 +12,7 @@ public class DebugPlayerSpawner : MonoBehaviour
     {
         if (PlayerEntity.PlayerList.Count > 0)
         {
-            Destroy(this);
+            Destroy(gameObject);
             return;
         }
     }

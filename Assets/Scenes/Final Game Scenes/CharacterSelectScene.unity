@@ -1009,6 +1009,10 @@ PrefabInstance:
       value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1518447201403033970, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
+      propertyPath: ComeFromSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1518447201403033970, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
       propertyPath: sprites.Array.size
       value: 7
       objectReference: {fileID: 0}
@@ -1255,6 +1259,10 @@ PrefabInstance:
     - target: {fileID: 1518447201403033970, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
       propertyPath: myHight
       value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1518447201403033970, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
+      propertyPath: ComeFromSide
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1518447201403033970, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
       propertyPath: minVelocity.x
@@ -1523,6 +1531,10 @@ PrefabInstance:
     - target: {fileID: 1518447201403033970, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
       propertyPath: myHight
       value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1518447201403033970, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
+      propertyPath: ComeFromSide
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1518447201403033970, guid: dbc8b122b6510c94288129a6b0866f87, type: 3}
       propertyPath: minVelocity.x

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
+    public bool active = true;
     [Header("Zoom Settings")]
     [Tooltip("Empty space between the players and the edge of the camera if the camera is zooming")]
     [SerializeField] float zoomPadding;
@@ -30,6 +31,7 @@ public class CameraMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        active = true;
         UpdateHeightWidth();
         MoveColliders();
     }
@@ -37,6 +39,9 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!active)
+            return;
+
         if (PlayerEntity.PlayerList.Count == 0)
             return;
 
