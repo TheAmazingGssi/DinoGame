@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85e1ae9ae5f684a4f9ab2eb4ce5bc120, type: 3}
   m_Name: TestEnemy
   m_EditorClassIdentifier: 
-  maxHealth: 1
+  maxHealth: 100
   baseDamage: 10
   stopRange: 3
   attackRange: 1

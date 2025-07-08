@@ -16,8 +16,8 @@ MonoBehaviour:
   - characterName: Triceratops
     maxHealth: 100
     movementSpeed: 4
-    damageMin: 100
-    damageMax: 100
+    damageMin: 15
+    damageMax: 20
     attacksPerSecond: 1.5
     specialAttackDamage: 20
     specialAttackCost: 50
