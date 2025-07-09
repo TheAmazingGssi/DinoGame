@@ -4,6 +4,7 @@ public class Meteor : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] Vector2 minVelocity;
+    [SerializeField] bool ComeFromSide;
     [Tooltip("Velocity will be multiplied by a value rolled randomally between 1 and this variable")]
     [SerializeField] float randomVelocityMultiplier;
     [SerializeField] float topPadding;
@@ -37,6 +38,8 @@ public class Meteor : MonoBehaviour
     {
         topOfCamera = cam.transform.position.y + cam.orthographicSize;
         float leftPoint = cam.transform.position.x - cam.orthographicSize * cam.aspect;
+        if (ComeFromSide)
+            leftPoint -= cam.orthographicSize * cam.aspect;
         float spawnX = Random.Range(leftPoint, cam.transform.position.x);
 
         spriteRenderer.sprite = sprites[Random.Range(0, sprites.Length)];

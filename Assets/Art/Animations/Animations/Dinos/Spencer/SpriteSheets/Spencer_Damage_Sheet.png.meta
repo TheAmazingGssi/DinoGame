@@ -160,10 +160,10 @@ TextureImporter:
       name: Spencer_Damage_Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1162
-        width: 1018
-        height: 581
+        x: 20
+        y: 1209
+        width: 853
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,10 +182,10 @@ TextureImporter:
       name: Spencer_Damage_Sheet_1
       rect:
         serializedVersion: 2
-        x: 1018
-        y: 1162
-        width: 1018
-        height: 581
+        x: 1034
+        y: 1209
+        width: 829
+        height: 435
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,10 +204,10 @@ TextureImporter:
       name: Spencer_Damage_Sheet_2
       rect:
         serializedVersion: 2
-        x: 2036
-        y: 1162
-        width: 1018
-        height: 581
+        x: 2049
+        y: 1209
+        width: 781
+        height: 476
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,10 +226,10 @@ TextureImporter:
       name: Spencer_Damage_Sheet_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 581
-        width: 1018
-        height: 581
+        x: 12
+        y: 628
+        width: 734
+        height: 525
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,10 +248,10 @@ TextureImporter:
       name: Spencer_Damage_Sheet_4
       rect:
         serializedVersion: 2
-        x: 1018
-        y: 581
-        width: 1018
-        height: 581
+        x: 1039
+        y: 629
+        width: 709
+        height: 524
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -270,10 +270,10 @@ TextureImporter:
       name: Spencer_Damage_Sheet_5
       rect:
         serializedVersion: 2
-        x: 2036
-        y: 581
-        width: 1018
-        height: 581
+        x: 2056
+        y: 628
+        width: 780
+        height: 491
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,10 +292,10 @@ TextureImporter:
       name: Spencer_Damage_Sheet_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1018
-        height: 581
+        x: 20
+        y: 47
+        width: 831
+        height: 447
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -314,7 +314,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6ba9cdd53bad47f4f9d853d526efecc0
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 

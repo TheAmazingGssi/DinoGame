@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characters:
   - characterName: Triceratops
-    maxHealth: 2
+    maxHealth: 100
     movementSpeed: 4
     damageMin: 15
     damageMax: 20

@@ -181,10 +181,10 @@ TextureImporter:
       name: Spencer_Revive_Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1744
-        width: 1018
-        height: 581
+        x: 20
+        y: 1791
+        width: 853
+        height: 394
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,10 +203,10 @@ TextureImporter:
       name: Spencer_Revive_Sheet_1
       rect:
         serializedVersion: 2
-        x: 1018
-        y: 1744
-        width: 1018
-        height: 581
+        x: 1044
+        y: 1791
+        width: 815
+        height: 460
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,10 +225,10 @@ TextureImporter:
       name: Spencer_Revive_Sheet_2
       rect:
         serializedVersion: 2
-        x: 2036
-        y: 1744
-        width: 1018
-        height: 581
+        x: 2071
+        y: 1791
+        width: 738
+        height: 511
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,10 +247,10 @@ TextureImporter:
       name: Spencer_Revive_Sheet_3
       rect:
         serializedVersion: 2
-        x: 3054
-        y: 1744
-        width: 1018
-        height: 581
+        x: 3094
+        y: 1791
+        width: 731
+        height: 520
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -269,10 +269,10 @@ TextureImporter:
       name: Spencer_Revive_Sheet_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1163
-        width: 1018
-        height: 581
+        x: 43
+        y: 1210
+        width: 725
+        height: 529
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -291,10 +291,10 @@ TextureImporter:
       name: Spencer_Revive_Sheet_5
       rect:
         serializedVersion: 2
-        x: 1018
-        y: 1163
-        width: 1018
-        height: 581
+        x: 1057
+        y: 1210
+        width: 732
+        height: 509
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,10 +313,10 @@ TextureImporter:
       name: Spencer_Revive_Sheet_6
       rect:
         serializedVersion: 2
-        x: 2036
-        y: 1163
-        width: 1018
-        height: 581
+        x: 2071
+        y: 1210
+        width: 738
+        height: 487
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -335,10 +335,10 @@ TextureImporter:
       name: Spencer_Revive_Sheet_7
       rect:
         serializedVersion: 2
-        x: 3054
-        y: 1163
-        width: 1018
-        height: 581
+        x: 3094
+        y: 1210
+        width: 732
+        height: 509
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -357,10 +357,10 @@ TextureImporter:
       name: Spencer_Revive_Sheet_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 582
-        width: 1018
-        height: 581
+        x: 43
+        y: 629
+        width: 725
+        height: 529
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -379,10 +379,10 @@ TextureImporter:
       name: Spencer_Revive_Sheet_9
       rect:
         serializedVersion: 2
-        x: 1018
-        y: 582
-        width: 1018
-        height: 581
+        x: 1057
+        y: 629
+        width: 732
+        height: 508
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -401,10 +401,10 @@ TextureImporter:
       name: Spencer_Revive_Sheet_10
       rect:
         serializedVersion: 2
-        x: 2036
-        y: 582
-        width: 1018
-        height: 581
+        x: 2071
+        y: 629
+        width: 738
+        height: 487
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -423,10 +423,10 @@ TextureImporter:
       name: Spencer_Revive_Sheet_11
       rect:
         serializedVersion: 2
-        x: 3054
-        y: 582
-        width: 1018
-        height: 581
+        x: 3089
+        y: 629
+        width: 739
+        height: 499
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -445,10 +445,10 @@ TextureImporter:
       name: Spencer_Revive_Sheet_12
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1
-        width: 1018
-        height: 581
+        x: 34
+        y: 48
+        width: 738
+        height: 511
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -467,10 +467,10 @@ TextureImporter:
       name: Spencer_Revive_Sheet_13
       rect:
         serializedVersion: 2
-        x: 1018
-        y: 1
-        width: 1018
-        height: 581
+        x: 1044
+        y: 48
+        width: 815
+        height: 460
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -489,7 +489,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5cdf331fcc7731643ac4bea4f4f00726
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 

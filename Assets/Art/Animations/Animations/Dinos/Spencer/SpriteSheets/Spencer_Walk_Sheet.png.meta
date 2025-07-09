@@ -172,10 +172,10 @@ TextureImporter:
       name: Spencer_Walk_Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1162
-        width: 1018
-        height: 581
+        x: 19
+        y: 1209
+        width: 861
+        height: 393
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,10 +194,10 @@ TextureImporter:
       name: Spencer_Walk_Sheet_1
       rect:
         serializedVersion: 2
-        x: 1018
-        y: 1162
-        width: 1018
-        height: 581
+        x: 1034
+        y: 1221
+        width: 864
+        height: 374
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,10 +216,10 @@ TextureImporter:
       name: Spencer_Walk_Sheet_2
       rect:
         serializedVersion: 2
-        x: 2036
-        y: 1162
-        width: 1018
-        height: 581
+        x: 2053
+        y: 1224
+        width: 863
+        height: 374
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,10 +238,10 @@ TextureImporter:
       name: Spencer_Walk_Sheet_3
       rect:
         serializedVersion: 2
-        x: 3054
-        y: 1162
-        width: 1018
-        height: 581
+        x: 3076
+        y: 1224
+        width: 859
+        height: 380
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,10 +260,10 @@ TextureImporter:
       name: Spencer_Walk_Sheet_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 581
-        width: 1018
-        height: 581
+        x: 26
+        y: 644
+        width: 853
+        height: 388
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -282,10 +282,10 @@ TextureImporter:
       name: Spencer_Walk_Sheet_5
       rect:
         serializedVersion: 2
-        x: 1018
-        y: 581
-        width: 1018
-        height: 581
+        x: 1039
+        y: 635
+        width: 859
+        height: 388
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -304,10 +304,10 @@ TextureImporter:
       name: Spencer_Walk_Sheet_6
       rect:
         serializedVersion: 2
-        x: 2036
-        y: 581
-        width: 1018
-        height: 581
+        x: 2053
+        y: 628
+        width: 863
+        height: 389
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -326,10 +326,10 @@ TextureImporter:
       name: Spencer_Walk_Sheet_7
       rect:
         serializedVersion: 2
-        x: 3054
-        y: 581
-        width: 1018
-        height: 581
+        x: 3071
+        y: 629
+        width: 864
+        height: 385
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -348,10 +348,10 @@ TextureImporter:
       name: Spencer_Walk_Sheet_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1018
-        height: 581
+        x: 19
+        y: 49
+        width: 860
+        height: 391
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -370,10 +370,10 @@ TextureImporter:
       name: Spencer_Walk_Sheet_9
       rect:
         serializedVersion: 2
-        x: 1018
-        y: 0
-        width: 1018
-        height: 581
+        x: 1042
+        y: 47
+        width: 856
+        height: 401
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -392,10 +392,10 @@ TextureImporter:
       name: Spencer_Walk_Sheet_10
       rect:
         serializedVersion: 2
-        x: 2036
-        y: 0
-        width: 1018
-        height: 581
+        x: 2059
+        y: 46
+        width: 857
+        height: 398
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -414,7 +414,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: cc44e67237d603e4da63e0d837533ff3
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
