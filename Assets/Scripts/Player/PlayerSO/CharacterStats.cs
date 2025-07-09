@@ -15,6 +15,10 @@ public class CharacterStats : ScriptableObject
         public float specialAttackDamage; // Damage dealt by special attack
         public float specialAttackCost; // Stamina cost for special attack
         public float stamina; // Maximum stamina for special attacks
+        public float SPspecialAttackRange; // Spinosaurus: Neck extension distance
+        public float SPchompSpeed; // Spinosaurus: Neck extension/retraction speed
+        public float SPmeleeRange; // Spinosaurus: Distance to pull enemy
+        public float SPdragSpeed; // Spinosaurus: Enemy pull speed
     }
     public CharacterData[] characters;
 }

@@ -22,6 +22,10 @@ MonoBehaviour:
     specialAttackDamage: 20
     specialAttackCost: 50
     stamina: 100
+    SPspecialAttackRange: 0
+    SPchompSpeed: 0
+    SPmeleeRange: 0
+    SPdragSpeed: 0
   - characterName: Spinosaurus
     maxHealth: 100
     movementSpeed: 4
@@ -31,6 +35,10 @@ MonoBehaviour:
     specialAttackDamage: 20
     specialAttackCost: 50
     stamina: 100
+    SPspecialAttackRange: 4
+    SPchompSpeed: 3
+    SPmeleeRange: 0.5
+    SPdragSpeed: 3
   - characterName: Parasaurolophus
     maxHealth: 100
     movementSpeed: 4
@@ -40,6 +48,10 @@ MonoBehaviour:
     specialAttackDamage: 20
     specialAttackCost: 50
     stamina: 100
+    SPspecialAttackRange: 0
+    SPchompSpeed: 0
+    SPmeleeRange: 0
+    SPdragSpeed: 0
   - characterName: Therizinosaurus
     maxHealth: 100
     movementSpeed: 4
@@ -49,3 +61,7 @@ MonoBehaviour:
     specialAttackDamage: 20
     specialAttackCost: 50
     stamina: 100
+    SPspecialAttackRange: 0
+    SPchompSpeed: 0
+    SPmeleeRange: 0
+    SPdragSpeed: 0
