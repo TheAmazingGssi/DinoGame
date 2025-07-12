@@ -164,6 +164,7 @@ MonoBehaviour:
   manager: {fileID: 7022572441651464058}
   isDead: 0
   isHurt: 0
+  IsKnockbacked: 0
 --- !u!114 &5501723112346460331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -576,7 +577,7 @@ Transform:
   m_GameObject: {fileID: 6658617843642816480}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.16, y: 0.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -636,7 +637,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &8492816430768677864
 Animator:
   serializedVersion: 7

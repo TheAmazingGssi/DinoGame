@@ -71,6 +71,9 @@ public class MainPlayerController : MonoBehaviour
 
     public static bool CanBeDamaged = true;
 
+    public bool IsPerformingSpecialMovement => isPerformingSpecialMovement;
+
+
     public int GetScore() => score;
     public bool IsFallen() => isFallen;
 

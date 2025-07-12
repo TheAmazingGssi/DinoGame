@@ -3,12 +3,15 @@ using UnityEngine;
 
 public class EnemyCombatManager : CombatManager
 {
-    private static readonly int Hurt = Animator.StringToHash("Hurt");
+    private static readonly int HURT = Animator.StringToHash("Hurt");
+    private static readonly int KNOCKBACK = Animator.StringToHash("Hurt");
 
     [SerializeField] private EnemyManager manager;
 
     [SerializeField] private bool isDead = false;
     [SerializeField] private bool isHurt = false;
+
+    [HideInInspector] public bool IsKnockbacked = false;
     public void Initialize(float maxHealth)
     {
         currentMaxHealth = maxHealth;
@@ -24,16 +27,25 @@ public class EnemyCombatManager : CombatManager
         }
         if(isHurt)
         {
-            manager.Animator.SetTrigger(Hurt);
+            manager.Animator.SetTrigger(HURT);
         }
     }
 
     public override void TakeDamage(DamageArgs damageArgs)
     {
+        if(damageArgs.Knockback)
+        {
+            IsKnockbacked = damageArgs.SourceMPC.IsPerformingSpecialMovement;
+            manager.Animator.SetTrigger(KNOCKBACK);
+        }
+        else
+        {
+            manager.Animator.SetTrigger(HURT);
+        }
+
         base.TakeDamage(damageArgs);
      //   Debug.Log($"Player dealt" + damageArgs.Damage);
 
-        manager.Animator.SetTrigger(Hurt);
         manager.SoundPlayer.PlaySound(1);
         manager.SpriteRenderer.color = Color.red;
 
@@ -55,7 +67,7 @@ public class EnemyCombatManager : CombatManager
     {
         yield return new WaitForSeconds(0.13f);
         manager.SpriteRenderer.color = Color.white;
-        manager.Animator.ResetTrigger(Hurt);
+        manager.Animator.ResetTrigger(HURT);
     }
 
     protected override void HandleDeath()
