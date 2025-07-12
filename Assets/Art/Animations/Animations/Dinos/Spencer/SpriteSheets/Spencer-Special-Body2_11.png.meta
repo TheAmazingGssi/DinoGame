@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8677dbec88baed04e9c87d76b3b714d9
+guid: 7e69f937385fb164687b2fd44911022a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4922881646608511246
-    second: Spencer-Special-Body2_11_0
+      213: -3181479068825254973
+    second: Neck_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 2500
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spencer-Special-Body2_11_0
+      name: Neck_0
       rect:
         serializedVersion: 2
-        x: 48
-        y: 47
-        width: 611
-        height: 396
+        x: 0
+        y: 0
+        width: 1343
+        height: 279
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2fe0c9699396eabb0800000000000000
-      internalID: -4922881646608511246
+      spriteID: 3c38452a4ad19d3d0800000000000000
+      internalID: -3181479068825254973
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Spencer-Special-Body2_11_0: -4922881646608511246
+      Neck_0: -3181479068825254973
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

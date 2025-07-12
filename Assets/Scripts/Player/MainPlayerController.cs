@@ -69,6 +69,8 @@ public class MainPlayerController : MonoBehaviour
     private static int fallenPlayers = 0;
     private int score;
 
+    public PlayerCombatManager CombatManager => combatManager;
+
     public static bool CanBeDamaged = true;
 
     public int GetScore() => score;

@@ -3,18 +3,19 @@ using UnityEngine;
 
 public class EnemyCombatManager : CombatManager
 {
-    private static readonly int Hurt = Animator.StringToHash("Hurt");
+    private static readonly int HURT = Animator.StringToHash("Hurt");
+    private static readonly int KNOCKBACK = Animator.StringToHash("Hurt");
 
     [SerializeField] private EnemyManager manager;
-    [SerializeField] private TextMesh damageNumberPrefab;
 
     [SerializeField] private bool isDead = false;
     [SerializeField] private bool isHurt = false;
+
+    [HideInInspector] public bool IsKnockbacked = false;
     public void Initialize(float maxHealth)
     {
         currentMaxHealth = maxHealth;
         currentHealth = maxHealth;
-        UpdateHealthBar();
     }
 
     private void Update()
@@ -26,22 +27,26 @@ public class EnemyCombatManager : CombatManager
         }
         if(isHurt)
         {
-            manager.Animator.SetTrigger(Hurt);
+            manager.Animator.SetTrigger(HURT);
         }
     }
 
     public override void TakeDamage(DamageArgs damageArgs)
     {
+        if(true)
+        {
+            manager.Animator.SetTrigger(KNOCKBACK);
+        }
+        else
+        {
+            manager.Animator.SetTrigger(HURT);
+        }
+
         base.TakeDamage(damageArgs);
      //   Debug.Log($"Player dealt" + damageArgs.Damage);
 
-        manager.Animator.SetTrigger(Hurt);
         manager.SoundPlayer.PlaySound(1);
-
-        if (damageNumberPrefab)
-        {
-            SpawnDamageText(damageArgs);
-        }
+        manager.SpriteRenderer.color = Color.red;
 
         if (damageArgs.SourceMPC != null)
         {
@@ -54,19 +59,14 @@ public class EnemyCombatManager : CombatManager
 
         damageArgs.SourceMPC.AddScore(manager.EnemyData.Score);
 
-        StartCoroutine(AnimationDelay());
+       // StartCoroutine(AnimationDelay());
     }
 
     private IEnumerator AnimationDelay()
     {
         yield return new WaitForSeconds(0.13f);
-        manager.Animator.ResetTrigger(Hurt);
-    }
-
-    private void SpawnDamageText(DamageArgs damageArgs)
-    {
-        TextMesh damagePrefabClone = Instantiate(damageNumberPrefab, transform.position, Quaternion.identity, transform);
-        damagePrefabClone.text = damageArgs.Damage.ToString();
+        manager.SpriteRenderer.color = Color.white;
+        manager.Animator.ResetTrigger(HURT);
     }
 
     protected override void HandleDeath()

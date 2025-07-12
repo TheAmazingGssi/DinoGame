@@ -9,12 +9,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1081683106100673034, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1081683106100673034, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1081683106100673034, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1081683106100673034, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 26.123539
+      value: 12.420368
       objectReference: {fileID: 0}
     - target: {fileID: 1081683106100673034, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.34715354
+      value: -1.3314942
       objectReference: {fileID: 0}
     - target: {fileID: 1081683106100673034, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -52,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RangedEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 2515911822479905939, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1403188620, guid: 807b39feea2048546ae887c68d69c9be, type: 3}
     - target: {fileID: 5501723112346460331, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: attacks.Array.size
       value: 1
@@ -66,12 +82,24 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 66374662c63531548ae4f34a2abdda4c, type: 2}
     - target: {fileID: 7184945894762929075, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_Radius
-      value: 39.71
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7184945894762929075, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8181060215119223495, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_Size.x
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8181060215119223495, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_Size.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8492816430768677864, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: f1d9d73f1a53f1b4295b33a7fd265da4, type: 2}
     m_RemovedComponents:
     - {fileID: 5543341010220057178, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
     - {fileID: 6034100410105183527, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
@@ -101,6 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 8926162269741413802}
   attackCooldown: 3
+  soundEffect: {fileID: 0}
   projectilePrefab: {fileID: 4382386036968754117, guid: d371f4786fc4fa74caa80cbf6c0f1f7e, type: 3}
   projectileSpeed: 4
   damageDelay: 0.1

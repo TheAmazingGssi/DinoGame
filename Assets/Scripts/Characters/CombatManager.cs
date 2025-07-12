@@ -7,12 +7,14 @@ public struct DamageArgs
     public float Damage;
     public MainPlayerController SourceMPC; //only for players
     public GameObject SourceGO; //only for players
+    public bool Knockback;//only for players
 
-    public DamageArgs(float damage, MainPlayerController source = null, [CanBeNull] GameObject sourceGO = null)
+    public DamageArgs(float damage, MainPlayerController source = null, [CanBeNull] GameObject sourceGO = null, [CanBeNull] bool knockback = false)
     {
         Damage = damage;
         SourceMPC = source;
         SourceGO = sourceGO;
+        Knockback = knockback;
     }
 }
 

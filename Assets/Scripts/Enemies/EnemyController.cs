@@ -52,7 +52,7 @@ public class EnemyController : MonoBehaviour
 
     private void Movement()
     {
-        if (manager.AttackManager.IsAttacking)
+        if (manager.AttackManager.IsAttacking || manager.KnockbackManager.IsKnockedBack)
         {
             rb.linearVelocity = Vector2.zero;
             moveDirection = Vector3.zero;
@@ -136,7 +136,6 @@ public class EnemyController : MonoBehaviour
 
         if (Mathf.Abs(distanceFromStart) > patrolRange)
         {
-
             patrolStartPos = transform.position;
             patrolDirection = Random.value < 0.5f ? -1 : 1;
             isWaiting = true;

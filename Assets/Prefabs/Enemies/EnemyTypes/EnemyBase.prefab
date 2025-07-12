@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 458055154868709384}
   - component: {fileID: 2559447498672904174}
   - component: {fileID: 4708579745537201409}
+  - component: {fileID: 1509019578044798939}
   m_Layer: 7
   m_Name: EnemyBase
   m_TagString: Enemy
@@ -145,10 +146,11 @@ MonoBehaviour:
   spriteRenderer: {fileID: 2515911822479905939}
   animator: {fileID: 8492816430768677864}
   soundPlayer: {fileID: 2559447498672904174}
+  knockbackManager: {fileID: 1509019578044798939}
   enemyData: {fileID: 11400000, guid: efcb3114fbb81e14eaf446cc3bfaa133, type: 2}
   healthItem: {fileID: 1366378949261486432, guid: 2399d6645efe0d645a8ffe00ac2a711e, type: 3}
-  healthItemDropChance: 1
-  healthDropAmount: 1
+  healthItemDropChance: 0.25
+  healthDropAmount: -1
 --- !u!114 &3082602570648211020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,9 +164,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 7022572441651464058}
-  damageNumberPrefab: {fileID: 0}
   isDead: 0
   isHurt: 0
+  IsKnockbacked: 0
 --- !u!114 &5501723112346460331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,6 +391,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1509019578044798939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856966355605016673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b37ce0d39659fc142932fb05460219d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2750972596752826828
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,6 +574,7 @@ GameObject:
   - component: {fileID: 7775578561474358076}
   - component: {fileID: 2515911822479905939}
   - component: {fileID: 8492816430768677864}
+  - component: {fileID: 5815768939969465993}
   m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
@@ -576,7 +591,7 @@ Transform:
   m_GameObject: {fileID: 6658617843642816480}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.16, y: 0.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -636,7 +651,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &8492816430768677864
 Animator:
   serializedVersion: 7
@@ -659,3 +674,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5815768939969465993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6658617843642816480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fc9d2bcc80b6db4a8f9c61fb15e07a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 7022572441651464058}

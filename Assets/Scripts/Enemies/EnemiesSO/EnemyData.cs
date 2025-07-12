@@ -3,24 +3,18 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "EnemyData", menuName = "Scriptable Objects/EnemyData")]
 public class EnemyData : ScriptableObject
 {
-    [SerializeField] private float maxHealth;
+    [field: SerializeField] public float MaxHealth {get; private set;}
 
-    [SerializeField] private float baseDamage;
+    [field: SerializeField] public float BaseDamage { get; private set; }
 
     [Tooltip("Distance from the player where the enemy should stop moving")]
-    [SerializeField] private float stopRange;
+    [field: SerializeField] public float StopRange { get; private set; }
 
-    [SerializeField] private float attackRange;
+    [field: SerializeField] public float AttackRange { get; private set; }
 
-    [SerializeField] private float speed;
+    [field: SerializeField] public float Speed { get; private set; }
 
-    [SerializeField] private int score;
+    [field: SerializeField] public int Score { get; private set; }
 
-
-    public int Score => score;
-    public float Speed => speed;
-    public float AttackRange => attackRange;
-    public float StopRange => stopRange;
-    public float MaxHealth => maxHealth;
-    public float BaseDamage => baseDamage;
+    [field: SerializeField] public bool immuneToKnockback { get; private set; }
 }
