@@ -6,7 +6,6 @@ public class EnemyCombatManager : CombatManager
     private static readonly int Hurt = Animator.StringToHash("Hurt");
 
     [SerializeField] private EnemyManager manager;
-    [SerializeField] private TextMesh damageNumberPrefab;
 
     [SerializeField] private bool isDead = false;
     [SerializeField] private bool isHurt = false;
@@ -14,7 +13,6 @@ public class EnemyCombatManager : CombatManager
     {
         currentMaxHealth = maxHealth;
         currentHealth = maxHealth;
-        UpdateHealthBar();
     }
 
     private void Update()
@@ -37,11 +35,7 @@ public class EnemyCombatManager : CombatManager
 
         manager.Animator.SetTrigger(Hurt);
         manager.SoundPlayer.PlaySound(1);
-
-        if (damageNumberPrefab)
-        {
-            SpawnDamageText(damageArgs);
-        }
+        manager.SpriteRenderer.color = Color.red;
 
         if (damageArgs.SourceMPC != null)
         {
@@ -54,19 +48,14 @@ public class EnemyCombatManager : CombatManager
 
         damageArgs.SourceMPC.AddScore(manager.EnemyData.Score);
 
-        StartCoroutine(AnimationDelay());
+       // StartCoroutine(AnimationDelay());
     }
 
     private IEnumerator AnimationDelay()
     {
         yield return new WaitForSeconds(0.13f);
+        manager.SpriteRenderer.color = Color.white;
         manager.Animator.ResetTrigger(Hurt);
-    }
-
-    private void SpawnDamageText(DamageArgs damageArgs)
-    {
-        TextMesh damagePrefabClone = Instantiate(damageNumberPrefab, transform.position, Quaternion.identity, transform);
-        damagePrefabClone.text = damageArgs.Damage.ToString();
     }
 
     protected override void HandleDeath()

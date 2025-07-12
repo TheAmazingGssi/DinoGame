@@ -162,7 +162,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 7022572441651464058}
-  damageNumberPrefab: {fileID: 0}
   isDead: 0
   isHurt: 0
 --- !u!114 &5501723112346460331
@@ -560,6 +559,7 @@ GameObject:
   - component: {fileID: 7775578561474358076}
   - component: {fileID: 2515911822479905939}
   - component: {fileID: 8492816430768677864}
+  - component: {fileID: 5815768939969465993}
   m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
@@ -659,3 +659,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5815768939969465993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6658617843642816480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fc9d2bcc80b6db4a8f9c61fb15e07a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 7022572441651464058}
