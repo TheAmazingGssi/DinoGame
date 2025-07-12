@@ -16,6 +16,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Animator animator;
     [SerializeField] private SoundPlayer soundPlayer;
+    [SerializeField] private KnockbackManager knockbackManager;
 
     [Header("Data")]
     [SerializeField] private EnemyData enemyData;
@@ -28,7 +29,6 @@ public class EnemyManager : MonoBehaviour
 
     private PlayerCombatManager playerCombatManager;
 
-    // Properties
     public EnemyAttackManager AttackManager => attackManager;
     public PlayerCombatManager PlayerCombatManager => playerCombatManager;
     public Animator Animator => animator;
@@ -38,6 +38,9 @@ public class EnemyManager : MonoBehaviour
     public EnemyController EnemyController => enemyController;
     public EnemyCombatManager CombatManager => combatManager;
     public SoundPlayer SoundPlayer => soundPlayer;
+
+    public KnockbackManager KnockbackManager => knockbackManager;
+
 
     public event UnityAction<EnemyManager> OnDeath;
 

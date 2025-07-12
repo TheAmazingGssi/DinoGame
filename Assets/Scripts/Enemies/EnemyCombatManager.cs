@@ -33,9 +33,8 @@ public class EnemyCombatManager : CombatManager
 
     public override void TakeDamage(DamageArgs damageArgs)
     {
-        if(damageArgs.Knockback)
+        if(true)
         {
-            IsKnockbacked = damageArgs.SourceMPC.IsPerformingSpecialMovement;
             manager.Animator.SetTrigger(KNOCKBACK);
         }
         else

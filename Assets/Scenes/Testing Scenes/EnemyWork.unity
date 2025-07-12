@@ -4724,16 +4724,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2310508340010356464, guid: fe3e5c3caa574ef4bb1f6884d4b96be4, type: 3}
+      propertyPath: 'playerCharacters.Array.data[0]'
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2310508340010356464, guid: fe3e5c3caa574ef4bb1f6884d4b96be4, type: 3}
       propertyPath: 'playerCharacters.Array.data[1]'
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2310508340010356464, guid: fe3e5c3caa574ef4bb1f6884d4b96be4, type: 3}
       propertyPath: 'playerCharacters.Array.data[2]'
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2310508340010356464, guid: fe3e5c3caa574ef4bb1f6884d4b96be4, type: 3}
       propertyPath: 'playerCharacters.Array.data[3]'
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5384901171355842276, guid: fe3e5c3caa574ef4bb1f6884d4b96be4, type: 3}
       propertyPath: m_NotificationBehavior

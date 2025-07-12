@@ -26,5 +26,6 @@ public class AnimationManager : MonoBehaviour
     public void KnockbackPause()
     {
         manager.Animator.speed = 0;
+        manager.CombatManager.IsKnockbacked = false;
     }
 }
