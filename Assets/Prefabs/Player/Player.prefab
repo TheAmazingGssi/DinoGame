@@ -327,7 +327,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!212 &9146728367405427678
 SpriteRenderer:
@@ -432,6 +432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animationData: {fileID: 11400000, guid: ddf3d8d22bba4984486206bd1e302a5d, type: 2}
   characterType: 0
+  animator: {fileID: 0}
 --- !u!114 &8188875280351630464
 MonoBehaviour:
   m_ObjectHideFlags: 0

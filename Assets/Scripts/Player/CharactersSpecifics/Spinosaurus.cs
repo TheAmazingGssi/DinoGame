@@ -4,40 +4,21 @@ using UnityEngine.Events;
 
 public class Spinosaurus : CharacterBase
 {
-    private float specialAttackRange; // GDD: 4 units
-    private float chompSpeed; // Speed of head movement
-    private float meleeRange; // Distance to drag enemy
-    private float dragSpeed; // Speed of dragging enemy
-    private Transform neckTransform; // Neck sprite object
-    private Animator headAnimator; // Head Animator
-    private AnimationController animationController; // Main body Animator
+    private Animator headAnimator;
+    private AnimationController animationController;
+    private SpinosaurusNeckController neckController;
 
-    private void Awake()
+    public override void Initialize(CharacterStats.CharacterData characterStats, GameObject rightCollider, GameObject leftCollider, bool isFacingRight, float enable, float disable)
     {
+        base.Initialize(characterStats, rightCollider, leftCollider, isFacingRight, enable, disable);
         animationController = GetComponent<AnimationController>();
-        neckTransform = transform.Find("Neck");
-        headAnimator = neckTransform?.Find("Head")?.GetComponent<Animator>();
-        
-        //if (stats != null)
-        //{
-        specialAttackRange = stats.SPspecialAttackRange; 
-        chompSpeed = stats.SPchompSpeed; 
-        meleeRange = stats.SPmeleeRange; 
-        dragSpeed = stats.SPdragSpeed; 
-        //}
-        /*else
-        {
-            // Fallback values if stats is null
-            specialAttackRange = 4f;
-            chompSpeed = 8f;
-            meleeRange = 1f;
-            dragSpeed = 5f;
-        }*/
-        
-        if (neckTransform == null || headAnimator == null)
-        {
-            Debug.LogError("Neck or Head Animator not found in Spinosaurus hierarchy.");
-        }
+        neckController = GetComponent<SpinosaurusNeckController>();
+        headAnimator = transform.Find("SpecialSpritesContainer/Neck/Head")?.GetComponent<Animator>();
+
+        if (neckController == null || headAnimator == null)
+            Debug.LogError($"SpinosaurusNeckController or Head Animator not found in {gameObject.name}!");
+
+        neckController.Initialize(characterStats, rightCollider, leftCollider, isFacingRight);
     }
 
     public override IEnumerator PerformAttack(float damage, UnityAction<float> onAttack)
@@ -56,63 +37,40 @@ public class Spinosaurus : CharacterBase
 
     public override IEnumerator PerformSpecial(UnityAction<float> onSpecial)
     {
-        if (rightMeleeColliderGO == null || leftMeleeColliderGO == null || neckTransform == null || headAnimator == null) yield break;
+        if (rightMeleeColliderGO == null || leftMeleeColliderGO == null || headAnimator == null || neckController == null) yield break;
 
-        animationController.TriggerSpecial(); // Trigger headless SpecialAttack animation
-        headAnimator.SetTrigger("MouthOpen"); // Start mouth-opening animation
-        GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
-        MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
-        Vector3 originalNeckScale = neckTransform.localScale;
-        Vector3 originalColliderPos = activeCollider.transform.localPosition;
-        activeCollider.SetActive(true);
+        IsPerformingSpecialMovement = true;
+        animationController.TriggerSpecial();
+        int mouthOpenHash = Animator.StringToHash("MouthOpen");
+        headAnimator.Play(mouthOpenHash, 0, 0f);
 
-        float moved = 0f;
-        Vector3 direction = facingRight ? Vector3.right : Vector3.left;
-        Collider2D hitEnemy = null;
+        // Wait for neck extension (animation-driven)
+        yield return new WaitUntil(() => neckController != null);
 
-        // Extend neck
-        while (moved < specialAttackRange && hitEnemy == null)
-        {
-            float step = chompSpeed * Time.deltaTime;
-            neckTransform.localScale += new Vector3(step / specialAttackRange, 0, 0); // Stretch neck horizontally
-            activeCollider.transform.localPosition += direction * step;
-            moved += step;
+        // Hold MouthOpen at last frame if no enemy hit
+        if (headAnimator.GetCurrentAnimatorStateInfo(0).fullPathHash == mouthOpenHash)
+            headAnimator.Play(mouthOpenHash, 0, 1f);
 
-            RaycastHit2D hit = Physics2D.BoxCast(activeCollider.transform.position, new Vector2(0.5f, 0.5f), 0f, direction, 0f, LayerMask.GetMask("Enemy"));
-            if (hit.collider != null && hit.collider.CompareTag("Enemy"))
-            {
-                hitEnemy = hit.collider;
-                headAnimator.SetTrigger("MouthClose"); // Play mouth-closing animation
-                break;
-            }
-            yield return null;
-        }
+        headAnimator.SetTrigger("MouthClose");
 
-        // Pull enemy if grabbed
-        if (hitEnemy != null)
-        {
-            Transform enemyTransform = hitEnemy.transform;
-            Vector3 targetPos = transform.position + direction * meleeRange;
-            while (Vector3.Distance(enemyTransform.position, targetPos) > 0.1f)
-            {
-                enemyTransform.position = Vector3.MoveTowards(enemyTransform.position, targetPos, dragSpeed * Time.deltaTime);
-                yield return null;
-            }
-            onSpecial?.Invoke(stats.specialAttackDamage);
-            KnockbackHelper.ApplyKnockback(enemyTransform, transform, KnockbackHelper.GetKnockbackForceFromDamage(stats.specialAttackDamage, true), KnockbackType.Grab);
-        }
+        // Wait for neck retraction
+        yield return new WaitUntil(() => neckController != null);
 
-        // Retract neck
-        while (neckTransform.localScale.x > originalNeckScale.x)
-        {
-            neckTransform.localScale -= new Vector3(chompSpeed * Time.deltaTime / specialAttackRange, 0, 0);
-            activeCollider.transform.localPosition = Vector3.MoveTowards(activeCollider.transform.localPosition, originalColliderPos, chompSpeed * Time.deltaTime);
-            yield return null;
-        }
+        if (headAnimator.GetCurrentAnimatorStateInfo(0).fullPathHash != Animator.StringToHash("MouthClose"))
+            headAnimator.Play("MouthClose", 0, 0f);
 
-        neckTransform.localScale = originalNeckScale;
-        activeCollider.transform.localPosition = originalColliderPos;
-        activeCollider.SetActive(false);
-        headAnimator.SetTrigger("MouthOpen"); // Reset to open mouth or idle
+        IsPerformingSpecialMovement = false;
+    }
+
+    public void PauseBodyAnimation()
+    {
+        animationController.animator.speed = 0f; // Pause body animation
+        neckController.OnNeckRetractionComplete += ResumeBodyAnimation; // Subscribe to resume
+    }
+
+    private void ResumeBodyAnimation()
+    {
+        animationController.animator.speed = 1f; // Resume body animation
+        neckController.OnNeckRetractionComplete -= ResumeBodyAnimation; // Unsubscribe
     }
 }

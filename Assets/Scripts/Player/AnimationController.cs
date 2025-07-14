@@ -5,7 +5,7 @@ public class AnimationController : MonoBehaviour
     [SerializeField] private AnimationData animationData;
     public CharacterType characterType;
 
-    private Animator animator;
+    public Animator animator;
 
     private void Awake()
     {
@@ -21,6 +21,7 @@ public class AnimationController : MonoBehaviour
     {
         // Disabled due to console errors - Maayan
         // animator.SetFloat("AnimationSpeed", speed);
+        animator.speed = speed;
     }
 
     public void TriggerAttack()

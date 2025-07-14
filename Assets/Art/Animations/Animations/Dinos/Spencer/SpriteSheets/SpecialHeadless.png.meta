@@ -1,55 +1,55 @@
 fileFormatVersion: 2
-guid: 260d3e3eb3d3aa745aaebe6c346a14bb
+guid: 024b94c2478fc7843b82384bbe486f1d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5028529745189751888
-    second: Spencer_Special_Body2_Sheet_0
+      213: -6082432639818779509
+    second: Removal-861_0
   - first:
-      213: -1983488951931927654
-    second: Spencer_Special_Body2_Sheet_1
+      213: -7010817962247897791
+    second: Removal-861_1
   - first:
-      213: -2874957430079526749
-    second: Spencer_Special_Body2_Sheet_2
+      213: 3252082461246694558
+    second: Removal-861_2
   - first:
-      213: -4717711811832319050
-    second: Spencer_Special_Body2_Sheet_3
+      213: 9188918842612796992
+    second: Removal-861_3
   - first:
-      213: -4272446369872920127
-    second: Spencer_Special_Body2_Sheet_4
+      213: 7540911898632976665
+    second: Removal-861_4
   - first:
-      213: -491220413893046249
-    second: Spencer_Special_Body2_Sheet_5
+      213: 7369549468369391798
+    second: Removal-861_5
   - first:
-      213: -9164993429186565337
-    second: Spencer_Special_Body2_Sheet_6
+      213: -2272416094133909941
+    second: Removal-861_6
   - first:
-      213: -8296965178888812357
-    second: Spencer_Special_Body2_Sheet_7
+      213: 3234880560329604533
+    second: Removal-861_7
   - first:
-      213: -3612452332612781207
-    second: Spencer_Special_Body2_Sheet_8
+      213: -5001965743468815486
+    second: Removal-861_8
   - first:
-      213: 1585906548289373151
-    second: Spencer_Special_Body2_Sheet_9
+      213: -3608631191293559260
+    second: Removal-861_9
   - first:
-      213: -1059807317329916731
-    second: Spencer_Special_Body2_Sheet_10
+      213: -6909768453023696859
+    second: Removal-861_10
   - first:
-      213: 9026460904541554104
-    second: Spencer_Special_Body2_Sheet_11
+      213: -6076698101929661727
+    second: Removal-861_11
   - first:
-      213: 7535248582167978430
-    second: Spencer_Special_Body2_Sheet_12
+      213: 386471182427101636
+    second: Removal-861_12
   - first:
-      213: -5968898543503111398
-    second: Spencer_Special_Body2_Sheet_13
+      213: -6795453632952610852
+    second: Removal-861_13
   - first:
-      213: -4901024817861181385
-    second: Spencer_Special_Body2_Sheet_14
+      213: -98328476549358254
+    second: Removal-861_14
   - first:
-      213: -6302248066056436326
-    second: Spencer_Special_Body2_Sheet_15
+      213: 660661489925842306
+    second: Removal-861_15
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,7 +96,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 2500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -184,353 +184,309 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spencer_Special_Body2_Sheet_0
+      name: SpecialHeadless_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 1791
-        width: 622
-        height: 396
+        x: 0
+        y: 1744
+        width: 1018
+        height: 581
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0b3ba7bc6d2173ab0800000000000000
-      internalID: -5028529745189751888
+      spriteID: d796c805d0d019947b6541dc7f5edd3f
+      internalID: -1863284064
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spencer_Special_Body2_Sheet_1
+      name: SpecialHeadless_1
       rect:
         serializedVersion: 2
-        x: 1041
-        y: 1791
-        width: 631
-        height: 401
+        x: 1018
+        y: 1744
+        width: 1018
+        height: 581
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a938f24ae4b3974e0800000000000000
-      internalID: -1983488951931927654
+      spriteID: 866758eda498ded47b3cd222b2ab5a51
+      internalID: -994034590
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spencer_Special_Body2_Sheet_2
+      name: SpecialHeadless_2
       rect:
         serializedVersion: 2
-        x: 2062
-        y: 1791
-        width: 639
-        height: 406
+        x: 2036
+        y: 1744
+        width: 1018
+        height: 581
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3a86db313791a18d0800000000000000
-      internalID: -2874957430079526749
+      spriteID: 0fd9357401200e44abfec1c2efac498b
+      internalID: -1669304916
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spencer_Special_Body2_Sheet_3
+      name: SpecialHeadless_3
       rect:
         serializedVersion: 2
-        x: 3082
-        y: 1791
-        width: 638
-        height: 406
+        x: 3054
+        y: 1744
+        width: 1018
+        height: 581
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6b3f1174a12578eb0800000000000000
-      internalID: -4717711811832319050
+      spriteID: 04ba2955a8647a346bc76eed8ad4c3cf
+      internalID: 314060
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spencer_Special_Body2_Sheet_4
+      name: SpecialHeadless_4
       rect:
         serializedVersion: 2
-        x: 25
-        y: 1210
-        width: 620
-        height: 395
+        x: 0
+        y: 1163
+        width: 1018
+        height: 581
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1c141d9b9a835b4c0800000000000000
-      internalID: -4272446369872920127
+      spriteID: f016a93ddb7ff224cba45b4ac0c2f8a0
+      internalID: -1488453218
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spencer_Special_Body2_Sheet_5
+      name: SpecialHeadless_5
       rect:
         serializedVersion: 2
-        x: 1048
-        y: 1210
-        width: 618
-        height: 395
+        x: 1018
+        y: 1163
+        width: 1018
+        height: 581
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7101c7bd2a5de29f0800000000000000
-      internalID: -491220413893046249
+      spriteID: 10b6c2209bd054b4d84afee3bd303b0a
+      internalID: -2053608626
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spencer_Special_Body2_Sheet_6
+      name: SpecialHeadless_6
       rect:
         serializedVersion: 2
-        x: 2072
-        y: 1210
-        width: 614
-        height: 395
+        x: 2036
+        y: 1163
+        width: 1018
+        height: 581
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 72bab8cc8076fc080800000000000000
-      internalID: -9164993429186565337
+      spriteID: 168a9dddb5ed88e4da16f89949380b44
+      internalID: 1825531107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spencer_Special_Body2_Sheet_7
+      name: SpecialHeadless_7
       rect:
         serializedVersion: 2
-        x: 3096
-        y: 1210
-        width: 612
-        height: 395
+        x: 3054
+        y: 1163
+        width: 1018
+        height: 581
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bb80c8601224bdc80800000000000000
-      internalID: -8296965178888812357
+      spriteID: 4bcb566dfa7362d46aba5a6e1fc05b75
+      internalID: 1588159332
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spencer_Special_Body2_Sheet_8
+      name: SpecialHeadless_8
       rect:
         serializedVersion: 2
-        x: 48
-        y: 629
-        width: 611
-        height: 395
+        x: 0
+        y: 582
+        width: 1018
+        height: 581
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 96b759a3ebdfdddc0800000000000000
-      internalID: -3612452332612781207
+      spriteID: 33fba3da28cb8c749a44d72ac33e0bc1
+      internalID: 1187033444
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spencer_Special_Body2_Sheet_9
+      name: SpecialHeadless_9
       rect:
         serializedVersion: 2
-        x: 1066
-        y: 629
-        width: 611
-        height: 395
+        x: 1018
+        y: 582
+        width: 1018
+        height: 581
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fd301c96a95420610800000000000000
-      internalID: 1585906548289373151
+      spriteID: 6a72e506de7d58e4aa2def1bfe1aa5c0
+      internalID: 1149846342
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spencer_Special_Body2_Sheet_10
+      name: SpecialHeadless_12
       rect:
         serializedVersion: 2
-        x: 2085
-        y: 629
-        width: 611
-        height: 395
+        x: 0
+        y: 1
+        width: 1018
+        height: 581
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5ccc0382cdeca41f0800000000000000
-      internalID: -1059807317329916731
+      spriteID: a45516ba49feb43418e5b36cf6cce5b5
+      internalID: 1524736188
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spencer_Special_Body2_Sheet_11
+      name: SpecialHeadless_13
       rect:
         serializedVersion: 2
-        x: 3103
-        y: 629
-        width: 611
-        height: 395
+        x: 1018
+        y: 1
+        width: 1018
+        height: 581
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8b586225e5e644d70800000000000000
-      internalID: 9026460904541554104
+      spriteID: ab7b51a9ce467cf4f81b715a7a3bcafb
+      internalID: -1252689198
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spencer_Special_Body2_Sheet_12
+      name: SpecialHeadless_14
       rect:
         serializedVersion: 2
-        x: 48
-        y: 48
-        width: 611
-        height: 395
+        x: 2036
+        y: 1
+        width: 1018
+        height: 581
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: eb1636a79a4929860800000000000000
-      internalID: 7535248582167978430
+      spriteID: e847cd09704a35b4e99d1f1843fd3567
+      internalID: 241481907
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spencer_Special_Body2_Sheet_13
+      name: SpecialHeadless_15
       rect:
         serializedVersion: 2
-        x: 1050
-        y: 48
-        width: 619
-        height: 395
+        x: 3054
+        y: 1
+        width: 1018
+        height: 581
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a1b862636663a2da0800000000000000
-      internalID: -5968898543503111398
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spencer_Special_Body2_Sheet_14
-      rect:
-        serializedVersion: 2
-        x: 2055
-        y: 48
-        width: 623
-        height: 395
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 730c20815ef0cfbb0800000000000000
-      internalID: -4901024817861181385
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spencer_Special_Body2_Sheet_15
-      rect:
-        serializedVersion: 2
-        x: 3067
-        y: 48
-        width: 625
-        height: 395
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a95405056cae988a0800000000000000
-      internalID: -6302248066056436326
+      spriteID: 91194152ff83c8d4ea3f50d7b3d35fae
+      internalID: -444530537
       vertices: []
       indices: 
       edges: []
@@ -539,7 +495,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b3f9ac5f58367144ba5ca8361fdbd8a7
     internalID: 0
     vertices: []
     indices: 
@@ -549,22 +505,22 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Spencer_Special_Body2_Sheet_0: -5028529745189751888
-      Spencer_Special_Body2_Sheet_1: -1983488951931927654
-      Spencer_Special_Body2_Sheet_10: -1059807317329916731
-      Spencer_Special_Body2_Sheet_11: 9026460904541554104
-      Spencer_Special_Body2_Sheet_12: 7535248582167978430
-      Spencer_Special_Body2_Sheet_13: -5968898543503111398
-      Spencer_Special_Body2_Sheet_14: -4901024817861181385
-      Spencer_Special_Body2_Sheet_15: -6302248066056436326
-      Spencer_Special_Body2_Sheet_2: -2874957430079526749
-      Spencer_Special_Body2_Sheet_3: -4717711811832319050
-      Spencer_Special_Body2_Sheet_4: -4272446369872920127
-      Spencer_Special_Body2_Sheet_5: -491220413893046249
-      Spencer_Special_Body2_Sheet_6: -9164993429186565337
-      Spencer_Special_Body2_Sheet_7: -8296965178888812357
-      Spencer_Special_Body2_Sheet_8: -3612452332612781207
-      Spencer_Special_Body2_Sheet_9: 1585906548289373151
+      SpecialHeadless_0: -1863284064
+      SpecialHeadless_1: -994034590
+      SpecialHeadless_10: 1112212207
+      SpecialHeadless_11: -1845087638
+      SpecialHeadless_12: 1524736188
+      SpecialHeadless_13: -1252689198
+      SpecialHeadless_14: 241481907
+      SpecialHeadless_15: -444530537
+      SpecialHeadless_2: -1669304916
+      SpecialHeadless_3: 314060
+      SpecialHeadless_4: -1488453218
+      SpecialHeadless_5: -2053608626
+      SpecialHeadless_6: 1825531107
+      SpecialHeadless_7: 1588159332
+      SpecialHeadless_8: 1187033444
+      SpecialHeadless_9: 1149846342
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

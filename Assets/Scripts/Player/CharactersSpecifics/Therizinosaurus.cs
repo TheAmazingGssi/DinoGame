@@ -26,6 +26,7 @@ public class Therizinosaurus : CharacterBase
     {
         if (rightMeleeColliderGO == null || leftMeleeColliderGO == null) yield break;
 
+        IsPerformingSpecialMovement = true; // Block movement
         GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
         MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
         activeCollider.SetActive(true);
@@ -37,5 +38,6 @@ public class Therizinosaurus : CharacterBase
         }
 
         activeCollider.SetActive(false);
+        IsPerformingSpecialMovement = false; // Resume movement
     }
 }

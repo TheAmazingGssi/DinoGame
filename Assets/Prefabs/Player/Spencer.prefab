@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2241150035856358368}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2, y: 0.012785524, z: 0}
+  m_LocalPosition: {x: 0.075, y: 0.012785524, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -136,7 +136,7 @@ Transform:
   m_GameObject: {fileID: 5955623473667593743}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.029, y: 0.0401, z: 0.3282725}
+  m_LocalPosition: {x: -0.0295, y: 0.04014, z: 0.3282725}
   m_LocalScale: {x: 1, y: 1, z: 10}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -192,7 +192,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 0.2, y: 0.031}
+  m_Size: {x: 0.075, y: 0.034638826}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -213,7 +213,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3568826012296281405
 Transform:
   m_ObjectHideFlags: 0
@@ -341,7 +341,7 @@ PrefabInstance:
     - target: {fileID: 9146728367405427678, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 6955056121969430315, guid: 3a86176ab6b5ad244a04cc9764987000, type: 3}
+      objectReference: {fileID: 3386409550756050788, guid: 28962a5f5923a204b910f977d9d023a4, type: 3}
     - target: {fileID: 9146728367405427678, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_DrawMode
       value: 0
@@ -364,8 +364,42 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2242870450885965078, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3568826012296281405}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4241924471051646355, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7667651818705085744}
   m_SourcePrefab: {fileID: 100100000, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+--- !u!1 &3616008754124699164 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4772631282887250927, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+  m_PrefabInstance: {fileID: 8076482522464609779}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5389464896397545568 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4241924471051646355, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+  m_PrefabInstance: {fileID: 8076482522464609779}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7667651818705085744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5389464896397545568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf585794f6cd5f043a603c6456201a26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neckSpriteRenderer: {fileID: 5752293882073417322}
+  specialSpritesContainer: {fileID: 8007572397303639033}
+  rightMeleeColliderGO: {fileID: 7400040530635539858}
+  leftMeleeColliderGO: {fileID: 3616008754124699164}
+--- !u!1 &7400040530635539858 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1632369837632200801, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+  m_PrefabInstance: {fileID: 8076482522464609779}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8013356031367205093 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2242870450885965078, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
