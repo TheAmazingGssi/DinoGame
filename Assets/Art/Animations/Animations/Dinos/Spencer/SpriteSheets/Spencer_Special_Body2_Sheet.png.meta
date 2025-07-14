@@ -96,7 +96,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 2500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -187,10 +187,10 @@ TextureImporter:
       name: Spencer_Special_Body2_Sheet_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 1791
-        width: 622
-        height: 396
+        x: 0
+        y: 1744
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,10 +209,10 @@ TextureImporter:
       name: Spencer_Special_Body2_Sheet_1
       rect:
         serializedVersion: 2
-        x: 1041
-        y: 1791
-        width: 631
-        height: 401
+        x: 1018
+        y: 1744
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,10 +231,10 @@ TextureImporter:
       name: Spencer_Special_Body2_Sheet_2
       rect:
         serializedVersion: 2
-        x: 2062
-        y: 1791
-        width: 639
-        height: 406
+        x: 2036
+        y: 1744
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,10 +253,10 @@ TextureImporter:
       name: Spencer_Special_Body2_Sheet_3
       rect:
         serializedVersion: 2
-        x: 3082
-        y: 1791
-        width: 638
-        height: 406
+        x: 3054
+        y: 1744
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -275,10 +275,10 @@ TextureImporter:
       name: Spencer_Special_Body2_Sheet_4
       rect:
         serializedVersion: 2
-        x: 25
-        y: 1210
-        width: 620
-        height: 395
+        x: 0
+        y: 1163
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,10 +297,10 @@ TextureImporter:
       name: Spencer_Special_Body2_Sheet_5
       rect:
         serializedVersion: 2
-        x: 1048
-        y: 1210
-        width: 618
-        height: 395
+        x: 1018
+        y: 1163
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -319,10 +319,10 @@ TextureImporter:
       name: Spencer_Special_Body2_Sheet_6
       rect:
         serializedVersion: 2
-        x: 2072
-        y: 1210
-        width: 614
-        height: 395
+        x: 2036
+        y: 1163
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,10 +341,10 @@ TextureImporter:
       name: Spencer_Special_Body2_Sheet_7
       rect:
         serializedVersion: 2
-        x: 3096
-        y: 1210
-        width: 612
-        height: 395
+        x: 3054
+        y: 1163
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -363,10 +363,10 @@ TextureImporter:
       name: Spencer_Special_Body2_Sheet_8
       rect:
         serializedVersion: 2
-        x: 48
-        y: 629
-        width: 611
-        height: 395
+        x: 0
+        y: 582
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -385,10 +385,10 @@ TextureImporter:
       name: Spencer_Special_Body2_Sheet_9
       rect:
         serializedVersion: 2
-        x: 1066
-        y: 629
-        width: 611
-        height: 395
+        x: 1018
+        y: 582
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -407,10 +407,10 @@ TextureImporter:
       name: Spencer_Special_Body2_Sheet_10
       rect:
         serializedVersion: 2
-        x: 2085
-        y: 629
-        width: 611
-        height: 395
+        x: 2036
+        y: 582
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -429,10 +429,10 @@ TextureImporter:
       name: Spencer_Special_Body2_Sheet_11
       rect:
         serializedVersion: 2
-        x: 3103
-        y: 629
-        width: 611
-        height: 395
+        x: 3054
+        y: 582
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -451,10 +451,10 @@ TextureImporter:
       name: Spencer_Special_Body2_Sheet_12
       rect:
         serializedVersion: 2
-        x: 48
-        y: 48
-        width: 611
-        height: 395
+        x: 0
+        y: 1
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -473,10 +473,10 @@ TextureImporter:
       name: Spencer_Special_Body2_Sheet_13
       rect:
         serializedVersion: 2
-        x: 1050
-        y: 48
-        width: 619
-        height: 395
+        x: 1018
+        y: 1
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -495,10 +495,10 @@ TextureImporter:
       name: Spencer_Special_Body2_Sheet_14
       rect:
         serializedVersion: 2
-        x: 2055
-        y: 48
-        width: 623
-        height: 395
+        x: 2036
+        y: 1
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -517,10 +517,10 @@ TextureImporter:
       name: Spencer_Special_Body2_Sheet_15
       rect:
         serializedVersion: 2
-        x: 3067
-        y: 48
-        width: 625
-        height: 395
+        x: 3054
+        y: 1
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -539,7 +539,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 642dc36dfe511f241a61f39bf3ad6d4a
     internalID: 0
     vertices: []
     indices: 

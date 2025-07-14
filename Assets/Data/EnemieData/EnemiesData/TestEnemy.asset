@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85e1ae9ae5f684a4f9ab2eb4ce5bc120, type: 3}
   m_Name: TestEnemy
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  baseDamage: 10
-  stopRange: 3
-  attackRange: 1
-  speed: 2
-  score: 10
+  <MaxHealth>k__BackingField: 30
+  <BaseDamage>k__BackingField: 30
+  <StopRange>k__BackingField: 1
+  <AttackRange>k__BackingField: 4
+  <Speed>k__BackingField: 2
+  <Score>k__BackingField: 0
+  <immuneToKnockback>k__BackingField: 0

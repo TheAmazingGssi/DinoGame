@@ -223,10 +223,10 @@ TextureImporter:
       name: Spencer_Revive_Front_Sheet_0
       rect:
         serializedVersion: 2
-        x: 536
-        y: 2004
-        width: 337
-        height: 181
+        x: 0
+        y: 1744
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,10 +245,10 @@ TextureImporter:
       name: Spencer_Revive_Front_Sheet_1
       rect:
         serializedVersion: 2
-        x: 1483
-        y: 1825
-        width: 151
-        height: 191
+        x: 1018
+        y: 1744
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,10 +267,10 @@ TextureImporter:
       name: Spencer_Revive_Front_Sheet_2
       rect:
         serializedVersion: 2
-        x: 1542
-        y: 1997
-        width: 317
-        height: 254
+        x: 2036
+        y: 1744
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,10 +289,10 @@ TextureImporter:
       name: Spencer_Revive_Front_Sheet_3
       rect:
         serializedVersion: 2
-        x: 2502
-        y: 1838
-        width: 110
-        height: 213
+        x: 3054
+        y: 1744
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -311,10 +311,10 @@ TextureImporter:
       name: Spencer_Revive_Front_Sheet_4
       rect:
         serializedVersion: 2
-        x: 2552
-        y: 1989
-        width: 257
-        height: 313
+        x: 0
+        y: 1163
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -333,10 +333,10 @@ TextureImporter:
       name: Spencer_Revive_Front_Sheet_5
       rect:
         serializedVersion: 2
-        x: 3514
-        y: 1840
-        width: 109
-        height: 220
+        x: 1018
+        y: 1163
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -355,10 +355,10 @@ TextureImporter:
       name: Spencer_Revive_Front_Sheet_6
       rect:
         serializedVersion: 2
-        x: 3565
-        y: 1991
-        width: 260
-        height: 320
+        x: 2036
+        y: 1163
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -377,10 +377,10 @@ TextureImporter:
       name: Spencer_Revive_Front_Sheet_7
       rect:
         serializedVersion: 2
-        x: 459
-        y: 1805
-        width: 183
-        height: 177
+        x: 3054
+        y: 1163
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -399,10 +399,10 @@ TextureImporter:
       name: Spencer_Revive_Front_Sheet_8
       rect:
         serializedVersion: 2
-        x: 449
-        y: 1273
-        width: 113
-        height: 215
+        x: 0
+        y: 582
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -421,10 +421,10 @@ TextureImporter:
       name: Spencer_Revive_Front_Sheet_9
       rect:
         serializedVersion: 2
-        x: 503
-        y: 1414
-        width: 265
-        height: 325
+        x: 1018
+        y: 582
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -443,10 +443,10 @@ TextureImporter:
       name: Spencer_Revive_Front_Sheet_10
       rect:
         serializedVersion: 2
-        x: 1475
-        y: 1251
-        width: 103
-        height: 221
+        x: 2036
+        y: 582
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -465,10 +465,10 @@ TextureImporter:
       name: Spencer_Revive_Front_Sheet_11
       rect:
         serializedVersion: 2
-        x: 1539
-        y: 1397
-        width: 250
-        height: 321
+        x: 3054
+        y: 582
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -487,10 +487,10 @@ TextureImporter:
       name: Spencer_Revive_Front_Sheet_12
       rect:
         serializedVersion: 2
-        x: 2498
-        y: 1241
-        width: 96
-        height: 215
+        x: 0
+        y: 1
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -509,10 +509,10 @@ TextureImporter:
       name: Spencer_Revive_Front_Sheet_13
       rect:
         serializedVersion: 2
-        x: 2573
-        y: 1381
-        width: 236
-        height: 316
+        x: 1018
+        y: 1
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -527,319 +527,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Spencer_Revive_Front_Sheet_14
-      rect:
-        serializedVersion: 2
-        x: 3512
-        y: 1251
-        width: 102
-        height: 221
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 564ce25b9d9731660800000000000000
-      internalID: 7355356592380757093
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spencer_Revive_Front_Sheet_15
-      rect:
-        serializedVersion: 2
-        x: 3576
-        y: 1397
-        width: 250
-        height: 321
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4c4ae2fba69ddfe50800000000000000
-      internalID: 6844866061170287812
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spencer_Revive_Front_Sheet_16
-      rect:
-        serializedVersion: 2
-        x: 449
-        y: 692
-        width: 113
-        height: 214
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fdcd7a84935018320800000000000000
-      internalID: 2558331806913387743
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spencer_Revive_Front_Sheet_17
-      rect:
-        serializedVersion: 2
-        x: 503
-        y: 832
-        width: 265
-        height: 326
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3f8218a3ac97b0aa0800000000000000
-      internalID: -6193722953046087437
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spencer_Revive_Front_Sheet_18
-      rect:
-        serializedVersion: 2
-        x: 1475
-        y: 669
-        width: 103
-        height: 222
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d9d2217b0c5d2e410800000000000000
-      internalID: 1505000249177025949
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spencer_Revive_Front_Sheet_19
-      rect:
-        serializedVersion: 2
-        x: 1539
-        y: 816
-        width: 250
-        height: 321
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 56cff21dcf31ead20800000000000000
-      internalID: 3291590354216680549
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spencer_Revive_Front_Sheet_20
-      rect:
-        serializedVersion: 2
-        x: 2498
-        y: 659
-        width: 96
-        height: 216
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d2cb921b6c99181d0800000000000000
-      internalID: -3350227569132061651
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spencer_Revive_Front_Sheet_21
-      rect:
-        serializedVersion: 2
-        x: 2573
-        y: 800
-        width: 236
-        height: 316
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ebe7fd36f163b3c70800000000000000
-      internalID: 8951808192776470206
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spencer_Revive_Front_Sheet_22
-      rect:
-        serializedVersion: 2
-        x: 3519
-        y: 667
-        width: 103
-        height: 215
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6b17c263c0ce7bbf0800000000000000
-      internalID: -308518512258944586
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spencer_Revive_Front_Sheet_23
-      rect:
-        serializedVersion: 2
-        x: 3581
-        y: 818
-        width: 247
-        height: 310
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b9f3ec5fefc39b340800000000000000
-      internalID: 4879998736975937435
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spencer_Revive_Front_Sheet_24
-      rect:
-        serializedVersion: 2
-        x: 465
-        y: 94
-        width: 110
-        height: 213
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b548da13d3f5500a0800000000000000
-      internalID: -6916016936326429605
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spencer_Revive_Front_Sheet_25
-      rect:
-        serializedVersion: 2
-        x: 515
-        y: 257
-        width: 257
-        height: 302
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1831c3d0177f3f080800000000000000
-      internalID: -9154701552588680319
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spencer_Revive_Front_Sheet_26
-      rect:
-        serializedVersion: 2
-        x: 1483
-        y: 82
-        width: 151
-        height: 191
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b4372a061cf01ae70800000000000000
-      internalID: 9124591643253699403
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spencer_Revive_Front_Sheet_27
-      rect:
-        serializedVersion: 2
-        x: 1542
-        y: 263
-        width: 317
-        height: 244
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9231dcf3b44f7ed70800000000000000
-      internalID: 9072488578391282473
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 876b9168a454f764ea0b9c6b1790f782
     internalID: 0
     vertices: []
     indices: 
@@ -855,21 +547,7 @@ TextureImporter:
       Spencer_Revive_Front_Sheet_11: 161083621144605419
       Spencer_Revive_Front_Sheet_12: -3583863761692701232
       Spencer_Revive_Front_Sheet_13: -834887864147950872
-      Spencer_Revive_Front_Sheet_14: 7355356592380757093
-      Spencer_Revive_Front_Sheet_15: 6844866061170287812
-      Spencer_Revive_Front_Sheet_16: 2558331806913387743
-      Spencer_Revive_Front_Sheet_17: -6193722953046087437
-      Spencer_Revive_Front_Sheet_18: 1505000249177025949
-      Spencer_Revive_Front_Sheet_19: 3291590354216680549
       Spencer_Revive_Front_Sheet_2: -3118323316145966773
-      Spencer_Revive_Front_Sheet_20: -3350227569132061651
-      Spencer_Revive_Front_Sheet_21: 8951808192776470206
-      Spencer_Revive_Front_Sheet_22: -308518512258944586
-      Spencer_Revive_Front_Sheet_23: 4879998736975937435
-      Spencer_Revive_Front_Sheet_24: -6916016936326429605
-      Spencer_Revive_Front_Sheet_25: -9154701552588680319
-      Spencer_Revive_Front_Sheet_26: 9124591643253699403
-      Spencer_Revive_Front_Sheet_27: 9072488578391282473
       Spencer_Revive_Front_Sheet_3: -2837840630792746861
       Spencer_Revive_Front_Sheet_4: 179575486164533123
       Spencer_Revive_Front_Sheet_5: -1018838863010066657

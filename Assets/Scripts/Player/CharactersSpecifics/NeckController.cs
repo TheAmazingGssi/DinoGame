@@ -77,6 +77,7 @@ public class SpinosaurusNeckController : MonoBehaviour
             moved += step;
 
             RaycastHit2D hit = Physics2D.BoxCast(activeCollider.transform.position, new Vector2(0.5f, 0.5f), 0f, direction, 0f, LayerMask.GetMask("Enemy"));
+            
             if (hit.collider != null && hit.collider.CompareTag("Enemy"))
             {
                 hitEnemy = hit.collider;

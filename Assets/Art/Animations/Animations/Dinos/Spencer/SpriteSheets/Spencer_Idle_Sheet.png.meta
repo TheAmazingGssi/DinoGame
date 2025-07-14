@@ -172,10 +172,10 @@ TextureImporter:
       name: Spencer_Idle_Sheet_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 1209
-        width: 853
-        height: 410
+        x: 0
+        y: 1162
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,10 +194,10 @@ TextureImporter:
       name: Spencer_Idle_Sheet_1
       rect:
         serializedVersion: 2
-        x: 1037
-        y: 1209
-        width: 854
-        height: 407
+        x: 1018
+        y: 1162
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,10 +216,10 @@ TextureImporter:
       name: Spencer_Idle_Sheet_2
       rect:
         serializedVersion: 2
-        x: 2055
-        y: 1209
-        width: 854
-        height: 405
+        x: 2036
+        y: 1162
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,10 +238,10 @@ TextureImporter:
       name: Spencer_Idle_Sheet_3
       rect:
         serializedVersion: 2
-        x: 3072
-        y: 1209
-        width: 855
-        height: 402
+        x: 3054
+        y: 1162
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,10 +260,10 @@ TextureImporter:
       name: Spencer_Idle_Sheet_4
       rect:
         serializedVersion: 2
-        x: 16
-        y: 628
-        width: 855
-        height: 399
+        x: 0
+        y: 581
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -282,10 +282,10 @@ TextureImporter:
       name: Spencer_Idle_Sheet_5
       rect:
         serializedVersion: 2
-        x: 1035
-        y: 628
-        width: 854
-        height: 401
+        x: 1018
+        y: 581
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -304,10 +304,10 @@ TextureImporter:
       name: Spencer_Idle_Sheet_6
       rect:
         serializedVersion: 2
-        x: 2054
-        y: 628
-        width: 854
-        height: 402
+        x: 2036
+        y: 581
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -326,10 +326,10 @@ TextureImporter:
       name: Spencer_Idle_Sheet_7
       rect:
         serializedVersion: 2
-        x: 3073
-        y: 628
-        width: 854
-        height: 404
+        x: 3054
+        y: 581
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -348,10 +348,10 @@ TextureImporter:
       name: Spencer_Idle_Sheet_8
       rect:
         serializedVersion: 2
-        x: 18
-        y: 46
-        width: 854
-        height: 406
+        x: 0
+        y: 0
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -370,10 +370,10 @@ TextureImporter:
       name: Spencer_Idle_Sheet_9
       rect:
         serializedVersion: 2
-        x: 1037
-        y: 46
-        width: 854
-        height: 408
+        x: 1018
+        y: 0
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -392,10 +392,10 @@ TextureImporter:
       name: Spencer_Idle_Sheet_10
       rect:
         serializedVersion: 2
-        x: 2057
-        y: 46
-        width: 853
-        height: 409
+        x: 2036
+        y: 0
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -414,7 +414,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: bd4e877cd36cb424185a5eddbf106db2
     internalID: 0
     vertices: []
     indices: 

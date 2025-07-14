@@ -12,6 +12,18 @@ PrefabInstance:
       propertyPath: characterType
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 997385506810749428, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_Radius
+      value: 0.075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1396189071209456459, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0101
+      objectReference: {fileID: 0}
+    - target: {fileID: 1396189071209456459, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.105
+      objectReference: {fileID: 0}
     - target: {fileID: 2242870450885965078, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -52,6 +64,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2492364246984025447, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593272781190150543, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3569670116312465802, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0103
+      objectReference: {fileID: 0}
+    - target: {fileID: 3569670116312465802, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1043
+      objectReference: {fileID: 0}
     - target: {fileID: 4154660936162027529, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: characterType
       value: 3
@@ -68,10 +96,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: Andy
       objectReference: {fileID: 0}
+    - target: {fileID: 4579190218097802738, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: characterType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5243410617948706567, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 22100000, guid: 7f75c24aa58f39d42942855aeb8047c4, type: 2}
+    - target: {fileID: 5315228199641554744, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315228199641554744, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315228199641554744, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.018
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315228199641554744, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.016
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689738827884331913, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.092
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689738827884331913, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6304750159750022103, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: 'mySounds.Array.data[1]'
       value: 
@@ -84,6 +140,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.0295
       objectReference: {fileID: 0}
+    - target: {fileID: 6963371577172914679, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 669812346929940681}
+    - target: {fileID: 6963371577172914679, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: characterType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7096012279790361198, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0295
@@ -92,12 +156,37 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.1014
       objectReference: {fileID: 0}
+    - target: {fileID: 7126916438403873939, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018182521356656323, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.092
+      objectReference: {fileID: 0}
+    - target: {fileID: 8958741867143242686, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 7f75c24aa58f39d42942855aeb8047c4, type: 2}
     - target: {fileID: 9146728367405427678, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -5370253185605741152, guid: a28929f6a2d09fa4ca1bd649e619357f, type: 3}
+    - target: {fileID: 9169242216697959115, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9169242216697959115, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6916289756060930979, guid: a28929f6a2d09fa4ca1bd649e619357f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+--- !u!95 &669812346929940681 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8958741867143242686, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+  m_PrefabInstance: {fileID: 8437633009922878327}
+  m_PrefabAsset: {fileID: 0}
