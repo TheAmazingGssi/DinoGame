@@ -4,7 +4,7 @@ using UnityEngine;
 public class EnemyCombatManager : CombatManager
 {
     private static readonly int HURT = Animator.StringToHash("Hurt");
-    private static readonly int KNOCKBACK = Animator.StringToHash("Hurt");
+    private static readonly int KNOCKBACK = Animator.StringToHash("Knockback");
 
     [SerializeField] private EnemyManager manager;
 
@@ -16,6 +16,9 @@ public class EnemyCombatManager : CombatManager
     {
         currentMaxHealth = maxHealth;
         currentHealth = maxHealth;
+        manager.Animator.SetTrigger(HURT);
+        manager.SpriteRenderer.color = Color.white;
+
     }
 
     private void Update()
@@ -33,7 +36,7 @@ public class EnemyCombatManager : CombatManager
 
     public override void TakeDamage(DamageArgs damageArgs)
     {
-        if(true)
+        if(false)
         {
             manager.Animator.SetTrigger(KNOCKBACK);
         }
@@ -47,6 +50,7 @@ public class EnemyCombatManager : CombatManager
 
         manager.SoundPlayer.PlaySound(1);
         manager.SpriteRenderer.color = Color.red;
+        Debug.Log("enemy took" + damageArgs.Damage + "from" + damageArgs.SourceGO.name);
 
         if (damageArgs.SourceMPC != null)
         {

@@ -8,15 +8,18 @@ public class AnimationManager : MonoBehaviour
 
     [SerializeField] private EnemyManager manager;
 
+
+
     private void Update()
     {
-        if (!manager.CombatManager.IsKnockbacked) manager.Animator.speed = 1;
+        //if (!manager.CombatManager.IsKnockbacked) manager.Animator.speed = 1;
     }
 
     public void HurtEnd()
     {
         manager.SpriteRenderer.color = Color.white;
-        if (!manager.CombatManager.IsKnockbacked) manager.Animator.ResetTrigger(HURT);
+        manager.Animator.ResetTrigger(HURT);
+        Debug.Log("HurtEnd");
     }
     public void KnockbackEnd()
     {
@@ -27,5 +30,10 @@ public class AnimationManager : MonoBehaviour
     {
         manager.Animator.speed = 0;
         manager.CombatManager.IsKnockbacked = false;
+    }
+
+    public void Test()
+    {
+        Debug.Log("animation manager!!!!!");
     }
 }
