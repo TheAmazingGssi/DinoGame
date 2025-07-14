@@ -2,21 +2,12 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public enum CharacterType
-{
-    Triceratops,
-    Spinosaurus,
-    Parasaurolophus,
-    Therizinosaurus
-}
-
-[RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(PlayerCombatManager))]
-[RequireComponent(typeof(AnimationController))]
+[RequireComponent(typeof(Rigidbody2D), typeof(PlayerCombatManager), typeof(AnimationController))]
 public class MainPlayerController : MonoBehaviour
 {
     [Header("Character Settings")]
     [SerializeField] private CharacterStats characterStats;
+    [SerializeField] private CharacterMapping characterMapping;
     [SerializeField] private CharacterType characterType;
     [SerializeField] private bool facingRight = true;
     [SerializeField] private SpriteRenderer spriteRenderer;
@@ -26,34 +17,27 @@ public class MainPlayerController : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private GameObject rightMeleeColliderGO;
     [SerializeField] private GameObject leftMeleeColliderGO;
+    [SerializeField] private GameObject specialColliderGO;
     [SerializeField] private SoundPlayer soundPlayer;
 
     [Header("Attack Variables")]
     [SerializeField] private float enableDuration = 0.2f;
     [SerializeField] private float disableDelay = 0.5f;
 
-    [Header("Block Variables")]
-    [SerializeField] private float blockDuration = 0.5f;
-    [SerializeField] private float blockMoveSpeedMultiplier = 0.5f;
-
     [Header("Revive Variables")]
     [SerializeField] private float reviveRange = 2f;
 
     [Header("Emote Variables")]
-    [SerializeField] private float emoteCooldown = 1f; // Cooldown for emote
-    [SerializeField] private AudioClip emoteSound; // Optional sound effect
+    [SerializeField] private AudioClip emoteSound;
 
     private float lastAttackTime;
     private float lastSpecialTime;
-    private float lastBlockTime;
-    private float lastEmoteTime;
     private bool canAttack = true;
     private bool canSpecial = true;
-    private bool canBlock = true;
-    private bool canEmote = true;
-    private bool isBlocking = false;
-    private bool isFallen = false;
-    private bool isPerformingSpecialMovement = false;
+    private bool isBlocking;
+    private bool isEmoting;
+    private bool isFallen;
+    private bool isPerformingSpecialMovement;
     private Vector2 moveInput;
     private Vector2 currentVelocity;
     private CharacterStats.CharacterData stats;
@@ -64,13 +48,12 @@ public class MainPlayerController : MonoBehaviour
     private MeleeDamage rightMeleeDamage;
     private MeleeDamage leftMeleeDamage;
     private Animator animator;
-    private AudioSource audioSource; // For emote sound
-    private static int activePlayers = 0;
-    private static int fallenPlayers = 0;
+    private AudioSource audioSource;
     private int score;
+    private static int activePlayers;
+    private static int fallenPlayers;
 
     public PlayerCombatManager CombatManager => combatManager;
-
     public static bool CanBeDamaged = true;
 
     public int GetScore() => score;
@@ -79,18 +62,14 @@ public class MainPlayerController : MonoBehaviour
     public void AddScore(int points)
     {
         score += points;
-        //Debug.Log($"Score updated: {score}");
     }
 
     public void Revived()
     {
         isFallen = false;
-        canAttack = true;
-        canSpecial = true;
-        canBlock = true;
-        canEmote = true;
+        canAttack = canSpecial = true;
         fallenPlayers--;
-        combatManager.RestoreHealthByPercent(100f); // Resets health and stamina
+        combatManager.RestoreHealthByPercent(100f);
         animController.SetRevived();
         StartCoroutine(ResetRevive());
         Debug.Log($"{stats.characterName} revived");
@@ -99,76 +78,74 @@ public class MainPlayerController : MonoBehaviour
     public void EnterFallenState()
     {
         isFallen = true;
-        canAttack = false;
-        canSpecial = false;
-        canBlock = false;
-        canEmote = false;
+        canAttack = canSpecial = false;
+        isBlocking = isEmoting = false;
         rb.linearVelocity = Vector2.zero;
         animController.SetDowned(true);
+        animController.SetBlocking(false);
+        animController.SetEmote(false);
         AddScore(-15);
         fallenPlayers++;
         Debug.Log($"{stats.characterName} has fallen, score: {score}");
     }
 
-    private IEnumerator ResetRevive()
-    {
-        yield return new WaitForSeconds(0.1f);
-        animController.SetDowned(false);
-    }
-
     private void Awake()
     {
-        if (rb == null) rb = GetComponent<Rigidbody2D>();
+        // Cache components
+        rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0f;
         rb.freezeRotation = true;
 
-        if (spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
-        if (playerTransform != null)
-            playerTransform.PlayerTransform = transform;
-
+        spriteRenderer = spriteRenderer ?? GetComponent<SpriteRenderer>();
         animController = GetComponent<AnimationController>();
         combatManager = GetComponent<PlayerCombatManager>();
         knockbackManager = GetComponent<KnockbackManager>();
         animator = GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>(); // For emote sound
-        rightMeleeDamage = rightMeleeColliderGO != null ? rightMeleeColliderGO.GetComponent<MeleeDamage>() : null;
-        leftMeleeDamage = leftMeleeColliderGO != null ? leftMeleeColliderGO.GetComponent<MeleeDamage>() : null;
+        audioSource = GetComponent<AudioSource>();
 
-        if (characterStats != null)
-        {
-            stats = characterStats.characters[(int)characterType];
-            combatManager.Initialize(stats.maxHealth, stats.stamina, this, animator);
-            combatManager.OnDeath += (_) => EnterFallenState();
-            Debug.Log($"Loaded stats for {stats.characterName}");
-        }
-        else Debug.LogError("CharacterStats not assigned in Inspector!");
+        if (playerTransform != null)
+            playerTransform.PlayerTransform = transform;
 
-        switch (characterType)
+        rightMeleeDamage = rightMeleeColliderGO?.GetComponent<MeleeDamage>();
+        leftMeleeDamage = leftMeleeColliderGO?.GetComponent<MeleeDamage>();
+
+        // Initialize stats and character
+        if (characterStats == null || characterMapping == null)
         {
-            case CharacterType.Triceratops:
-                characterScript = gameObject.AddComponent<Triceratops>();
-                break;
-            case CharacterType.Spinosaurus:
-                characterScript = gameObject.AddComponent<Spinosaurus>();
-                break;
-            case CharacterType.Parasaurolophus:
-                characterScript = gameObject.AddComponent<Parasaurolophus>();
-                break;
-            case CharacterType.Therizinosaurus:
-                characterScript = gameObject.AddComponent<Therizinosaurus>();
-                break;
+            Debug.LogError("CharacterStats or CharacterMapping not assigned!");
+            return;
         }
 
-        characterScript.Initialize(stats, rightMeleeColliderGO, leftMeleeColliderGO, facingRight, enableDuration, disableDelay);
+        stats = characterStats.characters[(int)characterType];
+        combatManager.Initialize(stats.maxHealth, stats.stamina, this, animator);
+        combatManager.OnDeath += (_) => EnterFallenState();
+
+        // Add character-specific script
+        System.Type characterScriptType = characterMapping.GetCharacterScript(characterType);
+        if (characterScriptType != null)
+        {
+            characterScript = gameObject.AddComponent(characterScriptType) as CharacterBase;
+            characterScript?.Initialize(stats, rightMeleeColliderGO, leftMeleeColliderGO, specialColliderGO, facingRight, enableDuration, disableDelay);
+        }
+        else
+        {
+            Debug.LogError($"Failed to add character script for {characterType}");
+        }
+
         animController.characterType = characterType;
-
         activePlayers++;
-
         combatManager.OnDeath += PlayDeathSound;
+        Debug.Log($"Loaded stats for {stats.characterName}");
+
+        // Register with PlayerManager
+        PlayerManager.RegisterPlayer(this);
     }
 
-    private void OnEnable() { }
-    private void OnDisable() { activePlayers--; }
+    private void OnDisable()
+    {
+        activePlayers--;
+        PlayerManager.UnregisterPlayer(this);
+    }
 
     private void Update()
     {
@@ -176,23 +153,22 @@ public class MainPlayerController : MonoBehaviour
         {
             combatManager.RegenerateStamina(Time.deltaTime);
             animController.SetMoveSpeed(moveInput.magnitude);
-            spriteRenderer.sortingOrder = Mathf.RoundToInt(-transform.position.y * 100); // Castle Crashers depth
+            spriteRenderer.sortingOrder = Mathf.RoundToInt(-transform.position.y * 100);
         }
     }
 
     private void FixedUpdate()
     {
-        if (!isFallen) HandleMovement();
+        if (!isFallen)
+            HandleMovement();
     }
 
     private void HandleMovement()
     {
-        if (knockbackManager != null && knockbackManager.IsKnockedBack || isPerformingSpecialMovement) return;
+        if (knockbackManager.IsKnockedBack || isPerformingSpecialMovement || isBlocking || isEmoting)
+            return;
 
-        float effectiveSpeed = isBlocking
-            ? stats.movementSpeed * blockMoveSpeedMultiplier
-            : stats.movementSpeed;
-
+        float effectiveSpeed = stats.movementSpeed;
         currentVelocity = moveInput.normalized * effectiveSpeed;
         rb.linearVelocity = currentVelocity;
 
@@ -207,100 +183,112 @@ public class MainPlayerController : MonoBehaviour
             }
         }
 
-        if (animController != null)
-        {
-            float isMoving = moveInput.magnitude;
-            animController.SetMoveSpeed(isMoving);
-            // animController.SetAnimationSpeed(isMoving > 0.05f ? 1.15f : 1f);
-        }
+        animController.SetMoveSpeed(moveInput.magnitude);
     }
 
     public void Move(InputAction.CallbackContext context)
     {
+        if (isFallen)
+        {
+            moveInput = Vector2.zero;
+            return;
+        }
         moveInput = context.ReadValue<Vector2>();
     }
+
     public void ApplyDamageBoost(float percentage)
     {
         float multiplier = 1 + percentage / 100f;
         stats.damageMin *= multiplier;
         stats.damageMax *= multiplier;
-
-        Debug.Log($"New range: {stats.damageMin} - {stats.damageMax}");
+        Debug.Log($"New damage range: {stats.damageMin} - {stats.damageMax}");
     }
+
     public void Attack(InputAction.CallbackContext context)
     {
-        if (canAttack && !isBlocking && !isFallen)
+        if (!context.performed || isFallen || isBlocking || !canAttack)
+            return;
+
+        canAttack = false;
+        lastAttackTime = Time.time;
+
+        float damage = characterType == CharacterType.Spinosaurus ? stats.damageMin : Random.Range(stats.damageMin, stats.damageMax);
+        animController.TriggerAttack();
+
+        StartCoroutine(characterScript.PerformAttack(damage, dmg =>
         {
-            canAttack = false;
-            lastAttackTime = Time.time;
+            MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
+            activeMeleeDamage?.ApplyDamage(dmg, false, transform, this);
+        }));
 
-            float damage = characterType == CharacterType.Spinosaurus ? stats.damageMin : Random.Range(stats.damageMin, stats.damageMax);
-            animController.TriggerAttack();
-
-            StartCoroutine(characterScript.PerformAttack(damage, (dmg) =>
-            {
-                MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
-                activeMeleeDamage?.ApplyDamage(dmg, false, transform, this);
-            }));
-            soundPlayer.PlaySound(0);
-
-            StartCoroutine(ResetAttackCooldown());
-            
-        }
+        soundPlayer.PlaySound(0);
+        StartCoroutine(ResetAttackCooldown());
     }
 
     public void SpecialStarted(InputAction.CallbackContext context)
     {
-        if (!isFallen && canSpecial && combatManager.DeductStamina(stats.specialAttackCost))
-        {
-            canSpecial = false;
-            animController.TriggerSpecial();
-            StartCoroutine(PerformSpecialAttackCoroutine());
-            soundPlayer.PlaySound(1);
-        }
+        if (!context.performed || isFallen || !canSpecial || !combatManager.DeductStamina(stats.specialAttackCost))
+            return;
+
+        canSpecial = false;
+        animController.TriggerSpecial();
+        StartCoroutine(PerformSpecialAttackCoroutine());
+        soundPlayer.PlaySound(1);
     }
 
     public void Block(InputAction.CallbackContext context)
     {
-        if (canBlock && !isBlocking && !isFallen)
+        if (isFallen)
+            return;
+
+        if (context.started || context.performed)
         {
-            canBlock = false;
-            lastBlockTime = Time.time;
+            isBlocking = true;
+            CanBeDamaged = false;
             animController.SetBlocking(true);
-            StartCoroutine(BlockDamageWindow());
+            Debug.Log($"{stats.characterName} started blocking");
+        }
+        else if (context.canceled)
+        {
+            isBlocking = false;
+            CanBeDamaged = true;
+            animController.SetBlocking(false);
+            Debug.Log($"{stats.characterName} stopped blocking");
         }
     }
 
     public void Revive(InputAction.CallbackContext context)
     {
-        if (!isFallen)
+        if (!context.performed || isFallen)
+            return;
+
+        MainPlayerController target = PlayerManager.FindNearestFallenPlayer(transform.position, reviveRange);
+        if (target != null)
         {
-            MainPlayerController target = FindNearestFallenPlayer();
-            if (target != null)
-            {
-                animController.SetRevived();
-                RevivePrompt prompt = gameObject.AddComponent<RevivePrompt>();
-                prompt.StartRevive(this, target);
-            }
+            animController.SetRevived();
+            RevivePrompt prompt = gameObject.AddComponent<RevivePrompt>();
+            prompt.StartRevive(this, target);
         }
     }
 
     public void Emote(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (!context.performed && !context.canceled || isFallen)
+            return;
+
+        if (context.started || context.performed)
         {
-            Debug.Log($"Emote input received for {stats.characterName}, isFallen: {isFallen}, isBlocking: {isBlocking}, canEmote: {canEmote}");
-            
-            if (!isFallen && !isBlocking && canEmote)
-            {
-                canEmote = false;
-                lastEmoteTime = Time.time;
-                animController.TriggerEmote();
-                
-                Debug.Log($"{stats.characterName} triggered emote animation");
-                StartCoroutine(ResetEmoteCooldown());
-            }
-            else Debug.LogWarning($"Emote blocked: isFallen={isFallen}, isBlocking={isBlocking}, canEmote={canEmote}");
+            isEmoting = true;
+            animController.SetEmote(true);
+            if (emoteSound != null)
+                audioSource.PlayOneShot(emoteSound);
+            Debug.Log($"{stats.characterName} started emoting");
+        }
+        else if (context.canceled)
+        {
+            isEmoting = false;
+            animController.SetEmote(false);
+            Debug.Log($"{stats.characterName} stopped emoting");
         }
     }
 
@@ -313,18 +301,13 @@ public class MainPlayerController : MonoBehaviour
     private IEnumerator PerformSpecialAttackCoroutine()
     {
         isPerformingSpecialMovement = true;
-        yield return characterScript.PerformSpecial((dmg) =>
+        yield return characterScript.PerformSpecial(dmg =>
         {
-            MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
-            if (characterType == CharacterType.Parasaurolophus)
-            {
-                activeMeleeDamage = ((Parasaurolophus)characterScript).SpecialMeleeDamage;
-                activeMeleeDamage?.ApplyDamage(dmg, true, transform, this);
-            }
-            else
-            {
-                activeMeleeDamage?.ApplyDamage(dmg, true, transform, this, characterType == CharacterType.Spinosaurus);
-            }
+            MeleeDamage activeMeleeDamage = characterType == CharacterType.Parasaurolophus
+                ? ((Parasaurolophus)characterScript).SpecialMeleeDamage
+                : facingRight ? rightMeleeDamage : leftMeleeDamage;
+
+            activeMeleeDamage?.ApplyDamage(dmg, true, transform, this, characterType == CharacterType.Spinosaurus);
         });
 
         isPerformingSpecialMovement = false;
@@ -332,51 +315,10 @@ public class MainPlayerController : MonoBehaviour
         canSpecial = true;
     }
 
-    private IEnumerator BlockDamageWindow()
+    private IEnumerator ResetRevive()
     {
-        isBlocking = true;
-        CanBeDamaged = false;
-
-        yield return new WaitForSeconds(blockDuration);
-
-        CanBeDamaged = true;
-        isBlocking = false;
-        animController.SetBlocking(false);
-
-        float elapsed = Time.time - lastBlockTime;
-        if (elapsed < stats.stamina / 25f)
-            yield return new WaitForSeconds(stats.stamina / 25f - elapsed);
-
-        canBlock = true;
-    }
-
-    private IEnumerator ResetEmoteCooldown()
-    {
-        yield return new WaitForSeconds(emoteCooldown);
-        canEmote = true;
-        Debug.Log($"{stats.characterName} emote cooldown reset, canEmote: {canEmote}");
-    }
-
-    private MainPlayerController FindNearestFallenPlayer()
-    {
-        MainPlayerController[] players = FindObjectsOfType<MainPlayerController>();
-        MainPlayerController nearest = null;
-        float minDistance = reviveRange;
-
-        foreach (var player in players)
-        {
-            if (player != this && player.IsFallen())
-            {
-                float dist = Vector2.Distance(transform.position, player.transform.position);
-                if (dist <= minDistance)
-                {
-                    nearest = player;
-                    minDistance = dist;
-                }
-            }
-        }
-
-        return nearest;
+        yield return new WaitForSeconds(0.1f);
+        animController.SetDowned(false);
     }
 
     private void PlayDeathSound(CombatManager combatManager)

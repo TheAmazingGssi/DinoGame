@@ -548,7 +548,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Spencer_Special_Body2_Sheet_0: -5028529745189751888
+      Spencer_Special_Body2_Sheet_1: -1983488951931927654
+      Spencer_Special_Body2_Sheet_10: -1059807317329916731
+      Spencer_Special_Body2_Sheet_11: 9026460904541554104
+      Spencer_Special_Body2_Sheet_12: 7535248582167978430
+      Spencer_Special_Body2_Sheet_13: -5968898543503111398
+      Spencer_Special_Body2_Sheet_14: -4901024817861181385
+      Spencer_Special_Body2_Sheet_15: -6302248066056436326
+      Spencer_Special_Body2_Sheet_2: -2874957430079526749
+      Spencer_Special_Body2_Sheet_3: -4717711811832319050
+      Spencer_Special_Body2_Sheet_4: -4272446369872920127
+      Spencer_Special_Body2_Sheet_5: -491220413893046249
+      Spencer_Special_Body2_Sheet_6: -9164993429186565337
+      Spencer_Special_Body2_Sheet_7: -8296965178888812357
+      Spencer_Special_Body2_Sheet_8: -3612452332612781207
+      Spencer_Special_Body2_Sheet_9: 1585906548289373151
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
