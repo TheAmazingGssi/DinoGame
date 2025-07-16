@@ -32,7 +32,7 @@ public class PlayerCombatManager : CombatManager
         args.Damage *= damageTakenMultiplier;
         base.TakeDamage(args);
 
-       // Debug.Log($"{gameObject.name} took {args.Damage} damage (after multiplier), health: {currentHealth}");
+        //Debug.Log($"{gameObject.name} took {args.Damage} damage (after multiplier), health: {currentHealth}");
         animController.TriggerDamaged();
     }
 

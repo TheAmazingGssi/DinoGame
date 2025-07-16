@@ -21,7 +21,7 @@ public class EnemyMeleeDamage : MonoBehaviour
                     DamageArgs damageArgs = new DamageArgs(damage);
 
                     playerCombat.TakeDamage(damageArgs);
-                    Debug.Log($"Enemy dealt {damage} damage to {hitCollider.name}");
+                    //Debug.Log($"Enemy dealt {damage} damage to {hitCollider.name}");
                 }
             }
         }

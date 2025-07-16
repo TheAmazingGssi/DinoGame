@@ -26,7 +26,7 @@ public class MeleeAttack : EnemyAttack
             if (meleeDamage != null)
             {
                 meleeDamage.ApplyDamage(manager.EnemyData.BaseDamage);
-                Debug.Log($"{gameObject.name} applied damage in {(manager.AttackManager.IsFacingRight ? "right" : "left")} direction");
+                //Debug.Log($"{gameObject.name} applied damage in {(manager.AttackManager.IsFacingRight ? "right" : "left")} direction");
             }
         }
     }

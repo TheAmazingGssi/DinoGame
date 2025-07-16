@@ -147,7 +147,7 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 511
@@ -243,7 +243,7 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 511
@@ -368,7 +368,7 @@ GameObject:
   - component: {fileID: 5315228199641554744}
   - component: {fileID: 997385506810749428}
   - component: {fileID: 6295336079976393923}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: HurtBox
   m_TagString: Player
   m_Icon: {fileID: 0}

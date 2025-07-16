@@ -16,9 +16,6 @@ public class EnemyCombatManager : CombatManager
     {
         currentMaxHealth = maxHealth;
         currentHealth = maxHealth;
-        manager.Animator.SetTrigger(HURT);
-        manager.SpriteRenderer.color = Color.white;
-
     }
 
     private void Update()

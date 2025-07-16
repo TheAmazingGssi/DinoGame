@@ -27,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 117023338560466258}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.82, y: -1.03, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -5.82, y: 4.06, z: 0}
+  m_LocalScale: {x: 1, y: 0.48, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1081683106100673034}
@@ -46,10 +46,10 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 511
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -107,7 +107,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1081683106100673034
 Transform:
   m_ObjectHideFlags: 0
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1856966355605016673}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e04fcea463dd1134eafae2ebeaa6aacb, type: 3}
   m_Name: 
@@ -263,7 +263,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 25.8
+  m_Radius: 25
 --- !u!114 &458055154868709384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -413,7 +413,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6724842336940981961}
   - component: {fileID: 8181060215119223495}
-  m_Layer: 7
+  - component: {fileID: 4222126889501782436}
+  m_Layer: 9
   m_Name: HurtBox
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -448,7 +449,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -469,7 +470,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.69, y: 4.44}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -481,6 +482,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 12, y: 9.5}
   m_EdgeRadius: 0
+--- !u!114 &4222126889501782436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2750972596752826828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e04fcea463dd1134eafae2ebeaa6aacb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 7022572441651464058}
+  isDead: 0
+  isHurt: 0
+  IsKnockbacked: 0
 --- !u!1 &4239831697249666521
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,8 +525,8 @@ Transform:
   m_GameObject: {fileID: 4239831697249666521}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.17, y: -0.58, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 5.64, y: 4.2759995, z: 0}
+  m_LocalScale: {x: 1, y: 0.48, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1081683106100673034}
@@ -527,10 +544,10 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 511
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
