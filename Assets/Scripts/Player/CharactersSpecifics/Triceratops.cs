@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 public class Triceratops : CharacterBase
 {
-    [SerializeField] private float chargeDistance = 5f; // GDD: 5 units
+    [SerializeField] private float chargeDistance = 5f; 
     [SerializeField] private float chargeSpeed = 7f;
     [SerializeField] private float chargeDamageDelay = 0.2f;
     [SerializeField] private float glideDistance = 0.5f;
@@ -28,6 +28,7 @@ public class Triceratops : CharacterBase
     {
         if (rightMeleeColliderGO == null || leftMeleeColliderGO == null) yield break;
 
+        IsPerformingSpecialMovement = true; // Block movement
         GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
         MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
         activeCollider.SetActive(true);
@@ -66,5 +67,6 @@ public class Triceratops : CharacterBase
 
         transform.position = targetPos;
         activeCollider.SetActive(false);
+        IsPerformingSpecialMovement = false; // Resume movement
     }
 }

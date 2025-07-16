@@ -15,9 +15,7 @@ public abstract class CharacterBase : MonoBehaviour
     protected MeleeDamage rightMeleeDamage;
     protected MeleeDamage leftMeleeDamage;
     protected MeleeDamage specialMeleeDamage; // For Parasaurolophus
-
-    public abstract IEnumerator PerformAttack(float damage, UnityAction<float> onAttack);
-    public abstract IEnumerator PerformSpecial(UnityAction<float> onSpecial);
+    public bool IsPerformingSpecialMovement { get; protected set; } // Added property
 
     public virtual void Initialize(CharacterStats.CharacterData characterStats, GameObject rightCollider, GameObject leftCollider, bool isFacingRight, float enable, float disable)
     {
@@ -25,6 +23,7 @@ public abstract class CharacterBase : MonoBehaviour
         facingRight = isFacingRight;
         enableDuration = enable;
         disableDelay = disable;
+        IsPerformingSpecialMovement = false; // Initialize
 
         rightMeleeColliderGO = rightCollider ?? transform.Find("RightMeleeCollider")?.gameObject;
         leftMeleeColliderGO = leftCollider ?? transform.Find("LeftMeleeCollider")?.gameObject;
@@ -40,4 +39,7 @@ public abstract class CharacterBase : MonoBehaviour
         if (specialColliderGO != null && gameObject.GetComponent<Parasaurolophus>() == null)
             Debug.LogWarning($"SpecialCollider found on {gameObject.name} but not used (only for Parasaurolophus)");
     }
+
+    public abstract IEnumerator PerformAttack(float damage, UnityAction<float> onAttack);
+    public abstract IEnumerator PerformSpecial(UnityAction<float> onSpecial);
 }

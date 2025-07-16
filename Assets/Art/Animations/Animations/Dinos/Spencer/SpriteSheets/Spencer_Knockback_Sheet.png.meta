@@ -157,10 +157,10 @@ TextureImporter:
       name: Spencer_Knockback_Sheet_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 628
-        width: 853
-        height: 410
+        x: 0
+        y: 581
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,10 +179,10 @@ TextureImporter:
       name: Spencer_Knockback_Sheet_1
       rect:
         serializedVersion: 2
-        x: 1046
-        y: 629
-        width: 817
-        height: 447
+        x: 1018
+        y: 581
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -201,10 +201,10 @@ TextureImporter:
       name: Spencer_Knockback_Sheet_2
       rect:
         serializedVersion: 2
-        x: 2083
-        y: 630
-        width: 758
-        height: 478
+        x: 2036
+        y: 581
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,10 +223,10 @@ TextureImporter:
       name: Spencer_Knockback_Sheet_3
       rect:
         serializedVersion: 2
-        x: 54
-        y: 49
-        width: 734
-        height: 487
+        x: 0
+        y: 0
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,10 +245,10 @@ TextureImporter:
       name: Spencer_Knockback_Sheet_4
       rect:
         serializedVersion: 2
-        x: 1051
-        y: 48
-        width: 800
-        height: 458
+        x: 1018
+        y: 0
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,10 +267,10 @@ TextureImporter:
       name: Spencer_Knockback_Sheet_5
       rect:
         serializedVersion: 2
-        x: 2058
-        y: 48
-        width: 843
-        height: 422
+        x: 2036
+        y: 0
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,7 +289,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 427caacaabd5c2246a19beef75b15dfd
     internalID: 0
     vertices: []
     indices: 

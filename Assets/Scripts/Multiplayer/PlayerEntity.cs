@@ -57,7 +57,10 @@ public class PlayerEntity : MonoBehaviour
     [HideInInspector] public void InvokeConfirmation(InputAction.CallbackContext inputContext) => Confirmation.Invoke(inputContext);
     [HideInInspector] public void InvokeCancel(InputAction.CallbackContext inputContext) => Cancel.Invoke(inputContext);
     [HideInInspector] public void InvokePause(InputAction.CallbackContext inputContext) => Pause.Invoke(inputContext);
-    [HideInInspector] public void InvokeEmote(InputAction.CallbackContext inputContext) => Emote.Invoke(inputContext);
+    [HideInInspector] public void InvokeEmote(InputAction.CallbackContext inputContext)
+    {
+        Emote.Invoke(inputContext);
+    }
 
     public void DeviceDisconnected()
     {
@@ -83,8 +86,8 @@ public class PlayerEntity : MonoBehaviour
     }
     public MainPlayerController SpawnPlayerController(Transform transform)
     {
-        MainPlayerController = Instantiate(PickPlayerPrefab(CharacterType), transform.position, transform.rotation).GetComponent<MainPlayerController>();
-        CombatManager = MainPlayerController.GetComponent<PlayerCombatManager>();
+        MainPlayerController = Instantiate(PickPlayerPrefab(CharacterType), transform.position, transform.rotation).GetComponentInChildren<MainPlayerController>();
+        CombatManager = MainPlayerController.GetComponentInChildren<PlayerCombatManager>();
         
         //Set Events
         Move.AddListener(MainPlayerController.Move);

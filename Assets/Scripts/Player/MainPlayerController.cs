@@ -27,6 +27,7 @@ public class MainPlayerController : MonoBehaviour
     [SerializeField] private GameObject rightMeleeColliderGO;
     [SerializeField] private GameObject leftMeleeColliderGO;
     [SerializeField] private SoundPlayer soundPlayer;
+    PlayerInputActions inputActions;
 
     [Header("Attack Variables")]
     [SerializeField] private float enableDuration = 0.2f;
@@ -40,21 +41,19 @@ public class MainPlayerController : MonoBehaviour
     [SerializeField] private float reviveRange = 2f;
 
     [Header("Emote Variables")]
-    [SerializeField] private float emoteCooldown = 1f; // Cooldown for emote
-    [SerializeField] private AudioClip emoteSound; // Optional sound effect
+    [SerializeField] private AudioClip emoteSound;
 
     private float lastAttackTime;
     private float lastSpecialTime;
-    private float lastBlockTime;
-    private float lastEmoteTime;
     private bool canAttack = true;
     private bool canSpecial = true;
-    private bool canBlock = true;
-    private bool canEmote = true;
     private bool isBlocking = false;
+    private bool isEmoting = false;
     private bool isFallen = false;
     private bool isPerformingSpecialMovement = false;
     private Vector2 moveInput;
+    private bool emoteHeld = false;
+    private bool blockHeld = false;
     private Vector2 currentVelocity;
     private CharacterStats.CharacterData stats;
     private CharacterBase characterScript;
@@ -64,7 +63,7 @@ public class MainPlayerController : MonoBehaviour
     private MeleeDamage rightMeleeDamage;
     private MeleeDamage leftMeleeDamage;
     private Animator animator;
-    private AudioSource audioSource; // For emote sound
+    private AudioSource audioSource;
     private static int activePlayers = 0;
     private static int fallenPlayers = 0;
     private int score;
@@ -79,7 +78,6 @@ public class MainPlayerController : MonoBehaviour
     public void AddScore(int points)
     {
         score += points;
-        //Debug.Log($"Score updated: {score}");
     }
 
     public void Revived()
@@ -87,10 +85,8 @@ public class MainPlayerController : MonoBehaviour
         isFallen = false;
         canAttack = true;
         canSpecial = true;
-        canBlock = true;
-        canEmote = true;
         fallenPlayers--;
-        combatManager.RestoreHealthByPercent(100f); // Resets health and stamina
+        combatManager.RestoreHealthByPercent(100f);
         animController.SetRevived();
         StartCoroutine(ResetRevive());
         Debug.Log($"{stats.characterName} revived");
@@ -101,8 +97,6 @@ public class MainPlayerController : MonoBehaviour
         isFallen = true;
         canAttack = false;
         canSpecial = false;
-        canBlock = false;
-        canEmote = false;
         rb.linearVelocity = Vector2.zero;
         animController.SetDowned(true);
         AddScore(-15);
@@ -126,11 +120,12 @@ public class MainPlayerController : MonoBehaviour
         if (playerTransform != null)
             playerTransform.PlayerTransform = transform;
 
+        inputActions = new PlayerInputActions();
         animController = GetComponent<AnimationController>();
         combatManager = GetComponent<PlayerCombatManager>();
         knockbackManager = GetComponent<KnockbackManager>();
         animator = GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>(); // For emote sound
+        audioSource = GetComponent<AudioSource>();
         rightMeleeDamage = rightMeleeColliderGO != null ? rightMeleeColliderGO.GetComponent<MeleeDamage>() : null;
         leftMeleeDamage = leftMeleeColliderGO != null ? leftMeleeColliderGO.GetComponent<MeleeDamage>() : null;
 
@@ -176,23 +171,51 @@ public class MainPlayerController : MonoBehaviour
         {
             combatManager.RegenerateStamina(Time.deltaTime);
             animController.SetMoveSpeed(moveInput.magnitude);
-            spriteRenderer.sortingOrder = Mathf.RoundToInt(-transform.position.y * 100); // Castle Crashers depth
+            spriteRenderer.sortingOrder = Mathf.RoundToInt(-transform.position.y * 100);
+        }
+        
+        //Block handling
+        if (blockHeld && !isBlocking && !isEmoting && !isFallen)
+        {
+            isBlocking = true;
+            animController.SetBlocking(true);
+            CanBeDamaged = false;
+        }
+        else if (!blockHeld && isBlocking)
+        {
+            isBlocking = false;
+            animController.SetBlocking(false);
+            CanBeDamaged = true;
+        }
+        
+        //Emote handling
+        if (emoteHeld && !isFallen && !isBlocking)
+        {
+            isEmoting = true;
+            animController.SetEmoting(true);
+            
+            if (emoteSound != null && audioSource != null)
+                audioSource.PlayOneShot(emoteSound);
+            Debug.Log($"{stats.characterName} started emoting");
+        }
+        else if (!emoteHeld && isEmoting)
+        {
+            isEmoting = false;
+            animController.SetEmoting(false);
+            Debug.Log($"{stats.characterName} stopped emoting");
         }
     }
 
     private void FixedUpdate()
     {
-        if (!isFallen) HandleMovement();
+        if (!isFallen && !isEmoting && !isPerformingSpecialMovement && !isBlocking) HandleMovement();
     }
 
     private void HandleMovement()
     {
-        if (knockbackManager != null && knockbackManager.IsKnockedBack || isPerformingSpecialMovement) return;
+        if (knockbackManager != null && knockbackManager.IsKnockedBack) return;
 
-        float effectiveSpeed = isBlocking
-            ? stats.movementSpeed * blockMoveSpeedMultiplier
-            : stats.movementSpeed;
-
+        float effectiveSpeed = stats.movementSpeed; // Remove block speed multiplier
         currentVelocity = moveInput.normalized * effectiveSpeed;
         rb.linearVelocity = currentVelocity;
 
@@ -211,7 +234,6 @@ public class MainPlayerController : MonoBehaviour
         {
             float isMoving = moveInput.magnitude;
             animController.SetMoveSpeed(isMoving);
-            // animController.SetAnimationSpeed(isMoving > 0.05f ? 1.15f : 1f);
         }
     }
 
@@ -219,6 +241,7 @@ public class MainPlayerController : MonoBehaviour
     {
         moveInput = context.ReadValue<Vector2>();
     }
+
     public void ApplyDamageBoost(float percentage)
     {
         float multiplier = 1 + percentage / 100f;
@@ -227,9 +250,10 @@ public class MainPlayerController : MonoBehaviour
 
         Debug.Log($"New range: {stats.damageMin} - {stats.damageMax}");
     }
+
     public void Attack(InputAction.CallbackContext context)
     {
-        if (canAttack && !isBlocking && !isFallen)
+        if (context.performed && canAttack && !isBlocking && !isEmoting && !isFallen)
         {
             canAttack = false;
             lastAttackTime = Time.time;
@@ -245,13 +269,12 @@ public class MainPlayerController : MonoBehaviour
             soundPlayer.PlaySound(0);
 
             StartCoroutine(ResetAttackCooldown());
-            
         }
     }
 
     public void SpecialStarted(InputAction.CallbackContext context)
     {
-        if (!isFallen && canSpecial && combatManager.DeductStamina(stats.specialAttackCost))
+        if (context.performed && !isFallen && canSpecial && !isEmoting && combatManager.DeductStamina(stats.specialAttackCost))
         {
             canSpecial = false;
             animController.TriggerSpecial();
@@ -259,21 +282,25 @@ public class MainPlayerController : MonoBehaviour
             soundPlayer.PlaySound(1);
         }
     }
+    
 
     public void Block(InputAction.CallbackContext context)
     {
-        if (canBlock && !isBlocking && !isFallen)
-        {
-            canBlock = false;
-            lastBlockTime = Time.time;
-            animController.SetBlocking(true);
-            StartCoroutine(BlockDamageWindow());
-        }
+        bool previousInput = blockHeld;
+        if (context.ReadValue<float>() == 0)
+            blockHeld = false;
+        else
+            blockHeld = true;
+        
+        if (blockHeld != previousInput && blockHeld)
+            animator.SetTrigger("BlockStart");
+
     }
 
+    
     public void Revive(InputAction.CallbackContext context)
     {
-        if (!isFallen)
+        if (context.performed && !isFallen)
         {
             MainPlayerController target = FindNearestFallenPlayer();
             if (target != null)
@@ -287,21 +314,15 @@ public class MainPlayerController : MonoBehaviour
 
     public void Emote(InputAction.CallbackContext context)
     {
-        if (context.performed)
-        {
-            Debug.Log($"Emote input received for {stats.characterName}, isFallen: {isFallen}, isBlocking: {isBlocking}, canEmote: {canEmote}");
-            
-            if (!isFallen && !isBlocking && canEmote)
-            {
-                canEmote = false;
-                lastEmoteTime = Time.time;
-                animController.TriggerEmote();
-                
-                Debug.Log($"{stats.characterName} triggered emote animation");
-                StartCoroutine(ResetEmoteCooldown());
-            }
-            else Debug.LogWarning($"Emote blocked: isFallen={isFallen}, isBlocking={isBlocking}, canEmote={canEmote}");
-        }
+        bool previousInput = emoteHeld;
+
+        if (context.ReadValue<float>() == 0)
+            emoteHeld = false;
+        else
+            emoteHeld = true;
+        
+        if (emoteHeld != previousInput && emoteHeld)
+            animator.SetTrigger("Emote");
     }
 
     private IEnumerator ResetAttackCooldown()
@@ -328,33 +349,7 @@ public class MainPlayerController : MonoBehaviour
         });
 
         isPerformingSpecialMovement = false;
-        yield return new WaitForSeconds(stats.specialAttackCost / 15f);
         canSpecial = true;
-    }
-
-    private IEnumerator BlockDamageWindow()
-    {
-        isBlocking = true;
-        CanBeDamaged = false;
-
-        yield return new WaitForSeconds(blockDuration);
-
-        CanBeDamaged = true;
-        isBlocking = false;
-        animController.SetBlocking(false);
-
-        float elapsed = Time.time - lastBlockTime;
-        if (elapsed < stats.stamina / 25f)
-            yield return new WaitForSeconds(stats.stamina / 25f - elapsed);
-
-        canBlock = true;
-    }
-
-    private IEnumerator ResetEmoteCooldown()
-    {
-        yield return new WaitForSeconds(emoteCooldown);
-        canEmote = true;
-        Debug.Log($"{stats.characterName} emote cooldown reset, canEmote: {canEmote}");
     }
 
     private MainPlayerController FindNearestFallenPlayer()

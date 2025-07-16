@@ -8,10 +8,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 360251525065678738, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 252944523820865917}
     - target: {fileID: 2242870450885965078, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -52,6 +48,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2492364246984025447, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593272781190150543, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4241924471051646355, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_Name
       value: Terry
@@ -64,6 +68,10 @@ PrefabInstance:
       propertyPath: 'mySounds.Array.data[1]'
       value: 
       objectReference: {fileID: 11400000, guid: 682cdb9ba0bb60f48bbfa1f4ed972b22, type: 2}
+    - target: {fileID: 6963371577172914679, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 3969129061277445572}
     - target: {fileID: 8694530285067113405, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_Radius
       value: 0.1
@@ -72,13 +80,17 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8958741867143242686, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: a48f7fc5cf3506b41a64ce20db91c3ad, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
---- !u!95 &252944523820865917 stripped
+--- !u!95 &3969129061277445572 stripped
 Animator:
-  m_CorrespondingSourceObject: {fileID: 5243410617948706567, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8958741867143242686, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
   m_PrefabInstance: {fileID: 5424292840108789370}
   m_PrefabAsset: {fileID: 0}

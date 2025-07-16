@@ -25,12 +25,13 @@ public class Parasaurolophus : CharacterBase
 
     public override IEnumerator PerformSpecial(UnityAction<float> onSpecial)
     {
-        if (specialColliderGO != null)
-        {
-            specialColliderGO.SetActive(true);
-            onSpecial?.Invoke(stats.specialAttackDamage);
-            yield return new WaitForSeconds(specialActivationTime);
-            specialColliderGO.SetActive(false);
-        }
+        if (specialColliderGO == null) yield break;
+
+        IsPerformingSpecialMovement = true; // Block movement
+        specialColliderGO.SetActive(true);
+        onSpecial?.Invoke(stats.specialAttackDamage);
+        yield return new WaitForSeconds(specialActivationTime);
+        specialColliderGO.SetActive(false);
+        IsPerformingSpecialMovement = false; // Resume movement
     }
 }

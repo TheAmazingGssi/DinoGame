@@ -160,10 +160,10 @@ TextureImporter:
       name: Spencer_Emote_Sheet_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 1209
-        width: 853
-        height: 410
+        x: 0
+        y: 1162
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,10 +182,10 @@ TextureImporter:
       name: Spencer_Emote_Sheet_1
       rect:
         serializedVersion: 2
-        x: 1043
-        y: 1209
-        width: 829
-        height: 443
+        x: 1018
+        y: 1162
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,10 +204,10 @@ TextureImporter:
       name: Spencer_Emote_Sheet_2
       rect:
         serializedVersion: 2
-        x: 2124
-        y: 1203
-        width: 738
-        height: 461
+        x: 2036
+        y: 1162
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,10 +226,10 @@ TextureImporter:
       name: Spencer_Emote_Sheet_3
       rect:
         serializedVersion: 2
-        x: 87
-        y: 621
-        width: 739
-        height: 462
+        x: 0
+        y: 581
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,10 +248,10 @@ TextureImporter:
       name: Spencer_Emote_Sheet_4
       rect:
         serializedVersion: 2
-        x: 1106
-        y: 621
-        width: 738
-        height: 462
+        x: 1018
+        y: 581
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -270,10 +270,10 @@ TextureImporter:
       name: Spencer_Emote_Sheet_5
       rect:
         serializedVersion: 2
-        x: 2098
-        y: 624
-        width: 776
-        height: 469
+        x: 2036
+        y: 581
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,10 +292,10 @@ TextureImporter:
       name: Spencer_Emote_Sheet_6
       rect:
         serializedVersion: 2
-        x: 16
-        y: 46
-        width: 842
-        height: 413
+        x: 0
+        y: 0
+        width: 1018
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -314,7 +314,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 98270215600b44041aa3f92a69c91b66
     internalID: 0
     vertices: []
     indices: 

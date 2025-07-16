@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85e1ae9ae5f684a4f9ab2eb4ce5bc120, type: 3}
   m_Name: RangedEnemy
   m_EditorClassIdentifier: 
-  maxHealth: 20
-  baseDamage: 2
-  stopRange: 5
-  attackRange: 8
-  speed: 3
-  score: 0
+  <MaxHealth>k__BackingField: 30
+  <BaseDamage>k__BackingField: 10
+  <StopRange>k__BackingField: 4
+  <AttackRange>k__BackingField: 4
+  <Speed>k__BackingField: 1
+  <Score>k__BackingField: 9999
+  <immuneToKnockback>k__BackingField: 0
