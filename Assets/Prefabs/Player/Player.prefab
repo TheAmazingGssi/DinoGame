@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 8535575657339802018}
   - component: {fileID: 2079129652870536121}
   - component: {fileID: 311671420390485608}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: LeftMeleeCollider
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 511
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 5675141626194830379}
   - component: {fileID: 6481338595905491169}
   - component: {fileID: 6511612067873215152}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: RightMeleeCollider
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 511
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2

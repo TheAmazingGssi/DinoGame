@@ -46,7 +46,7 @@ public class EnemyCombatManager : CombatManager
         }
 
         base.TakeDamage(damageArgs);
-     //   Debug.Log($"Player dealt" + damageArgs.Damage);
+        Debug.Log($"Player dealt" + damageArgs.Damage);
 
         manager.SoundPlayer.PlaySound(1);
         manager.SpriteRenderer.color = Color.red;
