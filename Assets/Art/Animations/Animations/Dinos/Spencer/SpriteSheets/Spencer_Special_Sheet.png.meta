@@ -1,64 +1,55 @@
 fileFormatVersion: 2
-guid: 3a86176ab6b5ad244a04cc9764987000
+guid: bdea9e3b36b233642935d573bcbfe7a9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7636944866598226688
-    second: Spencer_Special_Sheet_0
+      213: -2447243409475139427
+    second: Spencer_Special2_Sheet_0
   - first:
-      213: -5139278420860532812
-    second: Spencer_Special_Sheet_1
+      213: 4180120744390168165
+    second: Spencer_Special2_Sheet_1
   - first:
-      213: -1654676460897481035
-    second: Spencer_Special_Sheet_2
+      213: -1644042813590817741
+    second: Spencer_Special2_Sheet_2
   - first:
-      213: 645317053478743067
-    second: Spencer_Special_Sheet_3
+      213: 8209098307128511349
+    second: Spencer_Special2_Sheet_3
   - first:
-      213: 1719718258732573456
-    second: Spencer_Special_Sheet_4
+      213: 1886397853531521954
+    second: Spencer_Special2_Sheet_4
   - first:
-      213: -139200358447914188
-    second: Spencer_Special_Sheet_5
+      213: -4698986904427622676
+    second: Spencer_Special2_Sheet_5
   - first:
-      213: 2675071683473344396
-    second: Spencer_Special_Sheet_6
+      213: -375184476723829572
+    second: Spencer_Special2_Sheet_6
   - first:
-      213: -608684902258843200
-    second: Spencer_Special_Sheet_7
+      213: -181399941965291175
+    second: Spencer_Special2_Sheet_7
   - first:
-      213: 4051546309469517148
-    second: Spencer_Special_Sheet_8
+      213: 2368758643924310056
+    second: Spencer_Special2_Sheet_8
   - first:
-      213: 6955056121969430315
-    second: Spencer_Special_Sheet_9
+      213: -1387238556604273337
+    second: Spencer_Special2_Sheet_9
   - first:
-      213: -4423651646868893051
-    second: Spencer_Special_Sheet_10
+      213: -3010659891085249354
+    second: Spencer_Special2_Sheet_10
   - first:
-      213: 5397551516370830812
-    second: Spencer_Special_Sheet_11
+      213: 2173638557208887175
+    second: Spencer_Special2_Sheet_11
   - first:
-      213: 907417748475338837
-    second: Spencer_Special_Sheet_12
+      213: 5906166456676631587
+    second: Spencer_Special2_Sheet_12
   - first:
-      213: -4097434278655258698
-    second: Spencer_Special_Sheet_13
+      213: 8205183051866019973
+    second: Spencer_Special2_Sheet_13
   - first:
-      213: -5430211402936797495
-    second: Spencer_Special_Sheet_14
+      213: 5331227116566577540
+    second: Spencer_Special2_Sheet_14
   - first:
-      213: 8422101577578698843
-    second: Spencer_Special_Sheet_15
-  - first:
-      213: 3538652647245760902
-    second: Spencer_Special_Sheet_16
-  - first:
-      213: -9165458627141201428
-    second: Spencer_Special_Sheet_17
-  - first:
-      213: 615928805517406904
-    second: Spencer_Special_Sheet_18
+      213: -6394060531341891459
+    second: Spencer_Special2_Sheet_15
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -198,18 +189,18 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 1744
-        width: 1018
+        width: 1575
         height: 581
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0057b292b1f140690800000000000000
-      internalID: -7636944866598226688
+      spriteID: 417839fd233d6e94690d064bd0b0d841
+      internalID: 614767877
       vertices: []
       indices: 
       edges: []
@@ -218,20 +209,20 @@ TextureImporter:
       name: Spencer_Special_Sheet_1
       rect:
         serializedVersion: 2
-        x: 1018
+        x: 1575
         y: 1744
-        width: 1018
+        width: 1575
         height: 581
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4b707ca518d9da8b0800000000000000
-      internalID: -5139278420860532812
+      spriteID: d11d41b5938245147b186a415536180a
+      internalID: 1854144734
       vertices: []
       indices: 
       edges: []
@@ -240,20 +231,20 @@ TextureImporter:
       name: Spencer_Special_Sheet_2
       rect:
         serializedVersion: 2
-        x: 2036
+        x: 3150
         y: 1744
-        width: 1018
+        width: 1575
         height: 581
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5be410296886909e0800000000000000
-      internalID: -1654676460897481035
+      spriteID: 74a7abeb977a61240acb5126905fb20e
+      internalID: 1019933851
       vertices: []
       indices: 
       edges: []
@@ -262,20 +253,20 @@ TextureImporter:
       name: Spencer_Special_Sheet_3
       rect:
         serializedVersion: 2
-        x: 3054
+        x: 4725
         y: 1744
-        width: 1018
+        width: 1575
         height: 581
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b1c2a1ce070a4f800800000000000000
-      internalID: 645317053478743067
+      spriteID: a886c37852eab5d46b00430df5979cf2
+      internalID: -708181834
       vertices: []
       indices: 
       edges: []
@@ -286,18 +277,18 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 1163
-        width: 1018
+        width: 1575
         height: 581
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 013228515aaadd710800000000000000
-      internalID: 1719718258732573456
+      spriteID: 307b3c31607db3841b5344cbe23c8fc1
+      internalID: -210658238
       vertices: []
       indices: 
       edges: []
@@ -306,20 +297,20 @@ TextureImporter:
       name: Spencer_Special_Sheet_5
       rect:
         serializedVersion: 2
-        x: 1018
+        x: 1575
         y: 1163
-        width: 1018
+        width: 1575
         height: 581
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 433ea12f206711ef0800000000000000
-      internalID: -139200358447914188
+      spriteID: b6f81a961c4785e47af87de832cf3c06
+      internalID: 1271692702
       vertices: []
       indices: 
       edges: []
@@ -328,20 +319,20 @@ TextureImporter:
       name: Spencer_Special_Sheet_6
       rect:
         serializedVersion: 2
-        x: 2036
+        x: 3150
         y: 1163
-        width: 1018
+        width: 1575
         height: 581
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c878222e583cf1520800000000000000
-      internalID: 2675071683473344396
+      spriteID: bf208359285369243a37e93573f3ba0b
+      internalID: 1861712709
       vertices: []
       indices: 
       edges: []
@@ -350,20 +341,20 @@ TextureImporter:
       name: Spencer_Special_Sheet_7
       rect:
         serializedVersion: 2
-        x: 3054
+        x: 4725
         y: 1163
-        width: 1018
+        width: 1575
         height: 581
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0c1e7bc6e448d87f0800000000000000
-      internalID: -608684902258843200
+      spriteID: 862796f247dd07946bb59ab8f8784f50
+      internalID: -892114947
       vertices: []
       indices: 
       edges: []
@@ -374,18 +365,18 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 582
-        width: 1018
+        width: 1575
         height: 581
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c55b9f607ebf93830800000000000000
-      internalID: 4051546309469517148
+      spriteID: 919ab87151a511c4184b852c4cc56489
+      internalID: -1612274279
       vertices: []
       indices: 
       edges: []
@@ -394,20 +385,20 @@ TextureImporter:
       name: Spencer_Special_Sheet_9
       rect:
         serializedVersion: 2
-        x: 1018
+        x: 1575
         y: 582
-        width: 1018
+        width: 1575
         height: 581
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b2fc4e681b2558060800000000000000
-      internalID: 6955056121969430315
+      spriteID: a740067f37722234b97593300c88dec4
+      internalID: -852779362
       vertices: []
       indices: 
       edges: []
@@ -416,20 +407,20 @@ TextureImporter:
       name: Spencer_Special_Sheet_10
       rect:
         serializedVersion: 2
-        x: 2036
+        x: 3150
         y: 582
-        width: 1018
+        width: 1575
         height: 581
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 582de42c3480c92c0800000000000000
-      internalID: -4423651646868893051
+      spriteID: adaa7ab7504ba2b4d88eb3125ca2cf7d
+      internalID: -1430068437
       vertices: []
       indices: 
       edges: []
@@ -438,20 +429,20 @@ TextureImporter:
       name: Spencer_Special_Sheet_11
       rect:
         serializedVersion: 2
-        x: 3054
+        x: 4725
         y: 582
-        width: 1018
+        width: 1575
         height: 581
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cd58726b184f7ea40800000000000000
-      internalID: 5397551516370830812
+      spriteID: d77ed0636c4de3e45aee27bb491ad034
+      internalID: -368289366
       vertices: []
       indices: 
       edges: []
@@ -462,18 +453,18 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 1
-        width: 1018
+        width: 1575
         height: 581
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 550e1c072abc79c00800000000000000
-      internalID: 907417748475338837
+      spriteID: e41bfb4e86fc48049a0981b70b0c1843
+      internalID: -1351787821
       vertices: []
       indices: 
       edges: []
@@ -482,20 +473,20 @@ TextureImporter:
       name: Spencer_Special_Sheet_13
       rect:
         serializedVersion: 2
-        x: 1018
+        x: 1575
         y: 1
-        width: 1018
+        width: 1575
         height: 581
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6bf8e329b3df227c0800000000000000
-      internalID: -4097434278655258698
+      spriteID: 5c389bc24e197db48a20f17aeba89f9c
+      internalID: 769412683
       vertices: []
       indices: 
       edges: []
@@ -504,20 +495,20 @@ TextureImporter:
       name: Spencer_Special_Sheet_14
       rect:
         serializedVersion: 2
-        x: 2036
+        x: 3150
         y: 1
-        width: 1018
+        width: 1575
         height: 581
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9c63da0ef7304a4b0800000000000000
-      internalID: -5430211402936797495
+      spriteID: 9a527b9e72fe791499650ba60b8ed80e
+      internalID: -1597027129
       vertices: []
       indices: 
       edges: []
@@ -526,20 +517,20 @@ TextureImporter:
       name: Spencer_Special_Sheet_15
       rect:
         serializedVersion: 2
-        x: 3054
+        x: 4725
         y: 1
-        width: 1018
+        width: 1575
         height: 581
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b58d5d933c051e470800000000000000
-      internalID: 8422101577578698843
+      spriteID: ffc6eaf8f702ab74e9c4a9987ad8f8e3
+      internalID: -181805635
       vertices: []
       indices: 
       edges: []
@@ -548,7 +539,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8fe245b592b40e04184d281431bb1536
+    spriteID: c9439aa4917f4d54b8cc472f07cd5b03
     internalID: 0
     vertices: []
     indices: 
@@ -558,22 +549,22 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Spencer_Special_Sheet_0: -7636944866598226688
-      Spencer_Special_Sheet_1: -5139278420860532812
-      Spencer_Special_Sheet_10: -4423651646868893051
-      Spencer_Special_Sheet_11: 5397551516370830812
-      Spencer_Special_Sheet_12: 907417748475338837
-      Spencer_Special_Sheet_13: -4097434278655258698
-      Spencer_Special_Sheet_14: -5430211402936797495
-      Spencer_Special_Sheet_15: 8422101577578698843
-      Spencer_Special_Sheet_2: -1654676460897481035
-      Spencer_Special_Sheet_3: 645317053478743067
-      Spencer_Special_Sheet_4: 1719718258732573456
-      Spencer_Special_Sheet_5: -139200358447914188
-      Spencer_Special_Sheet_6: 2675071683473344396
-      Spencer_Special_Sheet_7: -608684902258843200
-      Spencer_Special_Sheet_8: 4051546309469517148
-      Spencer_Special_Sheet_9: 6955056121969430315
+      Spencer_Special_Sheet_0: 614767877
+      Spencer_Special_Sheet_1: 1854144734
+      Spencer_Special_Sheet_10: -1430068437
+      Spencer_Special_Sheet_11: -368289366
+      Spencer_Special_Sheet_12: -1351787821
+      Spencer_Special_Sheet_13: 769412683
+      Spencer_Special_Sheet_14: -1597027129
+      Spencer_Special_Sheet_15: -181805635
+      Spencer_Special_Sheet_2: 1019933851
+      Spencer_Special_Sheet_3: -708181834
+      Spencer_Special_Sheet_4: -210658238
+      Spencer_Special_Sheet_5: 1271692702
+      Spencer_Special_Sheet_6: 1861712709
+      Spencer_Special_Sheet_7: -892114947
+      Spencer_Special_Sheet_8: -1612274279
+      Spencer_Special_Sheet_9: -852779362
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

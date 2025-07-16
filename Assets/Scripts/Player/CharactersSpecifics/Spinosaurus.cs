@@ -4,21 +4,15 @@ using UnityEngine.Events;
 
 public class Spinosaurus : CharacterBase
 {
-    private Animator headAnimator;
     private AnimationController animationController;
-    private SpinosaurusNeckController neckController;
 
     public override void Initialize(CharacterStats.CharacterData characterStats, GameObject rightCollider, GameObject leftCollider, bool isFacingRight, float enable, float disable)
     {
         base.Initialize(characterStats, rightCollider, leftCollider, isFacingRight, enable, disable);
         animationController = GetComponent<AnimationController>();
-        neckController = GetComponent<SpinosaurusNeckController>();
-        headAnimator = transform.Find("SpecialSpritesContainer/Neck/Head")?.GetComponent<Animator>();
 
-        if (neckController == null || headAnimator == null)
-            Debug.LogError($"SpinosaurusNeckController or Head Animator not found in {gameObject.name}!");
-
-        neckController.Initialize(characterStats, rightCollider, leftCollider, isFacingRight);
+        if (animationController == null)
+            Debug.LogError($"AnimationController not found in {gameObject.name}!");
     }
 
     public override IEnumerator PerformAttack(float damage, UnityAction<float> onAttack)
@@ -37,40 +31,71 @@ public class Spinosaurus : CharacterBase
 
     public override IEnumerator PerformSpecial(UnityAction<float> onSpecial)
     {
-        if (rightMeleeColliderGO == null || leftMeleeColliderGO == null || headAnimator == null || neckController == null) yield break;
+        if (rightMeleeColliderGO == null || leftMeleeColliderGO == null) yield break;
 
         IsPerformingSpecialMovement = true;
         animationController.TriggerSpecial();
-        int mouthOpenHash = Animator.StringToHash("MouthOpen");
-        headAnimator.Play(mouthOpenHash, 0, 0f);
 
-        // Wait for neck extension (animation-driven)
-        yield return new WaitUntil(() => neckController != null);
+        GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
+        MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
+        Vector3 startPos = new Vector3(facingRight ? 0.175f : -0.175f, activeCollider.transform.localPosition.y, activeCollider.transform.localPosition.z);
+        Vector3 targetPos = new Vector3(facingRight ? 0.45f : -0.45f, startPos.y, startPos.z);
+        Transform enemyTransform = null;
 
-        // Hold MouthOpen at last frame if no enemy hit
-        if (headAnimator.GetCurrentAnimatorStateInfo(0).fullPathHash == mouthOpenHash)
-            headAnimator.Play(mouthOpenHash, 0, 1f);
+        // Wait 0.5s
+        yield return new WaitForSeconds(0.5f);
 
-        headAnimator.SetTrigger("MouthClose");
+        // Move collider to target over 0.3s
+        activeCollider.SetActive(true);
+        float elapsed = 0f;
+        while (elapsed < 0.3f)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / 0.3f;
+            activeCollider.transform.localPosition = Vector3.Lerp(startPos, targetPos, t);
 
-        // Wait for neck retraction
-        yield return new WaitUntil(() => neckController != null);
+            // Check for enemy hit
+            if (enemyTransform == null)
+            {
+                RaycastHit2D hit = Physics2D.BoxCast(activeCollider.transform.position, new Vector2(0.5f, 0.5f), 0f, facingRight ? Vector2.right : Vector2.left, 0f, LayerMask.GetMask("Enemy"));
+                if (hit.collider != null && hit.collider.CompareTag("Enemy"))
+                {
+                    enemyTransform = hit.collider.transform;
+                    activeMeleeDamage?.ApplyDamage(stats.specialAttackDamage, true, transform, null);
+                    KnockbackHelper.ApplyKnockback(enemyTransform, transform, KnockbackHelper.GetKnockbackForceFromDamage(stats.specialAttackDamage, true), KnockbackType.Grab);
+                }
+            }
 
-        if (headAnimator.GetCurrentAnimatorStateInfo(0).fullPathHash != Animator.StringToHash("MouthClose"))
-            headAnimator.Play("MouthClose", 0, 0f);
+            // Drag enemy if hit
+            if (enemyTransform != null)
+                enemyTransform.position = activeCollider.transform.position;
+
+            yield return null;
+        }
+
+        // Hold for 0.2s
+        activeCollider.transform.localPosition = targetPos;
+        if (enemyTransform != null)
+            enemyTransform.position = activeCollider.transform.position;
+        yield return new WaitForSeconds(0.2f);
+
+        // Move collider back over 0.2s
+        elapsed = 0f;
+        while (elapsed < 0.2f)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / 0.2f;
+            activeCollider.transform.localPosition = Vector3.Lerp(targetPos, startPos, t);
+            if (enemyTransform != null)
+                enemyTransform.position = activeCollider.transform.position;
+            yield return null;
+        }
+
+        activeCollider.transform.localPosition = startPos;
+        activeCollider.SetActive(false);
+        if (enemyTransform != null)
+            enemyTransform.position = activeCollider.transform.position;
 
         IsPerformingSpecialMovement = false;
-    }
-
-    public void PauseBodyAnimation()
-    {
-        animationController.animator.speed = 0f; // Pause body animation
-        neckController.OnNeckRetractionComplete += ResumeBodyAnimation; // Subscribe to resume
-    }
-
-    private void ResumeBodyAnimation()
-    {
-        animationController.animator.speed = 1f; // Resume body animation
-        neckController.OnNeckRetractionComplete -= ResumeBodyAnimation; // Unsubscribe
     }
 }
