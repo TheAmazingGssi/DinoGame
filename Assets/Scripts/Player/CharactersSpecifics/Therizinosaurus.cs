@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 public class Therizinosaurus : CharacterBase
 {
-    [SerializeField] private float specialAttackRange = 2f; // GDD: 2 units
+    //[SerializeField] private float specialAttackRange = 2f; // GDD: 2 units
     [SerializeField] private int specialHitCount = 4; // GDD: 4 hits
     [SerializeField] private float specialHitInterval = 0.15f; // Time between hits
 

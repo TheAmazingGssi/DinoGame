@@ -6,63 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="ad023baf-c7c7-445b-a367-968c8e24e03b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DinoGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DinoGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Andrew/Anims/AndrewEmote.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Andrew/Anims/AndrewEmote.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Andrew/Anims/AndrewStartBlock.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Andrew/Anims/AndrewStartBlock.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Andrew/Anims/AndrewStopBlock.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Andrew/Anims/AndrewStopBlock.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Andrew/Anims/Andrew_Block_Sheet_0.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Andrew/Anims/Andrew_Block_Sheet_0.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Andrew/Anims/Andrew_Block_Sheet_6.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Andrew/Anims/Andrew_Block_Sheet_6.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Paris/Anims/ParisEmote.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Paris/Anims/ParisEmote.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Paris/Anims/ParisStartBlock.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Paris/Anims/ParisStartBlock.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Paris/Anims/ParisStopBlock.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Paris/Anims/ParisStopBlock.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/Special/SpencerSpecial2.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/Special/SpencerSpecial2.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/Special/SpencerSpecialFull.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/Special/SpencerSpecialFull.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/SpencerAttack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/SpencerAttack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/SpencerDamage.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/SpencerDamage.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/SpencerDowned.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/SpencerDowned.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/SpencerKnockback.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/SpencerKnockback.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/SpencerRevive.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/SpencerRevive.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/SpencerSpecialBody.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/SpencerSpecialBody.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/SpencerSpecialHead.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/SpencerSpecialHead.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/SpencerStartBlock.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/SpencerStartBlock.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/SpencerStopBlock.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/SpencerStopBlock.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/Spencer_Block_Sheet_0.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/Spencer_Block_Sheet_0.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Attack_Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Attack_Sheet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Block_Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Block_Sheet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Damage_Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Damage_Sheet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Downed_Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Downed_Sheet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Emote_Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Emote_Sheet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Idle_Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Idle_Sheet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Knockback_Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Knockback_Sheet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Revive_Back_Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Revive_Back_Sheet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Revive_Front_Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Revive_Front_Sheet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Revive_Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Revive_Sheet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Special_Body2_Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Special_Body2_Sheet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Special_Body_Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Special_Body_Sheet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Special_Head_Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Special_Head_Sheet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Special_Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Special_Sheet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Walk_Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Walk_Sheet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/TerryRevive.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Terry/Anims/TerryRevive.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animators/Dinos/New/PlayerAnimator2.0.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animators/Dinos/New/PlayerAnimator2.0.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/EnemieData/EnemiesData/RangedEnemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/EnemieData/EnemiesData/RangedEnemy.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/EnemieData/EnemiesData/TestEnemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/EnemieData/EnemiesData/TestEnemy.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DefaultAssets/PlayerInputActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DefaultAssets/PlayerInputActions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DefaultAssets/PlayerInputActions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DefaultAssets/PlayerInputActions.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Camera/Main Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Camera/Main Camera.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Andy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Andy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Paris.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Paris.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animators/Dinos/New/SpencerSpecialHead.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animators/Dinos/New/SpencerSpecialHead.controller.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Spencer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Spencer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Terry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Terry.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Final Game Scenes/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Final Game Scenes/Level 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Final Game Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Final Game Scenes/Main Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing Scenes/Level 1TESTING.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Testing Scenes/Level 1TESTING.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Multiplayer/PlayerEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Multiplayer/PlayerEntity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/AnimationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/AnimationController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/NeckController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/NeckController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Parasaurolophus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Parasaurolophus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/SpencerHeadLocationTracking.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/SpencerHeadLocationTracking.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Spinosaurus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Spinosaurus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Therizinosaurus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Therizinosaurus.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Triceratops.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Triceratops.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/MainPlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/MainPlayerController.cs" afterDir="false" />
     </list>
@@ -188,7 +142,8 @@
       <workItem from="1751235103573" duration="1329000" />
       <workItem from="1751292498159" duration="3796000" />
       <workItem from="1751897468922" duration="8789000" />
-      <workItem from="1752501111627" duration="12553000" />
+      <workItem from="1752501111627" duration="12841000" />
+      <workItem from="1752703586157" duration="6695000" />
     </task>
     <servers />
   </component>
