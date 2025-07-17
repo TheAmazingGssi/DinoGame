@@ -27,15 +27,11 @@ public class MainPlayerController : MonoBehaviour
     [SerializeField] private GameObject rightMeleeColliderGO;
     [SerializeField] private GameObject leftMeleeColliderGO;
     [SerializeField] private SoundPlayer soundPlayer;
-    PlayerInputActions inputActions;
+    //PlayerInputActions inputActions;
 
     [Header("Attack Variables")]
     [SerializeField] private float enableDuration = 0.2f;
     [SerializeField] private float disableDelay = 0.5f;
-
-    [Header("Block Variables")]
-    [SerializeField] private float blockDuration = 0.5f;
-    [SerializeField] private float blockMoveSpeedMultiplier = 0.5f;
 
     [Header("Revive Variables")]
     [SerializeField] private float reviveRange = 2f;
@@ -120,7 +116,7 @@ public class MainPlayerController : MonoBehaviour
         if (playerTransform != null)
             playerTransform.PlayerTransform = transform;
 
-        inputActions = new PlayerInputActions();
+        //inputActions = new PlayerInputActions();
         animController = GetComponent<AnimationController>();
         combatManager = GetComponent<PlayerCombatManager>();
         knockbackManager = GetComponent<KnockbackManager>();
@@ -172,9 +168,15 @@ public class MainPlayerController : MonoBehaviour
             combatManager.RegenerateStamina(Time.deltaTime);
             animController.SetMoveSpeed(moveInput.magnitude);
             spriteRenderer.sortingOrder = Mathf.RoundToInt(-transform.position.y * 100);
+
+            // Stop movement during emote, block, or special (except Triceratops)
+            if (isEmoting || isBlocking || (isPerformingSpecialMovement && characterType != CharacterType.Triceratops))
+            {
+                rb.linearVelocity = Vector2.zero;
+            }
         }
-        
-        //Block handling
+
+        // Block handling
         if (blockHeld && !isBlocking && !isEmoting && !isFallen)
         {
             isBlocking = true;
@@ -187,13 +189,12 @@ public class MainPlayerController : MonoBehaviour
             animController.SetBlocking(false);
             CanBeDamaged = true;
         }
-        
-        //Emote handling
+
+        // Emote handling
         if (emoteHeld && !isFallen && !isBlocking)
         {
             isEmoting = true;
             animController.SetEmoting(true);
-            
             if (emoteSound != null && audioSource != null)
                 audioSource.PlayOneShot(emoteSound);
             Debug.Log($"{stats.characterName} started emoting");
@@ -208,14 +209,17 @@ public class MainPlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!isFallen && !isEmoting && !isPerformingSpecialMovement && !isBlocking) HandleMovement();
+        if (!isFallen && !isEmoting && !isBlocking && (!isPerformingSpecialMovement || characterType == CharacterType.Triceratops))
+        {
+            HandleMovement();
+        }
     }
 
     private void HandleMovement()
     {
         if (knockbackManager != null && knockbackManager.IsKnockedBack) return;
 
-        float effectiveSpeed = stats.movementSpeed; // Remove block speed multiplier
+        float effectiveSpeed = stats.movementSpeed;
         currentVelocity = moveInput.normalized * effectiveSpeed;
         rb.linearVelocity = currentVelocity;
 
@@ -282,7 +286,6 @@ public class MainPlayerController : MonoBehaviour
             soundPlayer.PlaySound(1);
         }
     }
-    
 
     public void Block(InputAction.CallbackContext context)
     {
@@ -291,13 +294,11 @@ public class MainPlayerController : MonoBehaviour
             blockHeld = false;
         else
             blockHeld = true;
-        
+
         if (blockHeld != previousInput && blockHeld)
             animator.SetTrigger("BlockStart");
-
     }
 
-    
     public void Revive(InputAction.CallbackContext context)
     {
         if (context.performed && !isFallen)
@@ -315,12 +316,11 @@ public class MainPlayerController : MonoBehaviour
     public void Emote(InputAction.CallbackContext context)
     {
         bool previousInput = emoteHeld;
-
         if (context.ReadValue<float>() == 0)
             emoteHeld = false;
         else
             emoteHeld = true;
-        
+
         if (emoteHeld != previousInput && emoteHeld)
             animator.SetTrigger("Emote");
     }
@@ -354,7 +354,7 @@ public class MainPlayerController : MonoBehaviour
 
     private MainPlayerController FindNearestFallenPlayer()
     {
-        MainPlayerController[] players = FindObjectsOfType<MainPlayerController>();
+        MainPlayerController[] players = FindObjectsByType<MainPlayerController>(FindObjectsSortMode.None);
         MainPlayerController nearest = null;
         float minDistance = reviveRange;
 

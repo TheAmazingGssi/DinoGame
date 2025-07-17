@@ -45,6 +45,7 @@ public class AnimationController : MonoBehaviour
     public void SetDowned(bool isDowned)
     {
         animator.SetBool("IsDowned", isDowned);
+        animator.SetTrigger("Downed");
     }
 
     public void SetRevived()

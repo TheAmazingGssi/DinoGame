@@ -4,11 +4,21 @@ using UnityEngine.Events;
 
 public class Triceratops : CharacterBase
 {
-    [SerializeField] private float chargeDistance = 5f; 
+    [SerializeField] private float chargeDistance = 5f;
     [SerializeField] private float chargeSpeed = 7f;
     [SerializeField] private float chargeDamageDelay = 0.2f;
     [SerializeField] private float glideDistance = 0.5f;
     [SerializeField] private float glideDuration = 0.2f;
+
+    private Rigidbody2D rb;
+
+    public override void Initialize(CharacterStats.CharacterData characterStats, GameObject rightCollider, GameObject leftCollider, bool isFacingRight, float enable, float disable)
+    {
+        base.Initialize(characterStats, rightCollider, leftCollider, isFacingRight, enable, disable);
+        rb = GetComponent<Rigidbody2D>();
+        if (rb == null)
+            Debug.LogError($"Rigidbody2D not found on {gameObject.name}!");
+    }
 
     public override IEnumerator PerformAttack(float damage, UnityAction<float> onAttack)
     {
@@ -26,9 +36,9 @@ public class Triceratops : CharacterBase
 
     public override IEnumerator PerformSpecial(UnityAction<float> onSpecial)
     {
-        if (rightMeleeColliderGO == null || leftMeleeColliderGO == null) yield break;
+        if (rightMeleeColliderGO == null || leftMeleeColliderGO == null || rb == null) yield break;
 
-        IsPerformingSpecialMovement = true; // Block movement
+        IsPerformingSpecialMovement = true;
         GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
         MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
         activeCollider.SetActive(true);
@@ -37,36 +47,43 @@ public class Triceratops : CharacterBase
         Vector3 direction = facingRight ? Vector3.right : Vector3.left;
         Vector3 targetPos = startPos + direction * chargeDistance;
         float elapsed = 0f;
+        float chargeDuration = chargeDistance / chargeSpeed;
 
         Debug.Log($"Charging in direction {direction}");
 
-        while (elapsed < chargeDistance / chargeSpeed)
+        // Charge phase
+        while (elapsed < chargeDuration)
         {
-            transform.position = Vector3.Lerp(startPos, targetPos, elapsed / (chargeDistance / chargeSpeed));
             elapsed += Time.deltaTime;
-            
+            float t = elapsed / chargeDuration;
+            Vector3 newPos = Vector3.Lerp(startPos, targetPos, t);
+            rb.MovePosition(newPos);
+
             if (elapsed >= chargeDamageDelay)
             {
                 activeMeleeDamage?.ApplyDamage(stats.specialAttackDamage, true, transform, null);
             }
-            yield return null;
+            yield return new WaitForFixedUpdate();
         }
 
-        transform.position = targetPos;
+        rb.MovePosition(targetPos);
 
+        // Glide phase
         elapsed = 0f;
         startPos = transform.position;
         targetPos = startPos + direction * glideDistance;
 
         while (elapsed < glideDuration)
         {
-            transform.position = Vector3.Lerp(startPos, targetPos, elapsed / glideDuration);
             elapsed += Time.deltaTime;
-            yield return null;
+            float t = elapsed / glideDuration;
+            Vector3 newPos = Vector3.Lerp(startPos, targetPos, t);
+            rb.MovePosition(newPos);
+            yield return new WaitForFixedUpdate();
         }
 
-        transform.position = targetPos;
+        rb.MovePosition(targetPos);
         activeCollider.SetActive(false);
-        IsPerformingSpecialMovement = false; // Resume movement
+        IsPerformingSpecialMovement = false;
     }
 }

@@ -6,38 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="ad023baf-c7c7-445b-a367-968c8e24e03b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DinoGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DinoGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/Special.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/Special/SpencerSpecial2.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/Special/SpencerSpecial2.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/Special/SpencerSpecialBody.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/Special/SpencerSpecialBody.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/Special/SpencerSpecialFull.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/Special/SpencerSpecialFull.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/Special/SpencerSpecialHeadClose.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/Special/SpencerSpecialHeadClose.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/Special/SpencerSpecialHeadOpen.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/Special/SpencerSpecialHeadOpen.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/SpencerSpecialBody.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/SpencerSpecialBody.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/SpencerSpecialHead.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/SpencerSpecialHead.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Neck_Tile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Neck_Tile.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/SpecialHeadless.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/SpecialHeadless.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer-Special-Body2_11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer-Special-Body2_11.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Special_Body2_Sheet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Special_Body2_Sheet.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Special_Body_Sheet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Special_Body_Sheet.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Special_Head_Sheet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Special_Head_Sheet.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Special_Sheet.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Special_Sheet.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Special_Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Special_Sheet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animators/Dinos/New/SpencerAnimator2.0.overrideController" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animators/Dinos/New/SpencerAnimator2.0.overrideController" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/SpencerDowned.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/Anims/SpencerDowned.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animators/Dinos/New/PlayerAnimator2.0.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animators/Dinos/New/PlayerAnimator2.0.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animators/Dinos/New/SpencerSpecialHead.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animators/Dinos/New/SpencerSpecialHead.controller.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Spencer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Spencer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/AnimationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/AnimationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/NeckController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/NeckController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Parasaurolophus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Parasaurolophus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/SpencerHeadLocationTracking.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/SpencerHeadLocationTracking.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Spinosaurus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Spinosaurus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Therizinosaurus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Therizinosaurus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Triceratops.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Triceratops.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/MainPlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/MainPlayerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +143,7 @@
       <workItem from="1751292498159" duration="3796000" />
       <workItem from="1751897468922" duration="8789000" />
       <workItem from="1752501111627" duration="12841000" />
-      <workItem from="1752703586157" duration="1911000" />
+      <workItem from="1752703586157" duration="6695000" />
     </task>
     <servers />
   </component>

@@ -57,12 +57,27 @@ public class Spinosaurus : CharacterBase
             // Check for enemy hit
             if (enemyTransform == null)
             {
-                RaycastHit2D hit = Physics2D.BoxCast(activeCollider.transform.position, new Vector2(0.5f, 0.5f), 0f, facingRight ? Vector2.right : Vector2.left, 0f, LayerMask.GetMask("Enemy"));
-                if (hit.collider != null && hit.collider.CompareTag("Enemy"))
+                Vector2 castOrigin = activeCollider.transform.position + (facingRight ? Vector3.right : Vector3.left) * 0.2f;
+                Vector2 boxSize = new Vector2(0.6f, 0.6f);
+                RaycastHit2D hit = Physics2D.BoxCast(castOrigin, boxSize, 0f, facingRight ? Vector2.right : Vector2.left, 0.2f, LayerMask.GetMask("Enemies"));
+                
+                // Visualize BoxCast
+                DrawBoxCast(castOrigin, boxSize, facingRight ? Vector2.right : Vector2.left, 0.2f, Color.red);
+
+                if (hit.collider != null)
                 {
-                    enemyTransform = hit.collider.transform;
-                    activeMeleeDamage?.ApplyDamage(stats.specialAttackDamage, true, transform, null);
-                    KnockbackHelper.ApplyKnockback(enemyTransform, transform, KnockbackHelper.GetKnockbackForceFromDamage(stats.specialAttackDamage, true), KnockbackType.Grab);
+                    Debug.Log($"BoxCast hit: {hit.collider.gameObject.name}, Tag: {hit.collider.tag}, Layer: {LayerMask.LayerToName(hit.collider.gameObject.layer)}");
+                    if (hit.collider.CompareTag("Enemy"))
+                    {
+                        enemyTransform = hit.collider.transform;
+                        activeMeleeDamage?.ApplyDamage(stats.specialAttackDamage, true, transform, null);
+                        //KnockbackHelper.ApplyKnockback(enemyTransform, transform, KnockbackHelper.GetKnockbackForceFromDamage(stats.specialAttackDamage, true), KnockbackType.Grab);
+                        Debug.Log($"Grabbed enemy: {enemyTransform.gameObject.name}");
+                    }
+                }
+                else
+                {
+                    Debug.Log("BoxCast hit nothing");
                 }
             }
 
@@ -79,7 +94,7 @@ public class Spinosaurus : CharacterBase
             enemyTransform.position = activeCollider.transform.position;
         yield return new WaitForSeconds(0.2f);
 
-        // Move collider back over 0.2s
+        // Move collider post-Hold for 0.2s
         elapsed = 0f;
         while (elapsed < 0.2f)
         {
@@ -97,5 +112,34 @@ public class Spinosaurus : CharacterBase
             enemyTransform.position = activeCollider.transform.position;
 
         IsPerformingSpecialMovement = false;
+    }
+
+    private void DrawBoxCast(Vector2 origin, Vector2 size, Vector2 direction, float distance, Color color)
+    {
+        Vector2 endPoint = origin + direction.normalized * distance;
+        Vector2 halfSize = size * 0.5f;
+
+        Vector2[] corners = new Vector2[]
+        {
+            origin + new Vector2(-halfSize.x, -halfSize.y),
+            origin + new Vector2(halfSize.x, -halfSize.y),
+            origin + new Vector2(halfSize.x, halfSize.y),
+            origin + new Vector2(-halfSize.x, halfSize.y)
+        };
+
+        Vector2[] endCorners = new Vector2[]
+        {
+            endPoint + new Vector2(-halfSize.x, -halfSize.y),
+            endPoint + new Vector2(halfSize.x, -halfSize.y),
+            endPoint + new Vector2(halfSize.x, halfSize.y),
+            endPoint + new Vector2(-halfSize.x, halfSize.y)
+        };
+
+        for (int i = 0; i < 4; i++)
+        {
+            Debug.DrawLine(corners[i], corners[(i + 1) % 4], color, 0.1f);
+            Debug.DrawLine(endCorners[i], endCorners[(i + 1) % 4], color, 0.1f);
+            Debug.DrawLine(corners[i], endCorners[i], color, 0.1f);
+        }
     }
 }
