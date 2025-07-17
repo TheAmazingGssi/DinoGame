@@ -112,7 +112,7 @@ public class VotingManager : MonoBehaviour
             CompleteVote();
         }
         
-        if (!isVoting && (timer <= 0))
+        if (isReading && (timer <= 0))
         {
             StartVotingInteraction();
         }

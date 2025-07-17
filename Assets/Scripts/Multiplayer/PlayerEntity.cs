@@ -65,7 +65,12 @@ public class PlayerEntity : MonoBehaviour
     public void DeviceDisconnected()
     {
         PlayerList.Remove(this);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+    }
+    public void DeviceReconnected()
+    {
+        PlayerList.Add(this);
+        gameObject.SetActive(true);
     }
 
     private void SetCharacterInformation()
