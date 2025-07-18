@@ -378,7 +378,11 @@ public class MainPlayerController : MonoBehaviour
     private void OnLevelEnd(MainPlayerController controller)
     {
         isEndOfLevel = true;
-        if (controller == this) animator.SetTrigger("Emote");
+        if (controller == this)
+        {
+            emoteHeld = true;
+            animator.SetTrigger("Emote");
+        }
     }
 
     private void PlayDeathSound(CombatManager combatManager)
