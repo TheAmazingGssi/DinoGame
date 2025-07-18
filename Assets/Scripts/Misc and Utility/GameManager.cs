@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
     //Singleton
     public static GameManager Instance;
 
+    public static System.Action<MainPlayerController> OnLevelEnd;
+
     [Header("Settings")]
     [SerializeField] private CameraLocations[] waveLocations;
     [SerializeField] private Vote vote;
@@ -79,12 +81,16 @@ public class GameManager : MonoBehaviour
             WaveComplete();
         }
     }
-    public void OnLevelEnd() //need to add a call somewhere
+
+    [ContextMenu ("End Level")]
+    public void LevelEnd() //need to add a call somewhere
     {
         foreach(PlayerEntity player in PlayerEntity.PlayerList)
         {
             player.CombatManager.ResetDamageTakenMultiplier();
         }
+        MainPlayerController highestScorePlayer = GetHighestScorePlayer().MainPlayerController;
+        OnLevelEnd?.Invoke(highestScorePlayer);
     }
     public void SetWaveSize(int amount)
     {
@@ -94,8 +100,8 @@ public class GameManager : MonoBehaviour
     private void WaveComplete()
     {
         currentWave++;
-        if(waveLocations.Length <= currentWave)
-            StartVote();
+        if (waveLocations.Length <= currentWave)
+            LevelEnd();
         else
         {
             cameraMovement.FurthestRightPoint = waveLocations[currentWave].RightMost;
@@ -114,14 +120,13 @@ public class GameManager : MonoBehaviour
     {
         vote.ApplyEffects(winningChoice);
         vote.wasActivated = true;
-        OnLevelEnd();
         sceneLoader.LoadTargetScene();
     }
 
     public PlayerEntity GetHighestScorePlayer()
     {
         PlayerEntity highestScorePlayer = null;
-        int highestScore = int.MinValue;
+        int highestScore = 0;
         foreach (var player in PlayerEntity.PlayerList)
         {
             int score = player.MainPlayerController.GetScore();

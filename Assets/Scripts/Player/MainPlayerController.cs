@@ -51,6 +51,7 @@ public class MainPlayerController : MonoBehaviour
     private bool isEmoting = false;
     private bool isFallen = false;
     private bool isPerformingSpecialMovement = false;
+    private bool isEndOfLevel = false;
     private Vector2 moveInput;
     private bool emoteHeld = false;
     private bool blockHeld = false;
@@ -162,8 +163,8 @@ public class MainPlayerController : MonoBehaviour
         combatManager.OnDeath += PlayDeathSound;
     }
 
-    private void OnEnable() { }
-    private void OnDisable() { activePlayers--; }
+    private void OnEnable() { GameManager.OnLevelEnd += OnLevelEnd; }
+    private void OnDisable() { activePlayers--; GameManager.OnLevelEnd -= OnLevelEnd; }
 
     private void Update()
     {
@@ -213,7 +214,7 @@ public class MainPlayerController : MonoBehaviour
 
     private void HandleMovement()
     {
-        if (knockbackManager != null && knockbackManager.IsKnockedBack) return;
+        if (knockbackManager != null && knockbackManager.IsKnockedBack || isEndOfLevel) return;
 
         float effectiveSpeed = stats.movementSpeed; // Remove block speed multiplier
         currentVelocity = moveInput.normalized * effectiveSpeed;
@@ -372,6 +373,12 @@ public class MainPlayerController : MonoBehaviour
         }
 
         return nearest;
+    }
+
+    private void OnLevelEnd(MainPlayerController controller)
+    {
+        isEndOfLevel = true;
+        if (controller == this) animator.SetTrigger("Emote");
     }
 
     private void PlayDeathSound(CombatManager combatManager)
