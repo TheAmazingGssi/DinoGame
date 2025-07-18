@@ -18,22 +18,22 @@ public class PlayerEntity : MonoBehaviour
     [SerializeField] PlayerInput playerInput;
 
     CharacterSelect selector;
-    public MainPlayerController MainPlayerController;
+    [HideInInspector] public MainPlayerController MainPlayerController { get; private set; }
     MultiplayerUIController uiController;
-    public PlayerCombatManager CombatManager;
+    [HideInInspector] public PlayerCombatManager CombatManager { get; private set; }
 
     //public Color PlayerColor;
-    public CharacterType CharacterType;
+    [HideInInspector] public CharacterType CharacterType;
 
-    public UnityEvent<InputAction.CallbackContext> Move = new UnityEvent<InputAction.CallbackContext>();
-    public UnityEvent<InputAction.CallbackContext> Attack = new UnityEvent<InputAction.CallbackContext>();
-    public UnityEvent<InputAction.CallbackContext> Special = new UnityEvent<InputAction.CallbackContext>();
-    public UnityEvent<InputAction.CallbackContext> Block = new UnityEvent<InputAction.CallbackContext>();
-    public UnityEvent<InputAction.CallbackContext> Revive = new UnityEvent<InputAction.CallbackContext>();
-    public UnityEvent<InputAction.CallbackContext> Confirmation = new UnityEvent<InputAction.CallbackContext>();
-    public UnityEvent<InputAction.CallbackContext> Cancel = new UnityEvent<InputAction.CallbackContext>();
-    public UnityEvent<InputAction.CallbackContext> Pause = new UnityEvent<InputAction.CallbackContext>();
-    public UnityEvent<InputAction.CallbackContext> Emote = new UnityEvent<InputAction.CallbackContext>();
+    [HideInInspector] public UnityEvent<InputAction.CallbackContext> Move = new UnityEvent<InputAction.CallbackContext>();
+    [HideInInspector] public UnityEvent<InputAction.CallbackContext> Attack = new UnityEvent<InputAction.CallbackContext>();
+    [HideInInspector] public UnityEvent<InputAction.CallbackContext> Special = new UnityEvent<InputAction.CallbackContext>();
+    [HideInInspector] public UnityEvent<InputAction.CallbackContext> Block = new UnityEvent<InputAction.CallbackContext>();
+    [HideInInspector] public UnityEvent<InputAction.CallbackContext> Revive = new UnityEvent<InputAction.CallbackContext>();
+    [HideInInspector] public UnityEvent<InputAction.CallbackContext> Confirmation = new UnityEvent<InputAction.CallbackContext>();
+    [HideInInspector] public UnityEvent<InputAction.CallbackContext> Cancel = new UnityEvent<InputAction.CallbackContext>();
+    [HideInInspector] public UnityEvent<InputAction.CallbackContext> Pause = new UnityEvent<InputAction.CallbackContext>();
+    [HideInInspector] public UnityEvent<InputAction.CallbackContext> Emote = new UnityEvent<InputAction.CallbackContext>();
 
     public Transform GetCharactersTransform { get
         {
@@ -65,12 +65,17 @@ public class PlayerEntity : MonoBehaviour
     public void DeviceDisconnected()
     {
         PlayerList.Remove(this);
+        MainPlayerController?.gameObject.SetActive(false);
+        uiController?.gameObject.SetActive(false);
         gameObject.SetActive(false);
     }
     public void DeviceReconnected()
     {
-        PlayerList.Add(this);
+        Debug.Log("u stupid");
         gameObject.SetActive(true);
+        MainPlayerController?.gameObject.SetActive(true);
+        uiController?.gameObject.SetActive(true);
+        PlayerList.Add(this);
     }
 
     private void SetCharacterInformation()
