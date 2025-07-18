@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 public class Parasaurolophus : CharacterBase
 {
-    [SerializeField] private float specialAttackRange = 3f; // GDD: 3 units
+    //[SerializeField] private float specialAttackRange = 3f; // GDD: 3 units
     [SerializeField] private float specialActivationTime = 0.2f; // Brief activation
 
     public MeleeDamage SpecialMeleeDamage => specialMeleeDamage;
