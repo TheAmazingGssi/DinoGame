@@ -64,10 +64,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: RangedEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1856966355605016673, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2515911822479905939, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 1403188620, guid: 807b39feea2048546ae887c68d69c9be, type: 3}
+    - target: {fileID: 4755382526223380705, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755382526223380705, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.85599947
+      objectReference: {fileID: 0}
     - target: {fileID: 5501723112346460331, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: attacks.Array.size
       value: 1
@@ -76,6 +88,22 @@ PrefabInstance:
       propertyPath: 'attacks.Array.data[0]'
       value: 
       objectReference: {fileID: 4898458466548629120}
+    - target: {fileID: 6724842336940981961, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724842336940981961, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017156817951652606, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017156817951652606, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.63999987
+      objectReference: {fileID: 0}
     - target: {fileID: 7022572441651464058, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: enemyData
       value: 
