@@ -92,7 +92,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1081683106100673034}
   - component: {fileID: 7022572441651464058}
-  - component: {fileID: 3082602570648211020}
   - component: {fileID: 5501723112346460331}
   - component: {fileID: 8038912827772719235}
   - component: {fileID: 7042898619641567151}
@@ -107,7 +106,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1081683106100673034
 Transform:
   m_ObjectHideFlags: 0
@@ -140,7 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackManager: {fileID: 5501723112346460331}
-  combatManager: {fileID: 3082602570648211020}
+  combatManager: {fileID: 4222126889501782436}
   enemyController: {fileID: 8038912827772719235}
   rb: {fileID: 7042898619641567151}
   spriteRenderer: {fileID: 2515911822479905939}
@@ -151,22 +150,6 @@ MonoBehaviour:
   healthItem: {fileID: 1366378949261486432, guid: 2399d6645efe0d645a8ffe00ac2a711e, type: 3}
   healthItemDropChance: 0.25
   healthDropAmount: -1
---- !u!114 &3082602570648211020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1856966355605016673}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e04fcea463dd1134eafae2ebeaa6aacb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  manager: {fileID: 7022572441651464058}
-  isDead: 0
-  isHurt: 0
-  IsKnockbacked: 0
 --- !u!114 &5501723112346460331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,7 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attacks: []
   manager: {fileID: 7022572441651464058}
-  combatManager: {fileID: 3082602570648211020}
+  combatManager: {fileID: 0}
   leftAttackCollider: {fileID: 117023338560466258}
   rightAttackCollider: {fileID: 4239831697249666521}
 --- !u!114 &8038912827772719235
