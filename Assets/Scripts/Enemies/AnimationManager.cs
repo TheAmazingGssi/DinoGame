@@ -19,7 +19,6 @@ public class AnimationManager : MonoBehaviour
     {
         manager.SpriteRenderer.color = Color.white;
         manager.Animator.ResetTrigger(HURT);
-        Debug.Log("HurtEnd");
     }
     public void KnockbackEnd()
     {
@@ -30,10 +29,5 @@ public class AnimationManager : MonoBehaviour
     {
         manager.Animator.speed = 0;
         manager.CombatManager.IsKnockbacked = false;
-    }
-
-    public void Test()
-    {
-        Debug.Log("animation manager!!!!!");
     }
 }

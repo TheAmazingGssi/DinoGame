@@ -26,7 +26,7 @@ public class MeleeDamage : MonoBehaviour
                 EnemyCombatManager enemyCombat = hit.GetComponent<EnemyCombatManager>();
                 if (enemyCombat != null)
                 {
-                    enemyCombat.TakeDamage(new DamageArgs { Damage = damage, SourceGO = controller.gameObject });
+                    enemyCombat.TakeDamage(new DamageArgs { Damage = damage, SourceGO = controller.gameObject, SourceMPC = playerController });
                     if (isSpecial)
                     {
                         KnockbackHelper.ApplyKnockback(hit.transform, source, KnockbackHelper.GetKnockbackForceFromDamage(damage, true), isGrab ? KnockbackType.Grab : KnockbackType.Normal);
