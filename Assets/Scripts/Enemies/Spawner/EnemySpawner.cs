@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class EnemySpawner : MonoBehaviour
 
     private bool wasTriggered = false;
 
+    public UnityEvent WaveStart;
     private IEnumerator SpawnWave()
     {
         for (int i = 0; i < EnemiesInWave; i++)
@@ -32,6 +34,7 @@ public class EnemySpawner : MonoBehaviour
         {
             if(!wasTriggered)
             {
+                WaveStart.Invoke();
                 EnemiesInWave = PlayerEntity.PlayerList.Count * EnemiesInWaveMultiplier;
                 GameManager.Instance.SetWaveSize(EnemiesInWave);
                 StartCoroutine(SpawnWave());
