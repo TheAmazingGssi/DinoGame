@@ -6,10 +6,25 @@ public class AnimationController : MonoBehaviour
     public CharacterType characterType;
 
     public Animator animator;
+    public Animator specialVfx;
 
-    private void Awake()
+    private void Start()
     {
-        animator = GetComponent<Animator>();
+        if (animator == null)
+        {
+            animator = GetComponent<Animator>();
+            
+            if (animator == null)
+                Debug.LogError("Animator not found on " + gameObject.name);
+        }
+        
+        if (specialVfx == null)
+        {
+            specialVfx = GameObject.Find("SpecialVfx")?.GetComponent<Animator>();
+            
+            if (specialVfx == null)
+                Debug.LogError("SpecialVfx Animator not found!");
+        }
     }
 
     public void SetMoveSpeed(float speed)
@@ -56,6 +71,18 @@ public class AnimationController : MonoBehaviour
     public void TriggerDamaged()
     {
         animator.SetTrigger("Damaged");
+    }
+    
+    public void TriggerSpecialVfx()
+    {
+        if(!specialVfx.gameObject.activeSelf)
+        {
+            specialVfx.gameObject.SetActive(true);
+        }
+        else if (specialVfx != null)//Add to other calls in script
+        {
+            specialVfx.SetTrigger("Play");
+        }
     }
 
     public void TriggerKnockback()
