@@ -1,0 +1,613 @@
+fileFormatVersion: 2
+guid: d65965844c063944aac8e621b6fb2169
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7975995278629940911
+    second: Spencer Bite Sheet_0
+  - first:
+      213: 2606634122612271229
+    second: Spencer Bite Sheet_1
+  - first:
+      213: 4062443625898980371
+    second: Spencer Bite Sheet_2
+  - first:
+      213: 4087915890024806552
+    second: Spencer Bite Sheet_3
+  - first:
+      213: -4724839010608636715
+    second: Spencer Bite Sheet_4
+  - first:
+      213: 4307789946554590291
+    second: Spencer Bite Sheet_5
+  - first:
+      213: 6897710758032469702
+    second: Spencer Bite Sheet_6
+  - first:
+      213: -433260901589408974
+    second: Spencer Bite Sheet_7
+  - first:
+      213: 2273608263490251050
+    second: Spencer Bite Sheet_8
+  - first:
+      213: 3085456254174733553
+    second: Spencer Bite Sheet_9
+  - first:
+      213: -2408588012182892757
+    second: Spencer Bite Sheet_10
+  - first:
+      213: 8750537551583551171
+    second: Spencer Bite Sheet_11
+  - first:
+      213: 6398325105373250267
+    second: Spencer Bite Sheet_12
+  - first:
+      213: 4100069527280199018
+    second: Spencer Bite Sheet_13
+  - first:
+      213: 1597394506022561845
+    second: Spencer Bite Sheet_14
+  - first:
+      213: -2899155245762419019
+    second: Spencer Bite Sheet_15
+  - first:
+      213: 3599707858067067513
+    second: Spencer Bite Sheet_16
+  - first:
+      213: 6051773801751846458
+    second: Spencer Bite Sheet_17
+  - first:
+      213: 7993630991747412494
+    second: Spencer Bite Sheet_18
+  - first:
+      213: 7365467878160122013
+    second: Spencer Bite Sheet_19
+  - first:
+      213: -1408618613453503524
+    second: Spencer Bite Sheet_20
+  - first:
+      213: -757988101088481281
+    second: Spencer Bite Sheet_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1750
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spencer Bite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1650
+        width: 307
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 151d11f7d829f4190800000000000000
+      internalID: -7975995278629940911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer Bite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 1650
+        width: 307
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7867b98cef9c2420800000000000000
+      internalID: 2606634122612271229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer Bite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 1650
+        width: 307
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31432c934f2b06830800000000000000
+      internalID: 4062443625898980371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer Bite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 1650
+        width: 307
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8987a90e7d13bb830800000000000000
+      internalID: 4087915890024806552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer Bite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 1650
+        width: 307
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dc93cff3fffd6eb0800000000000000
+      internalID: -4724839010608636715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer Bite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1100
+        width: 307
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 354a26bf12858cb30800000000000000
+      internalID: 4307789946554590291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer Bite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 1100
+        width: 307
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ce6ae7836799bf50800000000000000
+      internalID: 6897710758032469702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer Bite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 1100
+        width: 307
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 233a2b9618fbcf9f0800000000000000
+      internalID: -433260901589408974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer Bite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 1100
+        width: 307
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a29aab76baa7d8f10800000000000000
+      internalID: 2273608263490251050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer Bite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 1100
+        width: 307
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f4a710ad1eb1da20800000000000000
+      internalID: 3085456254174733553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer Bite Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 550
+        width: 307
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2f0393d6f9f29ed0800000000000000
+      internalID: -2408588012182892757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer Bite Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 550
+        width: 307
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ce9ad37a87207970800000000000000
+      internalID: 8750537551583551171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer Bite Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 550
+        width: 307
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd28c3798ca6bc850800000000000000
+      internalID: 6398325105373250267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer Bite Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 550
+        width: 307
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a65a0ff038f56e830800000000000000
+      internalID: 4100069527280199018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer Bite Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 550
+        width: 307
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 538a2a107d51b2610800000000000000
+      internalID: 1597394506022561845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer Bite Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 307
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b6ee931aa124c7d0800000000000000
+      internalID: -2899155245762419019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spencer Bite Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 0
+        width: 307
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 972154f893bb4f130800000000000000
+      internalID: 3599707858067067513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 62085ab0be2836d4ea1e04d68454ec2b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Spencer Bite Sheet_0: -7975995278629940911
+      Spencer Bite Sheet_1: 2606634122612271229
+      Spencer Bite Sheet_10: -2408588012182892757
+      Spencer Bite Sheet_11: 8750537551583551171
+      Spencer Bite Sheet_12: 6398325105373250267
+      Spencer Bite Sheet_13: 4100069527280199018
+      Spencer Bite Sheet_14: 1597394506022561845
+      Spencer Bite Sheet_15: -2899155245762419019
+      Spencer Bite Sheet_16: 3599707858067067513
+      Spencer Bite Sheet_2: 4062443625898980371
+      Spencer Bite Sheet_3: 4087915890024806552
+      Spencer Bite Sheet_4: -4724839010608636715
+      Spencer Bite Sheet_5: 4307789946554590291
+      Spencer Bite Sheet_6: 6897710758032469702
+      Spencer Bite Sheet_7: -433260901589408974
+      Spencer Bite Sheet_8: 2273608263490251050
+      Spencer Bite Sheet_9: 3085456254174733553
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,10 +1,14 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UIElements;
 
 public class Spinosaurus : CharacterBase
 {
     private AnimationController animationController;
+    private Transform specialVfxTransform;
+
+    private static float specialSfxPositionX = 0.515f;
 
     public override void Initialize(CharacterStats.CharacterData characterStats, GameObject rightCollider, GameObject leftCollider, bool isFacingRight, float enable, float disable)
     {
@@ -13,6 +17,8 @@ public class Spinosaurus : CharacterBase
 
         if (animationController == null)
             Debug.LogError($"AnimationController not found in {gameObject.name}!");
+        
+        specialVfxTransform = animationController.specialVfx.transform;
     }
 
     public override IEnumerator PerformAttack(float damage, UnityAction<float> onAttack)
@@ -31,6 +37,7 @@ public class Spinosaurus : CharacterBase
 
     public override IEnumerator PerformSpecial(UnityAction<float> onSpecial)
     {
+        bool specialVfxPerformed = false;
         if (rightMeleeColliderGO == null || leftMeleeColliderGO == null) yield break;
 
         IsPerformingSpecialMovement = true;
@@ -71,7 +78,6 @@ public class Spinosaurus : CharacterBase
                     {
                         enemyTransform = hit.collider.transform;
                         activeMeleeDamage?.ApplyDamage(stats.specialAttackDamage, true, transform, null);
-                        //KnockbackHelper.ApplyKnockback(enemyTransform, transform, KnockbackHelper.GetKnockbackForceFromDamage(stats.specialAttackDamage, true), KnockbackType.Grab);
                         Debug.Log($"Grabbed enemy: {enemyTransform.gameObject.name}");
                     }
                 }
@@ -83,15 +89,36 @@ public class Spinosaurus : CharacterBase
 
             // Drag enemy if hit
             if (enemyTransform != null)
-                enemyTransform.position = activeCollider.transform.position;
+                enemyTransform.position = new Vector3(activeCollider.transform.position.x, enemyTransform.position.y, enemyTransform.position.z);
 
             yield return null;
         }
 
-        // Hold for 0.2s
+     
         activeCollider.transform.localPosition = targetPos;
-        if (enemyTransform != null)
-            enemyTransform.position = activeCollider.transform.position;
+        
+        elapsed = 0f;
+        while (elapsed < 0.1f)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / 0.1f;
+            
+            if (enemyTransform != null)
+                enemyTransform.position = new Vector3(activeCollider.transform.position.x, enemyTransform.position.y, enemyTransform.position.z);
+            
+            yield return null;
+        }
+        
+        if (!specialVfxPerformed)
+        {
+            specialSfxPositionX = facingRight ? 0.515f : -0.515f;
+            specialVfxTransform.localRotation = facingRight ? Quaternion.Euler(0, 0, 0): Quaternion.Euler(0, 180, 0);
+            specialVfxTransform.localPosition = new Vector3(specialSfxPositionX,specialVfxTransform.localPosition.y, specialVfxTransform.localPosition.z);
+            animationController.TriggerSpecialVfx();
+            specialVfxPerformed = true;
+        }
+        
+        // Hold for 0.2s
         yield return new WaitForSeconds(0.2f);
 
         // Move collider post-Hold for 0.2s
@@ -100,16 +127,20 @@ public class Spinosaurus : CharacterBase
         {
             elapsed += Time.deltaTime;
             float t = elapsed / 0.2f;
-            activeCollider.transform.localPosition = Vector3.Lerp(targetPos, startPos, t);
+            //activeCollider.transform.localPosition = Vector3.Lerp(targetPos, startPos, t);
+            
             if (enemyTransform != null)
-                enemyTransform.position = activeCollider.transform.position;
+                enemyTransform.position = new Vector3(activeCollider.transform.position.x, enemyTransform.position.y, enemyTransform.position.z);
+            
             yield return null;
         }
 
         activeCollider.transform.localPosition = startPos;
         activeCollider.SetActive(false);
+        
         if (enemyTransform != null)
-            enemyTransform.position = activeCollider.transform.position;
+            enemyTransform.position = new Vector3(activeCollider.transform.position.x, enemyTransform.position.y, enemyTransform.position.z);
+
 
         IsPerformingSpecialMovement = false;
     }
