@@ -983,6 +983,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1233991894049710286, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
+      propertyPath: m_Size.y
+      value: 0.52651024
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233991894049710286, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.46758413
+      objectReference: {fileID: 0}
     - target: {fileID: 1850717161270575573, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
       propertyPath: m_Name
       value: Tumbleweed (1)
@@ -998,6 +1006,18 @@ PrefabInstance:
     - target: {fileID: 2485348504694633181, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
       propertyPath: speed
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485348504694633181, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
+      propertyPath: jumpHeight
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7266042487006504120, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7266042487006504120, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2468,11 +2488,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 257599334863189744, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.8
+      value: 7.23
       objectReference: {fileID: 0}
     - target: {fileID: 257599334863189744, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.04
+      value: -2.48
       objectReference: {fileID: 0}
     - target: {fileID: 257599334863189744, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2506,6 +2526,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1233991894049710286, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
+      propertyPath: m_Size.y
+      value: 0.48269355
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233991894049710286, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.44567573
+      objectReference: {fileID: 0}
     - target: {fileID: 1850717161270575573, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
       propertyPath: m_Name
       value: Tumbleweed
@@ -2514,6 +2542,18 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 2485348504694633181, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
+      propertyPath: jumpHeight
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7266042487006504120, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7266042487006504120, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
