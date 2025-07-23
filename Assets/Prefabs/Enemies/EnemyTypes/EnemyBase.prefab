@@ -164,7 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attacks: []
   manager: {fileID: 7022572441651464058}
-  combatManager: {fileID: 0}
+  combatManager: {fileID: 4222126889501782436}
   leftAttackCollider: {fileID: 117023338560466258}
   rightAttackCollider: {fileID: 4239831697249666521}
 --- !u!114 &8038912827772719235
