@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 3fe29e9288147bc4db06fa79edc2fcd5
+guid: a2bec8f7ed81ae1489e82e0a254ed0fe
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 555666562613868963
-    second: Dinomount_Color1_0
+      213: -6067318914455058760
+    second: SittingAtlas_0
+  - first:
+      213: -1147311388879854907
+    second: SittingAtlas_1
+  - first:
+      213: 8031726031366069888
+    second: SittingAtlas_2
+  - first:
+      213: -7632876037914064576
+    second: SittingAtlas_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,23 +135,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dinomount_Color1_0
+      name: SittingAtlas_Terry
       rect:
         serializedVersion: 2
-        x: 193
-        y: 59
-        width: 3498
-        height: 3918
+        x: 0
+        y: 1024
+        width: 1024
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3a9792e6bcf16b700800000000000000
-      internalID: 555666562613868963
+      spriteID: 6060ceb58c632824da019edb36701a31
+      internalID: -326970652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SittingAtlas_Andrew
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b30a5b3ceda2e4098ce2c9cc5821ef
+      internalID: -1883851435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SittingAtlas_Paris
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc6940667295a9d46825d607e2a0c4bf
+      internalID: -1138284213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SittingAtlas_Spencer
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e5cb1947f120c4d90ca142d8841612
+      internalID: -1492070020
       vertices: []
       indices: 
       edges: []
@@ -151,7 +226,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8abf85e30e1cdad45bf06919e1616099
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +236,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Dinomount_Color1_0: 555666562613868963
+      SittingAtlas_Andrew: -1883851435
+      SittingAtlas_Paris: -1138284213
+      SittingAtlas_Spencer: -1492070020
+      SittingAtlas_Terry: -326970652
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
