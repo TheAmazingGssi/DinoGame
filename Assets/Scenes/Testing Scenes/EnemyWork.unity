@@ -1790,20 +1790,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4071106033544980035, guid: 973c3bdbcf4759c46bc99a2d8c1d566f, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 950558295, guid: 6b79af8fc46bf1243b1b8f73be4210ff, type: 3}
-    - target: {fileID: 8926162269741413802, guid: 973c3bdbcf4759c46bc99a2d8c1d566f, type: 3}
-      propertyPath: projectileDirection
-      value: 
-      objectReference: {fileID: 1683557266}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 1555923487192828122, guid: 973c3bdbcf4759c46bc99a2d8c1d566f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1683557267}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 973c3bdbcf4759c46bc99a2d8c1d566f, type: 3}
 --- !u!1 &867861021
@@ -4059,37 +4048,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1683557266
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1683557267}
-  m_Layer: 7
-  m_Name: ProjectileSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1683557267
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1683557266}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.13, y: 1.96, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1757800798}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1690422026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5467,11 +5425,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752106735}
   m_CullTransparentMesh: 1
---- !u!4 &1757800798 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1555923487192828122, guid: 973c3bdbcf4759c46bc99a2d8c1d566f, type: 3}
-  m_PrefabInstance: {fileID: 839260525}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1794737894 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3037892570329261710, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}

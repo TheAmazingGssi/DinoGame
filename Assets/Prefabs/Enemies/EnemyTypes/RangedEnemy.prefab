@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2836855072837112981
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3062407682050158458}
+  m_Layer: 7
+  m_Name: ProjectileSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3062407682050158458
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2836855072837112981}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.13, y: 1.96, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1555923487192828122}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1915482464759526096
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22,11 +53,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1081683106100673034, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.86
+      value: 5.196251
       objectReference: {fileID: 0}
     - target: {fileID: 1081683106100673034, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.92
+      value: -2.5093942
       objectReference: {fileID: 0}
     - target: {fileID: 1081683106100673034, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -67,7 +98,7 @@ PrefabInstance:
     - target: {fileID: 2515911822479905939, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1403188620, guid: 807b39feea2048546ae887c68d69c9be, type: 3}
+      objectReference: {fileID: 950558295, guid: 6b79af8fc46bf1243b1b8f73be4210ff, type: 3}
     - target: {fileID: 5501723112346460331, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: attacks.Array.size
       value: 1
@@ -80,6 +111,10 @@ PrefabInstance:
       propertyPath: enemyData
       value: 
       objectReference: {fileID: 11400000, guid: 66374662c63531548ae4f34a2abdda4c, type: 2}
+    - target: {fileID: 7022572441651464058, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: projectileDirection
+      value: 
+      objectReference: {fileID: 2836855072837112981}
     - target: {fileID: 7184945894762929075, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_Radius
       value: 15
@@ -112,7 +147,10 @@ PrefabInstance:
     - {fileID: 5543341010220057178, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
     - {fileID: 6034100410105183527, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1081683106100673034, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3062407682050158458}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1856966355605016673, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       insertIndex: -1
@@ -141,6 +179,11 @@ MonoBehaviour:
   projectilePrefab: {fileID: 4382386036968754117, guid: d371f4786fc4fa74caa80cbf6c0f1f7e, type: 3}
   projectileSpeed: 4
   damageDelay: 0.1
+--- !u!4 &1555923487192828122 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1081683106100673034, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+  m_PrefabInstance: {fileID: 1915482464759526096}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8926162269741413802 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7022572441651464058, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
