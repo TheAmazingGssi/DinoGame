@@ -40,29 +40,10 @@ public class VotingManager : MonoBehaviour
     private bool isReading = false;
     private bool isVotingDebug = false;
 
-    private void Start()
-    {
-        /*
-        Vote vote4 = new Vote(
-            "Gain local alliances for future help\r\nVS.\r\ngaining supply that will help now",
-            new string[4] { "Raid their base\r\ngain max health boost.\n<color=red>BUT</color>\nOn the next level, face more enemies\r\n",
-                "Team up with Rival Herd:\r\nbecome stronger in the final level\n<color=red>BUT</color>\n[Terry] takes more damage in the final level",
-                "Test", "test2"},
-            new string[4] { "Raid their base",
-                "Team up with rival herd", "third option", "fourth option" });
-                Vote vote2 = new Vote(
-            "Gain local alliances for future help\r\nVS.\r\ngaining supply that will help now",
-            new string[2] { "Raid their base\r\ngain max health boost.\n<color=red>BUT</color>\nOn the next level, face more enemies\r\n",
-                "Team up with Rival Herd:\r\nbecome stronger in the final level\n<color=red>BUT</color>\n[Terry] takes more damage in the final level"},
-            new string[2] { "Raid their base",
-                "Team up with rival herd"});
-        currentVote = vote2;
-        */
-    }
-
     public void StartVote(Vote vote)
     {
-        //   Debug.Log("starting vote");
+        Debug.Log("starting vote");
+
         background.SetActive(true);
         votingPanel.SetActive(true);
         currentVote = vote;
@@ -80,6 +61,8 @@ public class VotingManager : MonoBehaviour
         TitleText.text = vote.VoteTitle;
         voted = 0;
 
+        StartVotingInteraction();
+
         timer = readDuration;
         isReading = true;
         UpdateTimerDisplay();
@@ -88,7 +71,6 @@ public class VotingManager : MonoBehaviour
     {
         ButtonsParent.SetActive(true);
         timer += voteDuration;
-        uiSpawner.SpawnControllers();
         isVoting = true;
         isVotingDebug = true;
 
@@ -96,8 +78,6 @@ public class VotingManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.V) && !isVoting && !isVotingDebug) StartVote(currentVote);
-
         if(isVoting || isReading)
         {
             timer -= Time.deltaTime;
@@ -114,7 +94,7 @@ public class VotingManager : MonoBehaviour
         
         if (!isVoting && (timer <= 0))
         {
-            StartVotingInteraction();
+            //StartVotingInteraction();
         }
     }
 
