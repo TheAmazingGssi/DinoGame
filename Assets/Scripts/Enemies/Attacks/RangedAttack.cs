@@ -21,7 +21,7 @@ public class RangedAttack : EnemyAttack
 
         if (projectilePrefab == null) yield break;
 
-        GameObject projInstance = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+        GameObject projInstance = Instantiate(projectilePrefab, manager.ProjectileDirection.transform.position, Quaternion.identity);
         EnemyProjectile projScript = projInstance.GetComponent<EnemyProjectile>();
 
         if (projScript != null)
