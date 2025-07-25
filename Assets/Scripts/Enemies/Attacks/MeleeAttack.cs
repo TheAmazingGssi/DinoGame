@@ -5,6 +5,8 @@ public class MeleeAttack : EnemyAttack
 {
     [SerializeField] private float damageDelay = 0.2f;
     protected override bool IsPlayerInRange => IsTargetInRange(AttackRange);
+    protected override EnemyAttackType type => EnemyAttackType.Melee;
+
 
     protected override void ApplyDamage()
     {

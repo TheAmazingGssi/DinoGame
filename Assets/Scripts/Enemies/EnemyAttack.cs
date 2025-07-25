@@ -3,18 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+
 public abstract class EnemyAttack : MonoBehaviour
 {
     protected const string PLAYER = "Player";
     protected static readonly int Attack = Animator.StringToHash("Attack");
+    protected static readonly int AOEAttack = Animator.StringToHash("AOEAttack");
 
     [SerializeField] protected EnemyManager manager;
+
     [SerializeField] private float attackCooldown = 2;
     [SerializeField] private VoiceClips soundEffect;
+    [SerializeField] private AnimationClip animation;
+
 
     private bool isOnCooldown = false;
     private bool isAttacking = false;
 
+    protected abstract EnemyAttackType type { get; }
     protected abstract bool IsPlayerInRange { get; }
     protected virtual float AttackRange => manager.EnemyData.AttackRange;
 
@@ -32,8 +38,10 @@ public abstract class EnemyAttack : MonoBehaviour
         isAttacking = true;
         isOnCooldown = true;
         manager.AttackManager.ChangeAttackStatue(true);
-
-        manager.Animator.SetTrigger(Attack);
+        if (type == EnemyAttackType.Melee || type == EnemyAttackType.Ranged)
+            manager.Animator.SetTrigger(Attack);
+        else if (type == EnemyAttackType.AOE)
+            manager.Animator.SetTrigger(AOEAttack);
         ApplyDamage();
 
         if (soundEffect)
@@ -42,7 +50,7 @@ public abstract class EnemyAttack : MonoBehaviour
             manager.SoundPlayer.PlaySound(0);
 
         float animLength = GetAttackAnimationLength();
-        StartCoroutine(AttackDurationCoroutine(animLength));
+        StartCoroutine(AttackDurationCoroutine(animation.length));
         StartCoroutine(CooldownCoroutine());
     }
     private float GetAttackAnimationLength()
@@ -50,10 +58,9 @@ public abstract class EnemyAttack : MonoBehaviour
         AnimationClip[] clips = manager.Animator.runtimeAnimatorController.animationClips;
         foreach (var clip in clips)
         {
-            if (clip.name == "Attack")
-            {
-                return clip.length;
-            }
+            if (clip.name == "EnemyMeleeAttack") return clip.length;
+            else if (clip.name == "RangedAttack") return clip.length;
+            else if (clip.name == "Boss_Attack") return clip.length;
         }
         return 0.5f;
     }
@@ -70,13 +77,12 @@ public abstract class EnemyAttack : MonoBehaviour
         //Debug.Log($"{gameObject.name} cooldown finished");
     }
 
-    protected virtual void ApplyDamage()
-    {
-    }
+    protected virtual void ApplyDamage(){}
 
     public virtual void OnAttackEnd()
     {
         manager.Animator.ResetTrigger(Attack);
+        manager.Animator.ResetTrigger(AOEAttack);
         isAttacking = false;
         manager.AttackManager.ChangeAttackStatue(false);
         //Debug.Log($"{gameObject.name} attack ended");

@@ -2,6 +2,13 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+public enum EnemyAttackType
+{
+    Melee,
+    Ranged,
+    AOE
+}
+
 public class EnemyAttackManager : MonoBehaviour
 {
     private const string PLAYER = "Player";

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e1ae9ae5f684a4f9ab2eb4ce5bc120, type: 3}
+  m_Name: BossData
+  m_EditorClassIdentifier: 
+  <MaxHealth>k__BackingField: 500
+  <BaseDamage>k__BackingField: 1
+  <StopRange>k__BackingField: 5
+  <AttackRange>k__BackingField: 2
+  <Speed>k__BackingField: 3
+  <Score>k__BackingField: 60
+  <immuneToKnockback>k__BackingField: 1

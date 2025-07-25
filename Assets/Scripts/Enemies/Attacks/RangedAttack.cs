@@ -8,6 +8,8 @@ public class RangedAttack : EnemyAttack
     [SerializeField] private float damageDelay = 0.1f;
 
     protected override bool IsPlayerInRange => IsTargetInRange(AttackRange);
+    protected override EnemyAttackType type => EnemyAttackType.Ranged;
+
 
     protected override void ApplyDamage()
     {
