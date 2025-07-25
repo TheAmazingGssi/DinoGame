@@ -49,7 +49,7 @@ public abstract class EnemyAttack : MonoBehaviour
         else
             manager.SoundPlayer.PlaySound(0);
 
-        float animLength = GetAttackAnimationLength();
+        float animLength = animation ? animation.length : GetAttackAnimationLength();
         StartCoroutine(AttackDurationCoroutine(animation.length));
         StartCoroutine(CooldownCoroutine());
     }
