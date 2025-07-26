@@ -65,13 +65,16 @@ public class EnemyManager : MonoBehaviour
         if (isDead) return;
         isDead = true;
 
+        animator.ResetTrigger("Hurt");
+        animator.ResetTrigger("Knockback");
+
         Debug.Log("Enemy died - playing death animation");
 
         if (enemyController) enemyController.enabled = false;
         if (attackManager) attackManager.enabled = false;
         if (rb) rb.linearVelocity = Vector2.zero;
 
-        animator.SetBool(IS_DEAD, true);
+        animator.SetTrigger(IS_DEAD);
 
         OnDeath?.Invoke(this);
         GameManager.Instance.IncrementDeathCount();
@@ -89,6 +92,12 @@ public class EnemyManager : MonoBehaviour
         StartCoroutine(DeSpawn());
     }
 
+    [ContextMenu("DeathDebug")]
+    public void DeathTest()
+    {
+        //animator.SetBool(IS_DEAD, true);
+        animator.SetTrigger("DeadT");
+    }
     private IEnumerator DeSpawn()
     {
         yield return new WaitForSeconds(2f);

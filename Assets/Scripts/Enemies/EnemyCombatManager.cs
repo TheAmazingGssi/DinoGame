@@ -48,10 +48,15 @@ public class EnemyCombatManager : CombatManager
             damageArgs.SourceMPC.AddScore(manager.EnemyData.Score);
         }
 
-        Debug.Log($"Player dealt {damageArgs.Damage}");
-        Debug.Log($"Enemy took {damageArgs.Damage} from {damageArgs.SourceGO.name}");
+        //Debug.Log($"Player dealt {damageArgs.Damage}");
+        //Debug.Log($"Enemy took {damageArgs.Damage} from {damageArgs.SourceGO.name}");
 
         base.TakeDamage(damageArgs);
+        
+        if(currentHealth >= 0)
+        {
+            isHurt = false;
+        }
     }
 
     private void HandleHurt(DamageArgs damageArgs)
