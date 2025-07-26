@@ -6,7 +6,7 @@ using System.Linq;
 
 public class EnemyManager : MonoBehaviour
 {
-    private static readonly int IsDead = Animator.StringToHash("Dead");
+    private static readonly int IS_DEAD = Animator.StringToHash("Dead");
 
     [Header("Components")]
     [SerializeField] private EnemyAttackManager attackManager;
@@ -29,6 +29,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private float healthDropAmount;
 
     private PlayerCombatManager playerCombatManager;
+    private bool isDead = false;
 
     public EnemyAttackManager AttackManager => attackManager;
     public PlayerCombatManager PlayerCombatManager => playerCombatManager;
@@ -40,8 +41,7 @@ public class EnemyManager : MonoBehaviour
     public EnemyCombatManager CombatManager => combatManager;
     public SoundPlayer SoundPlayer => soundPlayer;
     public KnockbackManager KnockbackManager => knockbackManager;
-    public GameObject ProjectileDirection => projectileDirection;   
-
+    public GameObject ProjectileDirection => projectileDirection;
 
     public event UnityAction<EnemyManager> OnDeath;
 
@@ -62,11 +62,19 @@ public class EnemyManager : MonoBehaviour
     #region Death Handling
     private void HandleDeath(CombatManager combatManager)
     {
-        Debug.Log("Ded");
+        if (isDead) return;
+        isDead = true;
+
+        Debug.Log("Enemy died - playing death animation");
+
+        if (enemyController) enemyController.enabled = false;
+        if (attackManager) attackManager.enabled = false;
+        if (rb) rb.linearVelocity = Vector2.zero;
+
+        animator.SetBool(IS_DEAD, true);
+
         OnDeath?.Invoke(this);
-        animator.SetBool(IsDead, true);
         GameManager.Instance.IncrementDeathCount();
-        StartCoroutine(DeSpawn());
 
         if (Random.value < healthItemDropChance)
         {
@@ -77,6 +85,8 @@ public class EnemyManager : MonoBehaviour
                 Instantiate(healthItem, spawnPosition, Quaternion.identity);
             }
         }
+
+        StartCoroutine(DeSpawn());
     }
 
     private IEnumerator DeSpawn()

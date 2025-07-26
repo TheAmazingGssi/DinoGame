@@ -18,11 +18,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1081683106100673034, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.49
+      value: 0.95636237
       objectReference: {fileID: 0}
     - target: {fileID: 1081683106100673034, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.1
+      value: -2.290867
       objectReference: {fileID: 0}
     - target: {fileID: 1081683106100673034, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -132,6 +132,7 @@ MonoBehaviour:
   manager: {fileID: 6676866525376652572}
   attackCooldown: 5
   soundEffect: {fileID: 0}
+  animation: {fileID: 7400000, guid: 72343cb148c575c40927813267c1ace9, type: 2}
   damageDelay: 0.2
 --- !u!114 &6676866525376652572 stripped
 MonoBehaviour:

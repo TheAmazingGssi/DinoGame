@@ -7,11 +7,10 @@ public class EnemyCombatManager : CombatManager
     private static readonly int KNOCKBACK = Animator.StringToHash("Knockback");
 
     [SerializeField] private EnemyManager manager;
-
     [SerializeField] private bool isDead = false;
     [SerializeField] private bool isHurt = false;
-
     [HideInInspector] public bool IsKnockbacked = false;
+
     public void Initialize(float maxHealth)
     {
         currentMaxHealth = maxHealth;
@@ -20,20 +19,44 @@ public class EnemyCombatManager : CombatManager
 
     private void Update()
     {
-        if(isDead)
+        if (isDead)
         {
             HandleDeath();
             isDead = false;
         }
-        if(isHurt)
+        if (isHurt)
         {
             manager.Animator.SetTrigger(HURT);
         }
     }
 
+    private void Start()
+    {
+        OnTakeDamage += HandleHurt;
+    }
+
     public override void TakeDamage(DamageArgs damageArgs)
     {
-        if(false)
+        if (damageArgs.SourceMPC != null)
+        {
+            PlayerCombatManager playerSource = damageArgs.SourceMPC.GetComponent<PlayerCombatManager>();
+            if (playerSource != null)
+            {
+                manager.AttackManager.OnPlayerDealtDamage(playerSource);
+            }
+
+            damageArgs.SourceMPC.AddScore(manager.EnemyData.Score);
+        }
+
+        Debug.Log($"Player dealt {damageArgs.Damage}");
+        Debug.Log($"Enemy took {damageArgs.Damage} from {damageArgs.SourceGO.name}");
+
+        base.TakeDamage(damageArgs);
+    }
+
+    private void HandleHurt(DamageArgs damageArgs)
+    {
+        if (damageArgs.Knockback)
         {
             manager.Animator.SetTrigger(KNOCKBACK);
         }
@@ -42,24 +65,9 @@ public class EnemyCombatManager : CombatManager
             manager.Animator.SetTrigger(HURT);
         }
 
-        base.TakeDamage(damageArgs);
-        Debug.Log($"Player dealt" + damageArgs.Damage);
-
         manager.SoundPlayer.PlaySound(1);
         manager.SpriteRenderer.color = Color.red;
-        Debug.Log("enemy took" + damageArgs.Damage + "from" + damageArgs.SourceGO.name);
-
-        if (damageArgs.SourceMPC != null)
-        {
-            PlayerCombatManager playerSource = damageArgs.SourceMPC.GetComponent<PlayerCombatManager>();
-            if (playerSource != null)
-            {
-                manager.AttackManager.OnPlayerDealtDamage(playerSource);
-            }
-        }
-        damageArgs.SourceMPC.AddScore(manager.EnemyData.Score);
-
-       // StartCoroutine(AnimationDelay());
+        StartCoroutine(AnimationDelay());
     }
 
     private IEnumerator AnimationDelay()
@@ -71,7 +79,7 @@ public class EnemyCombatManager : CombatManager
 
     protected override void HandleDeath()
     {
-        Debug.Log("Ded combat");
+        Debug.Log("Enemy died in combat manager");
         base.HandleDeath();
     }
 }
