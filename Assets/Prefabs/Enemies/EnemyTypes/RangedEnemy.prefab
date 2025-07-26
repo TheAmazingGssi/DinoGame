@@ -176,6 +176,7 @@ MonoBehaviour:
   manager: {fileID: 8926162269741413802}
   attackCooldown: 3
   soundEffect: {fileID: 0}
+  animation: {fileID: 7400000, guid: 61c11bdf651b5054590444fbecd929fb, type: 2}
   projectilePrefab: {fileID: 4382386036968754117, guid: d371f4786fc4fa74caa80cbf6c0f1f7e, type: 3}
   projectileSpeed: 4
   damageDelay: 0.1

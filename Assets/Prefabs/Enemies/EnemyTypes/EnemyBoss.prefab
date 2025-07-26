@@ -80,6 +80,22 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5501723112346460331, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: attacks.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5501723112346460331, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: 'attacks.Array.data[0]'
+      value: 
+      objectReference: {fileID: -4161828841838431329}
+    - target: {fileID: 5501723112346460331, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: 'attacks.Array.data[1]'
+      value: 
+      objectReference: {fileID: 854164604289750428}
+    - target: {fileID: 7022572441651464058, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: enemyData
+      value: 
+      objectReference: {fileID: 11400000, guid: 9d0380c91589eb34884fd579a7ec6d00, type: 2}
     - target: {fileID: 7022572441651464058, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: healthItem
       value: 
@@ -155,6 +171,7 @@ MonoBehaviour:
   manager: {fileID: 6023201401575420860}
   attackCooldown: 2
   soundEffect: {fileID: 0}
+  animation: {fileID: 7400000, guid: 4202f816c8dafdf42a4fff528ab6ba2f, type: 2}
   damageDelay: 0.2
 --- !u!114 &854164604289750428
 MonoBehaviour:
@@ -169,9 +186,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 6023201401575420860}
-  attackCooldown: 2
+  attackCooldown: 4
   soundEffect: {fileID: 0}
-  aoeRange: 5
+  animation: {fileID: 7400000, guid: 0907eb477cc6c4d498d6ed71a3d46b05, type: 2}
+  aoeRange: 8
 --- !u!114 &6023201401575420860 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7022572441651464058, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
