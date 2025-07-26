@@ -25,7 +25,6 @@ public class AnimationManager : MonoBehaviour
     {
         manager.Animator.ResetTrigger(Attack);
         manager.Animator.ResetTrigger(AOEAttack);
-
         manager.AttackManager.OnAnimationComplete();
     }
 

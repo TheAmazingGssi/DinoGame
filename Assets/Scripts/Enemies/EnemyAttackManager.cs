@@ -98,12 +98,40 @@ public class EnemyAttackManager : MonoBehaviour
     {
         if (!isAttacking && currentTarget)
         {
+            EnemyAttack chosenAttack = null;
+            EnemyAOEAttack aoeAttack = null;
             foreach (EnemyAttack attack in attacks)
             {
-                attack.TryAttack();
+                if (attack is EnemyAOEAttack)
+                {
+                    aoeAttack = (EnemyAOEAttack)attack;
+                    break;
+                }
             }
+            foreach (EnemyAttack attack in attacks)
+            {
+                if (attack is EnemyAOEAttack && attack.CanAttackNow())
+                {
+                    chosenAttack = attack;
+                    break;
+                }
+            }
+            if (chosenAttack == null)
+            {
+                foreach (EnemyAttack attack in attacks)
+                {
+                    if (!(attack is EnemyAOEAttack) && attack.CanAttackNow())
+                    {
+                        chosenAttack = attack;
+                        break;
+                    }
+                }
+            }
+
+            chosenAttack?.TryAttack();
         }
     }
+
 
     public void ChangeAttackStatue(bool Attacking)
     {
@@ -137,19 +165,24 @@ public class EnemyAttackManager : MonoBehaviour
 
         foreach (var player in playersToRemove)
         {
-            if (playersInRange.Contains(player))
+            if (player != null && !IsPlayerStillInRange(player))
             {
                 playersInRange.Remove(player);
-                //Debug.Log($"Player {player.name} removed from range");
 
                 if (player == playerCombatManager)
                 {
-                    //Debug.Log($"Current target {player.name} left range, clearing target");
                     ClearTarget();
                 }
             }
         }
         playersToRemove.Clear();
+    }
+
+    private bool IsPlayerStillInRange(PlayerCombatManager player)
+    {
+        if (player == null) return false;
+        float distance = Vector2.Distance(transform.position, player.transform.position);
+        return distance <= manager.EnemyData.AttackRange;
     }
 
     private void UpdateTarget()
@@ -159,15 +192,13 @@ public class EnemyAttackManager : MonoBehaviour
             ClearTarget();
             return;
         }
-
-        if (currentTarget == null)
+        if (currentTarget == null || playerCombatManager == null)
         {
             SelectTarget();
+            return;
         }
-        else if (playerCombatManager == null)
+        if (!playersInRange.Contains(playerCombatManager))
         {
-            //Debug.Log("Current target is null, selecting new target");
-            ClearTarget();
             SelectTarget();
         }
     }

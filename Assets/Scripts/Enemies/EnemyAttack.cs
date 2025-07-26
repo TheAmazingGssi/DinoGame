@@ -23,6 +23,10 @@ public abstract class EnemyAttack : MonoBehaviour
 
     public bool IsCurrentlyAttacking => isAttacking;
 
+    public bool CanAttackNow()
+    {
+        return !isOnCooldown && IsPlayerInRange;
+    }
     public void TryAttack()
     {
         if (!isOnCooldown)
@@ -75,7 +79,6 @@ public abstract class EnemyAttack : MonoBehaviour
         if (isAttacking)
         {
             manager.Animator.ResetTrigger(Attack);
-            manager.Animator.Play("Idle", 0, 0f);
             isAttacking = false;
             Debug.Log($"Attack interrupted on {gameObject.name}");
         }

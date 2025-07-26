@@ -15,7 +15,7 @@ MonoBehaviour:
   <MaxHealth>k__BackingField: 500
   <BaseDamage>k__BackingField: 1
   <StopRange>k__BackingField: 5
-  <AttackRange>k__BackingField: 2
+  <AttackRange>k__BackingField: 8
   <Speed>k__BackingField: 3
   <Score>k__BackingField: 60
   <immuneToKnockback>k__BackingField: 1
