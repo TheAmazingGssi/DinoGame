@@ -1011,6 +1011,18 @@ PrefabInstance:
       propertyPath: jumpHeight
       value: 0.75
       objectReference: {fileID: 0}
+    - target: {fileID: 2485348504694633181, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
+      propertyPath: sprites.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485348504694633181, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
+      propertyPath: 'sprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1360317247605867936, guid: ac5c8cfdc41e0c64cab2e033262cd784, type: 3}
+    - target: {fileID: 5015062642908782187, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1360317247605867936, guid: ac5c8cfdc41e0c64cab2e033262cd784, type: 3}
     - target: {fileID: 7266042487006504120, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.7
@@ -2488,11 +2500,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 257599334863189744, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.23
+      value: 10.3
       objectReference: {fileID: 0}
     - target: {fileID: 257599334863189744, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.48
+      value: 0.27
       objectReference: {fileID: 0}
     - target: {fileID: 257599334863189744, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2546,6 +2558,18 @@ PrefabInstance:
       propertyPath: jumpHeight
       value: 0.75
       objectReference: {fileID: 0}
+    - target: {fileID: 2485348504694633181, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
+      propertyPath: sprites.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485348504694633181, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
+      propertyPath: 'sprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1360317247605867936, guid: ac5c8cfdc41e0c64cab2e033262cd784, type: 3}
+    - target: {fileID: 5015062642908782187, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1360317247605867936, guid: ac5c8cfdc41e0c64cab2e033262cd784, type: 3}
     - target: {fileID: 7266042487006504120, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.7
