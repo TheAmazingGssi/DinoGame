@@ -12,6 +12,7 @@ public class Triceratops : CharacterBase
     [SerializeField] private float glideSpeed = 3f;
 
     private Rigidbody2D rb;
+    private Vector3 lastParticlePos;
 
     public override void Initialize(CharacterStats.CharacterData characterStats, AnimationController animationController, GameObject rightCollider, GameObject leftCollider, bool isFacingRight, float enable, float disable)
     {
@@ -20,16 +21,16 @@ public class Triceratops : CharacterBase
         if (rb == null)
             Debug.LogError($"Rigidbody2D not found on {gameObject.name}!");
     }
-
     
     
     public override IEnumerator PerformSpecial(UnityAction<float> onSpecial)
     {
         if (rightMeleeColliderGO == null || leftMeleeColliderGO == null || rb == null) yield break;
 
-        //IsAttacking = true;
-        _mainPlayerController.ToggleIsAttacking();
+        IsAttacking = true;
         animController.terryParticleSystem.Play();
+        lastParticlePos = animController.terryParticleSystem.transform.position;
+
         GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
         MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
         activeCollider.SetActive(true);
@@ -47,9 +48,15 @@ public class Triceratops : CharacterBase
         {
             elapsed += Time.deltaTime;
             float t = elapsed / chargeDuration;
-            Vector3 newPos = Vector3.Lerp(startPos, targetPos, t);
-            rb.MovePosition(newPos);
-
+            //Vector3 newPos = Vector3.Lerp(startPos, targetPos, t);
+            //rb.MovePosition(newPos);
+            rb.AddForceX( direction.x * chargeSpeed * Time.fixedDeltaTime, ForceMode2D.Force);
+            
+            float distanceMoved = Vector3.Distance(animController.terryParticleSystem.transform.position, lastParticlePos);
+            var emitCount = Mathf.FloorToInt(distanceMoved); // Optional scaling
+            animController.terryParticleSystem.Emit(emitCount);
+            lastParticlePos = animController.terryParticleSystem.transform.position;
+            
             if (elapsed >= chargeDamageDelay)
             {
                 activeMeleeDamage?.ApplyDamage(stats.specialAttackDamage, true, transform, null);
@@ -72,53 +79,14 @@ public class Triceratops : CharacterBase
             rb.MovePosition(newPos);
             yield return new WaitForFixedUpdate();
         }
-
         rb.MovePosition(targetPos);
+        
+        float distanceMoved2 = Vector3.Distance(animController.terryParticleSystem.transform.position, lastParticlePos);
+        var emitCount2 = Mathf.FloorToInt(distanceMoved2); // Optional scaling
+        animController.terryParticleSystem.Emit(emitCount2);
+        lastParticlePos = animController.terryParticleSystem.transform.position;
+        
         activeCollider.SetActive(false);
         animController.terryParticleSystem.Stop();
-        _mainPlayerController.ToggleIsAttacking();
-        //IsAttacking = false;
     }
-    
-    
-   /* public override IEnumerator PerformSpecial(UnityAction<float> onSpecial)
-    {
-        if (rightMeleeColliderGO == null || leftMeleeColliderGO == null || rb == null)
-            yield break;
-
-        //IsAttacking = true;
-        _mainPlayerController.ToggleIsAttacking();
-        animController.terryParticleSystem.Play();
-        GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
-        MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
-        activeCollider.SetActive(true);
-
-        Vector2 dir = facingRight ? Vector2.right : Vector2.left;
-
-        // ——— CHARGE PHASE ———
-        float chargeTime = chargeDistance / chargeSpeed;
-        rb.linearVelocity = dir * chargeSpeed;
-
-        // wait until it's time to deal damage
-        yield return new WaitForSeconds(chargeDamageDelay);
-        activeMeleeDamage?.ApplyDamage(stats.specialAttackDamage, true, transform, null);
-
-        // finish the rest of the charge
-        yield return new WaitForSeconds(chargeTime - chargeDamageDelay);
-        rb.linearVelocity = Vector2.zero;
-
-        // ——— GLIDE PHASE ———
-        float glideTime = glideDistance / glideSpeed;  // or you already have glideDuration
-        rb.linearVelocity = dir * glideSpeed;
-
-        yield return new WaitForSeconds(glideTime);
-        rb.linearVelocity = Vector2.zero;
-
-        // clean up
-        activeCollider.SetActive(false);
-        animController.terryParticleSystem.Pause();
-        _mainPlayerController.ToggleIsAttacking();
-        //IsAttacking = false;
-    }*/
-
 }

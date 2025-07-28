@@ -825,8 +825,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animationData: {fileID: 11400000, guid: ddf3d8d22bba4984486206bd1e302a5d, type: 2}
   characterType: 0
-  animator: {fileID: 8958741867143242686}
-  specialVfx: {fileID: 7268481246512268016}
+  mainAnimator: {fileID: 8958741867143242686}
+  SpecialVfxObject: {fileID: 7268481246512268016}
+  SpecialVfxAnimator: {fileID: 7268481246512268016}
+  specialVfxRenderer: {fileID: 1569487030482599382}
   normalAttackVfxAnimator: {fileID: 5384368346122762586}
   normalAttackVfxRenderer: {fileID: 4628214316666465650}
   terryParticleSystem: {fileID: 0}
@@ -863,6 +865,13 @@ MonoBehaviour:
   rightMeleeColliderGO: {fileID: 2593272781190150543}
   leftMeleeColliderGO: {fileID: 2492364246984025447}
   soundPlayer: {fileID: 6716259569256595975}
+  animController: {fileID: 6963371577172914679}
+  combatManager: {fileID: 4884880225224199255}
+  knockbackManager: {fileID: 5118895932606543672}
+  rightMeleeDamage: {fileID: 5675141626194830379}
+  leftMeleeDamage: {fileID: 8535575657339802018}
+  animator: {fileID: 8958741867143242686}
+  audioSource: {fileID: 8223330495104514794}
   enableDuration: 0.2
   disableDelay: 0.5
   reviveRange: 2

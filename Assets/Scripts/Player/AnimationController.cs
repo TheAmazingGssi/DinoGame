@@ -1,81 +1,91 @@
+using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class AnimationController : MonoBehaviour
 {
     [SerializeField] private AnimationData animationData;
     public CharacterType characterType;
 
-    public Animator animator;
-    public Animator specialVfx;
+    [FormerlySerializedAs("animator")] public Animator mainAnimator;
+    public Animator SpecialVfxObject;
+    public Animator SpecialVfxAnimator;
+    public SpriteRenderer specialVfxRenderer;
     public Animator normalAttackVfxAnimator;
     public SpriteRenderer normalAttackVfxRenderer;
     public ParticleSystem terryParticleSystem;
 
+    private void Awake()
+    {
+        specialVfxRenderer = SpecialVfxObject.GetComponent<SpriteRenderer>();
+        SpecialVfxAnimator = SpecialVfxObject.GetComponent<Animator>();
+    }
+
     public void SetMoveSpeed(float speed)
     {
-        animator.SetFloat("MoveSpeed", speed);
+        mainAnimator.SetFloat("MoveSpeed", speed);
     }
 
     public void SetAnimationSpeed(float speed)
     {
-        animator.speed = speed;
+        mainAnimator.speed = speed;
     }
 
     public void TriggerAttack()
     {
-        animator.SetTrigger("Attack");
+        mainAnimator.SetTrigger("Attack");
     }
 
     public void TriggerSpecial()
     {
-        animator.SetTrigger("Special");
+        mainAnimator.SetTrigger("Special");
     }
 
     public void SetBlocking(bool isBlocking)
     {
-        animator.SetBool("IsBlocking", isBlocking);
+        mainAnimator.SetBool("IsBlocking", isBlocking);
     }
 
     public void SetEmoting(bool isEmoting)
     {
-        animator.SetBool("IsEmoting", isEmoting);
+        mainAnimator.SetBool("IsEmoting", isEmoting);
     }
 
     public void SetDowned(bool isDowned)
     {
-        animator.SetBool("IsDowned", isDowned);
-        animator.SetTrigger("Downed");
+        mainAnimator.SetBool("IsDowned", isDowned);
+        mainAnimator.SetTrigger("Downed");
     }
 
     public void SetRevived()
     {
-        animator.SetTrigger("Revive");
+        mainAnimator.SetTrigger("Revive");
     }
 
     public void TriggerDamaged()
     {
-        animator.SetTrigger("Damaged");
+        mainAnimator.SetTrigger("Damaged");
     }
     
     public void TriggerSpecialVfx()
     {
-        if(!specialVfx.gameObject.activeSelf)
+        if(!SpecialVfxAnimator.gameObject.activeSelf)
         {
-            specialVfx.gameObject.SetActive(true);
+            SpecialVfxAnimator.gameObject.SetActive(true);
         }
-        else if (specialVfx != null)//Add to other calls in script
+        else if (SpecialVfxAnimator != null)//Add to other calls in script
         {
-            specialVfx.SetTrigger("Play");
+            SpecialVfxAnimator.SetTrigger("Play");
         }
     }
 
     public void TriggerKnockback()
     {
-        animator.SetTrigger("Knockback");
+        mainAnimator.SetTrigger("Knockback");
     }
 
     public Animator GetAnimator()
     {
-        return animator;
+        return mainAnimator;
     }
 }
