@@ -435,10 +435,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterList: 00000000010000000200000003000000
   splashArtArray:
-  - {fileID: -326970652, guid: a2bec8f7ed81ae1489e82e0a254ed0fe, type: 3}
-  - {fileID: -1492070020, guid: a2bec8f7ed81ae1489e82e0a254ed0fe, type: 3}
-  - {fileID: -1138284213, guid: a2bec8f7ed81ae1489e82e0a254ed0fe, type: 3}
-  - {fileID: -1883851435, guid: a2bec8f7ed81ae1489e82e0a254ed0fe, type: 3}
+  - {fileID: 21300000, guid: ce34994a7ba86594793d3319d16e50c3, type: 3}
+  - {fileID: 21300000, guid: bef50dce50780b749a49caf3ff36583e, type: 3}
+  - {fileID: 21300000, guid: c8664e1a4fc448b42a68819c9c8c7ce1, type: 3}
+  - {fileID: 21300000, guid: d0269c2857018d4459e4ae5173681ffc, type: 3}
   displayers:
   - {fileID: 1757318038}
   - {fileID: 1251570205}

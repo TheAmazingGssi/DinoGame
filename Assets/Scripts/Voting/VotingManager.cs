@@ -61,7 +61,7 @@ public class VotingManager : MonoBehaviour
         TitleText.text = vote.VoteTitle;
         voted = 0;
 
-        StartVotingInteraction();
+        //StartVotingInteraction();
 
         timer = readDuration;
         isReading = true;
@@ -94,7 +94,7 @@ public class VotingManager : MonoBehaviour
         
         if (isReading && (timer <= 0))
         {
-            //StartVotingInteraction();
+            StartVotingInteraction();
         }
     }
 
