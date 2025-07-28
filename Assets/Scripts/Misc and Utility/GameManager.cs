@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
             }
             FinaleLevelEffects.Clear();
         }
-        if(LevelNumber > vote.LevelNumber) //need to change logic
+        if(LevelNumber > vote.LevelNumber)
         {
             foreach (var vote in NextLevelEffects)
             {

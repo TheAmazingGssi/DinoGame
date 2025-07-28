@@ -8,7 +8,6 @@ public class EnemyController : MonoBehaviour
     [SerializeField] EnemyManager manager;
 
     [SerializeField] private float patrolRange = 3f;
-    [SerializeField] private float patrolSpeed = 1f;
     [SerializeField] private float waitTimeAtEdge = 2f;
     [SerializeField] private float stuckTimeThreshold = 2f;
 

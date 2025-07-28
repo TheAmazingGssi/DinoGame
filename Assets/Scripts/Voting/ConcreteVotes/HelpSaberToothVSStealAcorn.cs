@@ -24,16 +24,19 @@ public class HelpSaberToothVSStealAcorn : Vote
                     foreach (PlayerEntity player in PlayerEntity.PlayerList)
                     {
                         player.CombatManager.ApplyDamageTakenIncrease(-20);
+                        Debug.Log("Applying 20% less damage effect case 0 saber tooth");
                     }
                 }
                 if (LevelNumber == GameManager.Instance.LevelNumber)
                 {
                     GameManager.Instance.NextLevelEffects.Add(this, i);
+                    Debug.Log("adding case 0 choice to next level effect, saber tooth");
 
                 }
                 else
                 {
                     //add 20% more ice meteors
+                    Debug.Log("more ice meteors");
                 }
                 break;
             case 1:
@@ -42,6 +45,7 @@ public class HelpSaberToothVSStealAcorn : Vote
                     foreach (PlayerEntity player in PlayerEntity.PlayerList)
                     {
                         player.CombatManager.IncreaseMaxHealthByPercentage(20);
+                        Debug.Log("case 1 increasing health");
                     }
                 }
                 if (LevelNumber == GameManager.Instance.LevelNumber)
