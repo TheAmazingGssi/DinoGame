@@ -80,6 +80,22 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4091644736308972890, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_Size.x
+      value: 0.038741525
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091644736308972890, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_Size.y
+      value: 0.04708898
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091644736308972890, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0043380577
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091644736308972890, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.003450729
+      objectReference: {fileID: 0}
     - target: {fileID: 5501723112346460331, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: attacks.Array.size
       value: 2
@@ -123,6 +139,14 @@ PrefabInstance:
     - target: {fileID: 7184945894762929075, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_Radius
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8043110599197506089, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 8043110599197506089, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.79
       objectReference: {fileID: 0}
     - target: {fileID: 8181060215119223495, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_Size.x
@@ -175,7 +199,6 @@ MonoBehaviour:
   manager: {fileID: 6023201401575420860}
   attackCooldown: 2
   soundEffect: {fileID: 0}
-  animation: {fileID: 7400000, guid: 4202f816c8dafdf42a4fff528ab6ba2f, type: 2}
   damageDelay: 0.2
 --- !u!114 &854164604289750428
 MonoBehaviour:
@@ -192,7 +215,6 @@ MonoBehaviour:
   manager: {fileID: 6023201401575420860}
   attackCooldown: 4
   soundEffect: {fileID: 0}
-  animation: {fileID: 7400000, guid: 0907eb477cc6c4d498d6ed71a3d46b05, type: 2}
   aoeRange: 8
 --- !u!114 &6023201401575420860 stripped
 MonoBehaviour:

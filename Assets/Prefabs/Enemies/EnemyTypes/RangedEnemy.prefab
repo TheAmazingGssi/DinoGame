@@ -99,6 +99,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 950558295, guid: 6b79af8fc46bf1243b1b8f73be4210ff, type: 3}
+    - target: {fileID: 4091644736308972890, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_Size.x
+      value: 0.05967424
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091644736308972890, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_Size.y
+      value: 0.03946198
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091644736308972890, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.00019767415
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091644736308972890, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.021620711
+      objectReference: {fileID: 0}
     - target: {fileID: 5501723112346460331, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: attacks.Array.size
       value: 1
@@ -122,6 +138,10 @@ PrefabInstance:
     - target: {fileID: 7184945894762929075, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8043110599197506089, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.91
       objectReference: {fileID: 0}
     - target: {fileID: 8181060215119223495, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_Size.x
@@ -176,7 +196,6 @@ MonoBehaviour:
   manager: {fileID: 8926162269741413802}
   attackCooldown: 3
   soundEffect: {fileID: 0}
-  animation: {fileID: 7400000, guid: 61c11bdf651b5054590444fbecd929fb, type: 2}
   projectilePrefab: {fileID: 4382386036968754117, guid: d371f4786fc4fa74caa80cbf6c0f1f7e, type: 3}
   projectileSpeed: 4
   damageDelay: 0.1
