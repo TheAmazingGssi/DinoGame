@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2242870450885965078, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 2242870450885965078, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3569670116312465802, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3569670116312465802, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -78,7 +78,7 @@ PrefabInstance:
       objectReference: {fileID: 22100000, guid: a48f7fc5cf3506b41a64ce20db91c3ad, type: 2}
     - target: {fileID: 6057467636057874398, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.002
+      value: -0.001
       objectReference: {fileID: 0}
     - target: {fileID: 6057467636057874398, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -148,6 +148,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6511813499013299741, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6424264535959019188}
+    - targetCorrespondingSourceObject: {fileID: 6511813499013299741, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6196244011814094904}
   m_SourcePrefab: {fileID: 100100000, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
 --- !u!1 &1231855964058480743 stripped
 GameObject:
@@ -162,7 +165,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1231855964058480743}
   serializedVersion: 8
-  lengthInSec: 5
+  lengthInSec: 0.05
   simulationSpeed: 1
   stopAction: 1
   cullingMode: 0
@@ -170,7 +173,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -4954,6 +4957,18 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!210 &6196244011814094904
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231855964058480743}
+  m_Enabled: 1
+  m_SortingLayerID: -326893323
+  m_SortingLayer: 1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!95 &3969129061277445572 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8958741867143242686, guid: b1a3f4b792eec324d814beda289203c2, type: 3}

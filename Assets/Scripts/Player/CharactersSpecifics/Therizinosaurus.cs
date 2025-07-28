@@ -16,7 +16,8 @@ public class Therizinosaurus : CharacterBase
     {
         if (rightMeleeColliderGO == null || leftMeleeColliderGO == null) yield break;
 
-        IsAttacking = true; 
+        //IsAttacking = true; 
+        _mainPlayerController.ToggleIsAttacking();
         GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
         MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
         activeCollider.SetActive(true);
@@ -31,6 +32,7 @@ public class Therizinosaurus : CharacterBase
         }
 
         activeCollider.SetActive(false);
-        IsAttacking = false; 
+        _mainPlayerController.ToggleIsAttacking();
+        //IsAttacking = false; 
     }
 }

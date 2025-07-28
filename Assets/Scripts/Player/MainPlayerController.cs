@@ -42,6 +42,7 @@ public class MainPlayerController : MonoBehaviour
     private float lastSpecialTime;
     private bool canAttack = true;
     private bool canSpecial = true;
+    private bool isAttacking = false;
     private bool isBlocking = false;
     private bool isEmoting = false;
     private bool isFallen = false;
@@ -210,7 +211,7 @@ public class MainPlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!isFallen && !isEmoting && !isBlocking && (!isPerformingSpecialMovement || characterType == CharacterType.Triceratops))
+        if (!isAttacking && !isFallen && !isEmoting && !isBlocking && (!isPerformingSpecialMovement || characterType == CharacterType.Triceratops))
         {
             HandleMovement();
         }
@@ -293,6 +294,7 @@ public class MainPlayerController : MonoBehaviour
     public void Block(InputAction.CallbackContext context)
     {
         bool previousInput = blockHeld;
+        
         if (context.ReadValue<float>() == 0)
             blockHeld = false;
         else
@@ -337,20 +339,24 @@ public class MainPlayerController : MonoBehaviour
     private IEnumerator PerformSpecialAttackCoroutine()
     {
         isPerformingSpecialMovement = true;
+        ToggleIsAttacking();
+        //----------------------------------------------------------------------------------------------------remove???????????????
         yield return characterScript.PerformSpecial((dmg) =>
         {
             MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
+            
             if (characterType == CharacterType.Parasaurolophus)
             {
-                activeMeleeDamage = ((Parasaurolophus)characterScript).SpecialMeleeDamage;
-                activeMeleeDamage?.ApplyDamage(dmg, true, transform, this);
+                //activeMeleeDamage = ((Parasaurolophus)characterScript).SpecialMeleeDamage;
+                //activeMeleeDamage?.ApplyDamage(dmg, true, transform, this);
             }
             else
             {
-                activeMeleeDamage?.ApplyDamage(dmg, true, transform, this, characterType == CharacterType.Spinosaurus);
+                //activeMeleeDamage?.ApplyDamage(dmg, true, transform, this, characterType == CharacterType.Spinosaurus);
             }
         });
 
+        ToggleIsAttacking();
         isPerformingSpecialMovement = false;
         canSpecial = true;
     }
@@ -396,5 +402,11 @@ public class MainPlayerController : MonoBehaviour
     {
         isMudSlowed = !isMudSlowed;
         Debug.Log($"{stats.characterName} mud slow active: {isMudSlowed}");
+    }
+    
+    public void ToggleIsAttacking()
+    {
+        isAttacking = !isAttacking;
+        Debug.Log($"{stats.characterName} is attacking: {isAttacking}");
     }
 }

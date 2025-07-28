@@ -23,7 +23,8 @@ public class Parasaurolophus : CharacterBase
             yield break;
         }
 
-        IsAttacking = true; // Block movement
+        //IsAttacking = true; // Block movement
+        _mainPlayerController.ToggleIsAttacking();
         specialColliderGO.SetActive(true);
         //onSpecial?.Invoke(stats.specialAttackDamage);
         specialMeleeDamage?.ApplyDamage(stats.specialAttackDamage, true, transform, null);
@@ -31,6 +32,7 @@ public class Parasaurolophus : CharacterBase
         animController.specialVfx.SetTrigger("Play");
         yield return new WaitForSeconds(restOfSpecialActivationTime);
         specialColliderGO.SetActive(false);
-        IsAttacking = false; // Resume movement
+        _mainPlayerController.ToggleIsAttacking();
+        //IsAttacking = false; // Resume movement
     }
 }

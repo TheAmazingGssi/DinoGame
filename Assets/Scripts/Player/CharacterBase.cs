@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 
 public abstract class CharacterBase : MonoBehaviour
 {
+    protected MainPlayerController _mainPlayerController;
     protected CharacterStats.CharacterData stats;
     protected GameObject rightMeleeColliderGO;
     protected GameObject leftMeleeColliderGO;
@@ -21,6 +22,7 @@ public abstract class CharacterBase : MonoBehaviour
 
     public virtual void Initialize(CharacterStats.CharacterData characterStats, AnimationController animationController, GameObject rightCollider, GameObject leftCollider, bool isFacingRight, float enable, float disable)
     {
+        _mainPlayerController = GetComponent<MainPlayerController>();
         animController = animationController;
         stats = characterStats;
         facingRight = isFacingRight;
@@ -47,7 +49,8 @@ public abstract class CharacterBase : MonoBehaviour
     {
         if (rightMeleeColliderGO != null && leftMeleeColliderGO != null)
         {
-            IsAttacking = true;
+            _mainPlayerController.ToggleIsAttacking();
+            //IsAttacking = true;
             
             float rightColliderPositionX = rightMeleeColliderGO.transform.localPosition.x;
             Transform normalAttackVfxObjectTransform = animController.normalAttackVfxAnimator.transform;
@@ -70,7 +73,8 @@ public abstract class CharacterBase : MonoBehaviour
             activeCollider.SetActive(false);
             yield return new WaitForSeconds(disableDelay);
             
-            IsAttacking = false;
+            //IsAttacking = false;
+            _mainPlayerController.ToggleIsAttacking();
         }
     }
     public abstract IEnumerator PerformSpecial(UnityAction<float> onSpecial);

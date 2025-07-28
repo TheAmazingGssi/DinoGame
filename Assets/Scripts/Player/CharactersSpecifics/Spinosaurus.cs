@@ -21,7 +21,8 @@ public class Spinosaurus : CharacterBase
         bool specialVfxPerformed = false;
         if (rightMeleeColliderGO == null || leftMeleeColliderGO == null) yield break;
 
-        IsAttacking = true;
+        //IsAttacking = true;
+        _mainPlayerController.ToggleIsAttacking();
         animController.TriggerSpecial();
 
         GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
@@ -121,7 +122,8 @@ public class Spinosaurus : CharacterBase
         if (enemyTransform != null)
             enemyTransform.position = new Vector3(activeCollider.transform.position.x, enemyTransform.position.y, enemyTransform.position.z);
         
-        IsAttacking = false;
+        //IsAttacking = false;
+        _mainPlayerController.ToggleIsAttacking();
     }
 
     /* * Draws a box cast in the scene view for debugging purposes.
