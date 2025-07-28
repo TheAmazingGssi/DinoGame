@@ -15,53 +15,57 @@ MonoBehaviour:
   characters:
   - characterName: Triceratops
     maxHealth: 100
+    stamina: 100
     movementSpeed: 4
+    attacksPerSecond: 1.5
     damageMin: 15
     damageMax: 20
-    attacksPerSecond: 1.5
-    specialAttackDamage: 20
     specialAttackCost: 50
-    stamina: 100
-    SPspecialAttackRange: 0
-    SPchompSpeed: 0
-    SPmeleeRange: 0
-    SPdragSpeed: 0
+    specialAttackDamage: 20
+    mudSlowFactor: 0.25
+    neckMinWidth: 0
+    neckMaxWidth: 0
+    chompSpeed: 0
+    dragSpeed: 0
   - characterName: Spinosaurus
     maxHealth: 100
+    stamina: 100
     movementSpeed: 4
+    attacksPerSecond: 1
     damageMin: 17
     damageMax: 17
-    attacksPerSecond: 1
-    specialAttackDamage: 20
     specialAttackCost: 50
-    stamina: 100
-    SPspecialAttackRange: 4
-    SPchompSpeed: 3
-    SPmeleeRange: 0.5
-    SPdragSpeed: 3
+    specialAttackDamage: 20
+    mudSlowFactor: 0.333
+    neckMinWidth: 0
+    neckMaxWidth: 0
+    chompSpeed: 0
+    dragSpeed: 0
   - characterName: Parasaurolophus
     maxHealth: 100
+    stamina: 100
     movementSpeed: 4
+    attacksPerSecond: 1
     damageMin: 15
     damageMax: 20
-    attacksPerSecond: 1
-    specialAttackDamage: 20
     specialAttackCost: 50
-    stamina: 100
-    SPspecialAttackRange: 0
-    SPchompSpeed: 0
-    SPmeleeRange: 0
-    SPdragSpeed: 0
+    specialAttackDamage: 20
+    mudSlowFactor: 0.2
+    neckMinWidth: 0
+    neckMaxWidth: 0
+    chompSpeed: 0
+    dragSpeed: 0
   - characterName: Therizinosaurus
     maxHealth: 100
+    stamina: 100
     movementSpeed: 4
+    attacksPerSecond: 3
     damageMin: 5
     damageMax: 7
-    attacksPerSecond: 3
-    specialAttackDamage: 20
     specialAttackCost: 50
-    stamina: 100
-    SPspecialAttackRange: 0
-    SPchompSpeed: 0
-    SPmeleeRange: 0
-    SPdragSpeed: 0
+    specialAttackDamage: 20
+    mudSlowFactor: 0.2
+    neckMinWidth: 0
+    neckMaxWidth: 0
+    chompSpeed: 0
+    dragSpeed: 0
