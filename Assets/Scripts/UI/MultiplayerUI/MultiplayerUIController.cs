@@ -8,28 +8,12 @@ public class MultiplayerUIController : MonoBehaviour
 
     bool ready;
 
-    public static int charcounter = 0; //voting debug
-
     private CharacterType characterType;
     public MultiplayerButton CurrentlySelected;
 
     public void SetUp(CharacterType charType, MultiplayerButton defaultSelection)
     {
-        //To debug voting
-        //if (charcounter == 0)
-        //{
-        //    characterType = CharacterType.Therizinosaurus;
-        //}
-        //else if (charcounter == 1)
-        //{
-        //    characterType = CharacterType.Triceratops;
-        //}
-        //else if (charcounter == 2)
-        //{
-        //    characterType = CharacterType.Spinosaurus;
-        //}
-        //charcounter++;
-         characterType = charType;
+        characterType = charType;
         CurrentlySelected = defaultSelection;
         SetSelection(true);
     }

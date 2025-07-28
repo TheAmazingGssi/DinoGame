@@ -6,7 +6,7 @@ using System.Linq;
 
 public class EnemyManager : MonoBehaviour
 {
-    private static readonly int IsDead = Animator.StringToHash("Dead");
+    private static readonly int IS_DEAD = Animator.StringToHash("Dead");
 
     [Header("Components")]
     [SerializeField] private EnemyAttackManager attackManager;
@@ -17,6 +17,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private SoundPlayer soundPlayer;
     [SerializeField] private KnockbackManager knockbackManager;
+    [SerializeField] private GameObject projectileDirection;
 
     [Header("Data")]
     [SerializeField] private EnemyData enemyData;
@@ -28,6 +29,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private float healthDropAmount;
 
     private PlayerCombatManager playerCombatManager;
+    private bool isDead = false;
 
     public EnemyAttackManager AttackManager => attackManager;
     public PlayerCombatManager PlayerCombatManager => playerCombatManager;
@@ -38,9 +40,8 @@ public class EnemyManager : MonoBehaviour
     public EnemyController EnemyController => enemyController;
     public EnemyCombatManager CombatManager => combatManager;
     public SoundPlayer SoundPlayer => soundPlayer;
-
     public KnockbackManager KnockbackManager => knockbackManager;
-
+    public GameObject ProjectileDirection => projectileDirection;
 
     public event UnityAction<EnemyManager> OnDeath;
 
@@ -61,11 +62,22 @@ public class EnemyManager : MonoBehaviour
     #region Death Handling
     private void HandleDeath(CombatManager combatManager)
     {
-        Debug.Log("Ded");
+        if (isDead) return;
+        isDead = true;
+
+        animator.ResetTrigger("Hurt");
+        animator.ResetTrigger("Knockback");
+
+        Debug.Log("Enemy died - playing death animation");
+
+        if (enemyController) enemyController.enabled = false;
+        if (attackManager) attackManager.enabled = false;
+        if (rb) rb.linearVelocity = Vector2.zero;
+
+        animator.SetTrigger(IS_DEAD);
+
         OnDeath?.Invoke(this);
-        animator.SetBool(IsDead, true);
         GameManager.Instance.IncrementDeathCount();
-        StartCoroutine(DeSpawn());
 
         if (Random.value < healthItemDropChance)
         {
@@ -76,8 +88,16 @@ public class EnemyManager : MonoBehaviour
                 Instantiate(healthItem, spawnPosition, Quaternion.identity);
             }
         }
+
+        StartCoroutine(DeSpawn());
     }
 
+    [ContextMenu("DeathDebug")]
+    public void DeathTest()
+    {
+        //animator.SetBool(IS_DEAD, true);
+        animator.SetTrigger("DeadT");
+    }
     private IEnumerator DeSpawn()
     {
         yield return new WaitForSeconds(2f);

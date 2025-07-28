@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: e1c58375549ae264fa980874b88ae387
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4103740448384506556
+    second: Boss_Smash_Sheet_0
+  - first:
+      213: -1207184327912177510
+    second: Boss_Smash_Sheet_1
+  - first:
+      213: -346253794549367236
+    second: Boss_Smash_Sheet_2
+  - first:
+      213: -4765060219077544378
+    second: Boss_Smash_Sheet_3
+  - first:
+      213: -3774811692204380898
+    second: Boss_Smash_Sheet_4
+  - first:
+      213: -19908518244159252
+    second: Boss_Smash_Sheet_5
+  - first:
+      213: 9024343978408187206
+    second: Boss_Smash_Sheet_6
+  - first:
+      213: 1294725121139066783
+    second: Boss_Smash_Sheet_7
+  - first:
+      213: -6248387599196217000
+    second: Boss_Smash_Sheet_8
+  - first:
+      213: 3429745754505058172
+    second: Boss_Smash_Sheet_9
+  - first:
+      213: 7819015032131798215
+    second: Boss_Smash_Sheet_10
+  - first:
+      213: -1813884654736353947
+    second: Boss_Smash_Sheet_11
+  - first:
+      213: -9061606262056528727
+    second: Boss_Smash_Sheet_12
+  - first:
+      213: -2659560137176514238
+    second: Boss_Smash_Sheet_13
+  - first:
+      213: 2983554950872292032
+    second: Boss_Smash_Sheet_14
+  - first:
+      213: -6584929158608545914
+    second: Boss_Smash_Sheet_15
+  - first:
+      213: -1558225616890020850
+    second: Boss_Smash_Sheet_16
+  - first:
+      213: 6750156614377082632
+    second: Boss_Smash_Sheet_17
+  - first:
+      213: 4191933609476351274
+    second: Boss_Smash_Sheet_18
+  - first:
+      213: -2071231901731970510
+    second: Boss_Smash_Sheet_19
+  - first:
+      213: -5392176864220632516
+    second: Boss_Smash_Sheet_20
+  - first:
+      213: -79924393547547088
+    second: Boss_Smash_Sheet_21
+  - first:
+      213: -2187116104739908019
+    second: Boss_Smash_Sheet_22
+  - first:
+      213: -1338350769364483787
+    second: Boss_Smash_Sheet_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Boss_Smash_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1676
+        width: 687
+        height: 418
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8415665eaa3df94dac9ff02bc9d616f
+      internalID: 28172336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Smash_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 1676
+        width: 687
+        height: 418
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ebaf5715f252a54b96704566cdf7103
+      internalID: 1189818331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Smash_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 1676
+        width: 687
+        height: 418
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6541768482bb50c46a3ea88b38515d65
+      internalID: 1912167163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Smash_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 2061
+        y: 1676
+        width: 687
+        height: 418
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 787d29aaf1bea5141bf1a01cb97ce418
+      internalID: 678151962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Smash_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2748
+        y: 1676
+        width: 687
+        height: 418
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f589344ffa41d34cbbf17ea85219d93
+      internalID: -1065436821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Smash_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1258
+        width: 687
+        height: 418
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11299c0fd9012f14f9a73e2c32f436c8
+      internalID: 1073918320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Smash_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 1258
+        width: 687
+        height: 418
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 388ce561b3c951f40890a318d4ddcde3
+      internalID: 959600049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Smash_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 1258
+        width: 687
+        height: 418
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea2c92ae25ecf584a8bcf0a0b3463a12
+      internalID: 1340433949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Smash_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 2061
+        y: 1258
+        width: 687
+        height: 418
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ad941ac23e22a418a6b05f2708eef8
+      internalID: -2075153586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Smash_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 2748
+        y: 1258
+        width: 687
+        height: 418
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d19dd0dcce86d408fe1f4a3b2f6c28
+      internalID: 46646997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Smash_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 840
+        width: 687
+        height: 418
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2069c226947501647abae61aa9bb0d46
+      internalID: -1110027702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Smash_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 840
+        width: 687
+        height: 418
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86831c64b0dad7a47804926c9db4221c
+      internalID: -1111242695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Smash_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 840
+        width: 687
+        height: 418
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41d2d815341b33940a595748466f1fe9
+      internalID: -455984741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Smash_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 2061
+        y: 840
+        width: 687
+        height: 418
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f3a6d716e7a3274496c448a5fb814d8
+      internalID: 1002379587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Smash_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 2748
+        y: 840
+        width: 687
+        height: 418
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf7ebdeba65da184ebb5a0124a0fc365
+      internalID: -1897209977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Smash_Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 422
+        width: 687
+        height: 418
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e009d0b77a260642bd8a067ae8ac690
+      internalID: 1343095426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Smash_Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 422
+        width: 687
+        height: 418
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a84b03009ef67f40b6227d67543d26a
+      internalID: -114328131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Smash_Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 422
+        width: 687
+        height: 418
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b426ae005276d444b8d450ed8065b48
+      internalID: 1479023459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Smash_Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 2061
+        y: 422
+        width: 687
+        height: 418
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 753b0a19329c2d14cbf105829ff4d7e4
+      internalID: -210744963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Smash_Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 2748
+        y: 422
+        width: 687
+        height: 418
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d513fa2b3c6e7a54d9679a2669a553ce
+      internalID: 1279338101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Smash_Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4
+        width: 687
+        height: 418
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a50ca13ffcd8c2b48831aa7c31c63401
+      internalID: 1769199470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Smash_Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 4
+        width: 687
+        height: 418
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 498c0259de6ae6c45bafe6245609ca46
+      internalID: 40883077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Smash_Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 4
+        width: 687
+        height: 418
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c97d671f0080ab844aac8953605835eb
+      internalID: 374850174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_Smash_Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 2061
+        y: 4
+        width: 687
+        height: 418
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2d95369b6aacbe4b99c97b85626463d
+      internalID: -985688141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ed6119e1dca34ee4a8f91ba2d7431e01
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Boss_Smash_Sheet_0: 28172336
+      Boss_Smash_Sheet_1: 1189818331
+      Boss_Smash_Sheet_10: -1110027702
+      Boss_Smash_Sheet_11: -1111242695
+      Boss_Smash_Sheet_12: -455984741
+      Boss_Smash_Sheet_13: 1002379587
+      Boss_Smash_Sheet_14: -1897209977
+      Boss_Smash_Sheet_15: 1343095426
+      Boss_Smash_Sheet_16: -114328131
+      Boss_Smash_Sheet_17: 1479023459
+      Boss_Smash_Sheet_18: -210744963
+      Boss_Smash_Sheet_19: 1279338101
+      Boss_Smash_Sheet_2: 1912167163
+      Boss_Smash_Sheet_20: 1769199470
+      Boss_Smash_Sheet_21: 40883077
+      Boss_Smash_Sheet_22: 374850174
+      Boss_Smash_Sheet_23: -985688141
+      Boss_Smash_Sheet_3: 678151962
+      Boss_Smash_Sheet_4: -1065436821
+      Boss_Smash_Sheet_5: 1073918320
+      Boss_Smash_Sheet_6: 959600049
+      Boss_Smash_Sheet_7: 1340433949
+      Boss_Smash_Sheet_8: -2075153586
+      Boss_Smash_Sheet_9: 46646997
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

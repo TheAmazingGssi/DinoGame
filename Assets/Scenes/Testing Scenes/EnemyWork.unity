@@ -327,6 +327,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 50803543}
   m_CullTransparentMesh: 1
+--- !u!1001 &87407210
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6081745519668247404, guid: 027bc8aa8a5e57c47988a4ee538f569d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.1377735
+      objectReference: {fileID: 0}
+    - target: {fileID: 6081745519668247404, guid: 027bc8aa8a5e57c47988a4ee538f569d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5532513
+      objectReference: {fileID: 0}
+    - target: {fileID: 6081745519668247404, guid: 027bc8aa8a5e57c47988a4ee538f569d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6081745519668247404, guid: 027bc8aa8a5e57c47988a4ee538f569d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6081745519668247404, guid: 027bc8aa8a5e57c47988a4ee538f569d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6081745519668247404, guid: 027bc8aa8a5e57c47988a4ee538f569d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6081745519668247404, guid: 027bc8aa8a5e57c47988a4ee538f569d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6081745519668247404, guid: 027bc8aa8a5e57c47988a4ee538f569d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6081745519668247404, guid: 027bc8aa8a5e57c47988a4ee538f569d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6081745519668247404, guid: 027bc8aa8a5e57c47988a4ee538f569d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8185470777453247465, guid: 027bc8aa8a5e57c47988a4ee538f569d, type: 3}
+      propertyPath: m_Name
+      value: Terry
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 027bc8aa8a5e57c47988a4ee538f569d, type: 3}
 --- !u!4 &159929509 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4203475565827433734, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}
@@ -3969,7 +4026,7 @@ MonoBehaviour:
     RightMost: 34
   - LeftMost: 54
     RightMost: 58
-  vote: {fileID: 11400000, guid: cb7b0c3bab97dbe459005c86bba1d366, type: 2}
+  vote: {fileID: 11400000, guid: 84054e7a68087444e9b75e63e6ec1d94, type: 2}
   <LevelNumber>k__BackingField: 1
   stagesVote: {fileID: 1724298587}
   cameraMovement: {fileID: 575096511099344572}
@@ -4562,6 +4619,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3487130350086498909, guid: f4064a13b99dbc041b8a58f39a8edd38, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4458452314434162182, guid: f4064a13b99dbc041b8a58f39a8edd38, type: 3}
       propertyPath: m_SizeDelta.x
       value: 9.71
@@ -4589,6 +4650,10 @@ PrefabInstance:
     - target: {fileID: 5464300801117793789, guid: f4064a13b99dbc041b8a58f39a8edd38, type: 3}
       propertyPath: m_fontSize
       value: 37.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5613882300101678294, guid: f4064a13b99dbc041b8a58f39a8edd38, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6271967061155626273, guid: f4064a13b99dbc041b8a58f39a8edd38, type: 3}
       propertyPath: m_AnchorMax.y
@@ -6611,3 +6676,4 @@ SceneRoots:
   - {fileID: 2658126874385805213}
   - {fileID: 1107350825136026205}
   - {fileID: 1107998583}
+  - {fileID: 87407210}

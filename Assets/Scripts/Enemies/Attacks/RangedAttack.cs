@@ -8,6 +8,8 @@ public class RangedAttack : EnemyAttack
     [SerializeField] private float damageDelay = 0.1f;
 
     protected override bool IsPlayerInRange => IsTargetInRange(AttackRange);
+    protected override EnemyAttackType type => EnemyAttackType.Ranged;
+
 
     protected override void ApplyDamage()
     {
@@ -21,7 +23,7 @@ public class RangedAttack : EnemyAttack
 
         if (projectilePrefab == null) yield break;
 
-        GameObject projInstance = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+        GameObject projInstance = Instantiate(projectilePrefab, manager.ProjectileDirection.transform.position, Quaternion.identity);
         EnemyProjectile projScript = projInstance.GetComponent<EnemyProjectile>();
 
         if (projScript != null)

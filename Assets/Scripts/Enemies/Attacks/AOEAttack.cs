@@ -7,6 +7,7 @@ public class EnemyAOEAttack : EnemyAttack
 
     protected override float AttackRange => aoeRange;
     protected override bool IsPlayerInRange => GetPlayersInRange().Count > 0;
+    protected override EnemyAttackType type => EnemyAttackType.AOE;
 
     protected override void ApplyDamage()
     {

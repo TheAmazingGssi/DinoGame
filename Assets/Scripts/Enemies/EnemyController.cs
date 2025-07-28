@@ -152,4 +152,9 @@ public class EnemyController : MonoBehaviour
         isFacingLeft = facingLeft;
         spriteRenderer.flipX = !facingLeft;
     }
+
+    public bool IsFacingLeft()
+    {
+        return isFacingLeft;
+    }
 }

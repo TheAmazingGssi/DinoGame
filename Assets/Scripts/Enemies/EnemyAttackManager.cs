@@ -2,6 +2,13 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+public enum EnemyAttackType
+{
+    Melee,
+    Ranged,
+    AOE
+}
+
 public class EnemyAttackManager : MonoBehaviour
 {
     private const string PLAYER = "Player";
@@ -22,6 +29,7 @@ public class EnemyAttackManager : MonoBehaviour
     private bool isFacingRight = true;
 
     private bool isAttacking;
+
     public Transform CurrentTarget => currentTarget;
     public List<PlayerCombatManager> PlayersInRange => playersInRange;
     public PlayerCombatManager PlayerCombatManager => playerCombatManager;
@@ -59,7 +67,6 @@ public class EnemyAttackManager : MonoBehaviour
         {
             bool shouldFaceRight = currentTarget.position.x > transform.position.x;
             isFacingRight = shouldFaceRight;
-
         }
     }
 
@@ -91,12 +98,40 @@ public class EnemyAttackManager : MonoBehaviour
     {
         if (!isAttacking && currentTarget)
         {
+            EnemyAttack chosenAttack = null;
+            EnemyAOEAttack aoeAttack = null;
             foreach (EnemyAttack attack in attacks)
             {
-                attack.TryAttack();
+                if (attack is EnemyAOEAttack)
+                {
+                    aoeAttack = (EnemyAOEAttack)attack;
+                    break;
+                }
             }
+            foreach (EnemyAttack attack in attacks)
+            {
+                if (attack is EnemyAOEAttack && attack.CanAttackNow())
+                {
+                    chosenAttack = attack;
+                    break;
+                }
+            }
+            if (chosenAttack == null)
+            {
+                foreach (EnemyAttack attack in attacks)
+                {
+                    if (!(attack is EnemyAOEAttack) && attack.CanAttackNow())
+                    {
+                        chosenAttack = attack;
+                        break;
+                    }
+                }
+            }
+
+            chosenAttack?.TryAttack();
         }
     }
+
 
     public void ChangeAttackStatue(bool Attacking)
     {
@@ -112,25 +147,42 @@ public class EnemyAttackManager : MonoBehaviour
         }
     }
 
+    public void OnAnimationComplete()
+    {
+        foreach (EnemyAttack attack in attacks)
+        {
+            if (attack.IsCurrentlyAttacking)
+            {
+                attack.OnAttackEnd();
+                break;
+            }
+        }
+    }
+
     private void UpdatePlayerTracking()
     {
         playersInRange.RemoveAll(player => player == null);
 
         foreach (var player in playersToRemove)
         {
-            if (playersInRange.Contains(player))
+            if (player != null && !IsPlayerStillInRange(player))
             {
                 playersInRange.Remove(player);
-              //  Debug.Log($"Player {player.name} removed from range");
 
                 if (player == playerCombatManager)
                 {
-                //    Debug.Log($"Current target {player.name} left range, clearing target");
                     ClearTarget();
                 }
             }
         }
         playersToRemove.Clear();
+    }
+
+    private bool IsPlayerStillInRange(PlayerCombatManager player)
+    {
+        if (player == null) return false;
+        float distance = Vector2.Distance(transform.position, player.transform.position);
+        return distance <= manager.EnemyData.AttackRange;
     }
 
     private void UpdateTarget()
@@ -140,15 +192,13 @@ public class EnemyAttackManager : MonoBehaviour
             ClearTarget();
             return;
         }
-
-        if (currentTarget == null)
+        if (currentTarget == null || playerCombatManager == null)
         {
             SelectTarget();
+            return;
         }
-        else if (playerCombatManager == null)
+        if (!playersInRange.Contains(playerCombatManager))
         {
-          //  Debug.Log("Current target is null, selecting new target");
-            ClearTarget();
             SelectTarget();
         }
     }
@@ -162,19 +212,19 @@ public class EnemyAttackManager : MonoBehaviour
         if (lastPlayerToDamage != null && playersInRange.Contains(lastPlayerToDamage))
         {
             targetPlayer = lastPlayerToDamage;
-          //  Debug.Log($"Targeting last player to deal damage: {targetPlayer.name}");
+            //Debug.Log($"Targeting last player to deal damage: {targetPlayer.name}");
         }
         else
         {
             var validPlayers = playersInRange.Where(p => p != null).ToList();
             if (validPlayers.Count == 0)
             {
-              //  Debug.LogWarning("No valid players found in range!");
+                //Debug.LogWarning("No valid players found in range!");
                 return;
             }
 
             targetPlayer = validPlayers.OrderByDescending(p => p.CurrentHealth).First();
-           // Debug.Log($"Targeting player with highest health: {targetPlayer.name}");
+            //Debug.Log($"Targeting player with highest health: {targetPlayer.name}");
         }
 
         if (targetPlayer != null)
@@ -191,7 +241,7 @@ public class EnemyAttackManager : MonoBehaviour
 
         if (playersInRange.Contains(player))
         {
-         //   Debug.Log($"Player {player.name} that dealt damage is in range - switching target");
+            //Debug.Log($"Player {player.name} that dealt damage is in range - switching target");
             SetTarget(player);
         }
     }
@@ -217,14 +267,14 @@ public class EnemyAttackManager : MonoBehaviour
 
         playerCombatManager = player;
         currentTarget = player.transform;
-       // Debug.Log($"Enemy targeting: {player.name}");
+        //Debug.Log($"Enemy targeting: {player.name}");
     }
 
     private void ClearTarget()
     {
         if (currentTarget != null)
         {
-           // Debug.Log($"Clearing target: {currentTarget.name}");
+            //Debug.Log($"Clearing target: {currentTarget.name}");
         }
         currentTarget = null;
         playerCombatManager = null;
@@ -238,7 +288,7 @@ public class EnemyAttackManager : MonoBehaviour
             if (playerCombat != null && !playersInRange.Contains(playerCombat))
             {
                 playersInRange.Add(playerCombat);
-               // Debug.Log($"Player {playerCombat.name} entered enemy range");
+                //Debug.Log($"Player {playerCombat.name} entered enemy range");
             }
         }
     }
@@ -262,7 +312,7 @@ public class EnemyAttackManager : MonoBehaviour
                 else
                 {
                     playersToRemove.Add(playerCombat);
-                   // Debug.Log($"Player {playerCombat.name} marked to leave enemy range (fallback)");
+                    //Debug.Log($"Player {playerCombat.name} marked to leave enemy range (fallback)");
                 }
             }
         }

@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -91,6 +92,7 @@ public class GameManager : MonoBehaviour
         }
         MainPlayerController highestScorePlayer = GetHighestScorePlayer().MainPlayerController;
         OnLevelEnd?.Invoke(highestScorePlayer);
+        StartCoroutine(VictoryMoment());
     }
     public void SetWaveSize(int amount)
     {
@@ -116,6 +118,11 @@ public class GameManager : MonoBehaviour
         stagesVote.StartVote(vote);
     }
 
+    private IEnumerator VictoryMoment()
+    {
+        yield return new WaitForSeconds(5);
+        StartVote();
+    }
     private void HandleVoteComplete(int winningChoice)
     {
         vote.ApplyEffects(winningChoice);

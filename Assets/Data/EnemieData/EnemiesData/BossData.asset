@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85e1ae9ae5f684a4f9ab2eb4ce5bc120, type: 3}
-  m_Name: TestEnemy
+  m_Name: BossData
   m_EditorClassIdentifier: 
-  <MaxHealth>k__BackingField: 1
-  <BaseDamage>k__BackingField: 0
-  <StopRange>k__BackingField: 4
-  <AttackRange>k__BackingField: 4
-  <Speed>k__BackingField: 2
-  <Score>k__BackingField: 10
-  <immuneToKnockback>k__BackingField: 0
+  <MaxHealth>k__BackingField: 500
+  <BaseDamage>k__BackingField: 1
+  <StopRange>k__BackingField: 5
+  <AttackRange>k__BackingField: 8
+  <Speed>k__BackingField: 3
+  <Score>k__BackingField: 60
+  <immuneToKnockback>k__BackingField: 1

@@ -15,12 +15,12 @@ public class EnemyProjectile : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("projectile lunched");
+        Debug.Log("projectile launched");
 
-        Vector3 targetPosition = manager.AttackManager.CurrentTarget.transform.position;
-        Vector3 startPosition = transform.position;
+        bool isFacingLeft = manager.EnemyController.IsFacingLeft();
+        direction = isFacingLeft ? Vector3.left : Vector3.right;
 
-        direction = (targetPosition - startPosition).normalized;
+        direction.y = 0;
 
         damage = manager.EnemyData.BaseDamage;
     }
@@ -30,9 +30,9 @@ public class EnemyProjectile : MonoBehaviour
         transform.position += direction * speed * Time.fixedDeltaTime;
 
         timer -= Time.fixedDeltaTime;
-
-        if(timer <= 0 ) Destroy(gameObject);
+        if (timer <= 0) Destroy(gameObject);
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag(PLAYER))
