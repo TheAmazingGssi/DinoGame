@@ -38,7 +38,6 @@ public class VotingManager : MonoBehaviour
 
     private bool isVoting = false;
     private bool isReading = false;
-    private bool isVotingDebug = false;
 
     public void StartVote(Vote vote)
     {
@@ -72,8 +71,6 @@ public class VotingManager : MonoBehaviour
         ButtonsParent.SetActive(true);
         timer += voteDuration;
         isVoting = true;
-        isVotingDebug = true;
-
     }
 
     private void Update()

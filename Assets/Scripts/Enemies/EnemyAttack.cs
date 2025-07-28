@@ -12,7 +12,6 @@ public abstract class EnemyAttack : MonoBehaviour
     [SerializeField] protected EnemyManager manager;
     [SerializeField] private float attackCooldown = 2;
     [SerializeField] private VoiceClips soundEffect;
-    [SerializeField] private AnimationClip animation;
 
     private bool isOnCooldown = false;
     private bool isAttacking = false;
