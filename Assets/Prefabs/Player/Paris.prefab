@@ -10,13 +10,14 @@ GameObject:
   m_Component:
   - component: {fileID: 9110106451632680406}
   - component: {fileID: 549283475722300862}
+  - component: {fileID: 5047967097991198400}
   m_Layer: 9
   m_Name: SpecialCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9110106451632680406
 Transform:
   m_ObjectHideFlags: 0
@@ -68,6 +69,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2.5
+--- !u!114 &5047967097991198400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663029108603956730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5416b045e64cbe941acdd51e1df901e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 3078393491007480859}
 --- !u!1001 &1527894191500794345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -237,6 +251,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3569670116312465802, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
   m_PrefabInstance: {fileID: 1527894191500794345}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3078393491007480859 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4579190218097802738, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+  m_PrefabInstance: {fileID: 1527894191500794345}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4db9d0164c5110498657dd5a5881024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &6128998640225727643 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 4628214316666465650, guid: b1a3f4b792eec324d814beda289203c2, type: 3}

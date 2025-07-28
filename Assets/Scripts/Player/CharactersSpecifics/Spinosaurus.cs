@@ -11,9 +11,6 @@ public class Spinosaurus : CharacterBase
     public override void Initialize(CharacterStats.CharacterData characterStats, AnimationController animController, GameObject rightCollider, GameObject leftCollider, bool isFacingRight, float enable, float disable)
     {
         base.Initialize(characterStats, animController, rightCollider, leftCollider, isFacingRight, enable, disable);
-
-        if (animController == null)
-            Debug.LogError($"AnimationController not found in {gameObject.name}!");
         
         specialVfxTransform = animController.specialVfx.transform;
     }

@@ -9,6 +9,11 @@ public class Parasaurolophus : CharacterBase
     [SerializeField] private float restOfSpecialActivationTime = 0.46f; 
     
     public MeleeDamage SpecialMeleeDamage => specialMeleeDamage;
+    
+    public override void Initialize(CharacterStats.CharacterData characterStats, AnimationController animController, GameObject rightCollider, GameObject leftCollider, bool isFacingRight, float enable, float disable)
+    {
+        base.Initialize(characterStats, animController, rightCollider, leftCollider, isFacingRight, enable, disable);
+    }
 
     public override IEnumerator PerformSpecial(UnityAction<float> onSpecial)
     {
@@ -20,7 +25,8 @@ public class Parasaurolophus : CharacterBase
 
         IsAttacking = true; // Block movement
         specialColliderGO.SetActive(true);
-        onSpecial?.Invoke(stats.specialAttackDamage);
+        //onSpecial?.Invoke(stats.specialAttackDamage);
+        specialMeleeDamage?.ApplyDamage(stats.specialAttackDamage, true, transform, null);
         yield return new WaitForSeconds(specialVfxActivationTime);
         animController.specialVfx.SetTrigger("Play");
         yield return new WaitForSeconds(restOfSpecialActivationTime);
