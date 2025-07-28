@@ -144,6 +144,10 @@ PrefabInstance:
       propertyPath: 'mySounds.Array.data[1]'
       value: 
       objectReference: {fileID: 11400000, guid: 7d297908346df8747a5df54f62bec432, type: 2}
+    - target: {fileID: 6716259569256595975, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: 'mySounds.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 7d297908346df8747a5df54f62bec432, type: 2}
     - target: {fileID: 6963371577172914679, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: animator
       value: 

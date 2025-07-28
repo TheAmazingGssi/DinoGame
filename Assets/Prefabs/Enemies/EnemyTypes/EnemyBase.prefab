@@ -146,10 +146,11 @@ MonoBehaviour:
   animator: {fileID: 8492816430768677864}
   soundPlayer: {fileID: 2559447498672904174}
   knockbackManager: {fileID: 1509019578044798939}
+  projectileDirection: {fileID: 0}
   enemyData: {fileID: 11400000, guid: efcb3114fbb81e14eaf446cc3bfaa133, type: 2}
   healthItem: {fileID: 1366378949261486432, guid: 2399d6645efe0d645a8ffe00ac2a711e, type: 3}
   healthItemDropChance: 0.25
-  healthDropAmount: -1
+  healthDropAmount: 1
 --- !u!114 &5501723112346460331
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -73,7 +73,7 @@ public class VotingManager : MonoBehaviour
         timer += voteDuration;
         isVoting = true;
         isVotingDebug = true;
-
+        uiSpawner.SpawnControllers();
     }
 
     private void Update()
