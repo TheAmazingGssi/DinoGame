@@ -52,7 +52,6 @@ MonoBehaviour:
   AndrewPlayerPrefab: {fileID: 5748327399846698724, guid: e45becf6d5bcd6b4f96a9a8a78395463, type: 3}
   MultiplayerUIControllerObject: {fileID: 4948319296853371124, guid: edb789bbeaff1d54f951e6066d643c89, type: 3}
   playerInput: {fileID: 2913691901651809283}
-  CombatManager: {fileID: 0}
   CharacterType: 0
   Move:
     m_PersistentCalls:
@@ -113,7 +112,19 @@ MonoBehaviour:
         m_CallState: 2
   m_DeviceRegainedEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1198035408929009965}
+        m_TargetAssemblyTypeName: PlayerEntity, Assembly-CSharp
+        m_MethodName: DeviceReconnected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -263,7 +274,7 @@ MonoBehaviour:
     m_ActionId: c1afd33c-2dc7-4713-8bc0-017863984fa6
     m_ActionName: 'Player/Emote[/DualShock4GamepadHID/rightStick/down,/DualShock4GamepadHID1/rightStick/down,/DualShock4GamepadHID/buttonSouth,/DualShock4GamepadHID1/buttonSouth,/HID-USB1/button3,/HID-USB/button3]'
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Gamepad
+  m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}

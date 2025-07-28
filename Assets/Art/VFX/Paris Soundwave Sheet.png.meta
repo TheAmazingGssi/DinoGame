@@ -1,0 +1,778 @@
+fileFormatVersion: 2
+guid: fa1a06295e0a2e748b28df591743eb4a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5732019368325668398
+    second: Paris Soundwave Sheet_0
+  - first:
+      213: -5110686203310583441
+    second: Paris Soundwave Sheet_1
+  - first:
+      213: 1724352690901708954
+    second: Paris Soundwave Sheet_2
+  - first:
+      213: 8138574330454422470
+    second: Paris Soundwave Sheet_3
+  - first:
+      213: 6754616545686606729
+    second: Paris Soundwave Sheet_4
+  - first:
+      213: -4748380625429350189
+    second: Paris Soundwave Sheet_5
+  - first:
+      213: -1764728562065032205
+    second: Paris Soundwave Sheet_6
+  - first:
+      213: 767541591562118367
+    second: Paris Soundwave Sheet_7
+  - first:
+      213: -6660579914400787938
+    second: Paris Soundwave Sheet_8
+  - first:
+      213: -2424092235931222894
+    second: Paris Soundwave Sheet_9
+  - first:
+      213: 5109420325368936307
+    second: Paris Soundwave Sheet_10
+  - first:
+      213: -4953450159874455734
+    second: Paris Soundwave Sheet_11
+  - first:
+      213: 8514007212233876142
+    second: Paris Soundwave Sheet_12
+  - first:
+      213: -2016270311085600950
+    second: Paris Soundwave Sheet_13
+  - first:
+      213: -3830307261794694227
+    second: Paris Soundwave Sheet_14
+  - first:
+      213: 642495259218304120
+    second: Paris Soundwave Sheet_15
+  - first:
+      213: -8671290314547258169
+    second: Paris Soundwave Sheet_16
+  - first:
+      213: 6989084983748675079
+    second: Paris Soundwave Sheet_17
+  - first:
+      213: -7347469377414062409
+    second: Paris Soundwave Sheet_18
+  - first:
+      213: 470325661088278776
+    second: Paris Soundwave Sheet_19
+  - first:
+      213: 3280112760031592516
+    second: Paris Soundwave Sheet_20
+  - first:
+      213: -9110939388425749637
+    second: Paris Soundwave Sheet_21
+  - first:
+      213: -3566667014281043148
+    second: Paris Soundwave Sheet_22
+  - first:
+      213: 70465645193699646
+    second: Paris Soundwave Sheet_23
+  - first:
+      213: -2424724601827506107
+    second: Paris Soundwave Sheet_24
+  - first:
+      213: 5835570285655932894
+    second: Paris Soundwave Sheet_25
+  - first:
+      213: -7461185034772991752
+    second: Paris Soundwave Sheet_26
+  - first:
+      213: -1867423940387594392
+    second: Paris Soundwave Sheet_27
+  - first:
+      213: 4666038876857436257
+    second: Paris Soundwave Sheet_28
+  - first:
+      213: 6158958169670370661
+    second: Paris Soundwave Sheet_29
+  - first:
+      213: 9126068237723037736
+    second: Paris Soundwave Sheet_30
+  - first:
+      213: -603359153303989628
+    second: Paris Soundwave Sheet_31
+  - first:
+      213: 552934450529952115
+    second: Paris Soundwave Sheet_32
+  - first:
+      213: 4279525217129511113
+    second: Paris Soundwave Sheet_33
+  - first:
+      213: 3244383580832149692
+    second: Paris Soundwave Sheet_34
+  - first:
+      213: -7196187271385124188
+    second: Paris Soundwave Sheet_35
+  - first:
+      213: -6163849319696380320
+    second: Paris Soundwave Sheet_36
+  - first:
+      213: -8779212499519268757
+    second: Paris Soundwave Sheet_37
+  - first:
+      213: 4973433094334784259
+    second: Paris Soundwave Sheet_38
+  - first:
+      213: 5000758654228308841
+    second: Paris Soundwave Sheet_39
+  - first:
+      213: 770438922140820815
+    second: Paris Soundwave Sheet_40
+  - first:
+      213: -7998783378211938078
+    second: Paris Soundwave Sheet_41
+  - first:
+      213: 5090747914829855620
+    second: Paris Soundwave Sheet_42
+  - first:
+      213: -4370518652179766685
+    second: Paris Soundwave Sheet_43
+  - first:
+      213: -4419651351004779309
+    second: Paris Soundwave Sheet_44
+  - first:
+      213: -2170070661920061131
+    second: Paris Soundwave Sheet_45
+  - first:
+      213: -8101596242853030822
+    second: Paris Soundwave Sheet_46
+  - first:
+      213: 5835888186751797482
+    second: Paris Soundwave Sheet_47
+  - first:
+      213: 3004429473738687469
+    second: Paris Soundwave Sheet_48
+  - first:
+      213: -1991290407717125433
+    second: Paris Soundwave Sheet_49
+  - first:
+      213: -9116009028435264220
+    second: Paris Soundwave Sheet_50
+  - first:
+      213: -3788738813854392476
+    second: Paris Soundwave Sheet_51
+  - first:
+      213: 4419521766796944192
+    second: Paris Soundwave Sheet_52
+  - first:
+      213: 1756235775926192777
+    second: Paris Soundwave Sheet_53
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Paris Soundwave Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 807
+        width: 627
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2ed5b6fe393c8f40800000000000000
+      internalID: 5732019368325668398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris Soundwave Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 807
+        width: 627
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f61de25c9f13319b0800000000000000
+      internalID: -5110686203310583441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris Soundwave Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 807
+        width: 627
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a907fa8e2a12ee710800000000000000
+      internalID: 1724352690901708954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris Soundwave Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1881
+        y: 807
+        width: 627
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c339d8cb3602f070800000000000000
+      internalID: 8138574330454422470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris Soundwave Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2508
+        y: 807
+        width: 627
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98350a7f5f73dbd50800000000000000
+      internalID: 6754616545686606729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris Soundwave Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 538
+        width: 627
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d8bfeaaafc5a1eb0800000000000000
+      internalID: -4748380625429350189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris Soundwave Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 538
+        width: 627
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fbb02509bc6287e0800000000000000
+      internalID: -1764728562065032205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris Soundwave Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 538
+        width: 627
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd4e56bc20bd6aa00800000000000000
+      internalID: 767541591562118367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris Soundwave Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1881
+        y: 538
+        width: 627
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e121a0c6bddd093a0800000000000000
+      internalID: -6660579914400787938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris Soundwave Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 2508
+        y: 538
+        width: 627
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29c798e64f4eb5ed0800000000000000
+      internalID: -2424092235931222894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris Soundwave Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 269
+        width: 627
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 377b6cd07be48e640800000000000000
+      internalID: 5109420325368936307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris Soundwave Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 269
+        width: 627
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a47c418f25fc14bb0800000000000000
+      internalID: -4953450159874455734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris Soundwave Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 269
+        width: 627
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea2605c4374d72670800000000000000
+      internalID: 8514007212233876142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris Soundwave Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1881
+        y: 269
+        width: 627
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4f8390b5d4c404e0800000000000000
+      internalID: -2016270311085600950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris Soundwave Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 2508
+        y: 269
+        width: 627
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dabc028d6d308dac0800000000000000
+      internalID: -3830307261794694227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris Soundwave Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 627
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87c549fb80a9ae800800000000000000
+      internalID: 642495259218304120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris Soundwave Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 0
+        width: 627
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cc1021c66369a780800000000000000
+      internalID: -8671290314547258169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris Soundwave Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 0
+        width: 627
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7064b5153c73ef060800000000000000
+      internalID: 6989084983748675079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris Soundwave Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 1881
+        y: 0
+        width: 627
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7be9c21a78b880a90800000000000000
+      internalID: -7347469377414062409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paris Soundwave Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 2508
+        y: 0
+        width: 627
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f8eae562bee68600800000000000000
+      internalID: 470325661088278776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6a6cf5cc9c63d8b41aee6890b3ba098b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Paris Soundwave Sheet_0: 5732019368325668398
+      Paris Soundwave Sheet_1: -5110686203310583441
+      Paris Soundwave Sheet_10: 5109420325368936307
+      Paris Soundwave Sheet_11: -4953450159874455734
+      Paris Soundwave Sheet_12: 8514007212233876142
+      Paris Soundwave Sheet_13: -2016270311085600950
+      Paris Soundwave Sheet_14: -3830307261794694227
+      Paris Soundwave Sheet_15: 642495259218304120
+      Paris Soundwave Sheet_16: -8671290314547258169
+      Paris Soundwave Sheet_17: 6989084983748675079
+      Paris Soundwave Sheet_18: -7347469377414062409
+      Paris Soundwave Sheet_19: 470325661088278776
+      Paris Soundwave Sheet_2: 1724352690901708954
+      Paris Soundwave Sheet_3: 8138574330454422470
+      Paris Soundwave Sheet_4: 6754616545686606729
+      Paris Soundwave Sheet_5: -4748380625429350189
+      Paris Soundwave Sheet_6: -1764728562065032205
+      Paris Soundwave Sheet_7: 767541591562118367
+      Paris Soundwave Sheet_8: -6660579914400787938
+      Paris Soundwave Sheet_9: -2424092235931222894
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

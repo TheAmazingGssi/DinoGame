@@ -470,6 +470,52 @@ Transform:
   - {fileID: 3569670116312465802}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5130657257574884777
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5891046741713562666}
+  - component: {fileID: 5526781587376619431}
+  m_Layer: 3
+  m_Name: IllusionOfDepthHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5891046741713562666
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5130657257574884777}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.0887, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3569670116312465802}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5526781587376619431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5130657257574884777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfccd6e77ac7f7f40b608de53357a57b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 9169242216697959115}
+  faceSprite: {fileID: 5660800935429750814}
 --- !u!1 &5633875007541555977
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,7 +532,6 @@ GameObject:
   - component: {fileID: 6963371577172914679}
   - component: {fileID: 5118895932606543672}
   - component: {fileID: 4579190218097802738}
-  - component: {fileID: 7812977849384198903}
   - component: {fileID: 6716259569256595975}
   - component: {fileID: 8223330495104514794}
   - component: {fileID: 6740441122061525360}
@@ -515,6 +560,7 @@ Transform:
   - {fileID: 5689738827884331913}
   - {fileID: 5315228199641554744}
   - {fileID: 1396189071209456459}
+  - {fileID: 5891046741713562666}
   m_Father: {fileID: 2242870450885965078}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &7126916438403873939
@@ -683,24 +729,8 @@ MonoBehaviour:
   soundPlayer: {fileID: 6716259569256595975}
   enableDuration: 0.2
   disableDelay: 0.5
-  blockDuration: 0.5
-  blockMoveSpeedMultiplier: 0.5
   reviveRange: 2
   emoteSound: {fileID: 0}
---- !u!114 &7812977849384198903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5633875007541555977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfccd6e77ac7f7f40b608de53357a57b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 9169242216697959115}
-  faceSprite: {fileID: 5660800935429750814}
 --- !u!114 &6716259569256595975
 MonoBehaviour:
   m_ObjectHideFlags: 0

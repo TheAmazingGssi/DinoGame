@@ -30,7 +30,7 @@ public class HUDManager : MonoBehaviour
         }
         for (int i = 0; i < hudRefrences.Length; i++)
         {
-            if (i < PlayerEntity.PlayerList.Count)
+            if (i < PlayerEntity.PlayerList.Count && PlayerEntity.PlayerList[i].CombatManager)
             {
                 hudRefrences[i].gameObject.SetActive(true);
                 hudRefrences[i].SplashArtImage.sprite = splashArts[PlayerEntity.PlayerList[i].CharacterType];
