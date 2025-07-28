@@ -643,9 +643,13 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3037892570329261710, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}
+      propertyPath: 'spawnPoints.Array.data[0]'
+      value: 
+      objectReference: {fileID: 575096511099344574}
+    - target: {fileID: 3037892570329261710, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}
       propertyPath: 'spawnPoints.Array.data[1]'
       value: 
-      objectReference: {fileID: 1581690429}
+      objectReference: {fileID: 575096511099344573}
     - target: {fileID: 3228882974866198271, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.13
@@ -1313,6 +1317,14 @@ PrefabInstance:
       propertyPath: spawnPoints.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3037892570329261710, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}
+      propertyPath: 'spawnPoints.Array.data[0]'
+      value: 
+      objectReference: {fileID: 575096511099344574}
+    - target: {fileID: 3037892570329261710, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}
+      propertyPath: 'spawnPoints.Array.data[1]'
+      value: 
+      objectReference: {fileID: 575096511099344573}
     - target: {fileID: 5090422255044189261, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}
       propertyPath: m_Name
       value: EnemySpawner (2)
@@ -1855,8 +1867,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3037892570329261710, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}
       propertyPath: spawnPoints.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3037892570329261710, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}
+      propertyPath: 'spawnPoints.Array.data[0]'
+      value: 
+      objectReference: {fileID: 575096511099344574}
+    - target: {fileID: 3037892570329261710, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}
+      propertyPath: 'spawnPoints.Array.data[1]'
+      value: 
+      objectReference: {fileID: 575096511099344573}
     - target: {fileID: 3037892570329261710, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}
       propertyPath: 'spawnPoints.Array.data[2]'
       value: 
@@ -2269,6 +2289,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2f044c897faee04bbfb26e1319caa4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &575096511099344573 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1929581655209752025, guid: f18f60295d050934aa2ee3a62285a6c7, type: 3}
+  m_PrefabInstance: {fileID: 575096511099344571}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &575096511099344574 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7591016769906932837, guid: f18f60295d050934aa2ee3a62285a6c7, type: 3}
+  m_PrefabInstance: {fileID: 575096511099344571}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1107350825136026205
 PrefabInstance:
   m_ObjectHideFlags: 0
