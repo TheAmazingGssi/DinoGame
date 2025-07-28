@@ -101,6 +101,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6478515573942121937, guid: 9f7d803472a3f274b98a8b36b15623a2, type: 3}
     - target: {fileID: 7022572441651464058, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: healthDropAmount
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7022572441651464058, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: attacks.Array.size
       value: 2
       objectReference: {fileID: 0}

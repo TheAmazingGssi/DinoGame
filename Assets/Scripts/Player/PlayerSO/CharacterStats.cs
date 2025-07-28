@@ -15,6 +15,7 @@ public class CharacterStats : ScriptableObject
         public float damageMax;
         public float specialAttackCost;
         public float specialAttackDamage;
+        public float mudSlowFactor;
         [Header("Spinosaurus Specifics")]
         public float neckMinWidth; // Added for Spinosaurus (e.g., 0.075)
         public float neckMaxWidth; // Added for Spinosaurus (e.g., 0.45)

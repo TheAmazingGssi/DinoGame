@@ -9,36 +9,28 @@ public class Triceratops : CharacterBase
     [SerializeField] private float chargeDamageDelay = 0.2f;
     [SerializeField] private float glideDistance = 0.5f;
     [SerializeField] private float glideDuration = 0.2f;
+    [SerializeField] private float glideSpeed = 3f;
 
     private Rigidbody2D rb;
+    private Vector3 lastParticlePos;
 
-    public override void Initialize(CharacterStats.CharacterData characterStats, GameObject rightCollider, GameObject leftCollider, bool isFacingRight, float enable, float disable)
+    public override void Initialize(CharacterStats.CharacterData characterStats, AnimationController animationController, GameObject rightCollider, GameObject leftCollider, bool isFacingRight, float enable, float disable)
     {
-        base.Initialize(characterStats, rightCollider, leftCollider, isFacingRight, enable, disable);
+        base.Initialize(characterStats, animationController, rightCollider, leftCollider, isFacingRight, enable, disable);
         rb = GetComponent<Rigidbody2D>();
         if (rb == null)
             Debug.LogError($"Rigidbody2D not found on {gameObject.name}!");
     }
-
-    public override IEnumerator PerformAttack(float damage, UnityAction<float> onAttack)
-    {
-        if (rightMeleeColliderGO != null && leftMeleeColliderGO != null)
-        {
-            GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
-            MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
-            activeCollider.SetActive(true);
-            onAttack?.Invoke(damage);
-            yield return new WaitForSeconds(enableDuration);
-            activeCollider.SetActive(false);
-            yield return new WaitForSeconds(disableDelay);
-        }
-    }
-
+    
+    
     public override IEnumerator PerformSpecial(UnityAction<float> onSpecial)
     {
         if (rightMeleeColliderGO == null || leftMeleeColliderGO == null || rb == null) yield break;
 
-        IsPerformingSpecialMovement = true;
+        IsAttacking = true;
+        animController.terryParticleSystem.Play();
+        lastParticlePos = animController.terryParticleSystem.transform.position;
+
         GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
         MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
         activeCollider.SetActive(true);
@@ -56,9 +48,15 @@ public class Triceratops : CharacterBase
         {
             elapsed += Time.deltaTime;
             float t = elapsed / chargeDuration;
-            Vector3 newPos = Vector3.Lerp(startPos, targetPos, t);
-            rb.MovePosition(newPos);
-
+            //Vector3 newPos = Vector3.Lerp(startPos, targetPos, t);
+            //rb.MovePosition(newPos);
+            rb.AddForceX( direction.x * chargeSpeed * Time.fixedDeltaTime, ForceMode2D.Force);
+            
+            float distanceMoved = Vector3.Distance(animController.terryParticleSystem.transform.position, lastParticlePos);
+            var emitCount = Mathf.FloorToInt(distanceMoved); // Optional scaling
+            animController.terryParticleSystem.Emit(emitCount);
+            lastParticlePos = animController.terryParticleSystem.transform.position;
+            
             if (elapsed >= chargeDamageDelay)
             {
                 activeMeleeDamage?.ApplyDamage(stats.specialAttackDamage, true, transform, null);
@@ -81,9 +79,14 @@ public class Triceratops : CharacterBase
             rb.MovePosition(newPos);
             yield return new WaitForFixedUpdate();
         }
-
         rb.MovePosition(targetPos);
+        
+        float distanceMoved2 = Vector3.Distance(animController.terryParticleSystem.transform.position, lastParticlePos);
+        var emitCount2 = Mathf.FloorToInt(distanceMoved2); // Optional scaling
+        animController.terryParticleSystem.Emit(emitCount2);
+        lastParticlePos = animController.terryParticleSystem.transform.position;
+        
         activeCollider.SetActive(false);
-        IsPerformingSpecialMovement = false;
+        animController.terryParticleSystem.Stop();
     }
 }
