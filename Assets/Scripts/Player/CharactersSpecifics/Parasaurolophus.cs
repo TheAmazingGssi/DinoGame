@@ -1,37 +1,38 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Parasaurolophus : CharacterBase
 {
-    //[SerializeField] private float specialAttackRange = 3f; // GDD: 3 units
-    [SerializeField] private float specialActivationTime = 0.2f; // Brief activation
-
+    [SerializeField] private float specialVfxActivationTime = 0.04f; 
+    [SerializeField] private float restOfSpecialActivationTime = 0.46f; 
+    
     public MeleeDamage SpecialMeleeDamage => specialMeleeDamage;
-
-    public override IEnumerator PerformAttack(float damage, UnityAction<float> onAttack)
+    
+    public override void Initialize(CharacterStats.CharacterData characterStats, AnimationController animController, GameObject rightCollider, GameObject leftCollider, bool isFacingRight, float enable, float disable)
     {
-        if (rightMeleeColliderGO != null && leftMeleeColliderGO != null)
-        {
-            GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
-            MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
-            activeCollider.SetActive(true);
-            onAttack?.Invoke(damage);
-            yield return new WaitForSeconds(enableDuration);
-            activeCollider.SetActive(false);
-            yield return new WaitForSeconds(disableDelay);
-        }
+        base.Initialize(characterStats, animController, rightCollider, leftCollider, isFacingRight, enable, disable);
     }
 
     public override IEnumerator PerformSpecial(UnityAction<float> onSpecial)
     {
-        if (specialColliderGO == null) yield break;
+        if (specialColliderGO == null)
+        {
+            Debug.LogWarning("Special collider not found on Parasaurolophus!");
+            yield break;
+        }
 
-        IsPerformingSpecialMovement = true; // Block movement
+        //IsAttacking = true; // Block movement
+        _mainPlayerController.ToggleIsAttacking();
         specialColliderGO.SetActive(true);
-        onSpecial?.Invoke(stats.specialAttackDamage);
-        yield return new WaitForSeconds(specialActivationTime);
+        //onSpecial?.Invoke(stats.specialAttackDamage);
+        specialMeleeDamage?.ApplyDamage(stats.specialAttackDamage, true, transform, null);
+        yield return new WaitForSeconds(specialVfxActivationTime);
+        animController.specialVfx.SetTrigger("Play");
+        yield return new WaitForSeconds(restOfSpecialActivationTime);
         specialColliderGO.SetActive(false);
-        IsPerformingSpecialMovement = false; // Resume movement
+        _mainPlayerController.ToggleIsAttacking();
+        //IsAttacking = false; // Resume movement
     }
 }

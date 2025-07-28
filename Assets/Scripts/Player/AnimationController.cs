@@ -7,25 +7,9 @@ public class AnimationController : MonoBehaviour
 
     public Animator animator;
     public Animator specialVfx;
-
-    private void Start()
-    {
-        if (animator == null)
-        {
-            animator = GetComponent<Animator>();
-            
-            if (animator == null)
-                Debug.LogError("Animator not found on " + gameObject.name);
-        }
-        
-        if (specialVfx == null)
-        {
-            specialVfx = GameObject.Find("SpecialVfx")?.GetComponent<Animator>();
-            
-            if (specialVfx == null)
-                Debug.LogError("SpecialVfx Animator not found!");
-        }
-    }
+    public Animator normalAttackVfxAnimator;
+    public SpriteRenderer normalAttackVfxRenderer;
+    public ParticleSystem terryParticleSystem;
 
     public void SetMoveSpeed(float speed)
     {

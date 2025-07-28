@@ -27,7 +27,6 @@ public class MainPlayerController : MonoBehaviour
     [SerializeField] private GameObject rightMeleeColliderGO;
     [SerializeField] private GameObject leftMeleeColliderGO;
     [SerializeField] private SoundPlayer soundPlayer;
-    //PlayerInputActions inputActions;
 
     [Header("Attack Variables")]
     [SerializeField] private float enableDuration = 0.2f;
@@ -43,9 +42,11 @@ public class MainPlayerController : MonoBehaviour
     private float lastSpecialTime;
     private bool canAttack = true;
     private bool canSpecial = true;
+    private bool isAttacking = false;
     private bool isBlocking = false;
     private bool isEmoting = false;
     private bool isFallen = false;
+    private bool isMudSlowed = false;
     private bool isPerformingSpecialMovement = false;
     private bool isEndOfLevel = false;
     private Vector2 moveInput;
@@ -151,7 +152,7 @@ public class MainPlayerController : MonoBehaviour
                 break;
         }
 
-        characterScript.Initialize(stats, rightMeleeColliderGO, leftMeleeColliderGO, facingRight, enableDuration, disableDelay);
+        characterScript.Initialize(stats, animController, rightMeleeColliderGO, leftMeleeColliderGO, facingRight, enableDuration, disableDelay);
         animController.characterType = characterType;
 
         activePlayers++;
@@ -210,7 +211,7 @@ public class MainPlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!isFallen && !isEmoting && !isBlocking && (!isPerformingSpecialMovement || characterType == CharacterType.Triceratops))
+        if (!isAttacking && !isFallen && !isEmoting && !isBlocking && (!isPerformingSpecialMovement || characterType == CharacterType.Triceratops))
         {
             HandleMovement();
         }
@@ -221,12 +222,14 @@ public class MainPlayerController : MonoBehaviour
         if (knockbackManager != null && knockbackManager.IsKnockedBack || isEndOfLevel) return;
 
         float effectiveSpeed = stats.movementSpeed;
+        if (isMudSlowed) { effectiveSpeed *= stats.mudSlowFactor; }
         currentVelocity = moveInput.normalized * effectiveSpeed;
         rb.linearVelocity = currentVelocity;
 
         if (Mathf.Abs(moveInput.x) > 0.01f)
         {
             bool shouldFaceRight = moveInput.x > 0;
+            
             if (shouldFaceRight != facingRight)
             {
                 facingRight = shouldFaceRight;
@@ -291,6 +294,7 @@ public class MainPlayerController : MonoBehaviour
     public void Block(InputAction.CallbackContext context)
     {
         bool previousInput = blockHeld;
+        
         if (context.ReadValue<float>() == 0)
             blockHeld = false;
         else
@@ -335,20 +339,24 @@ public class MainPlayerController : MonoBehaviour
     private IEnumerator PerformSpecialAttackCoroutine()
     {
         isPerformingSpecialMovement = true;
+        ToggleIsAttacking();
+        //----------------------------------------------------------------------------------------------------remove???????????????
         yield return characterScript.PerformSpecial((dmg) =>
         {
             MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
+            
             if (characterType == CharacterType.Parasaurolophus)
             {
-                activeMeleeDamage = ((Parasaurolophus)characterScript).SpecialMeleeDamage;
-                activeMeleeDamage?.ApplyDamage(dmg, true, transform, this);
+                //activeMeleeDamage = ((Parasaurolophus)characterScript).SpecialMeleeDamage;
+                //activeMeleeDamage?.ApplyDamage(dmg, true, transform, this);
             }
             else
             {
-                activeMeleeDamage?.ApplyDamage(dmg, true, transform, this, characterType == CharacterType.Spinosaurus);
+                //activeMeleeDamage?.ApplyDamage(dmg, true, transform, this, characterType == CharacterType.Spinosaurus);
             }
         });
 
+        ToggleIsAttacking();
         isPerformingSpecialMovement = false;
         canSpecial = true;
     }
@@ -388,5 +396,17 @@ public class MainPlayerController : MonoBehaviour
     private void PlayDeathSound(CombatManager combatManager)
     {
         soundPlayer.PlaySound(2);
+    }
+    
+    public void ToggleMudSlowEffect()
+    {
+        isMudSlowed = !isMudSlowed;
+        Debug.Log($"{stats.characterName} mud slow active: {isMudSlowed}");
+    }
+    
+    public void ToggleIsAttacking()
+    {
+        isAttacking = !isAttacking;
+        Debug.Log($"{stats.characterName} is attacking: {isAttacking}");
     }
 }

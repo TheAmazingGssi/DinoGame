@@ -5,43 +5,25 @@ using UnityEngine.UIElements;
 
 public class Spinosaurus : CharacterBase
 {
-    private AnimationController animationController;
     private Transform specialVfxTransform;
-
     private static float specialSfxPositionX = 0.515f;
 
-    public override void Initialize(CharacterStats.CharacterData characterStats, GameObject rightCollider, GameObject leftCollider, bool isFacingRight, float enable, float disable)
+    public override void Initialize(CharacterStats.CharacterData characterStats, AnimationController animController, GameObject rightCollider, GameObject leftCollider, bool isFacingRight, float enable, float disable)
     {
-        base.Initialize(characterStats, rightCollider, leftCollider, isFacingRight, enable, disable);
-        animationController = GetComponent<AnimationController>();
-
-        if (animationController == null)
-            Debug.LogError($"AnimationController not found in {gameObject.name}!");
+        base.Initialize(characterStats, animController, rightCollider, leftCollider, isFacingRight, enable, disable);
         
-        specialVfxTransform = animationController.specialVfx.transform;
+        specialVfxTransform = animController.specialVfx.transform;
     }
-
-    public override IEnumerator PerformAttack(float damage, UnityAction<float> onAttack)
-    {
-        if (rightMeleeColliderGO != null && leftMeleeColliderGO != null)
-        {
-            GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
-            MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
-            activeCollider.SetActive(true);
-            onAttack?.Invoke(damage);
-            yield return new WaitForSeconds(enableDuration);
-            activeCollider.SetActive(false);
-            yield return new WaitForSeconds(disableDelay);
-        }
-    }
+    
 
     public override IEnumerator PerformSpecial(UnityAction<float> onSpecial)
     {
         bool specialVfxPerformed = false;
         if (rightMeleeColliderGO == null || leftMeleeColliderGO == null) yield break;
 
-        IsPerformingSpecialMovement = true;
-        animationController.TriggerSpecial();
+        //IsAttacking = true;
+        _mainPlayerController.ToggleIsAttacking();
+        animController.TriggerSpecial();
 
         GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
         MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
@@ -68,8 +50,8 @@ public class Spinosaurus : CharacterBase
                 Vector2 boxSize = new Vector2(0.6f, 0.6f);
                 RaycastHit2D hit = Physics2D.BoxCast(castOrigin, boxSize, 0f, facingRight ? Vector2.right : Vector2.left, 0.2f, LayerMask.GetMask("Enemies"));
                 
-                // Visualize BoxCast
-                DrawBoxCast(castOrigin, boxSize, facingRight ? Vector2.right : Vector2.left, 0.2f, Color.red);
+                // Visualize BoxCast - debugging only
+                //DrawBoxCast(castOrigin, boxSize, facingRight ? Vector2.right : Vector2.left, 0.2f, Color.red);
 
                 if (hit.collider != null)
                 {
@@ -93,8 +75,7 @@ public class Spinosaurus : CharacterBase
 
             yield return null;
         }
-
-     
+        
         activeCollider.transform.localPosition = targetPos;
         
         elapsed = 0f;
@@ -114,7 +95,7 @@ public class Spinosaurus : CharacterBase
             specialSfxPositionX = facingRight ? 0.515f : -0.515f;
             specialVfxTransform.localRotation = facingRight ? Quaternion.Euler(0, 0, 0): Quaternion.Euler(0, 180, 0);
             specialVfxTransform.localPosition = new Vector3(specialSfxPositionX,specialVfxTransform.localPosition.y, specialVfxTransform.localPosition.z);
-            animationController.TriggerSpecialVfx();
+            animController.TriggerSpecialVfx();
             specialVfxPerformed = true;
         }
         
@@ -127,7 +108,7 @@ public class Spinosaurus : CharacterBase
         {
             elapsed += Time.deltaTime;
             float t = elapsed / 0.2f;
-            //activeCollider.transform.localPosition = Vector3.Lerp(targetPos, startPos, t);
+            activeCollider.transform.localPosition = Vector3.Lerp(targetPos, startPos, t);
             
             if (enemyTransform != null)
                 enemyTransform.position = new Vector3(activeCollider.transform.position.x, enemyTransform.position.y, enemyTransform.position.z);
@@ -140,11 +121,20 @@ public class Spinosaurus : CharacterBase
         
         if (enemyTransform != null)
             enemyTransform.position = new Vector3(activeCollider.transform.position.x, enemyTransform.position.y, enemyTransform.position.z);
-
-
-        IsPerformingSpecialMovement = false;
+        
+        //IsAttacking = false;
+        _mainPlayerController.ToggleIsAttacking();
     }
 
+    /* * Draws a box cast in the scene view for debugging purposes.
+     * 
+     * Parameters:
+     * - origin: The starting point of the box cast.
+     * - size: The size of the box.
+     * - direction: The direction of the box cast.
+     * - distance: The distance to cast the box.
+     * - color: The color of the debug lines.
+     
     private void DrawBoxCast(Vector2 origin, Vector2 size, Vector2 direction, float distance, Color color)
     {
         Vector2 endPoint = origin + direction.normalized * distance;
@@ -172,5 +162,5 @@ public class Spinosaurus : CharacterBase
             Debug.DrawLine(endCorners[i], endCorners[(i + 1) % 4], color, 0.1f);
             Debug.DrawLine(corners[i], endCorners[i], color, 0.1f);
         }
-    }
+    }*/
 }
