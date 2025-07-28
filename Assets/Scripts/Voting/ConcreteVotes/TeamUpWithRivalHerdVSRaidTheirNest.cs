@@ -7,7 +7,6 @@ public class TeamUpWithRivalHerdVSRaidTheirNest : Vote
     public override string VoteTitle => "Gain local alliances for future help\r\nVS.\r\ngaining supply that will help now";
     public override string VoteDescription => "You arrive at the Western Desert wastes.\r\nAs you get off your dino-mount, you can't shake the feeling that the local bandits are very suspicious of your little herd. \r\nwill you team up with these bandits? Or will you raid their nest? You could use the resources.";
 
-
     public override string[] Choices => new string[2] { "Raid their base\r\ngain max health boost.\n<color=red>BUT</color>\nOn the next level, face more enemies\r\n",
         "Team up with Rival Herd:\r\nbecome stronger in the final level\n<color=red>BUT</color>\n[Terry] takes more damage in the final level"};
     public override void ApplyEffects(int i)
