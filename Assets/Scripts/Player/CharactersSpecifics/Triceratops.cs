@@ -48,14 +48,9 @@ public class Triceratops : CharacterBase
         {
             elapsed += Time.deltaTime;
             float t = elapsed / chargeDuration;
-            //Vector3 newPos = Vector3.Lerp(startPos, targetPos, t);
-            //rb.MovePosition(newPos);
-            rb.AddForceX( direction.x * chargeSpeed * Time.fixedDeltaTime, ForceMode2D.Force);
-            
-            float distanceMoved = Vector3.Distance(animController.terryParticleSystem.transform.position, lastParticlePos);
-            var emitCount = Mathf.FloorToInt(distanceMoved); // Optional scaling
-            animController.terryParticleSystem.Emit(emitCount);
-            lastParticlePos = animController.terryParticleSystem.transform.position;
+            Vector3 newPos = Vector3.Lerp(startPos, targetPos, t);
+            rb.MovePosition(newPos);
+            //rb.AddForceX( direction.x * chargeSpeed * Time.fixedDeltaTime, ForceMode2D.Force)
             
             if (elapsed >= chargeDamageDelay)
             {
@@ -80,11 +75,6 @@ public class Triceratops : CharacterBase
             yield return new WaitForFixedUpdate();
         }
         rb.MovePosition(targetPos);
-        
-        float distanceMoved2 = Vector3.Distance(animController.terryParticleSystem.transform.position, lastParticlePos);
-        var emitCount2 = Mathf.FloorToInt(distanceMoved2); // Optional scaling
-        animController.terryParticleSystem.Emit(emitCount2);
-        lastParticlePos = animController.terryParticleSystem.transform.position;
         
         activeCollider.SetActive(false);
         animController.terryParticleSystem.Stop();
