@@ -42,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1569487030482599382, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2242870450885965078, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -180,6 +180,18 @@ PrefabInstance:
       propertyPath: characterType
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6963371577172914679, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: SpecialVfxObject
+      value: 
+      objectReference: {fileID: 1280899897635367303}
+    - target: {fileID: 6963371577172914679, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: SpecialVfxAnimator
+      value: 
+      objectReference: {fileID: 1280899897635367303}
+    - target: {fileID: 6963371577172914679, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: specialVfxRenderer
+      value: 
+      objectReference: {fileID: 6980454795877242529}
     - target: {fileID: 7096012279790361198, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0295
@@ -229,5 +241,10 @@ Animator:
 --- !u!95 &1280899897635367303 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 7268481246512268016, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+  m_PrefabInstance: {fileID: 8437633009922878327}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &6980454795877242529 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1569487030482599382, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
   m_PrefabInstance: {fileID: 8437633009922878327}
   m_PrefabAsset: {fileID: 0}

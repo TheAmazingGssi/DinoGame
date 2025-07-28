@@ -5,14 +5,14 @@ using UnityEngine.UIElements;
 
 public class Spinosaurus : CharacterBase
 {
-    private Transform specialVfxTransform;
-    private static float specialSfxPositionX = 0.515f;
+    private Transform _specialVfxTransform;
+    private static float _specialVfxPositionX = 0.515f;
 
     public override void Initialize(CharacterStats.CharacterData characterStats, AnimationController animController, GameObject rightCollider, GameObject leftCollider, bool isFacingRight, float enable, float disable)
     {
         base.Initialize(characterStats, animController, rightCollider, leftCollider, isFacingRight, enable, disable);
         
-        specialVfxTransform = animController.specialVfx.transform;
+        _specialVfxTransform = animController.SpecialVfxObject.transform;
     }
     
 
@@ -22,7 +22,7 @@ public class Spinosaurus : CharacterBase
         if (rightMeleeColliderGO == null || leftMeleeColliderGO == null) yield break;
 
         //IsAttacking = true;
-        _mainPlayerController.ToggleIsAttacking();
+        //_mainPlayerController.ToggleIsAttacking();
         animController.TriggerSpecial();
 
         GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
@@ -92,9 +92,9 @@ public class Spinosaurus : CharacterBase
         
         if (!specialVfxPerformed)
         {
-            specialSfxPositionX = facingRight ? 0.515f : -0.515f;
-            specialVfxTransform.localRotation = facingRight ? Quaternion.Euler(0, 0, 0): Quaternion.Euler(0, 180, 0);
-            specialVfxTransform.localPosition = new Vector3(specialSfxPositionX,specialVfxTransform.localPosition.y, specialVfxTransform.localPosition.z);
+            _specialVfxPositionX = facingRight ? 0.515f : -0.515f;
+            _specialVfxTransform.localRotation = facingRight ? Quaternion.Euler(0, 0, 0): Quaternion.Euler(0, 180, 0);
+            _specialVfxTransform.localPosition = new Vector3(_specialVfxPositionX,_specialVfxTransform.localPosition.y, _specialVfxTransform.localPosition.z);
             animController.TriggerSpecialVfx();
             specialVfxPerformed = true;
         }
@@ -123,7 +123,7 @@ public class Spinosaurus : CharacterBase
             enemyTransform.position = new Vector3(activeCollider.transform.position.x, enemyTransform.position.y, enemyTransform.position.z);
         
         //IsAttacking = false;
-        _mainPlayerController.ToggleIsAttacking();
+        //_mainPlayerController.ToggleIsAttacking();
     }
 
     /* * Draws a box cast in the scene view for debugging purposes.

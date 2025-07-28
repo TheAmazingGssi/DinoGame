@@ -17,12 +17,13 @@ public class Therizinosaurus : CharacterBase
         if (rightMeleeColliderGO == null || leftMeleeColliderGO == null) yield break;
 
         //IsAttacking = true; 
-        _mainPlayerController.ToggleIsAttacking();
+        //_mainPlayerController.ToggleIsAttacking();
         GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
         MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
         activeCollider.SetActive(true);
-        
-        animController.specialVfx.SetTrigger("Play");
+        animController.SpecialVfxAnimator.gameObject.transform.position = activeCollider.transform.position;
+        animController.specialVfxRenderer.flipX = !facingRight;
+        animController.SpecialVfxAnimator.SetTrigger("Play");
         
         for (int i = 0; i < specialHitCount; i++)
         {
@@ -32,7 +33,6 @@ public class Therizinosaurus : CharacterBase
         }
 
         activeCollider.SetActive(false);
-        _mainPlayerController.ToggleIsAttacking();
         //IsAttacking = false; 
     }
 }

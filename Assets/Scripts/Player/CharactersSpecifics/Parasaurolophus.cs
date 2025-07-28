@@ -29,7 +29,7 @@ public class Parasaurolophus : CharacterBase
         //onSpecial?.Invoke(stats.specialAttackDamage);
         specialMeleeDamage?.ApplyDamage(stats.specialAttackDamage, true, transform, null);
         yield return new WaitForSeconds(specialVfxActivationTime);
-        animController.specialVfx.SetTrigger("Play");
+        animController.SpecialVfxAnimator.SetTrigger("Play");
         yield return new WaitForSeconds(restOfSpecialActivationTime);
         specialColliderGO.SetActive(false);
         _mainPlayerController.ToggleIsAttacking();
