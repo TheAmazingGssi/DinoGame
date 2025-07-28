@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ending screen earth 4_0: 6128053639012374789
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
