@@ -82,19 +82,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4091644736308972890, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_Size.x
-      value: 0.038741525
+      value: 0.03531501
       objectReference: {fileID: 0}
     - target: {fileID: 4091644736308972890, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_Size.y
-      value: 0.04708898
+      value: 0.043757677
       objectReference: {fileID: 0}
     - target: {fileID: 4091644736308972890, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_Offset.x
-      value: -0.0043380577
+      value: -0.003481431
       objectReference: {fileID: 0}
     - target: {fileID: 4091644736308972890, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_Offset.y
-      value: -0.003450729
+      value: -0.0017850762
       objectReference: {fileID: 0}
     - target: {fileID: 5501723112346460331, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: attacks.Array.size
@@ -146,7 +146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8043110599197506089, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.79
+      value: 0.838
       objectReference: {fileID: 0}
     - target: {fileID: 8181060215119223495, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_Size.x

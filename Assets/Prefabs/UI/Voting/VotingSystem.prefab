@@ -138,6 +138,34 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2596102041047578957, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2596102041047578957, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2596102041047578957, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8751274479980865457}
+    - target: {fileID: 2596102041047578957, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CastVote
+      objectReference: {fileID: 0}
+    - target: {fileID: 2596102041047578957, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: VotingManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2596102041047578957, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2596102041047578957, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2844773852718699776, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
       propertyPath: m_CellSize.x
       value: 300
@@ -169,6 +197,38 @@ PrefabInstance:
     - target: {fileID: 3794498309826344705, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
       propertyPath: m_fontSize
       value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107194911603242608, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107194911603242608, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107194911603242608, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8751274479980865457}
+    - target: {fileID: 4107194911603242608, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CastVote
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107194911603242608, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: VotingManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107194911603242608, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107194911603242608, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107194911603242608, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5408500166532554111, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
       propertyPath: m_fontSize
@@ -202,10 +262,42 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 37
       objectReference: {fileID: 0}
+    - target: {fileID: 6602605980013957939, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6602605980013957939, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6602605980013957939, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8751274479980865457}
+    - target: {fileID: 6602605980013957939, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CastVote
+      objectReference: {fileID: 0}
+    - target: {fileID: 6602605980013957939, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: VotingManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6602605980013957939, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6602605980013957939, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7566293540239991454, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 8751274479980865457}
+    - target: {fileID: 7566293540239991454, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7643327547590861545, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
       propertyPath: m_SizeDelta.x
       value: 9.71
