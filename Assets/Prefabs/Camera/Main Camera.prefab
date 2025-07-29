@@ -323,7 +323,7 @@ MonoBehaviour:
   minZoom: 4
   maxZoom: 5
   FurthestRightPoint: 0
-  FurthestLeftPoint: 0
+  FurthestLeftPoint: 60
   bottomOfStage: -5.11
   ColliderRight: {fileID: 6996621723843196869}
   ColliderLeft: {fileID: 5952950527792163558}
@@ -445,7 +445,7 @@ GameObject:
   - component: {fileID: 1695729621393318651}
   m_Layer: 6
   m_Name: BottomCollider
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
