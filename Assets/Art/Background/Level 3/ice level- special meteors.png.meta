@@ -210,7 +210,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ice level- special meteors_0: -9180695268634683918
+      ice level- special meteors_1: 1701883645486332122
+      ice level- special meteors_2: -3424428980091039634
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
