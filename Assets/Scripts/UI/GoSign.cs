@@ -9,11 +9,6 @@ public class GoSign : MonoBehaviour
     float timerCounter;
     bool canDissapearFlag = true;
 
-    private void Start()
-    {
-        OnEnable();
-    }
-
     private void OnEnable()
     {
         timerCounter = dissapearTimer;
