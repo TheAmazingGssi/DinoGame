@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -143,11 +144,28 @@ public class VotingManager : MonoBehaviour
 
         int winningChoice = topChoices.Count == 1 ? topChoices[0] : topChoices[UnityEngine.Random.Range(0, topChoices.Count)]; //random until we add xp
 
+        //buttons[winningChoice].gameObject.GetComponent<Image>() = Color.green;
+
+/*        for (int i = 0; i <= buttons.Length; i++)
+        {
+            if (buttons[i].gameObject.active == true && i != winningChoice)
+            {
+                buttons[i].gameObject.SetActive(false);
+            }
+        }*/
+
+       // StartCoroutine(WiningChoiceDisplay());
+
         votingPanel.SetActive(false);
 
         OnVoteComplete?.Invoke(winningChoice);
 
         Debug.Log($"Vote completed. Winning choice: {(winningChoice == 0 ? currentVote.Choices[0] : currentVote.Choices[1])}");
+    }
+
+    private IEnumerator WiningChoiceDisplay()
+    {
+        yield return new WaitForSeconds(5);
     }
 
     private void UpdateTimerDisplay()

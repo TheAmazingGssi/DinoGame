@@ -51,6 +51,7 @@ public class HelpSaberToothVSStealAcorn : Vote
                 if (LevelNumber == GameManager.Instance.LevelNumber)
                 {
                     GameManager.Instance.NextLevelEffects.Add(this, i);
+                    Debug.Log("adding to next level case 1");
 
                 }
                 else
