@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour
     public Dictionary<Vote, int> NextLevelEffects = new Dictionary<Vote, int>();
     private int enemiesOnStage = 0;
     private int currentWave = 0;
+    [SerializeField] UnityEvent waveCompleted = new UnityEvent();
 
     void Start()
     {
@@ -107,6 +109,7 @@ public class GameManager : MonoBehaviour
         else
         {
             cameraMovement.FurthestRightPoint = waveLocations[currentWave].RightMost;
+            waveCompleted.Invoke();
         }
     }
 
