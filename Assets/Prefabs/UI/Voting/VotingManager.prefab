@@ -47,11 +47,13 @@ MonoBehaviour:
   votingPanel: {fileID: 0}
   TitleText: {fileID: 0}
   descriptionText: {fileID: 0}
-  timerText: {fileID: 0}
   ButtonsParent: {fileID: 0}
   background: {fileID: 0}
   hourHandle: {fileID: 0}
   minuteHandle: {fileID: 0}
+  lorePanel: {fileID: 0}
+  winningVotePanel: {fileID: 0}
+  winningVoteText: {fileID: 0}
   buttons:
   - {fileID: 0}
   - {fileID: 0}
@@ -62,7 +64,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  testButton: {fileID: 0}
   uiSpawner: {fileID: 0}
-  readDuration: 20
-  voteDuration: 10
-  amountOfMinuteRotations: 3
+  readDuration: 10
+  voteDuration: 20
+  amountOfMinuteRotations: 5
