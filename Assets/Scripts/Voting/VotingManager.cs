@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 public class VotingManager : MonoBehaviour
 {
-    [Header("References")]
+    [Header("Vote Panel References")]
     [SerializeField] private GameObject votingPanel;
     [SerializeField] private TextMeshProUGUI TitleText;
     [SerializeField] private TextMeshProUGUI descriptionText;
@@ -16,6 +16,14 @@ public class VotingManager : MonoBehaviour
     [SerializeField] private GameObject background;
     [SerializeField] private ClockHandle hourHandle;
     [SerializeField] private ClockHandle minuteHandle;
+
+    [Header("Lore Panel References")]
+    [SerializeField] private GameObject lorePanel;
+
+    [Header("Winning Vote Panel References")]
+    [SerializeField] private GameObject winningVotePanel;
+    [SerializeField] private TextMeshProUGUI winningVoteText;
+
 
     [SerializeField] private MultiplayerButton[] buttons;
     [SerializeField] private TextMeshProUGUI[] choicesTexts;
@@ -143,11 +151,6 @@ public class VotingManager : MonoBehaviour
 
         int winningChoice = topChoices.Count == 1 ? topChoices[0] : topChoices[UnityEngine.Random.Range(0, topChoices.Count)]; //random until we add xp
 
-
-        //Image image = buttons[winningChoice].gameObject.GetComponent<Image>();
-        Image image = testButton.GetComponent<Image>();
-        if (image != null) image.tintColor = Color.green;
-        else Debug.Log("image is null!!!!");
 
         for (int i = 0; i < buttons.Length; i++)
         {
