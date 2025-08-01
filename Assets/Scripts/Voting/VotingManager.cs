@@ -12,7 +12,6 @@ public class VotingManager : MonoBehaviour
     [SerializeField] private GameObject votingPanel;
     [SerializeField] private TextMeshProUGUI TitleText;
     [SerializeField] private TextMeshProUGUI descriptionText;
-    [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private GameObject ButtonsParent;
     [SerializeField] private GameObject background;
     [SerializeField] private ClockHandle hourHandle;
@@ -20,6 +19,8 @@ public class VotingManager : MonoBehaviour
 
     [SerializeField] private MultiplayerButton[] buttons;
     [SerializeField] private TextMeshProUGUI[] choicesTexts;
+
+    [SerializeField] private GameObject testButton;
 
     [SerializeField] private UIControllerSpawner uiSpawner;
 
@@ -39,7 +40,6 @@ public class VotingManager : MonoBehaviour
 
     private bool isVoting = false;
     private bool isReading = false;
-    private bool isVotingDebug = false;
 
     public void StartVote(Vote vote)
     {
@@ -73,7 +73,6 @@ public class VotingManager : MonoBehaviour
         ButtonsParent.SetActive(true);
         timer += voteDuration;
         isVoting = true;
-        isVotingDebug = true;
         uiSpawner.SpawnControllers();
     }
 
@@ -144,28 +143,35 @@ public class VotingManager : MonoBehaviour
 
         int winningChoice = topChoices.Count == 1 ? topChoices[0] : topChoices[UnityEngine.Random.Range(0, topChoices.Count)]; //random until we add xp
 
-        //buttons[winningChoice].gameObject.GetComponent<Image>() = Color.green;
 
-/*        for (int i = 0; i <= buttons.Length; i++)
+        //Image image = buttons[winningChoice].gameObject.GetComponent<Image>();
+        Image image = testButton.GetComponent<Image>();
+        if (image != null) image.tintColor = Color.green;
+        else Debug.Log("image is null!!!!");
+
+        for (int i = 0; i < buttons.Length; i++)
         {
-            if (buttons[i].gameObject.active == true && i != winningChoice)
+            if (buttons[i].gameObject.activeInHierarchy == true && i != winningChoice)
             {
                 buttons[i].gameObject.SetActive(false);
             }
-        }*/
+        }
 
-       // StartCoroutine(WiningChoiceDisplay());
+        StartCoroutine(WiningChoiceDisplay(winningChoice));
 
-        votingPanel.SetActive(false);
 
-        OnVoteComplete?.Invoke(winningChoice);
 
         Debug.Log($"Vote completed. Winning choice: {(winningChoice == 0 ? currentVote.Choices[0] : currentVote.Choices[1])}");
     }
 
-    private IEnumerator WiningChoiceDisplay()
+    private IEnumerator WiningChoiceDisplay(int winningChoice)
     {
         yield return new WaitForSeconds(5);
+
+        votingPanel.SetActive(false);
+
+        OnVoteComplete?.Invoke(winningChoice);
+        Debug.Log("Showing winning vote");
     }
 
     private void UpdateTimerDisplay()
@@ -173,6 +179,6 @@ public class VotingManager : MonoBehaviour
         //int seconds = Mathf.CeilToInt(timer);
         //timerText.text = $"{seconds}";
         hourHandle.SetHandle(voteDuration, timer);
-        minuteHandle.SetHandle(voteDuration, timer * amountOfMinuteRotations);
+        //minuteHandle.SetHandle(voteDuration, timer * amountOfMinuteRotations);
     }
 }

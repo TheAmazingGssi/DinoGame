@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85e1ae9ae5f684a4f9ab2eb4ce5bc120, type: 3}
   m_Name: BossData
   m_EditorClassIdentifier: 
-  <MaxHealth>k__BackingField: 500
+  <MaxHealth>k__BackingField: 1
   <BaseDamage>k__BackingField: 1
   <StopRange>k__BackingField: 5
   <AttackRange>k__BackingField: 8

@@ -68,8 +68,6 @@ public class EnemyManager : MonoBehaviour
         animator.ResetTrigger("Hurt");
         animator.ResetTrigger("Knockback");
 
-        Debug.Log("Enemy died - playing death animation");
-
         if (enemyController) enemyController.enabled = false;
         if (attackManager) attackManager.enabled = false;
         if (rb) rb.linearVelocity = Vector2.zero;
@@ -83,8 +81,12 @@ public class EnemyManager : MonoBehaviour
         {
             for (int i = 0; i < healthDropAmount; i++)
             {
-                Vector2 randomOffset = Random.insideUnitCircle * 1.5f;
-                Vector3 spawnPosition = transform.position + (Vector3)randomOffset;
+                Vector2 spawnPosition = new Vector2(1,1);
+                while (spawnPosition.y > -0.226)
+                {
+                    Vector2 randomOffset = Random.insideUnitCircle * 1.5f;
+                    spawnPosition = transform.position + (Vector3)randomOffset;
+                }
                 Instantiate(healthItem, spawnPosition, Quaternion.identity);
             }
         }
