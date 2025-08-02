@@ -47,6 +47,11 @@ public class AnimationController : MonoBehaviour
     {
         mainAnimator.SetBool("IsBlocking", isBlocking);
     }
+    
+    public void SetFrozen(bool isFrozen)
+    {
+        mainAnimator.SetBool("isFrozen", isFrozen);
+    }
 
     public void SetEmoting(bool isEmoting)
     {
@@ -59,7 +64,7 @@ public class AnimationController : MonoBehaviour
         mainAnimator.SetTrigger("Downed");
     }
 
-    public void SetRevive()
+    public void TriggerRevive()
     {
         mainAnimator.SetTrigger("Revive");
     }
@@ -71,7 +76,7 @@ public class AnimationController : MonoBehaviour
     
     public void TriggerSpecialVfx()
     {
-        if (vfxPlaying) return; // ✅ Ignore extra calls until reset
+        if (vfxPlaying) return; 
         vfxPlaying = true;
 
         if (!SpecialVfxAnimator.gameObject.activeSelf)
@@ -82,7 +87,7 @@ public class AnimationController : MonoBehaviour
 
     public void ResetSpecialVfx()
     {
-        vfxPlaying = false; // ✅ Allow next attack to play VFX again
+        vfxPlaying = false; 
     }
 
 

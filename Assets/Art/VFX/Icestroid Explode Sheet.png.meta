@@ -1,0 +1,1241 @@
+fileFormatVersion: 2
+guid: 4896e40c5b68fc44f86f10d8e45b7635
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3944470305902130314
+    second: Icestroid Explode Sheet_0
+  - first:
+      213: 3513942112274512945
+    second: Icestroid Explode Sheet_1
+  - first:
+      213: -8065864530408546768
+    second: Icestroid Explode Sheet_2
+  - first:
+      213: -1429165924406753781
+    second: Icestroid Explode Sheet_3
+  - first:
+      213: 4247973131730832724
+    second: Icestroid Explode Sheet_4
+  - first:
+      213: 8678327009654110152
+    second: Icestroid Explode Sheet_5
+  - first:
+      213: 7660398488994848522
+    second: Icestroid Explode Sheet_6
+  - first:
+      213: 4984638765550589469
+    second: Icestroid Explode Sheet_7
+  - first:
+      213: 929449959308146909
+    second: Icestroid Explode Sheet_8
+  - first:
+      213: -3912483699928147577
+    second: Icestroid Explode Sheet_9
+  - first:
+      213: -8327899762377440145
+    second: Icestroid Explode Sheet_10
+  - first:
+      213: -5713402235869491289
+    second: Icestroid Explode Sheet_11
+  - first:
+      213: 2677529889162156530
+    second: Icestroid Explode Sheet_12
+  - first:
+      213: -5471667063353659060
+    second: Icestroid Explode Sheet_13
+  - first:
+      213: -2614000598624811831
+    second: Icestroid Explode Sheet_14
+  - first:
+      213: -2602342025003761619
+    second: Icestroid Explode Sheet_15
+  - first:
+      213: 129858154161371240
+    second: Icestroid Explode Sheet_16
+  - first:
+      213: 3346122412799032062
+    second: Icestroid Explode Sheet_17
+  - first:
+      213: -964150581299604636
+    second: Icestroid Explode Sheet_18
+  - first:
+      213: -2167184307608108053
+    second: Icestroid Explode Sheet_19
+  - first:
+      213: 2507926125028538472
+    second: Icestroid Explode Sheet_20
+  - first:
+      213: -7398873333238413774
+    second: Icestroid Explode Sheet_21
+  - first:
+      213: -6061595510868034237
+    second: Icestroid Explode Sheet_22
+  - first:
+      213: -6215268257368627273
+    second: Icestroid Explode Sheet_23
+  - first:
+      213: 1826127136563824677
+    second: Icestroid Explode Sheet_24
+  - first:
+      213: 3736043356605312778
+    second: Icestroid Explode Sheet_25
+  - first:
+      213: -6065509506676590425
+    second: Icestroid Explode Sheet_26
+  - first:
+      213: 2696205690845564011
+    second: Icestroid Explode Sheet_27
+  - first:
+      213: -2952839713460459738
+    second: Icestroid Explode Sheet_28
+  - first:
+      213: 1677630579658844172
+    second: Icestroid Explode Sheet_29
+  - first:
+      213: 3194237671019707231
+    second: Icestroid Explode Sheet_30
+  - first:
+      213: 4503474852050602458
+    second: Icestroid Explode Sheet_31
+  - first:
+      213: -554892444986144585
+    second: Icestroid Explode Sheet_32
+  - first:
+      213: 7218532080676198359
+    second: Icestroid Explode Sheet_33
+  - first:
+      213: -8000193606109746045
+    second: Icestroid Explode Sheet_34
+  - first:
+      213: 2214715621725084102
+    second: Icestroid Explode Sheet_35
+  - first:
+      213: 8150420263274232171
+    second: Icestroid Explode Sheet_36
+  - first:
+      213: 7268509129686940923
+    second: Icestroid Explode Sheet_37
+  - first:
+      213: 3332961458156890645
+    second: Icestroid Explode Sheet_38
+  - first:
+      213: 6168092630315265314
+    second: Icestroid Explode Sheet_39
+  - first:
+      213: -2400436123103558722
+    second: Icestroid Explode Sheet_40
+  - first:
+      213: 3033076978073045735
+    second: Icestroid Explode Sheet_41
+  - first:
+      213: 3459451695585687231
+    second: Icestroid Explode Sheet_42
+  - first:
+      213: -8638103680288849495
+    second: Icestroid Explode Sheet_43
+  - first:
+      213: 7250572198170057339
+    second: Icestroid Explode Sheet_44
+  - first:
+      213: -4418542629002393267
+    second: Icestroid Explode Sheet_45
+  - first:
+      213: -1575714184164596110
+    second: Icestroid Explode Sheet_46
+  - first:
+      213: -1636976621542345529
+    second: Icestroid Explode Sheet_47
+  - first:
+      213: 8159176827738720983
+    second: Icestroid Explode Sheet_48
+  - first:
+      213: 4440100534725353282
+    second: Icestroid Explode Sheet_49
+  - first:
+      213: 3562238315284013811
+    second: Icestroid Explode Sheet_50
+  - first:
+      213: 8149398372545462727
+    second: Icestroid Explode Sheet_51
+  - first:
+      213: 3705150374674022936
+    second: Icestroid Explode Sheet_52
+  - first:
+      213: 2923299548506035253
+    second: Icestroid Explode Sheet_53
+  - first:
+      213: 111698339556243297
+    second: Icestroid Explode Sheet_54
+  - first:
+      213: -7928436331524976756
+    second: Icestroid Explode Sheet_55
+  - first:
+      213: 1955955299540005216
+    second: Icestroid Explode Sheet_56
+  - first:
+      213: -6350487640946935295
+    second: Icestroid Explode Sheet_57
+  - first:
+      213: 22357542142504324
+    second: Icestroid Explode Sheet_58
+  - first:
+      213: 4009107536680782855
+    second: Icestroid Explode Sheet_59
+  - first:
+      213: -7084464940361474181
+    second: Icestroid Explode Sheet_60
+  - first:
+      213: -4111181240488492406
+    second: Icestroid Explode Sheet_61
+  - first:
+      213: 228784044631785142
+    second: Icestroid Explode Sheet_62
+  - first:
+      213: -4998291244652063418
+    second: Icestroid Explode Sheet_63
+  - first:
+      213: -1062901415353678354
+    second: Icestroid Explode Sheet_64
+  - first:
+      213: 404620188087371352
+    second: Icestroid Explode Sheet_65
+  - first:
+      213: 8342750253217446014
+    second: Icestroid Explode Sheet_66
+  - first:
+      213: 5280551843520965537
+    second: Icestroid Explode Sheet_67
+  - first:
+      213: 7941921731221861514
+    second: Icestroid Explode Sheet_68
+  - first:
+      213: -5105154802813595470
+    second: Icestroid Explode Sheet_69
+  - first:
+      213: -8133912528157995921
+    second: Icestroid Explode Sheet_70
+  - first:
+      213: 225407506172064441
+    second: Icestroid Explode Sheet_71
+  - first:
+      213: -2861315912223035391
+    second: Icestroid Explode Sheet_72
+  - first:
+      213: 4589339418502842696
+    second: Icestroid Explode Sheet_73
+  - first:
+      213: -3614509329980851929
+    second: Icestroid Explode Sheet_74
+  - first:
+      213: -4889598351924663427
+    second: Icestroid Explode Sheet_75
+  - first:
+      213: 671844510468996741
+    second: Icestroid Explode Sheet_76
+  - first:
+      213: 894226282693045101
+    second: Icestroid Explode Sheet_77
+  - first:
+      213: -7663414718084154812
+    second: Icestroid Explode Sheet_78
+  - first:
+      213: -1947017687929189044
+    second: Icestroid Explode Sheet_79
+  - first:
+      213: 1430701552349810868
+    second: Icestroid Explode Sheet_80
+  - first:
+      213: 3472205851132409297
+    second: Icestroid Explode Sheet_81
+  - first:
+      213: 6352116928167338941
+    second: Icestroid Explode Sheet_82
+  - first:
+      213: -543371844718318434
+    second: Icestroid Explode Sheet_83
+  - first:
+      213: -1732856794108073901
+    second: Icestroid Explode Sheet_84
+  - first:
+      213: 8367600397711070604
+    second: Icestroid Explode Sheet_85
+  - first:
+      213: 4120752359006180282
+    second: Icestroid Explode Sheet_86
+  - first:
+      213: -7589751874315537973
+    second: Icestroid Explode Sheet_87
+  - first:
+      213: -7116918885294880696
+    second: Icestroid Explode Sheet_88
+  - first:
+      213: 212924332369748812
+    second: Icestroid Explode Sheet_89
+  - first:
+      213: -9096028640675032647
+    second: Icestroid Explode Sheet_90
+  - first:
+      213: 7500484059606766117
+    second: Icestroid Explode Sheet_91
+  - first:
+      213: 1097769990585013591
+    second: Icestroid Explode Sheet_92
+  - first:
+      213: -1824193358237983023
+    second: Icestroid Explode Sheet_93
+  - first:
+      213: -5161872785184741665
+    second: Icestroid Explode Sheet_94
+  - first:
+      213: -5214406681402654387
+    second: Icestroid Explode Sheet_95
+  - first:
+      213: -6389119402198254904
+    second: Icestroid Explode Sheet_96
+  - first:
+      213: -3096992799833307461
+    second: Icestroid Explode Sheet_97
+  - first:
+      213: -8698538904050338089
+    second: Icestroid Explode Sheet_98
+  - first:
+      213: 1531904971415316623
+    second: Icestroid Explode Sheet_99
+  - first:
+      213: -5126788905603972058
+    second: Icestroid Explode Sheet_100
+  - first:
+      213: 7343659007680803472
+    second: Icestroid Explode Sheet_101
+  - first:
+      213: 2563099552026579189
+    second: Icestroid Explode Sheet_102
+  - first:
+      213: -4126668222034161773
+    second: Icestroid Explode Sheet_103
+  - first:
+      213: 4152222108838989324
+    second: Icestroid Explode Sheet_104
+  - first:
+      213: -2116477791875234521
+    second: Icestroid Explode Sheet_105
+  - first:
+      213: -1569830078160386988
+    second: Icestroid Explode Sheet_106
+  - first:
+      213: 8694303739388750058
+    second: Icestroid Explode Sheet_107
+  - first:
+      213: -6375275147750692697
+    second: Icestroid Explode Sheet_108
+  - first:
+      213: -5390630681524171962
+    second: Icestroid Explode Sheet_109
+  - first:
+      213: -1198698766280559505
+    second: Icestroid Explode Sheet_110
+  - first:
+      213: -8531916936245216307
+    second: Icestroid Explode Sheet_111
+  - first:
+      213: 6065842363598305230
+    second: Icestroid Explode Sheet_112
+  - first:
+      213: 9082283514810082963
+    second: Icestroid Explode Sheet_113
+  - first:
+      213: 22151571536588557
+    second: Icestroid Explode Sheet_114
+  - first:
+      213: -6844756733764720874
+    second: Icestroid Explode Sheet_115
+  - first:
+      213: -4928236235502376893
+    second: Icestroid Explode Sheet_116
+  - first:
+      213: -6454890296934618296
+    second: Icestroid Explode Sheet_117
+  - first:
+      213: -6627520984873995018
+    second: Icestroid Explode Sheet_118
+  - first:
+      213: -1646190313737656087
+    second: Icestroid Explode Sheet_119
+  - first:
+      213: 3427698375595931854
+    second: Icestroid Explode Sheet_120
+  - first:
+      213: -748133681295620556
+    second: Icestroid Explode Sheet_121
+  - first:
+      213: 8544137094211804725
+    second: Icestroid Explode Sheet_122
+  - first:
+      213: -8133502272786571989
+    second: Icestroid Explode Sheet_123
+  - first:
+      213: 601926531536014565
+    second: Icestroid Explode Sheet_124
+  - first:
+      213: 4298599190231882764
+    second: Icestroid Explode Sheet_125
+  - first:
+      213: -1012785794437832389
+    second: Icestroid Explode Sheet_126
+  - first:
+      213: -6164885090890264435
+    second: Icestroid Explode Sheet_127
+  - first:
+      213: -602251604036377504
+    second: Icestroid Explode Sheet_128
+  - first:
+      213: 8156780260204063786
+    second: Icestroid Explode Sheet_129
+  - first:
+      213: -8619496260370980142
+    second: Icestroid Explode Sheet_130
+  - first:
+      213: 7846099718626594904
+    second: Icestroid Explode Sheet_131
+  - first:
+      213: -4408929911494945411
+    second: Icestroid Explode Sheet_132
+  - first:
+      213: 6412030345887200089
+    second: Icestroid Explode Sheet_133
+  - first:
+      213: 1088139077460010854
+    second: Icestroid Explode Sheet_134
+  - first:
+      213: -1377006494236168769
+    second: Icestroid Explode Sheet_135
+  - first:
+      213: -2093147659280148164
+    second: Icestroid Explode Sheet_136
+  - first:
+      213: 7843296159424667514
+    second: Icestroid Explode Sheet_137
+  - first:
+      213: -1859949334435172395
+    second: Icestroid Explode Sheet_138
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Icestroid Explode Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1200
+        width: 600
+        height: 300
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a847f5238d29db630800000000000000
+      internalID: 3944470305902130314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icestroid Explode Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 1196
+        width: 600
+        height: 300
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13c7863cbb704c030800000000000000
+      internalID: 3513942112274512945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icestroid Explode Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1200
+        width: 600
+        height: 300
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03e5392c1fa401090800000000000000
+      internalID: -8065864530408546768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icestroid Explode Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1200
+        width: 600
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0684aee9259a2ce0800000000000000
+      internalID: -1429165924406753781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icestroid Explode Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1200
+        width: 600
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45d483c7e05d3fa30800000000000000
+      internalID: 4247973131730832724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icestroid Explode Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1200
+        width: 600
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c77c1f7f6c9f6870800000000000000
+      internalID: 8678327009654110152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icestroid Explode Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 900
+        width: 600
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0f1a76d6d33f4a60800000000000000
+      internalID: 7660398488994848522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icestroid Explode Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 900
+        width: 600
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d16d84a2c8efc2540800000000000000
+      internalID: 4984638765550589469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icestroid Explode Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 900
+        width: 600
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd8301540d116ec00800000000000000
+      internalID: 929449959308146909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icestroid Explode Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 900
+        width: 600
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 789d64cddc014b9c0800000000000000
+      internalID: -3912483699928147577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icestroid Explode Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 900
+        width: 600
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f64ce6a0a4b5d6c80800000000000000
+      internalID: -8327899762377440145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icestroid Explode Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 900
+        width: 600
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7af8318ffeae5b0b0800000000000000
+      internalID: -5713402235869491289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icestroid Explode Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 600
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f9500f7f3f782520800000000000000
+      internalID: 2677529889162156530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icestroid Explode Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 600
+        width: 600
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c41b997cbcbb014b0800000000000000
+      internalID: -5471667063353659060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icestroid Explode Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 600
+        width: 600
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c44f4c1e4439bbd0800000000000000
+      internalID: -2614000598624811831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icestroid Explode Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 600
+        width: 600
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d20849f47bf92ebd0800000000000000
+      internalID: -2602342025003761619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icestroid Explode Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 600
+        width: 600
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 868f9fd9d495dc100800000000000000
+      internalID: 129858154161371240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icestroid Explode Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 600
+        width: 600
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efafbdd1b90df6e20800000000000000
+      internalID: 3346122412799032062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icestroid Explode Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 600
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46396a39726ae92f0800000000000000
+      internalID: -964150581299604636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icestroid Explode Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 300
+        width: 600
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be3c73eba5d9ce1e0800000000000000
+      internalID: -2167184307608108053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icestroid Explode Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 300
+        width: 600
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8687f3de581fdc220800000000000000
+      internalID: 2507926125028538472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icestroid Explode Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 300
+        width: 600
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 236c63287ebe15990800000000000000
+      internalID: -7398873333238413774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icestroid Explode Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 300
+        width: 600
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34dbb92aff2e0eba0800000000000000
+      internalID: -6061595510868034237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icestroid Explode Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 300
+        width: 600
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b728c7237eeeb9a0800000000000000
+      internalID: -6215268257368627273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icestroid Explode Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 600
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 528869994f4b75910800000000000000
+      internalID: 1826127136563824677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icestroid Explode Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 600
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0feaef63a719d330800000000000000
+      internalID: 3736043356605312778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icestroid Explode Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 600
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a879c87d3bf2dba0800000000000000
+      internalID: -6065509506676590425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icestroid Explode Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 0
+        width: 600
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6c8c3c6ac8da6520800000000000000
+      internalID: 2696205690845564011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icestroid Explode Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 600
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 627e588ece76507d0800000000000000
+      internalID: -2952839713460459738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 16210f0bf7c54b445bebf058fdf5870d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Icestroid Explode Sheet_0: 3944470305902130314
+      Icestroid Explode Sheet_1: 3513942112274512945
+      Icestroid Explode Sheet_10: -8327899762377440145
+      Icestroid Explode Sheet_11: -5713402235869491289
+      Icestroid Explode Sheet_12: 2677529889162156530
+      Icestroid Explode Sheet_13: -5471667063353659060
+      Icestroid Explode Sheet_14: -2614000598624811831
+      Icestroid Explode Sheet_15: -2602342025003761619
+      Icestroid Explode Sheet_16: 129858154161371240
+      Icestroid Explode Sheet_17: 3346122412799032062
+      Icestroid Explode Sheet_18: -964150581299604636
+      Icestroid Explode Sheet_19: -2167184307608108053
+      Icestroid Explode Sheet_2: -8065864530408546768
+      Icestroid Explode Sheet_20: 2507926125028538472
+      Icestroid Explode Sheet_21: -7398873333238413774
+      Icestroid Explode Sheet_22: -6061595510868034237
+      Icestroid Explode Sheet_23: -6215268257368627273
+      Icestroid Explode Sheet_24: 1826127136563824677
+      Icestroid Explode Sheet_25: 3736043356605312778
+      Icestroid Explode Sheet_26: -6065509506676590425
+      Icestroid Explode Sheet_27: 2696205690845564011
+      Icestroid Explode Sheet_28: -2952839713460459738
+      Icestroid Explode Sheet_29: 1677630579658844172
+      Icestroid Explode Sheet_3: -1429165924406753781
+      Icestroid Explode Sheet_4: 4247973131730832724
+      Icestroid Explode Sheet_5: 8678327009654110152
+      Icestroid Explode Sheet_6: 7660398488994848522
+      Icestroid Explode Sheet_7: 4984638765550589469
+      Icestroid Explode Sheet_8: 929449959308146909
+      Icestroid Explode Sheet_9: -3912483699928147577
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
