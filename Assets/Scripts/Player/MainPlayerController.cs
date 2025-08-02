@@ -85,7 +85,7 @@ public class MainPlayerController : MonoBehaviour
         canSpecial = true;
         fallenPlayers--;
         combatManager.RestoreHealthByPercent(100f);
-        animController.SetRevived();
+        //animController.SetRevived();
         StartCoroutine(ResetRevive());
         Debug.Log($"{stats.characterName} revived");
     }
@@ -311,7 +311,7 @@ public class MainPlayerController : MonoBehaviour
             MainPlayerController target = FindNearestFallenPlayer();
             if (target != null)
             {
-                animController.SetRevived();
+                animController.SetRevive();
                 RevivePrompt prompt = gameObject.AddComponent<RevivePrompt>();
                 prompt.StartRevive(this, target);
             }

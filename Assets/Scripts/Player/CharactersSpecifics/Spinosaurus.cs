@@ -1,28 +1,34 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UIElements;
 
 public class Spinosaurus : CharacterBase
 {
     private Transform _specialVfxTransform;
     private static float _specialVfxPositionX = 0.515f;
+    private bool specialVfxPerformed = false;
+    private bool specialInProgress = false;
+
+    private void Update()
+    {
+        _specialVfxPositionX = facingRight ? 0.515f : -0.515f;
+        _specialVfxTransform.localRotation = facingRight ? Quaternion.Euler(0, 0, 0) : Quaternion.Euler(0, 180, 0);
+        _specialVfxTransform.localPosition = new Vector3(_specialVfxPositionX, _specialVfxTransform.localPosition.y, _specialVfxTransform.localPosition.z);
+    }
 
     public override void Initialize(CharacterStats.CharacterData characterStats, AnimationController animController, GameObject rightCollider, GameObject leftCollider, bool isFacingRight, float enable, float disable)
     {
         base.Initialize(characterStats, animController, rightCollider, leftCollider, isFacingRight, enable, disable);
-        
         _specialVfxTransform = animController.SpecialVfxObject.transform;
     }
-    
 
     public override IEnumerator PerformSpecial(UnityAction<float> onSpecial)
     {
-        bool specialVfxPerformed = false;
-        if (rightMeleeColliderGO == null || leftMeleeColliderGO == null) yield break;
+        if (specialInProgress) yield break; 
+        specialInProgress = true;
+        specialVfxPerformed = false;
 
-        //IsAttacking = true;
-        //_mainPlayerController.ToggleIsAttacking();
         animController.TriggerSpecial();
 
         GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
@@ -31,10 +37,9 @@ public class Spinosaurus : CharacterBase
         Vector3 targetPos = new Vector3(facingRight ? 0.45f : -0.45f, startPos.y, startPos.z);
         Transform enemyTransform = null;
 
-        // Wait 0.5s
         yield return new WaitForSeconds(0.5f);
 
-        // Move collider to target over 0.3s
+        // === Attack move phase ===
         activeCollider.SetActive(true);
         float elapsed = 0f;
         while (elapsed < 0.3f)
@@ -43,113 +48,98 @@ public class Spinosaurus : CharacterBase
             float t = elapsed / 0.3f;
             activeCollider.transform.localPosition = Vector3.Lerp(startPos, targetPos, t);
 
-            // Check for enemy hit
             if (enemyTransform == null)
             {
                 Vector2 castOrigin = activeCollider.transform.position + (facingRight ? Vector3.right : Vector3.left) * 0.2f;
                 Vector2 boxSize = new Vector2(0.6f, 0.6f);
-                RaycastHit2D hit = Physics2D.BoxCast(castOrigin, boxSize, 0f, facingRight ? Vector2.right : Vector2.left, 0.2f, LayerMask.GetMask("Enemies"));
-                
-                // Visualize BoxCast - debugging only
+                RaycastHit2D[] hits = Physics2D.BoxCastAll(
+                    castOrigin,
+                    boxSize,
+                    0f,
+                    facingRight ? Vector2.right : Vector2.left,
+                    0.2f,
+                    LayerMask.GetMask("Combat")
+                );
+
                 //DrawBoxCast(castOrigin, boxSize, facingRight ? Vector2.right : Vector2.left, 0.2f, Color.red);
 
-                if (hit.collider != null)
+                foreach (var hit in hits)
                 {
-                    Debug.Log($"BoxCast hit: {hit.collider.gameObject.name}, Tag: {hit.collider.tag}, Layer: {LayerMask.LayerToName(hit.collider.gameObject.layer)}");
-                    if (hit.collider.CompareTag("Enemy"))
+                    if (hit.collider != null && hit.collider.name == "HurtBox")
                     {
-                        enemyTransform = hit.collider.transform;
+                        enemyTransform = hit.collider.transform.root;
                         activeMeleeDamage?.ApplyDamage(stats.specialAttackDamage, true, transform, null);
-                        Debug.Log($"Grabbed enemy: {enemyTransform.gameObject.name}");
+                        break; // stop after first HurtBox found
                     }
-                }
-                else
-                {
-                    Debug.Log("BoxCast hit nothing");
                 }
             }
 
-            // Drag enemy if hit
             if (enemyTransform != null)
                 enemyTransform.position = new Vector3(activeCollider.transform.position.x, enemyTransform.position.y, enemyTransform.position.z);
 
             yield return null;
         }
-        
+
         activeCollider.transform.localPosition = targetPos;
-        
-        elapsed = 0f;
-        while (elapsed < 0.1f)
-        {
-            elapsed += Time.deltaTime;
-            float t = elapsed / 0.1f;
-            
-            if (enemyTransform != null)
-                enemyTransform.position = new Vector3(activeCollider.transform.position.x, enemyTransform.position.y, enemyTransform.position.z);
-            
-            yield return null;
-        }
-        
+
         if (!specialVfxPerformed)
         {
-            _specialVfxPositionX = facingRight ? 0.515f : -0.515f;
-            _specialVfxTransform.localRotation = facingRight ? Quaternion.Euler(0, 0, 0): Quaternion.Euler(0, 180, 0);
-            _specialVfxTransform.localPosition = new Vector3(_specialVfxPositionX,_specialVfxTransform.localPosition.y, _specialVfxTransform.localPosition.z);
+            yield return null;
             animController.TriggerSpecialVfx();
             specialVfxPerformed = true;
         }
         
-        // Hold for 0.2s
+        
+        // === Short hold phase ===
+        elapsed = 0f;
+        while (elapsed < 0.1f)
+        {
+            elapsed += Time.deltaTime;
+            if (enemyTransform != null)
+                enemyTransform.position = new Vector3(activeCollider.transform.position.x, enemyTransform.position.y, enemyTransform.position.z);
+            yield return null;
+        }
+        
         yield return new WaitForSeconds(0.2f);
 
-        // Move collider post-Hold for 0.2s
+        //retract
         elapsed = 0f;
         while (elapsed < 0.2f)
         {
             elapsed += Time.deltaTime;
             float t = elapsed / 0.2f;
             activeCollider.transform.localPosition = Vector3.Lerp(targetPos, startPos, t);
-            
+
             if (enemyTransform != null)
                 enemyTransform.position = new Vector3(activeCollider.transform.position.x, enemyTransform.position.y, enemyTransform.position.z);
-            
+
             yield return null;
         }
 
         activeCollider.transform.localPosition = startPos;
         activeCollider.SetActive(false);
-        
+
         if (enemyTransform != null)
             enemyTransform.position = new Vector3(activeCollider.transform.position.x, enemyTransform.position.y, enemyTransform.position.z);
-        
-        //IsAttacking = false;
-        //_mainPlayerController.ToggleIsAttacking();
+
+        // ✅ Allow next attack & reset VFX
+        specialInProgress = false;
+        animController.ResetSpecialVfx();
     }
 
-    /* * Draws a box cast in the scene view for debugging purposes.
-     * 
-     * Parameters:
-     * - origin: The starting point of the box cast.
-     * - size: The size of the box.
-     * - direction: The direction of the box cast.
-     * - distance: The distance to cast the box.
-     * - color: The color of the debug lines.
-     
-    private void DrawBoxCast(Vector2 origin, Vector2 size, Vector2 direction, float distance, Color color)
+    /*private void DrawBoxCast(Vector2 origin, Vector2 size, Vector2 direction, float distance, Color color)
     {
         Vector2 endPoint = origin + direction.normalized * distance;
         Vector2 halfSize = size * 0.5f;
 
-        Vector2[] corners = new Vector2[]
-        {
+        Vector2[] corners = {
             origin + new Vector2(-halfSize.x, -halfSize.y),
             origin + new Vector2(halfSize.x, -halfSize.y),
             origin + new Vector2(halfSize.x, halfSize.y),
             origin + new Vector2(-halfSize.x, halfSize.y)
         };
 
-        Vector2[] endCorners = new Vector2[]
-        {
+        Vector2[] endCorners = {
             endPoint + new Vector2(-halfSize.x, -halfSize.y),
             endPoint + new Vector2(halfSize.x, -halfSize.y),
             endPoint + new Vector2(halfSize.x, halfSize.y),
