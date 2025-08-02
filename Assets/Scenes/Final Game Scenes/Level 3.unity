@@ -377,6 +377,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3037892570329261710, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}
+      propertyPath: EnemiesInWaveMultiplier
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037892570329261710, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}
       propertyPath: 'spawnPoints.Array.data[0]'
       value: 
       objectReference: {fileID: 1003815462}
@@ -386,7 +390,7 @@ PrefabInstance:
       objectReference: {fileID: 1392155083}
     - target: {fileID: 3037892570329261710, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}
       propertyPath: WaveStart.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3037892570329261710, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}
       propertyPath: WaveStart.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1015,6 +1019,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3037892570329261710, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}
+      propertyPath: EnemiesInWaveMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037892570329261710, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}
       propertyPath: 'spawnPoints.Array.data[0]'
       value: 
       objectReference: {fileID: 1003815462}
@@ -1024,7 +1032,7 @@ PrefabInstance:
       objectReference: {fileID: 1392155083}
     - target: {fileID: 3037892570329261710, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}
       propertyPath: WaveStart.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3037892570329261710, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}
       propertyPath: WaveStart.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1076,7 +1084,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5090422255044189261, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}
       propertyPath: m_Name
-      value: EnemySpawner (2)
+      value: EnemySpawner (Boss)
       objectReference: {fileID: 0}
     - target: {fileID: 7311519229502336573, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1614,6 +1622,10 @@ PrefabInstance:
     - target: {fileID: 3037892570329261710, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}
       propertyPath: spawnPoints.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037892570329261710, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}
+      propertyPath: EnemiesInWaveMultiplier
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3037892570329261710, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}
       propertyPath: 'spawnPoints.Array.data[0]'

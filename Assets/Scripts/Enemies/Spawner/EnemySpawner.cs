@@ -11,7 +11,7 @@ public class EnemySpawner : MonoBehaviour
     [HideInInspector] public float MinSpawnTime;
     [HideInInspector] public float MaxSpawnTime;
 
-    [HideInInspector] public int EnemiesInWaveMultiplier = 2;
+    public int EnemiesInWaveMultiplier = 2;
     private int EnemiesInWave;
 
     [SerializeField] Transform[] spawnPoints;
