@@ -33,6 +33,9 @@ public class Triceratops : CharacterBase
 
         GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
         MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
+        
+        activeMeleeDamage?.PrepareDamage(stats.specialAttackDamage, true, _mainPlayerController.transform, _mainPlayerController);
+        
         activeCollider.SetActive(true);
 
         Vector3 startPos = transform.position;
@@ -50,11 +53,10 @@ public class Triceratops : CharacterBase
             float t = elapsed / chargeDuration;
             Vector3 newPos = Vector3.Lerp(startPos, targetPos, t);
             rb.MovePosition(newPos);
-            //rb.AddForceX( direction.x * chargeSpeed * Time.fixedDeltaTime, ForceMode2D.Force)
             
             if (elapsed >= chargeDamageDelay)
             {
-                activeMeleeDamage?.ApplyDamage(stats.specialAttackDamage, true, transform, null);
+                activeMeleeDamage?.ApplyDamage(stats.specialAttackDamage, true, transform, _mainPlayerController);
             }
             yield return new WaitForFixedUpdate();
         }

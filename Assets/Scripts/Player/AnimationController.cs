@@ -50,7 +50,7 @@ public class AnimationController : MonoBehaviour
     
     public void SetFrozen(bool isFrozen)
     {
-        mainAnimator.SetBool("isFrozen", isFrozen);
+        mainAnimator.SetBool("IsFrozen", isFrozen);
     }
 
     public void SetEmoting(bool isEmoting)

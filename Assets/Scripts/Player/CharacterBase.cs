@@ -50,32 +50,33 @@ public abstract class CharacterBase : MonoBehaviour
         if (rightMeleeColliderGO != null && leftMeleeColliderGO != null)
         {
             _mainPlayerController.ToggleIsAttacking();
-            //IsAttacking = true;
-            
+
             float rightColliderPositionX = rightMeleeColliderGO.transform.localPosition.x;
             Transform normalAttackVfxObjectTransform = animController.normalAttackVfxAnimator.transform;
-            
+
             GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
             MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
-            
+
+            // ✅ Pass correct damage & controller before enabling collider
+            activeMeleeDamage?.PrepareDamage(damage, false, _mainPlayerController.transform, _mainPlayerController);
+
             animController.normalAttackVfxAnimator.transform.localPosition = new Vector3
             (
                 facingRight ? rightColliderPositionX : (-1) * rightColliderPositionX,
                 normalAttackVfxObjectTransform.localPosition.y,
                 normalAttackVfxObjectTransform.localPosition.z
             );
-            
+
             animController.normalAttackVfxRenderer.flipX = !facingRight;
             animController.normalAttackVfxAnimator.SetTrigger("Play");
-            
+
             activeCollider.SetActive(true);
             onAttack?.Invoke(damage);
-            
+
             yield return new WaitForSeconds(enableDuration);
             activeCollider.SetActive(false);
             yield return new WaitForSeconds(disableDelay);
-            
-            //IsAttacking = false;
+
             _mainPlayerController.ToggleIsAttacking();
         }
     }
