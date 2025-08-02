@@ -321,7 +321,7 @@ MonoBehaviour:
     sprite: {fileID: 0}
     CameraOffset: 0
   - LayerObject: {fileID: 4616703819447816943}
-    Multiplier: 0.6
+    Multiplier: 0
     sprite: {fileID: 0}
     CameraOffset: 0
   - LayerObject: {fileID: 7096224876854712744}

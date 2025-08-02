@@ -18,11 +18,12 @@ public class HUDManager : MonoBehaviour
         splashArts.Add(CharacterType.Spinosaurus, SpencerSplash);
         splashArts.Add(CharacterType.Parasaurolophus, ParisSplash);
         splashArts.Add(CharacterType.Therizinosaurus, AndrewSplash);
+        HideAll = false;
     }
 
     void Update()
     {
-        if(HideAll)
+        if (HideAll)
         {
             for (int i = 0; i < hudRefrences.Length; i++)
                 hudRefrences[i].gameObject.SetActive(false);

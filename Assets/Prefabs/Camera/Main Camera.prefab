@@ -320,7 +320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   zoomPadding: 4
-  minZoom: 4
+  minZoom: 4.5
   maxZoom: 5
   FurthestRightPoint: 0
   FurthestLeftPoint: 60

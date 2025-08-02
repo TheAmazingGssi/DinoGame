@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1233991894049710286}
   - component: {fileID: 7992615660450746499}
   - component: {fileID: 2485348504694633181}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tumbleweed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7266042487006504120}
   - component: {fileID: 5015062642908782187}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: desert level ground obstacles_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,7 +233,7 @@ GameObject:
   m_Component:
   - component: {fileID: 938543640182516794}
   - component: {fileID: 873869661063321823}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IllusionOfDepth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
