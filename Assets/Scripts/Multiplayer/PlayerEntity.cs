@@ -35,6 +35,9 @@ public class PlayerEntity : MonoBehaviour
     [HideInInspector] public UnityEvent<InputAction.CallbackContext> Pause = new UnityEvent<InputAction.CallbackContext>();
     [HideInInspector] public UnityEvent<InputAction.CallbackContext> Emote = new UnityEvent<InputAction.CallbackContext>();
 
+    //Data being saved for the next level
+    private int score = 0;
+
     public Transform GetCharactersTransform { get
         {
             if (MainPlayerController)
@@ -107,6 +110,9 @@ public class PlayerEntity : MonoBehaviour
         Revive.AddListener(MainPlayerController.Revive);
         Emote.AddListener(MainPlayerController.Emote);
 
+        //Set variables from last level
+        MainPlayerController.AddScore(score);
+
         return MainPlayerController;
     }
     private GameObject PickPlayerPrefab(CharacterType character)
@@ -128,5 +134,12 @@ public class PlayerEntity : MonoBehaviour
         uiController.SetUp(CharacterType, defaultButton);
 
         return uiController;
+    }
+    public static void SaveScore()
+    {
+        foreach (var player in PlayerList)
+        {
+            player.score = player.MainPlayerController.GetScore();
+        }
     }
 }

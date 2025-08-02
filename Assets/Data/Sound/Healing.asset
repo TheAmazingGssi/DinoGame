@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a34b07caa3e9b57409b94345db82bfad, type: 3}
   m_Name: Healing
   m_EditorClassIdentifier: 
-  Clips: []
+  Clips:
+  - {fileID: 8300000, guid: 8854223465db2b046a57b19e44c50aa0, type: 3}
+  - {fileID: 8300000, guid: 619543f4f102a4c439d4a2076b9dfdd9, type: 3}

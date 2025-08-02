@@ -95,6 +95,7 @@ public class GameManager : MonoBehaviour
         MainPlayerController highestScorePlayer = GetHighestScorePlayer().MainPlayerController;
         OnLevelEnd?.Invoke(highestScorePlayer);
         StartCoroutine(VictoryMoment());
+        PlayerEntity.SaveScore();
     }
     public void SetWaveSize(int amount)
     {

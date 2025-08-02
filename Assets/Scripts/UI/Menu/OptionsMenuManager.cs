@@ -18,17 +18,28 @@ public class OptionsMenuManager : MonoBehaviour
 
     [Header("Prefab Refrences")]
     [SerializeField] Selectable defaultSelection; //the first thing highlighted when the menu opens
+    [SerializeField] SoundPlayer soundPlayer; //make soundeffects on changning their volume
 
 
 
 
     public void OpenMenu()
     {
+        //set sliders to their actual positions
+        float value = 0;
+        if (audioMixer.GetFloat(MASTER_VOL, out value))
+            masterVol.value = value;
+        if (audioMixer.GetFloat(MUSIC_VOL, out value))
+            musicVol.value = value;
+        if (audioMixer.GetFloat(SFX_VOL, out value))
+            SFXVol.value = value;
+
         gameObject.SetActive(true);
         defaultSelection.Select();
     }
     public void CloseMenu()
     {
+        Debug.Log("should close now");
         gameObject.SetActive(false);
         OptionsButton.Select();
     }
@@ -45,5 +56,6 @@ public class OptionsMenuManager : MonoBehaviour
     public void ChangeSFXVolume()
     {
         audioMixer.SetFloat(SFX_VOL, SFXVol.value);
+        soundPlayer.PlaySound(0);
     }
 }
