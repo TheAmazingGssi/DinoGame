@@ -7,7 +7,9 @@ using UnityEngine.UI;
 public class CharacterSelectorRefrenceHolder : MonoBehaviour
 {
     [SerializeField] Image image;
-    [SerializeField] TextMeshProUGUI text;
+    [SerializeField] TextMeshProUGUI readyText;
+    [SerializeField] TextMeshProUGUI nameText;
     public Image Image { get => image; }
-    public TextMeshProUGUI Text { get => text; }
+    public TextMeshProUGUI ReadyText { get => readyText; }
+    public TextMeshProUGUI NameText { get => nameText; }
 }

@@ -8,6 +8,7 @@ public class CharSelectMultiplayerManager : MonoBehaviour
 {
     [SerializeField] CharacterType[] characterList;
     [SerializeField] Sprite[] splashArtArray;
+    [SerializeField] string[] namesArray;
     [SerializeField] CharacterSelectorRefrenceHolder[] displayers;
     const string notReadyMessege = "Press X to ready";
     const string readyMessege = "Ready!";
@@ -17,6 +18,7 @@ public class CharSelectMultiplayerManager : MonoBehaviour
     [SerializeField] float allReadyBuffer = 0.1f;
     float allReadyTime;
     Dictionary<CharacterType, Sprite> splashArt = new Dictionary<CharacterType, Sprite>();
+    Dictionary<CharacterType, string> names = new Dictionary<CharacterType, string>();
 
     bool cancelTrigger = false;
     bool confirmTrigger = false;
@@ -26,6 +28,7 @@ public class CharSelectMultiplayerManager : MonoBehaviour
         for (int i = 0; i < characterList.Length; i++)
         {
             splashArt.Add(characterList[i], splashArtArray[i]);
+            names.Add(characterList[i], namesArray[i]);
         }
     }
 
@@ -48,6 +51,7 @@ public class CharSelectMultiplayerManager : MonoBehaviour
         for (int i = 0; i < playerList.Count; i++)
         {
             displayers[i].Image.sprite = splashArt[playerList[i].SelectedCharacter];
+            displayers[i].NameText.text = names[playerList[i].SelectedCharacter];
         }
     }
     private void UpdateReady()
@@ -56,10 +60,10 @@ public class CharSelectMultiplayerManager : MonoBehaviour
         for(int i = 0; i<playerList.Count; i++)
         {
             if (playerList[i].ready)
-                displayers[i].Text.text = readyMessege;
+                displayers[i].ReadyText.text = readyMessege;
             else
             {
-                displayers[i].Text.text = notReadyMessege;
+                displayers[i].ReadyText.text = notReadyMessege;
                 while (CharacterTaken(playerList[i].SelectedCharacter))
                     playerList[i].SelectedCharacter = GetNextCharacter(playerList[i].SelectedCharacter);
                 allReady = false;
