@@ -33,6 +33,7 @@ public class Spinosaurus : CharacterBase
 
         GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
         MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
+        activeMeleeDamage?.PrepareDamage(stats.specialAttackDamage, true, _mainPlayerController.transform, _mainPlayerController);
         Vector3 startPos = new Vector3(facingRight ? 0.175f : -0.175f, activeCollider.transform.localPosition.y, activeCollider.transform.localPosition.z);
         Vector3 targetPos = new Vector3(facingRight ? 0.45f : -0.45f, startPos.y, startPos.z);
         Transform enemyTransform = null;
@@ -68,8 +69,8 @@ public class Spinosaurus : CharacterBase
                     if (hit.collider != null && hit.collider.name == "HurtBox" && hit.collider.tag == "Enemy")
                     {
                         enemyTransform = hit.collider.transform.root;
-                        activeMeleeDamage?.ApplyDamage(stats.specialAttackDamage, true, transform, null);
-                        break; // stop after first HurtBox found
+                        activeMeleeDamage?.ApplyDamage(stats.specialAttackDamage, true, transform, _mainPlayerController);
+                        break; 
                     }
                 }
             }
@@ -121,8 +122,7 @@ public class Spinosaurus : CharacterBase
 
         if (enemyTransform != null)
             enemyTransform.position = new Vector3(activeCollider.transform.position.x, enemyTransform.position.y, enemyTransform.position.z);
-
-        // ✅ Allow next attack & reset VFX
+        
         specialInProgress = false;
         animController.ResetSpecialVfx();
     }

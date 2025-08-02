@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Random = UnityEngine.Random;
 
 public enum CharacterType
 {
@@ -41,6 +43,9 @@ public class MainPlayerController : MonoBehaviour
 
     [Header("Revive Variables")]
     [SerializeField] private float reviveRange = 2f;
+
+    [Header("Freeze Variables")]
+    [SerializeField] private float freezeLength = 3f;
 
     [Header("Emote Variables")]
     [SerializeField] private AudioClip emoteSound;
@@ -162,10 +167,7 @@ public class MainPlayerController : MonoBehaviour
     private void Update()
     {
         if (isFrozen)
-        {
-            
             return;
-        }
         
         if (!isFallen)
         {
@@ -271,7 +273,7 @@ public class MainPlayerController : MonoBehaviour
 
     public void Attack(InputAction.CallbackContext context)
     {
-        if (context.performed && canAttack && !isBlocking && !isEmoting && !isFallen)
+        if (context.performed && canAttack && !isBlocking && !isEmoting && !isFallen && !isFrozen)
         {
             canAttack = false;
             lastAttackTime = Time.time;
@@ -279,7 +281,7 @@ public class MainPlayerController : MonoBehaviour
             float damage = characterType == CharacterType.Spinosaurus ? stats.damageMin : Random.Range(stats.damageMin, stats.damageMax);
             animController.TriggerAttack();
 
-            StartCoroutine(characterScript.PerformAttack(damage, (dmg) =>
+            StartCoroutine(characterScript.PerformAttack(damage, dmg =>
             {
                 MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
                 activeMeleeDamage?.ApplyDamage(dmg, false, transform, this);
@@ -348,24 +350,18 @@ public class MainPlayerController : MonoBehaviour
 
     private IEnumerator PerformSpecialAttackCoroutine()
     {
-        isPerformingSpecialMovement = true;
-        ToggleIsAttacking();
-        //----------------------------------------------------------------------------------------------------remove???????????????
-        yield return characterScript.PerformSpecial((dmg) => { /* MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
+        if (!isFrozen)
+        {
+            isPerformingSpecialMovement = true;
+            //isAttacking = true;
+            //ToggleIsAttacking();
+            yield return characterScript.PerformSpecial((dmg) => { });
 
-            if (characterType == CharacterType.Parasaurolophus)
-            {
-                //activeMeleeDamage = ((Parasaurolophus)characterScript).SpecialMeleeDamage;
-                //activeMeleeDamage?.ApplyDamage(dmg, true, transform, this);
-            }
-            else
-            {
-                //activeMeleeDamage?.ApplyDamage(dmg, true, transform, this, characterType == CharacterType.Spinosaurus);
-            }*/});
-
-        ToggleIsAttacking();
-        isPerformingSpecialMovement = false;
-        canSpecial = true;
+            //ToggleIsAttacking();
+            //isAttacking = false;
+            isPerformingSpecialMovement = false;
+            canSpecial = true;
+        }
     }
 
     private MainPlayerController FindNearestFallenPlayer()
@@ -386,7 +382,6 @@ public class MainPlayerController : MonoBehaviour
                 }
             }
         }
-
         return nearest;
     }
 
@@ -411,22 +406,25 @@ public class MainPlayerController : MonoBehaviour
         Debug.Log($"{stats.characterName} mud slow active: {isMudSlowed}");
     }
     
-    public void ToggleFreezeEffect()
+    public void ActivateFreezeEffect()
     {
-        isFrozen = !isFrozen;
-        if (isFrozen)
-        {
-            rb.linearVelocity = Vector2.zero; // Stop movement when frozen
-            animController.SetMoveSpeed(0f);
-        }
-        else
-        {
-            rb.linearVelocity = currentVelocity; // Restore movement speed when unfrozen
-            animController.SetMoveSpeed(moveInput.magnitude);
-        }
+        StartCoroutine(FreezeCoroutine());
+    }
+
+    private IEnumerator FreezeCoroutine()
+    {
+        isFrozen = true;
+        rb.linearVelocity = Vector2.zero;
+        animController.SetFrozen(true);
+        Debug.Log($"{stats.characterName} mud slow active: {isMudSlowed}");
+
+        yield return new WaitForSeconds(freezeLength);
+
+        isFrozen = false;
+        animController.SetFrozen(false);
         Debug.Log($"{stats.characterName} mud slow active: {isMudSlowed}");
     }
-    
+
     public void ToggleIsAttacking()
     {
         isAttacking = !isAttacking;

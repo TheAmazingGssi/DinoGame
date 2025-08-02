@@ -6,19 +6,26 @@ public class IcetroidSpawner : MonoBehaviour
 {
     [Header("Icetroid Settings")]
     [SerializeField] private GameObject icetroidPrefab;
+    [SerializeField] private Collider2D spawnArea;
+
     [SerializeField] private int maxIcetrods = 5;
 
     [Header("Spawn Timing")]
     [SerializeField] private float minSpawnInterval = 1f;
     [SerializeField] private float maxSpawnInterval = 3f;
-
-    [Header("Spawn Positioning")]
-    [SerializeField] private float spawnHeight = 5f;
-    [SerializeField] private float spawnRangeX = 10f;
-
+    
     private float nextSpawnTime;
     private int currentIcetrods = 0;
+    
+    // Edges of the spawn area
+    private float leftEdge;
+    private float rightEdge;
 
+    private void Awake()
+    {
+        leftEdge = spawnArea.bounds.min.x;
+        rightEdge = spawnArea.bounds.max.x;
+    }
 
     private void Start()
     {
@@ -36,11 +43,25 @@ public class IcetroidSpawner : MonoBehaviour
 
     private void SpawnIcetroid()
     {
-        float spawnX = UnityEngine.Random.Range(-spawnRangeX, spawnRangeX);
+        float spawnX = UnityEngine.Random.Range(leftEdge, rightEdge);
         float spawnY = transform.position.y;
         Vector2 spawnPosition = new Vector2(spawnX, spawnY);
 
-        Instantiate(icetroidPrefab, spawnPosition, Quaternion.identity);
+        GameObject icetroidObj = Instantiate(icetroidPrefab, spawnPosition, Quaternion.identity);
+
+        currentIcetrods++;
+
+        Icetroid icetroidScript = icetroidObj.GetComponent<Icetroid>();
+        
+        if (icetroidScript != null)
+        {
+            icetroidScript.OnDestroyed += HandleIcetroidDestroyed;
+        }
+    }
+
+    private void HandleIcetroidDestroyed()
+    {
+        currentIcetrods--;
     }
 
     private void SetNextSpawnTime()

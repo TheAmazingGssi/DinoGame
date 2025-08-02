@@ -23,16 +23,23 @@ public class Parasaurolophus : CharacterBase
             yield break;
         }
 
-        //IsAttacking = true; // Block movement
         _mainPlayerController.ToggleIsAttacking();
         specialColliderGO.SetActive(true);
-        //onSpecial?.Invoke(stats.specialAttackDamage);
-        specialMeleeDamage?.ApplyDamage(stats.specialAttackDamage, true, transform, null);
+
+        // ✅ Pass correct controller here
+        specialMeleeDamage?.PrepareDamage(stats.specialAttackDamage, true, _mainPlayerController.transform, _mainPlayerController);
+
+        onSpecial?.Invoke(stats.specialAttackDamage);
+
+        // Also apply immediate area damage if you want specials to hit instantly
+        specialMeleeDamage?.ApplyDamage(stats.specialAttackDamage, true, _mainPlayerController.transform, _mainPlayerController);
+
         yield return new WaitForSeconds(specialVfxActivationTime);
         animController.SpecialVfxAnimator.SetTrigger("Play");
         yield return new WaitForSeconds(restOfSpecialActivationTime);
+
         specialColliderGO.SetActive(false);
         _mainPlayerController.ToggleIsAttacking();
-        //IsAttacking = false; // Resume movement
     }
+
 }
