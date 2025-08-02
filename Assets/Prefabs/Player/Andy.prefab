@@ -169,6 +169,10 @@ PrefabInstance:
       value: -0.0295
       objectReference: {fileID: 0}
     - target: {fileID: 6716259569256595975, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: 'mySounds.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 782811c83f8a4184aa80d462688e6d38, type: 2}
+    - target: {fileID: 6716259569256595975, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: 'mySounds.Array.data[1]'
       value: 
       objectReference: {fileID: 11400000, guid: 55d4ef48a4249484ea9b8a9edb2d122f, type: 2}

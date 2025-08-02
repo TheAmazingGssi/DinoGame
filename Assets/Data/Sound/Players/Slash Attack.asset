@@ -10,7 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a34b07caa3e9b57409b94345db82bfad, type: 3}
-  m_Name: Melee Attack
+  m_Name: Slash Attack
   m_EditorClassIdentifier: 
   Clips:
-  - {fileID: 8300000, guid: 0f3269e4052f7ee48bb632f7fed51141, type: 3}
+  - {fileID: 8300000, guid: bf893bce70997f3448ce8a2a06126837, type: 3}
+  - {fileID: 8300000, guid: 6841c7d6ac052d64a919044f76973fac, type: 3}
+  - {fileID: 8300000, guid: 0de2337093f3221408f501af855131a4, type: 3}
+  - {fileID: 8300000, guid: a526fe3f6cd45044d83c573104baef0f, type: 3}

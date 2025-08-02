@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Spencer Special
   m_EditorClassIdentifier: 
   Clips:
-  - {fileID: 8300000, guid: 0f3269e4052f7ee48bb632f7fed51141, type: 3}
+  - {fileID: 8300000, guid: 222185552badaa049ad95d091a26c2dc, type: 3}

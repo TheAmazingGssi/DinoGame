@@ -23,10 +23,6 @@ MonoBehaviour:
     specialAttackCost: 50
     specialAttackDamage: 20
     mudSlowFactor: 0.25
-    neckMinWidth: 0
-    neckMaxWidth: 0
-    chompSpeed: 0
-    dragSpeed: 0
   - characterName: Spinosaurus
     maxHealth: 100
     stamina: 100
@@ -37,10 +33,6 @@ MonoBehaviour:
     specialAttackCost: 50
     specialAttackDamage: 20
     mudSlowFactor: 0.333
-    neckMinWidth: 0
-    neckMaxWidth: 0
-    chompSpeed: 0
-    dragSpeed: 0
   - characterName: Parasaurolophus
     maxHealth: 100
     stamina: 100
@@ -51,21 +43,13 @@ MonoBehaviour:
     specialAttackCost: 50
     specialAttackDamage: 20
     mudSlowFactor: 0.2
-    neckMinWidth: 0
-    neckMaxWidth: 0
-    chompSpeed: 0
-    dragSpeed: 0
   - characterName: Therizinosaurus
     maxHealth: 100
     stamina: 100
     movementSpeed: 4
     attacksPerSecond: 3
-    damageMin: 5
-    damageMax: 7
+    damageMin: 10000
+    damageMax: 10000
     specialAttackCost: 50
     specialAttackDamage: 20
     mudSlowFactor: 0.2
-    neckMinWidth: 0
-    neckMaxWidth: 0
-    chompSpeed: 0
-    dragSpeed: 0
