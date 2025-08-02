@@ -127,6 +127,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 167624268}
     m_Modifications:
+    - target: {fileID: 1046674866627044855, guid: 7b00c4f8ed381194dbd7a5b39a4392e8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1722115343066491362, guid: 7b00c4f8ed381194dbd7a5b39a4392e8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -207,6 +211,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2386657686480587692, guid: 7b00c4f8ed381194dbd7a5b39a4392e8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3864007049389454547, guid: 7b00c4f8ed381194dbd7a5b39a4392e8, type: 3}
       propertyPath: m_Name
       value: How To Play Menu
@@ -219,6 +227,58 @@ PrefabInstance:
       propertyPath: howToPlayButton
       value: 
       objectReference: {fileID: 1584137381}
+    - target: {fileID: 4485387869287896791, guid: 7b00c4f8ed381194dbd7a5b39a4392e8, type: 3}
+      propertyPath: m_fontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4485387869287896791, guid: 7b00c4f8ed381194dbd7a5b39a4392e8, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4485387869287896791, guid: 7b00c4f8ed381194dbd7a5b39a4392e8, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360636785066925658, guid: 7b00c4f8ed381194dbd7a5b39a4392e8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084400962691035200, guid: 7b00c4f8ed381194dbd7a5b39a4392e8, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084400962691035200, guid: 7b00c4f8ed381194dbd7a5b39a4392e8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084400962691035200, guid: 7b00c4f8ed381194dbd7a5b39a4392e8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 36.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084400962691035200, guid: 7b00c4f8ed381194dbd7a5b39a4392e8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -136.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250871956237784471, guid: 7b00c4f8ed381194dbd7a5b39a4392e8, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250871956237784471, guid: 7b00c4f8ed381194dbd7a5b39a4392e8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250871956237784471, guid: 7b00c4f8ed381194dbd7a5b39a4392e8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -136.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9181714501206975176, guid: 7b00c4f8ed381194dbd7a5b39a4392e8, type: 3}
+      propertyPath: m_fontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 9181714501206975176, guid: 7b00c4f8ed381194dbd7a5b39a4392e8, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -14,7 +14,9 @@ public class AnimationController : MonoBehaviour
     public Animator normalAttackVfxAnimator;
     public SpriteRenderer normalAttackVfxRenderer;
     public ParticleSystem terryParticleSystem;
-
+    
+    private bool vfxPlaying = false;
+    
     private void Awake()
     {
         specialVfxRenderer = SpecialVfxObject.GetComponent<SpriteRenderer>();
@@ -57,7 +59,7 @@ public class AnimationController : MonoBehaviour
         mainAnimator.SetTrigger("Downed");
     }
 
-    public void SetRevived()
+    public void SetRevive()
     {
         mainAnimator.SetTrigger("Revive");
     }
@@ -69,15 +71,20 @@ public class AnimationController : MonoBehaviour
     
     public void TriggerSpecialVfx()
     {
-        if(!SpecialVfxAnimator.gameObject.activeSelf)
-        {
+        if (vfxPlaying) return; // ✅ Ignore extra calls until reset
+        vfxPlaying = true;
+
+        if (!SpecialVfxAnimator.gameObject.activeSelf)
             SpecialVfxAnimator.gameObject.SetActive(true);
-        }
-        else if (SpecialVfxAnimator != null)//Add to other calls in script
-        {
-            SpecialVfxAnimator.SetTrigger("Play");
-        }
+
+        SpecialVfxAnimator.SetTrigger("Play");
     }
+
+    public void ResetSpecialVfx()
+    {
+        vfxPlaying = false; // ✅ Allow next attack to play VFX again
+    }
+
 
     public void TriggerKnockback()
     {

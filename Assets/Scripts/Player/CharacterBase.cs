@@ -57,12 +57,14 @@ public abstract class CharacterBase : MonoBehaviour
             
             GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
             MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
+            
             animController.normalAttackVfxAnimator.transform.localPosition = new Vector3
             (
                 facingRight ? rightColliderPositionX : (-1) * rightColliderPositionX,
                 normalAttackVfxObjectTransform.localPosition.y,
                 normalAttackVfxObjectTransform.localPosition.z
             );
+            
             animController.normalAttackVfxRenderer.flipX = !facingRight;
             animController.normalAttackVfxAnimator.SetTrigger("Play");
             
