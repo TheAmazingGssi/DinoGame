@@ -1978,11 +1978,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2310508340010356464, guid: fe3e5c3caa574ef4bb1f6884d4b96be4, type: 3}
       propertyPath: 'playerCharacters.Array.data[0]'
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2310508340010356464, guid: fe3e5c3caa574ef4bb1f6884d4b96be4, type: 3}
       propertyPath: 'playerCharacters.Array.data[1]'
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2310508340010356464, guid: fe3e5c3caa574ef4bb1f6884d4b96be4, type: 3}
       propertyPath: 'playerCharacters.Array.data[2]'
@@ -2310,7 +2310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2238570074357995060, guid: 6dd85cfb8eb3d4e449badeac02fc1447, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.195
+      value: -6.2
       objectReference: {fileID: 0}
     - target: {fileID: 2238570074357995060, guid: 6dd85cfb8eb3d4e449badeac02fc1447, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2330,39 +2330,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2412463201189403354, guid: 6dd85cfb8eb3d4e449badeac02fc1447, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key0.b
-      value: 0.46855342
+      value: 0.984308
       objectReference: {fileID: 0}
     - target: {fileID: 2412463201189403354, guid: 6dd85cfb8eb3d4e449badeac02fc1447, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key0.g
-      value: 0.8209565
-      objectReference: {fileID: 0}
-    - target: {fileID: 2412463201189403354, guid: 6dd85cfb8eb3d4e449badeac02fc1447, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key0.r
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2412463201189403354, guid: 6dd85cfb8eb3d4e449badeac02fc1447, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.r
+      value: 0.4666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 2412463201189403354, guid: 6dd85cfb8eb3d4e449badeac02fc1447, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key1.b
-      value: 0.47561407
+      value: 0.90588236
       objectReference: {fileID: 0}
     - target: {fileID: 2412463201189403354, guid: 6dd85cfb8eb3d4e449badeac02fc1447, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key1.g
-      value: 0.6224592
+      value: 0.871634
       objectReference: {fileID: 0}
     - target: {fileID: 2412463201189403354, guid: 6dd85cfb8eb3d4e449badeac02fc1447, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key1.r
-      value: 0.9056604
+      value: 0.4745098
       objectReference: {fileID: 0}
     - target: {fileID: 2412463201189403354, guid: 6dd85cfb8eb3d4e449badeac02fc1447, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key2.b
-      value: 0
+      value: 0.9056604
       objectReference: {fileID: 0}
     - target: {fileID: 2412463201189403354, guid: 6dd85cfb8eb3d4e449badeac02fc1447, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key2.g
-      value: 0
+      value: 0.8998883
       objectReference: {fileID: 0}
     - target: {fileID: 2412463201189403354, guid: 6dd85cfb8eb3d4e449badeac02fc1447, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key2.r
-      value: 0
+      value: 0.80598074
       objectReference: {fileID: 0}
     - target: {fileID: 2412463201189403354, guid: 6dd85cfb8eb3d4e449badeac02fc1447, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.m_NumColorKeys
@@ -2518,20 +2518,20 @@ PrefabInstance:
       objectReference: {fileID: 519420031}
     - target: {fileID: 9124575964191157752, guid: 6dd85cfb8eb3d4e449badeac02fc1447, type: 3}
       propertyPath: sprites.Array.size
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9124575964191157752, guid: 6dd85cfb8eb3d4e449badeac02fc1447, type: 3}
       propertyPath: 'sprites.Array.data[0]'
       value: 
-      objectReference: {fileID: -5130076288410309545, guid: 01c46bef460b71240a0d12c794c9a8cf, type: 3}
+      objectReference: {fileID: -9180695268634683918, guid: 5bc99fe7f66851f459f2a5beca175875, type: 3}
     - target: {fileID: 9124575964191157752, guid: 6dd85cfb8eb3d4e449badeac02fc1447, type: 3}
       propertyPath: 'sprites.Array.data[1]'
       value: 
-      objectReference: {fileID: -7514861318664544189, guid: 01c46bef460b71240a0d12c794c9a8cf, type: 3}
+      objectReference: {fileID: 1701883645486332122, guid: 5bc99fe7f66851f459f2a5beca175875, type: 3}
     - target: {fileID: 9124575964191157752, guid: 6dd85cfb8eb3d4e449badeac02fc1447, type: 3}
       propertyPath: 'sprites.Array.data[2]'
       value: 
-      objectReference: {fileID: 8772799183510922876, guid: 01c46bef460b71240a0d12c794c9a8cf, type: 3}
+      objectReference: {fileID: -3424428980091039634, guid: 5bc99fe7f66851f459f2a5beca175875, type: 3}
     - target: {fileID: 9124575964191157752, guid: 6dd85cfb8eb3d4e449badeac02fc1447, type: 3}
       propertyPath: 'sprites.Array.data[3]'
       value: 

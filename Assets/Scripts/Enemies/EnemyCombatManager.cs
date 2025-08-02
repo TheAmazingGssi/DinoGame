@@ -70,7 +70,7 @@ public class EnemyCombatManager : CombatManager
             manager.Animator.SetTrigger(HURT);
         }
 
-        manager.SoundPlayer.PlaySound(1);
+        manager.SoundPlayer.PlaySound(1, 0.5f);
         manager.SpriteRenderer.color = Color.red;
         StartCoroutine(AnimationDelay());
     }
