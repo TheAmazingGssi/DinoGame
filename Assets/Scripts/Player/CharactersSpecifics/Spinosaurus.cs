@@ -65,7 +65,7 @@ public class Spinosaurus : CharacterBase
 
                 foreach (var hit in hits)
                 {
-                    if (hit.collider != null && hit.collider.name == "HurtBox")
+                    if (hit.collider != null && hit.collider.name == "HurtBox" && hit.collider.tag == "Enemy")
                     {
                         enemyTransform = hit.collider.transform.root;
                         activeMeleeDamage?.ApplyDamage(stats.specialAttackDamage, true, transform, null);

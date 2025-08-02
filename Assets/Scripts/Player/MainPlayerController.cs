@@ -53,6 +53,7 @@ public class MainPlayerController : MonoBehaviour
     private bool isBlocking = false;
     private bool isEmoting = false;
     private bool isFallen = false;
+    private bool isFrozen = false;
     private bool isMudSlowed = false;
     private bool isPerformingSpecialMovement = false;
     private bool isEndOfLevel = false;
@@ -160,6 +161,12 @@ public class MainPlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (isFrozen)
+        {
+            
+            return;
+        }
+        
         if (!isFallen)
         {
             combatManager.RegenerateStamina(Time.deltaTime);
@@ -206,14 +213,17 @@ public class MainPlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!isAttacking && !isFallen && !isEmoting && !isBlocking && (!isPerformingSpecialMovement || characterType == CharacterType.Triceratops))
+        if (!isFrozen)
         {
-            HandleMovement();
-        }
-        else 
-        {
-            if(!(characterType == CharacterType.Triceratops && isPerformingSpecialMovement))
-                rb.linearVelocity = Vector2.zero;
+            if (!isAttacking && !isFallen && !isEmoting && !isBlocking && (!isPerformingSpecialMovement || characterType == CharacterType.Triceratops))
+            {
+                HandleMovement();
+            }
+            else 
+            {
+                if(!(characterType == CharacterType.Triceratops && isPerformingSpecialMovement))
+                    rb.linearVelocity = Vector2.zero;
+            }
         }
     }
 
@@ -311,7 +321,7 @@ public class MainPlayerController : MonoBehaviour
             MainPlayerController target = FindNearestFallenPlayer();
             if (target != null)
             {
-                animController.SetRevive();
+                animController.TriggerRevive();
                 RevivePrompt prompt = gameObject.AddComponent<RevivePrompt>();
                 prompt.StartRevive(this, target);
             }
@@ -398,6 +408,22 @@ public class MainPlayerController : MonoBehaviour
     public void ToggleMudSlowEffect()
     {
         isMudSlowed = !isMudSlowed;
+        Debug.Log($"{stats.characterName} mud slow active: {isMudSlowed}");
+    }
+    
+    public void ToggleFreezeEffect()
+    {
+        isFrozen = !isFrozen;
+        if (isFrozen)
+        {
+            rb.linearVelocity = Vector2.zero; // Stop movement when frozen
+            animController.SetMoveSpeed(0f);
+        }
+        else
+        {
+            rb.linearVelocity = currentVelocity; // Restore movement speed when unfrozen
+            animController.SetMoveSpeed(moveInput.magnitude);
+        }
         Debug.Log($"{stats.characterName} mud slow active: {isMudSlowed}");
     }
     

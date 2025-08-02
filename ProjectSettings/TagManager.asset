@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Ground
+  - Icetroid
   layers:
   - Default
   - TransparentFX
