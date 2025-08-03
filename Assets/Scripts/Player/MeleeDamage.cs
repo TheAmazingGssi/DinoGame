@@ -5,10 +5,8 @@ public class MeleeDamage : MonoBehaviour
 {
     [SerializeField] private MainPlayerController playerController;
 
-    // Track enemies hit during this activation
     private HashSet<Collider2D> enemiesHit = new HashSet<Collider2D>();
 
-    // Current attack settings for this activation
     private float preparedDamage;
     private bool preparedSpecial;
     private Transform preparedSource;
@@ -31,7 +29,6 @@ public class MeleeDamage : MonoBehaviour
 
         bool alreadyHit = enemiesHit.Contains(other);
 
-        // Always apply damage on first contact
         if (!alreadyHit)
         {
             enemiesHit.Add(other);
@@ -41,7 +38,7 @@ public class MeleeDamage : MonoBehaviour
             {
                 enemyCombat.TakeDamage(new DamageArgs
                 {
-                    Damage = preparedDamage, // ✅ from CharacterStats
+                    Damage = preparedDamage, 
                     SourceGO = playerController != null ? playerController.gameObject : null,
                     SourceMPC = playerController,
                     Knockback = preparedSpecial
@@ -55,7 +52,7 @@ public class MeleeDamage : MonoBehaviour
             KnockbackHelper.ApplyKnockback(
                 other.transform,
                 preparedSource != null ? preparedSource : transform,
-                KnockbackHelper.GetKnockbackForceFromDamage(preparedDamage, true),
+                KnockbackHelper.GetKnockbackForceFromDamage(preparedDamage * 3, true),
                 preparedGrab ? KnockbackType.Grab : KnockbackType.Normal
             );
         }
@@ -71,12 +68,10 @@ public class MeleeDamage : MonoBehaviour
             TryHitEnemy(hits[i]);
     }
 
-    /// <summary>
-    /// Sets up damage and attack type for this collider activation.
-    /// </summary>
+    
     public void PrepareDamage(float damage, bool isSpecial, Transform source, MainPlayerController controller, bool isGrab = false)
     {
-        preparedDamage = damage; // ✅ from CharacterStats via attack scripts
+        preparedDamage = damage; 
         preparedSpecial = isSpecial;
         preparedSource = source;
         preparedGrab = isGrab;
@@ -88,10 +83,7 @@ public class MeleeDamage : MonoBehaviour
 
         enemiesHit.Clear();
     }
-
-    /// <summary>
-    /// Instantly apply damage to all enemies in range (AOE/manual trigger).
-    /// </summary>
+    
     public void ApplyDamage(float damage, bool isSpecial, Transform source, MainPlayerController controller, bool isGrab = false)
     {
         PrepareDamage(damage, isSpecial, source, controller, isGrab);
