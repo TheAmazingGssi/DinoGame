@@ -5,8 +5,8 @@ using UnityEngine.Events;
 
 public class Triceratops : CharacterBase
 {
-    [SerializeField] private float chargeDistance = 6f;
-    [SerializeField] private float chargeSpeed = 18f;
+    [SerializeField] private float chargeDistance = 3f;
+    [SerializeField] private float chargeSpeed = 13f;
     [SerializeField] private float glideDistance = 2.5f;
     [SerializeField] private float glideSpeed = 8f;
 
