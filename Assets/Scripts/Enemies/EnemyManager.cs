@@ -66,14 +66,12 @@ public class EnemyManager : MonoBehaviour
         isDead = true;
 
         animator.ResetTrigger("Hurt");
-        animator.ResetTrigger("Knockback");
 
         if (enemyController) enemyController.enabled = false;
         if (attackManager) attackManager.enabled = false;
         if (rb) rb.linearVelocity = Vector2.zero;
 
         animator.SetTrigger(IS_DEAD);
-
         OnDeath?.Invoke(this);
         GameManager.Instance.IncrementDeathCount();
 
@@ -81,7 +79,7 @@ public class EnemyManager : MonoBehaviour
         {
             for (int i = 0; i < healthDropAmount; i++)
             {
-                Vector2 spawnPosition = new Vector2(1,1);
+                Vector2 spawnPosition = new Vector2(1, 1);
                 while (spawnPosition.y > -0.226)
                 {
                     Vector2 randomOffset = Random.insideUnitCircle * 1.5f;
@@ -90,7 +88,6 @@ public class EnemyManager : MonoBehaviour
                 Instantiate(healthItem, spawnPosition, Quaternion.identity);
             }
         }
-
         StartCoroutine(DeSpawn());
     }
 

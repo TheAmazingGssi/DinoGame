@@ -317,4 +317,31 @@ public class EnemyAttackManager : MonoBehaviour
             }
         }
     }
+
+    // Add these methods to your EnemyAttackManager class:
+
+    public bool IsCurrentlyAttacking
+    {
+        get
+        {
+            // Check if any of the attack components are currently attacking
+            EnemyAttack[] attacks = GetComponents<EnemyAttack>();
+            foreach (EnemyAttack attack in attacks)
+            {
+                if (attack.IsCurrentlyAttacking)
+                    return true;
+            }
+            return false;
+        }
+    }
+
+    public void InterruptAttack()
+    {
+        // Interrupt all active attacks
+        EnemyAttack[] attacks = GetComponents<EnemyAttack>();
+        foreach (EnemyAttack attack in attacks)
+        {
+            attack.InterruptAttack();
+        }
+    }
 }

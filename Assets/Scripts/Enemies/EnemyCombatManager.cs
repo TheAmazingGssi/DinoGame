@@ -11,6 +11,9 @@ public class EnemyCombatManager : CombatManager
     [SerializeField] private bool isHurt = false;
     [HideInInspector] public bool IsKnockbacked = false;
 
+    // Track if we're waiting for animation events
+    private bool waitingForHurtAnimation = false;
+
     public void Initialize(float maxHealth)
     {
         currentMaxHealth = maxHealth;
@@ -24,9 +27,12 @@ public class EnemyCombatManager : CombatManager
             HandleDeath();
             isDead = false;
         }
-        if (isHurt)
+
+        if (isHurt && !waitingForHurtAnimation)
         {
             manager.Animator.SetTrigger(HURT);
+            waitingForHurtAnimation = true;
+            isHurt = false;
         }
     }
 
@@ -44,43 +50,41 @@ public class EnemyCombatManager : CombatManager
             {
                 manager.AttackManager.OnPlayerDealtDamage(playerSource);
             }
-
             damageArgs.SourceMPC.AddScore(manager.EnemyData.Score);
         }
 
         base.TakeDamage(damageArgs);
 
-        if (currentHealth >= 0)
+        if (currentHealth <= 0)
         {
             isHurt = false;
+            waitingForHurtAnimation = false;
         }
     }
 
     private void HandleHurt(DamageArgs damageArgs)
     {
-        if (damageArgs.Knockback)
+        // Interrupt any ongoing attack
+        if (manager.AttackManager.IsCurrentlyAttacking)
         {
-            if (!IsKnockbacked)
-            {
-                IsKnockbacked = true;
-                manager.Animator.SetTrigger(KNOCKBACK);
-            }
+            manager.AttackManager.InterruptAttack();
         }
-        else
+
+        // Only use hurt animation - ignore knockback completely
+        if (!waitingForHurtAnimation)
         {
-            manager.Animator.SetTrigger(HURT);
+            isHurt = true; // This will be processed in Update()
         }
 
         manager.SoundPlayer.PlaySound(1, 0.5f);
         manager.SpriteRenderer.color = Color.red;
-        StartCoroutine(AnimationDelay());
     }
 
-    private IEnumerator AnimationDelay()
+    // Called by AnimationManager when hurt animation ends
+    public void OnHurtAnimationComplete()
     {
-        yield return new WaitForSeconds(0.13f);
+        waitingForHurtAnimation = false;
         manager.SpriteRenderer.color = Color.white;
-        manager.Animator.ResetTrigger(HURT);
     }
 
     protected override void HandleDeath()

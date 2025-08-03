@@ -19,6 +19,7 @@ public class AnimationManager : MonoBehaviour
     {
         manager.SpriteRenderer.color = Color.white;
         manager.Animator.ResetTrigger(HURT);
+        Debug.Log("HurtEnd animation event called");
     }
 
     public void AttackEnd()
@@ -26,16 +27,21 @@ public class AnimationManager : MonoBehaviour
         manager.Animator.ResetTrigger(Attack);
         manager.Animator.ResetTrigger(AOEAttack);
         manager.AttackManager.OnAnimationComplete();
+        Debug.Log("AttackEnd animation event called");
     }
 
     public void KnockbackEnd()
     {
         manager.Animator.ResetTrigger(KNOCKBACK);
+        manager.CombatManager.IsKnockbacked = false;
+        manager.Animator.speed = 1; // Resume normal animation speed
+        Debug.Log("KnockbackEnd animation event called");
     }
 
     public void KnockbackPause()
     {
         manager.Animator.speed = 0;
-        manager.CombatManager.IsKnockbacked = false;
+        // Don't set IsKnockbacked to false here - let KnockbackEnd handle it
+        Debug.Log("KnockbackPause animation event called");
     }
 }
