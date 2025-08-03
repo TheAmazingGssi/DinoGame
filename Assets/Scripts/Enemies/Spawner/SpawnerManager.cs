@@ -3,17 +3,14 @@ using UnityEngine;
 public class SpawnerManager : MonoBehaviour
 {
     [SerializeField] private EnemySpawnerData[] data;
-
     [field: SerializeField] public EnemySpawner[] EnemySpawners { get; private set; }
-
     [SerializeField] private Collider2D groundCheck;
-
     public Collider2D GroundCheck => groundCheck;
-
 
     private void Awake()
     {
-        if (data.Length != EnemySpawners.Length) Debug.LogError("enemy spawners and data not equal!");
+        if (data.Length != EnemySpawners.Length)
+            Debug.LogError("enemy spawners and data not equal!");
 
         for (int i = 0; i < EnemySpawners.Length; i++)
         {
@@ -27,6 +24,7 @@ public class SpawnerManager : MonoBehaviour
     {
         foreach (EnemySpawner spawner in EnemySpawners)
         {
+            int oldMultiplier = spawner.EnemiesInWaveMultiplier;
             spawner.EnemiesInWaveMultiplier = multiplier;
         }
     }

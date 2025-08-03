@@ -32,6 +32,5 @@ public class RangedAttack : EnemyAttack
             projScript.manager = manager;
         }
 
-        Debug.Log("Ranged attack launched a projectile.");
     }
 }

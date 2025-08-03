@@ -14,13 +14,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private CameraLocations[] waveLocations;
     [SerializeField] private Vote vote;
     [field: SerializeField] public int LevelNumber { get; private set; } = 1;
-    
+
     [Header("Refrences")]
     [SerializeField] private VotingManager stagesVote;
     [SerializeField] private CameraMovement cameraMovement;
     [SerializeField] private SceneLoader sceneLoader;
-    [field:SerializeField] public SpawnerManager SpawnerManager {get; private set;}
-    
+    public IcetroidSpawner icetroidSpawner;
+    [field: SerializeField] public SpawnerManager SpawnerManager { get; private set; }
+
     public int FinaleLevel = 3;
 
     //Variables off inspector
@@ -30,7 +31,7 @@ public class GameManager : MonoBehaviour
     private int currentWave = 0;
     [SerializeField] UnityEvent waveCompleted = new UnityEvent();
 
-    void Start()
+    void Awake()
     {
         if (Instance != null && Instance != this)
         {
@@ -38,7 +39,10 @@ public class GameManager : MonoBehaviour
             return;
         }
         Instance = this;
+    }
 
+    void Start()
+    {
         VoteEffectManager.Instance.ApplyStoredEffects(LevelNumber, FinaleLevel);
 
         cameraMovement.FurthestLeftPoint = waveLocations[currentWave].LeftMost;
@@ -66,10 +70,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    [ContextMenu ("End Level")]
+    [ContextMenu("End Level")]
     public void LevelEnd() //need to add a call somewhere
     {
-        foreach(PlayerEntity player in PlayerEntity.PlayerList)
+        foreach (PlayerEntity player in PlayerEntity.PlayerList)
         {
             player.CombatManager.ResetDamageTakenMultiplier();
         }

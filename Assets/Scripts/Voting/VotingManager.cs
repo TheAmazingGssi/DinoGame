@@ -177,7 +177,6 @@ public class VotingManager : MonoBehaviour
         background.SetActive(false);
 
         OnVoteComplete?.Invoke(winningChoice);
-        Debug.Log("Vote ended, callback triggered.");
     }
 
     private void UpdateTimerDisplay()
