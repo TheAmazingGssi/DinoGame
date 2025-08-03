@@ -40,13 +40,31 @@ public class GameManager : MonoBehaviour
         }
         Instance = this;
     }
-
     void Start()
     {
-        VoteEffectManager.Instance.ApplyStoredEffects(LevelNumber, FinaleLevel);
-
         cameraMovement.FurthestLeftPoint = waveLocations[currentWave].LeftMost;
-        cameraMovement.FurthestRightPoint = waveLocations[currentWave].RightMost;
+        cameraMovement.FurthestRightPoint = waveLocations[currentWave].RightMost; 
+
+        StartCoroutine(WaitAndInitialize());
+    }
+
+    private IEnumerator WaitAndInitialize()
+    {
+        yield return new WaitUntil(AreAllPlayersReady);
+
+        VoteEffectManager.Instance.ApplyStoredEffects(LevelNumber, FinaleLevel);
+    }
+
+    private bool AreAllPlayersReady()
+    {
+        if (PlayerEntity.PlayerList.Count == 0) return false;
+
+        foreach (PlayerEntity player in PlayerEntity.PlayerList)
+        {
+            if (player?.CombatManager == null) return false;
+        }
+
+        return true;
     }
 
     private void OnEnable() => VotingManager.OnVoteComplete += HandleVoteComplete;

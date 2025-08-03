@@ -62,9 +62,6 @@ public class IcetroidSpawner : MonoBehaviour
 
         currentMinSpawnInterval = baseMinSpawnInterval * speedMultiplier;
         currentMaxSpawnInterval = baseMaxSpawnInterval * speedMultiplier;
-
-        Debug.Log($"Icetroid spawning increased: Max {oldMax} -> {currentMaxIcetroids}, " +
-                  $"Intervals {oldMinInterval:F1}-{oldMaxInterval:F1} -> {currentMinSpawnInterval:F1}-{currentMaxSpawnInterval:F1}");
     }
 
     public void ResetToBaseValues()

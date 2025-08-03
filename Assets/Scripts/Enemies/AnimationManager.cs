@@ -14,10 +14,8 @@ public class AnimationManager : MonoBehaviour
         //if (!manager.CombatManager.IsKnockbacked) manager.Animator.speed = 1;
     }
 
-    //Animation events on last frame
     public void HurtEnd()
     {
-        // Call the combat manager's method to handle color reset and state
         manager.CombatManager.OnHurtAnimationComplete();
         manager.Animator.ResetTrigger(HURT);
         Debug.Log("HurtEnd animation event called");
@@ -35,7 +33,7 @@ public class AnimationManager : MonoBehaviour
     {
         manager.Animator.ResetTrigger(KNOCKBACK);
         manager.CombatManager.IsKnockbacked = false;
-        manager.Animator.speed = 1; // Resume normal animation speed
+        manager.Animator.speed = 1;
         Debug.Log("KnockbackEnd animation event called");
     }
 }

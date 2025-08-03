@@ -11,7 +11,6 @@ public class EnemyCombatManager : CombatManager
     [SerializeField] private bool isHurt = false;
     [HideInInspector] public bool IsKnockbacked = false;
 
-    // Track if we're waiting for animation events
     private bool waitingForHurtAnimation = false;
     private Coroutine colorResetCoroutine;
 
@@ -60,7 +59,6 @@ public class EnemyCombatManager : CombatManager
         {
             isHurt = false;
             waitingForHurtAnimation = false;
-            // Stop any color reset coroutine on death
             if (colorResetCoroutine != null)
             {
                 StopCoroutine(colorResetCoroutine);
@@ -71,22 +69,19 @@ public class EnemyCombatManager : CombatManager
 
     private void HandleHurt(DamageArgs damageArgs)
     {
-        // Interrupt any ongoing attack
         if (manager.AttackManager.IsCurrentlyAttacking)
         {
             manager.AttackManager.InterruptAttack();
         }
 
-        // Only use hurt animation - ignore knockback completely
         if (!waitingForHurtAnimation)
         {
-            isHurt = true; // This will be processed in Update()
+            isHurt = true;
         }
 
         manager.SoundPlayer.PlaySound(1, 0.5f);
         manager.SpriteRenderer.color = Color.red;
 
-        // Start backup color reset coroutine in case animation event fails
         if (colorResetCoroutine != null)
         {
             StopCoroutine(colorResetCoroutine);
@@ -96,7 +91,7 @@ public class EnemyCombatManager : CombatManager
 
     private IEnumerator BackupColorReset()
     {
-        yield return new WaitForSeconds(0.5f); // Wait longer than animation should take
+        yield return new WaitForSeconds(0.5f);
         if (manager.SpriteRenderer.color == Color.red)
         {
             manager.SpriteRenderer.color = Color.white;
@@ -105,25 +100,20 @@ public class EnemyCombatManager : CombatManager
         colorResetCoroutine = null;
     }
 
-    // Called by AnimationManager when hurt animation ends
     public void OnHurtAnimationComplete()
     {
         waitingForHurtAnimation = false;
         manager.SpriteRenderer.color = Color.white;
 
-        // Cancel backup coroutine since animation event worked
         if (colorResetCoroutine != null)
         {
             StopCoroutine(colorResetCoroutine);
             colorResetCoroutine = null;
         }
-
-        Debug.Log("Hurt animation completed - color reset via animation event");
     }
 
     protected override void HandleDeath()
     {
-        Debug.Log("Enemy died in combat manager");
         base.HandleDeath();
     }
 }

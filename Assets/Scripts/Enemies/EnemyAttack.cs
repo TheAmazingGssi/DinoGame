@@ -76,11 +76,9 @@ public abstract class EnemyAttack : MonoBehaviour
     {
         if (isAttacking)
         {
-            // Reset animation triggers
             manager.Animator.ResetTrigger(Attack);
             manager.Animator.ResetTrigger(AOEAttack);
 
-            // Force animation completion
             manager.AttackManager.OnAnimationComplete();
 
             isAttacking = false;
