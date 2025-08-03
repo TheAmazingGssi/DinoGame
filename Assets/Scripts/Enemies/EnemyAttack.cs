@@ -26,11 +26,12 @@ public abstract class EnemyAttack : MonoBehaviour
     {
         return !isOnCooldown && IsPlayerInRange;
     }
+
     public void TryAttack()
     {
         if (!isOnCooldown)
         {
-            //Debug.Log($"{gameObject.name} starting attack");
+            Debug.Log($"{gameObject.name} starting attack");
             StartAttack();
         }
     }
@@ -52,7 +53,6 @@ public abstract class EnemyAttack : MonoBehaviour
             manager.SoundPlayer.PlaySound(soundEffect);
         else
             manager.SoundPlayer.PlaySound(0);
-
     }
 
     protected virtual void ApplyDamage() { }
@@ -61,8 +61,7 @@ public abstract class EnemyAttack : MonoBehaviour
     {
         isAttacking = false;
         manager.AttackManager.ChangeAttackStatue(false);
-        //Debug.Log($"{gameObject.name} attack ended");
-
+        Debug.Log($"{gameObject.name} attack ended");
         StartCoroutine(CooldownTimer());
     }
 
@@ -70,7 +69,7 @@ public abstract class EnemyAttack : MonoBehaviour
     {
         yield return new WaitForSeconds(attackCooldown);
         isOnCooldown = false;
-        //Debug.Log($"{gameObject.name} cooldown finished");
+        Debug.Log($"{gameObject.name} cooldown finished");
     }
 
     public void InterruptAttack()
@@ -78,7 +77,13 @@ public abstract class EnemyAttack : MonoBehaviour
         if (isAttacking)
         {
             manager.Animator.ResetTrigger(Attack);
+            manager.Animator.ResetTrigger(AOEAttack);
+
+            manager.AttackManager.OnAnimationComplete();
+
             isAttacking = false;
+            manager.AttackManager.ChangeAttackStatue(false);
+
             Debug.Log($"Attack interrupted on {gameObject.name}");
         }
     }

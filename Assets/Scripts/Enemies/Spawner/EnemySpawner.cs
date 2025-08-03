@@ -5,20 +5,15 @@ using UnityEngine.Events;
 public class EnemySpawner : MonoBehaviour
 {
     private const string Player = "Player";
-
     [HideInInspector] public GameObject EnemyPrefab;
-
     [HideInInspector] public float MinSpawnTime;
     [HideInInspector] public float MaxSpawnTime;
-
     public int EnemiesInWaveMultiplier = 2;
     private int EnemiesInWave;
-
     [SerializeField] Transform[] spawnPoints;
-
     private bool wasTriggered = false;
-
     public UnityEvent WaveStart;
+
     private IEnumerator SpawnWave()
     {
         for (int i = 0; i < EnemiesInWave; i++)
@@ -30,9 +25,9 @@ public class EnemySpawner : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag(Player))
+        if (collision.CompareTag(Player))
         {
-            if(!wasTriggered)
+            if (!wasTriggered)
             {
                 WaveStart.Invoke();
                 EnemiesInWave = PlayerEntity.PlayerList.Count * EnemiesInWaveMultiplier;

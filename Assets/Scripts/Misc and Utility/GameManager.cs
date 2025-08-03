@@ -14,13 +14,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private CameraLocations[] waveLocations;
     [SerializeField] private Vote vote;
     [field: SerializeField] public int LevelNumber { get; private set; } = 1;
-    
+
     [Header("Refrences")]
     [SerializeField] private VotingManager stagesVote;
     [SerializeField] private CameraMovement cameraMovement;
     [SerializeField] private SceneLoader sceneLoader;
-    [field:SerializeField] public SpawnerManager SpawnerManager {get; private set;}
-    
+    public IcetroidSpawner icetroidSpawner;
+    [field: SerializeField] public SpawnerManager SpawnerManager { get; private set; }
+
     public int FinaleLevel = 3;
 
     //Variables off inspector
@@ -30,7 +31,7 @@ public class GameManager : MonoBehaviour
     private int currentWave = 0;
     [SerializeField] UnityEvent waveCompleted = new UnityEvent();
 
-    void Start()
+    void Awake()
     {
         if (Instance != null && Instance != this)
         {
@@ -38,30 +39,32 @@ public class GameManager : MonoBehaviour
             return;
         }
         Instance = this;
-
-        if (LevelNumber == FinaleLevel)
-        {
-            foreach (var vote in FinaleLevelEffects)
-            {
-                Vote currentVote = vote.Key;
-                int choiceIndex = vote.Value;
-                currentVote.ApplyEffects(choiceIndex);
-            }
-            FinaleLevelEffects.Clear();
-        }
-        if(LevelNumber > vote.LevelNumber)
-        {
-            foreach (var vote in NextLevelEffects)
-            {
-                Vote currentVote = vote.Key;
-                int choiceIndex = vote.Value;
-                currentVote.ApplyEffects(choiceIndex);
-            }
-            NextLevelEffects.Clear();
-        }
-
+    }
+    void Start()
+    {
         cameraMovement.FurthestLeftPoint = waveLocations[currentWave].LeftMost;
-        cameraMovement.FurthestRightPoint = waveLocations[currentWave].RightMost;
+        cameraMovement.FurthestRightPoint = waveLocations[currentWave].RightMost; 
+
+        StartCoroutine(WaitAndInitialize());
+    }
+
+    private IEnumerator WaitAndInitialize()
+    {
+        yield return new WaitUntil(AreAllPlayersReady);
+
+        VoteEffectManager.Instance.ApplyStoredEffects(LevelNumber, FinaleLevel);
+    }
+
+    private bool AreAllPlayersReady()
+    {
+        if (PlayerEntity.PlayerList.Count == 0) return false;
+
+        foreach (PlayerEntity player in PlayerEntity.PlayerList)
+        {
+            if (player?.CombatManager == null) return false;
+        }
+
+        return true;
     }
 
     private void OnEnable() => VotingManager.OnVoteComplete += HandleVoteComplete;
@@ -85,10 +88,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    [ContextMenu ("End Level")]
+    [ContextMenu("End Level")]
     public void LevelEnd() //need to add a call somewhere
     {
-        foreach(PlayerEntity player in PlayerEntity.PlayerList)
+        foreach (PlayerEntity player in PlayerEntity.PlayerList)
         {
             player.CombatManager.ResetDamageTakenMultiplier();
         }

@@ -11,6 +11,9 @@ public class EnemyCombatManager : CombatManager
     [SerializeField] private bool isHurt = false;
     [HideInInspector] public bool IsKnockbacked = false;
 
+    private bool waitingForHurtAnimation = false;
+    private Coroutine colorResetCoroutine;
+
     public void Initialize(float maxHealth)
     {
         currentMaxHealth = maxHealth;
@@ -24,9 +27,12 @@ public class EnemyCombatManager : CombatManager
             HandleDeath();
             isDead = false;
         }
-        if (isHurt)
+
+        if (isHurt && !waitingForHurtAnimation)
         {
             manager.Animator.SetTrigger(HURT);
+            waitingForHurtAnimation = true;
+            isHurt = false;
         }
     }
 
@@ -44,48 +50,70 @@ public class EnemyCombatManager : CombatManager
             {
                 manager.AttackManager.OnPlayerDealtDamage(playerSource);
             }
-
             damageArgs.SourceMPC.AddScore(manager.EnemyData.Score);
         }
 
         base.TakeDamage(damageArgs);
 
-        if (currentHealth >= 0)
+        if (currentHealth <= 0)
         {
             isHurt = false;
+            waitingForHurtAnimation = false;
+            if (colorResetCoroutine != null)
+            {
+                StopCoroutine(colorResetCoroutine);
+                colorResetCoroutine = null;
+            }
         }
     }
 
     private void HandleHurt(DamageArgs damageArgs)
     {
-        if (damageArgs.Knockback)
+        if (manager.AttackManager.IsCurrentlyAttacking)
         {
-            if (!IsKnockbacked)
-            {
-                IsKnockbacked = true;
-                manager.Animator.SetTrigger(KNOCKBACK);
-            }
+            manager.AttackManager.InterruptAttack();
         }
-        else
+
+        if (!waitingForHurtAnimation)
         {
-            manager.Animator.SetTrigger(HURT);
+            isHurt = true;
         }
 
         manager.SoundPlayer.PlaySound(1, 0.5f);
         manager.SpriteRenderer.color = Color.red;
-        StartCoroutine(AnimationDelay());
+
+        if (colorResetCoroutine != null)
+        {
+            StopCoroutine(colorResetCoroutine);
+        }
+        colorResetCoroutine = StartCoroutine(BackupColorReset());
     }
 
-    private IEnumerator AnimationDelay()
+    private IEnumerator BackupColorReset()
     {
-        yield return new WaitForSeconds(0.13f);
+        yield return new WaitForSeconds(0.5f);
+        if (manager.SpriteRenderer.color == Color.red)
+        {
+            manager.SpriteRenderer.color = Color.white;
+            Debug.Log("Backup color reset triggered");
+        }
+        colorResetCoroutine = null;
+    }
+
+    public void OnHurtAnimationComplete()
+    {
+        waitingForHurtAnimation = false;
         manager.SpriteRenderer.color = Color.white;
-        manager.Animator.ResetTrigger(HURT);
+
+        if (colorResetCoroutine != null)
+        {
+            StopCoroutine(colorResetCoroutine);
+            colorResetCoroutine = null;
+        }
     }
 
     protected override void HandleDeath()
     {
-        Debug.Log("Enemy died in combat manager");
         base.HandleDeath();
     }
 }

@@ -14,11 +14,11 @@ public class AnimationManager : MonoBehaviour
         //if (!manager.CombatManager.IsKnockbacked) manager.Animator.speed = 1;
     }
 
-    //Animation events on last frame
     public void HurtEnd()
     {
-        manager.SpriteRenderer.color = Color.white;
+        manager.CombatManager.OnHurtAnimationComplete();
         manager.Animator.ResetTrigger(HURT);
+        Debug.Log("HurtEnd animation event called");
     }
 
     public void AttackEnd()
@@ -26,16 +26,14 @@ public class AnimationManager : MonoBehaviour
         manager.Animator.ResetTrigger(Attack);
         manager.Animator.ResetTrigger(AOEAttack);
         manager.AttackManager.OnAnimationComplete();
+        Debug.Log("AttackEnd animation event called");
     }
 
     public void KnockbackEnd()
     {
         manager.Animator.ResetTrigger(KNOCKBACK);
-    }
-
-    public void KnockbackPause()
-    {
-        manager.Animator.speed = 0;
         manager.CombatManager.IsKnockbacked = false;
+        manager.Animator.speed = 1;
+        Debug.Log("KnockbackEnd animation event called");
     }
 }

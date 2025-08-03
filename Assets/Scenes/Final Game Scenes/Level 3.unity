@@ -5117,9 +5117,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icetroidPrefab: {fileID: 997144781045121965, guid: f2830d5634578294399c5f9769d80748, type: 3}
   spawnArea: {fileID: 489131056}
-  maxIcetrods: 20
-  minSpawnInterval: 1
-  maxSpawnInterval: 1
+  baseMaxIcetroids: 5
+  baseMinSpawnInterval: 1
+  baseMaxSpawnInterval: 3
 --- !u!4 &489131055
 Transform:
   m_ObjectHideFlags: 0
@@ -5846,6 +5846,7 @@ MonoBehaviour:
   stagesVote: {fileID: 1724298587}
   cameraMovement: {fileID: 575096511099344572}
   sceneLoader: {fileID: 1107998582}
+  icetroidSpawner: {fileID: 489131054}
   <SpawnerManager>k__BackingField: {fileID: 1196741510}
   FinaleLevel: 3
   waveCompleted:

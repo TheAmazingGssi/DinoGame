@@ -317,4 +317,26 @@ public class EnemyAttackManager : MonoBehaviour
             }
         }
     }
+    public bool IsCurrentlyAttacking
+    {
+        get
+        {
+            EnemyAttack[] attacks = GetComponents<EnemyAttack>();
+            foreach (EnemyAttack attack in attacks)
+            {
+                if (attack.IsCurrentlyAttacking)
+                    return true;
+            }
+            return false;
+        }
+    }
+
+    public void InterruptAttack()
+    {
+        EnemyAttack[] attacks = GetComponents<EnemyAttack>();
+        foreach (EnemyAttack attack in attacks)
+        {
+            attack.InterruptAttack();
+        }
+    }
 }
