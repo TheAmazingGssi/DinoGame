@@ -967,7 +967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8823d5e980308e54d8b3ad01b368fc7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene: 7
+  targetScene: 4
 --- !u!4 &1107998583
 Transform:
   m_ObjectHideFlags: 0
@@ -1443,7 +1443,7 @@ MonoBehaviour:
     RightMost: 34
   - LeftMost: 54
     RightMost: 58
-  vote: {fileID: 11400000, guid: cb7b0c3bab97dbe459005c86bba1d366, type: 2}
+  vote: {fileID: 11400000, guid: 84054e7a68087444e9b75e63e6ec1d94, type: 2}
   <LevelNumber>k__BackingField: 2
   stagesVote: {fileID: 1724298587}
   cameraMovement: {fileID: 575096511099344572}

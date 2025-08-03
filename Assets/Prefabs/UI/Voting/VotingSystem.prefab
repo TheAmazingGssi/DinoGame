@@ -461,6 +461,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 31.900024
       objectReference: {fileID: 0}
+    - target: {fileID: 2005777056401626408, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2543200578801293366, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
       propertyPath: m_Name
       value: VotingPanel
@@ -492,6 +496,10 @@ PrefabInstance:
     - target: {fileID: 3193549154023202544, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 2.7900085
+      objectReference: {fileID: 0}
+    - target: {fileID: 3344449002309354322, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
+      propertyPath: m_fontSize
+      value: 15.1
       objectReference: {fileID: 0}
     - target: {fileID: 3344449002309354322, guid: 3c175ea78b290b547a0c076b66126c4e, type: 3}
       propertyPath: m_margin.x

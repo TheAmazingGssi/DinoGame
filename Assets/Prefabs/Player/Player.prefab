@@ -875,6 +875,7 @@ MonoBehaviour:
   enableDuration: 0.2
   disableDelay: 0.5
   reviveRange: 2
+  freezeLength: 3
   emoteSound: {fileID: 0}
 --- !u!114 &6716259569256595975
 MonoBehaviour:
@@ -893,6 +894,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8309c1db75f3bf642892af5eca925540, type: 2}
   - {fileID: 0}
   - {fileID: 11400000, guid: fc7eebc2c6214ed47b9d7556c81b6421, type: 2}
+  - {fileID: 11400000, guid: fdf262a56fdadc94ab284420c5bc24e7, type: 2}
 --- !u!82 &8223330495104514794
 AudioSource:
   m_ObjectHideFlags: 0
