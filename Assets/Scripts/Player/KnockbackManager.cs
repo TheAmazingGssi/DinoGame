@@ -28,7 +28,7 @@ public class KnockbackManager : MonoBehaviour
         if (animationController != null)
             animationController.TriggerKnockback();
 
-        rb.linearVelocity = Vector2.zero; // fixed from linearVelocity
+        rb.linearVelocity = Vector2.zero; 
         rb.AddForce(force, ForceMode2D.Impulse);
 
         Invoke(nameof(ResetKnockback), duration);

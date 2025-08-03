@@ -6,19 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="ad023baf-c7c7-445b-a367-968c8e24e03b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DinoGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DinoGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Terry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Terry.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyCombatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyCombatManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CharacterBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharacterBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Spinosaurus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Spinosaurus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Triceratops.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Triceratops.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animators/Dinos/PlayerAnimator2.0.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animators/Dinos/PlayerAnimator2.0.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Therizinosaurus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Therizinosaurus.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/KnockbackManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/KnockbackManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/MeleeDamage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/MeleeDamage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250802T225809.json.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250802T225809.json.bak.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250802T225943.json.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250802T225943.json.bak.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250802T225944.json.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250802T225944.json.bak.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250803T153536.json.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250803T153536.json.bak.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250803T153942.json.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250803T153942.json.bak.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250803T154014.json.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250803T154014.json.bak.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Sortify_Objects.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Sortify_Objects.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -163,6 +160,7 @@
       <workItem from="1754114674552" duration="31210000" />
       <workItem from="1754218189363" duration="1154000" />
       <workItem from="1754219752333" duration="4976000" />
+      <workItem from="1754230211395" duration="2225000" />
     </task>
     <servers />
   </component>
