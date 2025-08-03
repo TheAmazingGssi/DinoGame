@@ -93,6 +93,7 @@ public class MainPlayerController : MonoBehaviour
         combatManager.RestoreHealthByPercent(100f);
         //animController.SetRevived();
         StartCoroutine(ResetRevive());
+        soundPlayer.PlaySound(3);
         Debug.Log($"{stats.characterName} revived");
     }
 

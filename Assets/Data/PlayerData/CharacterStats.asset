@@ -22,7 +22,7 @@ MonoBehaviour:
     damageMax: 20
     specialAttackCost: 50
     specialAttackDamage: 20
-    mudSlowFactor: 0.25
+    mudSlowFactor: 0.45
   - characterName: Spinosaurus
     maxHealth: 100
     stamina: 100
@@ -32,7 +32,7 @@ MonoBehaviour:
     damageMax: 17
     specialAttackCost: 50
     specialAttackDamage: 20
-    mudSlowFactor: 0.333
+    mudSlowFactor: 0.5
   - characterName: Parasaurolophus
     maxHealth: 100
     stamina: 100
@@ -41,8 +41,8 @@ MonoBehaviour:
     damageMin: 15
     damageMax: 20
     specialAttackCost: 50
-    specialAttackDamage: 20
-    mudSlowFactor: 0.2
+    specialAttackDamage: 30
+    mudSlowFactor: 0.6
   - characterName: Therizinosaurus
     maxHealth: 100
     stamina: 100
@@ -52,4 +52,4 @@ MonoBehaviour:
     damageMax: 7
     specialAttackCost: 50
     specialAttackDamage: 20
-    mudSlowFactor: 0.2
+    mudSlowFactor: 0.6
