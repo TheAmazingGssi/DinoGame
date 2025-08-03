@@ -7,24 +7,48 @@ public class KnockbackManager : MonoBehaviour
     private bool isKnockedBack;
     public bool IsKnockedBack => isKnockedBack;
 
+    private EnemyCombatManager combatManager;
+    private AnimationManager animManager;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animationController = GetComponent<AnimationController>();
+        combatManager = GetComponent<EnemyCombatManager>();
+        animManager = GetComponent<AnimationManager>();
     }
 
     public void ApplyKnockback(Vector2 force, float duration)
     {
+        if (isKnockedBack) return;
+
         isKnockedBack = true;
-        if(animationController != null)
+        if (combatManager != null) combatManager.IsKnockbacked = true;
+
+        if (animationController != null)
             animationController.TriggerKnockback();
+
+        rb.linearVelocity = Vector2.zero; // fixed from linearVelocity
         rb.AddForce(force, ForceMode2D.Impulse);
+
         Invoke(nameof(ResetKnockback), duration);
     }
 
     private void ResetKnockback()
     {
         isKnockedBack = false;
-        rb.linearVelocity = Vector2.zero;
+        
+        if (combatManager != null) combatManager.IsKnockbacked = false;
+
+        rb.linearVelocity = Vector2.zero; // fixed from linearVelocity
+
+        if (animManager != null)
+            animManager.KnockbackEnd();
+    }
+
+    public void ForceEndKnockback()
+    {
+        CancelInvoke(nameof(ResetKnockback));
+        ResetKnockback();
     }
 }

@@ -28,7 +28,7 @@ public abstract class CharacterBase : MonoBehaviour
         facingRight = isFacingRight;
         enableDuration = enable;
         disableDelay = disable;
-        IsAttacking = false; // Initialize
+        IsAttacking = false; 
 
         rightMeleeColliderGO = rightCollider ?? transform.Find("RightMeleeCollider")?.gameObject;
         leftMeleeColliderGO = leftCollider ?? transform.Find("LeftMeleeCollider")?.gameObject;
@@ -56,8 +56,7 @@ public abstract class CharacterBase : MonoBehaviour
 
             GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
             MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
-
-            // ✅ Pass correct damage & controller before enabling collider
+            
             activeMeleeDamage?.PrepareDamage(damage, false, _mainPlayerController.transform, _mainPlayerController);
 
             animController.normalAttackVfxAnimator.transform.localPosition = new Vector3

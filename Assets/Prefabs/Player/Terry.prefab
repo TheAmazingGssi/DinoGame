@@ -5080,7 +5080,7 @@ PrefabInstance:
     - target: {fileID: 6963371577172914679, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: normalAttackVfxAnimator
       value: 
-      objectReference: {fileID: 6703358729870754799}
+      objectReference: {fileID: 144093072867735328}
     - target: {fileID: 7268481246512268016, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -5114,6 +5114,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 6196244011814094904}
   m_SourcePrefab: {fileID: 100100000, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+--- !u!95 &144093072867735328 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5384368346122762586, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+  m_PrefabInstance: {fileID: 5424292840108789370}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1231855964058480743 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6511813499013299741, guid: b1a3f4b792eec324d814beda289203c2, type: 3}

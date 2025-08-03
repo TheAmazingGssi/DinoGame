@@ -1,84 +1,101 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Triceratops : CharacterBase
 {
-    [SerializeField] private float chargeDistance = 5f;
-    [SerializeField] private float chargeSpeed = 7f;
-    [SerializeField] private float chargeDamageDelay = 0.2f;
-    [SerializeField] private float glideDistance = 0.5f;
-    [SerializeField] private float glideDuration = 0.2f;
-    [SerializeField] private float glideSpeed = 3f;
+    [SerializeField] private float chargeDistance = 6f;
+    [SerializeField] private float chargeSpeed = 18f;
+    [SerializeField] private float glideDistance = 2.5f;
+    [SerializeField] private float glideSpeed = 8f;
 
     private Rigidbody2D rb;
-    private Vector3 lastParticlePos;
 
-    public override void Initialize(CharacterStats.CharacterData characterStats, AnimationController animationController, GameObject rightCollider, GameObject leftCollider, bool isFacingRight, float enable, float disable)
+    private void Awake()
     {
-        base.Initialize(characterStats, animationController, rightCollider, leftCollider, isFacingRight, enable, disable);
         rb = GetComponent<Rigidbody2D>();
-        if (rb == null)
-            Debug.LogError($"Rigidbody2D not found on {gameObject.name}!");
     }
-    
-    
+
     public override IEnumerator PerformSpecial(UnityAction<float> onSpecial)
     {
         if (rightMeleeColliderGO == null || leftMeleeColliderGO == null || rb == null) yield break;
 
         IsAttacking = true;
         animController.terryParticleSystem.Play();
-        lastParticlePos = animController.terryParticleSystem.transform.position;
 
+        // Select correct collider & damage component
         GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
         MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
-        
-        activeMeleeDamage?.PrepareDamage(stats.specialAttackDamage, true, _mainPlayerController.transform, _mainPlayerController);
-        
-        activeCollider.SetActive(true);
 
         Vector3 startPos = transform.position;
         Vector3 direction = facingRight ? Vector3.right : Vector3.left;
         Vector3 targetPos = startPos + direction * chargeDistance;
+
+        // Track all enemies hit during charge
+        HashSet<Collider2D> enemiesHitDuringCharge = new HashSet<Collider2D>();
+
+        // Enable collider for detection
+        activeCollider.SetActive(true);
+
+        // --- Charge phase ---
         float elapsed = 0f;
         float chargeDuration = chargeDistance / chargeSpeed;
-
-        Debug.Log($"Charging in direction {direction}");
-
-        // Charge phase
         while (elapsed < chargeDuration)
         {
             elapsed += Time.deltaTime;
-            float t = elapsed / chargeDuration;
-            Vector3 newPos = Vector3.Lerp(startPos, targetPos, t);
+            Vector3 newPos = Vector3.Lerp(startPos, targetPos, elapsed / chargeDuration);
             rb.MovePosition(newPos);
-            
-            if (elapsed >= chargeDamageDelay)
+
+            // Check hits during charge
+            Collider2D[] hits = Physics2D.OverlapCircleAll(
+                transform.position,
+                GetComponentInChildren<CircleCollider2D>().radius,
+                LayerMask.GetMask("Enemy")
+            );
+
+            foreach (var hit in hits)
             {
-                activeMeleeDamage?.ApplyDamage(stats.specialAttackDamage, true, transform, _mainPlayerController);
+                if (hit.CompareTag("Enemy") && !enemiesHitDuringCharge.Contains(hit))
+                {
+                    // Damage once
+                    activeMeleeDamage?.PrepareDamage(stats.specialAttackDamage, false, _mainPlayerController.transform, _mainPlayerController);
+                    activeMeleeDamage?.ApplyDamage(stats.specialAttackDamage, false, transform, _mainPlayerController);
+
+                    // Large knockback immediately
+                    KnockbackHelper.ApplyKnockback(
+                        hit.transform,
+                        transform,
+                        KnockbackHelper.GetKnockbackForceFromDamage(stats.specialAttackDamage * 1.5f, true), // large knockback
+                        KnockbackType.Normal
+                    );
+
+                    enemiesHitDuringCharge.Add(hit);
+                }
             }
+
             yield return new WaitForFixedUpdate();
         }
 
-        rb.MovePosition(targetPos);
-
-        // Glide phase
-        elapsed = 0f;
+        // --- Glide phase ---
         startPos = transform.position;
         targetPos = startPos + direction * glideDistance;
+        float glideDuration = glideDistance / glideSpeed;
+        elapsed = 0f;
 
         while (elapsed < glideDuration)
         {
             elapsed += Time.deltaTime;
-            float t = elapsed / glideDuration;
-            Vector3 newPos = Vector3.Lerp(startPos, targetPos, t);
+            Vector3 newPos = Vector3.Lerp(startPos, targetPos, elapsed / glideDuration);
             rb.MovePosition(newPos);
             yield return new WaitForFixedUpdate();
         }
+
         rb.MovePosition(targetPos);
-        
+
+        // Cleanup
         activeCollider.SetActive(false);
         animController.terryParticleSystem.Stop();
+        IsAttacking = false;
     }
 }

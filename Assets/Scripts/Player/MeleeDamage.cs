@@ -5,14 +5,15 @@ public class MeleeDamage : MonoBehaviour
 {
     [SerializeField] private MainPlayerController playerController;
 
-    // Track already-hit enemies per attack activation
+    // Track enemies hit during this activation
     private HashSet<Collider2D> enemiesHit = new HashSet<Collider2D>();
 
-    // Current attack settings
-    private float currentDamage;
-    private bool isSpecialAttack;
-    private Transform attackSource;
-    private bool isGrabAttack;
+    // Current attack settings for this activation
+    private float preparedDamage;
+    private bool preparedSpecial;
+    private Transform preparedSource;
+    private MainPlayerController preparedController;
+    private bool preparedGrab;
 
     private void OnEnable()
     {
@@ -20,44 +21,43 @@ public class MeleeDamage : MonoBehaviour
         CheckExistingOverlaps();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        TryHitEnemy(other);
-    }
+    private void OnTriggerEnter2D(Collider2D other) => TryHitEnemy(other);
 
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        TryHitEnemy(other);
-    }
+    private void OnTriggerStay2D(Collider2D other) => TryHitEnemy(other);
 
     private void TryHitEnemy(Collider2D other)
     {
         if (!other.CompareTag("Enemy")) return;
-        if (enemiesHit.Contains(other)) return;
 
-        enemiesHit.Add(other);
+        bool alreadyHit = enemiesHit.Contains(other);
 
-        EnemyCombatManager enemyCombat = other.GetComponent<EnemyCombatManager>();
-        if (enemyCombat != null)
+        // Always apply damage on first contact
+        if (!alreadyHit)
         {
-            enemyCombat.TakeDamage(new DamageArgs
-            {
-                Damage = currentDamage,
-                SourceGO = playerController != null ? playerController.gameObject : null,
-                SourceMPC = playerController,
-                Knockback = isSpecialAttack
-            });
+            enemiesHit.Add(other);
 
-            // Apply knockback for special attacks
-            if (isSpecialAttack)
+            EnemyCombatManager enemyCombat = other.GetComponent<EnemyCombatManager>();
+            if (enemyCombat != null)
             {
-                KnockbackHelper.ApplyKnockback(
-                    other.transform,
-                    attackSource != null ? attackSource : transform,
-                    KnockbackHelper.GetKnockbackForceFromDamage(currentDamage, true),
-                    isGrabAttack ? KnockbackType.Grab : KnockbackType.Normal
-                );
+                enemyCombat.TakeDamage(new DamageArgs
+                {
+                    Damage = preparedDamage, // ✅ from CharacterStats
+                    SourceGO = playerController != null ? playerController.gameObject : null,
+                    SourceMPC = playerController,
+                    Knockback = preparedSpecial
+                });
             }
+        }
+
+        // Only apply knockback once per activation per enemy
+        if (preparedSpecial && !alreadyHit)
+        {
+            KnockbackHelper.ApplyKnockback(
+                other.transform,
+                preparedSource != null ? preparedSource : transform,
+                KnockbackHelper.GetKnockbackForceFromDamage(preparedDamage, true),
+                preparedGrab ? KnockbackType.Grab : KnockbackType.Normal
+            );
         }
     }
 
@@ -68,35 +68,29 @@ public class MeleeDamage : MonoBehaviour
         int count = GetComponent<Collider2D>().Overlap(filter, hits);
 
         for (int i = 0; i < count; i++)
-        {
             TryHitEnemy(hits[i]);
-        }
     }
 
     /// <summary>
-    /// Set up damage info before collider is enabled.
+    /// Sets up damage and attack type for this collider activation.
     /// </summary>
-    public void PrepareDamage(float damage, bool special, Transform source, MainPlayerController controller, bool grab = false)
+    public void PrepareDamage(float damage, bool isSpecial, Transform source, MainPlayerController controller, bool isGrab = false)
     {
-        currentDamage = damage;
-        isSpecialAttack = special;
-        attackSource = source;
-        isGrabAttack = grab;
+        preparedDamage = damage; // ✅ from CharacterStats via attack scripts
+        preparedSpecial = isSpecial;
+        preparedSource = source;
+        preparedGrab = isGrab;
 
-        // Always set player controller
         if (controller != null)
-        {
             playerController = controller;
-        }
         else if (playerController == null)
-        {
-            // Auto-find if missing
             playerController = GetComponentInParent<MainPlayerController>();
-        }
+
+        enemiesHit.Clear();
     }
 
     /// <summary>
-    /// Apply damage instantly to all enemies in range.
+    /// Instantly apply damage to all enemies in range (AOE/manual trigger).
     /// </summary>
     public void ApplyDamage(float damage, bool isSpecial, Transform source, MainPlayerController controller, bool isGrab = false)
     {
@@ -104,8 +98,6 @@ public class MeleeDamage : MonoBehaviour
 
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, GetComponent<CircleCollider2D>().radius, LayerMask.GetMask("Enemy"));
         foreach (var hit in hits)
-        {
             TryHitEnemy(hit);
-        }
     }
 }

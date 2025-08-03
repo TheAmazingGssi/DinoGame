@@ -48,12 +48,9 @@ public class EnemyCombatManager : CombatManager
             damageArgs.SourceMPC.AddScore(manager.EnemyData.Score);
         }
 
-        //Debug.Log($"Player dealt {damageArgs.Damage}");
-        //Debug.Log($"Enemy took {damageArgs.Damage} from {damageArgs.SourceGO.name}");
-
         base.TakeDamage(damageArgs);
-        
-        if(currentHealth >= 0)
+
+        if (currentHealth >= 0)
         {
             isHurt = false;
         }
@@ -63,7 +60,11 @@ public class EnemyCombatManager : CombatManager
     {
         if (damageArgs.Knockback)
         {
-            manager.Animator.SetTrigger(KNOCKBACK);
+            if (!IsKnockbacked)
+            {
+                IsKnockbacked = true;
+                manager.Animator.SetTrigger(KNOCKBACK);
+            }
         }
         else
         {
