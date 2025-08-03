@@ -26,12 +26,10 @@ public class Parasaurolophus : CharacterBase
         _mainPlayerController.ToggleIsAttacking();
         specialColliderGO.SetActive(true);
 
-        // ✅ Pass correct controller here
         specialMeleeDamage?.PrepareDamage(stats.specialAttackDamage, true, _mainPlayerController.transform, _mainPlayerController);
 
         onSpecial?.Invoke(stats.specialAttackDamage);
 
-        // Also apply immediate area damage if you want specials to hit instantly
         specialMeleeDamage?.ApplyDamage(stats.specialAttackDamage, true, _mainPlayerController.transform, _mainPlayerController);
 
         yield return new WaitForSeconds(specialVfxActivationTime);
