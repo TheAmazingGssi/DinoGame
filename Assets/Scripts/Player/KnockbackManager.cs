@@ -1,54 +1,71 @@
 using UnityEngine;
+using System.Collections;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class KnockbackManager : MonoBehaviour
 {
+    [Header("How long a knockback lasts (sec)")]
+    [SerializeField] private float defaultDuration = 0.3f;
+    [Tooltip("Maximum time before we forcibly end knockback")]
+    [SerializeField] private float maxDuration = 1f;
+
     private Rigidbody2D rb;
-    private AnimationController animationController;
-    private bool isKnockedBack;
+    private bool isKnockedBack = false;
     public bool IsKnockedBack => isKnockedBack;
 
-    private EnemyCombatManager combatManager;
-    private AnimationManager animManager;
+    private Coroutine kbRoutine;
 
-    private void Awake()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        animationController = GetComponent<AnimationController>();
-        combatManager = GetComponent<EnemyCombatManager>();
-        animManager = GetComponent<AnimationManager>();
     }
 
-    public void ApplyKnockback(Vector2 force, float duration)
+    /// <summary>
+    /// Applies an impulse if not already knocked back.
+    /// </summary>
+    /// <param name="force">The impulse vector to apply.</param>
+    /// <param name="duration">Optional duration; uses default if ≤ 0.</param>
+    public void ApplyKnockback(Vector2 force, float duration = -1f)
     {
         if (isKnockedBack) return;
 
+        if (duration <= 0f) duration = defaultDuration;
+        duration = Mathf.Min(duration, maxDuration);
+
         isKnockedBack = true;
-        if (combatManager != null) combatManager.IsKnockbacked = true;
-
-        if (animationController != null)
-            animationController.TriggerKnockback();
-
-        rb.linearVelocity = Vector2.zero; 
+        // stop any existing motion
+        rb.linearVelocity = Vector2.zero;
+        // apply the impulse
         rb.AddForce(force, ForceMode2D.Impulse);
 
-        Invoke(nameof(ResetKnockback), duration);
+        if (kbRoutine != null)
+            StopCoroutine(kbRoutine);
+        kbRoutine = StartCoroutine(KnockbackRoutine(duration));
     }
 
-    private void ResetKnockback()
+    /// <summary>
+    /// Ends the knockback early.
+    /// </summary>
+    public void EndKnockback()
     {
+        if (!isKnockedBack) return;
         isKnockedBack = false;
-        
-        if (combatManager != null) combatManager.IsKnockbacked = false;
-
-        rb.linearVelocity = Vector2.zero; // fixed from linearVelocity
-
-        //if (animManager != null)
-            //animManager.KnockbackEnd();
+        rb.linearVelocity = Vector2.zero;
+        if (kbRoutine != null)
+        {
+            StopCoroutine(kbRoutine);
+            kbRoutine = null;
+        }
     }
 
-    public void ForceEndKnockback()
+    private IEnumerator KnockbackRoutine(float duration)
     {
-        CancelInvoke(nameof(ResetKnockback));
-        ResetKnockback();
+        float t = 0f;
+        while (t < duration)
+        {
+            t += Time.deltaTime;
+            yield return null;
+        }
+        EndKnockback();
     }
 }

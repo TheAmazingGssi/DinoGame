@@ -30,8 +30,26 @@ public class Parasaurolophus : CharacterBase
 
         onSpecial?.Invoke(stats.specialAttackDamage);
 
-        specialMeleeDamage?.ApplyDamage(stats.specialAttackDamage, true, _mainPlayerController.transform, _mainPlayerController);
+        // Damage
+        specialMeleeDamage?.ApplyDamage(stats.specialAttackDamage, false, _mainPlayerController.transform, _mainPlayerController);
 
+        // Knockback (once, strong)
+        Collider2D[] hits = Physics2D.OverlapCircleAll(
+            transform.position,
+            GetComponentInChildren<CircleCollider2D>().radius,
+            LayerMask.GetMask("Enemy")
+        );
+        foreach (var hit in hits)
+        {
+            if (hit.CompareTag("Enemy"))
+            {
+                KnockbackHelper.ApplyKnockback(
+                    hit.transform,
+                    transform,
+                    KnockbackHelper.GetKnockbackForceFromDamage(stats.specialAttackDamage * 1.5f, true) // strong knockback
+                );
+            }
+        }
         yield return new WaitForSeconds(specialVfxActivationTime);
         animController.SpecialVfxAnimator.SetTrigger("Play");
         yield return new WaitForSeconds(restOfSpecialActivationTime);

@@ -5,8 +5,8 @@ using UnityEngine.Events;
 
 public class Triceratops : CharacterBase
 {
-    [SerializeField] private float chargeDistance = 3f;
-    [SerializeField] private float chargeSpeed = 13f;
+    [SerializeField] private float chargeDistance = 6f;
+    [SerializeField] private float chargeSpeed = 18f;
     [SerializeField] private float glideDistance = 2.5f;
     [SerializeField] private float glideSpeed = 8f;
 
@@ -24,7 +24,6 @@ public class Triceratops : CharacterBase
         IsAttacking = true;
         animController.terryParticleSystem.Play();
 
-        // Select correct collider & damage component
         GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
         MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
 
@@ -35,7 +34,6 @@ public class Triceratops : CharacterBase
         // Track all enemies hit during charge
         HashSet<Collider2D> enemiesHitDuringCharge = new HashSet<Collider2D>();
 
-        // Enable collider for detection
         activeCollider.SetActive(true);
 
         // --- Charge phase ---
@@ -47,7 +45,7 @@ public class Triceratops : CharacterBase
             Vector3 newPos = Vector3.Lerp(startPos, targetPos, elapsed / chargeDuration);
             rb.MovePosition(newPos);
 
-            // Check hits during charge
+            // Check for enemies hit
             Collider2D[] hits = Physics2D.OverlapCircleAll(
                 transform.position,
                 GetComponentInChildren<CircleCollider2D>().radius,
@@ -58,17 +56,9 @@ public class Triceratops : CharacterBase
             {
                 if (hit.CompareTag("Enemy") && !enemiesHitDuringCharge.Contains(hit))
                 {
-                    // Damage once
+                    // Damage once, no knockback
                     activeMeleeDamage?.PrepareDamage(stats.specialAttackDamage, false, _mainPlayerController.transform, _mainPlayerController);
                     activeMeleeDamage?.ApplyDamage(stats.specialAttackDamage, false, transform, _mainPlayerController);
-
-                    // Large knockback immediately
-                    KnockbackHelper.ApplyKnockback(
-                        hit.transform,
-                        transform,
-                        KnockbackHelper.GetKnockbackForceFromDamage(stats.specialAttackDamage * 1.5f, true), // large knockback
-                        KnockbackType.Normal
-                    );
 
                     enemiesHitDuringCharge.Add(hit);
                 }
@@ -93,7 +83,19 @@ public class Triceratops : CharacterBase
 
         rb.MovePosition(targetPos);
 
-        // Cleanup
+        // --- Apply one large knockback to all enemies hit during charge ---
+        foreach (var hit in enemiesHitDuringCharge)
+        {
+            if (hit != null)
+            {
+                KnockbackHelper.ApplyKnockback(
+                    hit.transform,
+                    transform,
+                    KnockbackHelper.GetKnockbackForceFromDamage(stats.specialAttackDamage * 1.5f, true) // large knockback
+                );
+            }
+        }
+
         activeCollider.SetActive(false);
         animController.terryParticleSystem.Stop();
         IsAttacking = false;

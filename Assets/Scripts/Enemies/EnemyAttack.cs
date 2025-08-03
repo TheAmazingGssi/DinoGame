@@ -29,12 +29,17 @@ public abstract class EnemyAttack : MonoBehaviour
 
     public void TryAttack()
     {
+        // Prevent starting an attack if knocked back
+        if (manager.KnockbackManager != null && manager.KnockbackManager.IsKnockedBack)
+            return;
+
         if (!isOnCooldown)
         {
             Debug.Log($"{gameObject.name} starting attack");
             StartAttack();
         }
     }
+
 
     private void StartAttack()
     {

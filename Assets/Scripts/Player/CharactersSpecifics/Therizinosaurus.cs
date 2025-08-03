@@ -6,7 +6,7 @@ public class Therizinosaurus : CharacterBase
 {
     [SerializeField] private int specialHitCount = 4; 
     [SerializeField] private float specialHitInterval = 0.15f; 
-    [SerializeField] private float knockbackStrength = 40f; // adjustable in inspector
+    [SerializeField] private float knockbackMultiplier = 0.3f; // small knockback strength multiplier
 
     public override void Initialize(CharacterStats.CharacterData characterStats, AnimationController animController, GameObject rightCollider, GameObject leftCollider, bool isFacingRight, float enable, float disable)
     {
@@ -22,49 +22,51 @@ public class Therizinosaurus : CharacterBase
 
         activeCollider.SetActive(true);
 
-        // Play special VFX once at start
-        animController.SpecialVfxAnimator.gameObject.transform.position = activeCollider.transform.position;
-        animController.specialVfxRenderer.flipX = !facingRight;
-        animController.SpecialVfxAnimator.SetTrigger("Play");
-        
         for (int i = 0; i < specialHitCount; i++)
         {
-            // Damage only — no knockback flag
+            activeMeleeDamage.ClearHitList();
+            
+            // --- Play VFX for each hit ---
+            animController.SpecialVfxAnimator.gameObject.transform.position = activeCollider.transform.position;
+            animController.specialVfxRenderer.flipX = !facingRight;
+            animController.SpecialVfxAnimator.SetTrigger("Play");
+
+            // --- Damage ---
+            float perHitDamage = stats.specialAttackDamage / specialHitCount;
             activeMeleeDamage?.PrepareDamage(
-                stats.specialAttackDamage / specialHitCount,
+                perHitDamage,
                 false, 
                 _mainPlayerController.transform,
                 _mainPlayerController
             );
 
             activeMeleeDamage?.ApplyDamage(
-                stats.specialAttackDamage / specialHitCount,
+                perHitDamage,
                 false, 
                 transform,
                 _mainPlayerController
             );
 
-            yield return new WaitForSeconds(specialHitInterval);
-        }
+            // --- Small knockback on each hit ---
+            Collider2D[] hits = Physics2D.OverlapCircleAll(
+                transform.position,
+                GetComponentInChildren<CircleCollider2D>().radius,
+                LayerMask.GetMask("Enemy")
+            );
 
-        // After all hits, apply one big knockback to all enemies in range
-        Collider2D[] hits = Physics2D.OverlapCircleAll(
-            transform.position,
-            GetComponentInChildren<CircleCollider2D>().radius,
-            LayerMask.GetMask("Enemy")
-        );
-
-        foreach (var hit in hits)
-        {
-            if (hit.CompareTag("Enemy"))
+            foreach (var hit in hits)
             {
-                KnockbackHelper.ApplyKnockback(
-                    hit.transform,
-                    transform,
-                    KnockbackHelper.GetKnockbackForceFromDamage(knockbackStrength, true),
-                    KnockbackType.Normal
-                );
+                if (hit.CompareTag("Enemy"))
+                {
+                    KnockbackHelper.ApplyKnockback(
+                        hit.transform,
+                        transform,
+                        KnockbackHelper.GetKnockbackForceFromDamage(stats.specialAttackDamage * knockbackMultiplier, false)
+                    );
+                }
             }
+
+            yield return new WaitForSeconds(specialHitInterval);
         }
 
         activeCollider.SetActive(false);

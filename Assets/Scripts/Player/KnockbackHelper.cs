@@ -1,19 +1,24 @@
 using UnityEngine;
 
-public enum KnockbackType { Normal, Grab }
-
 public static class KnockbackHelper
 {
-    public static void ApplyKnockback(Transform target, Transform source, float force, KnockbackType type)
+    public static void ApplyKnockback(Transform target, Transform source, float force)
     {
-        Vector2 direction = (target.position - source.position).normalized;
-        float duration = type == KnockbackType.Grab ? 0.5f : 0.3f;
-        KnockbackManager knockback = target.GetComponent<KnockbackManager>();
-        knockback?.ApplyKnockback(direction * force, duration);
+        if (target == null || source == null) return;
+
+        Vector2 dir = (target.position - source.position).normalized;
+        float kbDuration = 0.3f;
+
+        KnockbackManager kb = target.GetComponent<KnockbackManager>();
+        if (kb != null)
+        {
+            kb.ApplyKnockback(dir * force, kbDuration);
+        }
     }
 
-    public static float GetKnockbackForceFromDamage(float damage, bool isSpecial)
+    public static float GetKnockbackForceFromDamage(float damage, bool special)
     {
-        return isSpecial ? damage * 0.5f : damage * 0.3f;
+        // You can adjust this formula to taste
+        return special ? damage * 0.7f : damage * 0.4f;
     }
 }

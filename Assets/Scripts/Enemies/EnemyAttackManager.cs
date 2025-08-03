@@ -96,6 +96,10 @@ public class EnemyAttackManager : MonoBehaviour
 
     private void HandleAttack()
     {
+        // Prevent attacking if knocked back
+        if (manager.KnockbackManager != null && manager.KnockbackManager.IsKnockedBack)
+            return;
+
         if (!isAttacking && currentTarget)
         {
             EnemyAttack chosenAttack = null;

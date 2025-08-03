@@ -4,36 +4,13 @@ using UnityEngine;
 public class EnemyCombatManager : CombatManager
 {
     private static readonly int HURT = Animator.StringToHash("Hurt");
-    private static readonly int KNOCKBACK = Animator.StringToHash("Knockback");
 
     [SerializeField] private EnemyManager manager;
-    [SerializeField] private bool isDead = false;
-    [SerializeField] private bool isHurt = false;
-    [HideInInspector] public bool IsKnockbacked = false;
-
-    private bool waitingForHurtAnimation = false;
-    private Coroutine colorResetCoroutine;
 
     public void Initialize(float maxHealth)
     {
         currentMaxHealth = maxHealth;
         currentHealth = maxHealth;
-    }
-
-    private void Update()
-    {
-        if (isDead)
-        {
-            HandleDeath();
-            isDead = false;
-        }
-
-        if (isHurt && !waitingForHurtAnimation)
-        {
-            manager.Animator.SetTrigger(HURT);
-            waitingForHurtAnimation = true;
-            isHurt = false;
-        }
     }
 
     private void Start()
@@ -54,66 +31,45 @@ public class EnemyCombatManager : CombatManager
         }
 
         base.TakeDamage(damageArgs);
-
-        if (currentHealth <= 0)
-        {
-            isHurt = false;
-            waitingForHurtAnimation = false;
-            if (colorResetCoroutine != null)
-            {
-                StopCoroutine(colorResetCoroutine);
-                colorResetCoroutine = null;
-            }
-        }
     }
 
     private void HandleHurt(DamageArgs damageArgs)
     {
-        if (manager.AttackManager.IsCurrentlyAttacking)
+        if (damageArgs.Knockback)
         {
-            manager.AttackManager.InterruptAttack();
+            manager.AttackManager?.ChangeAttackStatue(false);
+            
+            KnockbackHelper.ApplyKnockback(
+                transform,
+                damageArgs.SourceGO != null ? damageArgs.SourceGO.transform : null,
+                KnockbackHelper.GetKnockbackForceFromDamage(damageArgs.Damage, true)
+            );
         }
-
-        if (!waitingForHurtAnimation)
-        {
-            isHurt = true;
-        }
-
+        
+        manager.Animator.SetTrigger(HURT);
         manager.SoundPlayer.PlaySound(1, 0.5f);
         manager.SpriteRenderer.color = Color.red;
 
-        if (colorResetCoroutine != null)
-        {
-            StopCoroutine(colorResetCoroutine);
-        }
-        colorResetCoroutine = StartCoroutine(BackupColorReset());
+        StartCoroutine(AnimationDelay());
     }
 
-    private IEnumerator BackupColorReset()
-    {
-        yield return new WaitForSeconds(0.5f);
-        if (manager.SpriteRenderer.color == Color.red)
-        {
-            manager.SpriteRenderer.color = Color.white;
-            Debug.Log("Backup color reset triggered");
-        }
-        colorResetCoroutine = null;
-    }
 
-    public void OnHurtAnimationComplete()
+    private IEnumerator AnimationDelay()
     {
-        waitingForHurtAnimation = false;
+        yield return new WaitForSeconds(0.13f);
         manager.SpriteRenderer.color = Color.white;
-
-        if (colorResetCoroutine != null)
-        {
-            StopCoroutine(colorResetCoroutine);
-            colorResetCoroutine = null;
-        }
+        manager.Animator.ResetTrigger(HURT);
+    }
+    
+    public virtual void OnHurtAnimationComplete()
+    {
+        // Optional: reset hurt state or trigger recovery logic
+        Debug.Log($"{gameObject.name} hurt animation complete");
     }
 
     protected override void HandleDeath()
     {
+        Debug.Log("Enemy died in combat manager");
         base.HandleDeath();
     }
 }

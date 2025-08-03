@@ -232,7 +232,14 @@ public class MainPlayerController : MonoBehaviour
 
     private void HandleMovement()
     {
-        if (knockbackManager != null && knockbackManager.IsKnockedBack || isEndOfLevel) return;
+        if (knockbackManager != null && knockbackManager.IsKnockedBack)
+        {
+            rb.linearVelocity = Vector2.zero;
+            animator.SetFloat("Speed", 0f); // Keeps animation in idle
+            return; // Skip movement while in knockback
+        }
+
+        if (isEndOfLevel) return;
 
         float effectiveSpeed = stats.movementSpeed;
         if (isMudSlowed) { effectiveSpeed *= stats.mudSlowFactor; }

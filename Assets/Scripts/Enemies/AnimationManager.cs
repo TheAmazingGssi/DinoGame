@@ -32,8 +32,12 @@ public class AnimationManager : MonoBehaviour
     public void KnockbackEnd()
     {
         manager.Animator.ResetTrigger(KNOCKBACK);
-        manager.CombatManager.IsKnockbacked = false;
         manager.Animator.speed = 1;
+
+        // Let KnockbackManager handle the reset
+        if (manager.KnockbackManager != null)
+            manager.KnockbackManager.EndKnockback();
+
         Debug.Log("KnockbackEnd animation event called");
     }
 }

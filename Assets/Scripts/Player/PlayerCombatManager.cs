@@ -32,7 +32,15 @@ public class PlayerCombatManager : CombatManager
         args.Damage *= damageTakenMultiplier;
         base.TakeDamage(args);
 
-        //Debug.Log($"{gameObject.name} took {args.Damage} damage (after multiplier), health: {currentHealth}");
+        if (args.Knockback)
+        {
+            KnockbackHelper.ApplyKnockback(
+                transform,
+                args.SourceGO != null ? args.SourceGO.transform : null,
+                KnockbackHelper.GetKnockbackForceFromDamage(args.Damage, true)
+            );
+        }
+
         animController.TriggerDamaged();
     }
 
