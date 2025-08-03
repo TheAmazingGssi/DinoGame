@@ -39,6 +39,7 @@ public class EnemySpawner : MonoBehaviour
                 GameManager.Instance.SetWaveSize(EnemiesInWave);
                 StartCoroutine(SpawnWave());
                 wasTriggered = true;
+                Debug.Log("Enemy multiplyer from spawner: " + EnemiesInWaveMultiplier);
             }
         }
     }

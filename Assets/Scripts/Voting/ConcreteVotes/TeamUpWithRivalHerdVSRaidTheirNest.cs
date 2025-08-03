@@ -23,15 +23,12 @@ public class TeamUpWithRivalHerdVSRaidTheirNest : Vote
                 }
                 if(LevelNumber == GameManager.Instance.LevelNumber)
                 {
-                    GameManager.Instance.NextLevelEffects.Add(this, i);
-
+                    VoteEffectManager.Instance.StoreNextLevelEffect(this, i);
                 }
                 else
                 {
-                    foreach (EnemySpawner spawner in GameManager.Instance.SpawnerManager.EnemySpawners)
-                    {
-                        spawner.EnemiesInWaveMultiplier = 5;
-                    }
+                    GameManager.Instance.SpawnerManager.IncreaseEnemies(5);
+                    Debug.Log("Increasing enemy amount");
                 }
                 break;
             case 1:
@@ -53,7 +50,7 @@ public class TeamUpWithRivalHerdVSRaidTheirNest : Vote
                 }
                 else
                 {
-                    GameManager.Instance.FinaleLevelEffects.Add(this, i);
+                    VoteEffectManager.Instance.StoreFinaleLevelEffect(this, i);
                     Debug.Log("adding to finale level votes");
                 }
                     break;

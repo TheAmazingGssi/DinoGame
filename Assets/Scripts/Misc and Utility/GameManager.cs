@@ -39,26 +39,7 @@ public class GameManager : MonoBehaviour
         }
         Instance = this;
 
-        if (LevelNumber == FinaleLevel)
-        {
-            foreach (var vote in FinaleLevelEffects)
-            {
-                Vote currentVote = vote.Key;
-                int choiceIndex = vote.Value;
-                currentVote.ApplyEffects(choiceIndex);
-            }
-            FinaleLevelEffects.Clear();
-        }
-        if(LevelNumber > vote.LevelNumber)
-        {
-            foreach (var vote in NextLevelEffects)
-            {
-                Vote currentVote = vote.Key;
-                int choiceIndex = vote.Value;
-                currentVote.ApplyEffects(choiceIndex);
-            }
-            NextLevelEffects.Clear();
-        }
+        VoteEffectManager.Instance.ApplyStoredEffects(LevelNumber, FinaleLevel);
 
         cameraMovement.FurthestLeftPoint = waveLocations[currentWave].LeftMost;
         cameraMovement.FurthestRightPoint = waveLocations[currentWave].RightMost;

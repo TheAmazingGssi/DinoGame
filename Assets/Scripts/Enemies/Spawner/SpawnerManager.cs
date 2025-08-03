@@ -22,4 +22,12 @@ public class SpawnerManager : MonoBehaviour
             EnemySpawners[i].MaxSpawnTime = data[i].MaxSpawnTime;
         }
     }
+
+    public void IncreaseEnemies(int multiplier)
+    {
+        foreach (EnemySpawner spawner in EnemySpawners)
+        {
+            spawner.EnemiesInWaveMultiplier = multiplier;
+        }
+    }
 }
