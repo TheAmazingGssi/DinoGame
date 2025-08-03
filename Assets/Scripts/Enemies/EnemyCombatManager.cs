@@ -13,6 +13,7 @@ public class EnemyCombatManager : CombatManager
 
     // Track if we're waiting for animation events
     private bool waitingForHurtAnimation = false;
+    private Coroutine colorResetCoroutine;
 
     public void Initialize(float maxHealth)
     {
@@ -59,6 +60,12 @@ public class EnemyCombatManager : CombatManager
         {
             isHurt = false;
             waitingForHurtAnimation = false;
+            // Stop any color reset coroutine on death
+            if (colorResetCoroutine != null)
+            {
+                StopCoroutine(colorResetCoroutine);
+                colorResetCoroutine = null;
+            }
         }
     }
 
@@ -78,6 +85,24 @@ public class EnemyCombatManager : CombatManager
 
         manager.SoundPlayer.PlaySound(1, 0.5f);
         manager.SpriteRenderer.color = Color.red;
+
+        // Start backup color reset coroutine in case animation event fails
+        if (colorResetCoroutine != null)
+        {
+            StopCoroutine(colorResetCoroutine);
+        }
+        colorResetCoroutine = StartCoroutine(BackupColorReset());
+    }
+
+    private IEnumerator BackupColorReset()
+    {
+        yield return new WaitForSeconds(0.5f); // Wait longer than animation should take
+        if (manager.SpriteRenderer.color == Color.red)
+        {
+            manager.SpriteRenderer.color = Color.white;
+            Debug.Log("Backup color reset triggered");
+        }
+        colorResetCoroutine = null;
     }
 
     // Called by AnimationManager when hurt animation ends
@@ -85,6 +110,15 @@ public class EnemyCombatManager : CombatManager
     {
         waitingForHurtAnimation = false;
         manager.SpriteRenderer.color = Color.white;
+
+        // Cancel backup coroutine since animation event worked
+        if (colorResetCoroutine != null)
+        {
+            StopCoroutine(colorResetCoroutine);
+            colorResetCoroutine = null;
+        }
+
+        Debug.Log("Hurt animation completed - color reset via animation event");
     }
 
     protected override void HandleDeath()

@@ -42,8 +42,8 @@ public class KnockbackManager : MonoBehaviour
 
         rb.linearVelocity = Vector2.zero; // fixed from linearVelocity
 
-        if (animManager != null)
-            animManager.KnockbackEnd();
+        //if (animManager != null)
+            //animManager.KnockbackEnd();
     }
 
     public void ForceEndKnockback()
