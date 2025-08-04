@@ -41,7 +41,7 @@ public class TeamUpWithRivalHerdVSRaidTheirNest : Vote
                     if (GameManager.Instance.LevelNumber == voteOriginLevel + 1 && !nextLevelEffectApplied)
                     {
                         Debug.Log("Applying enemy increase effect NOW (one time only)");
-                        GameManager.Instance.SpawnerManager.IncreaseEnemies(5);
+                        GameManager.Instance.SpawnerManager.IncreaseEnemies(3);
                         nextLevelEffectApplied = true;
                     }
                 }

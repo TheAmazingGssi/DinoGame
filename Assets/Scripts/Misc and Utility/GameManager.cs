@@ -72,6 +72,15 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        //check lose condition
+        int counter = 0;
+        for (int i = 0; i < PlayerEntity.PlayerList.Count; i++)
+            if (PlayerEntity.PlayerList[i].CombatManager.CurrentHealth <= 0)
+                counter++;
+        if (counter == PlayerEntity.PlayerList.Count)
+            sceneLoader.LoadScene(Scenes.MainMenu);
+
+        //make camera move to vote animation
         if (currentWave >= waveLocations.Length)
             return;
         float cameraX = cameraMovement.transform.position.x;
