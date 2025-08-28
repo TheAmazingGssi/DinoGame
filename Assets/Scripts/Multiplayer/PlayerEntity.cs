@@ -130,7 +130,7 @@ public class PlayerEntity : MonoBehaviour
         {
             uiController = Instantiate(MultiplayerUIControllerObject).GetComponent<MultiplayerUIController>();
             Move.AddListener(uiController.OnNavigate);
-            Confirmation.AddListener(uiController.OnConrfimPressed);
+            Confirmation.AddListener(uiController.OnConfirmPressed);
         }
 
         uiController.SetUp(CharacterType, defaultButton, this);

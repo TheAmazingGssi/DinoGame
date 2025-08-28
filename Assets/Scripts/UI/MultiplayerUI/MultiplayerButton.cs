@@ -33,7 +33,7 @@ public class MultiplayerButton : MonoBehaviour
     }
     public void Select(PlayerEntity player)
     {
-        if (votingManager && votingManager.IsVoting)
+        if (votingManager.IsVoting)
             votingManager.CastVote(player, choiceIndex);
 
 /*        if (characterIndicators.TryGetValue(player.CharacterType, out var indicator))

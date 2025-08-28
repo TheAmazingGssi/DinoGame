@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class UIControllerSpawner : MonoBehaviour
 {
-    [SerializeField] MultiplayerButton defaultOption;
+    [SerializeField] MultiplayerButton[] defaultOptionButtons;
+    private MultiplayerButton defaultOption;
 
     private void Update()
     {
@@ -13,10 +14,16 @@ public class UIControllerSpawner : MonoBehaviour
 
     public void SpawnControllers()
     {
-        for (int i = 0; i < PlayerEntity.PlayerList.Count; i++)
+        for(int i = 0; i < defaultOptionButtons.Length; i++)
         {
-            PlayerEntity.PlayerList[i].SpawnUIController(defaultOption);
+            if(defaultOptionButtons[i].gameObject.activeInHierarchy)
+            {
+                defaultOption = defaultOptionButtons[i];
+                break;
+            }
         }
+        for (int i = 0; i < PlayerEntity.PlayerList.Count; i++)
+            PlayerEntity.PlayerList[i].SpawnUIController(defaultOption);
     }
     public void DebugLog(string msg)
     {

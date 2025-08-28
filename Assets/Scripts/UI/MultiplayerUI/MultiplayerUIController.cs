@@ -70,7 +70,7 @@ public class MultiplayerUIController : MonoBehaviour
                 MoveLeft();
         }
     }
-    public void OnConrfimPressed(InputAction.CallbackContext inputContext)
+    public void OnConfirmPressed(InputAction.CallbackContext inputContext)
     {
         if (ready) 
             return;
@@ -81,7 +81,4 @@ public class MultiplayerUIController : MonoBehaviour
         CurrentlySelected.Select(player);
     }
 
-    public void ConfirmCurrentButton()
-    {
-    }
 }
