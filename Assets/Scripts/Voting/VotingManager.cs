@@ -39,6 +39,8 @@ public class VotingManager : MonoBehaviour
 
     public static event Action<int> OnVoteComplete;
 
+    private Dictionary<PlayerEntity, int> playerVotes = new Dictionary<PlayerEntity, int>();
+
     private Vote currentVote;
     private float timer;
     private int[] choices;
@@ -46,6 +48,8 @@ public class VotingManager : MonoBehaviour
 
     private bool isVoting = false;
     private bool isReading = false;
+
+    public bool IsVoting => isVoting;
 
     public void StartVote(Vote vote)
     {
@@ -127,21 +131,33 @@ public class VotingManager : MonoBehaviour
         for (int i = 0; i < buttons.Length; i++)
         {
             bool hasText = i < text.Length;
-
             buttons[i].gameObject.SetActive(hasText);
             buttons[i].button.interactable = hasText;
+
+            if (hasText)
+                buttons[i].Initialize(i, this);
         }
 
         buttonsParent.SetActive(false);
     }
 
-    public void CastVote(int choiceIndex)
+    public void CastVote(PlayerEntity player, int choiceIndex)
     {
         if (!isVoting) return;
 
+        if (playerVotes.ContainsKey(player))
+        {
+            choices[playerVotes[player]]--;
+            playerVotes[player] = choiceIndex;
+        }
+        else
+        {
+            playerVotes[player] = choiceIndex;
+            voted++;
+        }
+
         choices[choiceIndex]++;
-        voted++;
-        Debug.Log($"Player voted ({voted} total). Choice: {choiceIndex}");
+        Debug.Log($"{player.name} voted for {choiceIndex}");
     }
 
     private void CompleteVote()
@@ -153,14 +169,24 @@ public class VotingManager : MonoBehaviour
 
         for (int i = 0; i < choices.Length; i++)
         {
-            if (choices[i] >= maxVotes)
+            if (choices[i] == maxVotes)
                 topChoices.Add(i);
         }
 
-        int winningChoice = topChoices.Count == 1 ? topChoices[0] : topChoices[UnityEngine.Random.Range(0, topChoices.Count)];
+        int winningChoice;
+
+        if (topChoices.Count == 1)
+        {
+            winningChoice = topChoices[0];
+        }
+        else
+        {
+            PlayerEntity highScoringPlayer = GameManager.Instance.GetHighestScorePlayer();
+            playerVotes.TryGetValue(highScoringPlayer, out int votedChoice);
+            winningChoice = votedChoice;
+        }
 
         votingPanel.SetActive(false);
-
         StartCoroutine(WiningChoiceDisplay(winningChoice));
 
         Debug.Log($"Vote completed. Winning choice: {currentVote.Choices[winningChoice]}");

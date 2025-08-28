@@ -204,13 +204,11 @@ public class MainPlayerController : MonoBehaviour
             animController.SetEmoting(true);
             if (emoteSound != null && audioSource != null)
                 audioSource.PlayOneShot(emoteSound);
-            Debug.Log($"{stats.characterName} started emoting");
         }
         else if (!emoteHeld && isEmoting)
         {
             isEmoting = false;
             animController.SetEmoting(false);
-            Debug.Log($"{stats.characterName} stopped emoting");
         }
     }
 

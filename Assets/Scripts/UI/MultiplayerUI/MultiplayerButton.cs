@@ -12,7 +12,9 @@ public class MultiplayerButton : MonoBehaviour
 
     public Button button;
     public Dictionary<CharacterType, Image> characterIndicators = new Dictionary<CharacterType, Image>();
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    private int choiceIndex;
+    private VotingManager votingManager;
     void Awake()
     {
         characterIndicators.Add(CharacterType.Triceratops, terryIndicator);
@@ -22,5 +24,19 @@ public class MultiplayerButton : MonoBehaviour
 
         foreach(Image img in characterIndicators.Values)
             img.enabled = false;
+    }
+
+    public void Initialize(int index, VotingManager manager)
+    {
+        choiceIndex = index;
+        votingManager = manager;
+    }
+    public void Select(PlayerEntity player)
+    {
+        if (votingManager && votingManager.IsVoting)
+            votingManager.CastVote(player, choiceIndex);
+
+/*        if (characterIndicators.TryGetValue(player.CharacterType, out var indicator))
+            indicator.enabled = true;*/
     }
 }

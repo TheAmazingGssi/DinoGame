@@ -8,11 +8,13 @@ public class MultiplayerUIController : MonoBehaviour
 
     bool ready;
 
+    private PlayerEntity player;
     private CharacterType characterType;
     public MultiplayerButton CurrentlySelected;
 
-    public void SetUp(CharacterType charType, MultiplayerButton defaultSelection)
+    public void SetUp(CharacterType charType, MultiplayerButton defaultSelection, PlayerEntity playerEntity)
     {
+        this.player = playerEntity;
         characterType = charType;
         CurrentlySelected = defaultSelection;
         SetSelection(true);
@@ -76,5 +78,10 @@ public class MultiplayerUIController : MonoBehaviour
         ready = true;
         CurrentlySelected.characterIndicators[characterType].color = Color.white;
         CurrentlySelected.button.onClick.Invoke();
+        CurrentlySelected.Select(player);
+    }
+
+    public void ConfirmCurrentButton()
+    {
     }
 }
