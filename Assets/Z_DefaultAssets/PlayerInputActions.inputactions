@@ -277,6 +277,17 @@
                 },
                 {
                     "name": "",
+                    "id": "88dd4f20-043a-45d3-be52-0c56e684a184",
+                    "path": "<HID::shanwan Twin USB Joystick>/stick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Joystick",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "143bb1cd-cc10-4eca-a2f0-a3664166fe91",
                     "path": "<Gamepad>/buttonWest",
                     "interactions": "",
@@ -304,6 +315,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fb975afb-ea16-4928-8af4-ed77d2047984",
+                    "path": "<HID::shanwan Twin USB Joystick>/button4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Joystick",
                     "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -436,6 +458,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
+                    "action": "Confirmation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3ae94ec4-ebe9-4783-bcbf-01c6a377a5d3",
+                    "path": "<HID::shanwan Twin USB Joystick>/button4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Joystick",
                     "action": "Confirmation",
                     "isComposite": false,
                     "isPartOfComposite": false

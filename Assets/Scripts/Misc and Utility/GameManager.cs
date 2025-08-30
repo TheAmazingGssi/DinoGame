@@ -159,6 +159,7 @@ public class GameManager : MonoBehaviour
                 highestScorePlayer = player;
             }
         }
+        highestScorePlayer = highestScorePlayer ?? PlayerEntity.PlayerList[0];
         return highestScorePlayer;
     }
 
@@ -175,6 +176,7 @@ public class GameManager : MonoBehaviour
                 lowestScorePlayer = player;
             }
         }
+        lowestScorePlayer = lowestScorePlayer ?? PlayerEntity.PlayerList[0];
         return lowestScorePlayer;
     }
 }
