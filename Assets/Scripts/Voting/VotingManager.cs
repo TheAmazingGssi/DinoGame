@@ -13,15 +13,12 @@ public class VotingManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private GameObject buttonsParent;
     [SerializeField] private GameObject background;
-    [SerializeField] private ClockHandle hourHandle;
-    [SerializeField] private ClockHandle minuteHandle;
 
     [Header("Lore Panel References")]
     [SerializeField] private TextMeshProUGUI lorePanelTitleText;
     [SerializeField] private GameObject lorePanel;
     [SerializeField] private TextMeshProUGUI lorePanelText;
     [SerializeField] private MultiplayerButton continueButton;
-
 
     [Header("Winning Vote Panel References")]
     [SerializeField] private GameObject winningVotePanel;
@@ -30,14 +27,7 @@ public class VotingManager : MonoBehaviour
     [SerializeField] private MultiplayerButton[] buttons;
     [SerializeField] private TextMeshProUGUI[] choicesTexts;
 
-    [SerializeField] private GameObject testButton;
-
     [SerializeField] private UIControllerSpawner uiSpawner;
-
-    [Header("Settings")]
-    [SerializeField] private float readDuration = 20f;
-    [SerializeField] private float voteDuration = 20f;
-    [SerializeField] private int amountOfMinuteRotations = 3;
 
     public static event Action<int> OnVoteComplete;
 
@@ -53,45 +43,48 @@ public class VotingManager : MonoBehaviour
 
     public void StartVote(Vote vote)
     {
-        Debug.Log("Starting vote...");
-
         currentVote = vote;
 
-        background.SetActive(true);
-        lorePanel.SetActive(true);
-        continueButton.gameObject.SetActive(false);
-        votingPanel.SetActive(false);
-        winningVotePanel.SetActive(false);
-
-        descriptionText.text = vote.VoteDescription;
-        titleText.text = vote.VoteTitle;
-
-        lorePanelText.text = vote.VoteDescription;
-        lorePanelTitleText.text = vote.VoteTitle;
-
-        choices = new int[vote.Choices.Length];
-        for (int i = 0; i < choices.Length; i++)
-        {
-            choices[i] = 0;
-        }
-
-        SetUpChoicesText(vote.Choices);
-        SetupButtons(vote.Choices);
-
+        isVoting = false;
         voted = 0;
         readyPlayers = 0;
 
+        background.SetActive(true);
+        lorePanel.SetActive(true);
+        votingPanel.SetActive(false);
+        buttonsParent.SetActive(false);
+        winningVotePanel.SetActive(false);
+
+        descriptionText.text = currentVote.VoteDescription;
+        titleText.text = currentVote.VoteTitle;
+        lorePanelText.text = currentVote.VoteDescription;
+        lorePanelTitleText.text = currentVote.VoteTitle;
+
+        choices = new int[currentVote.Choices.Length];
+        for (int i = 0; i < choices.Length; i++) choices[i] = 0;
+
         continueButton.gameObject.SetActive(true);
-        uiSpawner.SpawnControllers();
+        continueButton.Initialize(-1, this);
+        uiSpawner.SpawnControllers(continueButton);
     }
+
     private void VotingPhase()
     {
+        SetUpChoicesText(currentVote.Choices);
+        SetupButtons(currentVote.Choices);
+
         lorePanel.SetActive(false);
         votingPanel.SetActive(true);
         buttonsParent.SetActive(true);
+
         isVoting = true;
-        uiSpawner.SpawnControllers();
+
+        voted = 0;
+        playerVotes.Clear();
+
+        uiSpawner.SpawnControllers(buttons[0]);
     }
+
 
     public void MoveToVotes()
     {
@@ -120,8 +113,6 @@ public class VotingManager : MonoBehaviour
             if (hasText)
                 buttons[i].Initialize(i, this);
         }
-
-        buttonsParent.SetActive(false);
     }
 
     public void CastVote(PlayerEntity player, int choiceIndex)
@@ -130,11 +121,13 @@ public class VotingManager : MonoBehaviour
 
         if (playerVotes.ContainsKey(player))
         {
+            Debug.Log($"{player.name} Already voted");
             choices[playerVotes[player]]--;
             playerVotes[player] = choiceIndex;
         }
         else
         {
+            Debug.Log($"{player.name} voted!!!!!");
             playerVotes[player] = choiceIndex;
             voted++;
         }

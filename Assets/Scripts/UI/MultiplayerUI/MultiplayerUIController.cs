@@ -72,8 +72,7 @@ public class MultiplayerUIController : MonoBehaviour
     }
     public void OnConfirmPressed(InputAction.CallbackContext inputContext)
     {
-        if (ready) 
-            return;
+        if (ready) return;
 
         ready = true;
         CurrentlySelected.characterIndicators[characterType].color = Color.white;
