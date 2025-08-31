@@ -27,7 +27,7 @@ public class EnemyCombatManager : CombatManager
             {
                 manager.AttackManager.OnPlayerDealtDamage(playerSource);
             }
-            damageArgs.SourceMPC.AddScore(manager.EnemyData.Score);
+            damageArgs.SourceMPC.AddScore((int)(manager.EnemyData.Score * damageArgs.Damage));
         }
 
         base.TakeDamage(damageArgs);
