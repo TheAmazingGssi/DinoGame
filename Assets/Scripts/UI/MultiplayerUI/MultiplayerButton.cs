@@ -13,9 +13,11 @@ public class MultiplayerButton : MonoBehaviour
     public Button button;
     public Dictionary<CharacterType, Image> characterIndicators = new Dictionary<CharacterType, Image>();
 
-    private int choiceIndex = -1;
-    private bool isVoteButton = false;
-    private VotingManager votingManager;
+    public int ChoiceIndex { get; private set; } = -1;
+    public VotingManager VotingManager { get; private set; }
+
+    private bool isVoteButton = true;
+    public bool IsVoteButton => isVoteButton;
 
     void Awake()
     {
@@ -30,18 +32,13 @@ public class MultiplayerButton : MonoBehaviour
 
     public void Initialize(int index, VotingManager manager)
     {
-        Debug.Log($"Initializing index: {index}");
-        choiceIndex = index;
-        votingManager = manager;
-        isVoteButton = true;
+        ChoiceIndex = index;
+        VotingManager = manager;
+        isVoteButton = index != -1;
     }
     public void Select(PlayerEntity player)
     {
-        Debug.Log($"INSIDE SELECT: isVoteButton: {isVoteButton}, voting manager: {votingManager.IsVoting}, choiseIndex: {choiceIndex}");
-        if (isVoteButton && votingManager.IsVoting && choiceIndex != -1)
-        {
-            Debug.Log($"CASTING A VOTE FROM SELECT");
-            votingManager.CastVote(player, choiceIndex);
-        }
+        if (isVoteButton && VotingManager != null && VotingManager.IsVoting && ChoiceIndex != -1)
+            VotingManager.CastVote(player, ChoiceIndex);
     }
 }

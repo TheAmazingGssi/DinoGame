@@ -70,19 +70,19 @@ public class VotingManager : MonoBehaviour
 
     private void VotingPhase()
     {
-        SetUpChoicesText(currentVote.Choices);
-        SetupButtons(currentVote.Choices);
-
         lorePanel.SetActive(false);
         votingPanel.SetActive(true);
-        buttonsParent.SetActive(true);
-
-        isVoting = true;
 
         voted = 0;
         playerVotes.Clear();
 
+        SetUpChoicesText(currentVote.Choices);
+        SetupButtons(currentVote.Choices);
+        buttonsParent.SetActive(true);
+
         uiSpawner.SpawnControllers(buttons[0]);
+
+        isVoting = true;
     }
 
 
@@ -121,21 +121,21 @@ public class VotingManager : MonoBehaviour
 
         if (playerVotes.ContainsKey(player))
         {
-            Debug.Log($"{player.name} Already voted");
             choices[playerVotes[player]]--;
             playerVotes[player] = choiceIndex;
         }
         else
         {
-            Debug.Log($"{player.name} voted!!!!!");
             playerVotes[player] = choiceIndex;
             voted++;
         }
 
         choices[choiceIndex]++;
-        Debug.Log($"{player.name} voted for {choiceIndex}");
         if (voted >= PlayerEntity.PlayerList.Count)
+        {
+            Debug.Log($"Vote completed, number voted: {voted}");
             CompleteVote();
+        }
     }
 
     private void CompleteVote()
