@@ -6,25 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="ad023baf-c7c7-445b-a367-968c8e24e03b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DinoGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DinoGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/EnemyTypes/EnemyBoss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/EnemyTypes/EnemyBoss.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/AnimationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/AnimationManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyAttackManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyAttackManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyCombatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyCombatManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Parasaurolophus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Parasaurolophus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Therizinosaurus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Therizinosaurus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Triceratops.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Triceratops.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/KnockbackHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/KnockbackHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/KnockbackManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/KnockbackManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Background/Misc/mazeget spencer D. nozaur.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Background/Misc/mazeget spencer D. nozaur.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Background/Misc/mazeget terry the triceratops 1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Background/Misc/mazeget terry the triceratops 1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Background/Misc/mazeget terry the triceratops face.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Background/Misc/mazeget terry the triceratops face.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Final Game Scenes/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Final Game Scenes/Level 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc and Utility/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc and Utility/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/MainPlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/MainPlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/MeleeDamage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/MeleeDamage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCombatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCombatManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250803T174540.json.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250803T174540.json.bak.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250803T174559.json.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250803T174559.json.bak.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250803T174610.json.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250803T174610.json.bak.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250803T220720.json.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250803T220720.json.bak.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250803T220813.json.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250803T220813.json.bak.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250803T220841.json.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250803T220841.json.bak.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Sortify_Objects.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Sortify_Objects.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +44,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc and Utility/PulsingImage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc and Utility/ToggleGameObjects.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/KnockbackHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/MainPlayerController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -57,6 +52,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/RevivePrompt.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Stage Hazards/IcetroidSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tutorial/PlayerTutorialProxy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap/Editor/GridPaintingState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0900e0d4bb644dafbfd59eb7fd222a681ddc00/11/dd6781a5/UnsafeUtility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0900e0d4bb644dafbfd59eb7fd222a681ddc00/14/e5f27ed5/Unmarshal.cs" root0="FORCE_HIGHLIGHTING" />
@@ -66,7 +64,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0900e0d4bb644dafbfd59eb7fd222a681ddc00/ec/5cfee27a/Component.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ed969b0e627d471da4848289f9c322df46ae00/3f/aa9c8bb9/IntPtr.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ed969b0e627d471da4848289f9c322df46ae00/e7/8254d0fc/GCHandle.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Desktop/WitchPlayerController.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -169,6 +166,7 @@
       <workItem from="1754218189363" duration="1154000" />
       <workItem from="1754219752333" duration="4976000" />
       <workItem from="1754230211395" duration="2225000" />
+      <workItem from="1756588734604" duration="5764000" />
     </task>
     <servers />
   </component>

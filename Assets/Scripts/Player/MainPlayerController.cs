@@ -36,6 +36,7 @@ public class MainPlayerController : MonoBehaviour
     [SerializeField] private MeleeDamage leftMeleeDamage;
     [SerializeField] private Animator animator;
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private PlayerTutorialProxy tutorialProxy;
 
     [Header("Attack Variables")]
     [SerializeField] private float enableDuration = 0.2f;
@@ -50,6 +51,8 @@ public class MainPlayerController : MonoBehaviour
     [Header("Emote Variables")]
     [SerializeField] private AudioClip emoteSound;
 
+    public bool inTutorial = true;
+    
     private float lastAttackTime;
     private float lastSpecialTime;
     private bool canAttack = true;
@@ -68,8 +71,8 @@ public class MainPlayerController : MonoBehaviour
     private Vector2 currentVelocity;
     private CharacterStats.CharacterData stats;
     private CharacterBase characterScript;
-    private static int activePlayers = 0;
-    private static int fallenPlayers = 0;
+    private static int activePlayers = 0;//todo: remove if not needed
+    private static int fallenPlayers = 0;//todo: remove if not needed
     private int score;
 
     public PlayerCombatManager CombatManager => combatManager;
@@ -91,7 +94,6 @@ public class MainPlayerController : MonoBehaviour
         canSpecial = true;
         fallenPlayers--;
         combatManager.RestoreHealthByPercent(100f);
-        //animController.SetRevived();
         StartCoroutine(ResetRevive());
         soundPlayer.PlaySound(3);
         Debug.Log($"{stats.characterName} revived");
@@ -160,6 +162,8 @@ public class MainPlayerController : MonoBehaviour
         activePlayers++;
 
         combatManager.OnDeath += PlayDeathSound;
+        if(inTutorial) tutorialProxy.Init(GameManager.Instance.playerIdCounter);
+        GameManager.Instance.playerIdCounter++;
     }
 
     private void OnEnable() { GameManager.OnLevelEnd += OnLevelEnd; }
@@ -195,6 +199,7 @@ public class MainPlayerController : MonoBehaviour
             isBlocking = false;
             animController.SetBlocking(false);
             CanBeDamaged = true;
+            if(inTutorial) tutorialProxy.ReportBlock();
         }
 
         // Emote handling
@@ -266,6 +271,7 @@ public class MainPlayerController : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
+        if(inTutorial) tutorialProxy.ReportMovementSample(moveInput.magnitude);
     }
 
     public void ApplyDamageBoost(float percentage)
@@ -295,6 +301,7 @@ public class MainPlayerController : MonoBehaviour
             soundPlayer.PlaySound(0);
 
             StartCoroutine(ResetAttackCooldown());
+            if(inTutorial) tutorialProxy.ReportAttack();
         }
     }
 
