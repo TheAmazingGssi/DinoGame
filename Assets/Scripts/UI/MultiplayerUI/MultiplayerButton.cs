@@ -13,8 +13,12 @@ public class MultiplayerButton : MonoBehaviour
     public Button button;
     public Dictionary<CharacterType, Image> characterIndicators = new Dictionary<CharacterType, Image>();
 
-    private int choiceIndex;
-    private VotingManager votingManager;
+    public int ChoiceIndex { get; private set; } = -1;
+    public VotingManager VotingManager { get; private set; }
+
+    private bool isVoteButton = true;
+    public bool IsVoteButton => isVoteButton;
+
     void Awake()
     {
         characterIndicators.Add(CharacterType.Triceratops, terryIndicator);
@@ -28,15 +32,13 @@ public class MultiplayerButton : MonoBehaviour
 
     public void Initialize(int index, VotingManager manager)
     {
-        choiceIndex = index;
-        votingManager = manager;
+        ChoiceIndex = index;
+        VotingManager = manager;
+        isVoteButton = index != -1;
     }
     public void Select(PlayerEntity player)
     {
-        if (votingManager.IsVoting)
-            votingManager.CastVote(player, choiceIndex);
-
-/*        if (characterIndicators.TryGetValue(player.CharacterType, out var indicator))
-            indicator.enabled = true;*/
+        if (isVoteButton && VotingManager != null && VotingManager.IsVoting && ChoiceIndex != -1)
+            VotingManager.CastVote(player, ChoiceIndex);
     }
 }
