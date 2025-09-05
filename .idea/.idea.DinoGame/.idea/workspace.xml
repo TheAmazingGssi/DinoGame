@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad023baf-c7c7-445b-a367-968c8e24e03b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DinoGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DinoGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Background/Misc/mazeget spencer D. nozaur.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Background/Misc/mazeget spencer D. nozaur.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Background/Misc/mazeget terry the triceratops 1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Background/Misc/mazeget terry the triceratops 1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Background/Misc/mazeget terry the triceratops face.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Background/Misc/mazeget terry the triceratops face.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Final Game Scenes/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Final Game Scenes/Level 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc and Utility/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc and Utility/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/MainPlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/MainPlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250803T220720.json.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250803T220720.json.bak.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250803T220813.json.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250803T220813.json.bak.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250803T220841.json.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250803T220841.json.bak.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Sortify_Objects.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Sortify_Objects.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250831T013518.json.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250831T013518.json.bak.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,6 +155,7 @@
       <workItem from="1754219752333" duration="4976000" />
       <workItem from="1754230211395" duration="2225000" />
       <workItem from="1756588734604" duration="5764000" />
+      <workItem from="1756932099494" duration="600000" />
     </task>
     <servers />
   </component>
