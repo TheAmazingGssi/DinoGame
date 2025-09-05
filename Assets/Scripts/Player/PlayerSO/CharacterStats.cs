@@ -16,6 +16,11 @@ public class CharacterStats : ScriptableObject
         public float specialAttackCost;
         public float specialAttackDamage;
         public float mudSlowFactor;
+
+        //todo: new block system
+        public float blockStaminaMax;
+        public float blockCost;   
+        public float blockRegenRate;
     }
 
     public CharacterData[] characters;
