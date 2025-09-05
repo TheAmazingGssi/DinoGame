@@ -38,8 +38,8 @@ public class TutorialManager : MonoBehaviour
     {
         foreach (var player in PlayerEntity.PlayerList)
         {
-            player.GetComponent<PlayerCombatManager>().RestoreHealthByPercent(100f);
-            player.GetComponent<MainPlayerController>().inTutorial = false;
+            player.gameObject.GetComponent<PlayerCombatManager>().RestoreHealthByPercent(100f);
+            player.gameObject.GetComponent<MainPlayerController>().inTutorial = false;
         }
         
         UnsubscribePlayers(players);
