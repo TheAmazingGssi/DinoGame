@@ -13,13 +13,12 @@ public class VotingManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private GameObject buttonsParent;
     [SerializeField] private GameObject background;
-    [SerializeField] private ClockHandle hourHandle;
-    [SerializeField] private ClockHandle minuteHandle;
 
     [Header("Lore Panel References")]
     [SerializeField] private TextMeshProUGUI lorePanelTitleText;
     [SerializeField] private GameObject lorePanel;
     [SerializeField] private TextMeshProUGUI lorePanelText;
+    [SerializeField] private MultiplayerButton continueButton;
 
     [Header("Winning Vote Panel References")]
     [SerializeField] private GameObject winningVotePanel;
@@ -28,89 +27,70 @@ public class VotingManager : MonoBehaviour
     [SerializeField] private MultiplayerButton[] buttons;
     [SerializeField] private TextMeshProUGUI[] choicesTexts;
 
-    [SerializeField] private GameObject testButton;
-
     [SerializeField] private UIControllerSpawner uiSpawner;
-
-    [Header("Settings")]
-    [SerializeField] private float readDuration = 20f;
-    [SerializeField] private float voteDuration = 20f;
-    [SerializeField] private int amountOfMinuteRotations = 3;
 
     public static event Action<int> OnVoteComplete;
 
+    private Dictionary<PlayerEntity, int> playerVotes = new Dictionary<PlayerEntity, int>();
+
     private Vote currentVote;
-    private float timer;
     private int[] choices;
     private int voted;
+    private int readyPlayers;
 
     private bool isVoting = false;
-    private bool isReading = false;
+    public bool IsVoting => isVoting;
 
     public void StartVote(Vote vote)
     {
-        Debug.Log("Starting vote...");
-
         currentVote = vote;
+
+        isVoting = false;
+        voted = 0;
+        readyPlayers = 0;
 
         background.SetActive(true);
         lorePanel.SetActive(true);
         votingPanel.SetActive(false);
+        buttonsParent.SetActive(false);
         winningVotePanel.SetActive(false);
 
-        descriptionText.text = vote.VoteDescription;
-        titleText.text = vote.VoteTitle;
+        descriptionText.text = currentVote.VoteDescription;
+        titleText.text = currentVote.VoteTitle;
+        lorePanelText.text = currentVote.VoteDescription;
+        lorePanelTitleText.text = currentVote.VoteTitle;
 
-        lorePanelText.text = vote.VoteDescription;
-        lorePanelTitleText.text = vote.VoteTitle;
+        choices = new int[currentVote.Choices.Length];
+        for (int i = 0; i < choices.Length; i++) choices[i] = 0;
 
-        choices = new int[vote.Choices.Length];
-        for (int i = 0; i < choices.Length; i++)
-        {
-            choices[i] = 0;
-        }
+        continueButton.gameObject.SetActive(true);
+        continueButton.Initialize(-1, this);
+        uiSpawner.SpawnControllers(continueButton);
+    }
 
-        SetUpChoicesText(vote.Choices);
-        SetupButtons(vote.Choices);
+    private void VotingPhase()
+    {
+        lorePanel.SetActive(false);
+        votingPanel.SetActive(true);
 
         voted = 0;
+        playerVotes.Clear();
 
-        timer = readDuration;
-        isReading = true;
-        UpdateTimerDisplay();
-    }
-
-    private void Update()
-    {
-        if (isReading || isVoting)
-        {
-            timer -= Time.deltaTime;
-            UpdateTimerDisplay();
-        }
-
-        if (isReading && timer <= 0)
-        {
-            isReading = false;
-            lorePanel.SetActive(false);
-            votingPanel.SetActive(true);
-            StartVotingInteraction();
-        }
-
-        if (isVoting && (timer <= 0 || voted >= PlayerEntity.PlayerList.Count))
-        {
-            Debug.Log("Vote ended. Timer: " + timer + ", Votes: " + voted + "/" + PlayerEntity.PlayerList.Count);
-            CompleteVote();
-        }
-    }
-
-    private void StartVotingInteraction()
-    {
+        SetUpChoicesText(currentVote.Choices);
+        SetupButtons(currentVote.Choices);
         buttonsParent.SetActive(true);
-        timer = voteDuration;
+
+        uiSpawner.SpawnControllers(buttons[0]);
+
         isVoting = true;
-        uiSpawner.SpawnControllers();
     }
 
+
+    public void MoveToVotes()
+    {
+        readyPlayers++;
+        if (readyPlayers >= PlayerEntity.PlayerList.Count) VotingPhase();
+    }
     private void SetUpChoicesText(string[] text)
     {
         for (int i = 0; i < choicesTexts.Length; i++)
@@ -127,21 +107,35 @@ public class VotingManager : MonoBehaviour
         for (int i = 0; i < buttons.Length; i++)
         {
             bool hasText = i < text.Length;
-
             buttons[i].gameObject.SetActive(hasText);
             buttons[i].button.interactable = hasText;
-        }
 
-        buttonsParent.SetActive(false);
+            if (hasText)
+                buttons[i].Initialize(i, this);
+        }
     }
 
-    public void CastVote(int choiceIndex)
+    public void CastVote(PlayerEntity player, int choiceIndex)
     {
         if (!isVoting) return;
 
+        if (playerVotes.ContainsKey(player))
+        {
+            choices[playerVotes[player]]--;
+            playerVotes[player] = choiceIndex;
+        }
+        else
+        {
+            playerVotes[player] = choiceIndex;
+            voted++;
+        }
+
         choices[choiceIndex]++;
-        voted++;
-        Debug.Log($"Player voted ({voted} total). Choice: {choiceIndex}");
+        if (voted >= PlayerEntity.PlayerList.Count)
+        {
+            Debug.Log($"Vote completed, number voted: {voted}");
+            CompleteVote();
+        }
     }
 
     private void CompleteVote()
@@ -152,15 +146,23 @@ public class VotingManager : MonoBehaviour
         List<int> topChoices = new List<int>();
 
         for (int i = 0; i < choices.Length; i++)
-        {
-            if (choices[i] >= maxVotes)
+            if (choices[i] == maxVotes)
                 topChoices.Add(i);
+
+        int winningChoice;
+
+        if (topChoices.Count == 1)
+        {
+            winningChoice = topChoices[0];
+        }
+        else
+        {
+            PlayerEntity highScoringPlayer = GameManager.Instance.GetHighestScorePlayer();
+            playerVotes.TryGetValue(highScoringPlayer, out int votedChoice);
+            winningChoice = votedChoice;
         }
 
-        int winningChoice = topChoices.Count == 1 ? topChoices[0] : topChoices[UnityEngine.Random.Range(0, topChoices.Count)];
-
         votingPanel.SetActive(false);
-
         StartCoroutine(WiningChoiceDisplay(winningChoice));
 
         Debug.Log($"Vote completed. Winning choice: {currentVote.Choices[winningChoice]}");
@@ -177,11 +179,5 @@ public class VotingManager : MonoBehaviour
         background.SetActive(false);
 
         OnVoteComplete?.Invoke(winningChoice);
-    }
-
-    private void UpdateTimerDisplay()
-    {
-        hourHandle.SetHandle(voteDuration, timer);
-        // minuteHandle.SetHandle(voteDuration, timer * amountOfMinuteRotations); // Optional
     }
 }

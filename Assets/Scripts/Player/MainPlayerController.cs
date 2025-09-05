@@ -36,6 +36,7 @@ public class MainPlayerController : MonoBehaviour
     [SerializeField] private MeleeDamage leftMeleeDamage;
     [SerializeField] private Animator animator;
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private PlayerTutorialProxy tutorialProxy;
 
     [Header("Attack Variables")]
     [SerializeField] private float enableDuration = 0.2f;
@@ -50,12 +51,15 @@ public class MainPlayerController : MonoBehaviour
     [Header("Emote Variables")]
     [SerializeField] private AudioClip emoteSound;
 
+    public bool inTutorial = true;
+    public bool isBlocking { get; private set; } = false;
+    public bool blockHeld { get; private set; } = false;
+    
     private float lastAttackTime;
     private float lastSpecialTime;
     private bool canAttack = true;
     private bool canSpecial = true;
     private bool isAttacking = false;
-    private bool isBlocking = false;
     private bool isEmoting = false;
     private bool isFallen = false;
     private bool isFrozen = false;
@@ -64,15 +68,17 @@ public class MainPlayerController : MonoBehaviour
     private bool isEndOfLevel = false;
     private Vector2 moveInput;
     private bool emoteHeld = false;
-    private bool blockHeld = false;
     private Vector2 currentVelocity;
     private CharacterStats.CharacterData stats;
     private CharacterBase characterScript;
-    private static int activePlayers = 0;
-    private static int fallenPlayers = 0;
+    private static int activePlayers = 0;//todo: remove if not needed
+    private static int fallenPlayers = 0;//todo: remove if not needed
     private int score;
 
     public PlayerCombatManager CombatManager => combatManager;
+    
+    //todo: new block system
+    public bool IsBlocking => isBlocking;
 
     public static bool CanBeDamaged = true;
 
@@ -91,7 +97,6 @@ public class MainPlayerController : MonoBehaviour
         canSpecial = true;
         fallenPlayers--;
         combatManager.RestoreHealthByPercent(100f);
-        //animController.SetRevived();
         StartCoroutine(ResetRevive());
         soundPlayer.PlaySound(3);
         Debug.Log($"{stats.characterName} revived");
@@ -132,7 +137,11 @@ public class MainPlayerController : MonoBehaviour
         if (characterStats != null)
         {
             stats = characterStats.characters[(int)characterType];
-            combatManager.Initialize(stats.maxHealth, stats.stamina, this, animator);
+            
+            //todo: new block system
+            combatManager.Initialize(stats.maxHealth, stats.stamina, this, animator,
+                stats.blockStaminaMax, stats.blockCost, stats.blockRegenRate);
+
             combatManager.OnDeath += (_) => EnterFallenState();
             Debug.Log($"Loaded stats for {stats.characterName}");
         }
@@ -160,6 +169,8 @@ public class MainPlayerController : MonoBehaviour
         activePlayers++;
 
         combatManager.OnDeath += PlayDeathSound;
+        if(inTutorial) tutorialProxy.Init(GameManager.Instance.playerIdCounter);
+        GameManager.Instance.playerIdCounter++;
     }
 
     private void OnEnable() { GameManager.OnLevelEnd += OnLevelEnd; }
@@ -173,6 +184,10 @@ public class MainPlayerController : MonoBehaviour
         if (!isFallen)
         {
             combatManager.RegenerateStamina(Time.deltaTime);
+            
+            //todo: new block system
+            combatManager.RegenerateBlockStamina(Time.deltaTime, isBlocking);
+
             animController.SetMoveSpeed(moveInput.magnitude);
             spriteRenderer.sortingOrder = Mathf.RoundToInt(-transform.position.y * 100);
 
@@ -183,8 +198,24 @@ public class MainPlayerController : MonoBehaviour
             }
         }
 
-        // Block handling
+        //todo: new block system
+        // New block handling
         if (blockHeld && !isBlocking && !isEmoting && !isFallen)
+        {
+            // only start if we have stamina and not locked
+            if (combatManager.HasBlockStamina() && !combatManager.IsBlockLocked)
+            {
+                isBlocking = true;
+                animController.SetBlocking(true);
+            }
+        }
+        else if (!blockHeld && isBlocking)
+        {
+            ForceStopBlocking();
+        }
+        
+        // old Block handling
+        /*if (blockHeld && !isBlocking && !isEmoting && !isFallen)
         {
             isBlocking = true;
             animController.SetBlocking(true);
@@ -195,7 +226,8 @@ public class MainPlayerController : MonoBehaviour
             isBlocking = false;
             animController.SetBlocking(false);
             CanBeDamaged = true;
-        }
+            if(inTutorial) tutorialProxy.ReportBlock();
+        }*/
 
         // Emote handling
         if (emoteHeld && !isFallen && !isBlocking)
@@ -204,13 +236,11 @@ public class MainPlayerController : MonoBehaviour
             animController.SetEmoting(true);
             if (emoteSound != null && audioSource != null)
                 audioSource.PlayOneShot(emoteSound);
-            Debug.Log($"{stats.characterName} started emoting");
         }
         else if (!emoteHeld && isEmoting)
         {
             isEmoting = false;
             animController.SetEmoting(false);
-            Debug.Log($"{stats.characterName} stopped emoting");
         }
     }
 
@@ -268,6 +298,7 @@ public class MainPlayerController : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
+        if(inTutorial) tutorialProxy.ReportMovementSample(moveInput.magnitude);
     }
 
     public void ApplyDamageBoost(float percentage)
@@ -297,6 +328,7 @@ public class MainPlayerController : MonoBehaviour
             soundPlayer.PlaySound(0);
 
             StartCoroutine(ResetAttackCooldown());
+            if(inTutorial) tutorialProxy.ReportAttack();
         }
     }
 
@@ -322,6 +354,17 @@ public class MainPlayerController : MonoBehaviour
 
         if (blockHeld != previousInput && blockHeld)
             animator.SetTrigger("BlockStart");
+    }
+    
+    //todo: new block system
+    public void ForceStopBlocking()
+    {
+        if (!isBlocking) return;
+        isBlocking = false;
+        animController.SetBlocking(false);
+        
+        if (inTutorial && tutorialProxy != null)
+            tutorialProxy.ReportBlock();
     }
 
     public void Revive(InputAction.CallbackContext context)
@@ -361,12 +404,7 @@ public class MainPlayerController : MonoBehaviour
         if (!isFrozen)
         {
             isPerformingSpecialMovement = true;
-            //isAttacking = true;
-            //ToggleIsAttacking();
             yield return characterScript.PerformSpecial((dmg) => { });
-
-            //ToggleIsAttacking();
-            //isAttacking = false;
             isPerformingSpecialMovement = false;
             canSpecial = true;
         }

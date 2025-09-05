@@ -9,7 +9,8 @@ public abstract class CharacterBase : MonoBehaviour
     protected CharacterStats.CharacterData stats;
     protected GameObject rightMeleeColliderGO;
     protected GameObject leftMeleeColliderGO;
-    protected GameObject specialColliderGO; // For Parasaurolophus
+    protected GameObject specialColliderGORight; // For Parasaurolophus
+    protected GameObject specialColliderGOLeft; // For Parasaurolophus
     protected AnimationController animController;
     public bool facingRight;
     protected float enableDuration;
@@ -17,7 +18,9 @@ public abstract class CharacterBase : MonoBehaviour
 
     protected MeleeDamage rightMeleeDamage;
     protected MeleeDamage leftMeleeDamage;
-    protected MeleeDamage specialMeleeDamage; // For Parasaurolophus
+    protected MeleeDamage specialMeleeDamageRight; // For Parasaurolophus
+    protected MeleeDamage specialMeleeDamageLeft; // For Parasaurolophus
+
     public bool IsAttacking { get; protected set; }
 
     public virtual void Initialize(CharacterStats.CharacterData characterStats, AnimationController animationController, GameObject rightCollider, GameObject leftCollider, bool isFacingRight, float enable, float disable)
@@ -32,16 +35,20 @@ public abstract class CharacterBase : MonoBehaviour
 
         rightMeleeColliderGO = rightCollider ?? transform.Find("RightMeleeCollider")?.gameObject;
         leftMeleeColliderGO = leftCollider ?? transform.Find("LeftMeleeCollider")?.gameObject;
-        specialColliderGO = transform.Find("SpecialCollider")?.gameObject; // Only for Parasaurolophus
+        specialColliderGORight = transform.Find("SpecialColliderRight")?.gameObject; // Only for Parasaurolophus
+        specialColliderGOLeft = transform.Find("SpecialColliderLeft")?.gameObject; // Only for Parasaurolophus
+
 
         if (rightMeleeColliderGO == null || leftMeleeColliderGO == null)
             Debug.LogError($"Failed to find melee colliders on {gameObject.name}!");
 
         rightMeleeDamage = rightMeleeColliderGO != null ? rightMeleeColliderGO.GetComponent<MeleeDamage>() : null;
         leftMeleeDamage = leftMeleeColliderGO != null ? leftMeleeColliderGO.GetComponent<MeleeDamage>() : null;
-        specialMeleeDamage = specialColliderGO != null ? specialColliderGO.GetComponent<MeleeDamage>() : null;
+        specialMeleeDamageRight = specialColliderGORight != null ? specialColliderGORight.GetComponent<MeleeDamage>() : null;
+        specialMeleeDamageLeft = specialColliderGOLeft != null ? specialColliderGOLeft.GetComponent<MeleeDamage>() : null;
 
-        if (specialColliderGO != null && gameObject.GetComponent<Parasaurolophus>() == null)
+
+        if ((specialColliderGORight != null || specialColliderGOLeft != null) && gameObject.GetComponent<Parasaurolophus>() == null)
             Debug.LogWarning($"SpecialCollider found on {gameObject.name} but not used (only for Parasaurolophus)");
     }
     

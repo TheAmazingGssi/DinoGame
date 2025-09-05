@@ -10,25 +10,99 @@ public class PlayerCombatManager : CombatManager
     private MainPlayerController controller;
     private Animator animator;
     private AnimationController animController;
+    
+    //todo: new block system
+    private float maxBlockStamina;
+    private float currentBlockStamina;
+    private float blockRegenRate;
+    private float blockCostPerHit;
+    private bool blockLocked; // lock when 0 until >=50% refilled
+
+//todo: new block system
+    public float CurrentBlockStamina => currentBlockStamina;
+    public float MaxBlockStamina => maxBlockStamina;
+    public bool IsBlockLocked => blockLocked;
+
 
     public float CurrentStamina => currentStamina;
     public float MaxStamina => maxStamina;
 
-    public void Initialize(float maxHealth, float maxStamina, MainPlayerController controller, Animator animator)
+//todo: new block system
+    public void Initialize(float maxHealth, float maxStamina, MainPlayerController controller, Animator animator,
+        float maxBlockStamina = 0f, float blockCostPerHit = 0f, float blockRegenRate = 0f)
     {
         currentMaxHealth = maxHealth;
         currentHealth = maxHealth;
+
         this.maxStamina = maxStamina;
         this.currentStamina = maxStamina;
+
         this.controller = controller;
         this.animator = animator;
         this.animController = GetComponent<AnimationController>();
+
+        // block stamina init
+        this.maxBlockStamina = Mathf.Max(0f, maxBlockStamina);
+        this.currentBlockStamina = this.maxBlockStamina;
+        this.blockCostPerHit = Mathf.Max(0f, blockCostPerHit);
+        this.blockRegenRate = Mathf.Max(0f, blockRegenRate);
+        this.blockLocked = false;
     }
+
+    //todo: new block system
+    public bool HasBlockStamina() => currentBlockStamina > 0.01f && !blockLocked;
+
+//todo: new block system
+    private void LockBlockIfEmpty()
+    {
+        if (currentBlockStamina <= 0.001f)
+        {
+            currentBlockStamina = 0f;
+            blockLocked = true; // guard broken
+        }
+    }
+
+//todo: new block system
+    private bool TrySpendBlockForHit()
+    {
+        if (blockCostPerHit <= 0f) return true;
+
+        if (currentBlockStamina >= blockCostPerHit)
+        {
+            currentBlockStamina -= blockCostPerHit;
+
+            if (currentBlockStamina <= 0f)
+            {
+                LockBlockIfEmpty();
+                controller?.ForceStopBlocking(); // drop guard on the exact frame it empties
+            }
+            return true;
+        }
+        return false;
+    }
+
 
     public override void TakeDamage(DamageArgs args)
     {
         if (!MainPlayerController.CanBeDamaged) return;
 
+        //todo: new block system
+        if (controller != null && controller.isBlocking && HasBlockStamina())
+        {
+            if (TrySpendBlockForHit())
+            {
+                // fully blocked: no damage/knockback
+                // (optional) animController?.TriggerBlocked();
+                return;
+            }
+            else
+            {
+                // no stamina or locked → stop blocking so damage applies
+                controller.ForceStopBlocking();
+            }
+        }
+
+        
         args.Damage *= damageTakenMultiplier;
         base.TakeDamage(args);
 
@@ -56,6 +130,20 @@ public class PlayerCombatManager : CombatManager
         damageTakenMultiplier = 1;
     }
 
+    //todo: new block system
+    public void RegenerateBlockStamina(float dt, bool isBlocking)
+    {
+        if (!isBlocking && maxBlockStamina > 0f)
+        {
+            currentBlockStamina = Mathf.Min(maxBlockStamina, currentBlockStamina + blockRegenRate * dt);
+
+            // auto-unlock when we reach 50%
+            if (blockLocked && currentBlockStamina >= 0.5f * maxBlockStamina)
+                blockLocked = false;
+        }
+    }
+
+    
     public override void RestoreHealthByPercent(float percent)
     {
         base.RestoreHealthByPercent(percent);

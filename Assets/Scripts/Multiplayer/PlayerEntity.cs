@@ -123,18 +123,20 @@ public class PlayerEntity : MonoBehaviour
         else if (character == CharacterType.Therizinosaurus) return AndrewPlayerPrefab;
         else return null;
     }
+
     public MultiplayerUIController SpawnUIController(MultiplayerButton defaultButton)
     {
         if (!uiController)
         {
             uiController = Instantiate(MultiplayerUIControllerObject).GetComponent<MultiplayerUIController>();
             Move.AddListener(uiController.OnNavigate);
-            Confirmation.AddListener(uiController.OnConrfimPressed);
+            Confirmation.AddListener(uiController.OnConfirmPressed);
         }
-        uiController.SetUp(CharacterType, defaultButton);
 
+        uiController.SetUp(CharacterType, defaultButton, this);
         return uiController;
     }
+
     public static void SaveScore()
     {
         foreach (var player in PlayerList)

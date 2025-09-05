@@ -693,6 +693,7 @@ Transform:
   - {fileID: 5891046741713562666}
   - {fileID: 6057467636057874398}
   - {fileID: 1169896532671239917}
+  - {fileID: 5804957005522707866}
   m_Father: {fileID: 2242870450885965078}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &7126916438403873939
@@ -844,6 +845,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b37ce0d39659fc142932fb05460219d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultDuration: 0.3
+  maxDuration: 1
 --- !u!114 &4579190218097802738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -872,11 +875,13 @@ MonoBehaviour:
   leftMeleeDamage: {fileID: 8535575657339802018}
   animator: {fileID: 8958741867143242686}
   audioSource: {fileID: 8223330495104514794}
+  tutorialProxy: {fileID: 5077880941093436707}
   enableDuration: 0.2
   disableDelay: 0.5
   reviveRange: 2
   freezeLength: 3
   emoteSound: {fileID: 0}
+  inTutorial: 1
 --- !u!114 &6716259569256595975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1028,6 +1033,51 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.1
+--- !u!1 &6498741732938546126
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5804957005522707866}
+  - component: {fileID: 5077880941093436707}
+  m_Layer: 3
+  m_Name: TutorialProxy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5804957005522707866
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6498741732938546126}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3569670116312465802}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5077880941093436707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6498741732938546126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df1b2b7e3e2613543bbace5befd2f935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveThreshold: 0.1
 --- !u!1 &6511813499013299741
 GameObject:
   m_ObjectHideFlags: 0

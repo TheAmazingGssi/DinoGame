@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     [field: SerializeField] public SpawnerManager SpawnerManager { get; private set; }
 
     public int FinaleLevel = 3;
+    public int playerIdCounter = 0;
 
     //Variables off inspector
     public Dictionary<Vote, int> FinaleLevelEffects = new Dictionary<Vote, int>();
@@ -159,6 +160,7 @@ public class GameManager : MonoBehaviour
                 highestScorePlayer = player;
             }
         }
+        highestScorePlayer = highestScorePlayer ?? PlayerEntity.PlayerList[0];
         return highestScorePlayer;
     }
 
@@ -175,6 +177,7 @@ public class GameManager : MonoBehaviour
                 lowestScorePlayer = player;
             }
         }
+        lowestScorePlayer = lowestScorePlayer ?? PlayerEntity.PlayerList[0];
         return lowestScorePlayer;
     }
 }
