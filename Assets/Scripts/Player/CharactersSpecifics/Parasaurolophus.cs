@@ -8,7 +8,8 @@ public class Parasaurolophus : CharacterBase
     [SerializeField] private float specialVfxActivationTime = 0.04f; 
     [SerializeField] private float restOfSpecialActivationTime = 0.46f; 
     
-    public MeleeDamage SpecialMeleeDamage => specialMeleeDamage;
+    public MeleeDamage SpecialMeleeDamageRight => specialMeleeDamageRight;
+    public MeleeDamage SpecialMeleeDamageLeft => specialMeleeDamageLeft;
     
     public override void Initialize(CharacterStats.CharacterData characterStats, AnimationController animController, GameObject rightCollider, GameObject leftCollider, bool isFacingRight, float enable, float disable)
     {
@@ -17,11 +18,14 @@ public class Parasaurolophus : CharacterBase
 
     public override IEnumerator PerformSpecial(UnityAction<float> onSpecial)
     {
-        if (specialColliderGO == null)
+        if (specialColliderGORight == null || specialColliderGOLeft == null)
         {
-            Debug.LogWarning("Special collider not found on Parasaurolophus!");
+            Debug.LogWarning("Special colliders not assigned for Parasaurolophus!");
             yield break;
         }
+        
+        GameObject specialColliderGO = facingRight ? specialColliderGORight : specialColliderGOLeft;
+        MeleeDamage specialMeleeDamage = facingRight ? specialMeleeDamageRight : specialMeleeDamageLeft;
 
         _mainPlayerController.ToggleIsAttacking();
         specialColliderGO.SetActive(true);
@@ -43,7 +47,8 @@ public class Parasaurolophus : CharacterBase
         {
             if (hit.CompareTag("Enemy"))
             {
-                KnockbackHelper.ApplyKnockback(
+                KnockbackHelper.ApplyKnockback
+                (
                     hit.transform,
                     transform,
                     KnockbackHelper.GetKnockbackForceFromDamage(stats.specialAttackDamage * 1.5f, true) // strong knockback

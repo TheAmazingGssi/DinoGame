@@ -96,15 +96,40 @@ public class MeleeDamage : MonoBehaviour
     {
         PrepareDamage(damage, isSpecial, source, controller, isGrab);
 
-        Collider2D[] hits = Physics2D.OverlapCircleAll(
-            transform.position,
-            GetComponent<CircleCollider2D>().radius,
-            LayerMask.GetMask("Enemy")
-        );
+        Collider2D[] hits = null;
 
-        foreach (var hit in hits)
+        // Check if the object has a circle collider
+        CircleCollider2D circle = GetComponent<CircleCollider2D>();
+        if (circle != null)
         {
-            TryHitEnemy(hit);
+            hits = Physics2D.OverlapCircleAll(
+                (Vector2)transform.position + circle.offset, 
+                circle.radius,
+                LayerMask.GetMask("Enemy")
+            );
+        }
+        else
+        {
+            // Otherwise check if it has a box collider
+            BoxCollider2D box = GetComponent<BoxCollider2D>();
+            if (box != null)
+            {
+                hits = Physics2D.OverlapBoxAll(
+                    (Vector2)transform.position + box.offset, 
+                    box.size * 0.5f,   // half extents
+                    transform.eulerAngles.z, 
+                    LayerMask.GetMask("Enemy")
+                );
+            }
+        }
+
+        if (hits != null)
+        {
+            foreach (var hit in hits)
+            {
+                TryHitEnemy(hit);
+            }
         }
     }
+
 }
