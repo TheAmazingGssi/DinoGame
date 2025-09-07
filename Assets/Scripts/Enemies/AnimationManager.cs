@@ -26,7 +26,7 @@ public class AnimationManager : MonoBehaviour
         manager.Animator.ResetTrigger(Attack);
         manager.Animator.ResetTrigger(AOEAttack);
         manager.AttackManager.OnAnimationComplete();
-        Debug.Log("AttackEnd animation event called");
+       // Debug.Log("AttackEnd animation event called");
     }
 
     public void KnockbackEnd()

@@ -178,59 +178,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Boss Damage Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 848
-        y: 1431
-        width: 260
-        height: 530
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 014cffd901dfe8880800000000000000
-      internalID: -8606663590046350320
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boss Damage Sheet_13
-      rect:
-        serializedVersion: 2
-        x: 2686
-        y: 1389
-        width: 370
-        height: 613
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 02bea73d69a9be6479171de6faa8d34a
-      internalID: 1184852282
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Boss Damage Sheet_2
       rect:
         serializedVersion: 2
-        x: 4613
-        y: 1492
-        width: 396
-        height: 550
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3840
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -247,12 +203,12 @@ TextureImporter:
       name: Boss Damage Sheet_1
       rect:
         serializedVersion: 2
-        x: 6674
-        y: 1609
-        width: 323
-        height: 481
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1920
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -269,12 +225,12 @@ TextureImporter:
       name: Boss Damage Sheet_0
       rect:
         serializedVersion: 2
-        x: 8750
-        y: 1755
-        width: 269
-        height: 366
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -283,6 +239,72 @@ TextureImporter:
       bones: []
       spriteID: fa0ae0ed28734c64788f924d8b7a7d19
       internalID: 140740570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss Damage Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afe1f297984cd904caffe3e4941b1e60
+      internalID: -905644162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss Damage Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c558d96683841b4b829fed852f2c096
+      internalID: -1595782424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss Damage Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8280a2f2539126c44b68f9f4d64908d7
+      internalID: 1560437924
       vertices: []
       indices: 
       edges: []
@@ -303,8 +325,10 @@ TextureImporter:
     nameFileIdTable:
       Boss Damage Sheet_0: 140740570
       Boss Damage Sheet_1: 2043946888
-      Boss Damage Sheet_13: 1184852282
       Boss Damage Sheet_2: -2142604985
+      Boss Damage Sheet_3: -905644162
+      Boss Damage Sheet_4: -1595782424
+      Boss Damage Sheet_5: 1560437924
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -5,7 +5,7 @@ public class BossVFXManager : MonoBehaviour
     [Header("Boss VFX Animators")]
     public Animator AttackVfxAnimator;
     public Animator AOEAttackVfxAnimator;
-    public Animator HurtVfxAnimator;
+    public Animator[] HurtVfxAnimator;
     public Animator DeathVfxAnimator;
 
     private bool attackVfxPlaying = false;
@@ -16,15 +16,15 @@ public class BossVFXManager : MonoBehaviour
     private void Awake()
     {
         AttackVfxAnimator.gameObject.SetActive(false);
-        //AOEAttackVfxAnimator.gameObject.SetActive(false);
-       // HurtVfxAnimator.gameObject.SetActive(false);
+        AOEAttackVfxAnimator.gameObject.SetActive(false);
+        for (int i = 0; i < HurtVfxAnimator.Length; i++)
+            HurtVfxAnimator[i].gameObject.SetActive(false);
        // DeathVfxAnimator.gameObject.SetActive(false);
     }
 
     public void TriggerAttackVfx()
     {
         if (attackVfxPlaying || AttackVfxAnimator == null) return;
-        Debug.Log($"AAAAAAAAAAAAAAAAA");
         attackVfxPlaying = true;
         AttackVfxAnimator.gameObject.SetActive(true);
         AttackVfxAnimator.SetTrigger("Play");
@@ -33,6 +33,7 @@ public class BossVFXManager : MonoBehaviour
     public void TriggerAOEVfx()
     {
         if (aoeVfxPlaying || AOEAttackVfxAnimator == null) return;
+        Debug.Log($"AAAAAAAAAAAAAAAAA");
 
         aoeVfxPlaying = true;
         AOEAttackVfxAnimator.gameObject.SetActive(true);
@@ -44,8 +45,11 @@ public class BossVFXManager : MonoBehaviour
         if (hurtVfxPlaying || HurtVfxAnimator == null) return;
 
         hurtVfxPlaying = true;
-        HurtVfxAnimator.gameObject.SetActive(true);
-        HurtVfxAnimator.SetTrigger("Play");
+        for (int i = 0; i < HurtVfxAnimator.Length; i++)
+        {
+            HurtVfxAnimator[i].gameObject.SetActive(true);
+            HurtVfxAnimator[i].SetTrigger("Play");
+        }
     }
 
     public void TriggerDeathVfx()

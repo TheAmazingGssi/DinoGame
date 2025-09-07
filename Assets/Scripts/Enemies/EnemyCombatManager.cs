@@ -17,7 +17,12 @@ public class EnemyCombatManager : CombatManager
     {
         OnTakeDamage += HandleHurt;
     }
-
+     
+    [ContextMenu("Take Damage")]
+    public void TakeDamageTest()
+    {
+        TakeDamage(new DamageArgs(1));
+    }
     public override void TakeDamage(DamageArgs damageArgs)
     {
         if (damageArgs.SourceMPC != null)
