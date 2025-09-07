@@ -40,6 +40,7 @@ public class EnemyAttackManager : MonoBehaviour
 
     private void Start()
     {
+
         combatManager.OnTakeDamage += HandleTakeDamage;
 
         if (leftAttackCollider != null)
@@ -252,7 +253,7 @@ public class EnemyAttackManager : MonoBehaviour
 
     private void HandleTakeDamage(DamageArgs damageArgs)
     {
-        if (attacks != null)
+        if (attacks != null && manager.EnemyData.IsInterruptible)
         {
             foreach (EnemyAttack attack in attacks)
             {
