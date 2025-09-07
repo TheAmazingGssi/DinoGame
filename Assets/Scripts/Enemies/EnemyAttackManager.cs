@@ -11,6 +11,7 @@ public enum EnemyAttackType
 
 public class EnemyAttackManager : MonoBehaviour
 {
+    private static readonly int HURT = Animator.StringToHash("Hurt");
     private const string PLAYER = "Player";
 
     [SerializeField] private EnemyAttack[] attacks;

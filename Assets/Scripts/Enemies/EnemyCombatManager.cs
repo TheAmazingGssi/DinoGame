@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyCombatManager : CombatManager
@@ -51,9 +52,13 @@ public class EnemyCombatManager : CombatManager
             );
         }
         
-        manager.Animator.SetTrigger(HURT);
+        if (manager.VFXManager)
+            manager.VFXManager.TriggerHurtVfx();
+        if (!manager.AttackManager.IsCurrentlyAttacking || manager.EnemyData.IsInterruptible)
+            manager.Animator.SetTrigger(HURT);
         manager.SoundPlayer.PlaySound(1, 0.5f);
-        manager.SpriteRenderer.color = Color.red;
+        //if (manager.EnemyData.IsInterruptible)
+            manager.SpriteRenderer.color = Color.red;
 
         StartCoroutine(AnimationDelay());
     }
@@ -62,8 +67,11 @@ public class EnemyCombatManager : CombatManager
     private IEnumerator AnimationDelay()
     {
         yield return new WaitForSeconds(0.13f);
-        manager.SpriteRenderer.color = Color.white;
+        //if (manager.EnemyData.IsInterruptible)
+            manager.SpriteRenderer.color = Color.white;
         manager.Animator.ResetTrigger(HURT);
+        if (manager.VFXManager)
+            manager.VFXManager.ResetHurtVfx();
     }
     
     public virtual void OnHurtAnimationComplete()

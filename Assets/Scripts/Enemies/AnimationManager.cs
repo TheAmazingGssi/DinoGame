@@ -18,6 +18,8 @@ public class AnimationManager : MonoBehaviour
     {
         manager.CombatManager.OnHurtAnimationComplete();
         manager.Animator.ResetTrigger(HURT);
+        manager.Animator.ResetTrigger(Attack);
+        manager.AttackManager.OnAnimationComplete();
         Debug.Log("HurtEnd animation event called");
     }
 

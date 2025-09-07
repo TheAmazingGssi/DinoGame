@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.99, y: -0.56, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6039050543884616696}
@@ -96,9 +96,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -326893323
-  m_SortingLayer: 1
-  m_SortingOrder: 2
+  m_SortingLayerID: -812689949
+  m_SortingLayer: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -731,6 +731,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6478515573942121937, guid: 9f7d803472a3f274b98a8b36b15623a2, type: 3}
     - target: {fileID: 7022572441651464058, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: vFXManager
+      value: 
+      objectReference: {fileID: 7443691502695996445}
+    - target: {fileID: 7022572441651464058, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: healthDropAmount
       value: 0
       objectReference: {fileID: 0}
@@ -875,5 +879,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AttackVfxAnimator: {fileID: 8205678867228367275}
   AOEAttackVfxAnimator: {fileID: 6400746302243549389}
-  HurtVfxAnimator: {fileID: 2631958366197751421}
+  HurtVfxAnimator:
+  - {fileID: 2631958366197751421}
+  - {fileID: 5406820688866740576}
+  - {fileID: 4668815457557345053}
   DeathVfxAnimator: {fileID: 0}
