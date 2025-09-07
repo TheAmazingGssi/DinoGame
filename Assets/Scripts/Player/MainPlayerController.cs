@@ -51,7 +51,6 @@ public class MainPlayerController : MonoBehaviour
     [Header("Emote Variables")]
     [SerializeField] private AudioClip emoteSound;
 
-    public bool inTutorial = true;
     public bool isBlocking { get; private set; } = false;
     public bool blockHeld { get; private set; } = false;
     
@@ -79,6 +78,7 @@ public class MainPlayerController : MonoBehaviour
     
     //todo: new block system
     public bool IsBlocking => isBlocking;
+    public bool IsFacingRight => facingRight;
 
     public static bool CanBeDamaged = true;
 
@@ -169,7 +169,8 @@ public class MainPlayerController : MonoBehaviour
         activePlayers++;
 
         combatManager.OnDeath += PlayDeathSound;
-        if(inTutorial) tutorialProxy.Init(GameManager.Instance.playerIdCounter);
+        if(GameManager.Instance.InTutorial) 
+            tutorialProxy.Init(GameManager.Instance.playerIdCounter);
         GameManager.Instance.playerIdCounter++;
     }
 
@@ -298,7 +299,8 @@ public class MainPlayerController : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
-        if(inTutorial) tutorialProxy.ReportMovementSample(moveInput.magnitude);
+        if(GameManager.Instance.InTutorial) 
+            tutorialProxy.ReportMovementSample(moveInput.magnitude);
     }
 
     public void ApplyDamageBoost(float percentage)
@@ -328,7 +330,8 @@ public class MainPlayerController : MonoBehaviour
             soundPlayer.PlaySound(0);
 
             StartCoroutine(ResetAttackCooldown());
-            if(inTutorial) tutorialProxy.ReportAttack();
+            if(GameManager.Instance.InTutorial)
+                tutorialProxy.ReportAttack();
         }
     }
 
@@ -363,7 +366,7 @@ public class MainPlayerController : MonoBehaviour
         isBlocking = false;
         animController.SetBlocking(false);
         
-        if (inTutorial && tutorialProxy != null)
+        if (GameManager.Instance.InTutorial && tutorialProxy != null)
             tutorialProxy.ReportBlock();
     }
 

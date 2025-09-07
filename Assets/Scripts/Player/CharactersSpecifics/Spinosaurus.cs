@@ -9,7 +9,13 @@ public class Spinosaurus : CharacterBase
     private static float _specialVfxPositionX = 0.515f;
     private bool specialVfxPerformed = false;
     private bool specialInProgress = false;
-
+   
+    public override void Initialize(CharacterStats.CharacterData characterStats, AnimationController animController, GameObject rightCollider, GameObject leftCollider, bool isFacingRight, float enable, float disable)
+    {
+        base.Initialize(characterStats, animController, rightCollider, leftCollider, isFacingRight, enable, disable);
+        _specialVfxTransform = animController.SpecialVfxObject.transform;
+    }
+    
     private void Update()
     {
         _specialVfxPositionX = facingRight ? 0.515f : -0.515f;
@@ -17,11 +23,7 @@ public class Spinosaurus : CharacterBase
         _specialVfxTransform.localPosition = new Vector3(_specialVfxPositionX, _specialVfxTransform.localPosition.y, _specialVfxTransform.localPosition.z);
     }
 
-    public override void Initialize(CharacterStats.CharacterData characterStats, AnimationController animController, GameObject rightCollider, GameObject leftCollider, bool isFacingRight, float enable, float disable)
-    {
-        base.Initialize(characterStats, animController, rightCollider, leftCollider, isFacingRight, enable, disable);
-        _specialVfxTransform = animController.SpecialVfxObject.transform;
-    }
+
 
     public override IEnumerator PerformSpecial(UnityAction<float> onSpecial)
     {

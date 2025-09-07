@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 public class PlayerTutorialProxy : MonoBehaviour
 {
-    // Use your networking ID if you have one; otherwise assign on spawn.
+    // Use your networking ID if you have one, otherwise assign on spawn.
     public int PlayerId { get; private set; }
 
     public UnityAction<int> OnAttack;           // arg: PlayerId

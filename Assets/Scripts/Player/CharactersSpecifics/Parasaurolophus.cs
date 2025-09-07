@@ -23,44 +23,40 @@ public class Parasaurolophus : CharacterBase
             Debug.LogWarning("Special colliders not assigned for Parasaurolophus!");
             yield break;
         }
-        
+
+        // Pick the correct side (uses the BoxCollider2D with MeleeDamage on that side)
         GameObject specialColliderGO = facingRight ? specialColliderGORight : specialColliderGOLeft;
         MeleeDamage specialMeleeDamage = facingRight ? specialMeleeDamageRight : specialMeleeDamageLeft;
 
         _mainPlayerController.ToggleIsAttacking();
         specialColliderGO.SetActive(true);
 
-        specialMeleeDamage?.PrepareDamage(stats.specialAttackDamage, true, _mainPlayerController.transform, _mainPlayerController);
+        // IMPORTANT: use the SPECIAL COLLIDER as the attackSource so knockback uses its forward direction
+        specialMeleeDamage?.PrepareDamage(
+            stats.specialAttackDamage,
+            true,                                    // mark as special so TryHitEnemy applies knockback
+            specialColliderGO.transform,             // <-- was _mainPlayerController.transform
+            _mainPlayerController
+        );
 
         onSpecial?.Invoke(stats.specialAttackDamage);
 
-        // Damage
-        specialMeleeDamage?.ApplyDamage(stats.specialAttackDamage, false, _mainPlayerController.transform, _mainPlayerController);
-
-        // Knockback (once, strong)
-        Collider2D[] hits = Physics2D.OverlapCircleAll(
-            transform.position,
-            GetComponentInChildren<CircleCollider2D>().radius,
-            LayerMask.GetMask("Enemy")
+        // Apply damage using the active BoxCollider2D (MeleeDamage will handle per-target and knockback via attackSource)
+        specialMeleeDamage?.ApplyDamage(
+            stats.specialAttackDamage,
+            false,                                   // isSpecialAttack flag already set in PrepareDamage
+            specialColliderGO.transform,             // keep source aligned with the active collider
+            _mainPlayerController
         );
-        foreach (var hit in hits)
-        {
-            if (hit.CompareTag("Enemy"))
-            {
-                KnockbackHelper.ApplyKnockback
-                (
-                    hit.transform,
-                    transform,
-                    KnockbackHelper.GetKnockbackForceFromDamage(stats.specialAttackDamage * 1.5f, true) // strong knockback
-                );
-            }
-        }
+
+        // (Removed the global OverlapCircleAll knockback pass — redundant and direction-agnostic)
+
         yield return new WaitForSeconds(specialVfxActivationTime);
-        animController.SpecialVfxAnimator.SetTrigger("Play");
+        animController.TriggerSpecialVfx();
         yield return new WaitForSeconds(restOfSpecialActivationTime);
 
         specialColliderGO.SetActive(false);
         _mainPlayerController.ToggleIsAttacking();
     }
-
+    
 }

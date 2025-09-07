@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     [field: SerializeField] public SpawnerManager SpawnerManager { get; private set; }
 
     public int FinaleLevel = 3;
+    public bool InTutorial = true;
     public int playerIdCounter = 0;
 
     //Variables off inspector
@@ -41,6 +42,7 @@ public class GameManager : MonoBehaviour
         }
         Instance = this;
     }
+    
     void Start()
     {
         cameraMovement.FurthestLeftPoint = waveLocations[currentWave].LeftMost;
