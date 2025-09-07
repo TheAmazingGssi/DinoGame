@@ -881,7 +881,7 @@ MonoBehaviour:
   reviveRange: 2
   freezeLength: 3
   emoteSound: {fileID: 0}
-  inTutorial: 1
+  inTutorial: 0
 --- !u!114 &6716259569256595975
 MonoBehaviour:
   m_ObjectHideFlags: 0
