@@ -4,6 +4,8 @@ using UnityEngine.Events;
 
 public class EnemySpawner : MonoBehaviour
 {
+    [SerializeField] private bool isBoss = false;
+
     private const string Player = "Player";
     [HideInInspector] public GameObject EnemyPrefab;
     [HideInInspector] public float MinSpawnTime;
@@ -27,13 +29,17 @@ public class EnemySpawner : MonoBehaviour
     {
         if (collision.CompareTag(Player))
         {
-            if (!wasTriggered)
+            if (!wasTriggered && !isBoss)
             {
                 WaveStart.Invoke();
                 EnemiesInWave = PlayerEntity.PlayerList.Count * EnemiesInWaveMultiplier;
                 GameManager.Instance.SetWaveSize(EnemiesInWave);
                 StartCoroutine(SpawnWave());
                 wasTriggered = true;
+            }
+            else if(!wasTriggered && isBoss)
+            {
+                Instantiate(EnemyPrefab, spawnPoints[Random.Range(0, spawnPoints.Length)].position, Quaternion.identity);
             }
         }
     }

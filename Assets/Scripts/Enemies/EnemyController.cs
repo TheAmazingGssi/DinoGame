@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -6,17 +5,6 @@ public class EnemyController : MonoBehaviour
     private static readonly int Speed = Animator.StringToHash("Speed");
 
     [SerializeField] EnemyManager manager;
-
-    [SerializeField] private float patrolRange = 3f;
-    [SerializeField] private float waitTimeAtEdge = 2f;
-    [SerializeField] private float stuckTimeThreshold = 2f;
-
-    private Vector3 patrolStartPos;
-    private int patrolDirection = 1;
-    private float waitTimer = 0f;
-    private float stuckTimer = 0f;
-    private Vector3 lastPosition;
-    private bool isWaiting = false;
 
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
@@ -38,10 +26,6 @@ public class EnemyController : MonoBehaviour
     {
         rb.gravityScale = 0;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-
-        patrolStartPos = transform.position;
-        lastPosition = transform.position;
-        FlipSprite(patrolDirection < 0);
     }
 
     private void FixedUpdate()
@@ -78,7 +62,7 @@ public class EnemyController : MonoBehaviour
         }
         else
         {
-            Patrol();
+            moveDirection = Vector3.zero;
         }
 
         if (moveDirection.x > 0 && isFacingLeft)
@@ -94,56 +78,6 @@ public class EnemyController : MonoBehaviour
         rb.linearVelocity = movement;
 
         animator.SetFloat(Speed, moveDirection.magnitude);
-    }
-
-    private void Patrol()
-    {
-        float distanceFromStart = transform.position.x - patrolStartPos.x;
-
-        if (Vector3.Distance(transform.position, lastPosition) < 0.01f)
-        {
-            stuckTimer += Time.fixedDeltaTime;
-            if (stuckTimer >= stuckTimeThreshold)
-            {
-                patrolDirection *= -1;
-                stuckTimer = 0f;
-                isWaiting = true;
-                waitTimer = waitTimeAtEdge;
-            }
-        }
-        else
-        {
-            stuckTimer = 0f;
-        }
-
-        lastPosition = transform.position;
-
-        if (isWaiting)
-        {
-            moveDirection = Vector3.zero;
-            waitTimer -= Time.fixedDeltaTime;
-            if (waitTimer <= 0f)
-            {
-                isWaiting = false;
-                FlipSprite(patrolDirection < 0);
-            }
-            else
-            {
-                return;
-            }
-        }
-
-        if (Mathf.Abs(distanceFromStart) > patrolRange)
-        {
-            patrolStartPos = transform.position;
-            patrolDirection = Random.value < 0.5f ? -1 : 1;
-            isWaiting = true;
-            waitTimer = waitTimeAtEdge;
-            moveDirection = Vector3.zero;
-            return;
-        }
-
-        moveDirection = new Vector3(patrolDirection, 0f, 0f);
     }
 
     private void FlipSprite(bool facingLeft)
