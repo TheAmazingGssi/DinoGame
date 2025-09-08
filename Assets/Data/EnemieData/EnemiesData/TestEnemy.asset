@@ -18,5 +18,4 @@ MonoBehaviour:
   <AttackRange>k__BackingField: 4
   <Speed>k__BackingField: 3
   <Score>k__BackingField: 10
-  <ImmuneToKnockback>k__BackingField: 0
-  <IsInterruptible>k__BackingField: 1
+  <immuneToKnockback>k__BackingField: 0

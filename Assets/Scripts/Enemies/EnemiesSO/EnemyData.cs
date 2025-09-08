@@ -16,6 +16,5 @@ public class EnemyData : ScriptableObject
 
     [field: SerializeField] public int Score { get; private set; }
 
-    [field: SerializeField] public bool ImmuneToKnockback { get; private set; }
-    [field: SerializeField] public bool IsInterruptible { get; private set; } = true;
+    [field: SerializeField] public bool immuneToKnockback { get; private set; }
 }
