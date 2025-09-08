@@ -37,6 +37,7 @@ public class MainPlayerController : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private PlayerTutorialProxy tutorialProxy;
+    [SerializeField] private GameManager crown;
 
     [Header("Attack Variables")]
     [SerializeField] private float enableDuration = 0.2f;
@@ -171,6 +172,8 @@ public class MainPlayerController : MonoBehaviour
         combatManager.OnDeath += PlayDeathSound;
         if(inTutorial) tutorialProxy.Init(GameManager.Instance.playerIdCounter);
         GameManager.Instance.playerIdCounter++;
+
+        crown.gameObject.SetActive(false);
     }
 
     private void OnEnable() { GameManager.OnLevelEnd += OnLevelEnd; }
@@ -438,6 +441,7 @@ public class MainPlayerController : MonoBehaviour
         {
             emoteHeld = true;
             animator.SetTrigger("Emote");
+            crown.gameObject.SetActive(true);
         }
     }
 
