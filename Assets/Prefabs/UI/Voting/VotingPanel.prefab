@@ -129,7 +129,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12.45
+  m_fontSize: 13.75
   m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -283,7 +283,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9127630972787476947}
   - component: {fileID: 1472764764305747984}
-  - component: {fileID: 9050462570191654140}
+  - component: {fileID: 3368224464424496784}
   m_Layer: 5
   m_Name: VotingPanel
   m_TagString: Untagged
@@ -320,7 +320,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2543200578801293366}
   m_CullTransparentMesh: 1
---- !u!223 &9050462570191654140
+--- !u!223 &3368224464424496784
 Canvas:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -474,7 +474,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15.1
+  m_fontSize: 13.75
   m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -512,7 +512,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -29.828949, y: 4.847922, z: 35.522324, w: 0.13222502}
+  m_margin: {x: -6.5410156, y: 4.847922, z: 60.9274, w: 5.777774}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -585,7 +585,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7881353314340654969, guid: 7c3fc4940138c9c4fac7417c3058d8ca, type: 3}
+  m_Sprite: {fileID: -4221866883312549453, guid: 46fa3479c51476843a5a3883be1c6bba, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -821,7 +821,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8667551667896345990, guid: 6e8a57f49aa5768479bfef512420f72f, type: 3}
       propertyPath: m_Name
-      value: Multiplayer Button right top
+      value: Multiplayer Button right bottom
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1052,11 +1052,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3634802240405202647, guid: 6e8a57f49aa5768479bfef512420f72f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3634802240405202647, guid: 6e8a57f49aa5768479bfef512420f72f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3634802240405202647, guid: 6e8a57f49aa5768479bfef512420f72f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3634802240405202647, guid: 6e8a57f49aa5768479bfef512420f72f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3634802240405202647, guid: 6e8a57f49aa5768479bfef512420f72f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3634802240405202647, guid: 6e8a57f49aa5768479bfef512420f72f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3634802240405202647, guid: 6e8a57f49aa5768479bfef512420f72f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4979491846307602850, guid: 6e8a57f49aa5768479bfef512420f72f, type: 3}
       propertyPath: m_Pivot.x
@@ -1168,7 +1188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8667551667896345990, guid: 6e8a57f49aa5768479bfef512420f72f, type: 3}
       propertyPath: m_Name
-      value: Multiplayer Button right top
+      value: Multiplayer Button left top
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1370,7 +1390,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8667551667896345990, guid: 6e8a57f49aa5768479bfef512420f72f, type: 3}
       propertyPath: m_Name
-      value: Multiplayer Button right top
+      value: Multiplayer Button left bottom
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
