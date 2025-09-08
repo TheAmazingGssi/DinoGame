@@ -33,8 +33,6 @@ public class BossVFXManager : MonoBehaviour
     public void TriggerAOEVfx()
     {
         if (aoeVfxPlaying || AOEAttackVfxAnimator == null) return;
-        Debug.Log($"AAAAAAAAAAAAAAAAA");
-
         aoeVfxPlaying = true;
         AOEAttackVfxAnimator.gameObject.SetActive(true);
         AOEAttackVfxAnimator.SetTrigger("Play");
@@ -55,6 +53,7 @@ public class BossVFXManager : MonoBehaviour
     public void TriggerDeathVfx()
     {
         if (deathVfxPlaying || DeathVfxAnimator == null) return;
+        Debug.Log($"AAAAAAAAAAAAAAAAA");
 
         deathVfxPlaying = true;
         DeathVfxAnimator.gameObject.SetActive(true);
