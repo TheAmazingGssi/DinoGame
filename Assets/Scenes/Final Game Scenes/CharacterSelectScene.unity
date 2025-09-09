@@ -433,6 +433,14 @@ MonoBehaviour:
         m_Groups: 
         m_Action: Join
         m_Flags: 0
+      - m_Name: 
+        m_Id: 2b50c0f5-adf0-4e48-94cc-13d704545698
+        m_Path: <HID::shanwan Twin USB Joystick>/button4
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
   m_PlayerPrefab: {fileID: 347970310652486107, guid: 657c3514636439145b2e8307fb0314e0, type: 3}

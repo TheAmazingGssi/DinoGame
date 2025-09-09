@@ -10,8 +10,14 @@ public class MultiplayerButton : MonoBehaviour
     [SerializeField] Image parisIndicator;
     [SerializeField] Image andrewIndicator;
 
+    [SerializeField] Image terryCrown;
+    [SerializeField] Image spencerCrown;
+    [SerializeField] Image parisCrown;
+    [SerializeField] Image andrewCrown;
+
     public Button button;
     public Dictionary<CharacterType, Image> characterIndicators = new Dictionary<CharacterType, Image>();
+    public Dictionary<CharacterType, Image> crowns = new Dictionary<CharacterType, Image>();
 
     public int ChoiceIndex { get; private set; } = -1;
     public VotingManager VotingManager { get; private set; }
@@ -26,7 +32,14 @@ public class MultiplayerButton : MonoBehaviour
         characterIndicators.Add(CharacterType.Parasaurolophus, parisIndicator);
         characterIndicators.Add(CharacterType.Therizinosaurus, andrewIndicator);
 
-        foreach(Image img in characterIndicators.Values)
+        crowns.Add(CharacterType.Triceratops, terryCrown);
+        crowns.Add(CharacterType.Spinosaurus, spencerCrown);
+        crowns.Add(CharacterType.Parasaurolophus, parisCrown);
+        crowns.Add(CharacterType.Therizinosaurus, andrewCrown);
+
+        foreach (Image img in characterIndicators.Values)
+            img.enabled = false;
+        foreach (Image img in crowns.Values)
             img.enabled = false;
     }
 

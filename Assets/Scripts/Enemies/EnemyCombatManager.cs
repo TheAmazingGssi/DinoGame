@@ -67,9 +67,9 @@ public class EnemyCombatManager : CombatManager
         Debug.Log($"{gameObject.name} hurt animation complete");
     }
 
+    [ContextMenu("Invoke Death")]
     protected override void HandleDeath()
     {
-        Debug.Log("Enemy died in combat manager");
         base.HandleDeath();
     }
 }

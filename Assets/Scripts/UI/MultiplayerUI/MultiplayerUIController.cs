@@ -29,6 +29,8 @@ public class MultiplayerUIController : MonoBehaviour
     private void SetSelection(bool value)
     {
         CurrentlySelected.characterIndicators[characterType].enabled = value;
+        if (GameManager.Instance.GetHighestScorePlayer() == player)
+            CurrentlySelected.crowns[characterType].enabled = value;
     }
 
     private void MoveRight() => TryMove(CurrentlySelected.button.FindSelectableOnRight());
