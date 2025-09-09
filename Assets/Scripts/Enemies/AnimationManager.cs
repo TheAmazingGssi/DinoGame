@@ -18,7 +18,7 @@ public class AnimationManager : MonoBehaviour
     {
         manager.CombatManager.OnHurtAnimationComplete();
         manager.Animator.ResetTrigger(HURT);
-        Debug.Log("HurtEnd animation event called");
+        //Debug.Log("HurtEnd animation event called");
     }
 
     public void AttackEnd()
@@ -26,7 +26,7 @@ public class AnimationManager : MonoBehaviour
         manager.Animator.ResetTrigger(Attack);
         manager.Animator.ResetTrigger(AOEAttack);
         manager.AttackManager.OnAnimationComplete();
-        Debug.Log("AttackEnd animation event called");
+        //Debug.Log("AttackEnd animation event called");
     }
 
     public void KnockbackEnd()
@@ -38,6 +38,6 @@ public class AnimationManager : MonoBehaviour
         if (manager.KnockbackManager != null)
             manager.KnockbackManager.EndKnockback();
 
-        Debug.Log("KnockbackEnd animation event called");
+        //Debug.Log("KnockbackEnd animation event called");
     }
 }
