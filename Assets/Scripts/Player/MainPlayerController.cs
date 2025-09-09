@@ -37,7 +37,7 @@ public class MainPlayerController : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private PlayerTutorialProxy tutorialProxy;
-    [SerializeField] private GameManager crown;
+    [SerializeField] private GameObject crown;
 
     [Header("Attack Variables")]
     [SerializeField] private float enableDuration = 0.2f;
@@ -445,6 +445,7 @@ public class MainPlayerController : MonoBehaviour
             emoteHeld = true;
             animator.SetTrigger("Emote");
             crown.gameObject.SetActive(true);
+            Debug.Log($"{controller.gameObject.name} has the crown");
         }
     }
 

@@ -598,7 +598,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3569670116312465802}
-  - {fileID: 613847161375181598}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5130657257574884777
@@ -695,6 +694,7 @@ Transform:
   - {fileID: 6057467636057874398}
   - {fileID: 1169896532671239917}
   - {fileID: 5804957005522707866}
+  - {fileID: 613847161375181598}
   m_Father: {fileID: 2242870450885965078}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &7126916438403873939
@@ -878,6 +878,7 @@ MonoBehaviour:
   animator: {fileID: 8958741867143242686}
   audioSource: {fileID: 8223330495104514794}
   tutorialProxy: {fileID: 5077880941093436707}
+  crown: {fileID: 8022900876227695804}
   enableDuration: 0.2
   disableDelay: 0.5
   reviveRange: 2
@@ -1329,7 +1330,7 @@ Transform:
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 2242870450885965078}
+  m_Father: {fileID: 3569670116312465802}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7433232336567140352
 SpriteRenderer:
@@ -1372,8 +1373,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -812689949
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8fe6192d32f848a40b1de010fc81c52e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

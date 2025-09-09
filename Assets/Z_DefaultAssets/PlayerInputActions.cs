@@ -475,22 +475,11 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""bd47f4fc-2d75-4e9f-b741-54626fb7bbf3"",
-                    ""path"": ""<HID::shanwan Twin USB Joystick>/button4"",
+                    ""id"": ""3abddc6b-0ee0-40da-8db7-0eca3bb740db"",
+                    ""path"": ""<HID::shanwan Twin USB Joystick>/button3"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Confirmation"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""3ae94ec4-ebe9-4783-bcbf-01c6a377a5d3"",
-                    ""path"": ""<HID::shanwan Twin USB Joystick>/button4"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Joystick"",
                     ""action"": ""Confirmation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
