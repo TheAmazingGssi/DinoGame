@@ -519,6 +519,17 @@
                 },
                 {
                     "name": "",
+                    "id": "99e0f0c9-934a-4443-bf4d-d0c79c1bc639",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cancel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "4a132935-e4d9-492e-9f9b-405f0d012ea0",
                     "path": "<Gamepad>/start",
                     "interactions": "",
@@ -535,6 +546,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Joystick",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "96c74d31-7afe-4832-937e-c41d0fa6c381",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
