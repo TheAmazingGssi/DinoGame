@@ -199,7 +199,7 @@ PrefabInstance:
     - target: {fileID: 6963371577172914679, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: SpecialVfxObject
       value: 
-      objectReference: {fileID: 1280899897635367303}
+      objectReference: {fileID: 3406662389198214506}
     - target: {fileID: 6963371577172914679, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: SpecialVfxAnimator
       value: 
@@ -261,6 +261,11 @@ Animator:
 --- !u!95 &1280899897635367303 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 7268481246512268016, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+  m_PrefabInstance: {fileID: 8437633009922878327}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3406662389198214506 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6511813499013299741, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
   m_PrefabInstance: {fileID: 8437633009922878327}
   m_PrefabAsset: {fileID: 0}
 --- !u!212 &6980454795877242529 stripped

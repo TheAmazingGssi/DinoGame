@@ -8,12 +8,13 @@ public class AnimationController : MonoBehaviour
     public CharacterType characterType;
 
     [FormerlySerializedAs("animator")] public Animator mainAnimator;
-    public Animator SpecialVfxObject;
+    public GameObject SpecialVfxObject;
     public Animator SpecialVfxAnimator;
     public SpriteRenderer specialVfxRenderer;
     public Animator normalAttackVfxAnimator;
     public SpriteRenderer normalAttackVfxRenderer;
     public ParticleSystem terryParticleSystem;
+    public RoarWaveBurstSpawner parisRoarWaveSpawner;
     
     private bool vfxPlaying = false;
     
@@ -76,6 +77,12 @@ public class AnimationController : MonoBehaviour
     
     public void TriggerSpecialVfx()
     {
+        if (characterType == CharacterType.Parasaurolophus)
+        { 
+            parisRoarWaveSpawner?.TriggerBurst();
+            return; 
+        }
+        
         if (vfxPlaying) return; 
         vfxPlaying = true;
 

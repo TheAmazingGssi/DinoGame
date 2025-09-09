@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 public class EnemyManager : MonoBehaviour
 {
@@ -16,7 +18,6 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private SoundPlayer soundPlayer;
     [SerializeField] private KnockbackManager knockbackManager;
     [SerializeField] private GameObject projectileDirection;
-    [SerializeField] private BossVFXManager vFXManager;
 
     [Header("Data")]
     [SerializeField] private EnemyData enemyData;
@@ -41,7 +42,6 @@ public class EnemyManager : MonoBehaviour
     public SoundPlayer SoundPlayer => soundPlayer;
     public KnockbackManager KnockbackManager => knockbackManager;
     public GameObject ProjectileDirection => projectileDirection;
-    public BossVFXManager VFXManager => vFXManager;
 
     public event UnityAction<EnemyManager> OnDeath;
 

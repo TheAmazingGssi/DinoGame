@@ -828,12 +828,13 @@ MonoBehaviour:
   animationData: {fileID: 11400000, guid: ddf3d8d22bba4984486206bd1e302a5d, type: 2}
   characterType: 0
   mainAnimator: {fileID: 8958741867143242686}
-  SpecialVfxObject: {fileID: 7268481246512268016}
+  SpecialVfxObject: {fileID: 6511813499013299741}
   SpecialVfxAnimator: {fileID: 7268481246512268016}
   specialVfxRenderer: {fileID: 1569487030482599382}
   normalAttackVfxAnimator: {fileID: 5384368346122762586}
   normalAttackVfxRenderer: {fileID: 4628214316666465650}
   terryParticleSystem: {fileID: 0}
+  parisRoarWaveSpawner: {fileID: 0}
 --- !u!114 &5118895932606543672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -882,7 +883,6 @@ MonoBehaviour:
   reviveRange: 2
   freezeLength: 3
   emoteSound: {fileID: 0}
-  inTutorial: 1
 --- !u!114 &6716259569256595975
 MonoBehaviour:
   m_ObjectHideFlags: 0

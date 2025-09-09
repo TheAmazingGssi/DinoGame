@@ -39,9 +39,9 @@ public class TutorialManager : MonoBehaviour
         foreach (var player in PlayerEntity.PlayerList)
         {
             player.gameObject.GetComponent<PlayerCombatManager>().RestoreHealthByPercent(100f);
-            player.gameObject.GetComponent<MainPlayerController>().inTutorial = false;
         }
-        
+
+        GameManager.Instance.InTutorial = false;
         UnsubscribePlayers(players);
     }
 

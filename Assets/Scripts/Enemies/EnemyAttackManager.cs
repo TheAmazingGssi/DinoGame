@@ -11,7 +11,6 @@ public enum EnemyAttackType
 
 public class EnemyAttackManager : MonoBehaviour
 {
-    private static readonly int HURT = Animator.StringToHash("Hurt");
     private const string PLAYER = "Player";
 
     [SerializeField] private EnemyAttack[] attacks;
@@ -41,7 +40,6 @@ public class EnemyAttackManager : MonoBehaviour
 
     private void Start()
     {
-
         combatManager.OnTakeDamage += HandleTakeDamage;
 
         if (leftAttackCollider != null)
@@ -254,7 +252,7 @@ public class EnemyAttackManager : MonoBehaviour
 
     private void HandleTakeDamage(DamageArgs damageArgs)
     {
-        if (attacks != null && manager.EnemyData.IsInterruptible)
+        if (attacks != null)
         {
             foreach (EnemyAttack attack in attacks)
             {

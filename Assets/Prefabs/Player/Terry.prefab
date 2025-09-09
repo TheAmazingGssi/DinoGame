@@ -5064,7 +5064,7 @@ PrefabInstance:
     - target: {fileID: 6963371577172914679, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: SpecialVfxObject
       value: 
-      objectReference: {fileID: 6703358729870754799}
+      objectReference: {fileID: 433515581555160365}
     - target: {fileID: 6963371577172914679, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: SpecialVfxAnimator
       value: 
