@@ -1,25 +1,10 @@
 fileFormatVersion: 2
-guid: a1c24e624bbcdda4a96ff9a86a68edd5
+guid: b6d886cce011124409a8645c83c3a9ef
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 937378224477805318
-    second: Confetti_0
-  - first:
-      213: -4599421453053134942
-    second: Confetti_1
-  - first:
-      213: -5228546747263550749
-    second: Confetti_2
-  - first:
-      213: -7892613797298954417
-    second: Confetti_3
-  - first:
-      213: 4453259405313168773
-    second: Confetti_4
-  - first:
-      213: -1507654668627130707
-    second: Confetti_5
+      213: -6804676109296787472
+    second: block bubble_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -61,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 250
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -154,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Confetti_0
+      name: block bubble_0
       rect:
         serializedVersion: 2
-        x: 141
-        y: 624
-        width: 103
-        height: 363
+        x: 153
+        y: 59
+        width: 947
+        height: 947
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,118 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 60b9f2a578c320d00800000000000000
-      internalID: 937378224477805318
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Confetti_1
-      rect:
-        serializedVersion: 2
-        x: 349
-        y: 640
-        width: 365
-        height: 369
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2a7f476ae829b20c0800000000000000
-      internalID: -4599421453053134942
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Confetti_2
-      rect:
-        serializedVersion: 2
-        x: 771
-        y: 724
-        width: 182
-        height: 183
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3eaf4d57f687077b0800000000000000
-      internalID: -5228546747263550749
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Confetti_3
-      rect:
-        serializedVersion: 2
-        x: 118
-        y: 98
-        width: 140
-        height: 398
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f4f16a6719dc77290800000000000000
-      internalID: -7892613797298954417
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Confetti_4
-      rect:
-        serializedVersion: 2
-        x: 470
-        y: 147
-        width: 113
-        height: 349
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 585db52b5d72dcd30800000000000000
-      internalID: 4453259405313168773
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Confetti_5
-      rect:
-        serializedVersion: 2
-        x: 676
-        y: 156
-        width: 320
-        height: 338
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: da64588111cb31be0800000000000000
-      internalID: -1507654668627130707
+      spriteID: 0ff17cd912fe091a0800000000000000
+      internalID: -6804676109296787472
       vertices: []
       indices: 
       edges: []
@@ -289,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -299,12 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Confetti_0: 937378224477805318
-      Confetti_1: -4599421453053134942
-      Confetti_2: -5228546747263550749
-      Confetti_3: -7892613797298954417
-      Confetti_4: 4453259405313168773
-      Confetti_5: -1507654668627130707
+      block bubble_0: -6804676109296787472
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -36,7 +35,6 @@ public class MainPlayerController : MonoBehaviour
     [SerializeField] private MeleeDamage leftMeleeDamage;
     [SerializeField] private Animator animator;
     [SerializeField] private AudioSource audioSource;
-    [SerializeField] private PlayerTutorialProxy tutorialProxy;
     [SerializeField] private GameObject crown;
 
     [Header("Attack Variables")]
@@ -77,7 +75,6 @@ public class MainPlayerController : MonoBehaviour
 
     public PlayerCombatManager CombatManager => combatManager;
     
-    //todo: new block system
     public bool IsBlocking => isBlocking;
     public bool IsFacingRight => facingRight;
 
@@ -139,7 +136,6 @@ public class MainPlayerController : MonoBehaviour
         {
             stats = characterStats.characters[(int)characterType];
             
-            //todo: new block system
             combatManager.Initialize(stats.maxHealth, stats.stamina, this, animator,
                 stats.blockStaminaMax, stats.blockCost, stats.blockRegenRate);
 
@@ -170,8 +166,6 @@ public class MainPlayerController : MonoBehaviour
         activePlayers++;
 
         combatManager.OnDeath += PlayDeathSound;
-        if(GameManager.Instance.InTutorial) 
-            tutorialProxy.Init(GameManager.Instance.playerIdCounter);
         GameManager.Instance.playerIdCounter++;
 
         crown.gameObject.SetActive(false);
@@ -302,8 +296,6 @@ public class MainPlayerController : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
-        if(GameManager.Instance.InTutorial) 
-            tutorialProxy.ReportMovementSample(moveInput.magnitude);
     }
 
     public void ApplyDamageBoost(float percentage)
@@ -333,8 +325,6 @@ public class MainPlayerController : MonoBehaviour
             soundPlayer.PlaySound(0);
 
             StartCoroutine(ResetAttackCooldown());
-            if(GameManager.Instance.InTutorial)
-                tutorialProxy.ReportAttack();
         }
     }
 
@@ -368,9 +358,6 @@ public class MainPlayerController : MonoBehaviour
         if (!isBlocking) return;
         isBlocking = false;
         animController.SetBlocking(false);
-        
-        if (GameManager.Instance.InTutorial && tutorialProxy != null)
-            tutorialProxy.ReportBlock();
     }
 
     public void Revive(InputAction.CallbackContext context)

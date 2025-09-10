@@ -292,6 +292,10 @@ PrefabInstance:
       propertyPath: characterType
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4579190218097802738, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: tutorialProxy
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4772631282887250927, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -379,7 +383,8 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1569487030482599382, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
     - {fileID: 7268481246512268016, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6498741732938546126, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3569670116312465802, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       insertIndex: -1

@@ -1,46 +1,52 @@
 fileFormatVersion: 2
-guid: 46fa3479c51476843a5a3883be1c6bba
+guid: b6f6edf812a63ae44b4eaf903f847a47
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4221866883312549453
-    second: voting screen ui updated_0
+      213: -8509803693727059760
+    second: Controller Buttons_0
   - first:
-      213: -7538282221678805762
-    second: voting screen ui updated_1
+      213: -8434486545759832345
+    second: Controller Buttons_1
   - first:
-      213: 7020581100197010500
-    second: voting screen ui updated_2
+      213: 3441730060449328972
+    second: Controller Buttons_2
   - first:
-      213: -823771251465857707
-    second: voting screen ui updated_3
+      213: -5271389559933694643
+    second: Controller Buttons_3
   - first:
-      213: -1637368278561370818
-    second: voting screen ui updated_4
+      213: 1589633886649589384
+    second: Controller Buttons_4
   - first:
-      213: 5857174267844571178
-    second: voting screen ui updated_5
+      213: 1720645551057318012
+    second: Controller Buttons_5
   - first:
-      213: -6036366586587616525
-    second: voting screen ui updated_6
+      213: -1974954986932873504
+    second: Controller Buttons_6
   - first:
-      213: -6502246629270459742
-    second: voting screen ui updated_7
+      213: -7234908010682543847
+    second: Controller Buttons_7
   - first:
-      213: -7774055625024860356
-    second: voting screen ui updated_8
+      213: -749821756618986501
+    second: Controller Buttons_8
   - first:
-      213: -824320598364488719
-    second: voting screen ui updated_9
+      213: -223304485193896496
+    second: Controller Buttons_9
   - first:
-      213: 585266930486228687
-    second: voting screen ui updated_10
+      213: -3911039541481345975
+    second: Controller Buttons_10
   - first:
-      213: -12805633278764787
-    second: voting screen ui updated_11
+      213: 6990346835516130897
+    second: Controller Buttons_11
   - first:
-      213: 7479375160230881619
-    second: voting screen ui updated_12
+      213: -4469802729113456441
+    second: Controller Buttons_12
+  - first:
+      213: 5250464640956153067
+    second: Controller Buttons_13
+  - first:
+      213: 311683112432371315
+    second: Controller Buttons_14
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -175,13 +181,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: voting screen ui updated_0
+      name: Controller Buttons_0
       rect:
         serializedVersion: 2
-        x: 326
-        y: 424
-        width: 1299
-        height: 736
+        x: 29
+        y: 785
+        width: 205
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,20 +196,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3b18b23207ae865c0800000000000000
-      internalID: -4221866883312549453
+      spriteID: 0d0771f90aa17e980800000000000000
+      internalID: -8509803693727059760
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: voting screen ui updated_1
+      name: Controller Buttons_1
       rect:
         serializedVersion: 2
-        x: 1671
-        y: 1045
-        width: 72
-        height: 65
+        x: 282
+        y: 785
+        width: 205
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,20 +218,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: efc31384244a26790800000000000000
-      internalID: -7538282221678805762
+      spriteID: 7e67c29ac2fa2fa80800000000000000
+      internalID: -8434486545759832345
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: voting screen ui updated_2
+      name: Controller Buttons_2
       rect:
         serializedVersion: 2
-        x: 1693
-        y: 980
-        width: 192
-        height: 87
+        x: 537
+        y: 785
+        width: 205
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,20 +240,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 44c5012605d1e6160800000000000000
-      internalID: 7020581100197010500
+      spriteID: c4fadd1414b73cf20800000000000000
+      internalID: 3441730060449328972
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: voting screen ui updated_3
+      name: Controller Buttons_3
       rect:
         serializedVersion: 2
-        x: 1705
-        y: 1057
-        width: 40
-        height: 59
+        x: 790
+        y: 785
+        width: 205
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,20 +262,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 555d23c49606194f0800000000000000
-      internalID: -823771251465857707
+      spriteID: d4d037fcf1348d6b0800000000000000
+      internalID: -5271389559933694643
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: voting screen ui updated_4
+      name: Controller Buttons_4
       rect:
         serializedVersion: 2
-        x: 128
-        y: 886
-        width: 112
-        height: 96
+        x: 61
+        y: 506
+        width: 169
+        height: 258
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,20 +284,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e3d4bddc936e649e0800000000000000
-      internalID: -1637368278561370818
+      spriteID: 88e1ca009938f0610800000000000000
+      internalID: 1589633886649589384
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: voting screen ui updated_5
+      name: Controller Buttons_5
       rect:
         serializedVersion: 2
-        x: 1706
-        y: 759
-        width: 163
-        height: 173
+        x: 303
+        y: 506
+        width: 169
+        height: 258
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,20 +306,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a203f66c6fcd84150800000000000000
-      internalID: 5857174267844571178
+      spriteID: c70b0272306f0e710800000000000000
+      internalID: 1720645551057318012
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: voting screen ui updated_6
+      name: Controller Buttons_6
       rect:
         serializedVersion: 2
-        x: 103
-        y: 777
-        width: 137
-        height: 84
+        x: 541
+        y: 545
+        width: 208
+        height: 161
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -322,20 +328,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3fa686052948a3ca0800000000000000
-      internalID: -6036366586587616525
+      spriteID: 0e6da7437ec8794e0800000000000000
+      internalID: -1974954986932873504
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: voting screen ui updated_7
+      name: Controller Buttons_7
       rect:
         serializedVersion: 2
-        x: 121
-        y: 672
-        width: 101
-        height: 80
+        x: 788
+        y: 545
+        width: 208
+        height: 161
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,20 +350,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2aa6a5c142163c5a0800000000000000
-      internalID: -6502246629270459742
+      spriteID: 91193a81f71789b90800000000000000
+      internalID: -7234908010682543847
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: voting screen ui updated_8
+      name: Controller Buttons_8
       rect:
         serializedVersion: 2
-        x: 1746
-        y: 672
-        width: 21
-        height: 72
+        x: 42
+        y: 235
+        width: 276
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -366,20 +372,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c3f044609910d1490800000000000000
-      internalID: -7774055625024860356
+      spriteID: bfbadd7c5191895f0800000000000000
+      internalID: -749821756618986501
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: voting screen ui updated_9
+      name: Controller Buttons_9
       rect:
         serializedVersion: 2
-        x: 1797
-        y: 680
-        width: 23
-        height: 48
+        x: 340
+        y: 235
+        width: 276
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -388,20 +394,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1fb727188cc6f84f0800000000000000
-      internalID: -824320598364488719
+      spriteID: 0dd244bf0c9a6ecf0800000000000000
+      internalID: -223304485193896496
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: voting screen ui updated_10
+      name: Controller Buttons_10
       rect:
         serializedVersion: 2
-        x: 112
-        y: 562
-        width: 120
-        height: 76
+        x: 720
+        y: 319
+        width: 102
+        height: 185
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -410,20 +416,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fc63a622c294f1800800000000000000
-      internalID: 585266930486228687
+      spriteID: 94c6f73324239b9c0800000000000000
+      internalID: -3911039541481345975
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: voting screen ui updated_11
+      name: Controller Buttons_11
       rect:
         serializedVersion: 2
-        x: 103
-        y: 47
-        width: 831
-        height: 385
+        x: 113
+        y: 24
+        width: 141
+        height: 188
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -432,20 +438,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d099b49285182dff0800000000000000
-      internalID: -12805633278764787
+      spriteID: 15607b31963b20160800000000000000
+      internalID: 6990346835516130897
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: voting screen ui updated_12
+      name: Controller Buttons_12
       rect:
         serializedVersion: 2
-        x: 1029
-        y: 47
-        width: 831
-        height: 385
+        x: 329
+        y: 24
+        width: 141
+        height: 189
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -454,8 +460,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 359217fa4141cc760800000000000000
-      internalID: 7479375160230881619
+      spriteID: 7c0fe13991218f1c0800000000000000
+      internalID: -4469802729113456441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Buttons_13
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 35
+        width: 173
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: becb0f5d5c56dd840800000000000000
+      internalID: 5250464640956153067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Buttons_14
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 35
+        width: 173
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 376050fa322535400800000000000000
+      internalID: 311683112432371315
       vertices: []
       indices: 
       edges: []
@@ -473,20 +523,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      voting screen ui updated_0: -4221866883312549453
-      voting screen ui updated_1: -7538282221678805762
-      voting screen ui updated_10: 585266930486228687
-      voting screen ui updated_11: -12805633278764787
-      voting screen ui updated_12: 7479375160230881619
-      voting screen ui updated_2: 7020581100197010500
-      voting screen ui updated_3: -823771251465857707
-      voting screen ui updated_4: -1637368278561370818
-      voting screen ui updated_5: 5857174267844571178
-      voting screen ui updated_6: -6036366586587616525
-      voting screen ui updated_7: -6502246629270459742
-      voting screen ui updated_8: -7774055625024860356
-      voting screen ui updated_9: -824320598364488719
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

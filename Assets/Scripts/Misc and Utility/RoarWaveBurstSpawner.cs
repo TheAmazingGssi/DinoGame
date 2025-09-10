@@ -26,7 +26,6 @@ public class RoarWaveBurstSpawner : MonoBehaviour
 
     [Header("Direction (fallback only)")]
     [Tooltip("Only used if mainPlayerController is not set.")]
-    [SerializeField] private bool useLocalScaleFacing = true;
     [SerializeField] private Vector2 customDirection = Vector2.right;
 
     // pool
