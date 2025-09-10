@@ -8,4 +8,5 @@ public class HUDRefrences : MonoBehaviour
     public Slider HpBar;
     public Slider EnergyBar;
     public TMP_Text ScoreText;
+    public GameObject Crown;
 }

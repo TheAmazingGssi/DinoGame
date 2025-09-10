@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
 
     public static System.Action<MainPlayerController> OnLevelEnd;
 
+    public event UnityAction<MainPlayerController> OnScoreChange;
+
     [Header("Settings")]
     [SerializeField] private CameraLocations[] waveLocations;
     [SerializeField] private Vote vote;
@@ -181,6 +183,18 @@ public class GameManager : MonoBehaviour
         }
         lowestScorePlayer = lowestScorePlayer ?? PlayerEntity.PlayerList[0];
         return lowestScorePlayer;
+    }
+
+    public void HandleScoreChange()
+    {
+        bool startOfGame = true;
+        foreach (var player in PlayerEntity.PlayerList)
+        {
+            if (player.MainPlayerController == null) return;
+            if (player.MainPlayerController.GetScore() != 0) startOfGame = false;
+        }
+        if (!startOfGame)
+            OnScoreChange?.Invoke(GetHighestScorePlayer().MainPlayerController);
     }
 }
 

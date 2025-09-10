@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class HUDManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class HUDManager : MonoBehaviour
     [SerializeField] private Sprite SpencerSplash;
     [SerializeField] private Sprite ParisSplash;
     [SerializeField] private Sprite AndrewSplash;
+
     Dictionary<CharacterType, Sprite> splashArts;
 
     private void Awake()
@@ -18,7 +20,23 @@ public class HUDManager : MonoBehaviour
         splashArts.Add(CharacterType.Spinosaurus, SpencerSplash);
         splashArts.Add(CharacterType.Parasaurolophus, ParisSplash);
         splashArts.Add(CharacterType.Therizinosaurus, AndrewSplash);
+
         HideAll = false;
+    }
+
+    private void Start()
+    {
+        GameManager.Instance.OnScoreChange += ChangeCrown;
+
+        if(GameManager.Instance.LevelNumber != 1 && !HideAll)
+        {
+            ChangeCrown(GameManager.Instance.GetHighestScorePlayer().MainPlayerController);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.Instance.OnScoreChange -= ChangeCrown;
     }
 
     void Update()
@@ -43,6 +61,21 @@ public class HUDManager : MonoBehaviour
             }
             else
                 hudRefrences[i].gameObject.SetActive(false);
+        }
+    }
+
+    private void ChangeCrown(MainPlayerController player)
+    {
+        foreach (var hud in hudRefrences)
+            hud.Crown.SetActive(false);
+
+        for (int i = 0; i < PlayerEntity.PlayerList.Count; i++)
+        {
+            if (PlayerEntity.PlayerList[i].CharacterType == player.CharacterType)
+            {
+                hudRefrences[i].Crown.SetActive(true);
+                break;
+            }
         }
     }
 }
