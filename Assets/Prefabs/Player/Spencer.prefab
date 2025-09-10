@@ -166,7 +166,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 7d297908346df8747a5df54f62bec432, type: 2}
     - target: {fileID: 6570105882733174227, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.024
+      value: -0.04
       objectReference: {fileID: 0}
     - target: {fileID: 6716259569256595975, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: 'mySounds.Array.data[1]'
@@ -205,6 +205,10 @@ PrefabInstance:
       value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 8022900876227695804, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271534115443307974, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}

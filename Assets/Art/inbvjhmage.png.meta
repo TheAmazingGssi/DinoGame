@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: b80d5146654040e448de2fb9af984288
+guid: cd7d9f30b76498648a58bb52323c4e9a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7705372618848768572
-    second: paris-vfx-ezgif.com-gif-to-sprite-converter_0
-  - first:
-      213: 7398711210045041609
-    second: paris-vfx-ezgif.com-gif-to-sprite-converter_1
-  - first:
-      213: 8198623814986659301
-    second: paris-vfx-ezgif.com-gif-to-sprite-converter_2
-  - first:
-      213: -8608102269273804241
-    second: paris-vfx-ezgif.com-gif-to-sprite-converter_3
-  - first:
-      213: -1942277873468930726
-    second: paris-vfx-ezgif.com-gif-to-sprite-converter_4
+      213: -4544242542251534003
+    second: inbvjhmage_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -63,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 2500
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -151,67 +139,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: paris-vfx-ezgif.com-gif-to-sprite-converter_0
+      name: inbvjhmage_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 1080
+        width: 776
+        height: 632
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ff8d42668aa99b149ae65e562925ebea
-      internalID: -1332411604
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: paris-vfx-ezgif.com-gif-to-sprite-converter_1
-      rect:
-        serializedVersion: 2
-        x: 1920
-        y: 0
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b506bc802edb2034593deeaad97bc173
-      internalID: -214647615
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: paris-vfx-ezgif.com-gif-to-sprite-converter_2
-      rect:
-        serializedVersion: 2
-        x: 3840
-        y: 0
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c57b7fbebf9a0824eaaf786e4ec03290
-      internalID: -1642247195
+      spriteID: d4911e7fb7b9fe0c0800000000000000
+      internalID: -4544242542251534003
       vertices: []
       indices: 
       edges: []
@@ -220,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 598741b08fc6dac4b934d074708c9212
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -229,10 +173,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      paris-vfx-ezgif.com-gif-to-sprite-converter_0: -1332411604
-      paris-vfx-ezgif.com-gif-to-sprite-converter_1: -214647615
-      paris-vfx-ezgif.com-gif-to-sprite-converter_2: -1642247195
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

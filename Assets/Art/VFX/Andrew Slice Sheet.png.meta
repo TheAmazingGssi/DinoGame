@@ -1,0 +1,986 @@
+fileFormatVersion: 2
+guid: 8b4eedbcd2c8b6e4a8fb64a1e38c32d6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8048549852262600413
+    second: Andrew Slice Sheet_0
+  - first:
+      213: 6611631536697094175
+    second: Andrew Slice Sheet_1
+  - first:
+      213: -7465917259252362485
+    second: Andrew Slice Sheet_2
+  - first:
+      213: -3908290161486218242
+    second: Andrew Slice Sheet_3
+  - first:
+      213: 2577099179031580518
+    second: Andrew Slice Sheet_4
+  - first:
+      213: 4235901587987317092
+    second: Andrew Slice Sheet_5
+  - first:
+      213: 2277851441869421340
+    second: Andrew Slice Sheet_6
+  - first:
+      213: 3412740883051073372
+    second: Andrew Slice Sheet_7
+  - first:
+      213: -6080865665573951459
+    second: Andrew Slice Sheet_8
+  - first:
+      213: -6627081320551330862
+    second: Andrew Slice Sheet_9
+  - first:
+      213: -9038839119967607411
+    second: Andrew Slice Sheet_10
+  - first:
+      213: 6426772200008531993
+    second: Andrew Slice Sheet_11
+  - first:
+      213: -5255854276838306930
+    second: Andrew Slice Sheet_12
+  - first:
+      213: 7778068079512912432
+    second: Andrew Slice Sheet_13
+  - first:
+      213: -7432110798146123588
+    second: Andrew Slice Sheet_14
+  - first:
+      213: 4722879714383811354
+    second: Andrew Slice Sheet_15
+  - first:
+      213: -5112378025542294856
+    second: Andrew Slice Sheet_16
+  - first:
+      213: -342180036048547481
+    second: Andrew Slice Sheet_17
+  - first:
+      213: -506172608967104879
+    second: Andrew Slice Sheet_18
+  - first:
+      213: -4140110613558600057
+    second: Andrew Slice Sheet_19
+  - first:
+      213: 3899208799852325129
+    second: Andrew Slice Sheet_20
+  - first:
+      213: 944045871713426682
+    second: Andrew Slice Sheet_21
+  - first:
+      213: 8937342747233672759
+    second: Andrew Slice Sheet_22
+  - first:
+      213: 1800623982392148689
+    second: Andrew Slice Sheet_23
+  - first:
+      213: 7325105522328439322
+    second: Andrew Slice Sheet_24
+  - first:
+      213: 251193652773707494
+    second: Andrew Slice Sheet_25
+  - first:
+      213: -4284000784690319046
+    second: Andrew Slice Sheet_26
+  - first:
+      213: -5008173148329615396
+    second: Andrew Slice Sheet_27
+  - first:
+      213: 4963489107715549413
+    second: Andrew Slice Sheet_28
+  - first:
+      213: 2339752404484638255
+    second: Andrew Slice Sheet_29
+  - first:
+      213: 7158463745101822226
+    second: Andrew Slice Sheet_30
+  - first:
+      213: 8718174875582154385
+    second: Andrew Slice Sheet_31
+  - first:
+      213: 8698658291205194207
+    second: Andrew Slice Sheet_32
+  - first:
+      213: -7207234503547612586
+    second: Andrew Slice Sheet_33
+  - first:
+      213: -5593240186691861359
+    second: Andrew Slice Sheet_34
+  - first:
+      213: -7231043083905068729
+    second: Andrew Slice Sheet_35
+  - first:
+      213: -7214536991633681385
+    second: Andrew Slice Sheet_36
+  - first:
+      213: -8508216375280639288
+    second: Andrew Slice Sheet_37
+  - first:
+      213: -1144330997342860328
+    second: Andrew Slice Sheet_38
+  - first:
+      213: 5262816652142433630
+    second: Andrew Slice Sheet_39
+  - first:
+      213: -3038465962497530121
+    second: Andrew Slice Sheet_40
+  - first:
+      213: -7034431061600241494
+    second: Andrew Slice Sheet_41
+  - first:
+      213: 864400874264990773
+    second: Andrew Slice Sheet_42
+  - first:
+      213: -4081140307866017233
+    second: Andrew Slice Sheet_43
+  - first:
+      213: 7221063730255532900
+    second: Andrew Slice Sheet_44
+  - first:
+      213: 5238894767095566779
+    second: Andrew Slice Sheet_45
+  - first:
+      213: -4390218346713143461
+    second: Andrew Slice Sheet_46
+  - first:
+      213: -8353236431105146843
+    second: Andrew Slice Sheet_47
+  - first:
+      213: -2234481105496639109
+    second: Andrew Slice Sheet_48
+  - first:
+      213: 8384288178016473781
+    second: Andrew Slice Sheet_49
+  - first:
+      213: -8160626569600239946
+    second: Andrew Slice Sheet_50
+  - first:
+      213: 6205847356712710076
+    second: Andrew Slice Sheet_51
+  - first:
+      213: 2639742751681793194
+    second: Andrew Slice Sheet_52
+  - first:
+      213: 2694616142164736624
+    second: Andrew Slice Sheet_53
+  - first:
+      213: -5793815681398892
+    second: Andrew Slice Sheet_54
+  - first:
+      213: 5374498037653695007
+    second: Andrew Slice Sheet_55
+  - first:
+      213: 2871838184298007408
+    second: Andrew Slice Sheet_56
+  - first:
+      213: 6870480568533791525
+    second: Andrew Slice Sheet_57
+  - first:
+      213: 5391644860720015069
+    second: Andrew Slice Sheet_58
+  - first:
+      213: -7530477436685714765
+    second: Andrew Slice Sheet_59
+  - first:
+      213: -2913009543539606020
+    second: Andrew Slice Sheet_60
+  - first:
+      213: -1179531879102192892
+    second: Andrew Slice Sheet_61
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 2500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Andrew Slice Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5400
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dde8225927132bf60800000000000000
+      internalID: 8048549852262600413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew Slice Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 5400
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f10b99a4adb31cb50800000000000000
+      internalID: 6611631536697094175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew Slice Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 5400
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b031ecf0fcbb36890800000000000000
+      internalID: -7465917259252362485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew Slice Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 5400
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efbb57d1ec6f2c9c0800000000000000
+      internalID: -3908290161486218242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew Slice Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 5400
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66fc02d9c02b3c320800000000000000
+      internalID: 2577099179031580518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew Slice Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4320
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4614f7f2d02f8ca30800000000000000
+      internalID: 4235901587987317092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew Slice Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 4320
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1bfcbb51dd8c9f10800000000000000
+      internalID: 2277851441869421340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew Slice Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 4320
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5f46bc60cd7c5f20800000000000000
+      internalID: 3412740883051073372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew Slice Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 4320
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d18689c15ec6c9ba0800000000000000
+      internalID: -6080865665573951459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew Slice Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 4320
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2db49e696a0e704a0800000000000000
+      internalID: -6627081320551330862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew Slice Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3240
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d852d60d5b79f8280800000000000000
+      internalID: -9038839119967607411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew Slice Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 3240
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9104dd1f34b703950800000000000000
+      internalID: 6426772200008531993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew Slice Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 3240
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8bc5d5c1647f07b0800000000000000
+      internalID: -5255854276838306930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew Slice Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 3240
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0320c2655bf31fb60800000000000000
+      internalID: 7778068079512912432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew Slice Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 3240
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb8c7292b96dbd890800000000000000
+      internalID: -7432110798146123588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew Slice Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a13debcc31a0b8140800000000000000
+      internalID: 4722879714383811354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew Slice Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b2e906b54f2d09b0800000000000000
+      internalID: -5112378025542294856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew Slice Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7619816f115504bf0800000000000000
+      internalID: -342180036048547481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew Slice Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 196ab77a1b6b9f8f0800000000000000
+      internalID: -506172608967104879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew Slice Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78ed30c055f5b86c0800000000000000
+      internalID: -4140110613558600057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew Slice Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 909664c9eb5cc1630800000000000000
+      internalID: 3899208799852325129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew Slice Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afc1723f7bce91d00800000000000000
+      internalID: 944045871713426682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew Slice Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73ed6c460e1d70c70800000000000000
+      internalID: 8937342747233672759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew Slice Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d2888cc8f91df810800000000000000
+      internalID: 1800623982392148689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew Slice Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1a83a899a008a560800000000000000
+      internalID: 7325105522328439322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew Slice Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6eed86bdb4b6c7300800000000000000
+      internalID: 251193652773707494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew Slice Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a31f903ebfb2c84c0800000000000000
+      internalID: -4284000784690319046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Andrew Slice Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdfd9285e056f7ab0800000000000000
+      internalID: -5008173148329615396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a72db145c1399674b9236ab1b1ced7c9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Andrew Slice Sheet_0: 8048549852262600413
+      Andrew Slice Sheet_1: 6611631536697094175
+      Andrew Slice Sheet_10: -9038839119967607411
+      Andrew Slice Sheet_11: 6426772200008531993
+      Andrew Slice Sheet_12: -5255854276838306930
+      Andrew Slice Sheet_13: 7778068079512912432
+      Andrew Slice Sheet_14: -7432110798146123588
+      Andrew Slice Sheet_15: 4722879714383811354
+      Andrew Slice Sheet_16: -5112378025542294856
+      Andrew Slice Sheet_17: -342180036048547481
+      Andrew Slice Sheet_18: -506172608967104879
+      Andrew Slice Sheet_19: -4140110613558600057
+      Andrew Slice Sheet_2: -7465917259252362485
+      Andrew Slice Sheet_20: 3899208799852325129
+      Andrew Slice Sheet_21: 944045871713426682
+      Andrew Slice Sheet_22: 8937342747233672759
+      Andrew Slice Sheet_23: 1800623982392148689
+      Andrew Slice Sheet_24: 7325105522328439322
+      Andrew Slice Sheet_25: 251193652773707494
+      Andrew Slice Sheet_26: -4284000784690319046
+      Andrew Slice Sheet_27: -5008173148329615396
+      Andrew Slice Sheet_3: -3908290161486218242
+      Andrew Slice Sheet_4: 2577099179031580518
+      Andrew Slice Sheet_5: 4235901587987317092
+      Andrew Slice Sheet_6: 2277851441869421340
+      Andrew Slice Sheet_7: 3412740883051073372
+      Andrew Slice Sheet_8: -6080865665573951459
+      Andrew Slice Sheet_9: -6627081320551330862
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

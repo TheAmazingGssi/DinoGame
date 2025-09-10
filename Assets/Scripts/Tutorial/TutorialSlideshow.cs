@@ -11,6 +11,9 @@ public class TutorialSlideshow : MonoBehaviour
     
     [Tooltip("Go Sign to enable at the end of the tutorial")]
     [SerializeField] private GameObject GoSign;
+    
+    [Tooltip("Go Sign to enable at the end of the tutorial")]
+    [SerializeField] private GameObject StartCollider;
 
     [Tooltip("Time each slide is visible (seconds)")]
     [SerializeField] private float slideDuration = 3f;
@@ -45,11 +48,14 @@ public class TutorialSlideshow : MonoBehaviour
         }
         
         // Enable Game Start
-        GameManager.Instance.InTutorial = false;
+        //GameManager.Instance.InTutorial = false;
         Destroy(TutorialEnemy);
         
         if (GoSign) 
             GoSign.SetActive(true);
+        
+        if (StartCollider) 
+            StartCollider.SetActive(true);
         
         Debug.Log("Tutorial finished");
     }

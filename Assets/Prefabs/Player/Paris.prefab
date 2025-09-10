@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9110106451632680406
 Transform:
   m_ObjectHideFlags: 0
@@ -80,7 +80,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 4, y: 0}
+  m_Offset: {x: 2, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -90,7 +90,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 1
-  m_Size: {x: 8, y: 2}
+  m_Size: {x: 4, y: 1.5}
   m_EdgeRadius: 0
 --- !u!1 &1676656750859993251
 GameObject:
@@ -109,7 +109,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4035943731119217964
 Transform:
   m_ObjectHideFlags: 0
@@ -172,7 +172,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -4, y: 0}
+  m_Offset: {x: -2, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -182,7 +182,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 1
-  m_Size: {x: 8, y: 2}
+  m_Size: {x: 4, y: 1.5}
   m_EdgeRadius: 0
 --- !u!1001 &1527894191500794345
 PrefabInstance:
@@ -452,7 +452,7 @@ MonoBehaviour:
   mainPlayerController: {fileID: 3078393491007480859}
   initialPoolSize: 12
   waveSpeed: 14
-  waveMaxDistance: 7.75
+  waveMaxDistance: 3.875
   wavesPerBurst: 8
   waveIntervalSeconds: 0.1
   customDirection: {x: 1, y: 0}
