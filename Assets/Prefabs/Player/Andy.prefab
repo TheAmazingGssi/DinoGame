@@ -128,6 +128,18 @@ PrefabInstance:
       propertyPath: characterType
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5088201830711460902, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.48607612
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088201830711460902, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_Color.g
+      value: 0.4764151
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088201830711460902, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5243410617948706567, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_Controller
       value: 
@@ -168,6 +180,10 @@ PrefabInstance:
       propertyPath: 'mySounds.Array.data[1]'
       value: 
       objectReference: {fileID: 11400000, guid: 55d4ef48a4249484ea9b8a9edb2d122f, type: 2}
+    - target: {fileID: 6570105882733174227, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.029
+      objectReference: {fileID: 0}
     - target: {fileID: 6604444698398839206, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0148
@@ -229,6 +245,10 @@ PrefabInstance:
       value: -0.092
       objectReference: {fileID: 0}
     - target: {fileID: 8022900876227695804, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271534115443307974, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}

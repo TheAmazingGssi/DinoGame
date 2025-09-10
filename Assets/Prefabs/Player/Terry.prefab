@@ -5001,6 +5001,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terry
       objectReference: {fileID: 0}
+    - target: {fileID: 5088201830711460902, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6933962
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088201830711460902, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088201830711460902, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.7238104
+      objectReference: {fileID: 0}
     - target: {fileID: 5243410617948706567, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_Controller
       value: 

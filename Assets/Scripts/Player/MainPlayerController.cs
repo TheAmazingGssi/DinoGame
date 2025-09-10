@@ -36,6 +36,7 @@ public class MainPlayerController : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private GameObject crown;
+    [SerializeField] private GameObject BlockBubble;
 
     [Header("Attack Variables")]
     [SerializeField] private float enableDuration = 0.2f;
@@ -195,8 +196,7 @@ public class MainPlayerController : MonoBehaviour
                 rb.linearVelocity = Vector2.zero;
             }
         }
-
-        //todo: new block system
+        
         // New block handling
         if (blockHeld && !isBlocking && !isEmoting && !isFallen)
         {
@@ -205,6 +205,7 @@ public class MainPlayerController : MonoBehaviour
             {
                 isBlocking = true;
                 animController.SetBlocking(true);
+                BlockBubble.SetActive(true);
             }
         }
         else if (!blockHeld && isBlocking)
@@ -352,12 +353,12 @@ public class MainPlayerController : MonoBehaviour
             animator.SetTrigger("BlockStart");
     }
     
-    //todo: new block system
     public void ForceStopBlocking()
     {
         if (!isBlocking) return;
         isBlocking = false;
         animController.SetBlocking(false);
+        BlockBubble.SetActive(false);
     }
 
     public void Revive(InputAction.CallbackContext context)

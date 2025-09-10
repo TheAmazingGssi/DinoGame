@@ -300,6 +300,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5088201830711460902, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.2783019
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088201830711460902, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9959424
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088201830711460902, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5243410617948706567, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_Controller
       value: 
@@ -438,12 +450,11 @@ MonoBehaviour:
   wavePrefab: {fileID: 3630040854440478620, guid: e3c6643cf8f1ee14bbf293e1e152cdbb, type: 3}
   spawnPoint: {fileID: 4693974656601687607}
   mainPlayerController: {fileID: 3078393491007480859}
-  initialPoolSize: 8
-  waveSpeed: 12
-  waveMaxDistance: 8
-  wavesPerBurst: 4
-  waveIntervalSeconds: 0.15
-  useLocalScaleFacing: 1
+  initialPoolSize: 12
+  waveSpeed: 14
+  waveMaxDistance: 7.75
+  wavesPerBurst: 8
+  waveIntervalSeconds: 0.1
   customDirection: {x: 1, y: 0}
 --- !u!212 &6128998640225727643 stripped
 SpriteRenderer:
