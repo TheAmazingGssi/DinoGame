@@ -111,6 +111,8 @@ public class GameManager : MonoBehaviour
         StartCoroutine(VictoryMoment());
         PlayerEntity.SaveScore();
     }
+    
+    
     public void SetWaveSize(int amount)
     {
         enemiesOnStage += amount;
@@ -141,6 +143,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(5);
         StartVote();
     }
+    
     private void HandleVoteComplete(int winningChoice)
     {
         vote.ApplyEffects(winningChoice);

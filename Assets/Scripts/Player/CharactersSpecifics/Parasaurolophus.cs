@@ -28,18 +28,18 @@ public class Parasaurolophus : CharacterBase
         // Pick the correct side (uses the BoxCollider2D with MeleeDamage on that side)
         GameObject specialColliderGO = facingRight ? specialColliderGORight : specialColliderGOLeft;
         MeleeDamage specialMeleeDamage = facingRight ? specialMeleeDamageRight : specialMeleeDamageLeft;
-        float newVfxStartPos = facingRight ? absVfxStartPositionXValue : absVfxStartPositionXValue * -1;
-        Vector3 vfxstartPos = animController.SpecialVfxObject.transform.position;
-        animController.SpecialVfxObject.transform.position = new Vector3(newVfxStartPos, vfxstartPos.y, vfxstartPos.z);
+        
+        //float newVfxStartPos = facingRight ? absVfxStartPositionXValue : absVfxStartPositionXValue * -1;
+        //Vector3 vfxstartPos = animController.SpecialVfxObject.gameObject.transform.position;
+        //animController.SpecialVfxObject.transform.position = new Vector3(newVfxStartPos, vfxstartPos.y, vfxstartPos.z);
         
         _mainPlayerController.ToggleIsAttacking();
         specialColliderGO.SetActive(true);
-
-        // IMPORTANT: use the SPECIAL COLLIDER as the attackSource so knockback uses its forward direction
+        
         specialMeleeDamage?.PrepareDamage(
             stats.specialAttackDamage,
-            true,                                    // mark as special so TryHitEnemy applies knockback
-            specialColliderGO.transform,             // <-- was _mainPlayerController.transform
+            true,                                   
+            specialColliderGO.transform,             
             _mainPlayerController
         );
 
@@ -48,12 +48,11 @@ public class Parasaurolophus : CharacterBase
         // Apply damage using the active BoxCollider2D (MeleeDamage will handle per-target and knockback via attackSource)
         specialMeleeDamage?.ApplyDamage(
             stats.specialAttackDamage,
-            false,                                   // isSpecialAttack flag already set in PrepareDamage
+            false,                         // isSpecialAttack flag already set in PrepareDamage
             specialColliderGO.transform,             // keep source aligned with the active collider
             _mainPlayerController
         );
-
-        // (Removed the global OverlapCircleAll knockback pass — redundant and direction-agnostic)
+        
 
         yield return new WaitForSeconds(specialVfxActivationTime);
         animController.TriggerSpecialVfx();

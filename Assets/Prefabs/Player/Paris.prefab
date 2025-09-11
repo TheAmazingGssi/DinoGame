@@ -318,7 +318,7 @@ PrefabInstance:
       objectReference: {fileID: 22100000, guid: b9fe4ba294b160f4884e3d9bececbcbf, type: 2}
     - target: {fileID: 6057467636057874398, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6304750159750022103, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: 'mySounds.Array.data[1]'
