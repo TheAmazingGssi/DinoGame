@@ -6,7 +6,8 @@ using UnityEngine.Events;
 public class Parasaurolophus : CharacterBase
 {
     [SerializeField] private float specialVfxActivationTime = 0.04f; 
-    [SerializeField] private float restOfSpecialActivationTime = 0.46f; 
+    [SerializeField] private float restOfSpecialActivationTime = 0.46f;
+    [SerializeField] private float absVfxStartPositionXValue = 0.15f;
     
     public MeleeDamage SpecialMeleeDamageRight => specialMeleeDamageRight;
     public MeleeDamage SpecialMeleeDamageLeft => specialMeleeDamageLeft;
@@ -27,7 +28,10 @@ public class Parasaurolophus : CharacterBase
         // Pick the correct side (uses the BoxCollider2D with MeleeDamage on that side)
         GameObject specialColliderGO = facingRight ? specialColliderGORight : specialColliderGOLeft;
         MeleeDamage specialMeleeDamage = facingRight ? specialMeleeDamageRight : specialMeleeDamageLeft;
-
+        float newVfxStartPos = facingRight ? absVfxStartPositionXValue : absVfxStartPositionXValue * -1;
+        Vector3 vfxstartPos = animController.SpecialVfxObject.transform.position;
+        animController.SpecialVfxObject.transform.position = new Vector3(newVfxStartPos, vfxstartPos.y, vfxstartPos.z);
+        
         _mainPlayerController.ToggleIsAttacking();
         specialColliderGO.SetActive(true);
 

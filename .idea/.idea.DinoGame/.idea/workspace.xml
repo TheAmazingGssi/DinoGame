@@ -6,22 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="ad023baf-c7c7-445b-a367-968c8e24e03b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DinoGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DinoGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animators/Vfx/ParisSpecialSingleWaveVfxAnimCtrl.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animators/Vfx/ParisSpecialSingleWaveVfxAnimCtrl.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Controller Buttons.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Controller Buttons.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/voting screen ui updated.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/voting screen ui updated.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/paris vfx sprite sheet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/paris vfx sprite sheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Special_Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Dinos/Spencer/SpriteSheets/Spencer_Special_Sheet.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/paris vfx sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/paris vfx sprite.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/paris-vfx-ezgif.com-gif-to-sprite-converter (1).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/VFX/paris-vfx-ezgif.com-gif-to-sprite-converter (1).png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/inbvjhmage.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/inbvjhmage.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/EnemieData/EnemiesData/TutorialEnemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/EnemieData/EnemiesData/TutorialEnemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Paris.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Paris.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Final Game Scenes/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Final Game Scenes/Level 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Spawner/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Spawner/EnemySpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc and Utility/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc and Utility/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Parasaurolophus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Parasaurolophus.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialSlideshow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialSlideshow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250910T034440.json.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250910T034440.json.bak.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250910T034441.json.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250910T034441.json.bak.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250910T034528.json.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250910T034528.json.bak.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Sortify_Objects.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Sortify_Objects.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250910T184154.json.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250910T184154.json.bak.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250910T184230.json.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250910T184230.json.bak.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250910T184303.json.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250910T184303.json.bak.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +88,7 @@
     "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Testing",
+    "git-widget-placeholder": "Peer",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -177,7 +178,7 @@
       <workItem from="1757260646925" duration="10300000" />
       <workItem from="1757456584118" duration="5000" />
       <workItem from="1757456603134" duration="5182000" />
-      <workItem from="1757515588726" duration="149000" />
+      <workItem from="1757515588726" duration="3705000" />
     </task>
     <servers />
   </component>
