@@ -1,11 +1,23 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 <<<<<<<< Updated upstream:Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250913T014806.json.bak.meta
-guid: 3fa15c4bd77c07d46b267222988826af
+guid: 8c06bce416617e944a5c2745ae46da10
 ========
 guid: 475db7c56f6d729479ebc731b75654de
 >>>>>>>> Stashed changes:Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250912T204434.json.bak.meta
 DefaultImporter:
   externalObjects: {}
+=======
+<<<<<<<< Updated upstream:Assets/Art/Animations/Animations/Vfx/bloodVfxAnim.anim.meta
+guid: 80ccd1e0310171146aace3c6cb56e480
+NativeFormatImporter:
+========
+guid: 475db7c56f6d729479ebc731b75654de
+DefaultImporter:
+>>>>>>>> Stashed changes:Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250912T204434.json.bak.meta
+  externalObjects: {}
+  mainObjectFileID: 7400000
+>>>>>>> Stashed changes
   userData: 
   assetBundleName: 
   assetBundleVariant: 
