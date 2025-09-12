@@ -6,69 +6,70 @@ public class Therizinosaurus : CharacterBase
 {
     [SerializeField] private int specialHitCount = 4; 
     [SerializeField] private float specialHitInterval = 0.15f; 
-    [SerializeField] private float knockbackMultiplier = 0.3f; // small knockback strength multiplier
+    [SerializeField] private float knockbackMultiplier = 50f; // small knockback strength multiplier
 
     public override void Initialize(CharacterStats.CharacterData characterStats, AnimationController animController, GameObject rightCollider, GameObject leftCollider, bool isFacingRight, float enable, float disable)
     {
         base.Initialize(characterStats, animController, rightCollider, leftCollider, isFacingRight, enable, disable);
     }
     
-    public override IEnumerator PerformSpecial(UnityAction<float> onSpecial)
+public override IEnumerator PerformSpecial(UnityAction<float> onSpecial)
+{
+    if (rightMeleeColliderGO == null || leftMeleeColliderGO == null) yield break;
+
+    GameObject activeColliderGO = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
+    MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
+    var activeCollider = activeColliderGO.GetComponent<Collider2D>();
+
+    // Ensure collider GO starts disabled (no lingering stays)
+    if (activeColliderGO.activeSelf) activeColliderGO.SetActive(false);
+
+    // --- VFX ---
+    animController.SpecialVfxAnimator.transform.position = activeColliderGO.transform.position + new Vector3(facingRight ? 1.1f : -1.1f, 0f, 0f);
+    animController.specialVfxRenderer.flipX = !facingRight;
+    animController.SpecialVfxAnimator.SetTrigger("Play");
+    
+    for (int i = 0; i < specialHitCount; i++)
     {
-        if (rightMeleeColliderGO == null || leftMeleeColliderGO == null) yield break;
+        activeMeleeDamage.ClearHitList();
+
+        // --- Damage setup for this hit ---
+        float perHitDamage = stats.specialAttackDamage / specialHitCount;
+        activeMeleeDamage?.PrepareDamage(
+            perHitDamage,
+            false,
+            _mainPlayerController.transform,
+            _mainPlayerController
+        );
         
-        GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
-        MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
+        // Enable for exactly one physics step so we get exactly one OnTriggerEnter batch.
+        activeColliderGO.SetActive(true);
+        Physics2D.SyncTransforms();
+        yield return new WaitForFixedUpdate();   // <-- only ONE fixed step
+        activeColliderGO.SetActive(false);       // close window immediately
 
-        activeCollider.SetActive(true);
-
-        for (int i = 0; i < specialHitCount; i++)
+        // --- Apply small knockback AFTER closing the window (prevents re-enter) ---
+        var circle = GetComponentInChildren<CircleCollider2D>();
+        if (circle != null)
         {
-            activeMeleeDamage.ClearHitList();
-            
-            // --- Play VFX for each hit ---
-            animController.SpecialVfxAnimator.gameObject.transform.position = activeCollider.transform.position;
-            animController.specialVfxRenderer.flipX = !facingRight;
-            animController.SpecialVfxAnimator.SetTrigger("Play");
-
-            // --- Damage ---
-            float perHitDamage = stats.specialAttackDamage / specialHitCount;
-            activeMeleeDamage?.PrepareDamage(
-                perHitDamage,
-                false, 
-                _mainPlayerController.transform,
-                _mainPlayerController
-            );
-
-            activeMeleeDamage?.ApplyDamage(
-                perHitDamage,
-                false, 
-                transform,
-                _mainPlayerController
-            );
-
-            // --- Small knockback on each hit ---
-            Collider2D[] hits = Physics2D.OverlapCircleAll(
-                transform.position,
-                GetComponentInChildren<CircleCollider2D>().radius,
-                LayerMask.GetMask("Enemy")
-            );
-
-            foreach (var hit in hits)
+            float worldRadius = circle.radius * Mathf.Max(transform.lossyScale.x, transform.lossyScale.y);
+            var hits = Physics2D.OverlapCircleAll(circle.bounds.center, worldRadius, LayerMask.GetMask("Enemy"));
+            foreach (var h in hits)
             {
-                if (hit.CompareTag("Enemy"))
+                if (h.CompareTag("Enemy"))
                 {
                     KnockbackHelper.ApplyKnockback(
-                        hit.transform,
+                        h.transform,
                         transform,
                         KnockbackHelper.GetKnockbackForceFromDamage(stats.specialAttackDamage * knockbackMultiplier, false)
                     );
                 }
             }
-
-            yield return new WaitForSeconds(specialHitInterval);
         }
 
-        activeCollider.SetActive(false);
+        // spacing between multi-hits
+        yield return new WaitForSeconds(specialHitInterval);
     }
+}
+
 }

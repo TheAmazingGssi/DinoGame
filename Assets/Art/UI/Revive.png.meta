@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: cd7d9f30b76498648a58bb52323c4e9a
+guid: 2063867f582135a4face342154e3c92f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4544242542251534003
-    second: inbvjhmage_0
+      213: -8125774475627718875
+    second: Revive_0
+  - first:
+      213: 3907637768866723211
+    second: Revive_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,23 +142,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: inbvjhmage_0
+      name: Revive_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 776
-        height: 632
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d4911e7fb7b9fe0c0800000000000000
-      internalID: -4544242542251534003
+      spriteID: 78fa47a1c81a60949952179d8a7a6fc9
+      internalID: -1101950494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Revive_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1d5cc633ca0a2e4790e4dd53031eabe
+      internalID: -1442156740
       vertices: []
       indices: 
       edges: []
@@ -164,7 +189,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ee813c3e5744ec647ab6d89738872b33
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +199,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      inbvjhmage_0: -4544242542251534003
+      Revive_0: -1101950494
+      Revive_1: -1442156740
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

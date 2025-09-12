@@ -37,6 +37,7 @@ public class MainPlayerController : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private GameObject crown;
     [SerializeField] private GameObject BlockBubble;
+    [SerializeField] private ReviveMiniGame reviveMiniGame;
 
     [Header("Attack Variables")]
     [SerializeField] private float enableDuration = 0.2f;
@@ -54,6 +55,7 @@ public class MainPlayerController : MonoBehaviour
     public bool isBlocking { get; private set; } = false;
     public bool blockHeld { get; private set; } = false;
     
+    private MainPlayerController currentReviveTarget;
     private float lastAttackTime;
     private float lastSpecialTime;
     private bool canAttack = true;
@@ -108,6 +110,7 @@ public class MainPlayerController : MonoBehaviour
         canSpecial = false;
         rb.linearVelocity = Vector2.zero;
         animController.SetDowned(true);
+        reviveMiniGame?.ShowOnDowned();
         AddScore(-15);
         fallenPlayers++;
         Debug.Log($"{stats.characterName} has fallen, score: {score}");
@@ -117,18 +120,25 @@ public class MainPlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         animController.SetDowned(false);
+        reviveMiniGame?.HideOnRevived();
     }
 
     private void Awake()
     {
-        if (rb == null) rb = GetComponent<Rigidbody2D>();
+        if (rb == null) 
+            rb = GetComponent<Rigidbody2D>();
         
         rb.gravityScale = 0f;
         rb.freezeRotation = true;
 
-        if (spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer == null)
+            spriteRenderer = GetComponent<SpriteRenderer>();
         
-        if (playerTransform != null) playerTransform.PlayerTransform = transform;
+        if (playerTransform != null) 
+            playerTransform.PlayerTransform = transform;
+        
+        if (!reviveMiniGame) 
+            reviveMiniGame = GetComponent<ReviveMiniGame>();
         
         rightMeleeDamage = rightMeleeColliderGO != null ? rightMeleeColliderGO.GetComponent<MeleeDamage>() : null;
         leftMeleeDamage = leftMeleeColliderGO != null ? leftMeleeColliderGO.GetComponent<MeleeDamage>() : null;
@@ -143,7 +153,8 @@ public class MainPlayerController : MonoBehaviour
             combatManager.OnDeath += (_) => EnterFallenState();
             Debug.Log($"Loaded stats for {stats.characterName}");
         }
-        else Debug.LogError("CharacterStats not assigned in Inspector!");
+        else 
+            Debug.LogError("CharacterStats not assigned in Inspector!");
 
         switch (characterType)
         {
@@ -167,7 +178,6 @@ public class MainPlayerController : MonoBehaviour
         activePlayers++;
 
         combatManager.OnDeath += PlayDeathSound;
-        GameManager.Instance.playerIdCounter++;
 
         crown.gameObject.SetActive(false);
     }
@@ -184,7 +194,6 @@ public class MainPlayerController : MonoBehaviour
         {
             combatManager.RegenerateStamina(Time.deltaTime);
             
-            //todo: new block system
             combatManager.RegenerateBlockStamina(Time.deltaTime, isBlocking);
 
             animController.SetMoveSpeed(moveInput.magnitude);
@@ -361,7 +370,7 @@ public class MainPlayerController : MonoBehaviour
         BlockBubble.SetActive(false);
     }
 
-    public void Revive(InputAction.CallbackContext context)
+    /*public void Revive(InputAction.CallbackContext context)
     {
         if (context.performed && !isFallen)
         {
@@ -373,8 +382,38 @@ public class MainPlayerController : MonoBehaviour
                 prompt.StartRevive(this, target);
             }
         }
+    }*///old revive system
+    
+    public void Revive(UnityEngine.InputSystem.InputAction.CallbackContext context)
+    {
+        // Ignore if I'm the fallen one or frozen, etc.
+        if (isFallen) return;
+
+        if (context.started)
+        {
+            // Find & cache the target at the start of the hold
+            var fallen = FindNearestFallenPlayer();
+            if (fallen == null) return;
+            currentReviveTarget = fallen;
+
+            var mini = fallen.GetComponent<ReviveMiniGame>();
+            if (!mini) mini = fallen.gameObject.AddComponent<ReviveMiniGame>(); // safety
+
+            if (!mini.CanBegin(this, reviveRange)) return;
+            mini.BeginHold(this);
+        }
+        else if (context.canceled)
+        {
+            if (currentReviveTarget)
+            {
+                var mini = currentReviveTarget.GetComponent<ReviveMiniGame>();
+                mini?.StopHold(this);
+                currentReviveTarget = null;
+            }
+        }
     }
 
+    
     public void Emote(InputAction.CallbackContext context)
     {
         bool previousInput = emoteHeld;

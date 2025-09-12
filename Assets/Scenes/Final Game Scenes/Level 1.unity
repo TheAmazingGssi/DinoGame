@@ -542,7 +542,7 @@ PrefabInstance:
     - target: {fileID: 1262895469115704306, guid: 0847ae928afd57f4d8a49340a5b29850, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1974954986932873504, guid: b6f6edf812a63ae44b4eaf903f847a47, type: 3}
+      objectReference: {fileID: -835097106603639967, guid: 01ab5fe1403ff5d40b83bb196fd73a09, type: 3}
     - target: {fileID: 5894709900583030183, guid: 0847ae928afd57f4d8a49340a5b29850, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -642,7 +642,7 @@ PrefabInstance:
     - target: {fileID: 8100258096075852806, guid: 0847ae928afd57f4d8a49340a5b29850, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -7234908010682543847, guid: b6f6edf812a63ae44b4eaf903f847a47, type: 3}
+      objectReference: {fileID: -4938589710584608289, guid: 01ab5fe1403ff5d40b83bb196fd73a09, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -835,7 +835,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 311683112432371315, guid: b6f6edf812a63ae44b4eaf903f847a47, type: 3}
+  m_Sprite: {fileID: -5935277814114767376, guid: 01ab5fe1403ff5d40b83bb196fd73a09, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1159,7 +1159,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6990346835516130897, guid: b6f6edf812a63ae44b4eaf903f847a47, type: 3}
+  m_Sprite: {fileID: 1616470531241209530, guid: 01ab5fe1403ff5d40b83bb196fd73a09, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1506,7 +1506,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -223304485193896496, guid: b6f6edf812a63ae44b4eaf903f847a47, type: 3}
+  m_Sprite: {fileID: 8038301063119725403, guid: 01ab5fe1403ff5d40b83bb196fd73a09, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1780,7 +1780,6 @@ MonoBehaviour:
   icetroidSpawner: {fileID: 0}
   <SpawnerManager>k__BackingField: {fileID: 1196741510}
   FinaleLevel: 3
-  playerIdCounter: 0
   waveCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -1811,6 +1810,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1262895469115704306, guid: 0847ae928afd57f4d8a49340a5b29850, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3098708848113998425, guid: 01ab5fe1403ff5d40b83bb196fd73a09, type: 3}
     - target: {fileID: 5894709900583030183, guid: 0847ae928afd57f4d8a49340a5b29850, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2902,7 +2905,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4469802729113456441, guid: b6f6edf812a63ae44b4eaf903f847a47, type: 3}
+  m_Sprite: {fileID: -1906566136871777211, guid: 01ab5fe1403ff5d40b83bb196fd73a09, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3080,7 +3083,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5250464640956153067, guid: b6f6edf812a63ae44b4eaf903f847a47, type: 3}
+  m_Sprite: {fileID: -6682144138200721733, guid: 01ab5fe1403ff5d40b83bb196fd73a09, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

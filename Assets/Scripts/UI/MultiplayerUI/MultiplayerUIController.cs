@@ -104,7 +104,4 @@ public class MultiplayerUIController : MonoBehaviour
     {
         yield return null;
     }
-
-
-
 }

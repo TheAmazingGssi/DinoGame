@@ -4,12 +4,6 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "Level 1TESTING"
-        },
-        {
-            "colors": [],
-            "styles": [],
-            "showComponents": [],
             "sceneName": "Main Menu"
         },
         {
@@ -17,6 +11,12 @@
             "styles": [],
             "showComponents": [],
             "sceneName": "Level 3"
+        },
+        {
+            "colors": [],
+            "styles": [],
+            "showComponents": [],
+            "sceneName": "Level 1TESTING"
         },
         {
             "colors": [],

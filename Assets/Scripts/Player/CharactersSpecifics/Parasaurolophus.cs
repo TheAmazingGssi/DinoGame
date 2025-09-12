@@ -7,7 +7,7 @@ public class Parasaurolophus : CharacterBase
 {
     [SerializeField] private float specialVfxActivationTime = 0.04f; 
     [SerializeField] private float restOfSpecialActivationTime = 0.46f;
-    [SerializeField] private float absVfxStartPositionXValue = 0.15f;
+    //[SerializeField] private float absVfxStartPositionXValue = 0.15f;
     
     public MeleeDamage SpecialMeleeDamageRight => specialMeleeDamageRight;
     public MeleeDamage SpecialMeleeDamageLeft => specialMeleeDamageLeft;

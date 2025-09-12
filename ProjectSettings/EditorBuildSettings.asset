@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Final Game Scenes/Level 3.unity
     guid: 336242c84b48dc64faa2b3bbb23ecd6e
   m_configObjects:
-    com.unity.input.settings: {fileID: 11400000, guid: 059b62ac779f2cf49bff27346bc88f52, type: 2}
+    com.unity.input.settings: {fileID: 11400000, guid: e33a4b7a73de99f47a50cef1f5cae0b7, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -218,7 +218,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2242870450885965078, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2242870450885965078, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -316,6 +316,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 22100000, guid: b9fe4ba294b160f4884e3d9bececbcbf, type: 2}
+    - target: {fileID: 5630104829600308903, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.9000015
+      objectReference: {fileID: 0}
     - target: {fileID: 6057467636057874398, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -360,6 +364,10 @@ PrefabInstance:
       propertyPath: normalAttackVfxRenderer
       value: 
       objectReference: {fileID: 6128998640225727643}
+    - target: {fileID: 7243540068653557967, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: requiredPresses
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7268481246512268016, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_Controller
       value: 

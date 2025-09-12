@@ -1,109 +1,147 @@
-//- complex revive prompt system
-// using UnityEngine;
-// using System.Collections;
-//
-// public class RevivePrompt : MonoBehaviour
-// {
-//     [SerializeField] private float pressWindow = 0.5f;
-//     [SerializeField] private float revivePromptDuration = 4f;
-//
-//     private MainPlayerController reviver;
-//     private MainPlayerController target;
-//     private int pressesRequired = 4;
-//     private int currentPresses = 0;
-//     private bool isActive = false;
-//     private float promptStartTime;
-//
-//     private AnimationController reviverAnim;
-//
-//     private void Awake()
-//     {
-//         // Do nothing in Awake; safety check moved to StartRevive
-//     }
-//
-//     public void StartRevive(MainPlayerController reviverPlayer, MainPlayerController targetPlayer)
-//     {
-//         reviver = reviverPlayer;
-//         target = targetPlayer;
-//         promptStartTime = Time.time;
-//         currentPresses = 0;
-//         isActive = true;
-//
-//         reviverAnim = reviver.GetComponent<AnimationController>();
-//         if (reviverAnim == null)
-//         {
-//             Debug.LogError("Reviver missing AnimationController!");
-//             isActive = false;
-//             return;
-//         }
-//
-//         reviverAnim.TriggerRevive();
-//         StartCoroutine(ReviveCoroutine());
-//     }
-//
-//     private void Update()
-//     {
-//         if (!isActive) return;
-//
-//         if (Input.GetButtonDown("Revive") && (Time.time - promptStartTime <= revivePromptDuration))
-//         {
-//             currentPresses++;
-//
-//             if (currentPresses >= pressesRequired)
-//             {
-//                 CompleteRevive();
-//             }
-//         }
-//     }
-//
-//     private IEnumerator ReviveCoroutine()
-//     {
-//         yield return new WaitForSeconds(revivePromptDuration);
-//
-//         if (isActive && currentPresses < pressesRequired)
-//         {
-//             FailRevive();
-//         }
-//     }
-//
-//     private void CompleteRevive()
-//     {
-//         isActive = false;
-//
-//         // Call revive logic on target
-//         if (target != null)
-//         {
-//             var combatManager = target.GetComponent<PlayerCombatManager>();
-//             if (combatManager != null)
-//                 combatManager.Revive(0.5f);
-//
-//             target.Revived(); // Assuming this resets animations/states
-//         }
-//
-//         if (reviver != null)
-//         {
-//             reviver.AddScore(10);
-//         }
-//
-//         Destroy(this);
-//     }
-//
-//     private void FailRevive()
-//     {
-//         isActive = false;
-//         Destroy(this);
-//     }
-// } 
-
 using UnityEngine;
 
-public class RevivePrompt : MonoBehaviour
+[RequireComponent(typeof(ReviveUI))]
+public class ReviveMiniGame : MonoBehaviour
 {
-    public void StartRevive(MainPlayerController reviver, MainPlayerController target)
+    [Header("Revive (Hold) Rules")]
+    [SerializeField] private float requiredHoldSeconds = 4f; // todo: modular hold time
+    [SerializeField] private float interactionRadius   = 2f; // distance to keep holding
+
+    [Header("On Release Behavior")]
+    [SerializeField] private bool  resetOnRelease = true;     // true = snap to 0 on release
+    [SerializeField] private float decayPerSecond = 0f;       // used only if resetOnRelease == false (0 = pause)
+
+    private ReviveUI ui;
+    private MainPlayerController target;   // this fallen player
+    private MainPlayerController reviver;  // who is reviving
+
+    private bool  sessionActive;           // an attempt is active
+    private bool  isHolding;               // current input state
+    private float heldSeconds;             // progress timer (0..requiredHoldSeconds)
+
+    public bool IsActive => sessionActive;
+
+    private void Awake()
     {
-        // Simulate revive process
-        Debug.Log($"{reviver.gameObject.name} is reviving {target.gameObject.name}");
-        target.Revived();
-        Destroy(this);
+        ui     = GetComponent<ReviveUI>();
+        target = GetComponent<MainPlayerController>();
+    }
+
+    private void LateUpdate()
+    {
+        // Keep UI visible while downed, hide only when revived
+        if (target != null && !target.IsFallen())
+        {
+            // Treat as success path for hiding purposes
+            if (sessionActive) End(true);
+            else ui.Hide();
+            return;
+        }
+
+        if (!sessionActive) return;
+
+        // Out-of-range cancels HOLD but keeps UI
+        if (reviver == null ||
+            Vector2.Distance(reviver.transform.position, target.transform.position) > interactionRadius)
+        {
+            StopHoldInternal();
+            return;
+        }
+
+        // Progress while holding
+        if (isHolding)
+        {
+            heldSeconds += Time.deltaTime;
+        }
+        else
+        {
+            if (resetOnRelease)
+            {
+                heldSeconds = 0f;
+            }
+            else if (decayPerSecond > 0f)
+            {
+                heldSeconds = Mathf.Max(0f, heldSeconds - decayPerSecond * Time.deltaTime);
+            }
+            // else: pause (no change)
+        }
+
+        // Clamp + UI percent
+        heldSeconds = Mathf.Clamp(heldSeconds, 0f, requiredHoldSeconds);
+        int percent = requiredHoldSeconds <= 0f
+            ? 100
+            : Mathf.RoundToInt((heldSeconds / requiredHoldSeconds) * 100f);
+        ui.SetPercent(percent);
+
+        // Success
+        if (percent >= 100)
+        {
+            target.Revived();
+            End(true);
+        }
+    }
+
+    //todo: revive-hold begin
+    public void BeginHold(MainPlayerController reviverPlayer)
+    {
+        if (!target || !target.IsFallen()) return;
+
+        // Start session if not active; otherwise just (re)enable hold
+        if (!sessionActive)
+        {
+            reviver      = reviverPlayer;
+            sessionActive = true;
+            heldSeconds   = 0f;
+            ui.Show();
+            ui.SetPercent(0);
+        }
+
+        // If a different reviver arrives, you can choose to transfer ownership:
+        if (reviver != reviverPlayer)
+            reviver = reviverPlayer;
+
+        isHolding = true;
+    }
+
+    //todo: revive-hold stop
+    public void StopHold(MainPlayerController who)
+    {
+        if (who == reviver)
+            StopHoldInternal();
+    }
+
+    private void StopHoldInternal()
+    {
+        isHolding = false;
+        // Keep sessionActive true so the UI persists and we can resume if they hold again.
+        // Progress reset/decay handled in LateUpdate based on flags.
+    }
+
+    private void End(bool success)
+    {
+        sessionActive = false;
+        isHolding     = false;
+        heldSeconds   = 0f;
+        reviver       = null;
+
+        if (success)
+        {
+            ui.Hide();          // hide only on successful revive / no longer fallen
+        }
+        else
+        {
+            ui.SetPercent(0);   // keep visible at 0%
+        }
+    }
+
+    // Optional helpers if you want to show/hide on downed/revived externally
+    public void ShowOnDowned() { ui.Show(); ui.SetPercent(0); }
+    public void HideOnRevived() { ui.Hide(); }
+    
+    public bool CanBegin(MainPlayerController reviverPlayer, float radiusOverride)
+    {
+        if (!target || !target.IsFallen()) return false;
+        float r = radiusOverride > 0f ? radiusOverride : interactionRadius;
+        return Vector2.Distance(reviverPlayer.transform.position, target.transform.position) <= r;
     }
 }
