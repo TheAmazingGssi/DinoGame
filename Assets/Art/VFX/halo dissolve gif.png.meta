@@ -1,0 +1,358 @@
+fileFormatVersion: 2
+guid: 9556f9c2f8c2ef84ab82d6d5e6884ad9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3094666542276607685
+    second: halo dissolve gif_0
+  - first:
+      213: 2194552556515625020
+    second: halo dissolve gif_1
+  - first:
+      213: 2875296590443941287
+    second: halo dissolve gif_2
+  - first:
+      213: 1021442459324279973
+    second: halo dissolve gif_3
+  - first:
+      213: -3783219236381925707
+    second: halo dissolve gif_4
+  - first:
+      213: -92236698967351998
+    second: halo dissolve gif_5
+  - first:
+      213: 1888561767763784468
+    second: halo dissolve gif_6
+  - first:
+      213: 7118999870504614872
+    second: halo dissolve gif_7
+  - first:
+      213: -4507211495662497749
+    second: halo dissolve gif_8
+  - first:
+      213: 6954543011873924742
+    second: halo dissolve gif_9
+  - first:
+      213: -4955927485039124766
+    second: halo dissolve gif_10
+  - first:
+      213: -7502357789406783526
+    second: halo dissolve gif_11
+  - first:
+      213: -9161015228050717302
+    second: halo dissolve gif_12
+  - first:
+      213: 2154352197385507112
+    second: halo dissolve gif_13
+  - first:
+      213: 8412149097310515138
+    second: halo dissolve gif_14
+  - first:
+      213: 5331720569163462837
+    second: halo dissolve gif_15
+  - first:
+      213: 5763157982417241810
+    second: halo dissolve gif_16
+  - first:
+      213: 1157325801935207742
+    second: halo dissolve gif_17
+  - first:
+      213: 1805724649936139997
+    second: halo dissolve gif_18
+  - first:
+      213: -3586107759020194110
+    second: halo dissolve gif_19
+  - first:
+      213: 3555483164389678110
+    second: halo dissolve gif_20
+  - first:
+      213: 6656024631455567490
+    second: halo dissolve gif_21
+  - first:
+      213: -3336481466206726749
+    second: halo dissolve gif_22
+  - first:
+      213: 2104130302933914952
+    second: halo dissolve gif_23
+  - first:
+      213: 1813364120074817171
+    second: halo dissolve gif_24
+  - first:
+      213: 7393921560295846487
+    second: halo dissolve gif_25
+  - first:
+      213: -7889903341891205121
+    second: halo dissolve gif_26
+  - first:
+      213: -8873128977269095646
+    second: halo dissolve gif_27
+  - first:
+      213: -1055037557094910100
+    second: halo dissolve gif_28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1000
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: halo dissolve gif_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a31b58f6c6945942bb9362398867eb9
+      internalID: -335496977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: halo dissolve gif_1
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 523f9c2a5a2479d469dd195e9eb21711
+      internalID: -1975492589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: halo dissolve gif_2
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b188d451b35a3804ea69b83cca397e34
+      internalID: -516275362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: halo dissolve gif_3
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af9dfdbb24ca37146ac6d7dce826a3e0
+      internalID: -1264230896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: halo dissolve gif_4
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4464cbc15e93d0f43885f5f7c57c6efd
+      internalID: -615874406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a9dd932ac0c34294c93d5d486a83f581
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      halo dissolve gif_0: -335496977
+      halo dissolve gif_1: -1975492589
+      halo dissolve gif_2: -516275362
+      halo dissolve gif_3: -1264230896
+      halo dissolve gif_4: -615874406
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

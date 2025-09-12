@@ -93,6 +93,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7022572441651464058, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: healthItemDropChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7022572441651464058, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: 'attacks.Array.data[0]'
       value: 
       objectReference: {fileID: -2744939329610303208}
@@ -132,7 +136,6 @@ MonoBehaviour:
   manager: {fileID: 6676866525376652572}
   attackCooldown: 5
   soundEffect: {fileID: 0}
-  animation: {fileID: 7400000, guid: 72343cb148c575c40927813267c1ace9, type: 2}
   damageDelay: 0.2
 --- !u!114 &6676866525376652572 stripped
 MonoBehaviour:

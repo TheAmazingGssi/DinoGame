@@ -7,6 +7,7 @@ public class HealthItem : MonoBehaviour
     [SerializeField] private float hpPercent = 20f;
 
     private PlayerCombatManager combatManager;
+    private AnimationController animController;
     private void OnTriggerEnter2D(Collider2D collision)
     {
       //  Debug.Log("collision in hp");
@@ -15,6 +16,8 @@ public class HealthItem : MonoBehaviour
             Debug.Log("collision in hp is player");
 
             combatManager = collision.GetComponentInParent<PlayerCombatManager>();
+            animController = collision.GetComponentInParent<AnimationController>();
+            
             
             if (combatManager == null)
             {
@@ -27,6 +30,7 @@ public class HealthItem : MonoBehaviour
                 Debug.Log("collision in hp and combat manager found");
 
                 combatManager.RestoreHealthByPercent(hpPercent);
+                animController?.HealBurst();
                 Destroy(gameObject);
             }
         }

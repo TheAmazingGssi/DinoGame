@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -10,10 +11,12 @@ public class AnimationController : MonoBehaviour
     [FormerlySerializedAs("animator")] public Animator mainAnimator;
     public GameObject SpecialVfxObject;
     public Animator SpecialVfxAnimator;
+    public Animator haloVfxAnimator;
     public SpriteRenderer specialVfxRenderer;
     public Animator normalAttackVfxAnimator;
     public SpriteRenderer normalAttackVfxRenderer;
     public ParticleSystem terryParticleSystem;
+    public ParticleSystem healParticleSystem;
     public RoarWaveBurstSpawner parisRoarWaveSpawner;
     
     private bool vfxPlaying = false;
@@ -96,11 +99,42 @@ public class AnimationController : MonoBehaviour
     {
         vfxPlaying = false; 
     }
+    
+    public void StartHealVfx()
+    {
+        if (!healParticleSystem.isPlaying)
+            healParticleSystem.Play();
+    }
+    
+    public void StopHealVfx()
+    {
+        if (healParticleSystem.isPlaying)
+            healParticleSystem.Stop();
+    }
+    
+    public void HealBurst()
+    {
+        if (!healParticleSystem.isPlaying)
+            StartCoroutine(HealBurstCoroutine());
+    }
+    
+    private IEnumerator HealBurstCoroutine()
+    {
+        healParticleSystem.Play();
+        yield return new WaitForSeconds(1f);
+        healParticleSystem.Stop();
+    }
+    
 
 
     public void TriggerKnockback()
     {
         mainAnimator.SetTrigger("Knockback");
+    }
+    
+    public void TriggerHalo()
+    {
+        haloVfxAnimator.SetTrigger("Play");
     }
 
     public Animator GetAnimator()

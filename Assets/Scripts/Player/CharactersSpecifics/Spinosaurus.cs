@@ -15,18 +15,13 @@ public class Spinosaurus : CharacterBase
         base.Initialize(characterStats, animController, rightCollider, leftCollider, isFacingRight, enable, disable);
         _specialVfxTransform = animController.SpecialVfxObject.transform;
     }
-    
-    private void Update()
+
+    public override IEnumerator PerformSpecial(UnityAction<float> onSpecial)
     {
         _specialVfxPositionX = facingRight ? 0.515f : -0.515f;
         _specialVfxTransform.localRotation = facingRight ? Quaternion.Euler(0, 0, 0) : Quaternion.Euler(0, 180, 0);
         _specialVfxTransform.localPosition = new Vector3(_specialVfxPositionX, _specialVfxTransform.localPosition.y, _specialVfxTransform.localPosition.z);
-    }
-
-
-
-    public override IEnumerator PerformSpecial(UnityAction<float> onSpecial)
-    {
+        
         if (specialInProgress) yield break; 
         specialInProgress = true;
         specialVfxPerformed = false;
@@ -38,6 +33,8 @@ public class Spinosaurus : CharacterBase
         activeMeleeDamage?.PrepareDamage(stats.specialAttackDamage, false, _mainPlayerController.transform, _mainPlayerController);
         Vector3 startPos = new Vector3(facingRight ? 0.175f : -0.175f, activeCollider.transform.localPosition.y, activeCollider.transform.localPosition.z);
         Vector3 targetPos = new Vector3(facingRight ? 0.45f : -0.45f, startPos.y, startPos.z);
+        
+       
         Transform enemyTransform = null;
 
         yield return new WaitForSeconds(0.5f);
