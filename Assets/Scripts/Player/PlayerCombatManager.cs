@@ -9,8 +9,6 @@ public class PlayerCombatManager : CombatManager
     private MainPlayerController controller;
     private Animator animator;
     private AnimationController animController;
-    
-    //todo: new block system
     private float maxBlockStamina;
     private float currentBlockStamina;
     private float blockRegenRate;
@@ -48,10 +46,9 @@ public class PlayerCombatManager : CombatManager
         this.blockLocked = false;
     }
 
-    //todo: new block system
-    public bool HasBlockStamina() => currentBlockStamina > 0.01f && !blockLocked;
 
-//todo: new block system
+    public bool HasBlockStamina() => currentBlockStamina > 0.01f && !blockLocked;
+    
     private void LockBlockIfEmpty()
     {
         if (currentBlockStamina <= 0.001f)
@@ -60,8 +57,8 @@ public class PlayerCombatManager : CombatManager
             blockLocked = true; // guard broken
         }
     }
-
-//todo: new block system
+    
+    
     private bool TrySpendBlockForHit()
     {
         if (blockCostPerHit <= 0f) return true;
@@ -84,14 +81,12 @@ public class PlayerCombatManager : CombatManager
     public override void TakeDamage(DamageArgs args)
     {
         if (!MainPlayerController.CanBeDamaged) return;
-
-        //todo: new block system
+        
         if (controller != null && controller.isBlocking && HasBlockStamina())
         {
             if (TrySpendBlockForHit())
             {
                 // fully blocked: no damage/knockback
-                // (optional) animController?.TriggerBlocked();
                 return;
             }
             else
@@ -100,14 +95,14 @@ public class PlayerCombatManager : CombatManager
                 controller.ForceStopBlocking();
             }
         }
-
         
         args.Damage *= damageTakenMultiplier;
         base.TakeDamage(args);
 
         if (args.Knockback)
         {
-            KnockbackHelper.ApplyKnockback(
+            KnockbackHelper.ApplyKnockback
+            (
                 transform,
                 args.SourceGO != null ? args.SourceGO.transform : null,
                 KnockbackHelper.GetKnockbackForceFromDamage(args.Damage, true)
