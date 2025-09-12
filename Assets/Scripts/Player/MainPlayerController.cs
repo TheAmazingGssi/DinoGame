@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -78,6 +79,10 @@ public class MainPlayerController : MonoBehaviour
 
     public PlayerCombatManager CombatManager => combatManager;
     
+
+    public CharacterType CharacterType => characterType;
+
+    //todo: new block system
     public bool IsBlocking => isBlocking;
     public bool IsFacingRight => facingRight;
 
@@ -89,6 +94,7 @@ public class MainPlayerController : MonoBehaviour
     public void AddScore(int points)
     {
         score += points;
+        GameManager.Instance.HandleScoreChange();
     }
 
     public void Revived()
