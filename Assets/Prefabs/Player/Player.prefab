@@ -27,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 1555535975214574709}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.141, y: 0.009, z: 0}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3569670116312465802}
@@ -43,7 +43,7 @@ Animator:
   m_GameObject: {fileID: 1555535975214574709}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f4066d8f94fd7c647b42773d6156efe9, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4602844c8ef38d0468a29f879f0b3541, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -96,15 +96,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -812689949
-  m_SortingLayer: 2
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.638, y: 0.864}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -6036,12 +6036,12 @@ MonoBehaviour:
   animationData: {fileID: 11400000, guid: ddf3d8d22bba4984486206bd1e302a5d, type: 2}
   characterType: 0
   SpecialVfxObject: {fileID: 6511813499013299741}
-  animator: {fileID: 0}
+  animator: {fileID: 8958741867143242686}
   SpecialVfxAnimator: {fileID: 7268481246512268016}
   haloVfxAnimator: {fileID: 1302994046632428664}
-  bloodVfxAnimator: {fileID: 0}
+  bloodVfxAnimator: {fileID: 5831442847241522931}
   normalAttackVfxAnimator: {fileID: 5384368346122762586}
-  mainSpriteRenderer: {fileID: 0}
+  mainSpriteRenderer: {fileID: 9169242216697959115}
   specialVfxRenderer: {fileID: 1569487030482599382}
   normalAttackVfxRenderer: {fileID: 4628214316666465650}
   terryParticleSystem: {fileID: 0}

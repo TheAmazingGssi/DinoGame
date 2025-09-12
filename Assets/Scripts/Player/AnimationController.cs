@@ -20,8 +20,9 @@ public class AnimationController : MonoBehaviour
     public ParticleSystem terryParticleSystem;
     public ParticleSystem healParticleSystem;
     public RoarWaveBurstSpawner parisRoarWaveSpawner;
+    public float bloodVfxDuration = 0.1f;
     
-    private Color hurtPulseColor = Color.red;
+    private Color hurtPulseColor = new Color(0.5f, 0f, 0f, 1f);
     private bool vfxPlaying = false;
     
     private void Awake()
@@ -86,7 +87,7 @@ public class AnimationController : MonoBehaviour
     private IEnumerator PulseRedOnHurt()
     {
         mainSpriteRenderer.color = hurtPulseColor;
-        yield return new WaitForSeconds(0.15f);
+        yield return new WaitForSeconds(bloodVfxDuration);
         mainSpriteRenderer.color = Color.white;
     }
     
