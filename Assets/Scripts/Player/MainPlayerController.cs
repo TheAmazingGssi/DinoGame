@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public enum CharacterType
@@ -22,13 +23,14 @@ public class MainPlayerController : MonoBehaviour
     [SerializeField] private bool facingRight = true;
     [SerializeField] private SpriteRenderer spriteRenderer;
 
+
     [Header("Required Components")]
+    [SerializeField] public AnimationController animController;
     [SerializeField] private PlayerTransformData playerTransform;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private GameObject rightMeleeColliderGO;
     [SerializeField] private GameObject leftMeleeColliderGO;
     [SerializeField] private SoundPlayer soundPlayer;
-    [SerializeField] private AnimationController animController;
     [SerializeField] private PlayerCombatManager combatManager;
     [SerializeField] private KnockbackManager knockbackManager;
     [SerializeField] private MeleeDamage rightMeleeDamage;
@@ -100,6 +102,7 @@ public class MainPlayerController : MonoBehaviour
         combatManager.RestoreHealthByPercent(100f);
         StartCoroutine(ResetRevive());
         soundPlayer.PlaySound(3);
+        animController.TriggerHalo();
         Debug.Log($"{stats.characterName} revived");
     }
 
@@ -384,23 +387,30 @@ public class MainPlayerController : MonoBehaviour
         }
     }*///old revive system
     
-    public void Revive(UnityEngine.InputSystem.InputAction.CallbackContext context)
+    public void Revive(InputAction.CallbackContext context)
     {
         // Ignore if I'm the fallen one or frozen, etc.
-        if (isFallen) return;
+        if (isFallen) 
+            return;
 
         if (context.started)
         {
             // Find & cache the target at the start of the hold
             var fallen = FindNearestFallenPlayer();
-            if (fallen == null) return;
+            if (fallen == null)
+                return;
+            
             currentReviveTarget = fallen;
 
             var mini = fallen.GetComponent<ReviveMiniGame>();
-            if (!mini) mini = fallen.gameObject.AddComponent<ReviveMiniGame>(); // safety
+            if (!mini) 
+                mini = fallen.gameObject.AddComponent<ReviveMiniGame>(); // safety
 
-            if (!mini.CanBegin(this, reviveRange)) return;
+            if (!mini.CanBegin(this, reviveRange))
+                return;
+            
             mini.BeginHold(this);
+            fallen.animController.StartHealVfx();
         }
         else if (context.canceled)
         {
@@ -408,6 +418,7 @@ public class MainPlayerController : MonoBehaviour
             {
                 var mini = currentReviveTarget.GetComponent<ReviveMiniGame>();
                 mini?.StopHold(this);
+                currentReviveTarget?.animController.StopHealVfx();
                 currentReviveTarget = null;
             }
         }
