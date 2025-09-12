@@ -46,10 +46,9 @@ public class PlayerCombatManager : CombatManager
         this.blockLocked = false;
     }
 
-    //todo: new block system
-    public bool HasBlockStamina() => currentBlockStamina > 0.01f && !blockLocked;
 
-//todo: new block system
+    public bool HasBlockStamina() => currentBlockStamina > 0.01f && !blockLocked;
+    
     private void LockBlockIfEmpty()
     {
         if (currentBlockStamina <= 0.001f)
@@ -58,8 +57,8 @@ public class PlayerCombatManager : CombatManager
             blockLocked = true; // guard broken
         }
     }
-
-//todo: new block system
+    
+    
     private bool TrySpendBlockForHit()
     {
         if (blockCostPerHit <= 0f) return true;
@@ -82,14 +81,12 @@ public class PlayerCombatManager : CombatManager
     public override void TakeDamage(DamageArgs args)
     {
         if (!MainPlayerController.CanBeDamaged) return;
-
-        //todo: new block system
+        
         if (controller != null && controller.isBlocking && HasBlockStamina())
         {
             if (TrySpendBlockForHit())
             {
                 // fully blocked: no damage/knockback
-                // (optional) animController?.TriggerBlocked();
                 return;
             }
             else
