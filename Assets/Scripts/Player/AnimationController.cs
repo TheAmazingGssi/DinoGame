@@ -5,20 +5,23 @@ using UnityEngine.Serialization;
 
 public class AnimationController : MonoBehaviour
 {
-    [SerializeField] private AnimationData animationData;
+    public AnimationData animationData;
     public CharacterType characterType;
 
-    [FormerlySerializedAs("animator")] public Animator mainAnimator;
     public GameObject SpecialVfxObject;
+    public Animator animator;
     public Animator SpecialVfxAnimator;
     public Animator haloVfxAnimator;
-    public SpriteRenderer specialVfxRenderer;
+    public Animator bloodVfxAnimator;
     public Animator normalAttackVfxAnimator;
+    public SpriteRenderer mainSpriteRenderer;
+    public SpriteRenderer specialVfxRenderer;
     public SpriteRenderer normalAttackVfxRenderer;
     public ParticleSystem terryParticleSystem;
     public ParticleSystem healParticleSystem;
     public RoarWaveBurstSpawner parisRoarWaveSpawner;
     
+    private Color hurtPulseColor = Color.red;
     private bool vfxPlaying = false;
     
     private void Awake()
@@ -29,53 +32,62 @@ public class AnimationController : MonoBehaviour
 
     public void SetMoveSpeed(float speed)
     {
-        mainAnimator.SetFloat("MoveSpeed", speed);
+        animator.SetFloat("MoveSpeed", speed);
     }
 
     public void SetAnimationSpeed(float speed)
     {
-        mainAnimator.speed = speed;
+        animator.speed = speed;
     }
 
     public void TriggerAttack()
     {
-        mainAnimator.SetTrigger("Attack");
+        animator.SetTrigger("Attack");
     }
 
     public void TriggerSpecial()
     {
-        mainAnimator.SetTrigger("Special");
+        animator.SetTrigger("Special");
     }
 
     public void SetBlocking(bool isBlocking)
     {
-        mainAnimator.SetBool("IsBlocking", isBlocking);
+        animator.SetBool("IsBlocking", isBlocking);
     }
     
     public void SetFrozen(bool isFrozen)
     {
-        mainAnimator.SetBool("IsFrozen", isFrozen);
+        animator.SetBool("IsFrozen", isFrozen);
     }
 
     public void SetEmoting(bool isEmoting)
     {
-        mainAnimator.SetBool("IsEmoting", isEmoting);
+        animator.SetBool("IsEmoting", isEmoting);
     }
 
     public void SetDowned(bool isDowned)
     {
-        mainAnimator.SetBool("IsDowned", isDowned);
-        mainAnimator.SetTrigger("Downed");
+        animator.SetBool("IsDowned", isDowned);
+        animator.SetTrigger("Downed");
     }
 
     public void TriggerRevive()
     {
-        mainAnimator.SetTrigger("Revive");
+        animator.SetTrigger("Revive");
     }
 
     public void TriggerDamaged()
     {
-        mainAnimator.SetTrigger("Damaged");
+        animator.SetTrigger("Damaged");
+        bloodVfxAnimator.SetTrigger("Play");
+        StartCoroutine(PulseRedOnHurt());
+    }
+
+    private IEnumerator PulseRedOnHurt()
+    {
+        mainSpriteRenderer.color = hurtPulseColor;
+        yield return new WaitForSeconds(0.15f);
+        mainSpriteRenderer.color = Color.white;
     }
     
     public void TriggerSpecialVfx()
@@ -129,7 +141,7 @@ public class AnimationController : MonoBehaviour
 
     public void TriggerKnockback()
     {
-        mainAnimator.SetTrigger("Knockback");
+        animator.SetTrigger("Knockback");
     }
     
     public void TriggerHalo()
@@ -139,6 +151,6 @@ public class AnimationController : MonoBehaviour
 
     public Animator GetAnimator()
     {
-        return mainAnimator;
+        return animator;
     }
 }

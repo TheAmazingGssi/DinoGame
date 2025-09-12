@@ -9,8 +9,6 @@ public class PlayerCombatManager : CombatManager
     private MainPlayerController controller;
     private Animator animator;
     private AnimationController animController;
-    
-    //todo: new block system
     private float maxBlockStamina;
     private float currentBlockStamina;
     private float blockRegenRate;
@@ -100,14 +98,14 @@ public class PlayerCombatManager : CombatManager
                 controller.ForceStopBlocking();
             }
         }
-
         
         args.Damage *= damageTakenMultiplier;
         base.TakeDamage(args);
 
         if (args.Knockback)
         {
-            KnockbackHelper.ApplyKnockback(
+            KnockbackHelper.ApplyKnockback
+            (
                 transform,
                 args.SourceGO != null ? args.SourceGO.transform : null,
                 KnockbackHelper.GetKnockbackForceFromDamage(args.Damage, true)
