@@ -5,47 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad023baf-c7c7-445b-a367-968c8e24e03b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DinoGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DinoGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Vfx/Andrew Slice Sheet_0.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Vfx/Andrew Slice Sheet_0.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Vfx/ParisSpecialVfx.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Vfx/ParisSpecialVfx.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Vfx/SpencerSpecialBiteVfx OBSELTE.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animations/Vfx/SpencerSpecialBiteVfx OBSELTE.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animators/Dinos/AndyAnimator2.0.overrideController" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animators/Dinos/AndyAnimator2.0.overrideController" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Animators/Vfx/AndrewSpecialVfxCntrl 1.overrideController" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Animators/Vfx/AndrewSpecialVfxCntrl 1.overrideController" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Removal-793.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Removal-793.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Removal-920.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Removal-920.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Controller Buttons.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Controller Buttons.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Controller Buttons.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Controller Buttons.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/Andrew Slice Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/VFX/Andrew Slice Sheet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/inbvjhmage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/inbvjhmage.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Misc/Soundwave Vfx (single).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Misc/Soundwave Vfx (single).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Andy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Andy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Paris.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Paris.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Spencer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Spencer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Terry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Terry.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Misc and Utility/Confetti.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Misc and Utility/Confetti.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/VFX/Confetti.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/VFX/Confetti.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Camera/Main Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Camera/Main Camera.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/HUD Manager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/HUD Manager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Items/HP Display.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Items/HP Display.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Final Game Scenes/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Final Game Scenes/Level 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing Scenes/Level 1TESTING.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Testing Scenes/Level 1TESTING.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc and Utility/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc and Utility/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Parasaurolophus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Parasaurolophus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Therizinosaurus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CharactersSpecifics/Therizinosaurus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Multiplayer/HUD/HUDManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Multiplayer/HUD/HUDManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Multiplayer/HUD/HUDRefrences.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Multiplayer/HUD/HUDRefrences.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/MainPlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/MainPlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/RevivePrompt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/RevivePrompt.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MultiplayerUI/MultiplayerUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MultiplayerUI/MultiplayerUIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_DefaultAssets/PlayerInputActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Z_DefaultAssets/PlayerInputActions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_DefaultAssets/PlayerInputActions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Z_DefaultAssets/PlayerInputActions.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250911T173904.json.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250911T173904.json.bak.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250911T173919.json.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250911T173919.json.bak.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250911T174010.json.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Sortify_Objects.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Sortify_Objects.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,21 +46,24 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc and Utility/ToggleGameObjects.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc and Utility/WaveProjectileFromPool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/KnockbackHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Projects/Unity/DinoGame/Assets/Scripts/Player/MainPlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Projects/Unity/DinoGame/Assets/Scripts/Player/MainPlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/MainPlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerHurtBox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/RevivePrompt.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Stage Hazards/IcetroidSpawner.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tutorial/PlayerTutorialProxy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap/Editor/GridPaintingState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0900e0d4bb644dafbfd59eb7fd222a681ddc00/11/dd6781a5/UnsafeUtility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0900e0d4bb644dafbfd59eb7fd222a681ddc00/14/e5f27ed5/Unmarshal.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0900e0d4bb644dafbfd59eb7fd222a681ddc00/3c/a66fd702/UnityAction`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0900e0d4bb644dafbfd59eb7fd222a681ddc00/74/715d4955/Object.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0900e0d4bb644dafbfd59eb7fd222a681ddc00/96/ad8f855b/MonoBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0900e0d4bb644dafbfd59eb7fd222a681ddc00/d4/b42380f8/UnityEvent`1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0900e0d4bb644dafbfd59eb7fd222a681ddc00/e8/9f98b2eb/Transform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0900e0d4bb644dafbfd59eb7fd222a681ddc00/ec/5cfee27a/Component.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ed969b0e627d471da4848289f9c322df46ae00/22/ddb36439/AttributeUsageAttribute.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ed969b0e627d471da4848289f9c322df46ae00/3f/aa9c8bb9/IntPtr.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ed969b0e627d471da4848289f9c322df46ae00/e7/8254d0fc/GCHandle.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -106,22 +79,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Peer&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "Merging Testing",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.tabs",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.29f1\Editor\Unity.exe" />
