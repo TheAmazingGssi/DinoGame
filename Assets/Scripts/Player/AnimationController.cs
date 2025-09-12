@@ -20,7 +20,7 @@ public class AnimationController : MonoBehaviour
     public ParticleSystem terryParticleSystem;
     public ParticleSystem healParticleSystem;
     public RoarWaveBurstSpawner parisRoarWaveSpawner;
-    public float bloodVfxDuration = 0.1f;
+    public float bloodVfxDuration = 0.125f;
     
     private Color hurtPulseColor = new Color(0.5f, 0f, 0f, 1f);
     private bool vfxPlaying = false;
