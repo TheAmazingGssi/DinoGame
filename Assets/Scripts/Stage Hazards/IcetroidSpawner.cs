@@ -12,6 +12,15 @@ public class IcetroidSpawner : MonoBehaviour
     [Header("Spawn Timing")]
     [SerializeField] private float baseMinSpawnInterval = 1f;
     [SerializeField] private float baseMaxSpawnInterval = 3f;
+    
+    [Header("Burst Settings")]
+    [SerializeField] [Min(1)] private int defaultBurstCount = 3;
+    [SerializeField] [Min(0f)] private float defaultBurstInterval = 0.15f;
+    [SerializeField] private bool disableNormalSpawningDuringBurst = true;
+
+    private bool normalSpawningEnabled = true;
+    private bool isBursting = false;
+    private Coroutine burstRoutine = null;
 
     private int currentMaxIcetroids;
     private float currentMinSpawnInterval;
@@ -40,13 +49,55 @@ public class IcetroidSpawner : MonoBehaviour
 
     private void Update()
     {
+        if ((disableNormalSpawningDuringBurst && isBursting) || normalSpawningEnabled)
+            return;
+
         if (Time.time >= nextSpawnTime && activeIcetroids < currentMaxIcetroids)
         {
             SpawnIcetroid();
             SetNextSpawnTime();
         }
     }
+    
+    
+    // Triggers a burst of spawns.
+    public void TriggerBurst(int count = -1, float interval = -1f)
+    {
+        int burstCount = (count > 0) ? count : defaultBurstCount;
+        float burstInterval = (interval >= 0f) ? interval : defaultBurstInterval;
 
+        if (burstRoutine != null)
+            StopCoroutine(burstRoutine);
+
+        burstRoutine = StartCoroutine(BurstSequence(burstCount, burstInterval));
+    }
+
+    
+    private IEnumerator BurstSequence(int count, float interval)
+    {
+        yield return new WaitForSeconds(0.25f);
+        
+        isBursting = true;
+
+        for (int i = 0; i < count; i++)
+        {
+            if (activeIcetroids < currentMaxIcetroids)
+                SpawnIcetroid();
+
+            if (interval <= 0f)
+                yield return null;
+            else
+                yield return new WaitForSeconds(interval);
+        }
+
+        isBursting = false;
+        burstRoutine = null;
+
+        // Reset normal spawning so it doesn’t get stuck
+        SetNextSpawnTime();
+    }
+    
+    
     public void IncreaseIcetroidSpawning(int percentageIncrease)
     {
         Debug.Log($"IncreaseIcetroidSpawning called with {percentageIncrease}% increase");
@@ -81,6 +132,7 @@ public class IcetroidSpawner : MonoBehaviour
         activeIcetroids++;
 
         Icetroid icetroidScript = icetroidObj.GetComponent<Icetroid>();
+        
         if (icetroidScript != null)
         {
             icetroidScript.OnDestroyed += HandleIcetroidDestroyed;
