@@ -24,6 +24,8 @@ public class TutorialSlideshow : MonoBehaviour
     {
         if (autoStart)
             StartCoroutine(RunSlideshow());
+        else
+            Destroy(tutorialEnemy);
     }
 
     public void Begin() => StartCoroutine(RunSlideshow());
