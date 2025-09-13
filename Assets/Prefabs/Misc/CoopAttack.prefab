@@ -4975,8 +4975,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   legPrefab: {fileID: 1135005203359797277, guid: fb1ed4f08da68fe40befdd29ad148b0e, type: 3}
   spawnArea: {fileID: 1721496973257094032}
-  defaultBurstCount: 5
-  defaultBetweenSpawnDelay: 0.1
+  defaultBurstCount: 4
+  defaultBetweenSpawnDelay: 0.75
   includeEdges: 1
   randomizeHorizontal: 1
   minHorizontalSpacing: 0.5
