@@ -40,6 +40,8 @@ public class MainPlayerController : MonoBehaviour
     [SerializeField] private GameObject crown;
     [SerializeField] private GameObject BlockBubble;
     [SerializeField] private ReviveMiniGame reviveMiniGame;
+    [SerializeField] private CoopAttack coopAttack;
+
 
     [Header("Attack Variables")]
     [SerializeField] private float enableDuration = 0.2f;
@@ -142,6 +144,9 @@ public class MainPlayerController : MonoBehaviour
         
         if (!reviveMiniGame) 
             reviveMiniGame = GetComponent<ReviveMiniGame>();
+
+        if (!coopAttack)
+            coopAttack = FindFirstObjectByType<CoopAttack>();
         
         rightMeleeDamage = rightMeleeColliderGO != null ? rightMeleeColliderGO.GetComponent<MeleeDamage>() : null;
         leftMeleeDamage = leftMeleeColliderGO != null ? leftMeleeColliderGO.GetComponent<MeleeDamage>() : null;
@@ -224,21 +229,6 @@ public class MainPlayerController : MonoBehaviour
         {
             ForceStopBlocking();
         }
-        
-        // old Block handling
-        /*if (blockHeld && !isBlocking && !isEmoting && !isFallen)
-        {
-            isBlocking = true;
-            animController.SetBlocking(true);
-            CanBeDamaged = false;
-        }
-        else if (!blockHeld && isBlocking)
-        {
-            isBlocking = false;
-            animController.SetBlocking(false);
-            CanBeDamaged = true;
-            if(inTutorial) tutorialProxy.ReportBlock();
-        }*/
 
         // Emote handling
         if (emoteHeld && !isFallen && !isBlocking)
@@ -338,6 +328,7 @@ public class MainPlayerController : MonoBehaviour
             soundPlayer.PlaySound(0);
 
             StartCoroutine(ResetAttackCooldown());
+            coopAttack.Activate();
         }
     }
 
@@ -372,20 +363,6 @@ public class MainPlayerController : MonoBehaviour
         animController.SetBlocking(false);
         BlockBubble.SetActive(false);
     }
-
-    /*public void Revive(InputAction.CallbackContext context)
-    {
-        if (context.performed && !isFallen)
-        {
-            MainPlayerController target = FindNearestFallenPlayer();
-            if (target != null)
-            {
-                animController.TriggerRevive();
-                RevivePrompt prompt = gameObject.AddComponent<RevivePrompt>();
-                prompt.StartRevive(this, target);
-            }
-        }
-    }*///old revive system
     
     public void Revive(InputAction.CallbackContext context)
     {
@@ -423,6 +400,13 @@ public class MainPlayerController : MonoBehaviour
             }
         }
     }
+
+    //----------------------------------------------------Will be used for coop attack----------------------------------------------------
+    public void Pause(InputAction.CallbackContext context)
+    {
+        coopAttack.Activate();
+    }
+    //----------------------------------------------------Will be used for coop attack----------------------------------------------------
 
     
     public void Emote(InputAction.CallbackContext context)
