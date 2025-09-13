@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CoopAttack : MonoBehaviour
@@ -10,9 +11,14 @@ public class CoopAttack : MonoBehaviour
 
     public void Activate()
     {
+        foreach (var enemy in new List<EnemyManager>(GameManager.Instance.ActiveEnemies))
+        {
+            enemy.CombatManager.TakeDamage(new DamageArgs(1000));
+        }
         StartCoroutine(EffectCoroutine());
     }
-    
+
+
     private IEnumerator EffectCoroutine()
     {
         SmokeEffect.Play();
