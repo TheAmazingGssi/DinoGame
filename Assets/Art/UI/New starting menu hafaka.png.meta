@@ -1,0 +1,770 @@
+fileFormatVersion: 2
+guid: e3877400bca80624aa8c9753031e14df
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7228580223570320077
+    second: New starting menu hafaka_0
+  - first:
+      213: 7255352054409280289
+    second: New starting menu hafaka_1
+  - first:
+      213: -8487956833795418062
+    second: New starting menu hafaka_2
+  - first:
+      213: 3984759695712237208
+    second: New starting menu hafaka_3
+  - first:
+      213: 4533055256665921712
+    second: New starting menu hafaka_4
+  - first:
+      213: 7539213929519944674
+    second: New starting menu hafaka_5
+  - first:
+      213: 4009357542603678794
+    second: New starting menu hafaka_6
+  - first:
+      213: -5374965385979052808
+    second: New starting menu hafaka_7
+  - first:
+      213: 3312931781944681561
+    second: New starting menu hafaka_8
+  - first:
+      213: 4969834016706042038
+    second: New starting menu hafaka_9
+  - first:
+      213: -3713413541690010883
+    second: New starting menu hafaka_10
+  - first:
+      213: 8463347155429057458
+    second: New starting menu hafaka_11
+  - first:
+      213: 389670489282737054
+    second: New starting menu hafaka_12
+  - first:
+      213: -6278130680046227015
+    second: New starting menu hafaka_13
+  - first:
+      213: -2757488670474336217
+    second: New starting menu hafaka_14
+  - first:
+      213: 4826124262126309749
+    second: New starting menu hafaka_15
+  - first:
+      213: 3933690140409501464
+    second: New starting menu hafaka_16
+  - first:
+      213: -1713160222916341912
+    second: New starting menu hafaka_17
+  - first:
+      213: 105614778208530090
+    second: New starting menu hafaka_18
+  - first:
+      213: 7708317143737240359
+    second: New starting menu hafaka_19
+  - first:
+      213: -5189748109006194624
+    second: New starting menu hafaka_20
+  - first:
+      213: 1351171746044366943
+    second: New starting menu hafaka_21
+  - first:
+      213: 4257920288240384546
+    second: New starting menu hafaka_22
+  - first:
+      213: -7235726848754518612
+    second: New starting menu hafaka_23
+  - first:
+      213: 8773991291040306084
+    second: New starting menu hafaka_24
+  - first:
+      213: -8673028074034241789
+    second: New starting menu hafaka_25
+  - first:
+      213: 7963398895568209225
+    second: New starting menu hafaka_26
+  - first:
+      213: 2237789134073613277
+    second: New starting menu hafaka_27
+  - first:
+      213: 5445293454954464017
+    second: New starting menu hafaka_28
+  - first:
+      213: -2998009025584596528
+    second: New starting menu hafaka_29
+  - first:
+      213: -2323654353082577932
+    second: New starting menu hafaka_30
+  - first:
+      213: 6607921810962558453
+    second: New starting menu hafaka_31
+  - first:
+      213: 2771152860422818452
+    second: New starting menu hafaka_32
+  - first:
+      213: -925152972133578092
+    second: New starting menu hafaka_33
+  - first:
+      213: -3954445123835771192
+    second: New starting menu hafaka_34
+  - first:
+      213: -248182734560758195
+    second: New starting menu hafaka_35
+  - first:
+      213: -2059122423822633232
+    second: New starting menu hafaka_36
+  - first:
+      213: 5169008656295110701
+    second: New starting menu hafaka_37
+  - first:
+      213: 1072099545686712112
+    second: New starting menu hafaka_38
+  - first:
+      213: 5186012811061177138
+    second: New starting menu hafaka_39
+  - first:
+      213: 4820194112418833099
+    second: New starting menu hafaka_40
+  - first:
+      213: -4900203369412946622
+    second: New starting menu hafaka_41
+  - first:
+      213: -5897281417441281970
+    second: New starting menu hafaka_42
+  - first:
+      213: -4661781505430619161
+    second: New starting menu hafaka_43
+  - first:
+      213: 280513895126922579
+    second: New starting menu hafaka_44
+  - first:
+      213: 7688936097218488359
+    second: New starting menu hafaka_45
+  - first:
+      213: 1430555427232901485
+    second: New starting menu hafaka_46
+  - first:
+      213: -5178289305612532690
+    second: New starting menu hafaka_47
+  - first:
+      213: 3223188958078513160
+    second: New starting menu hafaka_48
+  - first:
+      213: 5393982922141360616
+    second: New starting menu hafaka_49
+  - first:
+      213: 1375631050366408441
+    second: New starting menu hafaka_50
+  - first:
+      213: -7460507315958190129
+    second: New starting menu hafaka_51
+  - first:
+      213: 783810158554697860
+    second: New starting menu hafaka_52
+  - first:
+      213: -1552938754468492476
+    second: New starting menu hafaka_53
+  - first:
+      213: 8377742417848557221
+    second: New starting menu hafaka_54
+  - first:
+      213: 5603003164231557951
+    second: New starting menu hafaka_55
+  - first:
+      213: -1318127669551004398
+    second: New starting menu hafaka_56
+  - first:
+      213: 1633286744669548866
+    second: New starting menu hafaka_57
+  - first:
+      213: 2272184212204747624
+    second: New starting menu hafaka_58
+  - first:
+      213: -1213709450156097519
+    second: New starting menu hafaka_59
+  - first:
+      213: 6002346741605981563
+    second: New starting menu hafaka_60
+  - first:
+      213: -8155523217186508339
+    second: New starting menu hafaka_61
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: New starting menu hafaka_0
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 2073
+        width: 1244
+        height: 1026
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90a91b322bfb56b4e95f989e2a21cf72
+      internalID: -671031325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New starting menu hafaka_1
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 2139
+        width: 723
+        height: 982
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1d57135bbfbd7948861b8224adef329
+      internalID: 124125091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New starting menu hafaka_2
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 2098
+        width: 581
+        height: 1010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb94426dc82d20d468aed0a7a0108548
+      internalID: -301095749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New starting menu hafaka_3
+      rect:
+        serializedVersion: 2
+        x: 2814
+        y: 2108
+        width: 1149
+        height: 984
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6228f3bf767d46e48b9d499b148787ad
+      internalID: -1637281880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New starting menu hafaka_4
+      rect:
+        serializedVersion: 2
+        x: 3963
+        y: 2120
+        width: 666
+        height: 973
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe10f1498aa1c242a6786d3023ccdf4
+      internalID: 101334960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New starting menu hafaka_5
+      rect:
+        serializedVersion: 2
+        x: 4449
+        y: 2095
+        width: 1746
+        height: 1007
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50023414e4fee6e4095b26e20f16bb82
+      internalID: -1570926265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New starting menu hafaka_6
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 1462
+        width: 474
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7de4ecf37fcb7a345b6e4a1f3e57cecd
+      internalID: 1894601190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New starting menu hafaka_7
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 1457
+        width: 681
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 715dd6241e9b77345ae328f0063c960a
+      internalID: 1585742811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New starting menu hafaka_8
+      rect:
+        serializedVersion: 2
+        x: 1687
+        y: 1462
+        width: 471
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fc663cfa121eb84b8147b0f7bef7cbf
+      internalID: 1315652387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New starting menu hafaka_9
+      rect:
+        serializedVersion: 2
+        x: 2091
+        y: 1457
+        width: 685
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aec04996396ab043b6e3d948ef84d42
+      internalID: -899772322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New starting menu hafaka_10
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 1003
+        width: 448
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ca2616445222347bb61404b2db7da2
+      internalID: -433607510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New starting menu hafaka_11
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 1001
+        width: 435
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a98ee707a4f875b45908a79088269375
+      internalID: 552580929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New starting menu hafaka_12
+      rect:
+        serializedVersion: 2
+        x: 1687
+        y: 1003
+        width: 449
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fc7a3f93e6ca114a81c5e04915d59d1
+      internalID: 250592505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New starting menu hafaka_13
+      rect:
+        serializedVersion: 2
+        x: 2148
+        y: 1002
+        width: 436
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd8184673e6e38468737d8091ac1cdb
+      internalID: -1381878522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New starting menu hafaka_30
+      rect:
+        serializedVersion: 2
+        x: 6031
+        y: 131
+        width: 246
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ff998d3b7a921d4981d1c4bedd6fee7
+      internalID: -89285364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New starting menu hafaka_31
+      rect:
+        serializedVersion: 2
+        x: 6211
+        y: 128
+        width: 155
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e68a930a48fbf4041be545b53e362b83
+      internalID: -1717551876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New starting menu hafaka_14
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 118
+        width: 1550
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1725c360cdd0a04da1f1382c6ad92cd
+      internalID: -1934505794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New starting menu hafaka_15
+      rect:
+        serializedVersion: 2
+        x: 2203
+        y: 122
+        width: 1583
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 816912e34cfb0d549abc4ae44d54c411
+      internalID: 1654203509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f2ef4cbb3964efe4b8f2c07a4d39e9d4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      New starting menu hafaka_0: -671031325
+      New starting menu hafaka_1: 124125091
+      New starting menu hafaka_10: -433607510
+      New starting menu hafaka_11: 552580929
+      New starting menu hafaka_12: 250592505
+      New starting menu hafaka_13: -1381878522
+      New starting menu hafaka_14: -1934505794
+      New starting menu hafaka_15: 1654203509
+      New starting menu hafaka_16: 1508390429
+      New starting menu hafaka_17: 1043509377
+      New starting menu hafaka_18: -2123356251
+      New starting menu hafaka_19: -1004585303
+      New starting menu hafaka_2: -301095749
+      New starting menu hafaka_20: 254348997
+      New starting menu hafaka_21: 2127897550
+      New starting menu hafaka_22: -260402489
+      New starting menu hafaka_23: 2016227240
+      New starting menu hafaka_24: -1376513218
+      New starting menu hafaka_25: -130607625
+      New starting menu hafaka_26: 1834005598
+      New starting menu hafaka_27: 1516715319
+      New starting menu hafaka_28: -572287422
+      New starting menu hafaka_29: 1987419774
+      New starting menu hafaka_3: -1637281880
+      New starting menu hafaka_30: -89285364
+      New starting menu hafaka_31: -1717551876
+      New starting menu hafaka_4: 101334960
+      New starting menu hafaka_5: -1570926265
+      New starting menu hafaka_6: 1894601190
+      New starting menu hafaka_7: 1585742811
+      New starting menu hafaka_8: 1315652387
+      New starting menu hafaka_9: -899772322
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
