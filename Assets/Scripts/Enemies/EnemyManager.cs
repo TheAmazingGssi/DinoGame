@@ -51,6 +51,16 @@ public class EnemyManager : MonoBehaviour
         {
             healthDropAmount = PlayerEntity.PlayerList.Count;
         }
+
+        GameManager.Instance.ActiveEnemies.Add(this);
+
+        int enemyCount = 0;
+        for(int i = 0; i < GameManager.Instance.ActiveEnemies.Count; i++) 
+        {
+            enemyCount++;
+        }
+        Debug.Log(enemyCount);
+
     }
 
     private void OnEnable()
@@ -64,6 +74,15 @@ public class EnemyManager : MonoBehaviour
     {
         if (isDead) return;
         isDead = true;
+
+        GameManager.Instance.ActiveEnemies.Remove(this);
+
+        int enemyCount = 0;
+        for (int i = 0; i < GameManager.Instance.ActiveEnemies.Count; i++)
+        {
+            enemyCount++;
+        }
+        Debug.Log(enemyCount);
 
         animator.ResetTrigger("Hurt");
 

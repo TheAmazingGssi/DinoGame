@@ -33,6 +33,8 @@ public class GameManager : MonoBehaviour
     private int currentWave = 0;
     [SerializeField] UnityEvent waveCompleted = new UnityEvent();
 
+    public List<EnemyManager> ActiveEnemies;
+
     void Awake()
     {
         if (Instance != null && Instance != this)
