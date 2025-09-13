@@ -60,6 +60,8 @@ public class HUDManager : MonoBehaviour
                 hudRefrences[i].BlockBar.maxValue = PlayerEntity.PlayerList[i].CombatManager.MaxBlockStamina;
                 hudRefrences[i].BlockBar.value = PlayerEntity.PlayerList[i].CombatManager.CurrentBlockStamina;
                 hudRefrences[i].ScoreText.text = PlayerEntity.PlayerList[i].MainPlayerController.GetScore().ToString("N0");
+                hudRefrences[i].SpecialIcon[PlayerEntity.PlayerList[i].CharacterType].SetActive(true);
+                //Debug.Log($"Current block: {PlayerEntity.PlayerList[i].CombatManager.CurrentBlockStamina}");
             }
             else
                 hudRefrences[i].gameObject.SetActive(false);
