@@ -9,6 +9,7 @@ public class Triceratops : CharacterBase
     [SerializeField] private float chargeSpeed = 12f;
     [SerializeField] private float glideDistance = 2.5f;
     [SerializeField] private float glideSpeed = 8f;
+    [SerializeField] private bool useManualExtraKnockback = false; // default off
 
     private Rigidbody2D rb;
 
@@ -89,11 +90,15 @@ public class Triceratops : CharacterBase
         {
             if (hit != null)
             {
-                KnockbackHelper.ApplyKnockback(
-                    hit.transform,
-                    transform,
-                    KnockbackHelper.GetKnockbackForceFromDamage(stats.specialAttackDamage * 1.5f, true) // large knockback
-                );
+                if (useManualExtraKnockback)
+                {
+                    KnockbackHelper.ApplyKnockback
+                    (
+                        hit.transform,
+                        transform,
+                        KnockbackHelper.GetKnockbackForceFromDamage(stats.specialAttackDamage * 1.5f, true)
+                    );
+                }
             }
         }
 

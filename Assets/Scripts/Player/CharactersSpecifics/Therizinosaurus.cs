@@ -7,6 +7,8 @@ public class Therizinosaurus : CharacterBase
     [SerializeField] private int specialHitCount = 4; 
     [SerializeField] private float specialHitInterval = 0.15f; 
     [SerializeField] private float knockbackMultiplier = 50f; // small knockback strength multiplier
+    [SerializeField] private bool useManualExtraKnockback = false; // default off
+
 
     public override void Initialize(CharacterStats.CharacterData characterStats, AnimationController animController, GameObject rightCollider, GameObject leftCollider, bool isFacingRight, float enable, float disable)
     {
@@ -38,7 +40,7 @@ public override IEnumerator PerformSpecial(UnityAction<float> onSpecial)
         activeMeleeDamage?.PrepareDamage
         (
             perHitDamage,
-            false,
+            true,
             _mainPlayerController.transform,
             _mainPlayerController
         );
@@ -59,11 +61,14 @@ public override IEnumerator PerformSpecial(UnityAction<float> onSpecial)
             {
                 if (h.CompareTag("Enemy"))
                 {
-                    KnockbackHelper.ApplyKnockback(
-                        h.transform,
-                        transform,
-                        KnockbackHelper.GetKnockbackForceFromDamage(stats.specialAttackDamage * knockbackMultiplier, false)
-                    );
+                    if (useManualExtraKnockback)
+                    {
+                        KnockbackHelper.ApplyKnockback(
+                            h.transform,
+                            transform,
+                            KnockbackHelper.GetKnockbackForceFromDamage(stats.specialAttackDamage * knockbackMultiplier, true)
+                        );
+                    }
                 }
             }
         }

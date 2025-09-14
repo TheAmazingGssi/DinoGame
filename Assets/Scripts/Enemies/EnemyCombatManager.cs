@@ -58,11 +58,14 @@ public class EnemyCombatManager : CombatManager
         {
             manager.AttackManager?.ChangeAttackStatue(false);
             
-            KnockbackHelper.ApplyKnockback(
+            // use the actual special flag so normals stay little, specials moderate
+            KnockbackHelper.ApplyKnockback
+            (
                 transform,
                 damageArgs.SourceGO != null ? damageArgs.SourceGO.transform : null,
-                KnockbackHelper.GetKnockbackForceFromDamage(damageArgs.Damage, true)
+                KnockbackHelper.GetKnockbackForceFromDamage(damageArgs.Damage, damageArgs.Knockback)
             );
+
         }
         
         manager.Animator.SetTrigger(HURT);

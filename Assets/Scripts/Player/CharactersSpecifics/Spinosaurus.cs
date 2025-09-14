@@ -30,7 +30,7 @@ public class Spinosaurus : CharacterBase
 
         GameObject activeCollider = facingRight ? rightMeleeColliderGO : leftMeleeColliderGO;
         MeleeDamage activeMeleeDamage = facingRight ? rightMeleeDamage : leftMeleeDamage;
-        activeMeleeDamage?.PrepareDamage(stats.specialAttackDamage, false, _mainPlayerController.transform, _mainPlayerController);
+        activeMeleeDamage?.PrepareDamage(stats.specialAttackDamage, true, _mainPlayerController.transform, _mainPlayerController);
         Vector3 startPos = new Vector3(facingRight ? 0.175f : -0.175f, activeCollider.transform.localPosition.y, activeCollider.transform.localPosition.z);
         Vector3 targetPos = new Vector3(facingRight ? 0.45f : -0.45f, startPos.y, startPos.z);
         
@@ -68,7 +68,7 @@ public class Spinosaurus : CharacterBase
                     if (hit.collider != null && hit.collider.name == "HurtBox" && hit.collider.tag == "Enemy")
                     {
                         enemyTransform = hit.collider.transform.root;
-                        activeMeleeDamage?.ApplyDamage(stats.specialAttackDamage, false, transform, _mainPlayerController);
+                        activeMeleeDamage?.ApplyDamage(stats.specialAttackDamage, true, transform, _mainPlayerController);
                         break; 
                     }
                 }
@@ -125,31 +125,4 @@ public class Spinosaurus : CharacterBase
         specialInProgress = false;
         animController.ResetSpecialVfx();
     }
-
-    /*private void DrawBoxCast(Vector2 origin, Vector2 size, Vector2 direction, float distance, Color color)
-    {
-        Vector2 endPoint = origin + direction.normalized * distance;
-        Vector2 halfSize = size * 0.5f;
-
-        Vector2[] corners = {
-            origin + new Vector2(-halfSize.x, -halfSize.y),
-            origin + new Vector2(halfSize.x, -halfSize.y),
-            origin + new Vector2(halfSize.x, halfSize.y),
-            origin + new Vector2(-halfSize.x, halfSize.y)
-        };
-
-        Vector2[] endCorners = {
-            endPoint + new Vector2(-halfSize.x, -halfSize.y),
-            endPoint + new Vector2(halfSize.x, -halfSize.y),
-            endPoint + new Vector2(halfSize.x, halfSize.y),
-            endPoint + new Vector2(-halfSize.x, halfSize.y)
-        };
-
-        for (int i = 0; i < 4; i++)
-        {
-            Debug.DrawLine(corners[i], corners[(i + 1) % 4], color, 0.1f);
-            Debug.DrawLine(endCorners[i], endCorners[(i + 1) % 4], color, 0.1f);
-            Debug.DrawLine(corners[i], endCorners[i], color, 0.1f);
-        }
-    }*/
 }
