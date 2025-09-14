@@ -20,11 +20,8 @@ public class KnockbackManager : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    /// <summary>
-    /// Applies an impulse if not already knocked back.
-    /// </summary>
-    /// <param name="force">The impulse vector to apply.</param>
-    /// <param name="duration">Optional duration; uses default if ≤ 0.</param>
+
+    // Applies an impulse if not already knocked back.
     public void ApplyKnockback(Vector2 force, float duration = -1f)
     {
         if (isKnockedBack) return;
@@ -40,12 +37,11 @@ public class KnockbackManager : MonoBehaviour
 
         if (kbRoutine != null)
             StopCoroutine(kbRoutine);
+        
         kbRoutine = StartCoroutine(KnockbackRoutine(duration));
     }
-
-    /// <summary>
-    /// Ends the knockback early.
-    /// </summary>
+    
+    // Ends the knockback early.
     public void EndKnockback()
     {
         if (!isKnockedBack) return;
