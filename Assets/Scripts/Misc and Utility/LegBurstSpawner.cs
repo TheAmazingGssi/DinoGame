@@ -43,27 +43,36 @@ public class LegBurstSpawner : MonoBehaviour
             enabled = false;
             return;
         }
-
-        leftEdge  = spawnArea.bounds.min.x;
-        rightEdge = spawnArea.bounds.max.x;
+        
+        UpdateHorizontalBounds();
 
         Debug.Log($"[OscillatingLegBurstSpawner2D] Ready. Area X: {leftEdge:0.###} → {rightEdge:0.###}");
     }
 
-    /// <summary>
-    /// Fire a burst of OscillatingLegs evenly spaced left→right across the collider.
-    /// count<=0 uses defaultBurstCount; betweenDelay<0 uses defaultBetweenSpawnDelay.
-    /// </summary>
+
+    // Fire a burst of OscillatingLegs evenly spaced left→right across the collider.
+    // count<=0 uses defaultBurstCount; betweenDelay<0 uses defaultBetweenSpawnDelay.
     public void TriggerBurst(int count = -1, float betweenDelay = -1f)
     {
         int spawnCount = (count > 0) ? count : defaultBurstCount;
         float delay = (betweenDelay >= 0f) ? betweenDelay : defaultBetweenSpawnDelay;
+        
+        UpdateHorizontalBounds();
 
         if (burstRoutine != null)
             StopCoroutine(burstRoutine);
 
         burstRoutine = StartCoroutine(BurstSequence(spawnCount, delay));
     }
+    
+    
+    private void UpdateHorizontalBounds()
+    {
+        var b = spawnArea.bounds;
+        leftEdge  = b.min.x;
+        rightEdge = b.max.x;
+    }
+    
 
     private IEnumerator BurstSequence(int count, float betweenDelay)
     {
@@ -74,7 +83,7 @@ public class LegBurstSpawner : MonoBehaviour
 
         for (int i = 0; i < count; i++)
         {
-            // 1) Base even spacing (inclusive/exclusive of edges)
+            // Base even spacing (inclusive/exclusive of edges)
             float xBase;
             float step;
 
@@ -94,12 +103,12 @@ public class LegBurstSpawner : MonoBehaviour
                 xBase = leftEdge + step * (i + 1); // no exact edges
             }
 
-            // 2) Compute max jitter that preserves min spacing:
+            // Compute max jitter that preserves min spacing:
             // Worst-case neighbor gap after jitter = step - 2*jitterMax >= minHorizontalSpacing
             float jitterMax = Mathf.Max(0f, (step - minHorizontalSpacing) * 0.5f);
             jitterMax *= jitterStrength;
 
-            // 3) Apply jitter, keeping edges from escaping outside
+            // Apply jitter, keeping edges from escaping outside
             float x = xBase;
             if (randomizeHorizontal && jitterMax > 0f && count > 1)
             {
@@ -119,8 +128,7 @@ public class LegBurstSpawner : MonoBehaviour
                     x += Random.Range(-jitterMax, jitterMax);
                 }
             }
-
-            // 4) Final clamp just in case
+            
             if (includeEdges)
                 x = Mathf.Clamp(x, leftEdge, rightEdge);
             else
