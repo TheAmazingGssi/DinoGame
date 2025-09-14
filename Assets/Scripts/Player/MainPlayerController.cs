@@ -334,7 +334,7 @@ public class MainPlayerController : MonoBehaviour
             soundPlayer.PlaySound(0);
 
             StartCoroutine(ResetAttackCooldown());
-            //coopAttack.Activate();----------------------------------------------coop attack call---------------------------------------------------------------
+            coopAttack.Activate();
         }
     }
 
