@@ -28,12 +28,6 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "Lose Screen"
-        },
-        {
-            "colors": [],
-            "styles": [],
-            "showComponents": [],
             "sceneName": "Win Screen"
         },
         {
@@ -47,6 +41,12 @@
             "styles": [],
             "showComponents": [],
             "sceneName": "Level 1"
+        },
+        {
+            "colors": [],
+            "styles": [],
+            "showComponents": [],
+            "sceneName": "Lose Screen"
         }
     ]
 }

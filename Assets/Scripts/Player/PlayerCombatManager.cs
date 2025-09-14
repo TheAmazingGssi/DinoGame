@@ -14,19 +14,18 @@ public class PlayerCombatManager : CombatManager
     private float blockRegenRate;
     private float blockCostPerHit;
     private bool blockLocked; // lock when 0 until >=50% refilled
-
-//todo: new block system
+    
     public float CurrentBlockStamina => currentBlockStamina;
     public float MaxBlockStamina => maxBlockStamina;
     public bool IsBlockLocked => blockLocked;
 
-
+    //Special Attack Stamina
     public float CurrentStamina => currentStamina;
     public float MaxStamina => maxStamina;
 
-//todo: new block system
+
     public void Initialize(float maxHealth, float maxStamina, MainPlayerController controller, Animator animator,
-        float maxBlockStamina = 0f, float blockCostPerHit = 0f, float blockRegenRate = 0f)
+        float maxBlockStamina = 5f, float blockCostPerHit = 1f, float blockRegenRate = 1f)
     {
         currentMaxHealth = maxHealth;
         currentHealth = maxHealth;

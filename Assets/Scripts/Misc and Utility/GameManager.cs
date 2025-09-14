@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
             if (PlayerEntity.PlayerList[i].CombatManager.CurrentHealth <= 0)
                 counter++;
         if (counter == PlayerEntity.PlayerList.Count)
-            sceneLoader.LoadScene(Scenes.MainMenu);
+            sceneLoader.LoadScene(Scenes.LoseScreen);
 
         //make camera move to vote animation
         if (currentWave >= waveLocations.Length)
