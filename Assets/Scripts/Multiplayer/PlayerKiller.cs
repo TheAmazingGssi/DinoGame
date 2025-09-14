@@ -6,10 +6,6 @@ public class PlayerKiller : MonoBehaviour
     void Start()
     {
         foreach (PlayerEntity player in PlayerEntity.PlayerList)
-        {
-            Destroy(player);
-        }
-
-        PlayerEntity.PlayerList.Clear();
+            player.DestroyMe();
     }
 }
