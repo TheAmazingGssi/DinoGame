@@ -46,7 +46,8 @@ public class Triceratops : CharacterBase
             rb.MovePosition(newPos);
 
             // Check for enemies hit
-            Collider2D[] hits = Physics2D.OverlapCircleAll(
+            Collider2D[] hits = Physics2D.OverlapCircleAll
+            (
                 transform.position,
                 GetComponentInChildren<CircleCollider2D>().radius,
                 LayerMask.GetMask("Enemy")
@@ -57,8 +58,8 @@ public class Triceratops : CharacterBase
                 if (hit.CompareTag("Enemy") && !enemiesHitDuringCharge.Contains(hit))
                 {
                     // Damage once, no knockback
-                    activeMeleeDamage?.PrepareDamage(stats.specialAttackDamage, false, _mainPlayerController.transform, _mainPlayerController);
-                    activeMeleeDamage?.ApplyDamage(stats.specialAttackDamage, false, transform, _mainPlayerController);
+                    activeMeleeDamage?.PrepareDamage(stats.specialAttackDamage,true, _mainPlayerController.transform, _mainPlayerController);
+                    activeMeleeDamage?.ApplyDamage(stats.specialAttackDamage, true, transform, _mainPlayerController);
 
                     enemiesHitDuringCharge.Add(hit);
                 }

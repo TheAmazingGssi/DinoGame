@@ -36,7 +36,8 @@ public class Parasaurolophus : CharacterBase
         _mainPlayerController.ToggleIsAttacking();
         specialColliderGO.SetActive(true);
         
-        specialMeleeDamage?.PrepareDamage(
+        specialMeleeDamage?.PrepareDamage
+        (
             stats.specialAttackDamage,
             true,                                   
             specialColliderGO.transform,             
@@ -46,10 +47,11 @@ public class Parasaurolophus : CharacterBase
         onSpecial?.Invoke(stats.specialAttackDamage);
 
         // Apply damage using the active BoxCollider2D (MeleeDamage will handle per-target and knockback via attackSource)
-        specialMeleeDamage?.ApplyDamage(
+        specialMeleeDamage?.ApplyDamage
+        (
             stats.specialAttackDamage,
-            false,                         // isSpecialAttack flag already set in PrepareDamage
-            specialColliderGO.transform,             // keep source aligned with the active collider
+            false,                        
+            specialColliderGO.transform,         
             _mainPlayerController
         );
         

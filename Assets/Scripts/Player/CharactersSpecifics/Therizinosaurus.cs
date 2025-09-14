@@ -35,7 +35,8 @@ public override IEnumerator PerformSpecial(UnityAction<float> onSpecial)
 
         // --- Damage setup for this hit ---
         float perHitDamage = stats.specialAttackDamage / specialHitCount;
-        activeMeleeDamage?.PrepareDamage(
+        activeMeleeDamage?.PrepareDamage
+        (
             perHitDamage,
             false,
             _mainPlayerController.transform,
