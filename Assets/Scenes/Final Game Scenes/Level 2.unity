@@ -3216,7 +3216,7 @@ PrefabInstance:
       objectReference: {fileID: 4146127166369378662, guid: 2ba7ceb921d917a4798209cfd66d1bd6, type: 3}
     - target: {fileID: 3690788746996219017, guid: 6dd85cfb8eb3d4e449badeac02fc1447, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.13
+      value: 2.013
       objectReference: {fileID: 0}
     - target: {fileID: 5080508476533092501, guid: 6dd85cfb8eb3d4e449badeac02fc1447, type: 3}
       propertyPath: m_Sprite
@@ -3244,7 +3244,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8798116456046059799, guid: 6dd85cfb8eb3d4e449badeac02fc1447, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.99
+      value: 1.873
       objectReference: {fileID: 0}
     - target: {fileID: 9124575964191157752, guid: 6dd85cfb8eb3d4e449badeac02fc1447, type: 3}
       propertyPath: cam
