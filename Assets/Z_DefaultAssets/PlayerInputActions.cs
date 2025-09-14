@@ -107,6 +107,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": ""Press"",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""FriendshipAttack"",
+                    ""type"": ""Button"",
+                    ""id"": ""5f79e32f-1681-4375-960c-fce157cb4ff2"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -637,6 +646,28 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Emote"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b68f1bc0-8822-4f02-9003-1e8b3f3c4649"",
+                    ""path"": ""<HID::HID-USB>/button7"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FriendshipAttack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""297f3ae5-d76f-4c6b-8d31-ae6f53680d73"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FriendshipAttack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -715,6 +746,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Player_Cancel = m_Player.FindAction("Cancel", throwIfNotFound: true);
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
         m_Player_Emote = m_Player.FindAction("Emote", throwIfNotFound: true);
+        m_Player_FriendshipAttack = m_Player.FindAction("FriendshipAttack", throwIfNotFound: true);
     }
 
     ~@PlayerInputActions()
@@ -790,6 +822,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Cancel;
     private readonly InputAction m_Player_Pause;
     private readonly InputAction m_Player_Emote;
+    private readonly InputAction m_Player_FriendshipAttack;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -803,6 +836,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         public InputAction @Cancel => m_Wrapper.m_Player_Cancel;
         public InputAction @Pause => m_Wrapper.m_Player_Pause;
         public InputAction @Emote => m_Wrapper.m_Player_Emote;
+        public InputAction @FriendshipAttack => m_Wrapper.m_Player_FriendshipAttack;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -839,6 +873,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Emote.started += instance.OnEmote;
             @Emote.performed += instance.OnEmote;
             @Emote.canceled += instance.OnEmote;
+            @FriendshipAttack.started += instance.OnFriendshipAttack;
+            @FriendshipAttack.performed += instance.OnFriendshipAttack;
+            @FriendshipAttack.canceled += instance.OnFriendshipAttack;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -870,6 +907,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Emote.started -= instance.OnEmote;
             @Emote.performed -= instance.OnEmote;
             @Emote.canceled -= instance.OnEmote;
+            @FriendshipAttack.started -= instance.OnFriendshipAttack;
+            @FriendshipAttack.performed -= instance.OnFriendshipAttack;
+            @FriendshipAttack.canceled -= instance.OnFriendshipAttack;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -943,5 +983,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         void OnCancel(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnEmote(InputAction.CallbackContext context);
+        void OnFriendshipAttack(InputAction.CallbackContext context);
     }
 }

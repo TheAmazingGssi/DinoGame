@@ -34,6 +34,8 @@ public class PlayerEntity : MonoBehaviour
     [HideInInspector] public UnityEvent<InputAction.CallbackContext> Cancel = new UnityEvent<InputAction.CallbackContext>();
     [HideInInspector] public UnityEvent<InputAction.CallbackContext> Pause = new UnityEvent<InputAction.CallbackContext>();
     [HideInInspector] public UnityEvent<InputAction.CallbackContext> Emote = new UnityEvent<InputAction.CallbackContext>();
+    [HideInInspector] public UnityEvent<InputAction.CallbackContext> FriendshipAttack = new UnityEvent<InputAction.CallbackContext>();
+    
 
     //Data being saved for the next level
     private int score = 0;
@@ -60,10 +62,9 @@ public class PlayerEntity : MonoBehaviour
     [HideInInspector] public void InvokeConfirmation(InputAction.CallbackContext inputContext) => Confirmation.Invoke(inputContext);
     [HideInInspector] public void InvokeCancel(InputAction.CallbackContext inputContext) => Cancel.Invoke(inputContext);
     [HideInInspector] public void InvokePause(InputAction.CallbackContext inputContext) => Pause.Invoke(inputContext);
-    [HideInInspector] public void InvokeEmote(InputAction.CallbackContext inputContext)
-    {
-        Emote.Invoke(inputContext);
-    }
+    [HideInInspector] public void InvokeEmote(InputAction.CallbackContext inputContext) => Emote.Invoke(inputContext);
+    [HideInInspector] public void InvokeFriendshipAttack(InputAction.CallbackContext inputContext) => FriendshipAttack.Invoke(inputContext);
+    
 
     public void DeviceDisconnected()
     {
@@ -109,6 +110,7 @@ public class PlayerEntity : MonoBehaviour
         Special.AddListener(MainPlayerController.SpecialStarted);
         Revive.AddListener(MainPlayerController.Revive);
         Emote.AddListener(MainPlayerController.Emote);
+        FriendshipAttack.AddListener(MainPlayerController.FriendshipAttack);
 
         //Set variables from last level
         MainPlayerController.AddScore(score);
