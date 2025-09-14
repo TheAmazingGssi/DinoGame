@@ -35,7 +35,12 @@ public class Triceratops : CharacterBase
         // Track all enemies hit during charge
         HashSet<Collider2D> enemiesHitDuringCharge = new HashSet<Collider2D>();
 
+        // prime the damage 
+        activeMeleeDamage?.PrepareDamage(stats.specialAttackDamage, true, transform, _mainPlayerController);
+        activeMeleeDamage?.ClearHitList();
+
         activeCollider.SetActive(true);
+
 
         // --- Charge phase ---
         float elapsed = 0f;
