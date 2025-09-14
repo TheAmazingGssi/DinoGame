@@ -85,6 +85,15 @@
                     "processors": "",
                     "interactions": "Press",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "FriendshipAttack",
+                    "type": "Button",
+                    "id": "5f79e32f-1681-4375-960c-fce157cb4ff2",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -613,6 +622,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Emote",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b68f1bc0-8822-4f02-9003-1e8b3f3c4649",
+                    "path": "<HID::HID-USB>/button7",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FriendshipAttack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "297f3ae5-d76f-4c6b-8d31-ae6f53680d73",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FriendshipAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

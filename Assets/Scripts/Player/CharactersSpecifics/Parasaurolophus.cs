@@ -50,7 +50,7 @@ public class Parasaurolophus : CharacterBase
         specialMeleeDamage?.ApplyDamage
         (
             stats.specialAttackDamage,
-            false,                        
+            true,                        
             specialColliderGO.transform,         
             _mainPlayerController
         );

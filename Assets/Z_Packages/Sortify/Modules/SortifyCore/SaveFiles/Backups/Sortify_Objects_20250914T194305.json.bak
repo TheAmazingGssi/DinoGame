@@ -4,12 +4,6 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "Level 3"
-        },
-        {
-            "colors": [],
-            "styles": [],
-            "showComponents": [],
             "sceneName": "CharacterSelectScene"
         },
         {
@@ -46,13 +40,19 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "Main Menu"
+            "sceneName": "Level 2"
         },
         {
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "Level 2"
+            "sceneName": "Level 3"
+        },
+        {
+            "colors": [],
+            "styles": [],
+            "showComponents": [],
+            "sceneName": "Main Menu"
         }
     ]
 }

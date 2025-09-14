@@ -61,6 +61,15 @@ MonoBehaviour:
   SpencerSplash: {fileID: -2008892715, guid: f7ee598b8b497fc4e930fe0d73e6d823, type: 3}
   ParisSplash: {fileID: -1965858845, guid: f7ee598b8b497fc4e930fe0d73e6d823, type: 3}
   AndrewSplash: {fileID: 480617949, guid: f7ee598b8b497fc4e930fe0d73e6d823, type: 3}
+  comboRefrences:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  TerryCombo: {fileID: 585266930486228687, guid: 46fa3479c51476843a5a3883be1c6bba, type: 3}
+  SpencerCombo: {fileID: -6036366586587616525, guid: 46fa3479c51476843a5a3883be1c6bba, type: 3}
+  ParisCombo: {fileID: -6502246629270459742, guid: 46fa3479c51476843a5a3883be1c6bba, type: 3}
+  AndrewCombo: {fileID: -1637368278561370818, guid: 46fa3479c51476843a5a3883be1c6bba, type: 3}
 --- !u!1001 &4627374022803660930
 PrefabInstance:
   m_ObjectHideFlags: 0

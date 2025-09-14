@@ -80,6 +80,9 @@ MonoBehaviour:
   Emote:
     m_PersistentCalls:
       m_Calls: []
+  FriendshipAttack:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2913691901651809283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,6 +276,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: c1afd33c-2dc7-4713-8bc0-017863984fa6
     m_ActionName: 'Player/Emote[/DualShock4GamepadHID/rightStick/down,/DualShock4GamepadHID1/rightStick/down,/DualShock4GamepadHID/buttonSouth,/DualShock4GamepadHID1/buttonSouth,/HID-USB1/button3,/HID-USB/button3]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1198035408929009965}
+        m_TargetAssemblyTypeName: PlayerEntity, Assembly-CSharp
+        m_MethodName: InvokeFriendshipAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 5f79e32f-1681-4375-960c-fce157cb4ff2
+    m_ActionName: 'Player/FriendshipAttack[/HID-USB/button7,/HID-USB1/button7,/DualShock4GamepadHID/leftTrigger]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

@@ -51,13 +51,23 @@ public class EnemyController : MonoBehaviour
 
     private void Movement()
     {
-        if (manager.AttackManager.IsAttacking || manager.KnockbackManager.IsKnockedBack)
+        // If attacking, freeze own movement
+        if (manager.AttackManager.IsAttacking)
         {
             rb.linearVelocity = Vector2.zero;
             moveDirection = Vector3.zero;
             animator.SetFloat(Speed, 0f);
             return;
         }
+
+        // If being knocked back, don't overwrite velocity—just stop steering
+        if (manager.KnockbackManager.IsKnockedBack)
+        {
+            moveDirection = Vector3.zero;
+            animator.SetFloat(Speed, 0f);
+            return;
+        }
+
 
         currentTarget = manager.AttackManager.CurrentTarget;
 

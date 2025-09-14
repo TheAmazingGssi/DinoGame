@@ -429,6 +429,24 @@ public class MainPlayerController : MonoBehaviour
             animator.SetTrigger("Emote");
     }
 
+    public bool FriendshipAttackFlag { get; private set; } = false;
+    public void FriendshipAttack(InputAction.CallbackContext context)
+    {
+        if(!FriendshipAttackFlag)
+            StartCoroutine(RaiseFriendshipFlag());
+    }
+    private IEnumerator RaiseFriendshipFlag()
+    {
+        CoopBarTimer.Instance.PlayersTryingToUlt++;
+        FriendshipAttackFlag = true;
+        yield return new WaitForSeconds(10);
+        FriendshipAttackFlag = false;
+        CoopBarTimer.Instance.PlayersTryingToUlt--;
+    }
+    public void StartCoopActualAttack()
+    {
+        coopAttack.Activate();
+    }
     private IEnumerator ResetAttackCooldown()
     {
         yield return new WaitForSeconds(1f / stats.attacksPerSecond);

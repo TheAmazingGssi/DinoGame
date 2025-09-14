@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class HUDManager : MonoBehaviour
 {
@@ -11,7 +11,17 @@ public class HUDManager : MonoBehaviour
     [SerializeField] private Sprite ParisSplash;
     [SerializeField] private Sprite AndrewSplash;
 
+    [SerializeField] private BarIconRefrence[] comboRefrences;
+    [SerializeField] private Sprite TerryCombo;
+    [SerializeField] private Sprite SpencerCombo;
+    [SerializeField] private Sprite ParisCombo;
+    [SerializeField] private Sprite AndrewCombo;
+
+    [SerializeField] private GameObject comboBarContainer;
+    [SerializeField] private Slider comboBarSlider;
+
     Dictionary<CharacterType, Sprite> splashArts;
+    Dictionary<CharacterType, Sprite> comboArts;
 
     private void Awake()
     {
@@ -20,6 +30,11 @@ public class HUDManager : MonoBehaviour
         splashArts.Add(CharacterType.Spinosaurus, SpencerSplash);
         splashArts.Add(CharacterType.Parasaurolophus, ParisSplash);
         splashArts.Add(CharacterType.Therizinosaurus, AndrewSplash);
+        comboArts = new Dictionary<CharacterType, Sprite>();
+        comboArts.Add(CharacterType.Triceratops, TerryCombo);
+        comboArts.Add(CharacterType.Spinosaurus, SpencerCombo);
+        comboArts.Add(CharacterType.Parasaurolophus, ParisCombo);
+        comboArts.Add(CharacterType.Therizinosaurus, AndrewCombo);
 
         HideAll = false;
     }
@@ -45,8 +60,14 @@ public class HUDManager : MonoBehaviour
         {
             for (int i = 0; i < hudRefrences.Length; i++)
                 hudRefrences[i].gameObject.SetActive(false);
+            comboBarContainer.SetActive(false);
             return;
         }
+
+        comboBarContainer.SetActive(true);
+        comboBarSlider.maxValue = CoopBarTimer.Instance.MaxFill;
+        comboBarSlider.value = CoopBarTimer.Instance.CurrentFill;
+
         for (int i = 0; i < hudRefrences.Length; i++)
         {
             if (i < PlayerEntity.PlayerList.Count && PlayerEntity.PlayerList[i].CombatManager)
@@ -61,10 +82,16 @@ public class HUDManager : MonoBehaviour
                 hudRefrences[i].BlockBar.value = PlayerEntity.PlayerList[i].CombatManager.CurrentBlockStamina;
                 hudRefrences[i].ScoreText.text = PlayerEntity.PlayerList[i].MainPlayerController.GetScore().ToString("N0");
                 hudRefrences[i].SpecialIcon[PlayerEntity.PlayerList[i].CharacterType].SetActive(true);
-                //Debug.Log($"Current block: {PlayerEntity.PlayerList[i].CombatManager.CurrentBlockStamina}");
+
+                comboRefrences[i].PositionObject.gameObject.SetActive(true);
+                comboRefrences[i].Icon.gameObject.SetActive(PlayerEntity.PlayerList[i].MainPlayerController.FriendshipAttackFlag);
+                comboRefrences[i].Icon.sprite = comboArts[PlayerEntity.PlayerList[i].CharacterType];
             }
             else
+            {
                 hudRefrences[i].gameObject.SetActive(false);
+                comboRefrences[i].PositionObject.gameObject.SetActive(false);
+            }
         }
     }
 

@@ -3,6 +3,10 @@ using System.Collections.Generic;
 
 public class MeleeDamage : MonoBehaviour
 {
+    [Header("Knockback Tuning")]
+    [SerializeField] private float normalKnockbackMultiplier = 1f;   
+    [SerializeField] private float specialKnockbackMultiplier = 1f;   
+    
     [SerializeField] private MainPlayerController playerController;
 
     private HashSet<Collider2D> enemiesHit = new HashSet<Collider2D>();
@@ -43,18 +47,17 @@ public class MeleeDamage : MonoBehaviour
                 Damage = currentDamage,
                 SourceGO = playerController != null ? playerController.gameObject : null,
                 SourceMPC = playerController,
-                Knockback = isSpecialAttack
+                Knockback = false
             });
 
-            // Apply knockback safely for specials
-            if (isSpecialAttack)
-            {
-                KnockbackHelper.ApplyKnockback(
-                    other.transform,
-                    attackSource != null ? attackSource : transform,
-                    KnockbackHelper.GetKnockbackForceFromDamage(currentDamage, true)
-                );
-            }
+            // knockback tuning - apply on all hits 
+            float baseForce = KnockbackHelper.GetKnockbackForceFromDamage(currentDamage, isSpecialAttack);
+            float tuned = baseForce * (isSpecialAttack ? specialKnockbackMultiplier : normalKnockbackMultiplier);
+            KnockbackHelper.ApplyKnockback(
+                other.transform,
+                attackSource != null ? attackSource : transform,
+                tuned
+            );
         }
     }
 
