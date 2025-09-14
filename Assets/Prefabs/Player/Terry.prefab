@@ -4945,6 +4945,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2079129652870536121, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_Radius
+      value: 0.06
+      objectReference: {fileID: 0}
     - target: {fileID: 2242870450885965078, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5085,6 +5089,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 1.699997
       objectReference: {fileID: 0}
+    - target: {fileID: 5689738827884331913, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5850984633255623221, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.13
@@ -5133,6 +5141,10 @@ PrefabInstance:
       propertyPath: 'mySounds.Array.data[1]'
       value: 
       objectReference: {fileID: 11400000, guid: 682cdb9ba0bb60f48bbfa1f4ed972b22, type: 2}
+    - target: {fileID: 6481338595905491169, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_Radius
+      value: 0.06
+      objectReference: {fileID: 0}
     - target: {fileID: 6511813499013299741, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_Name
       value: SpecialVfxOld
@@ -5200,6 +5212,10 @@ PrefabInstance:
     - target: {fileID: 7268481246512268016, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018182521356656323, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8694530285067113405, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_Radius

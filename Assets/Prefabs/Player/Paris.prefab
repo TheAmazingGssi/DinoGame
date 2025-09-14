@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5416b045e64cbe941acdd51e1df901e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalKnockbackMultiplier: 1
+  specialKnockbackMultiplier: 1
   playerController: {fileID: 3078393491007480859}
 --- !u!61 &3836597328698782274
 BoxCollider2D:
@@ -137,6 +139,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5416b045e64cbe941acdd51e1df901e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalKnockbackMultiplier: 1
+  specialKnockbackMultiplier: 1
   playerController: {fileID: 3078393491007480859}
 --- !u!61 &7135064801839865043
 BoxCollider2D:
@@ -219,6 +223,10 @@ PrefabInstance:
     - target: {fileID: 1632369837632200801, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079129652870536121, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_Radius
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 2242870450885965078, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_LocalScale.x
@@ -356,6 +364,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 1.9000015
       objectReference: {fileID: 0}
+    - target: {fileID: 5689738827884331913, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.11
+      objectReference: {fileID: 0}
     - target: {fileID: 5850984633255623221, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.1439
@@ -372,6 +384,10 @@ PrefabInstance:
       propertyPath: 'mySounds.Array.data[1]'
       value: 
       objectReference: {fileID: 11400000, guid: 513ad14fbed08a54ebb10aec8ce08876, type: 2}
+    - target: {fileID: 6481338595905491169, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_Radius
+      value: 0.06
+      objectReference: {fileID: 0}
     - target: {fileID: 6716259569256595975, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: 'mySounds.Array.data[1]'
       value: 
@@ -424,6 +440,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 22100000, guid: 1eaad9905e0cf1d4483fbe983defed92, type: 2}
+    - target: {fileID: 8018182521356656323, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.11
+      objectReference: {fileID: 0}
     - target: {fileID: 8022900876227695804, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_IsActive
       value: 0
