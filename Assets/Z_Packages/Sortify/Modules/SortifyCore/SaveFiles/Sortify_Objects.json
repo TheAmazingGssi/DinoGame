@@ -16,18 +16,6 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "Main Menu"
-        },
-        {
-            "colors": [],
-            "styles": [],
-            "showComponents": [],
-            "sceneName": "The End"
-        },
-        {
-            "colors": [],
-            "styles": [],
-            "showComponents": [],
             "sceneName": "Win Screen"
         },
         {
@@ -40,13 +28,25 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
+            "sceneName": "Lose Screen"
+        },
+        {
+            "colors": [],
+            "styles": [],
+            "showComponents": [],
             "sceneName": "Level 1"
         },
         {
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "Lose Screen"
+            "sceneName": "The End"
+        },
+        {
+            "colors": [],
+            "styles": [],
+            "showComponents": [],
+            "sceneName": "Main Menu"
         }
     ]
 }

@@ -125,6 +125,7 @@ Transform:
   - {fileID: 7017156817951652606}
   - {fileID: 4755382526223380705}
   - {fileID: 5070010270010171729}
+  - {fileID: 169649146414599512}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7022572441651464058
@@ -467,6 +468,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 7022572441651464058}
+  damagePopupPrefab: {fileID: 7074756097164176760, guid: 934910bdf852bf440a6040d43c24baf7, type: 3}
+  damagePopupAnchor: {fileID: 169649146414599512}
+  damagePopupJitter: {x: 0.25, y: 0.15}
+  damagePopupColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &4239831697249666521
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,6 +554,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackCollider: {fileID: 7763142611271861617}
+--- !u!1 &4389800092360093441
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 169649146414599512}
+  m_Layer: 0
+  m_Name: Damage Popup Anchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &169649146414599512
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4389800092360093441}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.97410107, y: 11.02, z: -0.089695096}
+  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1081683106100673034}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6658617843642816480
 GameObject:
   m_ObjectHideFlags: 0

@@ -253,6 +253,9 @@ public class MainPlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (knockbackManager != null && knockbackManager.IsKnockedBack)
+            return;
+        
         if (!isFrozen)
         {
             if (!isAttacking && !isFallen && !isEmoting && !isBlocking && (!isPerformingSpecialMovement || characterType == CharacterType.Triceratops))
@@ -271,9 +274,8 @@ public class MainPlayerController : MonoBehaviour
     {
         if (knockbackManager != null && knockbackManager.IsKnockedBack)
         {
-            rb.linearVelocity = Vector2.zero;
-            animator.SetFloat("Speed", 0f); // Keeps animation in idle
-            return; // Skip movement while in knockback
+            animator.SetFloat("Speed", 0f);
+            return;
         }
 
         if (isEndOfLevel) return;

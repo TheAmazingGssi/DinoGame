@@ -6,6 +6,12 @@ public class EnemyCombatManager : CombatManager
     private static readonly int HURT = Animator.StringToHash("Hurt");
 
     [SerializeField] private EnemyManager manager;
+    
+    [SerializeField] private DamagePopup damagePopupPrefab;
+    [SerializeField] private Transform damagePopupAnchor;
+    [SerializeField] private Vector2 damagePopupJitter = new Vector2(0.25f, 0.15f);
+    [SerializeField] private Color damagePopupColor = new Color(0.9960785f, 0.6784314f, 0.1098039f);
+
 
     public void Initialize(float maxHealth)
     {
@@ -20,6 +26,13 @@ public class EnemyCombatManager : CombatManager
 
     public override void TakeDamage(DamageArgs damageArgs)
     {
+        int shownDamage = Mathf.RoundToInt(damageArgs.Damage);
+        Vector3 spawnPos =
+            (damagePopupAnchor ? damagePopupAnchor.position : transform.position) +
+            new Vector3(Random.Range(-damagePopupJitter.x, damagePopupJitter.x),
+                Random.Range(-damagePopupJitter.y, damagePopupJitter.y),
+                0f);
+        
         if (damageArgs.SourceMPC != null)
         {
             PlayerCombatManager playerSource = damageArgs.SourceMPC.GetComponent<PlayerCombatManager>();
@@ -31,7 +44,13 @@ public class EnemyCombatManager : CombatManager
         }
 
         base.TakeDamage(damageArgs);
+        
+        if (damagePopupPrefab != null)
+        {
+            DamagePopup.Spawn(damagePopupPrefab, spawnPos, shownDamage, damagePopupColor);
+        }
     }
+
 
     private void HandleHurt(DamageArgs damageArgs)
     {
@@ -63,7 +82,6 @@ public class EnemyCombatManager : CombatManager
     
     public virtual void OnHurtAnimationComplete()
     {
-        // Optional: reset hurt state or trigger recovery logic
         Debug.Log($"{gameObject.name} hurt animation complete");
     }
 
