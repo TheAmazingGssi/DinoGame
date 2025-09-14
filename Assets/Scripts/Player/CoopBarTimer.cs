@@ -28,4 +28,8 @@ public class CoopBarTimer : MonoBehaviour
             PlayerEntity.PlayerList[0].MainPlayerController.StartCoopActualAttack();
         }
     }
+    public void ResetFill()
+    {
+        CurrentFill = 0;
+    }
 }

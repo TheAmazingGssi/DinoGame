@@ -49,6 +49,7 @@ public class TutorialSlideshow : MonoBehaviour
         
         // Enable Game Start
         running = false;
+        CoopBarTimer.Instance.ResetFill();
         Destroy(tutorialEnemy);
         
         goSign?.SetActive(true);
