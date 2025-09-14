@@ -19,6 +19,7 @@ public class HUDManager : MonoBehaviour
 
     [SerializeField] private GameObject comboBarContainer;
     [SerializeField] private Slider comboBarSlider;
+    [SerializeField] private ParticleSystem coopAttackReadyParticles;
 
     Dictionary<CharacterType, Sprite> splashArts;
     Dictionary<CharacterType, Sprite> comboArts;
@@ -67,6 +68,11 @@ public class HUDManager : MonoBehaviour
         comboBarContainer.SetActive(true);
         comboBarSlider.maxValue = CoopBarTimer.Instance.MaxFill;
         comboBarSlider.value = CoopBarTimer.Instance.CurrentFill;
+
+        if (CoopBarTimer.Instance.CurrentFill >= CoopBarTimer.Instance.MaxFill && !coopAttackReadyParticles.isPlaying)
+            coopAttackReadyParticles.Play();
+        else if (CoopBarTimer.Instance.CurrentFill < CoopBarTimer.Instance.MaxFill && coopAttackReadyParticles.isPlaying)
+            coopAttackReadyParticles.Stop();
 
         for (int i = 0; i < hudRefrences.Length; i++)
         {
