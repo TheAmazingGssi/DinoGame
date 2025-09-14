@@ -81,6 +81,18 @@ public class PlayerEntity : MonoBehaviour
         uiController?.gameObject.SetActive(true);
         PlayerList.Add(this);
     }
+    public void DestroyMe()
+    {
+        PlayerList.Remove(this);
+        if (MainPlayerController)
+            Destroy(MainPlayerController.gameObject);
+        if (uiController)
+            Destroy(uiController.gameObject);
+        if (selector)
+            Destroy(selector.gameObject);
+        Destroy(gameObject);
+        
+    }
 
     private void SetCharacterInformation()
     {

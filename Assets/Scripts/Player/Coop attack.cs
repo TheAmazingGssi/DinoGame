@@ -13,7 +13,8 @@ public class CoopAttack : MonoBehaviour
     {
         foreach (var enemy in new List<EnemyManager>(GameManager.Instance.ActiveEnemies))
         {
-            enemy.CombatManager.TakeDamage(new DamageArgs(1000));
+            if (enemy && enemy?.CombatManager) 
+                enemy.CombatManager.TakeDamage(new DamageArgs(1000));
         }
         StartCoroutine(EffectCoroutine());
     }
