@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class CoopBarTimer : MonoBehaviour
 {
-    public static CoopBarTimer Instance;
+    [HideInInspector] public static CoopBarTimer Instance;
     public float MaxFill { get; private set; } = 60;
     public float CurrentFill { get; private set; } = 0;
 
-    public int PlayersTryingToUlt = 0;
+    [HideInInspector] public int PlayersTryingToUlt = 0;
 
     private void Awake()
     {
