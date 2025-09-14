@@ -40,12 +40,6 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "Level 3"
-        },
-        {
-            "colors": [],
-            "styles": [],
-            "showComponents": [],
             "sceneName": "Main Menu"
         },
         {
@@ -53,6 +47,12 @@
             "styles": [],
             "showComponents": [],
             "sceneName": "Level 1"
+        },
+        {
+            "colors": [],
+            "styles": [],
+            "showComponents": [],
+            "sceneName": "Level 3"
         }
     ]
 }
