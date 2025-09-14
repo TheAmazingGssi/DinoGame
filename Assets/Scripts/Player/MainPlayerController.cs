@@ -336,7 +336,6 @@ public class MainPlayerController : MonoBehaviour
             soundPlayer.PlaySound(0);
 
             StartCoroutine(ResetAttackCooldown());
-            //coopAttack.Activate();----------------------------------------------coop attack call---------------------------------------------------------------
         }
     }
 
@@ -408,14 +407,7 @@ public class MainPlayerController : MonoBehaviour
             }
         }
     }
-
-    //----------------------------------------------------Will be used for coop attack----------------------------------------------------
-    public void Pause(InputAction.CallbackContext context)
-    {
-        coopAttack.Activate();
-    }
-    //----------------------------------------------------Will be used for coop attack----------------------------------------------------
-
+    
     
     public void Emote(InputAction.CallbackContext context)
     {
