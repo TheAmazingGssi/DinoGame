@@ -40,13 +40,19 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
+            "sceneName": "Level 1"
+        },
+        {
+            "colors": [],
+            "styles": [],
+            "showComponents": [],
             "sceneName": "Main Menu"
         },
         {
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "Level 1"
+            "sceneName": "Level 2"
         }
     ]
 }
