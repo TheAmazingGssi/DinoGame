@@ -16,6 +16,6 @@ MonoBehaviour:
   <BaseDamage>k__BackingField: 5
   <StopRange>k__BackingField: 4
   <AttackRange>k__BackingField: 4
-  <Speed>k__BackingField: 1
+  <Speed>k__BackingField: 2
   <Score>k__BackingField: 10
   <immuneToKnockback>k__BackingField: 0
