@@ -1619,7 +1619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8823d5e980308e54d8b3ad01b368fc7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene: 2
+  targetScene: 3
 --- !u!4 &1107998583
 Transform:
   m_ObjectHideFlags: 0
@@ -1646,6 +1646,10 @@ PrefabInstance:
     - target: {fileID: 183581524576869393, guid: 6c7b2a25a251d5f4f88c009e9de69d76, type: 3}
       propertyPath: m_Name
       value: SpawnerManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 183581524576869393, guid: 6c7b2a25a251d5f4f88c009e9de69d76, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4865681152558434639, guid: 6c7b2a25a251d5f4f88c009e9de69d76, type: 3}
       propertyPath: groundCheck
@@ -3095,7 +3099,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2600982548165210631, guid: bdce2f5c95365f440b6bfae0f9c32496, type: 3}
       propertyPath: m_Name
-      value: BasicEnemy
+      value: Tutorial Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 3665692442473732204, guid: bdce2f5c95365f440b6bfae0f9c32496, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3277,7 +3281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7325742026895786494, guid: 0847ae928afd57f4d8a49340a5b29850, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

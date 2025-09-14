@@ -91,6 +91,7 @@ public class VotingManager : MonoBehaviour
         readyPlayers++;
         if (readyPlayers >= PlayerEntity.PlayerList.Count) VotingPhase();
     }
+    
     private void SetUpChoicesText(string[] text)
     {
         for (int i = 0; i < choicesTexts.Length; i++)
