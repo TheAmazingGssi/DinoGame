@@ -10,7 +10,7 @@ public class LandMoonVSCrushMoonVSSearchLandingZone : Vote
         ", but how will you land?";
 
     public override string[] Choices => new string[3] { "Land on the moon safely",
-        "Crush on the moon (like a badass)", "Search for a different landing zone"};
+        "Crush on the moon? (like a badass)", "Search for a different landing zone"};
 
 
     public override void ApplyEffects(int i) //add logic later
