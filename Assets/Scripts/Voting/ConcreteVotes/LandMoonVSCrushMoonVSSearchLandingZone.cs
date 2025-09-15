@@ -12,16 +12,21 @@ public class LandMoonVSCrushMoonVSSearchLandingZone : Vote
     public override string[] Choices => new string[3] { "Land on the moon safely",
         "Crush on the moon (like a badass)", "Search for a different landing zone"};
 
+
     public override void ApplyEffects(int i) //add logic later
     {
         switch (i)
         {
             case 0:
+                VoteEffectManager.Instance.Ending = Ending.Moon;
                 break;
             case 1:
+                VoteEffectManager.Instance.Ending = Ending.Space;
                 break;
             case 2:
+                VoteEffectManager.Instance.Ending = Ending.Mars;
                 break;
         }
+        VoteEffectManager.Instance.StoreFinaleLevelEffect(this, i);
     }
 }
