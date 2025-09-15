@@ -10,8 +10,10 @@ public class MainMenuManager : MonoBehaviour
     }
     public void MoveToCharacterSelect()
     {
-        //foreach (PlayerEntity player in PlayerEntity.PlayerList)
-        //    player.DestroyMe();
+        while (PlayerEntity.PlayerList.Count > 0)
+            PlayerEntity.PlayerList[0].DestroyMe();
+
+        VoteEffectManager.Instance?.ClearAll();
 
         sceneLoader.LoadScene(Scenes.CharacterSelect);
     }
