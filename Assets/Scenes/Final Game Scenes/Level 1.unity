@@ -2730,6 +2730,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 145947575054547184, guid: f18f60295d050934aa2ee3a62285a6c7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 455999829245068831, guid: f18f60295d050934aa2ee3a62285a6c7, type: 3}
+      propertyPath: m_MaxParticleSize
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1144733874889743429, guid: f18f60295d050934aa2ee3a62285a6c7, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1144733874889743429, guid: f18f60295d050934aa2ee3a62285a6c7, type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1190815754976003910, guid: f18f60295d050934aa2ee3a62285a6c7, type: 3}
       propertyPath: meteorFlareRB
       value: 
@@ -2790,6 +2806,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6893570560955131984, guid: f18f60295d050934aa2ee3a62285a6c7, type: 3}
+      propertyPath: m_MaxParticleSize
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 6913037585578563665, guid: f18f60295d050934aa2ee3a62285a6c7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.44
@@ -2797,6 +2817,10 @@ PrefabInstance:
     - target: {fileID: 6913037585578563665, guid: f18f60295d050934aa2ee3a62285a6c7, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297440960447425716, guid: f18f60295d050934aa2ee3a62285a6c7, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8060187044250184196, guid: f18f60295d050934aa2ee3a62285a6c7, type: 3}
       propertyPath: <MaxFill>k__BackingField
