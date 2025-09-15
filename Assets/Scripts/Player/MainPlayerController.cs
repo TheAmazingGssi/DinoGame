@@ -353,7 +353,8 @@ public bool IsFallen() => isFallen;
 
     public void SpecialStarted(InputAction.CallbackContext context)
     {
-        if (context.performed && !isFallen && canSpecial && !isEmoting && combatManager.DeductStamina(stats.specialAttackCost))
+        if (context.performed && !isFallen && canSpecial && !isEmoting && !isFrozen
+            && combatManager.DeductStamina(stats.specialAttackCost))
         {
             canSpecial = false;
             animController.TriggerSpecial();
@@ -442,9 +443,13 @@ public bool IsFallen() => isFallen;
     
     private IEnumerator RaiseFriendshipFlag()
     {
+        yield return new WaitUntil(() => GameManager.Instance != null && CoopBarTimer.Instance != null);
+
         CoopBarTimer.Instance.PlayersTryingToUlt++;
         FriendshipAttackFlag = true;
+
         yield return new WaitForSeconds(GameManager.Instance.VotePersistenceDuration);
+
         FriendshipAttackFlag = false;
         CoopBarTimer.Instance.PlayersTryingToUlt--;
     }
@@ -462,13 +467,10 @@ public bool IsFallen() => isFallen;
 
     private IEnumerator PerformSpecialAttackCoroutine()
     {
-        if (!isFrozen)
-        {
-            isPerformingSpecialMovement = true;
-            yield return characterScript.PerformSpecial((dmg) => { });
-            isPerformingSpecialMovement = false;
-            canSpecial = true;
-        }
+        isPerformingSpecialMovement = true;
+        yield return characterScript.PerformSpecial((dmg) => { });
+        isPerformingSpecialMovement = false;
+        canSpecial = true;
     }
 
     private MainPlayerController FindNearestFallenPlayer()

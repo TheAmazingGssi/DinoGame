@@ -147,7 +147,7 @@ PrefabInstance:
     - target: {fileID: 4579190218097802738, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: spriteRenderer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1092931218387466040}
     - target: {fileID: 4772631282887250927, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -312,5 +312,10 @@ PrefabInstance:
 --- !u!95 &884594846224434765 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8958741867143242686, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+  m_PrefabInstance: {fileID: 8076482522464609779}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1092931218387466040 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 9169242216697959115, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
   m_PrefabInstance: {fileID: 8076482522464609779}
   m_PrefabAsset: {fileID: 0}

@@ -5277,6 +5277,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 276e49ebf10c3f748984319adc4f0af5, type: 3}
+--- !u!114 &523049159 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5210623340755356135, guid: 276e49ebf10c3f748984319adc4f0af5, type: 3}
+  m_PrefabInstance: {fileID: 523049158}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48a478c17a2c1d7468fb714380c38c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &555016196 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 575467988714844679, guid: 7c31a47d59140654ca1d1cac2150cb57, type: 3}
@@ -5836,24 +5847,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 040a18b7c1853b647a3c838d6364aba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveLocations:
-  - LeftMost: 0
-    RightMost: 0
-  - LeftMost: 32
-    RightMost: 34
-  - LeftMost: 54
-    RightMost: 58
-  vote: {fileID: 11400000, guid: 6e9e9233c8cf54841a5a2e4b01603e09, type: 2}
-  <LevelNumber>k__BackingField: 3
-  stagesVote: {fileID: 1724298587}
-  cameraMovement: {fileID: 575096511099344572}
-  sceneLoader: {fileID: 1107998582}
-  icetroidSpawner: {fileID: 489131054}
-  endLevelSpotlight: {fileID: 0}
-  <SpawnerManager>k__BackingField: {fileID: 1196741510}
-  VotePersistenceDuration: 10
-  FinaleLevel: 3
-  IsInCoopAttack: 0
   waveCompleted:
     m_PersistentCalls:
       m_Calls:
@@ -5869,6 +5862,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  waveLocations:
+  - LeftMost: 0
+    RightMost: 0
+  - LeftMost: 32
+    RightMost: 34
+  - LeftMost: 54
+    RightMost: 58
+  vote: {fileID: 11400000, guid: 6e9e9233c8cf54841a5a2e4b01603e09, type: 2}
+  <LevelNumber>k__BackingField: 3
+  VotePersistenceDuration: 10
+  FinaleLevel: 3
+  stagesVote: {fileID: 1724298587}
+  cameraMovement: {fileID: 575096511099344572}
+  sceneLoader: {fileID: 1107998582}
+  endLevelSpotlight: {fileID: 523049159}
+  <SpawnerManager>k__BackingField: {fileID: 1196741510}
+  icetroidSpawner: {fileID: 489131054}
+  IsInCoopAttack: 0
   ActiveEnemies: []
 --- !u!4 &1657487361
 Transform:

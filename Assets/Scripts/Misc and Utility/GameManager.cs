@@ -6,38 +6,45 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    //Singleton
+// ---------- Singleton & Static Events ----------
     public static GameManager Instance;
-
     public static System.Action<MainPlayerController> OnLevelEnd;
 
-    public event UnityAction<MainPlayerController> OnScoreChange;
+// ---------- Instance Events ----------
+    public event UnityEngine.Events.UnityAction<MainPlayerController> OnScoreChange;
+    [SerializeField] private UnityEngine.Events.UnityEvent waveCompleted = new UnityEngine.Events.UnityEvent();
 
-    [Header("Settings")]
+
+// =====================  INSPECTOR: SETTINGS  =====================
+    [Header("Settings ▸ Level & Waves")]
     [SerializeField] private CameraLocations[] waveLocations;
     [SerializeField] private Vote vote;
     [field: SerializeField] public int LevelNumber { get; private set; } = 1;
+    public float VotePersistenceDuration = 10f;
+    public int FinaleLevel = 3;
 
-    [Header("Refrences")]
+
+// =====================  INSPECTOR: REFERENCES  =====================
+    [Header("References")]
     [SerializeField] private VotingManager stagesVote;
     [SerializeField] private CameraMovement cameraMovement;
     [SerializeField] private SceneLoader sceneLoader;
-    public IcetroidSpawner icetroidSpawner;
     [SerializeField] private EndLevelSpotlight endLevelSpotlight;
     [field: SerializeField] public SpawnerManager SpawnerManager { get; private set; }
+    public IcetroidSpawner icetroidSpawner;
 
-    public float VotePersistenceDuration = 10f;
-    public int FinaleLevel = 3;
+
+// =====================  RUNTIME STATE  =====================
+    [Header("State ▸ Voting & Effects (Runtime)")]
+    public Dictionary<Vote, int> FinaleLevelEffects = new Dictionary<Vote, int>();
+    public Dictionary<Vote, int> NextLevelEffects   = new Dictionary<Vote, int>();
     public bool IsInCoopAttack = false;
 
-    //Variables off inspector
-    public Dictionary<Vote, int> FinaleLevelEffects = new Dictionary<Vote, int>();
-    public Dictionary<Vote, int> NextLevelEffects = new Dictionary<Vote, int>();
+    [Header("State ▸ Counters & Collections (Runtime)")]
     private int enemiesOnStage = 0;
-    private int currentWave = 0;
-    [SerializeField] UnityEvent waveCompleted = new UnityEvent();
-
+    private int currentWave    = 0;
     public List<EnemyManager> ActiveEnemies;
+
 
     void Awake()
     {

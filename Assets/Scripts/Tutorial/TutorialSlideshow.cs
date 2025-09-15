@@ -19,7 +19,7 @@ public class TutorialSlideshow : MonoBehaviour
     [Tooltip("Start automatically on play")]
     [SerializeField] private bool autoStart = true;
     
-    [SerializeField] public bool running { get; private set; } = true;
+    [field: SerializeField] public bool running { get; private set; } = true;
     void Start()
     {
         if (autoStart)
@@ -49,9 +49,9 @@ public class TutorialSlideshow : MonoBehaviour
         
         // Enable Game Start
         running = false;
+        yield return new WaitUntil(() => CoopBarTimer.Instance != null);
         CoopBarTimer.Instance.ResetFill();
         Destroy(tutorialEnemy);
-        
         goSign?.SetActive(true);
         startCollider?.SetActive(true);
         playersHUD?.SetActive(true);

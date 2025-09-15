@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -25,37 +24,41 @@ public class Parasaurolophus : CharacterBase
             yield break;
         }
 
-        // Pick the correct side (uses the BoxCollider2D with MeleeDamage on that side)
         GameObject specialColliderGO = facingRight ? specialColliderGORight : specialColliderGOLeft;
         MeleeDamage specialMeleeDamage = facingRight ? specialMeleeDamageRight : specialMeleeDamageLeft;
-        
-        //float newVfxStartPos = facingRight ? absVfxStartPositionXValue : absVfxStartPositionXValue * -1;
-        //Vector3 vfxstartPos = animController.SpecialVfxObject.gameObject.transform.position;
-        //animController.SpecialVfxObject.transform.position = new Vector3(newVfxStartPos, vfxstartPos.y, vfxstartPos.z);
-        
+        if (!specialMeleeDamage)
+        {
+            Debug.LogWarning("MeleeDamage component missing on the active special collider!");
+            yield break;
+        }
+
         _mainPlayerController.ToggleIsAttacking();
-        specialColliderGO.SetActive(true);
-        
-        specialMeleeDamage?.PrepareDamage
-        (
+
+        // Prepare BEFORE enabling so OnEnable/CheckExistingOverlaps uses correct damage
+        specialMeleeDamage.PrepareDamage(
             stats.specialAttackDamage,
-            true,                                   
-            specialColliderGO.transform,             
+            true,
+            specialColliderGO.transform,
             _mainPlayerController
         );
+
+        specialColliderGO.SetActive(true);
+
+        // Make physics aware of the new collider state, then wait a physics tick
+        Physics2D.SyncTransforms();
+        yield return new WaitForFixedUpdate();
 
         onSpecial?.Invoke(stats.specialAttackDamage);
 
-        // Apply damage using the active BoxCollider2D (MeleeDamage will handle per-target and knockback via attackSource)
-        specialMeleeDamage?.ApplyDamage
-        (
+        // Single burst hit now that overlaps are valid
+        specialMeleeDamage.ApplyDamage(
             stats.specialAttackDamage,
-            true,                        
-            specialColliderGO.transform,         
+            true,
+            specialColliderGO.transform,
             _mainPlayerController
         );
-        
 
+        // VFX timing
         yield return new WaitForSeconds(specialVfxActivationTime);
         animController.TriggerSpecialVfx();
         yield return new WaitForSeconds(restOfSpecialActivationTime);
@@ -63,5 +66,4 @@ public class Parasaurolophus : CharacterBase
         specialColliderGO.SetActive(false);
         _mainPlayerController.ToggleIsAttacking();
     }
-    
 }

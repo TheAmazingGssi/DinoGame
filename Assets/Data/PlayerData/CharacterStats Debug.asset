@@ -53,8 +53,8 @@ MonoBehaviour:
     blockCost: 1
     blockRegenRate: 1
   - characterName: Therizinosaurus
-    maxHealth: 100
-    stamina: 100
+    maxHealth: 1000
+    stamina: 10000
     movementSpeed: 4
     attacksPerSecond: 3
     damageMin: 5
