@@ -34,7 +34,7 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "Level 2"
+            "sceneName": "Level 1"
         },
         {
             "colors": [],
@@ -46,13 +46,13 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "Main Menu"
+            "sceneName": "Level 2"
         },
         {
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "Level 1"
+            "sceneName": "Main Menu"
         }
     ]
 }

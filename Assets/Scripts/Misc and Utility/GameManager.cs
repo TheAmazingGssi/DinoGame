@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     [field: SerializeField] public SpawnerManager SpawnerManager { get; private set; }
 
     public int FinaleLevel = 3;
+    public bool IsInCoopAttack = false;
 
     //Variables off inspector
     public Dictionary<Vote, int> FinaleLevelEffects = new Dictionary<Vote, int>();
@@ -84,6 +85,7 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < PlayerEntity.PlayerList.Count; i++)
             if (PlayerEntity.PlayerList[i].CombatManager.CurrentHealth <= 0)
                 counter++;
+        
         if (counter == PlayerEntity.PlayerList.Count)
             sceneLoader.LoadScene(Scenes.LoseScreen);
 
@@ -107,15 +109,29 @@ public class GameManager : MonoBehaviour
     [ContextMenu("End Level")]
     public void LevelEnd() //need to add a call somewhere
     {
+        if (IsInCoopAttack)
+        {
+            StartCoroutine(PostponedLevelEnd());
+            return;
+        }
+        
+        
         foreach (PlayerEntity player in PlayerEntity.PlayerList)
         {
             player.CombatManager.ResetDamageTakenMultiplier();
         }
+        
         MainPlayerController highestScorePlayer = GetHighestScorePlayer().MainPlayerController;
         OnLevelEnd?.Invoke(highestScorePlayer);
         StartCoroutine(VictoryMoment());
         PlayerEntity.SaveScore();
         endLevelSpotlight.DisableDark();
+    }
+    
+    private IEnumerator PostponedLevelEnd()
+    {
+        yield return new WaitForSeconds(3);
+        LevelEnd();
     }
     
     

@@ -160,6 +160,10 @@ PrefabInstance:
       propertyPath: characterType
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4579190218097802738, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: characterStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 1b55fd8bb8e68aa4cbd5e3b8a1e477f7, type: 2}
     - target: {fileID: 5088201830711460902, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_Color.b
       value: 0.48607612

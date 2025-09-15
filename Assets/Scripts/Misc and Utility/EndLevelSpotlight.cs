@@ -26,7 +26,7 @@ public class EndLevelSpotlight : MonoBehaviour
     public void EnableDark()
     {
         for (int i = 0; i < globalLights.Length; i++)
-            globalLights[i].intensity = 0.05f;  // world goes dark
+            globalLights[i].enabled = false;  // world goes dark
 
         if (spotlight) spotlight.enabled = true;  // only spotlight visible
         isDark = true;

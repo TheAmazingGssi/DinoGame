@@ -22,6 +22,7 @@ public class CoopAttack : MonoBehaviour
 
     private IEnumerator CoopAttackSequance()
     {
+        GameManager.Instance.IsInCoopAttack = true;
         meteorFlareRB.transform.position = flareSpawnPosition.position;
         
         meteorFlareRB.gameObject.SetActive(true);
@@ -41,6 +42,9 @@ public class CoopAttack : MonoBehaviour
             if (enemy && enemy?.CombatManager) 
                 enemy.CombatManager.TakeDamage(new DamageArgs(1000));
         }
+        
+        yield return new WaitForSeconds(4.5f);
+        GameManager.Instance.IsInCoopAttack = false;
     }
 
 

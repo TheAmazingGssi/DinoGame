@@ -5243,7 +5243,7 @@ MonoBehaviour:
   baseMaxSpawnInterval: 3
   defaultBurstCount: 3
   defaultBurstInterval: 0.15
-  disableNormalSpawningDuringBurst: 1
+  disableNormalSpawningDuringBurst: 0
 --- !u!4 &489131055
 Transform:
   m_ObjectHideFlags: 0
@@ -6038,6 +6038,7 @@ MonoBehaviour:
   endLevelSpotlight: {fileID: 0}
   <SpawnerManager>k__BackingField: {fileID: 1196741510}
   FinaleLevel: 3
+  IsInCoopAttack: 0
   waveCompleted:
     m_PersistentCalls:
       m_Calls:
