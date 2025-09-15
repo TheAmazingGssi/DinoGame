@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private CameraMovement cameraMovement;
     [SerializeField] private SceneLoader sceneLoader;
     public IcetroidSpawner icetroidSpawner;
+    [SerializeField] private EndLevelSpotlight endLevelSpotlight;
     [field: SerializeField] public SpawnerManager SpawnerManager { get; private set; }
 
     public int FinaleLevel = 3;
@@ -114,6 +115,7 @@ public class GameManager : MonoBehaviour
         OnLevelEnd?.Invoke(highestScorePlayer);
         StartCoroutine(VictoryMoment());
         PlayerEntity.SaveScore();
+        endLevelSpotlight.DisableDark();
     }
     
     
@@ -145,6 +147,7 @@ public class GameManager : MonoBehaviour
     private IEnumerator VictoryMoment()
     {
         yield return new WaitForSeconds(5);
+        endLevelSpotlight.DisableDark();
         StartVote();
     }
     

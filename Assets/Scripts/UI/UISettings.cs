@@ -17,6 +17,7 @@ public class UISettings : ScriptableObject
                 nextReadyTime = Time.time;
             return Vector2.zero;
         }
+        
         //not to swap through all the option in a single frame
         if (Time.time <= nextReadyTime)
             return Vector2.zero;

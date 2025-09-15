@@ -405,6 +405,75 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &676580787
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4119981198940327857, guid: 95d20ea1793f07548999982a4e2e379e, type: 3}
+      propertyPath: spotlight
+      value: 
+      objectReference: {fileID: 1537703773}
+    - target: {fileID: 4119981198940327857, guid: 95d20ea1793f07548999982a4e2e379e, type: 3}
+      propertyPath: 'globalLights.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1533315302}
+    - target: {fileID: 4119981198940327857, guid: 95d20ea1793f07548999982a4e2e379e, type: 3}
+      propertyPath: 'globalLights.Array.data[1]'
+      value: 
+      objectReference: {fileID: 619394801}
+    - target: {fileID: 4280693070238153849, guid: 95d20ea1793f07548999982a4e2e379e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.10975565
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280693070238153849, guid: 95d20ea1793f07548999982a4e2e379e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.7415893
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280693070238153849, guid: 95d20ea1793f07548999982a4e2e379e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.02826315
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280693070238153849, guid: 95d20ea1793f07548999982a4e2e379e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280693070238153849, guid: 95d20ea1793f07548999982a4e2e379e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280693070238153849, guid: 95d20ea1793f07548999982a4e2e379e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280693070238153849, guid: 95d20ea1793f07548999982a4e2e379e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280693070238153849, guid: 95d20ea1793f07548999982a4e2e379e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280693070238153849, guid: 95d20ea1793f07548999982a4e2e379e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280693070238153849, guid: 95d20ea1793f07548999982a4e2e379e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211072387697347859, guid: 95d20ea1793f07548999982a4e2e379e, type: 3}
+      propertyPath: m_Name
+      value: SpotlightManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 95d20ea1793f07548999982a4e2e379e, type: 3}
 --- !u!114 &783053618 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2485348504694633181, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
@@ -1381,6 +1450,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 311198094902854368, guid: 6e17ff37b135abd4caf0c7f5c9a3bfd4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 829368115716204787, guid: 6e17ff37b135abd4caf0c7f5c9a3bfd4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1653,6 +1726,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4518369987837979911, guid: 6e17ff37b135abd4caf0c7f5c9a3bfd4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5491786712364724497, guid: 6e17ff37b135abd4caf0c7f5c9a3bfd4, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1799,6 +1876,7 @@ MonoBehaviour:
   cameraMovement: {fileID: 575096511099344572}
   sceneLoader: {fileID: 1107998582}
   icetroidSpawner: {fileID: 0}
+  endLevelSpotlight: {fileID: 0}
   <SpawnerManager>k__BackingField: {fileID: 1196741510}
   FinaleLevel: 3
   waveCompleted:
@@ -3638,3 +3716,4 @@ SceneRoots:
   - {fileID: 1364992074}
   - {fileID: 1533315303}
   - {fileID: 1537703774}
+  - {fileID: 676580787}

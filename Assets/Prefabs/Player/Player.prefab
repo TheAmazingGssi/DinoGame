@@ -335,6 +335,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5416b045e64cbe941acdd51e1df901e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalKnockbackMultiplier: 1
+  specialKnockbackMultiplier: 1
   playerController: {fileID: 4579190218097802738}
 --- !u!58 &2079129652870536121
 CircleCollider2D:
@@ -606,6 +608,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5416b045e64cbe941acdd51e1df901e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalKnockbackMultiplier: 1
+  specialKnockbackMultiplier: 1
   playerController: {fileID: 4579190218097802738}
 --- !u!58 &6481338595905491169
 CircleCollider2D:
@@ -5986,7 +5990,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
