@@ -995,7 +995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8823d5e980308e54d8b3ad01b368fc7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene: 3
+  targetScene: 4
 --- !u!4 &1107998583
 Transform:
   m_ObjectHideFlags: 0
@@ -1625,6 +1625,7 @@ MonoBehaviour:
   endLevelSpotlight: {fileID: 402679244}
   <SpawnerManager>k__BackingField: {fileID: 1196741510}
   FinaleLevel: 3
+  IsInCoopAttack: 0
   waveCompleted:
     m_PersistentCalls:
       m_Calls: []

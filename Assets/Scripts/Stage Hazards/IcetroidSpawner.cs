@@ -49,7 +49,7 @@ public class IcetroidSpawner : MonoBehaviour
 
     private void Update()
     {
-        if ((disableNormalSpawningDuringBurst && isBursting) || normalSpawningEnabled)
+        if ((disableNormalSpawningDuringBurst && isBursting) || !normalSpawningEnabled)
             return;
 
         if (Time.time >= nextSpawnTime && activeIcetroids < currentMaxIcetroids)

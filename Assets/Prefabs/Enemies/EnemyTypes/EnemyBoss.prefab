@@ -69,6 +69,10 @@ PrefabInstance:
       value: EnemyBoss
       objectReference: {fileID: 0}
     - target: {fileID: 2515911822479905939, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2515911822479905939, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -617110459, guid: 5cf9f23d2ecd990489d8224d35c0dc2f, type: 3}
@@ -100,6 +104,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.0017850762
       objectReference: {fileID: 0}
+    - target: {fileID: 4239831697249666521, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4708579745537201409, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -107,6 +115,10 @@ PrefabInstance:
     - target: {fileID: 4708579745537201409, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: MinDistance
       value: 1.52847
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755382526223380705, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.37
       objectReference: {fileID: 0}
     - target: {fileID: 4755382526223380705, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -129,8 +141,12 @@ PrefabInstance:
       value: -0.80799997
       objectReference: {fileID: 0}
     - target: {fileID: 7017156817951652606, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017156817951652606, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.62
+      value: 0.8359995
       objectReference: {fileID: 0}
     - target: {fileID: 7022572441651464058, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: enemyData
@@ -164,6 +180,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7763142611271861617, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7775578561474358076, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.69799995
@@ -191,6 +211,10 @@ PrefabInstance:
     - target: {fileID: 8181060215119223495, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_Offset.y
       value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8383288647919494782, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_Radius
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8492816430768677864, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_Controller

@@ -27,7 +27,7 @@ MonoBehaviour:
     blockCost: 1
     blockRegenRate: 1
   - characterName: Spinosaurus
-    maxHealth: 100
+    maxHealth: 1000
     stamina: 100
     movementSpeed: 4
     attacksPerSecond: 1
@@ -40,13 +40,13 @@ MonoBehaviour:
     blockCost: 1
     blockRegenRate: 1
   - characterName: Parasaurolophus
-    maxHealth: 100
+    maxHealth: 1000
     stamina: 100
     movementSpeed: 4
     attacksPerSecond: 1
     damageMin: 15
     damageMax: 20
-    specialAttackCost: 50
+    specialAttackCost: 3000
     specialAttackDamage: 30
     mudSlowFactor: 0.6
     blockStaminaMax: 5
