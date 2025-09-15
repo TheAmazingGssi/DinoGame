@@ -124,6 +124,9 @@ public class IcetroidSpawner : MonoBehaviour
 
     private void SpawnIcetroid()
     {
+        leftEdge = spawnArea.bounds.min.x;
+        rightEdge = spawnArea.bounds.max.x;
+        
         float spawnX = UnityEngine.Random.Range(leftEdge, rightEdge);
         float spawnY = transform.position.y;
         Vector2 spawnPosition = new Vector2(spawnX, spawnY);

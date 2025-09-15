@@ -425,6 +425,7 @@ public class MainPlayerController : MonoBehaviour
         if(!FriendshipAttackFlag)
             StartCoroutine(RaiseFriendshipFlag());
     }
+    
     private IEnumerator RaiseFriendshipFlag()
     {
         CoopBarTimer.Instance.PlayersTryingToUlt++;
@@ -433,10 +434,12 @@ public class MainPlayerController : MonoBehaviour
         FriendshipAttackFlag = false;
         CoopBarTimer.Instance.PlayersTryingToUlt--;
     }
+    
     public void StartCoopActualAttack()
     {
         coopAttack.Activate();
     }
+    
     private IEnumerator ResetAttackCooldown()
     {
         yield return new WaitForSeconds(1f / stats.attacksPerSecond);
@@ -506,15 +509,13 @@ public class MainPlayerController : MonoBehaviour
     private IEnumerator FreezeCoroutine()
     {
         isFrozen = true;
-        rb.linearVelocity = Vector2.zero;
         animController.SetFrozen(true);
-        Debug.Log($"{stats.characterName} mud slow active: {isMudSlowed}");
+        rb.linearVelocity = Vector2.zero;
 
         yield return new WaitForSeconds(freezeLength);
 
         isFrozen = false;
         animController.SetFrozen(false);
-        Debug.Log($"{stats.characterName} mud slow active: {isMudSlowed}");
     }
 
     public void ToggleIsAttacking()
