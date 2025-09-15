@@ -1,12 +1,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Ending
+{
+    Space,
+    Moon,
+    Mars
+}
+
 public class VoteEffectManager : MonoBehaviour
 {
     public static VoteEffectManager Instance;
     private Dictionary<Vote, int> nextLevelEffects = new Dictionary<Vote, int>();
     private Dictionary<Vote, int> finaleLevelEffects = new Dictionary<Vote, int>();
     private int lastLevel = -1;
+
+    public Ending Ending;
 
     private void Awake()
     {
@@ -56,6 +65,15 @@ public class VoteEffectManager : MonoBehaviour
             nextLevelEffects.Clear();
             lastLevel = -1;
         }
+
+        if(currentLevel == -1)
+        {
+            foreach (var pair in finaleLevelEffects)
+            {
+                pair.Key.ApplyEffects(pair.Value);
+            }
+        }
+
     }
 
     public void ClearAll()
