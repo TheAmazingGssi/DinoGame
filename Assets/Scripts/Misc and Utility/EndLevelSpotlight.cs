@@ -3,52 +3,48 @@ using UnityEngine.Rendering.Universal;
 
 public class EndLevelSpotlight : MonoBehaviour
 {
-    [SerializeField] private Light2D[] globalLights; // assign your 2 global lights
-    [SerializeField] private Light spotlight;       // optional: your local spotlight to keep on
+    [Header("Lights")]
+    [SerializeField] private Light2D globalLight;
+    [SerializeField] private Light2D spotlight;
 
-    private float[] originalIntensity;
-    private float spotlightVerticalOffset = 6.38f;
-    private bool[] originalEnabled;
+    [Header("Behavior")]
+    [SerializeField] private float spotlightVerticalOffset = 10.25f;
+
+    [Header("Global Light Intensities (set in Inspector)")]
+    [SerializeField] private float globalLightFullIntensity = 1.5f;   // value when not dark
+    [SerializeField] private float globalLightDarkenedIntensity = 0.15f; // value when dark
+
     private bool isDark;
-
-    void Awake()
-    {
-        originalIntensity = new float[globalLights.Length];
-        originalEnabled   = new bool[globalLights.Length];
-        
-        for (int i = 0; i < globalLights.Length; i++)
-        {
-            originalIntensity[i] = globalLights[i].intensity;
-            originalEnabled[i]   = globalLights[i].enabled;
-        }
-    }
 
     public void EnableDark()
     {
-        for (int i = 0; i < globalLights.Length; i++)
-            globalLights[i].enabled = false;  // world goes dark
-
-        if (spotlight) spotlight.enabled = true;  // only spotlight visible
-        isDark = true;
-
         RelocateSpotlight();
-    }
+       
+        if (globalLight)
+            globalLight.intensity = globalLightDarkenedIntensity;
 
-    private void RelocateSpotlight()
-    {
-        Vector3 playerPosition = GameManager.Instance.GetHighestScorePlayer().transform.position;
-        transform.position = new Vector3(playerPosition.x, playerPosition.y + spotlightVerticalOffset, transform.position.z);
+        if (spotlight != null)
+            spotlight.enabled = true;
+
+        isDark = true;
     }
 
     public void DisableDark()
     {
-        for (int i = 0; i < globalLights.Length; i++)
-        {
-            globalLights[i].enabled  = originalEnabled[i];
-            globalLights[i].intensity = originalIntensity[i];
-        }
+        if (globalLight)
+            globalLight.intensity = globalLightFullIntensity;  
+
+        if (spotlight != null)
+            spotlight.enabled = false;
+
         isDark = false;
     }
 
     public void ToggleDark() => (isDark ? (System.Action)DisableDark : EnableDark)();
+
+    private void RelocateSpotlight()
+    {
+        Vector3 playerPosition = GameManager.Instance.GetHighestScorePlayer().transform.position;
+        spotlight.transform.position = new Vector3(playerPosition.x, playerPosition.y + spotlightVerticalOffset, transform.position.z);
+    }
 }

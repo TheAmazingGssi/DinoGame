@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private EndLevelSpotlight endLevelSpotlight;
     [field: SerializeField] public SpawnerManager SpawnerManager { get; private set; }
 
+    public float VotePersistenceDuration = 10f;
     public int FinaleLevel = 3;
     public bool IsInCoopAttack = false;
 
@@ -125,7 +126,7 @@ public class GameManager : MonoBehaviour
         OnLevelEnd?.Invoke(highestScorePlayer);
         StartCoroutine(VictoryMoment());
         PlayerEntity.SaveScore();
-        endLevelSpotlight.DisableDark();
+        endLevelSpotlight.EnableDark();
     }
     
     private IEnumerator PostponedLevelEnd()

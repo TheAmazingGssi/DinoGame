@@ -16,48 +16,56 @@ public enum CharacterType
 [RequireComponent(typeof(AnimationController))]
 public class MainPlayerController : MonoBehaviour
 {
-    [Header("Character Settings")]
+    // ---------- Inspector: Serialized References & Settings ----------
+
+    [Header("Character ▸ Identity & Visuals")]
     [SerializeField] private CharacterStats characterStats;
     [SerializeField] private CharacterType characterType;
     [SerializeField] private bool facingRight = true;
     [SerializeField] private SpriteRenderer spriteRenderer;
 
-
-    [Header("Required Components")]
+    [Header("Components ▸ Core (Required)")]
     [SerializeField] public AnimationController animController;
     [SerializeField] private PlayerTransformData playerTransform;
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private GameObject rightMeleeColliderGO;
-    [SerializeField] private GameObject leftMeleeColliderGO;
-    [SerializeField] private SoundPlayer soundPlayer;
-    [SerializeField] private PlayerCombatManager combatManager;
-    [SerializeField] private KnockbackManager knockbackManager;
-    [SerializeField] private MeleeDamage rightMeleeDamage;
-    [SerializeField] private MeleeDamage leftMeleeDamage;
     [SerializeField] private Animator animator;
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private SoundPlayer soundPlayer;
+
+    [Header("Components ▸ Combat")]
+    [SerializeField] private PlayerCombatManager combatManager;
+    [SerializeField] private KnockbackManager knockbackManager;
+    [SerializeField] private GameObject rightMeleeColliderGO;
+    [SerializeField] private GameObject leftMeleeColliderGO;
+    [SerializeField] private MeleeDamage rightMeleeDamage;
+    [SerializeField] private MeleeDamage leftMeleeDamage;
+
+    [Header("Components ▸ UI & Effects")]
     [SerializeField] private GameObject crown;
-    [SerializeField] private GameObject BlockBubble;
+    [SerializeField] private GameObject BlockBubble; // keeping your original casing
     [SerializeField] private ReviveMiniGame reviveMiniGame;
     [SerializeField] private CoopAttack coopAttack;
 
-
-    [Header("Attack Variables")]
+    [Header("Gameplay ▸ Attack")]
     [SerializeField] private float enableDuration = 0.2f;
     [SerializeField] private float disableDelay = 0.5f;
 
-    [Header("Revive Variables")]
+    [Header("Gameplay ▸ Revive")]
     [SerializeField] private float reviveRange = 2f;
 
-    [Header("Freeze Variables")]
+    [Header("Gameplay ▸ Status Effects")]
     [SerializeField] private float freezeLength = 3f;
 
-    [Header("Emote Variables")]
+    [Header("Audio ▸ Emotes")]
     [SerializeField] private AudioClip emoteSound;
 
+
+    // ---------- Runtime: State (not serialized) ----------
+
+    #region Runtime State
     public bool isBlocking { get; private set; } = false;
     public bool blockHeld { get; private set; } = false;
-    
+
     private MainPlayerController currentReviveTarget;
     private float lastAttackTime;
     private float lastSpecialTime;
@@ -70,28 +78,34 @@ public class MainPlayerController : MonoBehaviour
     private bool isMudSlowed = false;
     private bool isPerformingSpecialMovement = false;
     private bool isEndOfLevel = false;
+
     private Vector2 moveInput;
     private bool emoteHeld = false;
     private Vector2 currentVelocity;
+
     private CharacterStats.CharacterData stats;
     private CharacterBase characterScript;
-    private static int activePlayers = 0;//todo: remove if not needed
-    private static int fallenPlayers = 0;//todo: remove if not needed
+
+    private static int activePlayers = 0; // todo: remove if not needed
+    private static int fallenPlayers = 0; // todo: remove if not needed
     private int score;
+    #endregion
+
+
+    // ---------- Properties & API ----------
 
     public PlayerCombatManager CombatManager => combatManager;
-    
-
     public CharacterType CharacterType => characterType;
 
-    //todo: new block system
+    // todo: new block system
     public bool IsBlocking => isBlocking;
     public bool IsFacingRight => facingRight;
 
     public static bool CanBeDamaged = true;
 
-    public int GetScore() => score;
-    public bool IsFallen() => isFallen;
+public int GetScore() => score;
+public bool IsFallen() => isFallen;
+
 
     public void AddScore(int points)
     {
@@ -430,7 +444,7 @@ public class MainPlayerController : MonoBehaviour
     {
         CoopBarTimer.Instance.PlayersTryingToUlt++;
         FriendshipAttackFlag = true;
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(GameManager.Instance.VotePersistenceDuration);
         FriendshipAttackFlag = false;
         CoopBarTimer.Instance.PlayersTryingToUlt--;
     }
