@@ -79,6 +79,8 @@ public class AnimationController : MonoBehaviour
 
     public void TriggerDamaged()
     {
+        if (animator.GetBool("IsDowned")) return;
+        
         animator.SetTrigger("Damaged");
         bloodVfxAnimator.SetTrigger("Play");
         StartCoroutine(PulseRedOnHurt());

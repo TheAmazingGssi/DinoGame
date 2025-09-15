@@ -53,7 +53,6 @@ public class EnemyManager : MonoBehaviour
         }
 
         GameManager.Instance.ActiveEnemies.Add(this);
-
     }
 
     private void OnEnable()

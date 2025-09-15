@@ -1,8 +1,17 @@
 using UnityEngine;
 
+public enum EnemyType
+{
+    Melee,
+    Ranged,
+    Boss
+}
+
 [CreateAssetMenu(fileName = "EnemyData", menuName = "Scriptable Objects/EnemyData")]
 public class EnemyData : ScriptableObject
 {
+    [field: SerializeField] public EnemyType Type { get; private set; }
+    
     [field: SerializeField] public float MaxHealth {get; private set;}
 
     [field: SerializeField] public float BaseDamage { get; private set; }
@@ -13,7 +22,7 @@ public class EnemyData : ScriptableObject
     [field: SerializeField] public float AttackRange { get; private set; }
 
     [field: SerializeField] public float Speed { get; private set; }
-
+    
     [field: SerializeField] public int Score { get; private set; }
 
     [field: SerializeField] public bool immuneToKnockback { get; private set; }
