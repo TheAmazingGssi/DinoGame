@@ -474,6 +474,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95d20ea1793f07548999982a4e2e379e, type: 3}
+--- !u!114 &676580788 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4119981198940327857, guid: 95d20ea1793f07548999982a4e2e379e, type: 3}
+  m_PrefabInstance: {fileID: 676580787}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48a478c17a2c1d7468fb714380c38c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &783053618 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2485348504694633181, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
@@ -1876,9 +1887,10 @@ MonoBehaviour:
   cameraMovement: {fileID: 575096511099344572}
   sceneLoader: {fileID: 1107998582}
   icetroidSpawner: {fileID: 0}
-  endLevelSpotlight: {fileID: 0}
+  endLevelSpotlight: {fileID: 676580788}
   <SpawnerManager>k__BackingField: {fileID: 1196741510}
   FinaleLevel: 3
+  IsInCoopAttack: 0
   waveCompleted:
     m_PersistentCalls:
       m_Calls: []
