@@ -6068,6 +6068,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1145336664456632295, guid: 6e17ff37b135abd4caf0c7f5c9a3bfd4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1145336664456632295, guid: 6e17ff37b135abd4caf0c7f5c9a3bfd4, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
@@ -6236,6 +6240,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3819313295840770048, guid: 6e17ff37b135abd4caf0c7f5c9a3bfd4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819313295840770048, guid: 6e17ff37b135abd4caf0c7f5c9a3bfd4, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
@@ -6245,6 +6253,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3854517903322341257, guid: 6e17ff37b135abd4caf0c7f5c9a3bfd4, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3854517903322341257, guid: 6e17ff37b135abd4caf0c7f5c9a3bfd4, type: 3}
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3854517903322341257, guid: 6e17ff37b135abd4caf0c7f5c9a3bfd4, type: 3}
@@ -6265,6 +6277,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4279522095845755722, guid: 6e17ff37b135abd4caf0c7f5c9a3bfd4, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4279522095845755722, guid: 6e17ff37b135abd4caf0c7f5c9a3bfd4, type: 3}
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4279522095845755722, guid: 6e17ff37b135abd4caf0c7f5c9a3bfd4, type: 3}
@@ -6359,6 +6375,11 @@ PrefabInstance:
 --- !u!224 &1670593164 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2799936997754703224, guid: 6e17ff37b135abd4caf0c7f5c9a3bfd4, type: 3}
+  m_PrefabInstance: {fileID: 1670593163}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1670593165 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8532961777532807559, guid: 6e17ff37b135abd4caf0c7f5c9a3bfd4, type: 3}
   m_PrefabInstance: {fileID: 1670593163}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1690422026
@@ -7336,6 +7357,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1190815754976003910, guid: f18f60295d050934aa2ee3a62285a6c7, type: 3}
+      propertyPath: meteorFlareRB
+      value: 
+      objectReference: {fileID: 575096511099344575}
+    - target: {fileID: 1190815754976003910, guid: f18f60295d050934aa2ee3a62285a6c7, type: 3}
+      propertyPath: flareSpawnPosition
+      value: 
+      objectReference: {fileID: 1670593165}
     - target: {fileID: 1940305889951364521, guid: f18f60295d050934aa2ee3a62285a6c7, type: 3}
       propertyPath: orthographic
       value: 1
@@ -7384,6 +7413,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 9141682204460484173, guid: f18f60295d050934aa2ee3a62285a6c7, type: 3}
+      propertyPath: m_Name
+      value: Meteor Flare
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -7414,6 +7447,11 @@ Transform:
 --- !u!4 &575096511099344574 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3264267872744986633, guid: f18f60295d050934aa2ee3a62285a6c7, type: 3}
+  m_PrefabInstance: {fileID: 575096511099344571}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &575096511099344575 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 6518494866270988507, guid: f18f60295d050934aa2ee3a62285a6c7, type: 3}
   m_PrefabInstance: {fileID: 575096511099344571}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1107350825136026205

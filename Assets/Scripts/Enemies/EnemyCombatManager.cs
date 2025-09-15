@@ -28,10 +28,12 @@ public class EnemyCombatManager : CombatManager
     {
         int shownDamage = Mathf.RoundToInt(damageArgs.Damage);
         Vector3 spawnPos =
-            (damagePopupAnchor ? damagePopupAnchor.position : transform.position) +
-            new Vector3(Random.Range(-damagePopupJitter.x, damagePopupJitter.x),
+            (
+                damagePopupAnchor ? damagePopupAnchor.position : transform.position) +
+                new Vector3(Random.Range(-damagePopupJitter.x, damagePopupJitter.x),
                 Random.Range(-damagePopupJitter.y, damagePopupJitter.y),
-                0f);
+                0f
+            );
         
         if (damageArgs.SourceMPC != null)
         {
@@ -65,10 +67,10 @@ public class EnemyCombatManager : CombatManager
                 damageArgs.SourceGO != null ? damageArgs.SourceGO.transform : null,
                 KnockbackHelper.GetKnockbackForceFromDamage(damageArgs.Damage, damageArgs.Knockback)
             );
-
         }
         
-        manager.Animator.SetTrigger(HURT);
+        if(manager.EnemyData.Type != EnemyType.Boss)
+            manager.Animator.SetTrigger(HURT);
         manager.SoundPlayer.PlaySound(1, 0.5f);
         manager.SpriteRenderer.color = Color.red;
 

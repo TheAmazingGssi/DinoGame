@@ -252,17 +252,20 @@ public class EnemyAttackManager : MonoBehaviour
 
     private void HandleTakeDamage(DamageArgs damageArgs)
     {
-        if (attacks != null)
+        if (manager.EnemyData.Type != EnemyType.Boss)
         {
-            foreach (EnemyAttack attack in attacks)
+            if (attacks != null)
             {
-                if (attack != null)
+                foreach (EnemyAttack attack in attacks)
                 {
-                    attack.InterruptAttack();
+                    if (attack != null)
+                    {
+                        attack.InterruptAttack();
+                    }
                 }
             }
+            DisableAttackColliders();
         }
-        DisableAttackColliders();
     }
 
     private void SetTarget(PlayerCombatManager player)

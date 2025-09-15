@@ -1709,6 +1709,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8532961777532807559, guid: 6e17ff37b135abd4caf0c7f5c9a3bfd4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 41
+      objectReference: {fileID: 0}
     - target: {fileID: 8551857231450601855, guid: 6e17ff37b135abd4caf0c7f5c9a3bfd4, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1741,6 +1745,11 @@ PrefabInstance:
 --- !u!224 &1646259851 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2799936997754703224, guid: 6e17ff37b135abd4caf0c7f5c9a3bfd4, type: 3}
+  m_PrefabInstance: {fileID: 1646259850}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1646259852 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8532961777532807559, guid: 6e17ff37b135abd4caf0c7f5c9a3bfd4, type: 3}
   m_PrefabInstance: {fileID: 1646259850}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &1655936395 stripped
@@ -2762,6 +2771,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1190815754976003910, guid: f18f60295d050934aa2ee3a62285a6c7, type: 3}
+      propertyPath: meteorFlareRB
+      value: 
+      objectReference: {fileID: 575096511099344573}
+    - target: {fileID: 1190815754976003910, guid: f18f60295d050934aa2ee3a62285a6c7, type: 3}
+      propertyPath: flareSpawnPosition
+      value: 
+      objectReference: {fileID: 1646259852}
     - target: {fileID: 1940305889951364521, guid: f18f60295d050934aa2ee3a62285a6c7, type: 3}
       propertyPath: orthographic
       value: 1
@@ -2834,6 +2851,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2f044c897faee04bbfb26e1319caa4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &575096511099344573 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 6518494866270988507, guid: f18f60295d050934aa2ee3a62285a6c7, type: 3}
+  m_PrefabInstance: {fileID: 575096511099344571}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1107350825136026205
 PrefabInstance:
   m_ObjectHideFlags: 0

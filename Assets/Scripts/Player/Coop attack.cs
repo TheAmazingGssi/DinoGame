@@ -6,17 +6,41 @@ public class CoopAttack : MonoBehaviour
 {
     [SerializeField] private LegBurstSpawner legSpawner;
     [SerializeField] private ParticleSystem SmokeEffect;
-    [SerializeField] private float smokeDuration = 2f;
-
+    
+    [SerializeField] private float smokeDuration = 5f;
+    [SerializeField] private float effectStartDelay = 0.75f;
+    [SerializeField] private float damageDelay = 0.5f;
+    
+    [SerializeField] private Rigidbody2D meteorFlareRB;
+    [SerializeField] private float flareSpeed = 5f;
+    [SerializeField] private Transform flareSpawnPosition;
 
     public void Activate()
     {
+        StartCoroutine(CoopAttackSequance());
+    }
+
+    private IEnumerator CoopAttackSequance()
+    {
+        meteorFlareRB.transform.position = flareSpawnPosition.position;
+        
+        meteorFlareRB.gameObject.SetActive(true);
+        meteorFlareRB.linearVelocity = Vector2.up * flareSpeed;
+        
+        yield return new WaitForSeconds(effectStartDelay);
+        
+        meteorFlareRB.gameObject.SetActive(false);
+        meteorFlareRB.transform.position = flareSpawnPosition.position;
+        
+        StartCoroutine(EffectCoroutine());
+        
+        yield return new WaitForSeconds(damageDelay);
+        
         foreach (var enemy in new List<EnemyManager>(GameManager.Instance.ActiveEnemies))
         {
             if (enemy && enemy?.CombatManager) 
                 enemy.CombatManager.TakeDamage(new DamageArgs(1000));
         }
-        StartCoroutine(EffectCoroutine());
     }
 
 

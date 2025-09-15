@@ -8,9 +8,9 @@ public class HealthItem : MonoBehaviour
 
     private PlayerCombatManager combatManager;
     private AnimationController animController;
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
-      //  Debug.Log("collision in hp");
         if (collision.CompareTag(PLAYER))
         {
             Debug.Log("collision in hp is player");
@@ -18,10 +18,15 @@ public class HealthItem : MonoBehaviour
             combatManager = collision.GetComponentInParent<PlayerCombatManager>();
             animController = collision.GetComponentInParent<AnimationController>();
             
-            
             if (combatManager == null)
             {
                 Debug.LogError("PlayerCombatManager not found on player!");
+                return;
+            }
+            
+            if(combatManager.CurrentHealth <= 0)
+            {
+                Debug.Log("player is dead, cannot heal");
                 return;
             }
             
