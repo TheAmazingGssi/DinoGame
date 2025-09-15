@@ -3601,7 +3601,7 @@ PrefabInstance:
       objectReference: {fileID: 1052078160}
     - target: {fileID: 8685290730782000187, guid: 08c6ec01f3ec1474cac4faa3d2d4b105, type: 3}
       propertyPath: slideDuration
-      value: 5
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8685290730782000187, guid: 08c6ec01f3ec1474cac4faa3d2d4b105, type: 3}
       propertyPath: startCollider
