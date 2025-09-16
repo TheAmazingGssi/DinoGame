@@ -3527,7 +3527,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2009568946462424683, guid: 08c6ec01f3ec1474cac4faa3d2d4b105, type: 3}
       propertyPath: m_text
-      value: When the Volcano Meter fills, all players have 60 seconds to press the
+      value: When the Volcano Meter fills, all players have 10 seconds to press the
         action button together.
       objectReference: {fileID: 0}
     - target: {fileID: 2726931583622668392, guid: 08c6ec01f3ec1474cac4faa3d2d4b105, type: 3}
