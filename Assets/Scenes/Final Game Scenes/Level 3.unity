@@ -6374,7 +6374,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3037892570329261710, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}
       propertyPath: EnemiesInWaveMultiplier
-      value: 1
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3037892570329261710, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}
       propertyPath: 'spawnPoints.Array.data[0]'
@@ -6588,7 +6588,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3240134048622376957, guid: f4064a13b99dbc041b8a58f39a8edd38, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 3.332015
+      value: 3.332016
       objectReference: {fileID: 0}
     - target: {fileID: 3418796043309233048, guid: f4064a13b99dbc041b8a58f39a8edd38, type: 3}
       propertyPath: m_Name
@@ -6716,7 +6716,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6100211848710498041, guid: f4064a13b99dbc041b8a58f39a8edd38, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1.2631044
+      value: -1.2631035
       objectReference: {fileID: 0}
     - target: {fileID: 6271967061155626273, guid: f4064a13b99dbc041b8a58f39a8edd38, type: 3}
       propertyPath: m_AnchorMax.y

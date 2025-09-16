@@ -30,7 +30,8 @@ public class EnemySpawner : MonoBehaviour
             if (!wasTriggered)
             {
                 WaveStart.Invoke();
-                EnemiesInWave = PlayerEntity.PlayerList.Count * EnemiesInWaveMultiplier;
+                if (EnemiesInWaveMultiplier == -1) EnemiesInWave = 1;
+                else EnemiesInWave = PlayerEntity.PlayerList.Count * EnemiesInWaveMultiplier;
                 GameManager.Instance.SetWaveSize(EnemiesInWave);
                 StartCoroutine(SpawnWave());
                 wasTriggered = true;
