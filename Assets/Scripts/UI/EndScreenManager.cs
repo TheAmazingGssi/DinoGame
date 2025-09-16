@@ -7,12 +7,22 @@ public class EndScreenManager : MonoBehaviour
     [SerializeField] GameObject mars;
     [SerializeField] GameObject moon;
 
+    [SerializeField] GameObject terry;
+    [SerializeField] GameObject spencer;
+    [SerializeField] GameObject paris;
+    [SerializeField] GameObject andrew;
+
 
     private void Start()
     {
-/*        VoteEffectManager.Instance.ApplyStoredEffects(-1, -1);
+        VoteEffectManager.Instance.ApplyStoredEffects(-1, -1);
 
-        switch(VoteEffectManager.Instance.Ending)
+        terry.SetActive(false);
+        spencer.SetActive(false);
+        paris.SetActive(false);
+        andrew.SetActive(false);
+
+        switch (VoteEffectManager.Instance.Ending)
         {
             case Ending.Mars:
                 earth.SetActive(false);
@@ -29,12 +39,26 @@ public class EndScreenManager : MonoBehaviour
                 moon.SetActive(false);
                 mars.SetActive(false);
                 break;
-        }*/
-    }
+        }
+    
+        foreach (PlayerEntity player in PlayerEntity.PlayerList)
+        {
+            switch(player.CharacterType)
+            {
+                case CharacterType.Triceratops:
+                    terry.SetActive(true);
+                    break;
+                case CharacterType.Parasaurolophus:
+                    paris.SetActive(true);
+                    break;
+                case CharacterType.Spinosaurus: 
+                    spencer.SetActive(true);
+                    break;
+                case CharacterType.Therizinosaurus:
+                    andrew.SetActive(true);
+                    break;
+            }
+        }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-            Debug.Log("EEEEE");
     }
 }

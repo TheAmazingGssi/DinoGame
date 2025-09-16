@@ -546,6 +546,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11240c2c7fb4da8429e6d13bd8ce82c6, type: 3}
+--- !u!1 &75818714 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 987402107516376408, guid: 11240c2c7fb4da8429e6d13bd8ce82c6, type: 3}
+  m_PrefabInstance: {fileID: 75818713}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &257519918
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,6 +763,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fbcaedd8b5f32c478bbe089ea6240a7, type: 3}
+--- !u!1 &738750133 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 987402107516376408, guid: 0fbcaedd8b5f32c478bbe089ea6240a7, type: 3}
+  m_PrefabInstance: {fileID: 738750132}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &754334681
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,6 +903,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b91480848e4b0e468908ac9a87624b2, type: 3}
+--- !u!1 &766364495 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 987402107516376408, guid: 3b91480848e4b0e468908ac9a87624b2, type: 3}
+  m_PrefabInstance: {fileID: 766364494}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &962488658
 GameObject:
   m_ObjectHideFlags: 0
@@ -1063,6 +1078,10 @@ MonoBehaviour:
   earth: {fileID: 1503508948}
   mars: {fileID: 1801697275}
   moon: {fileID: 1149499783}
+  terry: {fileID: 766364495}
+  spencer: {fileID: 75818714}
+  paris: {fileID: 738750133}
+  andrew: {fileID: 1265618565}
 --- !u!4 &1146277205
 Transform:
   m_ObjectHideFlags: 0
@@ -1222,6 +1241,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d588cdd368c48e846b53f15161daa27c, type: 3}
+--- !u!1 &1265618565 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 987402107516376408, guid: d588cdd368c48e846b53f15161daa27c, type: 3}
+  m_PrefabInstance: {fileID: 1265618564}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1463971796
 GameObject:
   m_ObjectHideFlags: 0
