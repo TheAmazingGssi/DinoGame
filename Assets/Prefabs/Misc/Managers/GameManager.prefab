@@ -51,7 +51,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
+        m_MethodName: 
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -76,9 +76,10 @@ MonoBehaviour:
   cameraMovement: {fileID: 0}
   sceneLoader: {fileID: 0}
   endLevelSpotlight: {fileID: 0}
-  soundPlayer: {fileID: 8751851210190170233}
   <SpawnerManager>k__BackingField: {fileID: 0}
   icetroidSpawner: {fileID: 0}
+  soundPlayer: {fileID: 8751851210190170233}
+  endLevelSound: {fileID: 11400000, guid: e413a142eb365f740a2b8b3f2bf5489f, type: 2}
   IsInCoopAttack: 0
   ActiveEnemies: []
 --- !u!114 &8751851210190170233

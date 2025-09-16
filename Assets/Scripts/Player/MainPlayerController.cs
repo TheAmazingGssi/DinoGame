@@ -122,7 +122,7 @@ public bool IsFallen() => isFallen;
         fallenPlayers--;
         combatManager.RestoreHealthByPercent(100f);
         StartCoroutine(ResetRevive());
-        soundPlayer.PlaySound(3);
+        //soundPlayer.PlaySound(3);
         animController.TriggerHalo();
         Debug.Log($"{stats.characterName} revived");
     }
@@ -177,6 +177,7 @@ public bool IsFallen() => isFallen;
             combatManager.Initialize(stats, this, animator);
             
             combatManager.OnDeath += (_) => EnterFallenState();
+            combatManager.OnHeal += PlayHealSound;
             Debug.Log($"Loaded stats for {stats.characterName}");
         }
         else 
@@ -510,6 +511,10 @@ public bool IsFallen() => isFallen;
     private void PlayDeathSound(CombatManager combatManager)
     {
         soundPlayer.PlaySound(2);
+    }
+    private void PlayHealSound()
+    {
+        soundPlayer.PlaySound(3);
     }
     
     public void ToggleMudSlowEffect()

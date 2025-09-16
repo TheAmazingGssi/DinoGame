@@ -33,6 +33,7 @@ public class CombatManager : MonoBehaviour
     public float CurrentMaxHealth => currentMaxHealth;
 
     public event UnityAction<DamageArgs> OnTakeDamage;
+    public event UnityAction OnHeal;
     public event UnityAction<CombatManager> OnDeath;
 
     private void Start()
@@ -61,6 +62,7 @@ public class CombatManager : MonoBehaviour
     public virtual void RestoreHealth(float Health)
     {
         currentHealth = Mathf.Clamp(currentHealth + Health, 0, currentMaxHealth);
+        OnHeal?.Invoke();
         //UpdateHealthBar();
     }
 
@@ -68,7 +70,7 @@ public class CombatManager : MonoBehaviour
     {
         Debug.Log($"Restoring: {percent}% health to {gameObject.name}");
         float healthToRestore = percent * currentMaxHealth;
-        currentHealth = Mathf.Clamp(currentHealth + healthToRestore, 0, currentMaxHealth);
+        RestoreHealth(healthToRestore);
         //UpdateHealthBar();
     }
 
