@@ -29,13 +29,15 @@ public class EndScreenManager : MonoBehaviour
                 moon.SetActive(false);
                 mars.SetActive(true);
                 break;
+            
             case Ending.Moon:
-                earth.SetActive(false);
+                earth.SetActive(true);
                 moon.SetActive(true);
                 mars.SetActive(false);
                 break;
+            
             case Ending.Space:
-                earth.SetActive(false);
+                earth.SetActive(true);
                 moon.SetActive(false);
                 mars.SetActive(false);
                 break;
