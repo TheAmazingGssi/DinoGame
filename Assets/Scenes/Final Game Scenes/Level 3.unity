@@ -5818,84 +5818,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4010869132012254330, guid: 798044937a1d77148862c4b7b025c886, type: 3}
   m_PrefabInstance: {fileID: 6552484701513685399}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1657487359
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1657487361}
-  - component: {fileID: 1657487360}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1657487360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1657487359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 040a18b7c1853b647a3c838d6364aba0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waveCompleted:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1389721418}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  waveLocations:
-  - LeftMost: 0
-    RightMost: 0
-  - LeftMost: 32
-    RightMost: 34
-  - LeftMost: 54
-    RightMost: 58
-  vote: {fileID: 11400000, guid: 6e9e9233c8cf54841a5a2e4b01603e09, type: 2}
-  <LevelNumber>k__BackingField: 3
-  VotePersistenceDuration: 10
-  FinaleLevel: 3
-  stagesVote: {fileID: 1724298587}
-  cameraMovement: {fileID: 575096511099344572}
-  sceneLoader: {fileID: 1107998582}
-  endLevelSpotlight: {fileID: 523049159}
-  <SpawnerManager>k__BackingField: {fileID: 1196741510}
-  icetroidSpawner: {fileID: 489131054}
-  IsInCoopAttack: 0
-  ActiveEnemies: []
---- !u!4 &1657487361
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1657487359}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1670593163
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7270,6 +7192,91 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d9e80561a83b2049bb4d6f42433c568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &558389228721922613
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 699243370371687274, guid: eb51e9c7ba63af34390f5eb2d7aae0a4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 699243370371687274, guid: eb51e9c7ba63af34390f5eb2d7aae0a4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 699243370371687274, guid: eb51e9c7ba63af34390f5eb2d7aae0a4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 699243370371687274, guid: eb51e9c7ba63af34390f5eb2d7aae0a4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 699243370371687274, guid: eb51e9c7ba63af34390f5eb2d7aae0a4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 699243370371687274, guid: eb51e9c7ba63af34390f5eb2d7aae0a4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 699243370371687274, guid: eb51e9c7ba63af34390f5eb2d7aae0a4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 699243370371687274, guid: eb51e9c7ba63af34390f5eb2d7aae0a4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 699243370371687274, guid: eb51e9c7ba63af34390f5eb2d7aae0a4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 699243370371687274, guid: eb51e9c7ba63af34390f5eb2d7aae0a4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3439739775527052222, guid: eb51e9c7ba63af34390f5eb2d7aae0a4, type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617913340780209000, guid: eb51e9c7ba63af34390f5eb2d7aae0a4, type: 3}
+      propertyPath: stagesVote
+      value: 
+      objectReference: {fileID: 1724298587}
+    - target: {fileID: 3617913340780209000, guid: eb51e9c7ba63af34390f5eb2d7aae0a4, type: 3}
+      propertyPath: sceneLoader
+      value: 
+      objectReference: {fileID: 1107998582}
+    - target: {fileID: 3617913340780209000, guid: eb51e9c7ba63af34390f5eb2d7aae0a4, type: 3}
+      propertyPath: cameraMovement
+      value: 
+      objectReference: {fileID: 575096511099344572}
+    - target: {fileID: 3617913340780209000, guid: eb51e9c7ba63af34390f5eb2d7aae0a4, type: 3}
+      propertyPath: icetroidSpawner
+      value: 
+      objectReference: {fileID: 489131054}
+    - target: {fileID: 3617913340780209000, guid: eb51e9c7ba63af34390f5eb2d7aae0a4, type: 3}
+      propertyPath: endLevelSpotlight
+      value: 
+      objectReference: {fileID: 523049159}
+    - target: {fileID: 3617913340780209000, guid: eb51e9c7ba63af34390f5eb2d7aae0a4, type: 3}
+      propertyPath: <SpawnerManager>k__BackingField
+      value: 
+      objectReference: {fileID: 1196741510}
+    - target: {fileID: 3617913340780209000, guid: eb51e9c7ba63af34390f5eb2d7aae0a4, type: 3}
+      propertyPath: waveCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1389721418}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eb51e9c7ba63af34390f5eb2d7aae0a4, type: 3}
 --- !u!1001 &575096511099344571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8139,7 +8146,7 @@ SceneRoots:
   - {fileID: 7203500660698962127}
   - {fileID: 3920178}
   - {fileID: 1196741509}
-  - {fileID: 1657487361}
+  - {fileID: 558389228721922613}
   - {fileID: 2658126874385805213}
   - {fileID: 1107350825136026205}
   - {fileID: 1107998583}

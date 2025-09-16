@@ -24,13 +24,18 @@ public class GameManager : MonoBehaviour
 
 
 // =====================  INSPECTOR: REFERENCES  =====================
-    [Header("References")]
+    [Header("Stage References")]
     [SerializeField] private VotingManager stagesVote;
     [SerializeField] private CameraMovement cameraMovement;
     [SerializeField] private SceneLoader sceneLoader;
     [SerializeField] private EndLevelSpotlight endLevelSpotlight;
     [field: SerializeField] public SpawnerManager SpawnerManager { get; private set; }
     public IcetroidSpawner icetroidSpawner;
+
+
+    [Header("Self Refrences")]
+    [SerializeField] private SoundPlayer soundPlayer;
+    [SerializeField] private VoiceClips endLevelSound;
 
 
 // =====================  RUNTIME STATE  =====================
@@ -130,6 +135,7 @@ public class GameManager : MonoBehaviour
         
         MainPlayerController highestScorePlayer = GetHighestScorePlayer().MainPlayerController;
         OnLevelEnd?.Invoke(highestScorePlayer);
+        soundPlayer.PlaySound(endLevelSound);
         StartCoroutine(VictoryMoment());
         PlayerEntity.SaveScore();
         endLevelSpotlight.EnableDark();
