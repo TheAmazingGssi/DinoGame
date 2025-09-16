@@ -14,6 +14,9 @@ public class CoopAttack : MonoBehaviour
     [SerializeField] private Rigidbody2D meteorFlareRB;
     [SerializeField] private float flareSpeed = 5f;
     [SerializeField] private Transform flareSpawnPosition;
+    
+    [SerializeField] private float bossDmg = 200f;
+    [SerializeField] private float normEnemyDmg = 1000f;
 
     public void Activate()
     {
@@ -40,9 +43,9 @@ public class CoopAttack : MonoBehaviour
         foreach (var enemy in new List<EnemyManager>(GameManager.Instance.ActiveEnemies))
         {
             if(enemy.EnemyData.Type == EnemyType.Boss) 
-                enemy.CombatManager.TakeDamage(new DamageArgs(250));
+                enemy.CombatManager.TakeDamage(new DamageArgs(bossDmg));
             else if (enemy && enemy?.CombatManager) 
-                enemy.CombatManager.TakeDamage(new DamageArgs(1000));
+                enemy.CombatManager.TakeDamage(new DamageArgs(normEnemyDmg));
         }
         
         yield return new WaitForSeconds(4.5f);
