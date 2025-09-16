@@ -14,7 +14,8 @@ public class MockPlayer : MonoBehaviour
             return;
         
         rb.angularVelocity = floatRotationSpeed;
-        if (transform.position.x > 0)
+        
+        if (transform.position.x >= 0)
         {
             rb.linearVelocity = Vector2.right * floatSpeed;
         }

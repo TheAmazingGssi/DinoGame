@@ -140,7 +140,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 2
 --- !u!58 &8482289413675996820
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -189,8 +189,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ae9ac59f8a70aa46a9dab7f949734a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endManager: {fileID: 0}
   rb: {fileID: 4551623678302805722}
-  floatSpeed: 3
+  floatSpeed: 2.5
   floatRotationSpeed: 10
 --- !u!1 &4967007058204007866
 GameObject:

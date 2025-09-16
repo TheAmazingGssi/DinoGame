@@ -446,6 +446,9 @@ public bool IsFallen() => isFallen;
     
     private IEnumerator RaiseFriendshipFlag()
     {
+        if(isFallen)
+            yield break;
+        
         CoopBarTimer.Instance.PlayersTryingToUlt++;
         FriendshipAttackFlag = true;
 
@@ -498,11 +501,12 @@ public bool IsFallen() => isFallen;
 
     private void OnLevelEnd(MainPlayerController controller)
     {
+        emoteHeld = true;
+        animator.SetTrigger("Emote");
         isEndOfLevel = true;
+        
         if (controller == this)
         {
-            emoteHeld = true;
-            animator.SetTrigger("Emote");
             crown.gameObject.SetActive(true);
             Debug.Log($"{controller.gameObject.name} has the crown");
         }

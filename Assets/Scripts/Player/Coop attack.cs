@@ -39,7 +39,9 @@ public class CoopAttack : MonoBehaviour
         
         foreach (var enemy in new List<EnemyManager>(GameManager.Instance.ActiveEnemies))
         {
-            if (enemy && enemy?.CombatManager) 
+            if(enemy.EnemyData.Type == EnemyType.Boss) 
+                enemy.CombatManager.TakeDamage(new DamageArgs(250));
+            else if (enemy && enemy?.CombatManager) 
                 enemy.CombatManager.TakeDamage(new DamageArgs(1000));
         }
         

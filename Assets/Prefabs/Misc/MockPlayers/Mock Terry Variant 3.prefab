@@ -32,6 +32,10 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5170127195883066577, guid: 10c6b3801dca2874388fa1b17ea914c9, type: 3}
+      propertyPath: floatSpeed
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6916285391840984395, guid: 10c6b3801dca2874388fa1b17ea914c9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

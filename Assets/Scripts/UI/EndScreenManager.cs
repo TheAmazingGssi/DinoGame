@@ -43,7 +43,7 @@ public class EndScreenManager : MonoBehaviour
             
             case Ending.Space:
                 earth.SetActive(true);
-                moon.SetActive(false);
+                moon.SetActive(true);
                 mars.SetActive(false);
                 StartInLandingPos = false;
                 Meteor.SetActive(true);

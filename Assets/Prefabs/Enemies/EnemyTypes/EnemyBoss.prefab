@@ -801,6 +801,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.0017850762
       objectReference: {fileID: 0}
+    - target: {fileID: 4239831697249666521, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4708579745537201409, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -810,8 +814,12 @@ PrefabInstance:
       value: 1.52847
       objectReference: {fileID: 0}
     - target: {fileID: 4755382526223380705, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755382526223380705, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8359995
+      value: 1.15
       objectReference: {fileID: 0}
     - target: {fileID: 5501723112346460331, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: attacks.Array.size
@@ -830,8 +838,12 @@ PrefabInstance:
       value: -0.80799997
       objectReference: {fileID: 0}
     - target: {fileID: 7017156817951652606, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017156817951652606, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.62
+      value: 1.15
       objectReference: {fileID: 0}
     - target: {fileID: 7022572441651464058, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: enemyData
@@ -873,6 +885,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7763142611271861617, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_Radius
+      value: 1.75
+      objectReference: {fileID: 0}
     - target: {fileID: 7775578561474358076, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.69799995
@@ -904,6 +920,10 @@ PrefabInstance:
     - target: {fileID: 8181060215119223495, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_EdgeRadius
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8383288647919494782, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_Radius
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 8492816430768677864, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_Controller
