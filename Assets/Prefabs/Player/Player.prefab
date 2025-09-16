@@ -6068,11 +6068,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7af2d117629d8ee4ba59c1b19aa8fb5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationData: {fileID: 11400000, guid: ddf3d8d22bba4984486206bd1e302a5d, type: 2}
   characterType: 0
-  SpecialVfxObject: {fileID: 6511813499013299741}
+  animationData: {fileID: 11400000, guid: ddf3d8d22bba4984486206bd1e302a5d, type: 2}
+  playerController: {fileID: 4579190218097802738}
   animator: {fileID: 8958741867143242686}
-  SpecialVfxAnimator: {fileID: 7268481246512268016}
+  specialVfxObject: {fileID: 6511813499013299741}
+  specialVfxAnimator: {fileID: 7268481246512268016}
   haloVfxAnimator: {fileID: 1302994046632428664}
   bloodVfxAnimator: {fileID: 5831442847241522931}
   normalAttackVfxAnimator: {fileID: 5384368346122762586}

@@ -405,6 +405,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5722580118578030580}
     - target: {fileID: 6963371577172914679, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 3078393491007480859}
+    - target: {fileID: 6963371577172914679, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: specialVfxObject
+      value: 
+      objectReference: {fileID: 5722580118578030580}
+    - target: {fileID: 6963371577172914679, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: SpecialVfxAnimator
       value: 
       objectReference: {fileID: 0}
