@@ -846,6 +846,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7443691502695996445}
     - target: {fileID: 7022572441651464058, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: vfxManager
+      value: 
+      objectReference: {fileID: 7443691502695996445}
+    - target: {fileID: 7022572441651464058, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: healthDropAmount
       value: 0
       objectReference: {fileID: 0}
