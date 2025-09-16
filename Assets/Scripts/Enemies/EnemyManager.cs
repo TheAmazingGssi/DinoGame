@@ -18,6 +18,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private SoundPlayer soundPlayer;
     [SerializeField] private KnockbackManager knockbackManager;
     [SerializeField] private GameObject projectileDirection;
+    [SerializeField] private BossVFXManager vfxManager;
 
     [Header("Data")]
     [SerializeField] private EnemyData enemyData;
@@ -31,6 +32,7 @@ public class EnemyManager : MonoBehaviour
     private PlayerCombatManager playerCombatManager;
     private bool isDead = false;
 
+    public BossVFXManager VFXManager => vfxManager;
     public EnemyAttackManager AttackManager => attackManager;
     public PlayerCombatManager PlayerCombatManager => playerCombatManager;
     public Animator Animator => animator;
@@ -71,6 +73,8 @@ public class EnemyManager : MonoBehaviour
 
         animator.ResetTrigger("Hurt");
 
+        vfxManager.TriggerDeathVfx();
+
         if (enemyController) enemyController.enabled = false;
         if (attackManager) attackManager.enabled = false;
         if (rb) rb.linearVelocity = Vector2.zero;
@@ -92,6 +96,8 @@ public class EnemyManager : MonoBehaviour
                 Instantiate(healthItem, spawnPosition, Quaternion.identity);
             }
         }
+        vfxManager.ResetDeathVfx();
+
         StartCoroutine(DeSpawn());
     }
 

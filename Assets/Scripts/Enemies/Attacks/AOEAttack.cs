@@ -22,7 +22,7 @@ public class EnemyAOEAttack : EnemyAttack
 
         base.ApplyDamage();
 
-        Debug.Log($"AOE attack dealt {manager.EnemyData.BaseDamage} damage to {playersInRange.Count} players");
+       // Debug.Log($"AOE attack dealt {manager.EnemyData.BaseDamage} damage to {playersInRange.Count} players");
     }
 
     private void OnDrawGizmosSelected()

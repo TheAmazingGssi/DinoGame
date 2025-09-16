@@ -35,7 +35,7 @@ public abstract class EnemyAttack : MonoBehaviour
 
         if (!isOnCooldown)
         {
-            Debug.Log($"{gameObject.name} starting attack");
+           // Debug.Log($"{gameObject.name} starting attack");
             StartAttack();
         }
     }
@@ -66,7 +66,7 @@ public abstract class EnemyAttack : MonoBehaviour
     {
         isAttacking = false;
         manager.AttackManager.ChangeAttackStatue(false);
-        Debug.Log($"{gameObject.name} attack ended");
+        //Debug.Log($"{gameObject.name} attack ended");
         StartCoroutine(CooldownTimer());
     }
 
@@ -74,7 +74,7 @@ public abstract class EnemyAttack : MonoBehaviour
     {
         yield return new WaitForSeconds(attackCooldown);
         isOnCooldown = false;
-        Debug.Log($"{gameObject.name} cooldown finished");
+       // Debug.Log($"{gameObject.name} cooldown finished");
     }
 
     public void InterruptAttack()
@@ -89,7 +89,7 @@ public abstract class EnemyAttack : MonoBehaviour
             isAttacking = false;
             manager.AttackManager.ChangeAttackStatue(false);
 
-            Debug.Log($"Attack interrupted on {gameObject.name}");
+           // Debug.Log($"Attack interrupted on {gameObject.name}");
         }
     }
 
