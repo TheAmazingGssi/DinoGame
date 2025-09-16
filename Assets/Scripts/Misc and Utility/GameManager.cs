@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.SceneManagement;
 
+[DefaultExecutionOrder(-120)]
 public class GameManager : MonoBehaviour
 {
 // ---------- Singleton & Static Events ----------

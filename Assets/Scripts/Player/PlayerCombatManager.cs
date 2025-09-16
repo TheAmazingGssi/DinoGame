@@ -154,7 +154,7 @@ public class PlayerCombatManager : CombatManager
         currentHealth = currentMaxHealth * healthRatio; //Restore current health?
 
         Debug.Log($"{gameObject.name} max health increased by {percentage}%. New max: {currentMaxHealth}, current: {currentHealth}");
-        UpdateHealthBar();
+        //UpdateHealthBar();
     }
 
     public bool DeductStamina(float amount)

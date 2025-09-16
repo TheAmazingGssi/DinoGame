@@ -23,9 +23,9 @@ MonoBehaviour:
     specialAttackCost: 50
     specialAttackDamage: 20
     mudSlowFactor: 0.45
-    blockStaminaMax: 5
+    blockStaminaMax: 3
     blockCost: 1
-    blockRegenRate: 1
+    blockRegenRate: 0.5
   - characterName: Spinosaurus
     maxHealth: 100
     stamina: 100
@@ -36,9 +36,9 @@ MonoBehaviour:
     specialAttackCost: 50
     specialAttackDamage: 20
     mudSlowFactor: 0.5
-    blockStaminaMax: 5
+    blockStaminaMax: 3
     blockCost: 1
-    blockRegenRate: 1
+    blockRegenRate: 0.5
   - characterName: Parasaurolophus
     maxHealth: 100
     stamina: 100
@@ -49,9 +49,9 @@ MonoBehaviour:
     specialAttackCost: 50
     specialAttackDamage: 30
     mudSlowFactor: 0.6
-    blockStaminaMax: 5
+    blockStaminaMax: 3
     blockCost: 1
-    blockRegenRate: 1
+    blockRegenRate: 0.5
   - characterName: Therizinosaurus
     maxHealth: 100
     stamina: 100
@@ -62,6 +62,6 @@ MonoBehaviour:
     specialAttackCost: 50
     specialAttackDamage: 20
     mudSlowFactor: 0.6
-    blockStaminaMax: 5
+    blockStaminaMax: 3
     blockCost: 1
-    blockRegenRate: 1
+    blockRegenRate: 0.5

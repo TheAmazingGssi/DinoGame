@@ -37,7 +37,7 @@ public class CombatManager : MonoBehaviour
 
     private void Start()
     {
-        UpdateHealthBar();
+        //UpdateHealthBar();
     }
 
     public virtual void TakeDamage(DamageArgs damageArgs)
@@ -55,13 +55,13 @@ public class CombatManager : MonoBehaviour
             OnTakeDamage?.Invoke(damageArgs);
         }
 
-        UpdateHealthBar();
+        //UpdateHealthBar();
     }
 
     public virtual void RestoreHealth(float Health)
     {
         currentHealth = Mathf.Clamp(currentHealth + Health, 0, currentMaxHealth);
-        UpdateHealthBar();
+        //UpdateHealthBar();
     }
 
     public virtual void RestoreHealthByPercent(float percent)
@@ -69,7 +69,7 @@ public class CombatManager : MonoBehaviour
         Debug.Log($"Restoring: {percent}% health to {gameObject.name}");
         float healthToRestore = percent * currentMaxHealth;
         currentHealth = Mathf.Clamp(currentHealth + healthToRestore, 0, currentMaxHealth);
-        UpdateHealthBar();
+        //UpdateHealthBar();
     }
 
     protected virtual void HandleDeath()
@@ -77,11 +77,11 @@ public class CombatManager : MonoBehaviour
         OnDeath?.Invoke(this);
     }
 
-    protected void UpdateHealthBar() //no health bar yet
+    /*protected void UpdateHealthBar() //no health bar yet
     {
         //if (healthBar)
         //{
         //    healthBar.SetFillAmount(currentHealth, currentMaxHealth);
         //}
-    }
+    }*/
 }

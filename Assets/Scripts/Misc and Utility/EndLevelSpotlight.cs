@@ -24,7 +24,7 @@ public class EndLevelSpotlight : MonoBehaviour
             globalLight.intensity = globalLightDarkenedIntensity;
 
         if (spotlight != null)
-            spotlight.enabled = true;
+            spotlight.gameObject.SetActive(true);
 
         isDark = true;
     }
@@ -35,7 +35,7 @@ public class EndLevelSpotlight : MonoBehaviour
             globalLight.intensity = globalLightFullIntensity;  
 
         if (spotlight != null)
-            spotlight.enabled = false;
+            spotlight.gameObject.SetActive(false);
 
         isDark = false;
     }
@@ -44,7 +44,7 @@ public class EndLevelSpotlight : MonoBehaviour
 
     private void RelocateSpotlight()
     {
-        Vector3 playerPosition = GameManager.Instance.GetHighestScorePlayer().transform.position;
-        spotlight.transform.position = new Vector3(playerPosition.x, playerPosition.y + spotlightVerticalOffset, transform.position.z);
+        Vector3 playerPosition = GameManager.Instance.GetHighestScorePlayer().MainPlayerController.worldPosition.position;
+        spotlight.transform.position = new Vector3(playerPosition.x, playerPosition.y + spotlightVerticalOffset, spotlight.transform.position.z);
     }
 }

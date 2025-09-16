@@ -6113,18 +6113,19 @@ MonoBehaviour:
   characterType: 0
   facingRight: 1
   spriteRenderer: {fileID: 9169242216697959115}
+  worldPosition: {fileID: 3569670116312465802}
   animController: {fileID: 6963371577172914679}
   playerTransform: {fileID: 11400000, guid: 8219937a61ea28e4790c6da34fb6c448, type: 2}
   rb: {fileID: 7126916438403873939}
-  rightMeleeColliderGO: {fileID: 2593272781190150543}
-  leftMeleeColliderGO: {fileID: 2492364246984025447}
+  animator: {fileID: 8958741867143242686}
+  audioSource: {fileID: 8223330495104514794}
   soundPlayer: {fileID: 6716259569256595975}
   combatManager: {fileID: 4884880225224199255}
   knockbackManager: {fileID: 5118895932606543672}
+  rightMeleeColliderGO: {fileID: 2593272781190150543}
+  leftMeleeColliderGO: {fileID: 2492364246984025447}
   rightMeleeDamage: {fileID: 5675141626194830379}
   leftMeleeDamage: {fileID: 8535575657339802018}
-  animator: {fileID: 8958741867143242686}
-  audioSource: {fileID: 8223330495104514794}
   crown: {fileID: 8022900876227695804}
   BlockBubble: {fileID: 8271534115443307974}
   reviveMiniGame: {fileID: 7243540068653557967}

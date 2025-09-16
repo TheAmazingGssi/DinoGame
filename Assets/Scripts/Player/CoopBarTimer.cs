@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[DefaultExecutionOrder(-110)]
 public class CoopBarTimer : MonoBehaviour
 {
     [HideInInspector] public static CoopBarTimer Instance { get; private set; }

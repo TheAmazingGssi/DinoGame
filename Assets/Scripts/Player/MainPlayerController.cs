@@ -23,6 +23,7 @@ public class MainPlayerController : MonoBehaviour
     [SerializeField] private CharacterType characterType;
     [SerializeField] private bool facingRight = true;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] public Transform worldPosition;
 
     [Header("Components ▸ Core (Required)")]
     [SerializeField] public AnimationController animController;
@@ -69,6 +70,7 @@ public class MainPlayerController : MonoBehaviour
     private MainPlayerController currentReviveTarget;
     private float lastAttackTime;
     private float lastSpecialTime;
+    private bool blockRepressRequired; 
     private bool canAttack = true;
     private bool canSpecial = true;
     private bool isAttacking = false;
@@ -232,21 +234,34 @@ public bool IsFallen() => isFallen;
             }
         }
         
-        // New block handling
-        if (blockHeld && !isBlocking && !isEmoting && !isFallen)
+        // Force break when empty/locked and require a release before restarting
+        if (isBlocking && (!combatManager.HasBlockStamina() || combatManager.IsBlockLocked))
         {
-            // only start if we have stamina and not locked
+            ForceStopBlocking();
+            blockRepressRequired = true; // gate restart until button is released
+        }
+
+        // Clear the gate once the player releases the button
+        if (!blockHeld)
+            blockRepressRequired = false;
+
+        // Start block (gated, no auto-restart while still held)
+        if (blockHeld && !blockRepressRequired && !isBlocking && !isEmoting && !isFallen)
+        {
             if (combatManager.HasBlockStamina() && !combatManager.IsBlockLocked)
             {
                 isBlocking = true;
                 animController.SetBlocking(true);
-                BlockBubble.SetActive(true);
             }
         }
-        else if (!blockHeld && isBlocking)
+        else if (!blockHeld && isBlocking) // Stop on release
         {
             ForceStopBlocking();
         }
+
+        // Bubble mirrors true state only
+        BlockBubble.SetActive(isBlocking && combatManager.HasBlockStamina() && !combatManager.IsBlockLocked);
+
 
         // Emote handling
         if (emoteHeld && !isFallen && !isBlocking)

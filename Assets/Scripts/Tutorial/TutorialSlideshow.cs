@@ -12,7 +12,6 @@ public class TutorialSlideshow : MonoBehaviour
     [SerializeField] private GameObject startCollider;
     [SerializeField] private GameObject playersHUD;
 
-
     [Tooltip("Time each slide is visible (seconds)")]
     [SerializeField] private float slideDuration = 3f;
 
@@ -32,12 +31,12 @@ public class TutorialSlideshow : MonoBehaviour
 
     private IEnumerator RunSlideshow()
     {
-        playersHUD?.SetActive(false);
-        
         // Hide all at start
         foreach (var slide in slides) 
                 slide?.SetActive(false);
 
+        playersHUD?.SetActive(false);
+        
         foreach (var slide in slides)
         {
             slide?.SetActive(true);

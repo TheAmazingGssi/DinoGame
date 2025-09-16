@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[DefaultExecutionOrder(-100)]
 public class HUDManager : MonoBehaviour
 {
     static public bool HideAll = false;
