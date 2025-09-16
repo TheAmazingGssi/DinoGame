@@ -142,7 +142,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press the shown button to use your basic attack!
+  m_text: Press this button to use your basic attack!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ae6226469c9d4c946be74b2e839d7c88, type: 2}
   m_sharedMaterial: {fileID: 5535003544734183148, guid: ae6226469c9d4c946be74b2e839d7c88, type: 2}
@@ -433,7 +433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetImage: {fileID: 4964394753659303577}
   scaleSpeed: 2
-  scaleAmount: 0.2
+  scaleAmount: 0.15
 --- !u!1 &2350702678296849303
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,9 +499,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: When the volcano meter is full, if all players perss the button within
-    60 seconds, they can call for help from grandpa Dinomount and kill all enemies
-    on the screen!
+  m_text: If the Volcano Meter is full,  all players can activate it together if
+    they press one of these buttons within 10 seconds
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ae6226469c9d4c946be74b2e839d7c88, type: 2}
   m_sharedMaterial: {fileID: 5535003544734183148, guid: ae6226469c9d4c946be74b2e839d7c88, type: 2}
@@ -894,12 +893,14 @@ MonoBehaviour:
   - {fileID: 7036693040224535671}
   - {fileID: 3560181181193500550}
   - {fileID: 2726931583622668392}
+  - {fileID: 6512508578245284686}
   tutorialEnemy: {fileID: 0}
   goSign: {fileID: 0}
   startCollider: {fileID: 0}
   playersHUD: {fileID: 0}
-  slideDuration: 5
+  slideDuration: 7
   autoStart: 1
+  <running>k__BackingField: 1
 --- !u!1 &3560181181193500550
 GameObject:
   m_ObjectHideFlags: 0
@@ -1042,7 +1043,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hold the shown button to play your emote and have some fun!
+  m_text: Hold this button to play your emote and have some fun!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ae6226469c9d4c946be74b2e839d7c88, type: 2}
   m_sharedMaterial: {fileID: 5535003544734183148, guid: ae6226469c9d4c946be74b2e839d7c88, type: 2}
@@ -1149,7 +1150,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 60.000004, y: 48.600014}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 60, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2411924954421089309
 CanvasRenderer:
@@ -1269,10 +1270,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Press the button to use your special attack!
+  m_text: 'Press this button to use your special attack!
 
-    Use it wisely as you
-    have to manage your stamina!'
+    Manage this abilty''s
+    stamina wisely!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ae6226469c9d4c946be74b2e839d7c88, type: 2}
   m_sharedMaterial: {fileID: 5535003544734183148, guid: ae6226469c9d4c946be74b2e839d7c88, type: 2}
@@ -1456,7 +1457,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -60.000004, y: 48.59998}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 60, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5271142043148323251
 CanvasRenderer:
@@ -1927,9 +1928,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: When the volcano meter is full, if all players perss the button within
-    X seconds, they can call for help from grandpa Dinomount and kill all enemies
-    on the screen!
+  m_text: Do it in sync, and Grandpa Dinomount charges in and wipes out every enemy
+    on screen!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ae6226469c9d4c946be74b2e839d7c88, type: 2}
   m_sharedMaterial: {fileID: 5535003544734183148, guid: ae6226469c9d4c946be74b2e839d7c88, type: 2}
@@ -1956,7 +1956,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15.1
+  m_fontSize: 19.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2234,7 +2234,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hold one of the shown buttons to block incoming attacks!
+  m_text: 'Hold one of these buttons to block incoming attacks!
+
+    Manage this
+    abilty''s stamina wisely!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ae6226469c9d4c946be74b2e839d7c88, type: 2}
   m_sharedMaterial: {fileID: 5535003544734183148, guid: ae6226469c9d4c946be74b2e839d7c88, type: 2}
@@ -2341,7 +2344,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 60.000004, y: 48.600014}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 60, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6364232597510802563
 CanvasRenderer:
@@ -2577,7 +2580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetImage: {fileID: 3603774031556985924}
   scaleSpeed: 2
-  scaleAmount: 0.2
+  scaleAmount: 0.15
 --- !u!1 &8409460463262342943
 GameObject:
   m_ObjectHideFlags: 0
@@ -2614,7 +2617,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -60.000004, y: 48.59998}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 60, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3103336775169716032
 CanvasRenderer:
@@ -2700,8 +2703,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1362281276654710937}
-  - {fileID: 9124588690646438338}
   - {fileID: 3380686459413598844}
+  - {fileID: 9124588690646438338}
   m_Father: {fileID: 551482689160400705}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2812,7 +2815,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press the shown buttons to move!
+  m_text: Use one of these buttons to move!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ae6226469c9d4c946be74b2e839d7c88, type: 2}
   m_sharedMaterial: {fileID: 5535003544734183148, guid: ae6226469c9d4c946be74b2e839d7c88, type: 2}
