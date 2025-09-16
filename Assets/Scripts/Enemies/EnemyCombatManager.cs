@@ -26,8 +26,6 @@ public class EnemyCombatManager : CombatManager
 
     public override void TakeDamage(DamageArgs damageArgs)
     {
-        Debug.Log("AAAAAAAAAA??");
-
         int shownDamage = Mathf.RoundToInt(damageArgs.Damage);
         Vector3 spawnPos =
             (
@@ -58,7 +56,6 @@ public class EnemyCombatManager : CombatManager
 
     private void HandleHurt(DamageArgs damageArgs)
     {
-        Debug.Log("AAAAAAAAAA");
         if (damageArgs.Knockback)
         {
             manager.AttackManager?.ChangeAttackStatue(false);

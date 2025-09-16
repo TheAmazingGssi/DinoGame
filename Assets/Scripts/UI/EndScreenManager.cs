@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class EndScreenManager : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class EndScreenManager : MonoBehaviour
 
     private void Start()
     {
-        VoteEffectManager.Instance.ApplyStoredEffects(-1, -1);
+/*        VoteEffectManager.Instance.ApplyStoredEffects(-1, -1);
 
         switch(VoteEffectManager.Instance.Ending)
         {
@@ -28,6 +29,12 @@ public class EndScreenManager : MonoBehaviour
                 moon.SetActive(false);
                 mars.SetActive(false);
                 break;
-        }
+        }*/
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+            Debug.Log("EEEEE");
     }
 }
