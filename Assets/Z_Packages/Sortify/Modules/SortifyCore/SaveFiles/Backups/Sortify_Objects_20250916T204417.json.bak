@@ -28,18 +28,6 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "Level 3"
-        },
-        {
-            "colors": [],
-            "styles": [],
-            "showComponents": [],
-            "sceneName": "Level 1"
-        },
-        {
-            "colors": [],
-            "styles": [],
-            "showComponents": [],
             "sceneName": "Win Screen"
         },
         {
@@ -47,6 +35,18 @@
             "styles": [],
             "showComponents": [],
             "sceneName": "The End"
+        },
+        {
+            "colors": [],
+            "styles": [],
+            "showComponents": [],
+            "sceneName": "Level 3"
+        },
+        {
+            "colors": [],
+            "styles": [],
+            "showComponents": [],
+            "sceneName": "Level 1"
         },
         {
             "colors": [],

@@ -7853,7 +7853,7 @@ PrefabInstance:
     - target: {fileID: 6034245898381843242, guid: 6dd85cfb8eb3d4e449badeac02fc1447, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 2a729c39c4d753f4f84d468c976209a3, type: 3}
+      objectReference: {fileID: 21300000, guid: d9ed6a5e1b6387b4b82d119d19acc721, type: 3}
     - target: {fileID: 6128688639005406495, guid: 6dd85cfb8eb3d4e449badeac02fc1447, type: 3}
       propertyPath: m_Name
       value: Paralax Background
@@ -7936,7 +7936,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 575467988714844679, guid: 7c31a47d59140654ca1d1cac2150cb57, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2414756789515561783, guid: 7c31a47d59140654ca1d1cac2150cb57, type: 3}
       propertyPath: m_Size.y
