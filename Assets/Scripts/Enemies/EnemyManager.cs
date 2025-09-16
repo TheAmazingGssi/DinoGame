@@ -3,6 +3,7 @@ using UnityEngine.Events;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Android.Gradle.Manifest;
 
 public class EnemyManager : MonoBehaviour
 {
@@ -73,7 +74,8 @@ public class EnemyManager : MonoBehaviour
 
         animator.ResetTrigger("Hurt");
 
-        vfxManager.TriggerDeathVfx();
+        if (EnemyData.Type == EnemyType.Boss)
+            vfxManager.TriggerDeathVfx();
 
         if (enemyController) enemyController.enabled = false;
         if (attackManager) attackManager.enabled = false;
