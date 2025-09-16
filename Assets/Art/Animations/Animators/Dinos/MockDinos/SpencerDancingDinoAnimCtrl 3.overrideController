@@ -1,0 +1,13 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SpencerDancingDinoAnimCtrl 3
+  m_Controller: {fileID: 9100000, guid: d70ad4d7f2f7d434fa9720f909931d8a, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: c46b41f0e4844f14d9b0ef5f7128da8b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ed9fa27fd68375446a37345ac47b0033, type: 2}

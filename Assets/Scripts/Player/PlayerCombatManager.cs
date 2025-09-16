@@ -22,35 +22,33 @@ public class PlayerCombatManager : CombatManager
     //Special Attack Stamina
     public float CurrentStamina => currentStamina;
     public float MaxStamina => maxStamina;
-
-
-    public void Initialize(float maxHealth, float maxStamina, MainPlayerController controller, Animator animator,
-        float maxBlockStamina = 5f, float blockCostPerHit = 1f, float blockRegenRate = 1f)
+    
+    public void Initialize(CharacterStats.CharacterData data, MainPlayerController controller, Animator animator)
     {
-        currentMaxHealth = maxHealth;
-        currentHealth = maxHealth;
+        currentMaxHealth = data.maxHealth;
+        currentHealth    = data.maxHealth;
 
-        this.maxStamina = maxStamina;
-        this.currentStamina = maxStamina;
+        this.maxStamina     = data.stamina;
+        this.currentStamina = data.stamina;
 
-        this.controller = controller;
-        this.animator = animator;
+        this.controller     = controller;
+        this.animator       = animator;
         this.animController = GetComponent<AnimationController>();
 
-        // block stamina init
-        this.maxBlockStamina = Mathf.Max(0f, maxBlockStamina);
+        // block stamina init from stats
+        this.maxBlockStamina     = Mathf.Max(0f, data.blockStaminaMax);
         this.currentBlockStamina = this.maxBlockStamina;
-        this.blockCostPerHit = Mathf.Max(0f, blockCostPerHit);
-        this.blockRegenRate = Mathf.Max(0f, blockRegenRate);
-        this.blockLocked = false;
+        this.blockCostPerHit     = Mathf.Max(0f, data.blockCost);
+        this.blockRegenRate      = Mathf.Max(0f, data.blockRegenRate);
+        this.blockLocked         = false;
     }
 
-
-    public bool HasBlockStamina() => currentBlockStamina > 0.01f && !blockLocked;
+    
+    public bool HasBlockStamina() => currentBlockStamina >= 1f && !blockLocked;
     
     private void LockBlockIfEmpty()
     {
-        if (currentBlockStamina <= 0.001f)
+        if (currentBlockStamina <= 0.01f)
         {
             currentBlockStamina = 0f;
             blockLocked = true; // guard broken

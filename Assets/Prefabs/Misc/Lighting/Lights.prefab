@@ -147,6 +147,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4119981198940327857, guid: 95d20ea1793f07548999982a4e2e379e, type: 3}
+      propertyPath: spotlightVerticalOffset
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4119981198940327857, guid: 95d20ea1793f07548999982a4e2e379e, type: 3}
       propertyPath: globalLightFullIntensity
       value: 1.15
       objectReference: {fileID: 0}

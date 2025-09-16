@@ -175,9 +175,8 @@ public bool IsFallen() => isFallen;
         {
             stats = characterStats.characters[(int)characterType];
             
-            combatManager.Initialize(stats.maxHealth, stats.stamina, this, animator,
-                stats.blockStaminaMax, stats.blockCost, stats.blockRegenRate);
-
+            combatManager.Initialize(stats, this, animator);
+            
             combatManager.OnDeath += (_) => EnterFallenState();
             Debug.Log($"Loaded stats for {stats.characterName}");
         }
@@ -234,34 +233,23 @@ public bool IsFallen() => isFallen;
             }
         }
         
-        // Force break when empty/locked and require a release before restarting
-        if (isBlocking && (!combatManager.HasBlockStamina() || combatManager.IsBlockLocked))
+        // New block handling
+        if (blockHeld && !isBlocking && !isEmoting && !isFallen)
         {
-            ForceStopBlocking();
-            blockRepressRequired = true; // gate restart until button is released
-        }
-
-        // Clear the gate once the player releases the button
-        if (!blockHeld)
-            blockRepressRequired = false;
-
-        // Start block (gated, no auto-restart while still held)
-        if (blockHeld && !blockRepressRequired && !isBlocking && !isEmoting && !isFallen)
-        {
+            // only start if we have stamina and not locked
             if (combatManager.HasBlockStamina() && !combatManager.IsBlockLocked)
             {
                 isBlocking = true;
                 animController.SetBlocking(true);
+                BlockBubble.SetActive(true);
             }
         }
-        else if (!blockHeld && isBlocking) // Stop on release
+        else if (!blockHeld && isBlocking)
         {
             ForceStopBlocking();
         }
-
-        // Bubble mirrors true state only
+        
         BlockBubble.SetActive(isBlocking && combatManager.HasBlockStamina() && !combatManager.IsBlockLocked);
-
 
         // Emote handling
         if (emoteHeld && !isFallen && !isBlocking)

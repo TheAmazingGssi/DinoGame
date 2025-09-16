@@ -2684,6 +2684,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lights
       objectReference: {fileID: 0}
+    - target: {fileID: 880025163345845809, guid: 276e49ebf10c3f748984319adc4f0af5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 880025163345845809, guid: 276e49ebf10c3f748984319adc4f0af5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690682701631336156, guid: 276e49ebf10c3f748984319adc4f0af5, type: 3}
+      propertyPath: m_Intensity
+      value: 1.15
+      objectReference: {fileID: 0}
     - target: {fileID: 6560233115962401024, guid: 276e49ebf10c3f748984319adc4f0af5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
