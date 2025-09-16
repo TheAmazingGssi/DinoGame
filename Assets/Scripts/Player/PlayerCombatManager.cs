@@ -105,7 +105,7 @@ public class PlayerCombatManager : CombatManager
                 KnockbackHelper.GetKnockbackForceFromDamage(args.Damage, true)
             );
         }
-
+        
         animController.TriggerDamaged();
     }
 

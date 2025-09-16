@@ -27,9 +27,9 @@ public override IEnumerator PerformSpecial(UnityAction<float> onSpecial)
     if (activeColliderGO.activeSelf) activeColliderGO.SetActive(false);
 
     // --- VFX ---
-    animController.SpecialVfxAnimator.transform.position = activeColliderGO.transform.position + new Vector3(facingRight ? 1.1f : -1.1f, 0f, 0f);
+    animController.specialVfxAnimator.transform.position = activeColliderGO.transform.position + new Vector3(facingRight ? 1.1f : -1.1f, 0f, 0f);
     animController.specialVfxRenderer.flipX = !facingRight;
-    animController.SpecialVfxAnimator.SetTrigger("Play");
+    animController.specialVfxAnimator.SetTrigger("Play");
     
     for (int i = 0; i < specialHitCount; i++)
     {

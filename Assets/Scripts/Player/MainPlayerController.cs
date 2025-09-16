@@ -98,8 +98,7 @@ public class MainPlayerController : MonoBehaviour
 
     public PlayerCombatManager CombatManager => combatManager;
     public CharacterType CharacterType => characterType;
-
-    // todo: new block system
+    public bool IsFrozen => isFrozen;
     public bool IsBlocking => isBlocking;
     public bool IsFacingRight => facingRight;
 

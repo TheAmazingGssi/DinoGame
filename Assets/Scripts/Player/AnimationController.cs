@@ -1,34 +1,53 @@
-using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class AnimationController : MonoBehaviour
 {
-    public AnimationData animationData;
-    public CharacterType characterType;
+    // ---------- Inspector: Config ----------
+    [Header("Config")]
+    [SerializeField] public CharacterType characterType;
+    [SerializeField] private AnimationData animationData;
 
-    public GameObject SpecialVfxObject;
-    public Animator animator;
-    public Animator SpecialVfxAnimator;
-    public Animator haloVfxAnimator;
-    public Animator bloodVfxAnimator;
-    public Animator normalAttackVfxAnimator;
-    public SpriteRenderer mainSpriteRenderer;
-    public SpriteRenderer specialVfxRenderer;
-    public SpriteRenderer normalAttackVfxRenderer;
+    // ---------- Inspector: Core References ----------
+    [Header("Core")]
+    [SerializeField] private MainPlayerController playerController;
+    [SerializeField] private Animator animator;
+
+    // ---------- Inspector: VFX Objects & Animators ----------
+    [Header("VFX Objects & Animators")]
+    [SerializeField]
+    public GameObject specialVfxObject;
+    [SerializeField] public Animator specialVfxAnimator;
+    [SerializeField] private Animator haloVfxAnimator;
+    [SerializeField] private Animator bloodVfxAnimator;
+    [SerializeField] public Animator normalAttackVfxAnimator;
+
+    // ---------- Inspector: Renderers ----------
+    [Header("Renderers")]
+    [SerializeField] private SpriteRenderer mainSpriteRenderer;
+    [SerializeField] public SpriteRenderer specialVfxRenderer;
+    [SerializeField] public SpriteRenderer normalAttackVfxRenderer;
+
+    // ---------- Inspector: Particles & Spawners ----------
+    [Header("Particles & Spawners")]
+    [SerializeField]
     public ParticleSystem terryParticleSystem;
-    public ParticleSystem healParticleSystem;
-    public RoarWaveBurstSpawner parisRoarWaveSpawner;
-    public float bloodVfxDuration = 0.125f;
-    
-    private Color hurtPulseColor = new Color(0.5f, 0f, 0f, 1f);
+    [SerializeField] private ParticleSystem healParticleSystem;
+    [SerializeField] private RoarWaveBurstSpawner parisRoarWaveSpawner;
+
+    // ---------- Inspector: Tuning ----------
+    [Header("Tuning")]
+    [SerializeField, Min(0f)] private float bloodVfxDuration = 0.125f;
+
+    // ---------- Private State ----------
+    private static readonly Color HurtPulseColor = new Color(0.5f, 0f, 0f, 1f);
     private bool vfxPlaying = false;
+
     
     private void Awake()
     {
-        specialVfxRenderer = SpecialVfxObject.GetComponent<SpriteRenderer>();
-        SpecialVfxAnimator = SpecialVfxObject.GetComponent<Animator>();
+        specialVfxRenderer = specialVfxObject.GetComponent<SpriteRenderer>();
+        specialVfxAnimator = specialVfxObject.GetComponent<Animator>();
     }
 
     public void SetMoveSpeed(float speed)
@@ -79,16 +98,19 @@ public class AnimationController : MonoBehaviour
 
     public void TriggerDamaged()
     {
-        if (animator.GetBool("IsDowned")) return;
+        if (animator.GetBool("IsDowned")) 
+            return;
         
-        animator.SetTrigger("Damaged");
+        if(!playerController.IsFrozen)
+            animator.SetTrigger("Damaged");
+        
         bloodVfxAnimator.SetTrigger("Play");
         StartCoroutine(PulseRedOnHurt());
     }
 
     private IEnumerator PulseRedOnHurt()
     {
-        mainSpriteRenderer.color = hurtPulseColor;
+        mainSpriteRenderer.color = HurtPulseColor;
         yield return new WaitForSeconds(bloodVfxDuration);
         mainSpriteRenderer.color = Color.white;
     }
@@ -104,10 +126,10 @@ public class AnimationController : MonoBehaviour
         if (vfxPlaying) return; 
         vfxPlaying = true;
 
-        if (!SpecialVfxAnimator.gameObject.activeSelf)
-            SpecialVfxAnimator.gameObject.SetActive(true);
+        if (!specialVfxAnimator.gameObject.activeSelf)
+            specialVfxAnimator.gameObject.SetActive(true);
 
-        SpecialVfxAnimator.SetTrigger("Play");
+        specialVfxAnimator.SetTrigger("Play");
     }
 
     public void ResetSpecialVfx()

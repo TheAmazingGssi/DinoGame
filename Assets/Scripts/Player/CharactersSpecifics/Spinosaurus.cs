@@ -13,7 +13,7 @@ public class Spinosaurus : CharacterBase
     public override void Initialize(CharacterStats.CharacterData characterStats, AnimationController animController, GameObject rightCollider, GameObject leftCollider, bool isFacingRight, float enable, float disable)
     {
         base.Initialize(characterStats, animController, rightCollider, leftCollider, isFacingRight, enable, disable);
-        _specialVfxTransform = animController.SpecialVfxObject.transform;
+        _specialVfxTransform = animController.specialVfxObject.transform;
     }
 
     public override IEnumerator PerformSpecial(UnityAction<float> onSpecial)
