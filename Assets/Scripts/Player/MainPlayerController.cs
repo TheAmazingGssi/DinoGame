@@ -446,8 +446,6 @@ public bool IsFallen() => isFallen;
     
     private IEnumerator RaiseFriendshipFlag()
     {
-        yield return new WaitUntil(() => GameManager.Instance != null && CoopBarTimer.Instance != null);
-
         CoopBarTimer.Instance.PlayersTryingToUlt++;
         FriendshipAttackFlag = true;
 
@@ -456,6 +454,7 @@ public bool IsFallen() => isFallen;
         FriendshipAttackFlag = false;
         CoopBarTimer.Instance.PlayersTryingToUlt--;
     }
+
     
     public void StartCoopActualAttack()
     {

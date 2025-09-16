@@ -98,7 +98,9 @@ public class EnemyManager : MonoBehaviour
                 Instantiate(healthItem, spawnPosition, Quaternion.identity);
             }
         }
-        vfxManager.ResetDeathVfx();
+        
+        if(enemyData.Type == EnemyType.Boss)
+            vfxManager.ResetDeathVfx();
 
         StartCoroutine(DeSpawn());
     }
