@@ -34,13 +34,13 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "Level 1"
+            "sceneName": "Win Screen"
         },
         {
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "Win Screen"
+            "sceneName": "The End"
         },
         {
             "colors": [],
@@ -52,7 +52,7 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "The End"
+            "sceneName": "Level 1"
         }
     ]
 }

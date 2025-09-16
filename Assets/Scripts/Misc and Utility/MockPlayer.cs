@@ -1,14 +1,18 @@
 using System;
 using UnityEngine;
 
-public class MockPlayerFloat : MonoBehaviour
+public class MockPlayer : MonoBehaviour
 {
+    [SerializeField] public EndScreenManager endManager;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float floatSpeed = 3f;
     [SerializeField] private float floatRotationSpeed = 3f;
 
     private void Start()
     {
+        if (endManager.StartInLandingPos)
+            return;
+        
         rb.angularVelocity = floatRotationSpeed;
         if (transform.position.x > 0)
         {
