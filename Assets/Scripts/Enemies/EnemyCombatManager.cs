@@ -26,6 +26,8 @@ public class EnemyCombatManager : CombatManager
 
     public override void TakeDamage(DamageArgs damageArgs)
     {
+        Debug.Log("AAAAAAAAAA??");
+
         int shownDamage = Mathf.RoundToInt(damageArgs.Damage);
         Vector3 spawnPos =
             (
@@ -56,6 +58,7 @@ public class EnemyCombatManager : CombatManager
 
     private void HandleHurt(DamageArgs damageArgs)
     {
+        Debug.Log("AAAAAAAAAA");
         if (damageArgs.Knockback)
         {
             manager.AttackManager?.ChangeAttackStatue(false);
@@ -68,9 +71,11 @@ public class EnemyCombatManager : CombatManager
                 KnockbackHelper.GetKnockbackForceFromDamage(damageArgs.Damage, damageArgs.Knockback)
             );
         }
-        
-        if(manager.EnemyData.Type != EnemyType.Boss)
+
+        if (manager.EnemyData.Type != EnemyType.Boss)
             manager.Animator.SetTrigger(HURT);
+        else
+            manager.VFXManager.TriggerHurtVfx();
         manager.SoundPlayer.PlaySound(1, 0.5f);
         manager.SpriteRenderer.color = Color.red;
 
@@ -83,6 +88,8 @@ public class EnemyCombatManager : CombatManager
         yield return new WaitForSeconds(0.13f);
         manager.SpriteRenderer.color = Color.white;
         manager.Animator.ResetTrigger(HURT);
+        if (manager.EnemyData.Type == EnemyType.Boss)
+            manager.VFXManager.ResetHurtVfx();
     }
     
     public virtual void OnHurtAnimationComplete()
