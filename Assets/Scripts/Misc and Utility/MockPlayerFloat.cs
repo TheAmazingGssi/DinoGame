@@ -4,12 +4,20 @@ using UnityEngine;
 public class MockPlayerFloat : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private float floatSpeed = 2f;
-    [SerializeField] private float floatRotationSpeed = 0.5f;
+    [SerializeField] private float floatSpeed = 3f;
+    [SerializeField] private float floatRotationSpeed = 3f;
 
     private void Start()
     {
         rb.angularVelocity = floatRotationSpeed;
+        if (transform.position.x > 0)
+        {
+            rb.linearVelocity = Vector2.right * floatSpeed;
+        }
+        else
+        {
+            rb.linearVelocity = Vector2.left * floatSpeed;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
