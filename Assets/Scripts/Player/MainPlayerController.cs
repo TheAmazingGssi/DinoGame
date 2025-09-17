@@ -461,7 +461,8 @@ public bool IsFallen() => isFallen;
     
     public void StartCoopActualAttack()
     {
-        coopAttack.Activate();
+        if(GameManager.Instance.CanCoopAttack)
+            coopAttack.Activate();
     }
     
     private IEnumerator ResetAttackCooldown()

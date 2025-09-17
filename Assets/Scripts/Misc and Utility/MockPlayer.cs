@@ -14,28 +14,17 @@ public class MockPlayer : MonoBehaviour
             return;
         
         rb.angularVelocity = floatRotationSpeed;
-        
-        if (transform.position.x >= 0)
-        {
-            rb.linearVelocity = Vector2.right * floatSpeed;
-        }
-        else
-        {
-            rb.linearVelocity = Vector2.left * floatSpeed;
-        }
+        rb.linearVelocity = Vector2.right * floatSpeed;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.transform.position.x > 0 && other.tag == "SpaceCol")
+        if (other.tag == "SpaceCol")
         {
-            rb.linearVelocity = Vector2.left * floatSpeed;
-            rb.angularVelocity = -1 * floatRotationSpeed;
-        }
-        else if (other.transform.position.x < 0 && other.tag == "SpaceCol")
-        {
-            rb.linearVelocity = Vector2.right * floatSpeed;
-            rb.angularVelocity = floatRotationSpeed;
+            if (other.transform.position.x > 0 )
+                rb.linearVelocity = Vector2.left * floatSpeed;
+            else 
+                rb.linearVelocity = Vector2.right * floatSpeed;
         }
     }
 }

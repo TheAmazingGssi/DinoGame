@@ -47,6 +47,7 @@ public class HUDManager : MonoBehaviour
 
         if(GameManager.Instance.LevelNumber != 1 && !HideAll)
         {
+            MainPlayerController mpc = GameManager.Instance.GetHighestScorePlayer().MainPlayerController;
             ChangeCrown(GameManager.Instance.GetHighestScorePlayer().MainPlayerController);
         }
     }

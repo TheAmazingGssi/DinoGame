@@ -43,6 +43,8 @@ public class GameManager : MonoBehaviour
     public Dictionary<Vote, int> FinaleLevelEffects = new Dictionary<Vote, int>();
     public Dictionary<Vote, int> NextLevelEffects   = new Dictionary<Vote, int>();
     public bool IsInCoopAttack = false;
+    public bool CanCoopAttack = true;
+
 
     [Header("State ▸ Counters & Collections (Runtime)")]
     private int enemiesOnStage = 0;
@@ -126,7 +128,8 @@ public class GameManager : MonoBehaviour
             StartCoroutine(PostponedLevelEnd());
             return;
         }
-        
+
+        CanCoopAttack = false;
         
         foreach (PlayerEntity player in PlayerEntity.PlayerList)
         {
@@ -167,6 +170,8 @@ public class GameManager : MonoBehaviour
 
     public void StartVote()
     {
+        CanCoopAttack = true;
+        
         cameraMovement.FurthestRightPoint = cameraMovement.transform.position.x;
         cameraMovement.FurthestLeftPoint = cameraMovement.transform.position.x;
         vote.wasActivated = false;
@@ -191,6 +196,7 @@ public class GameManager : MonoBehaviour
     {
         PlayerEntity highestScorePlayer = null;
         int highestScore = 0;
+        
         foreach (var player in PlayerEntity.PlayerList)
         {
             int score = player.MainPlayerController.GetScore();

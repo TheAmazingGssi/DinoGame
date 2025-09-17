@@ -780,7 +780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8823d5e980308e54d8b3ad01b368fc7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene: 4
+  targetScene: 3
 --- !u!4 &1107998583
 Transform:
   m_ObjectHideFlags: 0
@@ -2749,6 +2749,42 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 1.15
       objectReference: {fileID: 0}
+    - target: {fileID: 5690682701631336156, guid: 276e49ebf10c3f748984319adc4f0af5, type: 3}
+      propertyPath: m_BlendStyleIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690682701631336156, guid: 276e49ebf10c3f748984319adc4f0af5, type: 3}
+      propertyPath: m_OverlapOperation
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690682701631336156, guid: 276e49ebf10c3f748984319adc4f0af5, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690682701631336156, guid: 276e49ebf10c3f748984319adc4f0af5, type: 3}
+      propertyPath: 'm_ApplyToSortingLayers.Array.data[0]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690682701631336156, guid: 276e49ebf10c3f748984319adc4f0af5, type: 3}
+      propertyPath: 'm_ApplyToSortingLayers.Array.data[1]'
+      value: -326893323
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690682701631336156, guid: 276e49ebf10c3f748984319adc4f0af5, type: 3}
+      propertyPath: 'm_ApplyToSortingLayers.Array.data[2]'
+      value: -812689949
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690682701631336156, guid: 276e49ebf10c3f748984319adc4f0af5, type: 3}
+      propertyPath: 'm_ApplyToSortingLayers.Array.data[3]'
+      value: -1638294675
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690682701631336156, guid: 276e49ebf10c3f748984319adc4f0af5, type: 3}
+      propertyPath: 'm_ApplyToSortingLayers.Array.data[4]'
+      value: -1466523249
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690682701631336156, guid: 276e49ebf10c3f748984319adc4f0af5, type: 3}
+      propertyPath: 'm_ApplyToSortingLayers.Array.data[5]'
+      value: 1274294147
+      objectReference: {fileID: 0}
     - target: {fileID: 6560233115962401024, guid: 276e49ebf10c3f748984319adc4f0af5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3336,6 +3372,30 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9113556745850160309, guid: 6e17ff37b135abd4caf0c7f5c9a3bfd4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.23444445
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113556745850160309, guid: 6e17ff37b135abd4caf0c7f5c9a3bfd4, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.49500003
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113556745850160309, guid: 6e17ff37b135abd4caf0c7f5c9a3bfd4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113556745850160309, guid: 6e17ff37b135abd4caf0c7f5c9a3bfd4, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113556745850160309, guid: 6e17ff37b135abd4caf0c7f5c9a3bfd4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113556745850160309, guid: 6e17ff37b135abd4caf0c7f5c9a3bfd4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -3.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3556,6 +3616,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1211259373}
     - target: {fileID: 8685290730782000187, guid: 08c6ec01f3ec1474cac4faa3d2d4b105, type: 3}
+      propertyPath: autoStart
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685290730782000187, guid: 08c6ec01f3ec1474cac4faa3d2d4b105, type: 3}
       propertyPath: playersHUD
       value: 
       objectReference: {fileID: 1052078160}
@@ -3567,6 +3631,10 @@ PrefabInstance:
       propertyPath: tutorialEnemy
       value: 
       objectReference: {fileID: 1772922969}
+    - target: {fileID: 8685290730782000187, guid: 08c6ec01f3ec1474cac4faa3d2d4b105, type: 3}
+      propertyPath: <running>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8975996494716602370, guid: 08c6ec01f3ec1474cac4faa3d2d4b105, type: 3}
       propertyPath: scaleAmount
       value: 0.15

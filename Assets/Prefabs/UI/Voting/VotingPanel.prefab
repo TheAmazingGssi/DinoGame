@@ -68,10 +68,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 3193549154023202544}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.22664629, y: 0.53900003}
-  m_AnchorMax: {x: 0.8473923, y: 0.90800005}
-  m_AnchoredPosition: {x: 0.5, y: -1.5}
-  m_SizeDelta: {x: 1, y: 0.10179901}
+  m_AnchorMin: {x: 0.2116624, y: 0.54120576}
+  m_AnchorMax: {x: 0.78878456, y: 0.91047055}
+  m_AnchoredPosition: {x: 0, y: -2.5}
+  m_SizeDelta: {x: -4, y: 0.10180664}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &4254264942668317753
 CanvasRenderer:
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 34.05
+  m_fontSize: 34.1
   m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -411,10 +411,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 3193549154023202544}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.117543966}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -119.99999, y: 3.2055}
+  m_AnchorMin: {x: 0.059000004, y: 0.1397108}
+  m_AnchorMax: {x: 0.9397846, y: 0.5}
+  m_AnchoredPosition: {x: 0.5, y: -6}
+  m_SizeDelta: {x: -3, y: 5}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &981050169748200482
 CanvasRenderer:
@@ -445,7 +445,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "After defeating the Alien\u2019s leader, you board their mothership, 10\u2026
-    9\u2026 8\u2026 No time! TAKE OFF! You fly sky high and exit the atmosphere,
+    9\u2026 8\u2026 No time! TAKE OFF! \nYou fly sky high and exit the atmosphere,
     congrats! You escaped Earth, your next destination: The Moon, but how will you
     land?\""
   m_isRightToLeft: 0
@@ -474,12 +474,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
+  m_fontSize: 25
   m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0
-  m_fontSizeMax: 16
+  m_fontSizeMax: 25
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
