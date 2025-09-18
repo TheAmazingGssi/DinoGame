@@ -22,7 +22,7 @@ public struct DamageArgs
 public class CombatManager : MonoBehaviour
 {
     // [SerializeField] protected UI_ProgressBar healthBar;
-    protected float currentHealth = 0;
+    [SerializeField] protected float currentHealth = 0;
     public float CurrentHealth
     {
         get => currentHealth;
