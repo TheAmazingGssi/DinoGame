@@ -5,7 +5,7 @@ public class CoopBarTimer : MonoBehaviour
 {
     [HideInInspector] public static CoopBarTimer Instance { get; private set; }
     [field: SerializeField] public float MaxFill { get; private set; } = 5;
-    public float CurrentFill { get; private set; } = 0;
+    [field: SerializeField] public float CurrentFill { get; private set; } = 0;
 
     [HideInInspector] public int PlayersTryingToUlt = 0;
 
