@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public class CharacterSelect : MonoBehaviour
 {
     [SerializeField] UISettings settings;
+    [SerializeField] SoundPlayer soundPlayer;
     
     public CharacterType SelectedCharacter = CharacterType.Triceratops;
     public CharSelectMultiplayerManager Manager;
@@ -28,7 +29,8 @@ public class CharacterSelect : MonoBehaviour
             return;
 
         //now we can do stuff
-        
+
+        soundPlayer.PlaySound(0);
         if (input.y < 0)
             ChangeColor(Manager.GetNextCharacter(SelectedCharacter));
         else
@@ -36,11 +38,13 @@ public class CharacterSelect : MonoBehaviour
     }
     public void OnXPressed(InputAction.CallbackContext inputContext)
     {
+        soundPlayer.PlaySound(1);
         ready = true;
         UpdateReady.Invoke();
     }
     public void OnCancel(InputAction.CallbackContext inputContext)
     {
+        soundPlayer.PlaySound(1);
         ready = false;
         UpdateReady.Invoke();
     }

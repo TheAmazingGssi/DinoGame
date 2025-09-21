@@ -4921,6 +4921,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9113556745850160309}
+  - component: {fileID: 4568861053669620743}
   m_Layer: 0
   m_Name: Coop Meter
   m_TagString: Untagged
@@ -4951,6 +4952,20 @@ RectTransform:
   m_AnchoredPosition: {x: -4.5, y: -12}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4568861053669620743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333910332193931979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 1
+  m_AspectRatio: 3.554977
 --- !u!1 &494484951386410287
 GameObject:
   m_ObjectHideFlags: 0
