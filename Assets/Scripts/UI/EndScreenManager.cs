@@ -15,21 +15,21 @@ public class EndScreenManager : MonoBehaviour
     [SerializeField] Transform[] landPositions;
     [SerializeField] Transform[] spacePositions;
 
-    [SerializeField] private GameObject Meteor;
+    [SerializeField] private GameObject Ship;
     
-    [SerializeField] public bool StartInLandingPos = true;
+    [SerializeField] public bool StartInLandingPos;
     
     private void Start()
     {
         VoteEffectManager.Instance.ApplyStoredEffects(-1, -1);
-
+        
         switch (VoteEffectManager.Instance.Ending)
         {
             case Ending.Mars:
                 earth.SetActive(false);
                 moon.SetActive(false);
                 mars.SetActive(true);
-                Meteor.SetActive(false);
+                Ship.SetActive(false);
                 StartInLandingPos = true;
                 break;
             
@@ -38,7 +38,7 @@ public class EndScreenManager : MonoBehaviour
                 moon.SetActive(true);
                 mars.SetActive(false);
                 StartInLandingPos = true;
-                Meteor.SetActive(false);
+                Ship.SetActive(false);
                 break;
             
             case Ending.Space:
@@ -46,7 +46,7 @@ public class EndScreenManager : MonoBehaviour
                 moon.SetActive(true);
                 mars.SetActive(false);
                 StartInLandingPos = false;
-                Meteor.SetActive(true);
+                Ship.SetActive(true);
                 break;
         }
 
@@ -89,9 +89,16 @@ public class EndScreenManager : MonoBehaviour
         else
         {
             terry.transform.position = spacePositions[0].position;
+            terry.bobbingMotionCenter = spacePositions[0].position;
+            
             spencer.transform.position = spacePositions[1].position;
+            spencer.bobbingMotionCenter = spacePositions[1].position;
+            
             paris.transform.position = spacePositions[2].position;
+            paris.bobbingMotionCenter = spacePositions[2].position;
+            
             andrew.transform.position = spacePositions[3].position;
+            andrew.bobbingMotionCenter = spacePositions[3].position;
         }
     }
 }

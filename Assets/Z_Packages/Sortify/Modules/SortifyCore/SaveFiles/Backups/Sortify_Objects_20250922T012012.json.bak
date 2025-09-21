@@ -28,12 +28,6 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "The End"
-        },
-        {
-            "colors": [],
-            "styles": [],
-            "showComponents": [],
             "sceneName": "Level 1"
         },
         {
@@ -47,6 +41,12 @@
             "styles": [],
             "showComponents": [],
             "sceneName": "CharacterSelectScene"
+        },
+        {
+            "colors": [],
+            "styles": [],
+            "showComponents": [],
+            "sceneName": "The End"
         },
         {
             "colors": [],
