@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[DefaultExecutionOrder(-120)]
+[DefaultExecutionOrder(-100)]
 public class GameManager : MonoBehaviour
 {
 // ---------- Singleton & Static Events ----------

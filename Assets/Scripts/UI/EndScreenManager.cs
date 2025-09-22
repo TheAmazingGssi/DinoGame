@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[DefaultExecutionOrder(-70)]
 public class EndScreenManager : MonoBehaviour
 {
     [SerializeField] GameObject earth;
@@ -24,6 +25,7 @@ public class EndScreenManager : MonoBehaviour
         VoteEffectManager.Instance.ApplyStoredEffects(-1, -1);
         
         switch (VoteEffectManager.Instance.Ending)
+        //switch (Ending.Space)
         {
             case Ending.Mars:
                 earth.SetActive(false);
@@ -37,16 +39,16 @@ public class EndScreenManager : MonoBehaviour
                 earth.SetActive(true);
                 moon.SetActive(true);
                 mars.SetActive(false);
-                StartInLandingPos = true;
                 Ship.SetActive(false);
+                StartInLandingPos = true;
                 break;
             
             case Ending.Space:
                 earth.SetActive(true);
                 moon.SetActive(true);
                 mars.SetActive(false);
-                StartInLandingPos = false;
                 Ship.SetActive(true);
+                StartInLandingPos = false;
                 break;
         }
 

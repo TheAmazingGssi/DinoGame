@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
+[DefaultExecutionOrder(-80)]
 public class PlayerEntity : MonoBehaviour
 {
     static public List<PlayerEntity> PlayerList = new List<PlayerEntity>();
