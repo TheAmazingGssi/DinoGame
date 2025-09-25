@@ -40,12 +40,6 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "CharacterSelectScene"
-        },
-        {
-            "colors": [],
-            "styles": [],
-            "showComponents": [],
             "sceneName": "The End"
         },
         {
@@ -53,6 +47,12 @@
             "styles": [],
             "showComponents": [],
             "sceneName": "Main Menu"
+        },
+        {
+            "colors": [],
+            "styles": [],
+            "showComponents": [],
+            "sceneName": "CharacterSelectScene"
         }
     ]
 }

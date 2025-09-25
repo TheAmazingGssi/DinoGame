@@ -40,13 +40,13 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "CharacterSelectScene"
+            "sceneName": "The End"
         },
         {
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "The End"
+            "sceneName": "CharacterSelectScene"
         },
         {
             "colors": [],
