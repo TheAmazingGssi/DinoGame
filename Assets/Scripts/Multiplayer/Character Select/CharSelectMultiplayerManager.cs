@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -16,6 +17,10 @@ public class CharSelectMultiplayerManager : MonoBehaviour
     [SerializeField] SceneLoader loader;
     [SerializeField] GameObject confirmReadyPanel;
     [SerializeField] float allReadyBuffer = 0.1f;
+    [SerializeField] Material flashMaterial;
+    [SerializeField] Material normalMaterial;
+    [SerializeField] float flashTime;
+    [SerializeField] float feedbackBeforeAllReadyTime;
     float allReadyTime;
     Dictionary<CharacterType, Sprite> splashArt = new Dictionary<CharacterType, Sprite>();
     Dictionary<CharacterType, string> names = new Dictionary<CharacterType, string>();
@@ -60,10 +65,17 @@ public class CharSelectMultiplayerManager : MonoBehaviour
         for(int i = 0; i<playerList.Count; i++)
         {
             if (playerList[i].ready)
-                displayers[i].ReadyText.text = readyMessege;
+            {
+                if (displayers[i].ReadyText.text != readyMessege)
+                {
+                    StartCoroutine(FlashCharacter(displayers[i].Image));
+                    displayers[i].ReadyText.text = readyMessege;
+                }
+            }
             else
             {
                 displayers[i].ReadyText.text = notReadyMessege;
+                displayers[i].Image.material = normalMaterial;
                 while (CharacterTaken(playerList[i].SelectedCharacter))
                     playerList[i].SelectedCharacter = GetNextCharacter(playerList[i].SelectedCharacter);
                 allReady = false;
@@ -73,10 +85,24 @@ public class CharSelectMultiplayerManager : MonoBehaviour
         
         if (allReady && !confirmReadyPanel.activeSelf)
         {
+            StartCoroutine(StartOpeningFinalPanel());
+        }
+
+    }
+
+    private IEnumerator StartOpeningFinalPanel()
+    {
+        yield return new WaitForSeconds(feedbackBeforeAllReadyTime);
+
+        bool allReady = true;
+        for(int i = 0; i<playerList.Count;i++)
+            allReady = allReady && playerList[i].ready;
+
+        if (allReady)
+        {
             confirmReadyPanel.SetActive(true);
             allReadyTime = Time.time + allReadyBuffer;
         }
-
     }
     
     private bool CharacterTaken(CharacterType character)
@@ -88,6 +114,12 @@ public class CharSelectMultiplayerManager : MonoBehaviour
         return false;
     }
 
+    private IEnumerator FlashCharacter(Image image)
+    {
+        image.material = flashMaterial;
+        yield return new WaitForSeconds(flashTime);
+        image.material = normalMaterial;
+    }
     public CharacterType GetNextCharacter(CharacterType currentCharacter)
     {
         return ChangeCharacter(currentCharacter, 1);

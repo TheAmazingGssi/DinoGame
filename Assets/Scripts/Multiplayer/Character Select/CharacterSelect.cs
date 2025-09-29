@@ -38,13 +38,15 @@ public class CharacterSelect : MonoBehaviour
     }
     public void OnXPressed(InputAction.CallbackContext inputContext)
     {
-        soundPlayer.PlaySound(1);
+        if (inputContext.ReadValue<float>() != 0)
+            soundPlayer.PlaySound(1);
         ready = true;
         UpdateReady.Invoke();
     }
     public void OnCancel(InputAction.CallbackContext inputContext)
     {
-        soundPlayer.PlaySound(1);
+        if (inputContext.ReadValue<float>() != 0)
+            soundPlayer.PlaySound(1);
         ready = false;
         UpdateReady.Invoke();
     }
