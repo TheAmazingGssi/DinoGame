@@ -34,7 +34,7 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
-<<<<<<< HEAD
+<<<<<<< HEAD:Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250929T121853.json.bak
             "sceneName": "Level 3"
         },
         {
@@ -42,15 +42,15 @@
             "styles": [],
             "showComponents": [],
             "sceneName": "The End"
+=======
+            "sceneName": "CharacterSelectScene"
+>>>>>>> Peer:Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250929T132538.json.bak
         },
         {
             "colors": [],
             "styles": [],
             "showComponents": [],
             "sceneName": "CharacterSelectScene"
-=======
-            "sceneName": "The End"
->>>>>>> Peer
         },
         {
             "colors": [],
@@ -69,12 +69,6 @@
             "styles": [],
             "showComponents": [],
             "sceneName": "Main Menu"
-        },
-        {
-            "colors": [],
-            "styles": [],
-            "showComponents": [],
-            "sceneName": "CharacterSelectScene"
         }
     ]
 }

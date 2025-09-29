@@ -34,23 +34,17 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
-<<<<<<< HEAD
+<<<<<<< HEAD:Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250929T121908.json.bak
             "sceneName": "Level 3"
-        },
-        {
-            "colors": [],
-            "styles": [],
-            "showComponents": [],
-            "sceneName": "The End"
-        },
-        {
-            "colors": [],
-            "styles": [],
-            "showComponents": [],
-            "sceneName": "CharacterSelectScene"
 =======
+            "sceneName": "CharacterSelectScene"
+>>>>>>> Peer:Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250929T133231.json.bak
+        },
+        {
+            "colors": [],
+            "styles": [],
+            "showComponents": [],
             "sceneName": "The End"
->>>>>>> Peer
         },
         {
             "colors": [],
@@ -62,6 +56,13 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
+<<<<<<< HEAD:Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250929T121908.json.bak
+<<<<<<<< HEAD:Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250922T170715.json.bak
+            "sceneName": "CharacterSelectScene"
+========
+            "sceneName": "ComixEnding"
+>>>>>>>> Peer:Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250929T121908.json.bak
+=======
             "sceneName": "Level 3"
         },
         {
@@ -69,12 +70,7 @@
             "styles": [],
             "showComponents": [],
             "sceneName": "Main Menu"
-        },
-        {
-            "colors": [],
-            "styles": [],
-            "showComponents": [],
-            "sceneName": "CharacterSelectScene"
+>>>>>>> Peer:Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250929T133231.json.bak
         }
     ]
 }
