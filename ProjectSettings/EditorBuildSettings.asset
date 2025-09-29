@@ -24,8 +24,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Final Game Scenes/Lose Screen.unity
     guid: fa4e9b4ba10d133429134c3c4e599916
   - enabled: 1
-    path: Assets/Scenes/Final Game Scenes/The End.unity
-    guid: b696dc15a65bea247aa85d8a05c48b08
+    path: Assets/Scenes/Final Game Scenes/ComixEnding.unity
+    guid: a74c8580873561f4bbffef4aa0f941be
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: e33a4b7a73de99f47a50cef1f5cae0b7, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

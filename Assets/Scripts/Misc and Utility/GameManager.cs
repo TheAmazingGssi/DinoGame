@@ -106,6 +106,7 @@ public class GameManager : MonoBehaviour
         //make camera move to vote animation
         if (currentWave >= waveLocations.Length)
             return;
+        
         float cameraX = cameraMovement.transform.position.x;
         if (cameraX < waveLocations[currentWave].LeftMost && cameraX > cameraMovement.FurthestLeftPoint)
             cameraMovement.FurthestLeftPoint = cameraX;
@@ -182,7 +183,11 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(5);
         endLevelSpotlight.DisableDark();
-        StartVote();
+        
+        if (LevelNumber != FinaleLevel)
+            StartVote();
+        else
+            sceneLoader.LoadTargetScene();
     }
     
     private void HandleVoteComplete(int winningChoice)
