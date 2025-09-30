@@ -47,7 +47,7 @@ public class EnemyCombatManager : CombatManager
 
         base.TakeDamage(damageArgs);
         
-        if (damagePopupPrefab != null)
+        if (damagePopupPrefab != null && manager.IsDead == false)
         {
             DamagePopup.Spawn(damagePopupPrefab, spawnPos, shownDamage, damagePopupColor);
         }

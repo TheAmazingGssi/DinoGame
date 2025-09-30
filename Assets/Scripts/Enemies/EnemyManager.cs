@@ -45,6 +45,7 @@ public class EnemyManager : MonoBehaviour
     public SoundPlayer SoundPlayer => soundPlayer;
     public KnockbackManager KnockbackManager => knockbackManager;
     public GameObject ProjectileDirection => projectileDirection;
+    public bool IsDead => isDead;
 
     public event UnityAction<EnemyManager> OnDeath;
 
