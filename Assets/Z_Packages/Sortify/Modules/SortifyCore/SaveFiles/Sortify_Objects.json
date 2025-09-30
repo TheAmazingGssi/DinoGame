@@ -34,7 +34,6 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
-<<<<<<< HEAD
             "sceneName": "Level 3"
         },
         {
@@ -42,27 +41,12 @@
             "styles": [],
             "showComponents": [],
             "sceneName": "The End"
-        },
-        {
-            "colors": [],
-            "styles": [],
-            "showComponents": [],
-            "sceneName": "CharacterSelectScene"
-=======
-            "sceneName": "The End"
->>>>>>> Peer
         },
         {
             "colors": [],
             "styles": [],
             "showComponents": [],
             "sceneName": "ComixEnding"
-        },
-        {
-            "colors": [],
-            "styles": [],
-            "showComponents": [],
-            "sceneName": "Level 3"
         },
         {
             "colors": [],

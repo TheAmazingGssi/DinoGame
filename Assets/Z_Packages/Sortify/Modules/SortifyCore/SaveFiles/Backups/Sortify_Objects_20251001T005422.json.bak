@@ -52,13 +52,13 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "Main Menu"
+            "sceneName": "ComixEnding"
         },
         {
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "ComixEnding"
+            "sceneName": "Main Menu"
         }
     ]
 }

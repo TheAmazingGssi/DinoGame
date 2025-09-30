@@ -46,17 +46,19 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "Main Menu"
+            "sceneName": "ComixEnding"
         },
         {
             "colors": [],
             "styles": [],
             "showComponents": [],
-<<<<<<<< HEAD:Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250922T170715.json.bak
             "sceneName": "CharacterSelectScene"
-========
-            "sceneName": "ComixEnding"
->>>>>>>> Peer:Assets/Z_Packages/Sortify/Modules/SortifyCore/SaveFiles/Backups/Sortify_Objects_20250929T121908.json.bak
+        },
+        {
+            "colors": [],
+            "styles": [],
+            "showComponents": [],
+            "sceneName": "Main Menu"
         }
     ]
 }
