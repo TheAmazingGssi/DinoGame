@@ -1703,6 +1703,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1748667890}
     m_Modifications:
+<<<<<<< HEAD
     - target: {fileID: 132680625322056583, guid: f4064a13b99dbc041b8a58f39a8edd38, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1887,13 +1888,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 3.332016
       objectReference: {fileID: 0}
+=======
+>>>>>>> efa43c3eda54fb97bb52a23c5987f9e771c48428
     - target: {fileID: 3418796043309233048, guid: f4064a13b99dbc041b8a58f39a8edd38, type: 3}
       propertyPath: m_Name
       value: VotingSystem
-      objectReference: {fileID: 0}
-    - target: {fileID: 3418796043309233048, guid: f4064a13b99dbc041b8a58f39a8edd38, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3432957803820018132, guid: f4064a13b99dbc041b8a58f39a8edd38, type: 3}
       propertyPath: m_Pivot.x
@@ -1975,6 +1974,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 3487130350086498909, guid: f4064a13b99dbc041b8a58f39a8edd38, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -2187,10 +2187,13 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+=======
+>>>>>>> efa43c3eda54fb97bb52a23c5987f9e771c48428
     - target: {fileID: 8751274479980865457, guid: f4064a13b99dbc041b8a58f39a8edd38, type: 3}
       propertyPath: background
       value: 
       objectReference: {fileID: 555016196}
+<<<<<<< HEAD
     - target: {fileID: 8751274479980865457, guid: f4064a13b99dbc041b8a58f39a8edd38, type: 3}
       propertyPath: readDuration
       value: 10
@@ -2243,13 +2246,12 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+=======
+>>>>>>> efa43c3eda54fb97bb52a23c5987f9e771c48428
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8736147686085562498, guid: f4064a13b99dbc041b8a58f39a8edd38, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2074762462}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4064a13b99dbc041b8a58f39a8edd38, type: 3}
 --- !u!114 &1724298587 stripped
 MonoBehaviour:
@@ -2824,34 +2826,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &2074762459 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8736147686085562498, guid: f4064a13b99dbc041b8a58f39a8edd38, type: 3}
-  m_PrefabInstance: {fileID: 1724298586}
-  m_PrefabAsset: {fileID: 0}
---- !u!223 &2074762462
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2074762459}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 1
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: -1466523249
-  m_SortingOrder: 10
-  m_TargetDisplay: 0
 --- !u!114 &2100023625 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3346824439415519795, guid: 91ca5d71ef6469240970c50e0a1f21f9, type: 3}
