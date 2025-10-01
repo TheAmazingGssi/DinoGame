@@ -16,12 +16,6 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "Level 2"
-        },
-        {
-            "colors": [],
-            "styles": [],
-            "showComponents": [],
             "sceneName": "Win Screen"
         },
         {
@@ -52,13 +46,19 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
+            "sceneName": "CharacterSelectScene"
+        },
+        {
+            "colors": [],
+            "styles": [],
+            "showComponents": [],
             "sceneName": "Main Menu"
         },
         {
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "CharacterSelectScene"
+            "sceneName": "Level 2"
         }
     ]
 }

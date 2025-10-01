@@ -805,10 +805,10 @@ PrefabInstance:
       addedObject: {fileID: 1794737895}
     - targetCorrespondingSourceObject: {fileID: 7127471285924934155, guid: 6c7b2a25a251d5f4f88c009e9de69d76, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 608390003}
+      addedObject: {fileID: 1216694649}
     - targetCorrespondingSourceObject: {fileID: 7127471285924934155, guid: 6c7b2a25a251d5f4f88c009e9de69d76, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1216694649}
+      addedObject: {fileID: 608390003}
     - targetCorrespondingSourceObject: {fileID: 7127471285924934155, guid: 6c7b2a25a251d5f4f88c009e9de69d76, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2110014938}
@@ -904,11 +904,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1850717161270575573, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
       propertyPath: m_Name
-      value: Tumbleweed (1)
+      value: Tumbleweed B
       objectReference: {fileID: 0}
     - target: {fileID: 1850717161270575573, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2485348504694633181, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
       propertyPath: cam
@@ -1454,6 +1454,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8696549732862717372, guid: 6e17ff37b135abd4caf0c7f5c9a3bfd4, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113556745850160309, guid: 6e17ff37b135abd4caf0c7f5c9a3bfd4, type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2929,12 +2933,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1850717161270575573, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
       propertyPath: m_Name
-      value: Tumbleweed
+      value: Tumbleweed A
       objectReference: {fileID: 0}
     - target: {fileID: 2485348504694633181, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 2485348504694633181, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 1360317247605867936, guid: ac5c8cfdc41e0c64cab2e033262cd784, type: 3}
     - target: {fileID: 2485348504694633181, guid: 1a2b70385ef104d4289a232311e17352, type: 3}
       propertyPath: jumpHeight
       value: 0.75

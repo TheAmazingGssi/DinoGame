@@ -159,6 +159,7 @@ public class CharSelectMultiplayerManager : MonoBehaviour
         }
         return currentCharacter;
     }
+    
     public void PlayerJoined(PlayerInput playerInput)
     {
         bool player1 = PlayerEntity.PlayerList.Count == 0;

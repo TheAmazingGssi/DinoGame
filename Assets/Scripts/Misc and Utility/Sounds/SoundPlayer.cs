@@ -19,10 +19,12 @@ public class SoundPlayer : MonoBehaviour
     {
         PlaySound(mySounds[index].PickRandom(), chance);
     }
+    
     public void PlaySound(VoiceClips data, float chance = 1)
     {
         PlaySound(data.PickRandom(), chance);
     }
+    
     public void PlaySound(AudioClip clip, float chance = 1)
     {
         if (Random.Range(0f, 1f) > chance)
