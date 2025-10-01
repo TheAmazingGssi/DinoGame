@@ -23,6 +23,9 @@ public class LegBurstSpawner : MonoBehaviour
 
     [Tooltip("0 = no jitter, 1 = maximum allowable jitter while preserving min spacing.")]
     [SerializeField, Range(0f, 1f)] private float jitterStrength = 1f;
+    
+    [Tooltip("Delay before playing stomp sound upon spawning each leg.")]
+    [SerializeField, Min(0f)] private float StompSoundDelay = 0.5f;
 
     private float leftEdge;
     private float rightEdge;
@@ -58,8 +61,6 @@ public class LegBurstSpawner : MonoBehaviour
         float delay = (betweenDelay >= 0f) ? betweenDelay : defaultBetweenSpawnDelay;
         
         UpdateHorizontalBounds();
-        
-        CoopAttackSoundPlayer.instance.PlaySound();
 
         if (burstRoutine != null)
             StopCoroutine(burstRoutine);
@@ -138,8 +139,10 @@ public class LegBurstSpawner : MonoBehaviour
 
             SpawnOne(new Vector2(x, y));
 
-            if (betweenDelay > 0f) yield return new WaitForSeconds(betweenDelay);
-            else yield return null;
+            if (betweenDelay > 0f) 
+                yield return new WaitForSeconds(betweenDelay);
+            else 
+                yield return null;
         }
 
         burstRoutine = null;
@@ -160,6 +163,14 @@ public class LegBurstSpawner : MonoBehaviour
         {
             Debug.LogWarning("[OscillatingLegBurstSpawner2D] Spawned prefab missing OscillatingLeg component. Active count may desync.");
         }
+
+        StartCoroutine(PlayStompSoundWithDelay());
+    }
+    
+    private IEnumerator PlayStompSoundWithDelay()
+    {
+        yield return new WaitForSeconds(StompSoundDelay);
+        CoopAttackSoundPlayer.instance.PlaySoundSingle();
     }
 
     private void HandleLegDestroyed()

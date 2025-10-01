@@ -14,6 +14,7 @@ public class CoopAttack : MonoBehaviour
     [SerializeField] private Rigidbody2D meteorFlareRB;
     [SerializeField] private float flareSpeed = 5f;
     [SerializeField] private Transform flareSpawnPosition;
+    [SerializeField] private AudioSource flareSoundPlayer;
     
     [SerializeField] private float bossDmg = 200f;
     [SerializeField] private float normEnemyDmg = 1000f;
@@ -30,6 +31,7 @@ public class CoopAttack : MonoBehaviour
         
         meteorFlareRB.gameObject.SetActive(true);
         meteorFlareRB.linearVelocity = Vector2.up * flareSpeed;
+        flareSoundPlayer.Play();
         
         yield return new WaitForSeconds(effectStartDelay);
         

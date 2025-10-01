@@ -2617,6 +2617,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4153203573831102206, guid: f18f60295d050934aa2ee3a62285a6c7, type: 3}
+      propertyPath: StompSoundDelay
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8142869633470376434, guid: f18f60295d050934aa2ee3a62285a6c7, type: 3}
       propertyPath: m_Name
       value: Main Camera

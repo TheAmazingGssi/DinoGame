@@ -25,9 +25,14 @@ public class CoopAttackSoundPlayer : MonoBehaviour
         }
     }
     
-    public void PlaySound()
+    public void PlaySoundMulti()
     {
         StartCoroutine(MultiPlaySound());
+    }
+    
+    public void PlaySoundSingle()
+    {
+        audioSource.Play();
     }
     
     private IEnumerator MultiPlaySound()
