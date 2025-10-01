@@ -131,7 +131,9 @@ public class VotingManager : MonoBehaviour
             voted++;
         }
 
+        SelectionSoundPlayer.instance.PlaySelectionSound();
         choices[choiceIndex]++;
+        
         if (voted >= PlayerEntity.PlayerList.Count)
         {
             Debug.Log($"Vote completed, number voted: {voted}");
@@ -162,7 +164,7 @@ public class VotingManager : MonoBehaviour
             playerVotes.TryGetValue(highScoringPlayer, out int votedChoice);
             winningChoice = votedChoice;
         }
-
+        
         votingPanel.SetActive(false);
         StartCoroutine(WiningChoiceDisplay(winningChoice));
 
