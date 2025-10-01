@@ -7,7 +7,6 @@ public class Tumbeweed : MonoBehaviour
     [SerializeField] float spinSpeed;
     [SerializeField] float jumpSpeed;
     [SerializeField] float jumpHeight;
-    //[SerializeField] Sprite sprite;
     [SerializeField] float padding;
     [SerializeField] float maxHeight;
     [SerializeField] float minHeight;
@@ -47,7 +46,6 @@ public class Tumbeweed : MonoBehaviour
 
         float rightPoint = cam.transform.position.x + padding + cam.orthographicSize * cam.aspect;
         float spawnY = Random.Range(minHeight, maxHeight);
-        //tumbleweedSprite.sprite = sprites[Random.Range(0, sprites.Length)];
         transform.position = new Vector2(rightPoint, spawnY);
     }
 
