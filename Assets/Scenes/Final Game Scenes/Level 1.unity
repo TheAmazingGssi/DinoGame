@@ -1975,6 +1975,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 3487130350086498909, guid: f4064a13b99dbc041b8a58f39a8edd38, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -2183,6 +2184,8 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+=======
+>>>>>>> parent of efa43c3 (more ui fix)
     - target: {fileID: 8736147686085562498, guid: f4064a13b99dbc041b8a58f39a8edd38, type: 3}
       propertyPath: m_IsActive
       value: 0
