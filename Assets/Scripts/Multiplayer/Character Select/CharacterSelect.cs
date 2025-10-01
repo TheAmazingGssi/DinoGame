@@ -40,6 +40,7 @@ public class CharacterSelect : MonoBehaviour
     {
         if (inputContext.ReadValue<float>() != 0)
             soundPlayer.PlaySound(1);
+        
         ready = true;
         UpdateReady.Invoke();
     }

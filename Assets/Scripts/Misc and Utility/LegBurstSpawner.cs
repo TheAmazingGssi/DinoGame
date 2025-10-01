@@ -58,6 +58,8 @@ public class LegBurstSpawner : MonoBehaviour
         float delay = (betweenDelay >= 0f) ? betweenDelay : defaultBetweenSpawnDelay;
         
         UpdateHorizontalBounds();
+        
+        CoopAttackSoundPlayer.instance.PlaySound();
 
         if (burstRoutine != null)
             StopCoroutine(burstRoutine);

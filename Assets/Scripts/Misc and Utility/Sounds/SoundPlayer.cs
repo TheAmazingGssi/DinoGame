@@ -14,7 +14,7 @@ public class SoundPlayer : MonoBehaviour
             Debug.LogError("GET COMPONENT GET COMPONENT GET COMPONENT -Eden xoxo"); //if you see this set the serialize field
         }
     }
-
+    
     public void PlaySound(int index, float chance = 1)
     {
         PlaySound(mySounds[index].PickRandom(), chance);

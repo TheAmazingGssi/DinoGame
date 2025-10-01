@@ -25,6 +25,7 @@ public class OptionsMenuManager : MonoBehaviour
 
     public void OpenMenu()
     {
+        //BGMPlayer.instance.soundPlayer.PlaySound(0);//------------------------------
         //set sliders to their actual positions
         float value = 0;
         if (audioMixer.GetFloat(MASTER_VOL, out value))
@@ -39,6 +40,7 @@ public class OptionsMenuManager : MonoBehaviour
     }
     public void CloseMenu()
     {
+        //BGMPlayer.instance.soundPlayer.PlaySound(0);//------------------------------
         Debug.Log("should close now");
         gameObject.SetActive(false);
         OptionsButton.Select();

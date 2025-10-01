@@ -10,25 +10,7 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "Lose Screen"
-        },
-        {
-            "colors": [],
-            "styles": [],
-            "showComponents": [],
             "sceneName": "Win Screen"
-        },
-        {
-            "colors": [],
-            "styles": [],
-            "showComponents": [],
-            "sceneName": "Level 1"
-        },
-        {
-            "colors": [],
-            "styles": [],
-            "showComponents": [],
-            "sceneName": "Level 3"
         },
         {
             "colors": [],
@@ -40,7 +22,25 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
+            "sceneName": "CharacterSelectScene"
+        },
+        {
+            "colors": [],
+            "styles": [],
+            "showComponents": [],
             "sceneName": "ComixEnding"
+        },
+        {
+            "colors": [],
+            "styles": [],
+            "showComponents": [],
+            "sceneName": "Lose Screen"
+        },
+        {
+            "colors": [],
+            "styles": [],
+            "showComponents": [],
+            "sceneName": "Level 1"
         },
         {
             "colors": [],
@@ -52,7 +52,7 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "CharacterSelectScene"
+            "sceneName": "Level 3"
         },
         {
             "colors": [],

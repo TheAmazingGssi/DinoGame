@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class BGMPlayer : MonoBehaviour
 {
-    [SerializeField] SoundPlayer soundPlayer;
+    [field: SerializeField] public SoundPlayer soundPlayer;
     [SerializeField] AudioClip music;
 
-    static BGMPlayer instance;
+    public static BGMPlayer instance;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

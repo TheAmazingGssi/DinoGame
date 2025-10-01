@@ -75,6 +75,7 @@ public class MultiplayerUIController : MonoBehaviour
 
         if (CurrentlySelected == null) return;
 
+        //BGMPlayer.instance.soundPlayer.PlaySound(0);----------------------------------------------------------------
         CurrentlySelected.characterIndicators[characterType].color = Color.white;
 
         var manager = CurrentlySelected.VotingManager;
