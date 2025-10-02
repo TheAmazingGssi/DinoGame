@@ -1202,7 +1202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 385780519467666187, guid: 781c85644ed7cca48aa8621a28e70549, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 121.47998
+      value: 121.47995
       objectReference: {fileID: 0}
     - target: {fileID: 385780519467666187, guid: 781c85644ed7cca48aa8621a28e70549, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2104,6 +2104,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3037892570329261710, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}
       propertyPath: spawnPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037892570329261710, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}
+      propertyPath: EnemiesInWaveMultiplier
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3037892570329261710, guid: aec1b59aa58630d4b8c704dd5f9c0677, type: 3}

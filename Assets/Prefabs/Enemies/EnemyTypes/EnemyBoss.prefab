@@ -719,11 +719,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1081683106100673034, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.21
+      value: 3.55
       objectReference: {fileID: 0}
     - target: {fileID: 1081683106100673034, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.61
+      value: -2.36
       objectReference: {fileID: 0}
     - target: {fileID: 1081683106100673034, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -835,7 +835,7 @@ PrefabInstance:
       objectReference: {fileID: 854164604289750428}
     - target: {fileID: 6724842336940981961, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.80799997
+      value: 0.78
       objectReference: {fileID: 0}
     - target: {fileID: 7017156817951652606, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -882,8 +882,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 854164604289750428}
     - target: {fileID: 7184945894762929075, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      propertyPath: m_Radius
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7184945894762929075, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7763142611271861617, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       propertyPath: m_Radius
@@ -929,7 +933,8 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 22100000, guid: b4bd70a5535155046a2f50ee700229fc, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8181060215119223495, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1081683106100673034, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
@@ -945,7 +950,61 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6658617843642816480, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7443691502695996445}
+    - targetCorrespondingSourceObject: {fileID: 2750972596752826828, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8760903311255786179}
   m_SourcePrefab: {fileID: 100100000, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+--- !u!1 &1499398161311315210 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2750972596752826828, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
+  m_PrefabInstance: {fileID: 3666921506624828614}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &8760903311255786179
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499398161311315210}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.2692771, y: 0.05385542}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 6.062418, y: 2.1540465}
+  m_EdgeRadius: 0
 --- !u!1 &3109384391746167975 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1856966355605016673, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
@@ -982,7 +1041,7 @@ MonoBehaviour:
   manager: {fileID: 6023201401575420860}
   attackCooldown: 4
   soundEffect: {fileID: 0}
-  aoeRange: 8
+  aoeRange: 6
 --- !u!4 &4458964554737979084 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1081683106100673034, guid: a6a4b911ef8054e4ca730659aedbd0b8, type: 3}
