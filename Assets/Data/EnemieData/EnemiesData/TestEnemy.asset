@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TestEnemy
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 0
-  <MaxHealth>k__BackingField: 2
+  <MaxHealth>k__BackingField: 200
   <BaseDamage>k__BackingField: 10
   <StopRange>k__BackingField: 2
   <AttackRange>k__BackingField: 4

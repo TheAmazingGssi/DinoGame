@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RangedEnemy
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 1
-  <MaxHealth>k__BackingField: 15
+  <MaxHealth>k__BackingField: 150
   <BaseDamage>k__BackingField: 5
   <StopRange>k__BackingField: 4
   <AttackRange>k__BackingField: 5
