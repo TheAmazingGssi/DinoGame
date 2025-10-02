@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class EnemyAOEAttack : EnemyAttack
@@ -13,11 +12,15 @@ public class EnemyAOEAttack : EnemyAttack
 
     protected override void ApplyDamage()
     {
-        StartCoroutine(AttackDelay());
+        StartCoroutine(DoAoeAfterDelay(1f));
+    }
+
+    private IEnumerator DoAoeAfterDelay(float delaySeconds)
+    {
+        yield return new WaitForSeconds(delaySeconds);
 
         List<PlayerCombatManager> playersInRange = GetPlayersInRange();
-
-        DamageArgs damageArgs = new DamageArgs { Damage = manager.EnemyData.BaseDamage};
+        DamageArgs damageArgs = new DamageArgs { Damage = manager.EnemyData.BaseDamage };
 
         foreach (PlayerCombatManager player in playersInRange)
         {
@@ -25,13 +28,7 @@ public class EnemyAOEAttack : EnemyAttack
         }
 
         base.ApplyDamage();
-
-       // Debug.Log($"AOE attack dealt {manager.EnemyData.BaseDamage} damage to {playersInRange.Count} players");
-    }
-
-    private IEnumerator AttackDelay()
-    {
-        yield return new WaitForSeconds(1);
+        // Debug.Log($"AOE attack dealt {manager.EnemyData.BaseDamage} damage to {playersInRange.Count} players");
     }
 
     private void OnDrawGizmosSelected()

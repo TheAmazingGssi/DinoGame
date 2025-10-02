@@ -28,12 +28,6 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "Main Menu"
-        },
-        {
-            "colors": [],
-            "styles": [],
-            "showComponents": [],
             "sceneName": "CharacterSelectScene"
         },
         {
@@ -59,6 +53,12 @@
             "styles": [],
             "showComponents": [],
             "sceneName": "Lose Screen"
+        },
+        {
+            "colors": [],
+            "styles": [],
+            "showComponents": [],
+            "sceneName": "Main Menu"
         }
     ]
 }
