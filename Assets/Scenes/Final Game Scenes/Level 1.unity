@@ -3444,9 +3444,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2009568946462424683, guid: 08c6ec01f3ec1474cac4faa3d2d4b105, type: 3}
+      propertyPath: m_text
+      value: If the Volcano Meter is full, all players can activate it together if
+        they press one of these buttons within 10 seconds
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009568946462424683, guid: 08c6ec01f3ec1474cac4faa3d2d4b105, type: 3}
+      propertyPath: m_fontSize
+      value: 18.9
+      objectReference: {fileID: 0}
     - target: {fileID: 2653453008169485801, guid: 08c6ec01f3ec1474cac4faa3d2d4b105, type: 3}
       propertyPath: scaleAmount
       value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2726931583622668392, guid: 08c6ec01f3ec1474cac4faa3d2d4b105, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2849322310726343497, guid: 08c6ec01f3ec1474cac4faa3d2d4b105, type: 3}
       propertyPath: scaleAmount
