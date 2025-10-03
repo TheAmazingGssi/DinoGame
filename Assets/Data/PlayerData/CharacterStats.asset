@@ -21,7 +21,7 @@ MonoBehaviour:
     damageMin: 15
     damageMax: 20
     specialAttackCost: 50
-    specialAttackDamage: 20
+    specialAttackDamage: 15
     mudSlowFactor: 0.45
     blockStaminaMax: 3
     blockCost: 1
@@ -60,7 +60,7 @@ MonoBehaviour:
     damageMin: 5
     damageMax: 7
     specialAttackCost: 50
-    specialAttackDamage: 20
+    specialAttackDamage: 24
     mudSlowFactor: 0.6
     blockStaminaMax: 3
     blockCost: 1

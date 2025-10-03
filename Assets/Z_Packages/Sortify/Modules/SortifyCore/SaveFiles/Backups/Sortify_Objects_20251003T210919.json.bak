@@ -40,25 +40,25 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "CharacterSelectScene"
-        },
-        {
-            "colors": [],
-            "styles": [],
-            "showComponents": [],
             "sceneName": "Level 1"
         },
         {
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "Main Menu"
+            "sceneName": "Lose Screen"
         },
         {
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "Lose Screen"
+            "sceneName": "CharacterSelectScene"
+        },
+        {
+            "colors": [],
+            "styles": [],
+            "showComponents": [],
+            "sceneName": "Main Menu"
         }
     ]
 }
