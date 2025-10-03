@@ -4,6 +4,7 @@ public class EnemyProjectile : MonoBehaviour
 {
     public EnemyManager manager;
     public float speed;
+    public SpriteRenderer spriteRenderer;
 
     private const string PLAYER = "Player";
 
@@ -19,6 +20,7 @@ public class EnemyProjectile : MonoBehaviour
 
         bool isFacingLeft = manager.EnemyController.IsFacingLeft();
         direction = isFacingLeft ? Vector3.left : Vector3.right;
+        spriteRenderer.flipX = !isFacingLeft;
 
         direction.y = 0;
 
@@ -38,6 +40,7 @@ public class EnemyProjectile : MonoBehaviour
         if (collision.CompareTag(PLAYER))
         {
             combatManager = collision.GetComponent<PlayerCombatManager>();
+            
             if (combatManager)
             {
                 combatManager.TakeDamage(new DamageArgs { Damage = damage });
