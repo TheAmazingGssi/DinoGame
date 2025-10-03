@@ -22,12 +22,6 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "Level 2"
-        },
-        {
-            "colors": [],
-            "styles": [],
-            "showComponents": [],
             "sceneName": "ComixEnding"
         },
         {
@@ -40,13 +34,19 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "Level 1"
+            "sceneName": "Lose Screen"
         },
         {
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "Lose Screen"
+            "sceneName": "Main Menu"
+        },
+        {
+            "colors": [],
+            "styles": [],
+            "showComponents": [],
+            "sceneName": "Level 2"
         },
         {
             "colors": [],
@@ -58,7 +58,7 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "Main Menu"
+            "sceneName": "Level 1"
         }
     ]
 }

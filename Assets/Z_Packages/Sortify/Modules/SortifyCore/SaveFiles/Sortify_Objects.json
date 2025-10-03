@@ -22,12 +22,6 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "Level 2"
-        },
-        {
-            "colors": [],
-            "styles": [],
-            "showComponents": [],
             "sceneName": "ComixEnding"
         },
         {
@@ -35,12 +29,6 @@
             "styles": [],
             "showComponents": [],
             "sceneName": "Level 3"
-        },
-        {
-            "colors": [],
-            "styles": [],
-            "showComponents": [],
-            "sceneName": "Level 1"
         },
         {
             "colors": [],
@@ -58,7 +46,19 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
+            "sceneName": "Level 2"
+        },
+        {
+            "colors": [],
+            "styles": [],
+            "showComponents": [],
             "sceneName": "CharacterSelectScene"
+        },
+        {
+            "colors": [],
+            "styles": [],
+            "showComponents": [],
+            "sceneName": "Level 1"
         }
     ]
 }
