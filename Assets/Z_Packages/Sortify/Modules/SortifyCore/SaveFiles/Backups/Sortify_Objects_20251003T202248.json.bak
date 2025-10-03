@@ -28,13 +28,13 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "CharacterSelectScene"
+            "sceneName": "ComixEnding"
         },
         {
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "Level 1"
+            "sceneName": "Lose Screen"
         },
         {
             "colors": [],
@@ -46,13 +46,13 @@
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "ComixEnding"
+            "sceneName": "CharacterSelectScene"
         },
         {
             "colors": [],
             "styles": [],
             "showComponents": [],
-            "sceneName": "Lose Screen"
+            "sceneName": "Level 1"
         },
         {
             "colors": [],

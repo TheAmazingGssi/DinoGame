@@ -89,7 +89,11 @@ public class VotingManager : MonoBehaviour
     public void MoveToVotes()
     {
         readyPlayers++;
-        if (readyPlayers >= PlayerEntity.PlayerList.Count) VotingPhase();
+        if (readyPlayers >= PlayerEntity.PlayerList.Count)
+        {
+            SelectionSoundPlayer.instance.PlaySelectionSound();
+            VotingPhase();
+        }
     }
     
     private void SetUpChoicesText(string[] text)

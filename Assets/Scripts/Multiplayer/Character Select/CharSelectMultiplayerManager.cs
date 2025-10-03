@@ -21,6 +21,7 @@ public class CharSelectMultiplayerManager : MonoBehaviour
     [SerializeField] Material normalMaterial;
     [SerializeField] float flashTime;
     [SerializeField] float feedbackBeforeAllReadyTime;
+    
     float allReadyTime;
     Dictionary<CharacterType, Sprite> splashArt = new Dictionary<CharacterType, Sprite>();
     Dictionary<CharacterType, string> names = new Dictionary<CharacterType, string>();
@@ -59,6 +60,7 @@ public class CharSelectMultiplayerManager : MonoBehaviour
             displayers[i].NameText.text = names[playerList[i].SelectedCharacter];
         }
     }
+    
     private void UpdateReady()
     {
         bool allReady = true;
@@ -181,16 +183,18 @@ public class CharSelectMultiplayerManager : MonoBehaviour
             player.Confirmation.AddListener(OnConfirm);
         }
 
-
         characterSelector.SelectedCharacter = characterList[characterList.Length - 1];
         characterSelector.SelectedCharacter = GetNextCharacter(characterSelector.SelectedCharacter);
         UpdateCharacters();
+        
+        SelectionSoundPlayer.instance.PlaySelectionSound();
     }
 
     private void OnConfirm(InputAction.CallbackContext inputContext)
     {
         confirmTrigger = true;
     }
+    
     private void OnCancel(InputAction.CallbackContext inputContext)
     {
         cancelTrigger = true;
@@ -202,6 +206,9 @@ public class CharSelectMultiplayerManager : MonoBehaviour
         {
             playerList[i].FinalizeSelection.Invoke();
         }
-        loader.LoadTargetScene();
+        
+        loader.LoadTargetSceneDelayed(0.8f);
     }
+    
+
 }

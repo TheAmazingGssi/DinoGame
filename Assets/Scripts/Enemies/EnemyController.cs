@@ -26,6 +26,25 @@ public class EnemyController : MonoBehaviour
     {
         rb.gravityScale = 0;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        
+        bool shallIFlip = ShouldIFlip();
+        
+        if (shallIFlip)
+            FlipSprite(shallIFlip);
+    }
+    
+    private bool ShouldIFlip()
+    {
+        foreach (var player in PlayerEntity.PlayerList)
+        {
+            if(player.transform.position.x < transform.position.x)
+                return false;
+        }
+
+        if (!spriteRenderer.flipX)
+            return true;
+
+        return false;
     }
 
     private void FixedUpdate()

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,6 +12,7 @@ public enum Scenes
     LoseScreen = 5,
     WinScreen = 6,
 };
+
 public class SceneLoader : MonoBehaviour
 {
     [SerializeField] Scenes targetScene;
@@ -19,8 +21,21 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene((int)scene);
     }
+    
     public void LoadTargetScene()
     {
+        LoadScene(targetScene);
+    }
+    
+    public void LoadTargetSceneDelayed(float delay)
+    {
+        StartCoroutine(DelayedLoadScene(delay));
+    }
+
+
+    private IEnumerator DelayedLoadScene(float delay)
+    {
+        yield return new WaitForSeconds(delay);
         LoadScene(targetScene);
     }
 }

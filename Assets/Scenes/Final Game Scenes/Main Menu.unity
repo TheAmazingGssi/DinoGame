@@ -2155,6 +2155,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8286406456190400875, guid: 8821032c741fec74fbf78db3bb8ea3c7, type: 3}
+      propertyPath: m_Value
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 8860010514719606619, guid: 8821032c741fec74fbf78db3bb8ea3c7, type: 3}
       propertyPath: OptionsButton
       value: 

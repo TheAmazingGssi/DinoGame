@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blackScreen: {fileID: 112614903}
-  fadeDuration: 4
+  fadeDuration: 3.5
 --- !u!1 &167624264
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,6 +488,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1811645532181707251, guid: b1b6d8919dad96c48832ffd7c03e4c8e, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1811645532181707251, guid: b1b6d8919dad96c48832ffd7c03e4c8e, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 1103753198506237301, guid: 44d83e9abc390ee45bf3c264e641b4a7, type: 2}
     - target: {fileID: 6727375586378090634, guid: b1b6d8919dad96c48832ffd7c03e4c8e, type: 3}
       propertyPath: music
       value: 
