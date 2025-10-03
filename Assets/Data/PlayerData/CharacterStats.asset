@@ -17,9 +17,9 @@ MonoBehaviour:
     maxHealth: 100
     stamina: 100
     movementSpeed: 4
-    attacksPerSecond: 1.5
-    damageMin: 15
-    damageMax: 20
+    attacksPerSecond: 1
+    damageMin: 16
+    damageMax: 18
     specialAttackCost: 50
     specialAttackDamage: 15
     mudSlowFactor: 0.45
