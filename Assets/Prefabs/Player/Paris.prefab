@@ -417,6 +417,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6963371577172914679, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: specialVfxAnimator
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963371577172914679, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: specialVfxRenderer
       value: 
       objectReference: {fileID: 0}
@@ -455,6 +459,10 @@ PrefabInstance:
     - target: {fileID: 8022900876227695804, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8223330495104514794, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
+      propertyPath: m_Pitch
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8838192548376189134, guid: b1a3f4b792eec324d814beda289203c2, type: 3}
       propertyPath: m_LocalPosition.x
